@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_Sub_Groups));
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.newbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -41,10 +38,6 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.grpcomboBox2 = new System.Windows.Forms.ComboBox();
-            this.sbgrptxtbox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.grpnamecomboBox1 = new System.Windows.Forms.ComboBox();
             this.cmpnynamecombobox1 = new System.Windows.Forms.ComboBox();
             this.sbgrptxtbox1 = new System.Windows.Forms.TextBox();
@@ -52,22 +45,11 @@
             this.prdctididsearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prdctididsearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
             // 
             // pictureBox2
             // 
@@ -78,18 +60,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 314;
             this.pictureBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(279, 139);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 19);
-            this.textBox1.TabIndex = 313;
-            this.textBox1.Text = "           Available Packings";
             // 
             // label2
             // 
@@ -115,6 +85,7 @@
             this.newbtn.TabIndex = 311;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -129,6 +100,7 @@
             this.closebtn.TabIndex = 310;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -143,6 +115,7 @@
             this.removebtn.TabIndex = 309;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -157,6 +130,7 @@
             this.editbtn.TabIndex = 308;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click_1);
             // 
             // clearbtn
             // 
@@ -171,6 +145,7 @@
             this.clearbtn.TabIndex = 307;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -185,56 +160,16 @@
             this.savebtn.TabIndex = 306;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(279, 165);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 415);
             this.dataGridView1.TabIndex = 300;
-            // 
-            // grpcomboBox2
-            // 
-            this.grpcomboBox2.FormattingEnabled = true;
-            this.grpcomboBox2.Location = new System.Drawing.Point(358, 75);
-            this.grpcomboBox2.Name = "grpcomboBox2";
-            this.grpcomboBox2.Size = new System.Drawing.Size(196, 21);
-            this.grpcomboBox2.TabIndex = 318;
-            // 
-            // sbgrptxtbox2
-            // 
-            this.sbgrptxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sbgrptxtbox2.Location = new System.Drawing.Point(358, 119);
-            this.sbgrptxtbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.sbgrptxtbox2.Name = "sbgrptxtbox2";
-            this.sbgrptxtbox2.Size = new System.Drawing.Size(196, 13);
-            this.sbgrptxtbox2.TabIndex = 322;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(361, 99);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
-            this.label3.TabIndex = 321;
-            this.label3.Text = "Sub Group Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(361, 56);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
-            this.label4.TabIndex = 319;
-            this.label4.Text = "Group Name";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // grpnamecomboBox1
             // 
@@ -243,6 +178,7 @@
             this.grpnamecomboBox1.Name = "grpnamecomboBox1";
             this.grpnamecomboBox1.Size = new System.Drawing.Size(224, 21);
             this.grpnamecomboBox1.TabIndex = 330;
+            this.grpnamecomboBox1.SelectedIndexChanged += new System.EventHandler(this.grpnamecomboBox1_SelectedIndexChanged);
             // 
             // cmpnynamecombobox1
             // 
@@ -251,6 +187,7 @@
             this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
             this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 21);
             this.cmpnynamecombobox1.TabIndex = 329;
+            this.cmpnynamecombobox1.SelectedIndexChanged += new System.EventHandler(this.cmpnynamecombobox1_SelectedIndexChanged);
             // 
             // sbgrptxtbox1
             // 
@@ -282,6 +219,7 @@
             this.prdctididsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.prdctididsearch.TabIndex = 326;
             this.prdctididsearch.TabStop = false;
+            this.prdctididsearch.Click += new System.EventHandler(this.prdctididsearch_Click);
             // 
             // label10
             // 
@@ -305,12 +243,23 @@
             this.label9.TabIndex = 324;
             this.label9.Text = "Group Name";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(284, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 23);
+            this.label3.TabIndex = 331;
+            this.label3.Text = "Available Packing";
+            // 
             // Product_Sub_Groups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(665, 649);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.grpnamecomboBox1);
             this.Controls.Add(this.cmpnynamecombobox1);
             this.Controls.Add(this.sbgrptxtbox1);
@@ -318,12 +267,7 @@
             this.Controls.Add(this.prdctididsearch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.sbgrptxtbox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.grpcomboBox2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.newbtn);
             this.Controls.Add(this.closebtn);
@@ -336,6 +280,7 @@
             this.Name = "Product_Sub_Groups";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Sub_Groups";
+            this.Load += new System.EventHandler(this.Product_Sub_Groups_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prdctididsearch)).EndInit();
@@ -345,11 +290,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button newbtn;
         private System.Windows.Forms.Button closebtn;
@@ -358,10 +299,6 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox grpcomboBox2;
-        private System.Windows.Forms.TextBox sbgrptxtbox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox grpnamecomboBox1;
         private System.Windows.Forms.ComboBox cmpnynamecombobox1;
         private System.Windows.Forms.TextBox sbgrptxtbox1;
@@ -369,5 +306,6 @@
         private System.Windows.Forms.PictureBox prdctididsearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label3;
     }
 }
