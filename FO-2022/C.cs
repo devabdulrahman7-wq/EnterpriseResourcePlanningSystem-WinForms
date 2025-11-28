@@ -23,6 +23,15 @@ namespace FO_2022
         private decimal salesTaxTotal = 0;
         private decimal netTotal = 0;
 
+        //public SaleInvoice()
+        //{
+        //    InitializeComponent();
+        //    InitializeDatabase();
+        //    InitializeDataGridView();
+        //    AutoGenerateSaleID();
+        //    SetCurrentDate();
+        //    ConnectEventHandlers();
+        //}
         public SaleInvoice()
         {
             InitializeComponent();
@@ -30,6 +39,64 @@ namespace FO_2022
             InitializeDataGridView();
             AutoGenerateSaleID();
             SetCurrentDate();
+            ConnectEventHandlers();
+
+            // YEH 2 LINES ADD KARO CONSTRUCTOR KE END MEIN
+            AddSampleProductData();
+            MessageBox.Show("Sample product added. You can delete it later when adding real data.", "Information");
+        }
+        // YEH PURA METHOD CLASS KE ANDAR ADD KARO
+        private void AddSampleProductData()
+        {
+            try
+            {
+                // Ek sample product row add karega
+                productsDataTable.Rows.Add(
+                    "P001",             // Pro ID
+                    "Sample Product",   // Product Name
+                    "Box",              // Pack Name
+                    1,                  // Pack
+                    10,                 // Qty(P)
+                    5,                  // Qty(L)
+                    0,                  // Bns(L)
+                    100.00,             // Price
+                    10.00,              // Disc%
+                    0,                  // Disc 2%
+                    0,                  // Disc.Val
+                    5.00,               // S-T%
+                    0,                  // S-T Val
+                    0                   // TTL Value
+                );
+
+                // Calculations automatically honge
+                CalculateRowTotal(0);
+                CalculateTotals();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sample add karne me error: " + ex.Message);
+            }
+        }
+        private void ConnectEventHandlers()
+        {
+            // Connect button click events
+            savebtn.Click += new EventHandler(savebtn_Click);
+            clearbtn.Click += new EventHandler(clearbtn_Click);
+            removebtn.Click += new EventHandler(removebtn_Click);
+            customeridsearch.Click += new EventHandler(customeridsearch_Click);
+            salesmanudsearch.Click += new EventHandler(salesmanudsearch_Click);
+            orderidsearch.Click += new EventHandler(orderidsearch_Click);
+            openpendingbtn.Click += new EventHandler(openpendingbtn_Click);
+            closebtn.Click += new EventHandler(closebtn_Click);
+
+            // Connect text change events for auto-calculation
+            cashrectxtbox.TextChanged += new EventHandler(cashrectxtbox_TextChanged);
+            disc2txtbox.TextChanged += new EventHandler(disc2txtbox_TextChanged);
+            specialdisctxtbox.TextChanged += new EventHandler(specialdisctxtbox_TextChanged);
+            freightexpensetxtbox.TextChanged += new EventHandler(freightexpensetxtbox_TextChanged);
+
+            // Connect DataGridView events
+            dataGridView1.CellEndEdit += new DataGridViewCellEventHandler(dataGridView1_CellEndEdit);
         }
 
         private void InitializeDatabase()
@@ -64,36 +131,11 @@ namespace FO_2022
             productsDataTable.Columns.Add("TTL Value", typeof(decimal));
 
             dataGridView1.DataSource = productsDataTable;
-            LoadPackingsComboBox();
-        }
 
-        private void LoadPackingsComboBox()
-        {
-            try
-            {
-                string query = "SELECT PackingId, PackingName FROM Packings";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                var packNames = new List<string>();
-                while (reader.Read())
-                {
-                    packNames.Add(reader["PackingName"].ToString());
-                }
-                reader.Close();
-
-                // Set items for the ComboBox column - USING YOUR CORRECTED CODE
-                var comboCol = dataGridView1.Columns["Pack Name"] as DataGridViewComboBoxColumn;
-                if (comboCol != null)
-                {
-                    comboCol.Items.Clear();
-                    comboCol.Items.AddRange(packNames.ToArray());
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading packings: " + ex.Message);
-            }
+            // Make the DataGridView editable
+            dataGridView1.AllowUserToAddRows = true;
+            dataGridView1.AllowUserToDeleteRows = true;
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
         }
 
         private void AutoGenerateSaleID()
@@ -103,17 +145,18 @@ namespace FO_2022
                 string query = "SELECT ISNULL(MAX(SaleId), 0) + 1 FROM Sales";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 object result = cmd.ExecuteScalar();
-                saleidtxtbox.Text = result.ToString();
+                saleidtxtbox.Text = result?.ToString() ?? "1";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error generating Sale ID: " + ex.Message);
+                saleidtxtbox.Text = "1";
             }
         }
 
         private void SetCurrentDate()
         {
-            dateTimePicker1.Value = DateTime.Now;
+            saledatepcker.Value = DateTime.Now;
         }
 
         // Customer ID Search
@@ -126,26 +169,33 @@ namespace FO_2022
         {
             try
             {
+                if (string.IsNullOrEmpty(customeridtxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Customer ID!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 string query = "SELECT PartyID, PartyName, City FROM Parties WHERE PartyID = @PartyID";
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@PartyID", customeridtxtbox.Text);
+                cmd.Parameters.AddWithValue("@PartyID", customeridtxtbox.Text.Trim());
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     customernametxtbox.Text = reader["PartyName"].ToString();
                     searchtowntxtbox.Text = reader["City"].ToString();
+                    reader.Close();
                     LoadCustomerPreviousBalance();
                 }
                 else
                 {
-                    MessageBox.Show("Customer not found!");
+                    reader.Close();
+                    MessageBox.Show("Customer not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error searching customer: " + ex.Message);
+                MessageBox.Show("Error searching customer: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -156,7 +206,7 @@ namespace FO_2022
                 string query = @"SELECT ISNULL(SUM(NetValue - ReceivedAmount), 0) as Balance 
                                 FROM Sales WHERE CustomerId = @CustomerId AND IsPosted = 1";
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@CustomerId", customeridtxtbox.Text);
+                cmd.Parameters.AddWithValue("@CustomerId", customeridtxtbox.Text.Trim());
 
                 object result = cmd.ExecuteScalar();
                 prevbaltxtbox.Text = result?.ToString() ?? "0";
@@ -178,9 +228,15 @@ namespace FO_2022
         {
             try
             {
+                if (string.IsNullOrEmpty(salesmenidtxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Salesman ID!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 string query = "SELECT SalesmanID, SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID";
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@SalesmanID", salesmenidtxtbox.Text);
+                cmd.Parameters.AddWithValue("@SalesmanID", salesmenidtxtbox.Text.Trim());
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
@@ -189,13 +245,13 @@ namespace FO_2022
                 }
                 else
                 {
-                    MessageBox.Show("Salesman not found!");
+                    MessageBox.Show("Salesman not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error searching salesman: " + ex.Message);
+                MessageBox.Show("Error searching salesman: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -209,30 +265,37 @@ namespace FO_2022
         {
             try
             {
+                if (string.IsNullOrEmpty(orderidtxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Order ID!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 string query = @"SELECT so.OrderId, so.OrderDate, so.CustomerId, p.PartyName 
                                 FROM SaleOrder so 
                                 INNER JOIN Parties p ON so.CustomerId = p.PartyID 
                                 WHERE so.OrderId = @OrderId";
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@OrderId", orderidtxtbox.Text);
+                cmd.Parameters.AddWithValue("@OrderId", orderidtxtbox.Text.Trim());
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    orderdatetxtbo.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("yyyy-MM-dd");
+                    orderdatepcker.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("yyyy-MM-dd");
                     customeridtxtbox.Text = reader["CustomerId"].ToString();
                     customernametxtbox.Text = reader["PartyName"].ToString();
+                    reader.Close();
                     LoadOrderItems();
                 }
                 else
                 {
-                    MessageBox.Show("Order not found!");
+                    reader.Close();
+                    MessageBox.Show("Order not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error searching order: " + ex.Message);
+                MessageBox.Show("Error searching order: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -251,7 +314,7 @@ namespace FO_2022
                                 WHERE sob.OrderId = @OrderId AND sob.IsDeleted = 0";
 
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@OrderId", orderidtxtbox.Text);
+                cmd.Parameters.AddWithValue("@OrderId", orderidtxtbox.Text.Trim());
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -279,7 +342,7 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading order items: " + ex.Message);
+                MessageBox.Show("Error loading order items: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -297,6 +360,7 @@ namespace FO_2022
             if (string.IsNullOrEmpty(customeridtxtbox.Text))
             {
                 MessageBox.Show("Please select a customer!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                customeridtxtbox.Focus();
                 return false;
             }
 
@@ -306,9 +370,111 @@ namespace FO_2022
                 return false;
             }
 
+            // Validate all rows have required data
+            foreach (DataRow row in productsDataTable.Rows)
+            {
+                if (row.RowState != DataRowState.Deleted)
+                {
+                    if (string.IsNullOrEmpty(row["Pro ID"]?.ToString()) || string.IsNullOrEmpty(row["Product Name"]?.ToString()))
+                    {
+                        MessageBox.Show("Please fill all product details!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
 
+        //private void SaveSaleInvoice()
+        //{
+        //    SqlTransaction transaction = null;
+
+        //    try
+        //    {
+        //        transaction = connection.BeginTransaction();
+
+        //        // Save to Sales table
+        //        string salesQuery = @"INSERT INTO Sales (SaleId, SaleDate, BillNo, CustomerId, SalesmanId, 
+        //                            Narration, Disc2Ratio, SpecialDiscount, ReceivedAmount, 
+        //                            PreviousCredit, IsPosted, UserNo, DueDate, IsPendingRate, WithPartyDescription, 
+        //                            FreightExpenses, GrossValue, DiscountValue, SalesTaxValue, NetValue)
+        //                            VALUES (@SaleId, @SaleDate, @BillNo, @CustomerId, @SalesmanId, 
+        //                            @Narration, @Disc2Ratio, @SpecialDiscount, @ReceivedAmount, 
+        //                            @PreviousCredit, 1, @UserNo, @DueDate, @IsPendingRate, @WithPartyDescription, 
+        //                            @FreightExpenses, @GrossValue, @DiscountValue, @SalesTaxValue, @NetValue)";
+
+        //        SqlCommand salesCmd = new SqlCommand(salesQuery, connection, transaction);
+        //        salesCmd.Parameters.AddWithValue("@SaleId", Convert.ToInt32(saleidtxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@SaleDate", saledatepcker.Value);
+        //        salesCmd.Parameters.AddWithValue("@BillNo", string.IsNullOrEmpty(billnootxtbox.Text) ? (object)DBNull.Value : billnootxtbox.Text);
+        //        salesCmd.Parameters.AddWithValue("@CustomerId", customeridtxtbox.Text.Trim());
+        //        salesCmd.Parameters.AddWithValue("@SalesmanId", string.IsNullOrEmpty(salesmenidtxtbox.Text) ? (object)DBNull.Value : salesmenidtxtbox.Text.Trim());
+        //        salesCmd.Parameters.AddWithValue("@Narration", string.IsNullOrEmpty(narrationtxtbox.Text) ? "" : narrationtxtbox.Text);
+        //        salesCmd.Parameters.AddWithValue("@Disc2Ratio", string.IsNullOrEmpty(disc2txtbox.Text) ? 0 : Convert.ToDecimal(disc2txtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@SpecialDiscount", string.IsNullOrEmpty(specialdisctxtbox.Text) ? 0 : Convert.ToDecimal(specialdisctxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@ReceivedAmount", string.IsNullOrEmpty(cashrectxtbox.Text) ? 0 : Convert.ToDecimal(cashrectxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@PreviousCredit", string.IsNullOrEmpty(prevbaltxtbox.Text) ? 0 : Convert.ToDecimal(prevbaltxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@UserNo", 1);
+        //        salesCmd.Parameters.AddWithValue("@DueDate", string.IsNullOrEmpty(duedatetxtbox.Text) ? (object)DBNull.Value : Convert.ToDateTime(duedatetxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@IsPendingRate", pendingratechkbox.Checked);
+        //        salesCmd.Parameters.AddWithValue("@WithPartyDescription", withpartydescriptionchkbox.Checked);
+        //        salesCmd.Parameters.AddWithValue("@FreightExpenses", string.IsNullOrEmpty(freightexpensetxtbox.Text) ? 0 : Convert.ToDecimal(freightexpensetxtbox.Text));
+        //        salesCmd.Parameters.AddWithValue("@GrossValue", grossTotal);
+        //        salesCmd.Parameters.AddWithValue("@DiscountValue", discountTotal);
+        //        salesCmd.Parameters.AddWithValue("@SalesTaxValue", salesTaxTotal);
+        //        salesCmd.Parameters.AddWithValue("@NetValue", netTotal);
+
+        //        int rowsAffected = salesCmd.ExecuteNonQuery();
+
+        //        if (rowsAffected > 0)
+        //        {
+        //            // Save to SalesBody table
+        //            foreach (DataRow row in productsDataTable.Rows)
+        //            {
+        //                if (row.RowState != DataRowState.Deleted && !row.IsNull("Pro ID"))
+        //                {
+        //                    string salesBodyQuery = @"INSERT INTO SalesBody (SaleId, ProductId, PackingId, Multiplier, QtyPack, 
+        //                                            QtyLose, BnsLose, PricePack, DiscRatio, DiscValPack, STaxRatio, 
+        //                                            STaxValPack, TTLValue, PerUnitCostLose, PriceHistoryId, OfferDiscount)
+        //                                            VALUES (@SaleId, @ProductId, @PackingId, @Multiplier, @QtyPack, 
+        //                                            @QtyLose, @BnsLose, @PricePack, @DiscRatio, @DiscValPack, @STaxRatio, 
+        //                                            @STaxValPack, @TTLValue, @PerUnitCostLose, @PriceHistoryId, @OfferDiscount)";
+
+        //                    SqlCommand salesBodyCmd = new SqlCommand(salesBodyQuery, connection, transaction);
+        //                    salesBodyCmd.Parameters.AddWithValue("@SaleId", Convert.ToInt32(saleidtxtbox.Text));
+        //                    salesBodyCmd.Parameters.AddWithValue("@ProductId", row["Pro ID"]?.ToString() ?? "");
+        //                    salesBodyCmd.Parameters.AddWithValue("@PackingId", GetPackingIdByName(row["Pack Name"]?.ToString() ?? ""));
+        //                    salesBodyCmd.Parameters.AddWithValue("@Multiplier", Convert.ToInt32(row["Pack"] ?? 1));
+        //                    salesBodyCmd.Parameters.AddWithValue("@QtyPack", Convert.ToInt32(row["Qty(P)"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@QtyLose", Convert.ToInt32(row["Qty(L)"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@BnsLose", Convert.ToInt32(row["Bns(L)"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@PricePack", Convert.ToDecimal(row["Price"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@DiscRatio", Convert.ToDecimal(row["Disc%"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@DiscValPack", Convert.ToDecimal(row["Disc.Val"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@STaxRatio", Convert.ToDecimal(row["S-T%"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@STaxValPack", Convert.ToDecimal(row["S-T Val"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@TTLValue", Convert.ToDecimal(row["TTL Value"] ?? 0));
+        //                    salesBodyCmd.Parameters.AddWithValue("@PerUnitCostLose", 0);
+        //                    salesBodyCmd.Parameters.AddWithValue("@PriceHistoryId", 1);
+        //                    salesBodyCmd.Parameters.AddWithValue("@OfferDiscount", 0);
+
+        //                    salesBodyCmd.ExecuteNonQuery();
+        //                }
+        //            }
+
+        //            transaction.Commit();
+        //            MessageBox.Show("Sale invoice saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            ClearForm();
+        //            AutoGenerateSaleID();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        transaction?.Rollback();
+        //        MessageBox.Show("Error saving sale invoice: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         private void SaveSaleInvoice()
         {
             SqlTransaction transaction = null;
@@ -317,65 +483,72 @@ namespace FO_2022
             {
                 transaction = connection.BeginTransaction();
 
-                // Save to Sales table
-                string salesQuery = @"INSERT INTO Sales (SaleId, SaleDate, BillNo, CustomerId, SalesmanId, 
-                                    Narration, Disc2Ratio, SpecialDiscount, ReceivedAmount, 
-                                    PreviousCredit, IsPosted, UserNo, DueDate, IsPendingRate, WithPartyDescription, 
-                                    FreightExpenses, GrossValue, DiscountValue, SalesTaxValue, NetValue)
-                                    VALUES (@SaleId, @SaleDate, @BillNo, @CustomerId, @SalesmanId, 
-                                    @Narration, @Disc2Ratio, @SpecialDiscount, @ReceivedAmount, 
-                                    @PreviousCredit, 1, @UserNo, @DueDate, @IsPendingRate, @WithPartyDescription, 
-                                    @FreightExpenses, @GrossValue, @DiscountValue, @SalesTaxValue, @NetValue)";
+                // **YEH NAYA QUERY USE KARO - WITHOUT FINANCIAL COLUMNS**
+                string salesQuery = @"INSERT INTO Sales (
+                            SaleId, SaleDate, BillNo, CustomerId, SalesmanId, 
+                            Narration, Disc2Ratio, SpecialDiscount, ReceivedAmount, 
+                            PreviousCredit, IsPosted, UserNo, DueDate, IsPendingRate, WithPartyDescription, 
+                            FreightExpenses
+                            ) VALUES (
+                            @SaleId, @SaleDate, @BillNo, @CustomerId, @SalesmanId, 
+                            @Narration, @Disc2Ratio, @SpecialDiscount, @ReceivedAmount, 
+                            @PreviousCredit, 1, @UserNo, @DueDate, @IsPendingRate, @WithPartyDescription, 
+                            @FreightExpenses
+                            )";
 
                 SqlCommand salesCmd = new SqlCommand(salesQuery, connection, transaction);
+
+                // **SIRF YEH PARAMETERS ADD KARO - NO FINANCIAL ONES**
                 salesCmd.Parameters.AddWithValue("@SaleId", Convert.ToInt32(saleidtxtbox.Text));
-                salesCmd.Parameters.AddWithValue("@SaleDate", dateTimePicker1.Value);
+                salesCmd.Parameters.AddWithValue("@SaleDate", saledatepcker.Value);
                 salesCmd.Parameters.AddWithValue("@BillNo", string.IsNullOrEmpty(billnootxtbox.Text) ? (object)DBNull.Value : billnootxtbox.Text);
-                salesCmd.Parameters.AddWithValue("@CustomerId", customeridtxtbox.Text);
-                salesCmd.Parameters.AddWithValue("@SalesmanId", string.IsNullOrEmpty(salesmenidtxtbox.Text) ? (object)DBNull.Value : salesmenidtxtbox.Text);
+                salesCmd.Parameters.AddWithValue("@CustomerId", customeridtxtbox.Text.Trim());
+                salesCmd.Parameters.AddWithValue("@SalesmanId", string.IsNullOrEmpty(salesmenidtxtbox.Text) ? (object)DBNull.Value : salesmenidtxtbox.Text.Trim());
                 salesCmd.Parameters.AddWithValue("@Narration", string.IsNullOrEmpty(narrationtxtbox.Text) ? "" : narrationtxtbox.Text);
                 salesCmd.Parameters.AddWithValue("@Disc2Ratio", string.IsNullOrEmpty(disc2txtbox.Text) ? 0 : Convert.ToDecimal(disc2txtbox.Text));
                 salesCmd.Parameters.AddWithValue("@SpecialDiscount", string.IsNullOrEmpty(specialdisctxtbox.Text) ? 0 : Convert.ToDecimal(specialdisctxtbox.Text));
                 salesCmd.Parameters.AddWithValue("@ReceivedAmount", string.IsNullOrEmpty(cashrectxtbox.Text) ? 0 : Convert.ToDecimal(cashrectxtbox.Text));
                 salesCmd.Parameters.AddWithValue("@PreviousCredit", string.IsNullOrEmpty(prevbaltxtbox.Text) ? 0 : Convert.ToDecimal(prevbaltxtbox.Text));
                 salesCmd.Parameters.AddWithValue("@UserNo", 1);
-                salesCmd.Parameters.AddWithValue("@DueDate", string.IsNullOrEmpty(duedatetxtbox.Text) ? (object)DBNull.Value : Convert.ToDateTime(duedatetxtbox.Text));
+                salesCmd.Parameters.AddWithValue("@DueDate", duedatepcker.Value);
                 salesCmd.Parameters.AddWithValue("@IsPendingRate", pendingratechkbox.Checked);
                 salesCmd.Parameters.AddWithValue("@WithPartyDescription", withpartydescriptionchkbox.Checked);
                 salesCmd.Parameters.AddWithValue("@FreightExpenses", string.IsNullOrEmpty(freightexpensetxtbox.Text) ? 0 : Convert.ToDecimal(freightexpensetxtbox.Text));
-                salesCmd.Parameters.AddWithValue("@GrossValue", grossTotal);
-                salesCmd.Parameters.AddWithValue("@DiscountValue", discountTotal);
-                salesCmd.Parameters.AddWithValue("@SalesTaxValue", salesTaxTotal);
-                salesCmd.Parameters.AddWithValue("@NetValue", netTotal);
+
+                // **YEH 4 LINES BILKUL MAT ADD KARO - COMMENT BHI MAT KARO, DIRECT REMOVE KARO**
+                // salesCmd.Parameters.AddWithValue("@GrossValue", grossTotal);
+                // salesCmd.Parameters.AddWithValue("@DiscountValue", discountTotal);
+                // salesCmd.Parameters.AddWithValue("@SalesTaxValue", salesTaxTotal);
+                // salesCmd.Parameters.AddWithValue("@NetValue", netTotal);
 
                 salesCmd.ExecuteNonQuery();
 
-                // Save to SalesBody table
+                // Save to SalesBody table (YEH WALA PART SAME RAHEGA)
                 foreach (DataRow row in productsDataTable.Rows)
                 {
-                    if (row.RowState != DataRowState.Deleted)
+                    if (row.RowState != DataRowState.Deleted && !row.IsNull("Pro ID"))
                     {
                         string salesBodyQuery = @"INSERT INTO SalesBody (SaleId, ProductId, PackingId, Multiplier, QtyPack, 
-                                                QtyLose, BnsLose, PricePack, DiscRatio, DiscValPack, STaxRatio, 
-                                                STaxValPack, TTLValue, PerUnitCostLose, PriceHistoryId, OfferDiscount)
-                                                VALUES (@SaleId, @ProductId, @PackingId, @Multiplier, @QtyPack, 
-                                                @QtyLose, @BnsLose, @PricePack, @DiscRatio, @DiscValPack, @STaxRatio, 
-                                                @STaxValPack, @TTLValue, @PerUnitCostLose, @PriceHistoryId, @OfferDiscount)";
+                                        QtyLose, BnsLose, PricePack, DiscRatio, DiscValPack, STaxRatio, 
+                                        STaxValPack, TTLValue, PerUnitCostLose, PriceHistoryId, OfferDiscount)
+                                        VALUES (@SaleId, @ProductId, @PackingId, @Multiplier, @QtyPack, 
+                                        @QtyLose, @BnsLose, @PricePack, @DiscRatio, @DiscValPack, @STaxRatio, 
+                                        @STaxValPack, @TTLValue, @PerUnitCostLose, @PriceHistoryId, @OfferDiscount)";
 
                         SqlCommand salesBodyCmd = new SqlCommand(salesBodyQuery, connection, transaction);
                         salesBodyCmd.Parameters.AddWithValue("@SaleId", Convert.ToInt32(saleidtxtbox.Text));
                         salesBodyCmd.Parameters.AddWithValue("@ProductId", row["Pro ID"]?.ToString() ?? "");
                         salesBodyCmd.Parameters.AddWithValue("@PackingId", GetPackingIdByName(row["Pack Name"]?.ToString() ?? ""));
-                        salesBodyCmd.Parameters.AddWithValue("@Multiplier", Convert.ToInt32(row["Pack"]));
-                        salesBodyCmd.Parameters.AddWithValue("@QtyPack", Convert.ToInt32(row["Qty(P)"]));
-                        salesBodyCmd.Parameters.AddWithValue("@QtyLose", Convert.ToInt32(row["Qty(L)"]));
-                        salesBodyCmd.Parameters.AddWithValue("@BnsLose", Convert.ToInt32(row["Bns(L)"]));
-                        salesBodyCmd.Parameters.AddWithValue("@PricePack", Convert.ToDecimal(row["Price"]));
-                        salesBodyCmd.Parameters.AddWithValue("@DiscRatio", Convert.ToDecimal(row["Disc%"]));
-                        salesBodyCmd.Parameters.AddWithValue("@DiscValPack", Convert.ToDecimal(row["Disc.Val"]));
-                        salesBodyCmd.Parameters.AddWithValue("@STaxRatio", Convert.ToDecimal(row["S-T%"]));
-                        salesBodyCmd.Parameters.AddWithValue("@STaxValPack", Convert.ToDecimal(row["S-T Val"]));
-                        salesBodyCmd.Parameters.AddWithValue("@TTLValue", Convert.ToDecimal(row["TTL Value"]));
+                        salesBodyCmd.Parameters.AddWithValue("@Multiplier", Convert.ToInt32(row["Pack"] ?? 1));
+                        salesBodyCmd.Parameters.AddWithValue("@QtyPack", Convert.ToInt32(row["Qty(P)"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@QtyLose", Convert.ToInt32(row["Qty(L)"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@BnsLose", Convert.ToInt32(row["Bns(L)"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@PricePack", Convert.ToDecimal(row["Price"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@DiscRatio", Convert.ToDecimal(row["Disc%"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@DiscValPack", Convert.ToDecimal(row["Disc.Val"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@STaxRatio", Convert.ToDecimal(row["S-T%"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@STaxValPack", Convert.ToDecimal(row["S-T Val"] ?? 0));
+                        salesBodyCmd.Parameters.AddWithValue("@TTLValue", Convert.ToDecimal(row["TTL Value"] ?? 0));
                         salesBodyCmd.Parameters.AddWithValue("@PerUnitCostLose", 0);
                         salesBodyCmd.Parameters.AddWithValue("@PriceHistoryId", 1);
                         salesBodyCmd.Parameters.AddWithValue("@OfferDiscount", 0);
@@ -395,7 +568,6 @@ namespace FO_2022
                 MessageBox.Show("Error saving sale invoice: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private int GetPackingIdByName(string packingName)
         {
             try
@@ -423,11 +595,11 @@ namespace FO_2022
 
                 foreach (DataRow row in productsDataTable.Rows)
                 {
-                    if (row.RowState != DataRowState.Deleted)
+                    if (row.RowState != DataRowState.Deleted && !row.IsNull("TTL Value"))
                     {
                         grossTotal += Convert.ToDecimal(row["TTL Value"]);
-                        discountTotal += Convert.ToDecimal(row["Disc.Val"]);
-                        salesTaxTotal += Convert.ToDecimal(row["S-T Val"]);
+                        discountTotal += Convert.ToDecimal(row["Disc.Val"] ?? 0);
+                        salesTaxTotal += Convert.ToDecimal(row["S-T Val"] ?? 0);
                     }
                 }
 
@@ -450,7 +622,7 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calculating totals: " + ex.Message);
+                MessageBox.Show("Error calculating totals: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -470,11 +642,11 @@ namespace FO_2022
                 salesmenidtxtbox.Clear();
                 salesmennametxtbox.Clear();
                 orderidtxtbox.Clear();
-                orderdatetxtbo.Clear();
+                orderdatepcker.Clear();
                 billnootxtbox.Clear();
                 productsDataTable.Clear();
                 narrationtxtbox.Clear();
-                duedatetxtbox.Clear();
+                //duedatepcker.Clear();
                 grosstxtbox.Clear();
                 discounttxtbox.Clear();
                 salestxtbox.Clear();
@@ -489,10 +661,13 @@ namespace FO_2022
                 withpartydescriptionchkbox.Checked = false;
                 withbuiltychkbox.Checked = false;
                 uploadsaledocchkbox.Checked = false;
+
+                AutoGenerateSaleID();
+                MessageBox.Show("Form cleared successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error clearing form: " + ex.Message);
+                MessageBox.Show("Error clearing form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -514,9 +689,9 @@ namespace FO_2022
 
                 if (row.Cells["Qty(P)"].Value != null && row.Cells["Price"].Value != null)
                 {
-                    int qtyPack = Convert.ToInt32(row.Cells["Qty(P)"].Value);
+                    int qtyPack = Convert.ToInt32(row.Cells["Qty(P)"].Value ?? 0);
                     int qtyLose = row.Cells["Qty(L)"].Value != null ? Convert.ToInt32(row.Cells["Qty(L)"].Value) : 0;
-                    decimal price = Convert.ToDecimal(row.Cells["Price"].Value);
+                    decimal price = Convert.ToDecimal(row.Cells["Price"].Value ?? 0);
                     decimal discPercent = row.Cells["Disc%"].Value != null ? Convert.ToDecimal(row.Cells["Disc%"].Value) : 0;
                     decimal staxPercent = row.Cells["S-T%"].Value != null ? Convert.ToDecimal(row.Cells["S-T%"].Value) : 0;
 
@@ -532,7 +707,7 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calculating row total: " + ex.Message);
+                MessageBox.Show("Error calculating row total: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -551,11 +726,16 @@ namespace FO_2022
                         }
                     }
                     CalculateTotals();
+                    MessageBox.Show("Selected rows removed successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Please select rows to remove!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error removing row: " + ex.Message);
+                MessageBox.Show("Error removing row: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -580,19 +760,7 @@ namespace FO_2022
             CalculateTotals();
         }
 
-        // Existing methods
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) { }
-        private void label12_Click(object sender, EventArgs e) { }
-        private void button6_Click(object sender, EventArgs e) { }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
-        private void SaleInvoice_Load(object sender, EventArgs e) { }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        // Navigation methods
         private void openpendingbtn_Click(object sender, EventArgs e)
         {
             Search_Pending_Invoice spi = new Search_Pending_Invoice();
@@ -606,6 +774,19 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        // Existing methods that don't need changes
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) { }
+        private void label12_Click(object sender, EventArgs e) { }
+        private void button6_Click(object sender, EventArgs e) { }
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
+        private void SaleInvoice_Load(object sender, EventArgs e) { }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -621,6 +802,11 @@ namespace FO_2022
                 MessageBox.Show("Error closing connection: " + ex.Message);
             }
             base.OnFormClosing(e);
+        }
+
+        private void duedatetxtbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

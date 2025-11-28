@@ -37,7 +37,7 @@
             this.billlnolbl = new System.Windows.Forms.Label();
             this.saleidtxtbox = new System.Windows.Forms.TextBox();
             this.billnootxtbox = new System.Windows.Forms.TextBox();
-            this.orderdatetxtbo = new System.Windows.Forms.TextBox();
+            this.orderdatepcker = new System.Windows.Forms.TextBox();
             this.orderidtxtbox = new System.Windows.Forms.TextBox();
             this.customeridtxtbox = new System.Windows.Forms.TextBox();
             this.customernametxtbox = new System.Windows.Forms.TextBox();
@@ -54,6 +54,20 @@
             this.withpartydescriptionchkbox = new System.Windows.Forms.CheckBox();
             this.withbuiltychkbox = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pendingratechkbox = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,7 +81,6 @@
             this.baltxtbox = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.duedatetxtbox = new System.Windows.Forms.TextBox();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.grosstxtbox = new System.Windows.Forms.TextBox();
             this.discounttxtbox = new System.Windows.Forms.TextBox();
@@ -88,26 +101,13 @@
             this.removebtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.saledatepcker = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.customeridsearch = new System.Windows.Forms.PictureBox();
             this.salesmanudsearch = new System.Windows.Forms.PictureBox();
             this.orderidsearch = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duedatepcker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customeridsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesmanudsearch)).BeginInit();
@@ -200,14 +200,14 @@
             this.billnootxtbox.Size = new System.Drawing.Size(110, 21);
             this.billnootxtbox.TabIndex = 30;
             // 
-            // orderdatetxtbo
+            // orderdatepcker
             // 
-            this.orderdatetxtbo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderdatetxtbo.Location = new System.Drawing.Point(429, 76);
-            this.orderdatetxtbo.Multiline = true;
-            this.orderdatetxtbo.Name = "orderdatetxtbo";
-            this.orderdatetxtbo.Size = new System.Drawing.Size(103, 21);
-            this.orderdatetxtbo.TabIndex = 31;
+            this.orderdatepcker.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderdatepcker.Location = new System.Drawing.Point(429, 76);
+            this.orderdatepcker.Multiline = true;
+            this.orderdatepcker.Name = "orderdatepcker";
+            this.orderdatepcker.Size = new System.Drawing.Size(103, 21);
+            this.orderdatepcker.TabIndex = 31;
             // 
             // orderidtxtbox
             // 
@@ -382,6 +382,92 @@
             this.dataGridView1.Size = new System.Drawing.Size(981, 248);
             this.dataGridView1.TabIndex = 52;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Pro ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 85;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Product Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 115;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Pack Name";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Pack ";
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column4.Width = 50;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Qty(P)";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 35;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Qty(L)";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 45;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Bns(L)";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 45;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Price";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 50;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Disc%";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 60;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Disc 2%";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 75;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Disc.Val";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 75;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "S-T%";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 45;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "S-T Val";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 75;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "TTL Value";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 90;
+            // 
             // pendingratechkbox
             // 
             this.pendingratechkbox.AutoSize = true;
@@ -487,7 +573,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(88, 561);
+            this.label20.Location = new System.Drawing.Point(53, 563);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(59, 16);
             this.label20.TabIndex = 64;
@@ -502,22 +588,13 @@
             this.label21.TabIndex = 65;
             this.label21.Text = "Narration";
             // 
-            // duedatetxtbox
-            // 
-            this.duedatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.duedatetxtbox.Location = new System.Drawing.Point(81, 580);
-            this.duedatetxtbox.Multiline = true;
-            this.duedatetxtbox.Name = "duedatetxtbox";
-            this.duedatetxtbox.Size = new System.Drawing.Size(100, 16);
-            this.duedatetxtbox.TabIndex = 66;
-            // 
             // narrationtxtbox
             // 
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.narrationtxtbox.Location = new System.Drawing.Point(187, 580);
             this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(710, 16);
+            this.narrationtxtbox.Size = new System.Drawing.Size(710, 25);
             this.narrationtxtbox.TabIndex = 67;
             // 
             // grosstxtbox
@@ -718,14 +795,14 @@
             this.label22.TabIndex = 163;
             this.label22.Text = "Distributor Name:";
             // 
-            // dateTimePicker1
+            // saledatepcker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 23);
-            this.dateTimePicker1.TabIndex = 164;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.saledatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.saledatepcker.Location = new System.Drawing.Point(142, 74);
+            this.saledatepcker.Name = "saledatepcker";
+            this.saledatepcker.Size = new System.Drawing.Size(133, 23);
+            this.saledatepcker.TabIndex = 164;
+            this.saledatepcker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboBox1
             // 
@@ -777,91 +854,13 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // Column1
+            // duedatepcker
             // 
-            this.Column1.HeaderText = "Pro ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 85;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 115;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pack ";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Qty(P)";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 35;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty(L)";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 45;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Bns(L)";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 45;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Price";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Disc%";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 60;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Disc 2%";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 75;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Disc.Val";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 75;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "S-T%";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 45;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "S-T Val";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 75;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "TTL Value";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 90;
+            this.duedatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.duedatepcker.Location = new System.Drawing.Point(51, 582);
+            this.duedatepcker.Name = "duedatepcker";
+            this.duedatepcker.Size = new System.Drawing.Size(133, 23);
+            this.duedatepcker.TabIndex = 268;
             // 
             // SaleInvoice
             // 
@@ -869,12 +868,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(999, 666);
+            this.Controls.Add(this.duedatepcker);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.orderidsearch);
             this.Controls.Add(this.salesmanudsearch);
             this.Controls.Add(this.customeridsearch);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.saledatepcker);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
@@ -895,7 +895,6 @@
             this.Controls.Add(this.discounttxtbox);
             this.Controls.Add(this.grosstxtbox);
             this.Controls.Add(this.narrationtxtbox);
-            this.Controls.Add(this.duedatetxtbox);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.baltxtbox);
@@ -925,7 +924,7 @@
             this.Controls.Add(this.customernametxtbox);
             this.Controls.Add(this.customeridtxtbox);
             this.Controls.Add(this.orderidtxtbox);
-            this.Controls.Add(this.orderdatetxtbo);
+            this.Controls.Add(this.orderdatepcker);
             this.Controls.Add(this.billnootxtbox);
             this.Controls.Add(this.saleidtxtbox);
             this.Controls.Add(this.billlnolbl);
@@ -961,7 +960,7 @@
         private System.Windows.Forms.Label billlnolbl;
         private System.Windows.Forms.TextBox saleidtxtbox;
         private System.Windows.Forms.TextBox billnootxtbox;
-        private System.Windows.Forms.TextBox orderdatetxtbo;
+        private System.Windows.Forms.TextBox orderdatepcker;
         private System.Windows.Forms.TextBox orderidtxtbox;
         private System.Windows.Forms.TextBox customeridtxtbox;
         private System.Windows.Forms.TextBox customernametxtbox;
@@ -991,7 +990,6 @@
         private System.Windows.Forms.Label baltxtbox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox duedatetxtbox;
         private System.Windows.Forms.TextBox narrationtxtbox;
         private System.Windows.Forms.TextBox grosstxtbox;
         private System.Windows.Forms.TextBox discounttxtbox;
@@ -1012,7 +1010,7 @@
         private System.Windows.Forms.Button removebtn;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker saledatepcker;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox customeridsearch;
         private System.Windows.Forms.PictureBox salesmanudsearch;
@@ -1032,5 +1030,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DateTimePicker duedatepcker;
     }
 }
