@@ -39,22 +39,14 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmpnynamecombobox1 = new System.Windows.Forms.ComboBox();
             this.cmpnyidsearch1 = new System.Windows.Forms.PictureBox();
             this.prdctnametxtbox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmpnynamecombobox = new System.Windows.Forms.ComboBox();
-            this.cmpnyidsearch = new System.Windows.Forms.PictureBox();
-            this.prdctnametxtbox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cmpnynamecombobox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -104,6 +96,7 @@
             this.newbtn.TabIndex = 296;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -118,6 +111,7 @@
             this.closebtn.TabIndex = 295;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -132,6 +126,7 @@
             this.removebtn.TabIndex = 294;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -146,6 +141,7 @@
             this.editbtn.TabIndex = 293;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -160,6 +156,7 @@
             this.clearbtn.TabIndex = 292;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -174,63 +171,44 @@
             this.savebtn.TabIndex = 291;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(224, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 398);
             this.dataGridView1.TabIndex = 285;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Group ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Group Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
-            // 
-            // cmpnynamecombobox1
-            // 
-            this.cmpnynamecombobox1.FormattingEnabled = true;
-            this.cmpnynamecombobox1.Location = new System.Drawing.Point(177, 72);
-            this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
-            this.cmpnynamecombobox1.Size = new System.Drawing.Size(121, 21);
-            this.cmpnynamecombobox1.TabIndex = 305;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cmpnyidsearch1
             // 
             this.cmpnyidsearch1.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch1.Image")));
-            this.cmpnyidsearch1.Location = new System.Drawing.Point(302, 71);
+            this.cmpnyidsearch1.Location = new System.Drawing.Point(349, 73);
             this.cmpnyidsearch1.Margin = new System.Windows.Forms.Padding(4);
             this.cmpnyidsearch1.Name = "cmpnyidsearch1";
             this.cmpnyidsearch1.Size = new System.Drawing.Size(26, 22);
             this.cmpnyidsearch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch1.TabIndex = 304;
             this.cmpnyidsearch1.TabStop = false;
+            this.cmpnyidsearch1.Click += new System.EventHandler(this.cmpnyidsearch1_Click);
             // 
             // prdctnametxtbox1
             // 
             this.prdctnametxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctnametxtbox1.Location = new System.Drawing.Point(177, 116);
+            this.prdctnametxtbox1.Location = new System.Drawing.Point(224, 118);
             this.prdctnametxtbox1.Margin = new System.Windows.Forms.Padding(4);
             this.prdctnametxtbox1.Name = "prdctnametxtbox1";
             this.prdctnametxtbox1.Size = new System.Drawing.Size(224, 13);
-            this.prdctnametxtbox1.TabIndex = 303;
+            this.prdctnametxtbox1.TabIndex = 1;
+            this.prdctnametxtbox1.TextChanged += new System.EventHandler(this.prdctnametxtbox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 53);
+            this.label1.Location = new System.Drawing.Point(227, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 16);
@@ -241,62 +219,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(180, 96);
+            this.label3.Location = new System.Drawing.Point(227, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 301;
             this.label3.Text = "Group Name";
             // 
-            // cmpnynamecombobox
+            // cmpnynamecombobox1
             // 
-            this.cmpnynamecombobox.FormattingEnabled = true;
-            this.cmpnynamecombobox.Location = new System.Drawing.Point(12, 180);
-            this.cmpnynamecombobox.Name = "cmpnynamecombobox";
-            this.cmpnynamecombobox.Size = new System.Drawing.Size(121, 21);
-            this.cmpnynamecombobox.TabIndex = 310;
-            // 
-            // cmpnyidsearch
-            // 
-            this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(137, 179);
-            this.cmpnyidsearch.Margin = new System.Windows.Forms.Padding(4);
-            this.cmpnyidsearch.Name = "cmpnyidsearch";
-            this.cmpnyidsearch.Size = new System.Drawing.Size(26, 22);
-            this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmpnyidsearch.TabIndex = 309;
-            this.cmpnyidsearch.TabStop = false;
-            // 
-            // prdctnametxtbox
-            // 
-            this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctnametxtbox.Location = new System.Drawing.Point(12, 235);
-            this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.prdctnametxtbox.Name = "prdctnametxtbox";
-            this.prdctnametxtbox.Size = new System.Drawing.Size(205, 13);
-            this.prdctnametxtbox.TabIndex = 308;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 161);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 16);
-            this.label10.TabIndex = 307;
-            this.label10.Text = "Company Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 215);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 16);
-            this.label9.TabIndex = 306;
-            this.label9.Text = "Group Name";
+            this.cmpnynamecombobox1.FormattingEnabled = true;
+            this.cmpnynamecombobox1.Location = new System.Drawing.Point(224, 74);
+            this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
+            this.cmpnynamecombobox1.Size = new System.Drawing.Size(121, 21);
+            this.cmpnynamecombobox1.TabIndex = 0;
+            this.cmpnynamecombobox1.SelectedIndexChanged += new System.EventHandler(this.cmpnynamecombobox1_SelectedIndexChanged);
             // 
             // Product_Group
             // 
@@ -304,11 +241,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(646, 614);
-            this.Controls.Add(this.cmpnynamecombobox);
-            this.Controls.Add(this.cmpnyidsearch);
-            this.Controls.Add(this.prdctnametxtbox);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.cmpnynamecombobox1);
             this.Controls.Add(this.cmpnyidsearch1);
             this.Controls.Add(this.prdctnametxtbox1);
@@ -331,7 +263,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,17 +279,10 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.ComboBox cmpnynamecombobox1;
         private System.Windows.Forms.PictureBox cmpnyidsearch1;
         private System.Windows.Forms.TextBox prdctnametxtbox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmpnynamecombobox;
-        private System.Windows.Forms.PictureBox cmpnyidsearch;
-        private System.Windows.Forms.TextBox prdctnametxtbox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmpnynamecombobox1;
     }
 }

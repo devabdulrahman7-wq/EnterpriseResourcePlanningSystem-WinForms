@@ -61,6 +61,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 397);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -102,6 +104,7 @@
             this.removebtn.TabIndex = 214;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -116,6 +119,7 @@
             this.editbtn.TabIndex = 213;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -130,6 +134,7 @@
             this.clearbtn.TabIndex = 212;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -144,6 +149,7 @@
             this.savebtn.TabIndex = 211;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // newbtn
             // 
@@ -158,6 +164,7 @@
             this.newbtn.TabIndex = 216;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // label2
             // 
@@ -203,6 +210,7 @@
             this.customeridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customeridsearch.TabIndex = 274;
             this.customeridsearch.TabStop = false;
+            this.customeridsearch.Click += new System.EventHandler(this.customeridsearch_Click);
             // 
             // cmpnynametxtbox
             // 
@@ -213,6 +221,7 @@
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 20);
             this.cmpnynametxtbox.TabIndex = 273;
+            this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
@@ -223,6 +232,7 @@
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
             this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 20);
             this.cmpnyidtxtbox.TabIndex = 272;
+            this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
             // label10
             // 
@@ -271,6 +281,7 @@
             this.Name = "Companies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "    Companies";
+            this.Load += new System.EventHandler(this.Companies_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customeridsearch)).EndInit();

@@ -62,7 +62,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.vendornametxtbox = new System.Windows.Forms.TextBox();
             this.vendoridtxtbox = new System.Windows.Forms.TextBox();
-            this.billnootxtbox = new System.Windows.Forms.TextBox();
+            this.billnotxtbox = new System.Windows.Forms.TextBox();
             this.purchaseidtxtbox = new System.Windows.Forms.TextBox();
             this.billlnolbl = new System.Windows.Forms.Label();
             this.purchasedatelbl = new System.Windows.Forms.Label();
@@ -84,6 +84,7 @@
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 297;
             this.vendoridsearch.TabStop = false;
+            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
             // 
             // showloaddocxhkbox
             // 
@@ -96,6 +97,7 @@
             this.showloaddocxhkbox.TabIndex = 290;
             this.showloaddocxhkbox.Text = "Show Load Document";
             this.showloaddocxhkbox.UseVisualStyleBackColor = true;
+            this.showloaddocxhkbox.CheckedChanged += new System.EventHandler(this.showloaddocxhkbox_CheckedChanged);
             // 
             // nightshftbtn
             // 
@@ -109,21 +111,23 @@
             this.nightshftbtn.TabStop = true;
             this.nightshftbtn.Text = "Night Shift";
             this.nightshftbtn.UseVisualStyleBackColor = true;
+            this.nightshftbtn.CheckedChanged += new System.EventHandler(this.nightshftbtn_CheckedChanged);
             // 
             // duedatetxtbox
             // 
             this.duedatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.duedatetxtbox.Location = new System.Drawing.Point(625, 98);
+            this.duedatetxtbox.Location = new System.Drawing.Point(625, 96);
             this.duedatetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.duedatetxtbox.Name = "duedatetxtbox";
             this.duedatetxtbox.Size = new System.Drawing.Size(128, 16);
             this.duedatetxtbox.TabIndex = 288;
+            this.duedatetxtbox.TextChanged += new System.EventHandler(this.duedatetxtbox_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(632, 78);
+            this.label22.Location = new System.Drawing.Point(631, 75);
             this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(59, 16);
@@ -134,7 +138,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(515, 70);
+            this.label19.Location = new System.Drawing.Point(515, 75);
             this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(53, 16);
@@ -153,6 +157,7 @@
             this.dayshftbtn.TabStop = true;
             this.dayshftbtn.Text = "Day Shift ";
             this.dayshftbtn.UseVisualStyleBackColor = true;
+            this.dayshftbtn.CheckedChanged += new System.EventHandler(this.dayshftbtn_CheckedChanged);
             // 
             // dateTimePicker2
             // 
@@ -165,7 +170,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 90);
+            this.dateTimePicker1.Location = new System.Drawing.Point(237, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(118, 23);
             this.dateTimePicker1.TabIndex = 295;
@@ -189,6 +194,7 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(494, 30);
             this.narrationtxtbox.TabIndex = 293;
+            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label21
             // 
@@ -249,6 +255,7 @@
             this.closebtn.TabIndex = 285;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -263,6 +270,7 @@
             this.removebtn.TabIndex = 284;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // openbtn
             // 
@@ -277,6 +285,7 @@
             this.openbtn.TabIndex = 283;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -291,6 +300,7 @@
             this.clearbtn.TabIndex = 282;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -305,6 +315,7 @@
             this.savebtn.TabIndex = 281;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // dataGridView1
             // 
@@ -322,6 +333,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(579, 300);
             this.dataGridView1.TabIndex = 280;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -406,6 +418,7 @@
             this.vendornametxtbox.Name = "vendornametxtbox";
             this.vendornametxtbox.Size = new System.Drawing.Size(349, 16);
             this.vendornametxtbox.TabIndex = 276;
+            this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -415,24 +428,27 @@
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(128, 16);
             this.vendoridtxtbox.TabIndex = 275;
+            this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
-            // billnootxtbox
+            // billnotxtbox
             // 
-            this.billnootxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.billnootxtbox.Location = new System.Drawing.Point(362, 96);
-            this.billnootxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.billnootxtbox.Name = "billnootxtbox";
-            this.billnootxtbox.Size = new System.Drawing.Size(128, 16);
-            this.billnootxtbox.TabIndex = 274;
+            this.billnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.billnotxtbox.Location = new System.Drawing.Point(362, 96);
+            this.billnotxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.billnotxtbox.Name = "billnotxtbox";
+            this.billnotxtbox.Size = new System.Drawing.Size(128, 16);
+            this.billnotxtbox.TabIndex = 274;
+            this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // purchaseidtxtbox
             // 
             this.purchaseidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.purchaseidtxtbox.Location = new System.Drawing.Point(102, 95);
+            this.purchaseidtxtbox.Location = new System.Drawing.Point(94, 98);
             this.purchaseidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.purchaseidtxtbox.Name = "purchaseidtxtbox";
             this.purchaseidtxtbox.Size = new System.Drawing.Size(128, 16);
             this.purchaseidtxtbox.TabIndex = 273;
+            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged);
             // 
             // billlnolbl
             // 
@@ -460,7 +476,7 @@
             // 
             this.purchaseidlbl.AutoSize = true;
             this.purchaseidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchaseidlbl.Location = new System.Drawing.Point(116, 74);
+            this.purchaseidlbl.Location = new System.Drawing.Point(91, 75);
             this.purchaseidlbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.purchaseidlbl.Name = "purchaseidlbl";
             this.purchaseidlbl.Size = new System.Drawing.Size(75, 16);
@@ -523,7 +539,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.vendornametxtbox);
             this.Controls.Add(this.vendoridtxtbox);
-            this.Controls.Add(this.billnootxtbox);
+            this.Controls.Add(this.billnotxtbox);
             this.Controls.Add(this.purchaseidtxtbox);
             this.Controls.Add(this.billlnolbl);
             this.Controls.Add(this.purchasedatelbl);
@@ -581,7 +597,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox vendornametxtbox;
         private System.Windows.Forms.TextBox vendoridtxtbox;
-        private System.Windows.Forms.TextBox billnootxtbox;
+        private System.Windows.Forms.TextBox billnotxtbox;
         private System.Windows.Forms.TextBox purchaseidtxtbox;
         private System.Windows.Forms.Label billlnolbl;
         private System.Windows.Forms.Label purchasedatelbl;
