@@ -98,6 +98,7 @@
             this.newbtn.TabIndex = 281;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -127,6 +128,7 @@
             this.removebtn.TabIndex = 279;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -141,6 +143,7 @@
             this.editbtn.TabIndex = 278;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -155,6 +158,7 @@
             this.clearbtn.TabIndex = 277;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -169,6 +173,7 @@
             this.savebtn.TabIndex = 276;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // dataGridView1
             // 
@@ -180,6 +185,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 411);
             this.dataGridView1.TabIndex = 270;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -203,6 +209,7 @@
             this.pkngidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pkngidsearch.TabIndex = 289;
             this.pkngidsearch.TabStop = false;
+            this.pkngidsearch.Click += new System.EventHandler(this.pkngidsearch_Click);
             // 
             // pkngnametxtbox
             // 
@@ -212,6 +219,7 @@
             this.pkngnametxtbox.Name = "pkngnametxtbox";
             this.pkngnametxtbox.Size = new System.Drawing.Size(224, 13);
             this.pkngnametxtbox.TabIndex = 288;
+            this.pkngnametxtbox.TextChanged += new System.EventHandler(this.pkngnametxtbox_TextChanged);
             // 
             // pkngidtxtbox
             // 
@@ -221,6 +229,7 @@
             this.pkngidtxtbox.Name = "pkngidtxtbox";
             this.pkngidtxtbox.Size = new System.Drawing.Size(117, 13);
             this.pkngidtxtbox.TabIndex = 287;
+            this.pkngidtxtbox.TextChanged += new System.EventHandler(this.pkngidtxtbox_TextChanged);
             // 
             // label10
             // 
