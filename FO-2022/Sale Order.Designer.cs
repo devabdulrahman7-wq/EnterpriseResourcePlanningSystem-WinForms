@@ -33,19 +33,6 @@
             this.customeridsearch = new System.Windows.Forms.PictureBox();
             this.orderdatepcker = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showloadchkbox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,7 +80,7 @@
             // salesmanudsearch
             // 
             this.salesmanudsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanudsearch.Image")));
-            this.salesmanudsearch.Location = new System.Drawing.Point(277, 185);
+            this.salesmanudsearch.Location = new System.Drawing.Point(148, 184);
             this.salesmanudsearch.Name = "salesmanudsearch";
             this.salesmanudsearch.Size = new System.Drawing.Size(22, 18);
             this.salesmanudsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,7 +90,7 @@
             // customeridsearch
             // 
             this.customeridsearch.Image = ((System.Drawing.Image)(resources.GetObject("customeridsearch.Image")));
-            this.customeridsearch.Location = new System.Drawing.Point(277, 134);
+            this.customeridsearch.Location = new System.Drawing.Point(148, 133);
             this.customeridsearch.Name = "customeridsearch";
             this.customeridsearch.Size = new System.Drawing.Size(22, 18);
             this.customeridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +100,7 @@
             // orderdatepcker
             // 
             this.orderdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.orderdatepcker.Location = new System.Drawing.Point(283, 78);
+            this.orderdatepcker.Location = new System.Drawing.Point(154, 77);
             this.orderdatepcker.Name = "orderdatepcker";
             this.orderdatepcker.Size = new System.Drawing.Size(133, 23);
             this.orderdatepcker.TabIndex = 183;
@@ -121,109 +108,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 218);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 218);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(966, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(965, 248);
             this.dataGridView1.TabIndex = 182;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 122;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 115;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pack ";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Qty(P)";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 50;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty(L)";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 45;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Bns(L)";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 45;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Price";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Disc%";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 60;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Disc.Val";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 75;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "S-T%";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 45;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "S-T Val";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 75;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "TTL Value";
-            this.Column14.Name = "Column14";
             // 
             // showloadchkbox
             // 
             this.showloadchkbox.AutoSize = true;
             this.showloadchkbox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showloadchkbox.Location = new System.Drawing.Point(554, 75);
+            this.showloadchkbox.Location = new System.Drawing.Point(425, 74);
             this.showloadchkbox.Name = "showloadchkbox";
             this.showloadchkbox.Size = new System.Drawing.Size(153, 22);
             this.showloadchkbox.TabIndex = 181;
@@ -234,7 +128,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 168);
+            this.label5.Location = new System.Drawing.Point(190, 167);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 16);
@@ -245,7 +139,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(171, 168);
+            this.label6.Location = new System.Drawing.Point(42, 167);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
@@ -255,7 +149,7 @@
             // salesmennametxtbox
             // 
             this.salesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmennametxtbox.Location = new System.Drawing.Point(296, 187);
+            this.salesmennametxtbox.Location = new System.Drawing.Point(167, 186);
             this.salesmennametxtbox.Multiline = true;
             this.salesmennametxtbox.Name = "salesmennametxtbox";
             this.salesmennametxtbox.Size = new System.Drawing.Size(307, 16);
@@ -264,7 +158,7 @@
             // salesmenidtxtbox
             // 
             this.salesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmenidtxtbox.Location = new System.Drawing.Point(161, 187);
+            this.salesmenidtxtbox.Location = new System.Drawing.Point(32, 186);
             this.salesmenidtxtbox.Multiline = true;
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
             this.salesmenidtxtbox.Size = new System.Drawing.Size(119, 16);
@@ -273,7 +167,7 @@
             // townsectortxtbox
             // 
             this.townsectortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.townsectortxtbox.Location = new System.Drawing.Point(554, 136);
+            this.townsectortxtbox.Location = new System.Drawing.Point(425, 135);
             this.townsectortxtbox.Multiline = true;
             this.townsectortxtbox.Name = "townsectortxtbox";
             this.townsectortxtbox.Size = new System.Drawing.Size(112, 16);
@@ -283,7 +177,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(557, 117);
+            this.label4.Location = new System.Drawing.Point(428, 116);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
@@ -294,7 +188,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(290, 117);
+            this.label3.Location = new System.Drawing.Point(161, 116);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 16);
@@ -305,7 +199,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 117);
+            this.label2.Location = new System.Drawing.Point(39, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
@@ -315,7 +209,7 @@
             // customernametxtbox
             // 
             this.customernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customernametxtbox.Location = new System.Drawing.Point(293, 136);
+            this.customernametxtbox.Location = new System.Drawing.Point(164, 135);
             this.customernametxtbox.Multiline = true;
             this.customernametxtbox.Name = "customernametxtbox";
             this.customernametxtbox.Size = new System.Drawing.Size(255, 16);
@@ -324,7 +218,7 @@
             // customeridtxtbox
             // 
             this.customeridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customeridtxtbox.Location = new System.Drawing.Point(161, 136);
+            this.customeridtxtbox.Location = new System.Drawing.Point(32, 135);
             this.customeridtxtbox.Multiline = true;
             this.customeridtxtbox.Name = "customeridtxtbox";
             this.customeridtxtbox.Size = new System.Drawing.Size(116, 16);
@@ -333,7 +227,7 @@
             // orderidtxtbox
             // 
             this.orderidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderidtxtbox.Location = new System.Drawing.Point(161, 78);
+            this.orderidtxtbox.Location = new System.Drawing.Point(32, 77);
             this.orderidtxtbox.Multiline = true;
             this.orderidtxtbox.Name = "orderidtxtbox";
             this.orderidtxtbox.Size = new System.Drawing.Size(116, 23);
@@ -343,7 +237,7 @@
             // 
             this.orderidlbl.AutoSize = true;
             this.orderidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderidlbl.Location = new System.Drawing.Point(158, 59);
+            this.orderidlbl.Location = new System.Drawing.Point(29, 58);
             this.orderidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderidlbl.Name = "orderidlbl";
             this.orderidlbl.Size = new System.Drawing.Size(56, 16);
@@ -354,7 +248,7 @@
             // 
             this.saledatelbl.AutoSize = true;
             this.saledatelbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saledatelbl.Location = new System.Drawing.Point(290, 59);
+            this.saledatelbl.Location = new System.Drawing.Point(161, 58);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
             this.saledatelbl.Size = new System.Drawing.Size(70, 16);
@@ -365,7 +259,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(445, 59);
+            this.label1.Location = new System.Drawing.Point(316, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 16);
@@ -375,7 +269,7 @@
             // billnotxtbox
             // 
             this.billnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.billnotxtbox.Location = new System.Drawing.Point(432, 78);
+            this.billnotxtbox.Location = new System.Drawing.Point(303, 77);
             this.billnotxtbox.Multiline = true;
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(116, 23);
@@ -539,10 +433,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(631, 609);
+            this.closebtn.Location = new System.Drawing.Point(631, 611);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 30);
+            this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 638;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -583,10 +477,10 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(552, 609);
+            this.clearbtn.Location = new System.Drawing.Point(552, 611);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 30);
+            this.clearbtn.Size = new System.Drawing.Size(75, 28);
             this.clearbtn.TabIndex = 635;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
@@ -598,10 +492,10 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(473, 609);
+            this.savebtn.Location = new System.Drawing.Point(473, 611);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 30);
+            this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 634;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
@@ -616,6 +510,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 640;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Sale_Order
             // 
@@ -717,19 +612,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.Button openbtn;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button removebtn;

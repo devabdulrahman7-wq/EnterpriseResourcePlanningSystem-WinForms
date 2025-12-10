@@ -34,8 +34,7 @@ namespace FO_2022
         //}
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            Application.Exit();        }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             //this.WindowState = (this.WindowState == FormWindowState.Maximized)

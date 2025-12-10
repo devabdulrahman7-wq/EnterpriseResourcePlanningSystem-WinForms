@@ -34,7 +34,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.emailtxtbox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.conatacttxtbox = new System.Windows.Forms.TextBox();
+            this.conatactpersontxtbox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.faxtxtbox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,15 +54,13 @@
             this.editbtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.partyidtxtbox = new System.Windows.Forms.TextBox();
+            this.partyid1txtbox = new System.Windows.Forms.TextBox();
             this.nametxtbox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.nametxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,12 +71,13 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(648, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(648, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 555;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // vendorctgrycombobox
             // 
@@ -107,6 +106,7 @@
             this.emailtxtbox.Name = "emailtxtbox";
             this.emailtxtbox.Size = new System.Drawing.Size(339, 20);
             this.emailtxtbox.TabIndex = 545;
+            this.emailtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.emailtxtbox_KeyDown);
             // 
             // label23
             // 
@@ -118,15 +118,16 @@
             this.label23.TabIndex = 544;
             this.label23.Text = "E-mail";
             // 
-            // conatacttxtbox
+            // conatactpersontxtbox
             // 
-            this.conatacttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.conatacttxtbox.Location = new System.Drawing.Point(334, 435);
-            this.conatacttxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.conatacttxtbox.Multiline = true;
-            this.conatacttxtbox.Name = "conatacttxtbox";
-            this.conatacttxtbox.Size = new System.Drawing.Size(339, 20);
-            this.conatacttxtbox.TabIndex = 543;
+            this.conatactpersontxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.conatactpersontxtbox.Location = new System.Drawing.Point(334, 435);
+            this.conatactpersontxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.conatactpersontxtbox.Multiline = true;
+            this.conatactpersontxtbox.Name = "conatactpersontxtbox";
+            this.conatactpersontxtbox.Size = new System.Drawing.Size(339, 20);
+            this.conatactpersontxtbox.TabIndex = 543;
+            this.conatactpersontxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conatactpersontxtbox_KeyDown);
             // 
             // label22
             // 
@@ -147,6 +148,7 @@
             this.faxtxtbox.Name = "faxtxtbox";
             this.faxtxtbox.Size = new System.Drawing.Size(179, 20);
             this.faxtxtbox.TabIndex = 541;
+            this.faxtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.faxtxtbox_KeyDown);
             // 
             // label20
             // 
@@ -167,12 +169,13 @@
             this.mblnotxtbox.Name = "mblnotxtbox";
             this.mblnotxtbox.Size = new System.Drawing.Size(153, 20);
             this.mblnotxtbox.TabIndex = 539;
+            this.mblnotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mblnotxtbox_KeyDown);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(326, 305);
+            this.label21.Location = new System.Drawing.Point(331, 305);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(63, 16);
             this.label21.TabIndex = 538;
@@ -187,6 +190,7 @@
             this.phone2txtbox.Name = "phone2txtbox";
             this.phone2txtbox.Size = new System.Drawing.Size(123, 20);
             this.phone2txtbox.TabIndex = 537;
+            this.phone2txtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phone2txtbox_KeyDown);
             // 
             // label19
             // 
@@ -207,6 +211,7 @@
             this.phonetxtbox.Name = "phonetxtbox";
             this.phonetxtbox.Size = new System.Drawing.Size(117, 20);
             this.phonetxtbox.TabIndex = 535;
+            this.phonetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonetxtbox_KeyDown);
             // 
             // label18
             // 
@@ -227,12 +232,13 @@
             this.citytxtbox.Name = "citytxtbox";
             this.citytxtbox.Size = new System.Drawing.Size(86, 20);
             this.citytxtbox.TabIndex = 533;
+            this.citytxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.citytxtbox_KeyDown);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(327, 251);
+            this.label17.Location = new System.Drawing.Point(334, 251);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(28, 16);
             this.label17.TabIndex = 532;
@@ -247,12 +253,13 @@
             this.addresstxtbox.Name = "addresstxtbox";
             this.addresstxtbox.Size = new System.Drawing.Size(335, 20);
             this.addresstxtbox.TabIndex = 528;
+            this.addresstxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addresstxtbox_KeyDown);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(327, 198);
+            this.label15.Location = new System.Drawing.Point(331, 198);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(58, 16);
             this.label15.TabIndex = 527;
@@ -271,6 +278,7 @@
             this.newbtn.TabIndex = 524;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -285,6 +293,7 @@
             this.closebtn.TabIndex = 523;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -299,6 +308,7 @@
             this.removebtn.TabIndex = 522;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -313,6 +323,7 @@
             this.editbtn.TabIndex = 521;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -327,6 +338,7 @@
             this.clearbtn.TabIndex = 520;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -341,26 +353,29 @@
             this.savebtn.TabIndex = 519;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click_1);
             // 
-            // textBox7
+            // partyidtxtbox
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(328, 104);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(38, 20);
-            this.textBox7.TabIndex = 518;
+            this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.partyidtxtbox.Location = new System.Drawing.Point(328, 104);
+            this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.partyidtxtbox.Multiline = true;
+            this.partyidtxtbox.Name = "partyidtxtbox";
+            this.partyidtxtbox.Size = new System.Drawing.Size(38, 20);
+            this.partyidtxtbox.TabIndex = 518;
+            this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
-            // textBox5
+            // partyid1txtbox
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(367, 104);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(68, 20);
-            this.textBox5.TabIndex = 517;
+            this.partyid1txtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.partyid1txtbox.Location = new System.Drawing.Point(367, 104);
+            this.partyid1txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.partyid1txtbox.Multiline = true;
+            this.partyid1txtbox.Name = "partyid1txtbox";
+            this.partyid1txtbox.Size = new System.Drawing.Size(68, 20);
+            this.partyid1txtbox.TabIndex = 517;
+            this.partyid1txtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyid1txtbox_KeyDown);
             // 
             // nametxtbox1
             // 
@@ -371,6 +386,7 @@
             this.nametxtbox1.Name = "nametxtbox1";
             this.nametxtbox1.Size = new System.Drawing.Size(341, 20);
             this.nametxtbox1.TabIndex = 515;
+            this.nametxtbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox1_KeyDown);
             // 
             // label6
             // 
@@ -396,7 +412,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(285, 26);
+            this.label4.Location = new System.Drawing.Point(264, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 32);
             this.label4.TabIndex = 510;
@@ -405,24 +421,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(1, 136);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(307, 386);
             this.dataGridView1.TabIndex = 509;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Vendors ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = " Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 160;
             // 
             // textBox1
             // 
@@ -445,6 +447,7 @@
             this.nametxtbox.Name = "nametxtbox";
             this.nametxtbox.Size = new System.Drawing.Size(180, 20);
             this.nametxtbox.TabIndex = 504;
+            this.nametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox_KeyDown);
             // 
             // label1
             // 
@@ -467,7 +470,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.emailtxtbox);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.conatacttxtbox);
+            this.Controls.Add(this.conatactpersontxtbox);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.faxtxtbox);
             this.Controls.Add(this.label20);
@@ -487,8 +490,8 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.partyidtxtbox);
+            this.Controls.Add(this.partyid1txtbox);
             this.Controls.Add(this.nametxtbox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -516,7 +519,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox emailtxtbox;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox conatacttxtbox;
+        private System.Windows.Forms.TextBox conatactpersontxtbox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox faxtxtbox;
         private System.Windows.Forms.Label label20;
@@ -536,8 +539,8 @@
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox partyidtxtbox;
+        private System.Windows.Forms.TextBox partyid1txtbox;
         private System.Windows.Forms.TextBox nametxtbox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -546,7 +549,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox nametxtbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

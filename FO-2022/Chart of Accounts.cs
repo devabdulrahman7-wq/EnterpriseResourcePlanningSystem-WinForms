@@ -23,5 +23,22 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prntbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Mainform1 mainform1 = new Mainform1();
+            mainform1.Show();
+        }
     }
 }

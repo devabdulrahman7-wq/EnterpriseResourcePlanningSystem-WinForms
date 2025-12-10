@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace FO_2022
 {
@@ -165,13 +166,11 @@ namespace FO_2022
                 WHERE SO.OrderId = {orderId}";
             BindDataToGrid(query);
         }
-
         // 🔹 Close Form
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         // 🔹 Search by BillNo
         private void btnSearchBill_Click(object sender, EventArgs e)
         {
@@ -208,6 +207,12 @@ namespace FO_2022
                 INNER JOIN [POS_1.2].[dbo].[SaleOrderBody] SOB ON SO.OrderId = SOB.OrderId
                 WHERE SO.OrderDate = '{date:yyyy-MM-dd}'";
             BindDataToGrid(query);
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Mainform1 mainform1 = new Mainform1();  
+            mainform1.Show();
         }
     }
 }
