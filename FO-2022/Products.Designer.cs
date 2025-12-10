@@ -47,7 +47,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.subgrpnamecomboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,22 +54,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.notxtbox = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchasepackcombobox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.salepackcombobox = new System.Windows.Forms.ComboBox();
             this.packinloseweighttxtbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.discvaltxtbox2 = new System.Windows.Forms.TextBox();
-            this.disctxtbox2 = new System.Windows.Forms.TextBox();
-            this.pricetxtbox2 = new System.Windows.Forms.TextBox();
-            this.discvaltxtbox1 = new System.Windows.Forms.TextBox();
-            this.disctxtbox1 = new System.Windows.Forms.TextBox();
-            this.pricetxtbox1 = new System.Windows.Forms.TextBox();
+            this.putchasediscvaltxtbox2 = new System.Windows.Forms.TextBox();
+            this.saledisctxtbox2 = new System.Windows.Forms.TextBox();
+            this.salepricetxtbox2 = new System.Windows.Forms.TextBox();
+            this.purchasediscvaltxtbox1 = new System.Windows.Forms.TextBox();
+            this.purchasedisctxtbox1 = new System.Windows.Forms.TextBox();
+            this.purchasepricetxtbox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -81,9 +77,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.stvaltxtbox = new System.Windows.Forms.TextBox();
             this.sttxtbox = new System.Windows.Forms.TextBox();
-            this.retailpricetxtbox = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.stockalertleveltxt = new System.Windows.Forms.TextBox();
             this.orderstocktxtbox = new System.Windows.Forms.TextBox();
             this.barcodetxtbox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -99,6 +94,8 @@
             this.genbarcodetxtbox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.salepackcombobox = new System.Windows.Forms.ComboBox();
+            this.retailpricetxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewavlblepkng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -121,7 +118,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(486, 191);
+            this.textBox1.Location = new System.Drawing.Point(482, 419);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(284, 19);
@@ -134,10 +131,11 @@
             this.dataGridViewavlblepkng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridViewavlblepkng.Location = new System.Drawing.Point(487, 217);
+            this.dataGridViewavlblepkng.Location = new System.Drawing.Point(483, 445);
             this.dataGridViewavlblepkng.Name = "dataGridViewavlblepkng";
-            this.dataGridViewavlblepkng.Size = new System.Drawing.Size(283, 464);
+            this.dataGridViewavlblepkng.Size = new System.Drawing.Size(283, 243);
             this.dataGridViewavlblepkng.TabIndex = 314;
+            this.dataGridViewavlblepkng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewavlblepkng_CellContentClick);
             // 
             // Column1
             // 
@@ -154,24 +152,26 @@
             // slctprdctgrpcomboBox1
             // 
             this.slctprdctgrpcomboBox1.FormattingEnabled = true;
-            this.slctprdctgrpcomboBox1.Location = new System.Drawing.Point(620, 110);
+            this.slctprdctgrpcomboBox1.Location = new System.Drawing.Point(598, 175);
             this.slctprdctgrpcomboBox1.Name = "slctprdctgrpcomboBox1";
             this.slctprdctgrpcomboBox1.Size = new System.Drawing.Size(150, 21);
             this.slctprdctgrpcomboBox1.TabIndex = 334;
+            this.slctprdctgrpcomboBox1.SelectedIndexChanged += new System.EventHandler(this.slctprdctgrpcomboBox1_SelectedIndexChanged);
             // 
             // slctcmpnycombobox
             // 
             this.slctcmpnycombobox.FormattingEnabled = true;
-            this.slctcmpnycombobox.Location = new System.Drawing.Point(486, 110);
+            this.slctcmpnycombobox.Location = new System.Drawing.Point(464, 175);
             this.slctcmpnycombobox.Name = "slctcmpnycombobox";
             this.slctcmpnycombobox.Size = new System.Drawing.Size(128, 21);
             this.slctcmpnycombobox.TabIndex = 333;
+            this.slctcmpnycombobox.SelectedIndexChanged += new System.EventHandler(this.slctcmpnycombobox_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(483, 86);
+            this.label10.Location = new System.Drawing.Point(461, 151);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 16);
@@ -182,7 +182,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(483, 143);
+            this.label9.Location = new System.Drawing.Point(461, 208);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(131, 16);
@@ -193,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(617, 88);
+            this.label2.Location = new System.Drawing.Point(595, 153);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 16);
@@ -203,7 +203,7 @@
             // srchprdctnametxtbox
             // 
             this.srchprdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.srchprdctnametxtbox.Location = new System.Drawing.Point(486, 163);
+            this.srchprdctnametxtbox.Location = new System.Drawing.Point(464, 228);
             this.srchprdctnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.srchprdctnametxtbox.Multiline = true;
             this.srchprdctnametxtbox.Name = "srchprdctnametxtbox";
@@ -217,6 +217,7 @@
             this.grpnamecomboBox.Name = "grpnamecomboBox";
             this.grpnamecomboBox.Size = new System.Drawing.Size(258, 21);
             this.grpnamecomboBox.TabIndex = 342;
+            this.grpnamecomboBox.SelectedIndexChanged += new System.EventHandler(this.grpnamecomboBox_SelectedIndexChanged);
             // 
             // cmpnynamecombobox1
             // 
@@ -225,15 +226,17 @@
             this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
             this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 21);
             this.cmpnynamecombobox1.TabIndex = 341;
+            this.cmpnynamecombobox1.SelectedIndexChanged += new System.EventHandler(this.cmpnynamecombobox1_SelectedIndexChanged);
             // 
             // ptdcidttxtbox1
             // 
             this.ptdcidttxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ptdcidttxtbox1.Location = new System.Drawing.Point(8, 142);
+            this.ptdcidttxtbox1.Location = new System.Drawing.Point(8, 138);
             this.ptdcidttxtbox1.Margin = new System.Windows.Forms.Padding(4);
             this.ptdcidttxtbox1.Name = "ptdcidttxtbox1";
-            this.ptdcidttxtbox1.Size = new System.Drawing.Size(63, 13);
+            this.ptdcidttxtbox1.Size = new System.Drawing.Size(114, 13);
             this.ptdcidttxtbox1.TabIndex = 340;
+            this.ptdcidttxtbox1.TextChanged += new System.EventHandler(this.ptdcidttxtbox1_TextChanged);
             // 
             // label3
             // 
@@ -277,15 +280,6 @@
             this.textBox2.Size = new System.Drawing.Size(224, 13);
             this.textBox2.TabIndex = 343;
             // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(73, 142);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 13);
-            this.textBox3.TabIndex = 344;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -304,6 +298,7 @@
             this.subgrpnamecomboBox.Name = "subgrpnamecomboBox";
             this.subgrpnamecomboBox.Size = new System.Drawing.Size(258, 21);
             this.subgrpnamecomboBox.TabIndex = 346;
+            this.subgrpnamecomboBox.SelectedIndexChanged += new System.EventHandler(this.subgrpnamecomboBox_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -324,12 +319,13 @@
             this.prdctnametxtbox.Name = "prdctnametxtbox";
             this.prdctnametxtbox.Size = new System.Drawing.Size(224, 13);
             this.prdctnametxtbox.TabIndex = 348;
+            this.prdctnametxtbox.TextChanged += new System.EventHandler(this.prdctnametxtbox_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(283, 102);
+            this.label8.Location = new System.Drawing.Point(242, 68);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 16);
@@ -339,34 +335,21 @@
             // notxtbox
             // 
             this.notxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.notxtbox.Location = new System.Drawing.Point(286, 122);
+            this.notxtbox.Location = new System.Drawing.Point(243, 91);
             this.notxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.notxtbox.Name = "notxtbox";
             this.notxtbox.Size = new System.Drawing.Size(96, 13);
             this.notxtbox.TabIndex = 350;
+            this.notxtbox.TextChanged += new System.EventHandler(this.notxtbox_TextChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column4});
             this.dataGridView2.Location = new System.Drawing.Point(32, 255);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(351, 149);
+            this.dataGridView2.Size = new System.Drawing.Size(734, 149);
             this.dataGridView2.TabIndex = 351;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Packing ";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Multiplier";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // purchasepackcombobox
             // 
@@ -375,6 +358,7 @@
             this.purchasepackcombobox.Name = "purchasepackcombobox";
             this.purchasepackcombobox.Size = new System.Drawing.Size(98, 21);
             this.purchasepackcombobox.TabIndex = 353;
+            this.purchasepackcombobox.SelectedIndexChanged += new System.EventHandler(this.purchasepackcombobox_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -386,14 +370,6 @@
             this.label11.TabIndex = 354;
             this.label11.Text = "Purchase Pack";
             // 
-            // salepackcombobox
-            // 
-            this.salepackcombobox.FormattingEnabled = true;
-            this.salepackcombobox.Location = new System.Drawing.Point(138, 439);
-            this.salepackcombobox.Name = "salepackcombobox";
-            this.salepackcombobox.Size = new System.Drawing.Size(98, 21);
-            this.salepackcombobox.TabIndex = 357;
-            // 
             // packinloseweighttxtbox
             // 
             this.packinloseweighttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -403,6 +379,7 @@
             this.packinloseweighttxtbox.Name = "packinloseweighttxtbox";
             this.packinloseweighttxtbox.Size = new System.Drawing.Size(131, 20);
             this.packinloseweighttxtbox.TabIndex = 358;
+            this.packinloseweighttxtbox.TextChanged += new System.EventHandler(this.packinloseweighttxtbox_TextChanged);
             // 
             // label12
             // 
@@ -436,12 +413,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.discvaltxtbox2);
-            this.groupBox1.Controls.Add(this.disctxtbox2);
-            this.groupBox1.Controls.Add(this.pricetxtbox2);
-            this.groupBox1.Controls.Add(this.discvaltxtbox1);
-            this.groupBox1.Controls.Add(this.disctxtbox1);
-            this.groupBox1.Controls.Add(this.pricetxtbox1);
+            this.groupBox1.Controls.Add(this.putchasediscvaltxtbox2);
+            this.groupBox1.Controls.Add(this.saledisctxtbox2);
+            this.groupBox1.Controls.Add(this.salepricetxtbox2);
+            this.groupBox1.Controls.Add(this.purchasediscvaltxtbox1);
+            this.groupBox1.Controls.Add(this.purchasedisctxtbox1);
+            this.groupBox1.Controls.Add(this.purchasepricetxtbox1);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
@@ -451,59 +428,65 @@
             this.groupBox1.TabIndex = 361;
             this.groupBox1.TabStop = false;
             // 
-            // discvaltxtbox2
+            // putchasediscvaltxtbox2
             // 
-            this.discvaltxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.discvaltxtbox2.Location = new System.Drawing.Point(167, 66);
-            this.discvaltxtbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.discvaltxtbox2.Name = "discvaltxtbox2";
-            this.discvaltxtbox2.Size = new System.Drawing.Size(96, 13);
-            this.discvaltxtbox2.TabIndex = 367;
+            this.putchasediscvaltxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.putchasediscvaltxtbox2.Location = new System.Drawing.Point(167, 66);
+            this.putchasediscvaltxtbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.putchasediscvaltxtbox2.Name = "putchasediscvaltxtbox2";
+            this.putchasediscvaltxtbox2.Size = new System.Drawing.Size(96, 13);
+            this.putchasediscvaltxtbox2.TabIndex = 367;
+            this.putchasediscvaltxtbox2.TextChanged += new System.EventHandler(this.putchasediscvaltxtbox2_TextChanged);
             // 
-            // disctxtbox2
+            // saledisctxtbox2
             // 
-            this.disctxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.disctxtbox2.Location = new System.Drawing.Point(167, 44);
-            this.disctxtbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.disctxtbox2.Name = "disctxtbox2";
-            this.disctxtbox2.Size = new System.Drawing.Size(96, 13);
-            this.disctxtbox2.TabIndex = 366;
+            this.saledisctxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saledisctxtbox2.Location = new System.Drawing.Point(167, 44);
+            this.saledisctxtbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.saledisctxtbox2.Name = "saledisctxtbox2";
+            this.saledisctxtbox2.Size = new System.Drawing.Size(96, 13);
+            this.saledisctxtbox2.TabIndex = 366;
+            this.saledisctxtbox2.TextChanged += new System.EventHandler(this.saledisctxtbox2_TextChanged);
             // 
-            // pricetxtbox2
+            // salepricetxtbox2
             // 
-            this.pricetxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pricetxtbox2.Location = new System.Drawing.Point(167, 16);
-            this.pricetxtbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pricetxtbox2.Name = "pricetxtbox2";
-            this.pricetxtbox2.Size = new System.Drawing.Size(96, 13);
-            this.pricetxtbox2.TabIndex = 365;
+            this.salepricetxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salepricetxtbox2.Location = new System.Drawing.Point(167, 16);
+            this.salepricetxtbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.salepricetxtbox2.Name = "salepricetxtbox2";
+            this.salepricetxtbox2.Size = new System.Drawing.Size(96, 13);
+            this.salepricetxtbox2.TabIndex = 365;
+            this.salepricetxtbox2.TextChanged += new System.EventHandler(this.salepricetxtbox2_TextChanged);
             // 
-            // discvaltxtbox1
+            // purchasediscvaltxtbox1
             // 
-            this.discvaltxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.discvaltxtbox1.Location = new System.Drawing.Point(63, 66);
-            this.discvaltxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.discvaltxtbox1.Name = "discvaltxtbox1";
-            this.discvaltxtbox1.Size = new System.Drawing.Size(96, 13);
-            this.discvaltxtbox1.TabIndex = 364;
+            this.purchasediscvaltxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.purchasediscvaltxtbox1.Location = new System.Drawing.Point(63, 66);
+            this.purchasediscvaltxtbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.purchasediscvaltxtbox1.Name = "purchasediscvaltxtbox1";
+            this.purchasediscvaltxtbox1.Size = new System.Drawing.Size(96, 13);
+            this.purchasediscvaltxtbox1.TabIndex = 364;
+            this.purchasediscvaltxtbox1.TextChanged += new System.EventHandler(this.purchasediscvaltxtbox1_TextChanged);
             // 
-            // disctxtbox1
+            // purchasedisctxtbox1
             // 
-            this.disctxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.disctxtbox1.Location = new System.Drawing.Point(63, 44);
-            this.disctxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.disctxtbox1.Name = "disctxtbox1";
-            this.disctxtbox1.Size = new System.Drawing.Size(96, 13);
-            this.disctxtbox1.TabIndex = 363;
+            this.purchasedisctxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.purchasedisctxtbox1.Location = new System.Drawing.Point(63, 44);
+            this.purchasedisctxtbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.purchasedisctxtbox1.Name = "purchasedisctxtbox1";
+            this.purchasedisctxtbox1.Size = new System.Drawing.Size(96, 13);
+            this.purchasedisctxtbox1.TabIndex = 363;
+            this.purchasedisctxtbox1.TextChanged += new System.EventHandler(this.purchasedisctxtbox1_TextChanged);
             // 
-            // pricetxtbox1
+            // purchasepricetxtbox1
             // 
-            this.pricetxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pricetxtbox1.Location = new System.Drawing.Point(63, 16);
-            this.pricetxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pricetxtbox1.Name = "pricetxtbox1";
-            this.pricetxtbox1.Size = new System.Drawing.Size(96, 13);
-            this.pricetxtbox1.TabIndex = 362;
+            this.purchasepricetxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.purchasepricetxtbox1.Location = new System.Drawing.Point(63, 16);
+            this.purchasepricetxtbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.purchasepricetxtbox1.Name = "purchasepricetxtbox1";
+            this.purchasepricetxtbox1.Size = new System.Drawing.Size(96, 13);
+            this.purchasepricetxtbox1.TabIndex = 362;
+            this.purchasepricetxtbox1.TextChanged += new System.EventHandler(this.purchasepricetxtbox1_TextChanged);
             // 
             // label16
             // 
@@ -547,12 +530,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.retailpricetxtbox);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.stvaltxtbox);
             this.groupBox2.Controls.Add(this.sttxtbox);
-            this.groupBox2.Controls.Add(this.retailpricetxtbox);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(293, 488);
             this.groupBox2.Name = "groupBox2";
@@ -564,7 +547,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(6, 20);
+            this.label21.Location = new System.Drawing.Point(1, 21);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(71, 16);
             this.label21.TabIndex = 373;
@@ -598,6 +581,7 @@
             this.stvaltxtbox.Name = "stvaltxtbox";
             this.stvaltxtbox.Size = new System.Drawing.Size(96, 16);
             this.stvaltxtbox.TabIndex = 370;
+            this.stvaltxtbox.TextChanged += new System.EventHandler(this.stvaltxtbox_TextChanged);
             // 
             // sttxtbox
             // 
@@ -607,62 +591,56 @@
             this.sttxtbox.Name = "sttxtbox";
             this.sttxtbox.Size = new System.Drawing.Size(96, 16);
             this.sttxtbox.TabIndex = 369;
-            // 
-            // retailpricetxtbox
-            // 
-            this.retailpricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.retailpricetxtbox.Location = new System.Drawing.Point(74, 20);
-            this.retailpricetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.retailpricetxtbox.Name = "retailpricetxtbox";
-            this.retailpricetxtbox.Size = new System.Drawing.Size(96, 16);
-            this.retailpricetxtbox.TabIndex = 368;
+            this.sttxtbox.TextChanged += new System.EventHandler(this.sttxtbox_TextChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(263, 584);
+            this.checkBox1.Location = new System.Drawing.Point(267, 612);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(184, 20);
             this.checkBox1.TabIndex = 365;
             this.checkBox1.Text = "Value Discount Before Ratio";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox17
+            // stockalertleveltxt
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Location = new System.Drawing.Point(134, 584);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(111, 20);
-            this.textBox17.TabIndex = 368;
+            this.stockalertleveltxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stockalertleveltxt.Location = new System.Drawing.Point(138, 612);
+            this.stockalertleveltxt.Margin = new System.Windows.Forms.Padding(4);
+            this.stockalertleveltxt.Multiline = true;
+            this.stockalertleveltxt.Name = "stockalertleveltxt";
+            this.stockalertleveltxt.Size = new System.Drawing.Size(111, 20);
+            this.stockalertleveltxt.TabIndex = 368;
             // 
             // orderstocktxtbox
             // 
             this.orderstocktxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderstocktxtbox.Location = new System.Drawing.Point(134, 612);
+            this.orderstocktxtbox.Location = new System.Drawing.Point(138, 640);
             this.orderstocktxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.orderstocktxtbox.Multiline = true;
             this.orderstocktxtbox.Name = "orderstocktxtbox";
             this.orderstocktxtbox.Size = new System.Drawing.Size(111, 20);
             this.orderstocktxtbox.TabIndex = 369;
+            this.orderstocktxtbox.TextChanged += new System.EventHandler(this.orderstocktxtbox_TextChanged);
             // 
             // barcodetxtbox
             // 
             this.barcodetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodetxtbox.Location = new System.Drawing.Point(134, 640);
+            this.barcodetxtbox.Location = new System.Drawing.Point(138, 668);
             this.barcodetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.barcodetxtbox.Multiline = true;
             this.barcodetxtbox.Name = "barcodetxtbox";
             this.barcodetxtbox.Size = new System.Drawing.Size(111, 20);
             this.barcodetxtbox.TabIndex = 370;
+            this.barcodetxtbox.TextChanged += new System.EventHandler(this.barcodetxtbox_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(21, 588);
+            this.label22.Location = new System.Drawing.Point(25, 616);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(102, 16);
             this.label22.TabIndex = 371;
@@ -672,7 +650,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(17, 616);
+            this.label23.Location = new System.Drawing.Point(21, 644);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(108, 16);
             this.label23.TabIndex = 372;
@@ -682,7 +660,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(21, 644);
+            this.label24.Location = new System.Drawing.Point(25, 672);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(59, 16);
             this.label24.TabIndex = 373;
@@ -692,7 +670,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(248, 644);
+            this.label25.Location = new System.Drawing.Point(252, 672);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(115, 16);
             this.label25.TabIndex = 374;
@@ -711,6 +689,7 @@
             this.newbtn.TabIndex = 380;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -725,6 +704,7 @@
             this.closebtn.TabIndex = 379;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -739,6 +719,7 @@
             this.removebtn.TabIndex = 378;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -753,6 +734,7 @@
             this.editbtn.TabIndex = 377;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -767,6 +749,7 @@
             this.clearbtn.TabIndex = 376;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -781,16 +764,18 @@
             this.savebtn.TabIndex = 375;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // genbarcodetxtbox
             // 
             this.genbarcodetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.genbarcodetxtbox.Location = new System.Drawing.Point(370, 646);
+            this.genbarcodetxtbox.Location = new System.Drawing.Point(374, 674);
             this.genbarcodetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.genbarcodetxtbox.Multiline = true;
             this.genbarcodetxtbox.Name = "genbarcodetxtbox";
             this.genbarcodetxtbox.Size = new System.Drawing.Size(100, 16);
             this.genbarcodetxtbox.TabIndex = 381;
+            this.genbarcodetxtbox.TextChanged += new System.EventHandler(this.genbarcodetxtbox_TextChanged);
             // 
             // label26
             // 
@@ -814,6 +799,23 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // salepackcombobox
+            // 
+            this.salepackcombobox.FormattingEnabled = true;
+            this.salepackcombobox.Location = new System.Drawing.Point(138, 439);
+            this.salepackcombobox.Name = "salepackcombobox";
+            this.salepackcombobox.Size = new System.Drawing.Size(98, 21);
+            this.salepackcombobox.TabIndex = 357;
+            this.salepackcombobox.SelectedIndexChanged += new System.EventHandler(this.salepackcombobox_SelectedIndexChanged);
+            // 
+            // retailpricetxtbox
+            // 
+            this.retailpricetxtbox.Location = new System.Drawing.Point(78, 21);
+            this.retailpricetxtbox.Multiline = true;
+            this.retailpricetxtbox.Name = "retailpricetxtbox";
+            this.retailpricetxtbox.Size = new System.Drawing.Size(92, 20);
+            this.retailpricetxtbox.TabIndex = 374;
+            // 
             // stockalertlvltxtbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -835,7 +837,7 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.barcodetxtbox);
             this.Controls.Add(this.orderstocktxtbox);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.stockalertleveltxt);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label18);
@@ -854,7 +856,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.subgrpnamecomboBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.grpnamecomboBox);
             this.Controls.Add(this.cmpnynamecombobox1);
@@ -906,7 +907,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox subgrpnamecomboBox;
         private System.Windows.Forms.Label label7;
@@ -914,22 +914,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox notxtbox;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.ComboBox purchasepackcombobox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox salepackcombobox;
         private System.Windows.Forms.TextBox packinloseweighttxtbox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox discvaltxtbox2;
-        private System.Windows.Forms.TextBox disctxtbox2;
-        private System.Windows.Forms.TextBox pricetxtbox2;
-        private System.Windows.Forms.TextBox discvaltxtbox1;
-        private System.Windows.Forms.TextBox disctxtbox1;
-        private System.Windows.Forms.TextBox pricetxtbox1;
+        private System.Windows.Forms.TextBox putchasediscvaltxtbox2;
+        private System.Windows.Forms.TextBox saledisctxtbox2;
+        private System.Windows.Forms.TextBox salepricetxtbox2;
+        private System.Windows.Forms.TextBox purchasediscvaltxtbox1;
+        private System.Windows.Forms.TextBox purchasedisctxtbox1;
+        private System.Windows.Forms.TextBox purchasepricetxtbox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
@@ -940,9 +937,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox stvaltxtbox;
         private System.Windows.Forms.TextBox sttxtbox;
-        private System.Windows.Forms.TextBox retailpricetxtbox;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox stockalertleveltxt;
         private System.Windows.Forms.TextBox orderstocktxtbox;
         private System.Windows.Forms.TextBox barcodetxtbox;
         private System.Windows.Forms.Label label22;
@@ -960,5 +956,7 @@
         private System.Windows.Forms.TextBox genbarcodetxtbox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox salepackcombobox;
+        private System.Windows.Forms.TextBox retailpricetxtbox;
     }
 }

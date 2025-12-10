@@ -266,8 +266,8 @@ namespace FO_2022
 
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Activity_Report par=new Product_Activity_Report();
-            par.Show();
+            stockalertlvltxtbox  stockalertlvltxtbox=new stockalertlvltxtbox ();
+            stockalertlvltxtbox .Show();
             this.Hide();
         }
 

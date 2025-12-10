@@ -39,13 +39,13 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkngidsearch = new System.Windows.Forms.PictureBox();
             this.pkngnametxtbox = new System.Windows.Forms.TextBox();
             this.pkngidtxtbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Abbrevationtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pkngidsearch)).BeginInit();
@@ -178,26 +178,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(239, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 411);
             this.dataGridView1.TabIndex = 270;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Packing ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Packing Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // pkngidsearch
             // 
@@ -209,7 +194,6 @@
             this.pkngidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pkngidsearch.TabIndex = 289;
             this.pkngidsearch.TabStop = false;
-            this.pkngidsearch.Click += new System.EventHandler(this.pkngidsearch_Click);
             // 
             // pkngnametxtbox
             // 
@@ -219,7 +203,6 @@
             this.pkngnametxtbox.Name = "pkngnametxtbox";
             this.pkngnametxtbox.Size = new System.Drawing.Size(224, 13);
             this.pkngnametxtbox.TabIndex = 288;
-            this.pkngnametxtbox.TextChanged += new System.EventHandler(this.pkngnametxtbox_TextChanged);
             // 
             // pkngidtxtbox
             // 
@@ -229,7 +212,6 @@
             this.pkngidtxtbox.Name = "pkngidtxtbox";
             this.pkngidtxtbox.Size = new System.Drawing.Size(117, 13);
             this.pkngidtxtbox.TabIndex = 287;
-            this.pkngidtxtbox.TextChanged += new System.EventHandler(this.pkngidtxtbox_TextChanged);
             // 
             // label10
             // 
@@ -253,6 +235,26 @@
             this.label9.TabIndex = 285;
             this.label9.Text = "Packing Name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 260);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 285;
+            this.label1.Text = "Abbrevation";
+            // 
+            // Abbrevationtxt
+            // 
+            this.Abbrevationtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Abbrevationtxt.Location = new System.Drawing.Point(1, 284);
+            this.Abbrevationtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Abbrevationtxt.Name = "Abbrevationtxt";
+            this.Abbrevationtxt.Size = new System.Drawing.Size(224, 13);
+            this.Abbrevationtxt.TabIndex = 288;
+            // 
             // Define_Packings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,9 +262,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(609, 553);
             this.Controls.Add(this.pkngidsearch);
+            this.Controls.Add(this.Abbrevationtxt);
             this.Controls.Add(this.pkngnametxtbox);
             this.Controls.Add(this.pkngidtxtbox);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox1);
@@ -298,12 +302,12 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.PictureBox pkngidsearch;
         private System.Windows.Forms.TextBox pkngnametxtbox;
         private System.Windows.Forms.TextBox pkngidtxtbox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Abbrevationtxt;
     }
 }
