@@ -33,5 +33,20 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void sectoramecombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sectornamecombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

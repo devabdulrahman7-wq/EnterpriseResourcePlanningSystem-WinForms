@@ -667,7 +667,7 @@ namespace FO_2022
         }
         private void openingStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Opening_Stock os = new Opening_Stock();
+          Opening_stock os = new Opening_stock();
             os.Show();
             this.Hide();
         }

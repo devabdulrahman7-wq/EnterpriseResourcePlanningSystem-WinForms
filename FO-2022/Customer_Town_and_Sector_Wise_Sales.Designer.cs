@@ -212,7 +212,7 @@
             // fromdatepcker
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromdatepcker.Location = new System.Drawing.Point(138, 178);
+            this.fromdatepcker.Location = new System.Drawing.Point(129, 178);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(131, 23);

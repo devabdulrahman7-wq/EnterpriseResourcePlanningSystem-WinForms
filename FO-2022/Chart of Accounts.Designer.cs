@@ -73,7 +73,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(248, 232);
+            this.closebtn.Location = new System.Drawing.Point(253, 233);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(63, 23);
@@ -88,7 +88,7 @@
             this.prntbtn.FlatAppearance.BorderSize = 0;
             this.prntbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prntbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prntbtn.Location = new System.Drawing.Point(182, 232);
+            this.prntbtn.Location = new System.Drawing.Point(187, 233);
             this.prntbtn.Margin = new System.Windows.Forms.Padding(2);
             this.prntbtn.Name = "prntbtn";
             this.prntbtn.Size = new System.Drawing.Size(62, 23);
@@ -103,7 +103,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(103, 232);
+            this.previewbtn.Location = new System.Drawing.Point(108, 233);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(2);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(75, 23);
