@@ -62,7 +62,9 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Mainform1 mf = new Mainform1();
+            mf.Show();
+            this.Hide();
         }
 
         private void newbtn_Click(object sender, EventArgs e)
@@ -246,5 +248,7 @@ namespace FO_2022
                 connection.Close();
             }
         }
+
+       
     }
 }

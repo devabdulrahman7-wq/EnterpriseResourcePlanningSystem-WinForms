@@ -56,6 +56,7 @@
             this.textBox1.Size = new System.Drawing.Size(346, 19);
             this.textBox1.TabIndex = 509;
             this.textBox1.Text = "                Available NSM\'s";
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -169,7 +170,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(420, 187);
+            this.label3.Location = new System.Drawing.Point(385, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
@@ -189,7 +190,7 @@
             // 
             // nsmnametxtbox
             // 
-            this.nsmnametxtbox.Location = new System.Drawing.Point(423, 206);
+            this.nsmnametxtbox.Location = new System.Drawing.Point(388, 114);
             this.nsmnametxtbox.Multiline = true;
             this.nsmnametxtbox.Name = "nsmnametxtbox";
             this.nsmnametxtbox.Size = new System.Drawing.Size(168, 20);
