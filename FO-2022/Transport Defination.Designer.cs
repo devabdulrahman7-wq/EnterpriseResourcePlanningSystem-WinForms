@@ -40,8 +40,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 18);
+            this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 32);
@@ -64,13 +62,14 @@
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(385, 338);
+            this.newbtn.Location = new System.Drawing.Point(65, 380);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
             this.newbtn.TabIndex = 424;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -78,13 +77,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(543, 370);
+            this.closebtn.Location = new System.Drawing.Point(460, 380);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 423;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -92,13 +92,14 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(385, 370);
+            this.removebtn.Location = new System.Drawing.Point(302, 380);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
             this.removebtn.TabIndex = 422;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -106,13 +107,14 @@
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(464, 338);
+            this.editbtn.Location = new System.Drawing.Point(144, 380);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
             this.editbtn.TabIndex = 421;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -120,13 +122,14 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(464, 370);
+            this.clearbtn.Location = new System.Drawing.Point(381, 380);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
             this.clearbtn.TabIndex = 420;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -134,13 +137,14 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(543, 338);
+            this.savebtn.Location = new System.Drawing.Point(223, 380);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 419;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // trnsprtnametxtbox
             // 
@@ -176,25 +180,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(12, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(357, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(357, 264);
             this.dataGridView1.TabIndex = 428;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Transport ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Transport Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 180;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // pictureBox2
             // 
@@ -251,8 +241,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
