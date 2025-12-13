@@ -57,8 +57,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.purhcaseidsearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.saleidlbl = new System.Windows.Forms.Label();
-            this.vendoridsearch = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -71,6 +69,8 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleidlbl = new System.Windows.Forms.Label();
+            this.vendoridsearch = new System.Windows.Forms.PictureBox();
             this.grossvaluetxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -382,31 +382,10 @@
             this.Column11,
             this.Column13,
             this.Column14});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 235);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 280);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(899, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(899, 203);
             this.dataGridView1.TabIndex = 359;
-            // 
-            // saleidlbl
-            // 
-            this.saleidlbl.AutoSize = true;
-            this.saleidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saleidlbl.Location = new System.Drawing.Point(44, 89);
-            this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.saleidlbl.Name = "saleidlbl";
-            this.saleidlbl.Size = new System.Drawing.Size(61, 16);
-            this.saleidlbl.TabIndex = 337;
-            this.saleidlbl.Text = "Return ID";
-            // 
-            // vendoridsearch
-            // 
-            this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(152, 202);
-            this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(22, 18);
-            this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.vendoridsearch.TabIndex = 387;
-            this.vendoridsearch.TabStop = false;
             // 
             // Column1
             // 
@@ -481,6 +460,27 @@
             this.Column14.HeaderText = "Net Value";
             this.Column14.Name = "Column14";
             this.Column14.Width = 95;
+            // 
+            // saleidlbl
+            // 
+            this.saleidlbl.AutoSize = true;
+            this.saleidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saleidlbl.Location = new System.Drawing.Point(44, 89);
+            this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.saleidlbl.Name = "saleidlbl";
+            this.saleidlbl.Size = new System.Drawing.Size(61, 16);
+            this.saleidlbl.TabIndex = 337;
+            this.saleidlbl.Text = "Return ID";
+            // 
+            // vendoridsearch
+            // 
+            this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
+            this.vendoridsearch.Location = new System.Drawing.Point(152, 202);
+            this.vendoridsearch.Name = "vendoridsearch";
+            this.vendoridsearch.Size = new System.Drawing.Size(22, 18);
+            this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vendoridsearch.TabIndex = 387;
+            this.vendoridsearch.TabStop = false;
             // 
             // grossvaluetxtbox
             // 
@@ -630,7 +630,7 @@
             this.Controls.Add(this.saleidlbl);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Purhcase_Return_Invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purhcase_Return_Invoice";
