@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Asad Umair Traders");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Happy");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Mux");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Nice");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Purchase");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Smart Food");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Tastoo");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Asad Umair Traders");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Happy");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Mux");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Nice");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Purchase");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Smart Food");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Tastoo");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Current_Stock));
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -101,9 +101,9 @@
             // 
             this.cmpnylist.CheckBoxes = true;
             this.cmpnylist.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem8.StateImageIndex = 0;
             this.cmpnylist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem8});
             this.cmpnylist.Location = new System.Drawing.Point(238, 121);
             this.cmpnylist.Name = "cmpnylist";
             this.cmpnylist.Size = new System.Drawing.Size(180, 213);
@@ -116,7 +116,7 @@
             this.groupBox1.Controls.Add(this.salebtn);
             this.groupBox1.Controls.Add(this.purchasebtn);
             this.groupBox1.Controls.Add(this.costbtn);
-            this.groupBox1.Location = new System.Drawing.Point(80, 232);
+            this.groupBox1.Location = new System.Drawing.Point(75, 232);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(157, 102);
             this.groupBox1.TabIndex = 477;
@@ -181,19 +181,19 @@
             // 
             this.grplist.CheckBoxes = true;
             this.grplist.HideSelection = false;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem7.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            listViewItem11.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
+            listViewItem13.StateImageIndex = 0;
+            listViewItem14.StateImageIndex = 0;
             this.grplist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14});
             this.grplist.Location = new System.Drawing.Point(436, 121);
             this.grplist.Name = "grplist";
             this.grplist.Size = new System.Drawing.Size(190, 213);

@@ -997,9 +997,9 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(554, 609);
+            this.closebtn.Location = new System.Drawing.Point(554, 626);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(77, 31);
+            this.closebtn.Size = new System.Drawing.Size(77, 27);
             this.closebtn.TabIndex = 395;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -1011,9 +1011,9 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(471, 609);
+            this.clearbtn.Location = new System.Drawing.Point(471, 626);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(77, 31);
+            this.clearbtn.Size = new System.Drawing.Size(77, 27);
             this.clearbtn.TabIndex = 394;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
@@ -1025,9 +1025,9 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(390, 609);
+            this.savebtn.Location = new System.Drawing.Point(390, 626);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(77, 31);
+            this.savebtn.Size = new System.Drawing.Size(77, 27);
             this.savebtn.TabIndex = 393;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;

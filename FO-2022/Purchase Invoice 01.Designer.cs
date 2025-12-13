@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Invoice_01));
             this.vendoridsearch = new System.Windows.Forms.PictureBox();
             this.showloaddocxhkbox = new System.Windows.Forms.CheckBox();
-            this.nightshftbtn = new System.Windows.Forms.RadioButton();
+            this.nightshftradiobtn = new System.Windows.Forms.RadioButton();
             this.duedatetxtbox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dayshftbtn = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dayshftradiobtn = new System.Windows.Forms.RadioButton();
+            this.billdatepicker = new System.Windows.Forms.DateTimePicker();
+            this.purchasedatepicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -69,6 +69,20 @@
             this.purchaseidlbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.bnsltxtbox = new System.Windows.Forms.TextBox();
+            this.qtyptxtbox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.qtyltxtbox = new System.Windows.Forms.TextBox();
+            this.packtxtbox = new System.Windows.Forms.TextBox();
+            this.packnametxtbox = new System.Windows.Forms.TextBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,9 +92,9 @@
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(229, 144);
+            this.vendoridsearch.Location = new System.Drawing.Point(224, 145);
             this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(26, 18);
+            this.vendoridsearch.Size = new System.Drawing.Size(31, 22);
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 297;
             this.vendoridsearch.TabStop = false;
@@ -99,19 +113,19 @@
             this.showloaddocxhkbox.UseVisualStyleBackColor = true;
             this.showloaddocxhkbox.CheckedChanged += new System.EventHandler(this.showloaddocxhkbox_CheckedChanged);
             // 
-            // nightshftbtn
+            // nightshftradiobtn
             // 
-            this.nightshftbtn.AutoSize = true;
-            this.nightshftbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nightshftbtn.Location = new System.Drawing.Point(156, 19);
-            this.nightshftbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.nightshftbtn.Name = "nightshftbtn";
-            this.nightshftbtn.Size = new System.Drawing.Size(84, 20);
-            this.nightshftbtn.TabIndex = 1;
-            this.nightshftbtn.TabStop = true;
-            this.nightshftbtn.Text = "Night Shift";
-            this.nightshftbtn.UseVisualStyleBackColor = true;
-            this.nightshftbtn.CheckedChanged += new System.EventHandler(this.nightshftbtn_CheckedChanged);
+            this.nightshftradiobtn.AutoSize = true;
+            this.nightshftradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nightshftradiobtn.Location = new System.Drawing.Point(156, 19);
+            this.nightshftradiobtn.Margin = new System.Windows.Forms.Padding(4);
+            this.nightshftradiobtn.Name = "nightshftradiobtn";
+            this.nightshftradiobtn.Size = new System.Drawing.Size(84, 20);
+            this.nightshftradiobtn.TabIndex = 1;
+            this.nightshftradiobtn.TabStop = true;
+            this.nightshftradiobtn.Text = "Night Shift";
+            this.nightshftradiobtn.UseVisualStyleBackColor = true;
+            this.nightshftradiobtn.CheckedChanged += new System.EventHandler(this.nightshftbtn_CheckedChanged);
             // 
             // duedatetxtbox
             // 
@@ -145,35 +159,35 @@
             this.label19.TabIndex = 286;
             this.label19.Text = "Bill Date";
             // 
-            // dayshftbtn
+            // dayshftradiobtn
             // 
-            this.dayshftbtn.AutoSize = true;
-            this.dayshftbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayshftbtn.Location = new System.Drawing.Point(8, 19);
-            this.dayshftbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.dayshftbtn.Name = "dayshftbtn";
-            this.dayshftbtn.Size = new System.Drawing.Size(80, 20);
-            this.dayshftbtn.TabIndex = 0;
-            this.dayshftbtn.TabStop = true;
-            this.dayshftbtn.Text = "Day Shift ";
-            this.dayshftbtn.UseVisualStyleBackColor = true;
-            this.dayshftbtn.CheckedChanged += new System.EventHandler(this.dayshftbtn_CheckedChanged);
+            this.dayshftradiobtn.AutoSize = true;
+            this.dayshftradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayshftradiobtn.Location = new System.Drawing.Point(8, 19);
+            this.dayshftradiobtn.Margin = new System.Windows.Forms.Padding(4);
+            this.dayshftradiobtn.Name = "dayshftradiobtn";
+            this.dayshftradiobtn.Size = new System.Drawing.Size(80, 20);
+            this.dayshftradiobtn.TabIndex = 0;
+            this.dayshftradiobtn.TabStop = true;
+            this.dayshftradiobtn.Text = "Day Shift ";
+            this.dayshftradiobtn.UseVisualStyleBackColor = true;
+            this.dayshftradiobtn.CheckedChanged += new System.EventHandler(this.dayshftbtn_CheckedChanged);
             // 
-            // dateTimePicker2
+            // billdatepicker
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(510, 91);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(97, 23);
-            this.dateTimePicker2.TabIndex = 296;
+            this.billdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.billdatepicker.Location = new System.Drawing.Point(510, 91);
+            this.billdatepicker.Name = "billdatepicker";
+            this.billdatepicker.Size = new System.Drawing.Size(97, 23);
+            this.billdatepicker.TabIndex = 296;
             // 
-            // dateTimePicker1
+            // purchasedatepicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 91);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 23);
-            this.dateTimePicker1.TabIndex = 295;
+            this.purchasedatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.purchasedatepicker.Location = new System.Drawing.Point(237, 91);
+            this.purchasedatepicker.Name = "purchasedatepicker";
+            this.purchasedatepicker.Size = new System.Drawing.Size(118, 23);
+            this.purchasedatepicker.TabIndex = 295;
             // 
             // label5
             // 
@@ -188,7 +202,7 @@
             // narrationtxtbox
             // 
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.narrationtxtbox.Location = new System.Drawing.Point(179, 544);
+            this.narrationtxtbox.Location = new System.Drawing.Point(191, 591);
             this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
@@ -200,7 +214,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(99, 556);
+            this.label21.Location = new System.Drawing.Point(111, 603);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(67, 18);
@@ -209,8 +223,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.nightshftbtn);
-            this.groupBox1.Controls.Add(this.dayshftbtn);
+            this.groupBox1.Controls.Add(this.nightshftradiobtn);
+            this.groupBox1.Controls.Add(this.dayshftradiobtn);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(94, 169);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -224,7 +238,7 @@
             // 
             this.pendignchkbox.AutoSize = true;
             this.pendignchkbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendignchkbox.Location = new System.Drawing.Point(510, 121);
+            this.pendignchkbox.Location = new System.Drawing.Point(625, 173);
             this.pendignchkbox.Margin = new System.Windows.Forms.Padding(4);
             this.pendignchkbox.Name = "pendignchkbox";
             this.pendignchkbox.Size = new System.Drawing.Size(101, 20);
@@ -248,10 +262,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(434, 600);
+            this.closebtn.Location = new System.Drawing.Point(482, 640);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 35);
+            this.closebtn.Size = new System.Drawing.Size(75, 27);
             this.closebtn.TabIndex = 285;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -263,10 +277,10 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(351, 601);
+            this.removebtn.Location = new System.Drawing.Point(399, 641);
             this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(75, 35);
+            this.removebtn.Size = new System.Drawing.Size(75, 27);
             this.removebtn.TabIndex = 284;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
@@ -278,10 +292,10 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(270, 602);
+            this.openbtn.Location = new System.Drawing.Point(318, 642);
             this.openbtn.Margin = new System.Windows.Forms.Padding(4);
             this.openbtn.Name = "openbtn";
-            this.openbtn.Size = new System.Drawing.Size(75, 35);
+            this.openbtn.Size = new System.Drawing.Size(75, 27);
             this.openbtn.TabIndex = 283;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
@@ -293,10 +307,10 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(187, 600);
+            this.clearbtn.Location = new System.Drawing.Point(235, 642);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 35);
+            this.clearbtn.Size = new System.Drawing.Size(75, 27);
             this.clearbtn.TabIndex = 282;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
@@ -308,10 +322,10 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(517, 600);
+            this.savebtn.Location = new System.Drawing.Point(565, 640);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 35);
+            this.savebtn.Size = new System.Drawing.Size(75, 27);
             this.savebtn.TabIndex = 281;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
@@ -328,10 +342,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(94, 224);
+            this.dataGridView1.Location = new System.Drawing.Point(114, 273);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(579, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(620, 300);
             this.dataGridView1.TabIndex = 280;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -415,8 +429,9 @@
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendornametxtbox.Location = new System.Drawing.Point(262, 145);
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(349, 16);
+            this.vendornametxtbox.Size = new System.Drawing.Size(349, 21);
             this.vendornametxtbox.TabIndex = 276;
             this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
@@ -425,8 +440,9 @@
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendoridtxtbox.Location = new System.Drawing.Point(94, 144);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(128, 16);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(128, 21);
             this.vendoridtxtbox.TabIndex = 275;
             this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
@@ -465,7 +481,7 @@
             // 
             this.purchasedatelbl.AutoSize = true;
             this.purchasedatelbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchasedatelbl.Location = new System.Drawing.Point(248, 71);
+            this.purchasedatelbl.Location = new System.Drawing.Point(234, 72);
             this.purchasedatelbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.purchasedatelbl.Name = "purchasedatelbl";
             this.purchasedatelbl.Size = new System.Drawing.Size(89, 16);
@@ -509,19 +525,183 @@
             this.button2.Text = "❌";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // bnsltxtbox
+            // 
+            this.bnsltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bnsltxtbox.Location = new System.Drawing.Point(619, 245);
+            this.bnsltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.bnsltxtbox.Multiline = true;
+            this.bnsltxtbox.Name = "bnsltxtbox";
+            this.bnsltxtbox.Size = new System.Drawing.Size(70, 19);
+            this.bnsltxtbox.TabIndex = 312;
+            this.bnsltxtbox.TextChanged += new System.EventHandler(this.bnsltxtbox_TextChanged);
+            // 
+            // qtyptxtbox
+            // 
+            this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyptxtbox.Location = new System.Drawing.Point(470, 246);
+            this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyptxtbox.Multiline = true;
+            this.qtyptxtbox.Name = "qtyptxtbox";
+            this.qtyptxtbox.Size = new System.Drawing.Size(63, 19);
+            this.qtyptxtbox.TabIndex = 311;
+            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(538, 224);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(42, 16);
+            this.label18.TabIndex = 310;
+            this.label18.Text = "Qty(L)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(612, 223);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.TabIndex = 309;
+            this.label4.Text = "Bns(L)";
+            // 
+            // qtyltxtbox
+            // 
+            this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyltxtbox.Location = new System.Drawing.Point(541, 246);
+            this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyltxtbox.Multiline = true;
+            this.qtyltxtbox.Name = "qtyltxtbox";
+            this.qtyltxtbox.Size = new System.Drawing.Size(70, 19);
+            this.qtyltxtbox.TabIndex = 308;
+            this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
+            // 
+            // packtxtbox
+            // 
+            this.packtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.packtxtbox.Location = new System.Drawing.Point(396, 245);
+            this.packtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.packtxtbox.Multiline = true;
+            this.packtxtbox.Name = "packtxtbox";
+            this.packtxtbox.Size = new System.Drawing.Size(69, 20);
+            this.packtxtbox.TabIndex = 307;
+            // 
+            // packnametxtbox
+            // 
+            this.packnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.packnametxtbox.Location = new System.Drawing.Point(299, 245);
+            this.packnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.packnametxtbox.Multiline = true;
+            this.packnametxtbox.Name = "packnametxtbox";
+            this.packnametxtbox.Size = new System.Drawing.Size(90, 19);
+            this.packnametxtbox.TabIndex = 306;
+            // 
+            // productnametxtbox
+            // 
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(195, 244);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.TabIndex = 305;
+            // 
+            // productidtxtbox
+            // 
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(118, 245);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.TabIndex = 304;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(467, 226);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.TabIndex = 303;
+            this.label7.Text = "Qty(P)";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(397, 226);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 16);
+            this.label8.TabIndex = 302;
+            this.label8.Text = "Pack";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(296, 225);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 16);
+            this.label12.TabIndex = 301;
+            this.label12.Text = "Pack Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(192, 226);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 16);
+            this.label13.TabIndex = 300;
+            this.label13.Text = "Pro.Name";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(115, 227);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 16);
+            this.label15.TabIndex = 299;
+            this.label15.Text = "Pro.ID";
+            // 
             // Purchase_Invoice_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(867, 686);
+            this.Controls.Add(this.bnsltxtbox);
+            this.Controls.Add(this.qtyptxtbox);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.qtyltxtbox);
+            this.Controls.Add(this.packtxtbox);
+            this.Controls.Add(this.packnametxtbox);
+            this.Controls.Add(this.productnametxtbox);
+            this.Controls.Add(this.productidtxtbox);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.vendoridsearch);
             this.Controls.Add(this.showloaddocxhkbox);
             this.Controls.Add(this.duedatetxtbox);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.billdatepicker);
+            this.Controls.Add(this.purchasedatepicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.narrationtxtbox);
             this.Controls.Add(this.label21);
@@ -566,13 +746,13 @@
 
         private System.Windows.Forms.PictureBox vendoridsearch;
         private System.Windows.Forms.CheckBox showloaddocxhkbox;
-        private System.Windows.Forms.RadioButton nightshftbtn;
+        private System.Windows.Forms.RadioButton nightshftradiobtn;
         private System.Windows.Forms.TextBox duedatetxtbox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton dayshftbtn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RadioButton dayshftradiobtn;
+        private System.Windows.Forms.DateTimePicker billdatepicker;
+        private System.Windows.Forms.DateTimePicker purchasedatepicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox narrationtxtbox;
         private System.Windows.Forms.Label label21;
@@ -604,5 +784,19 @@
         private System.Windows.Forms.Label purchaseidlbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox bnsltxtbox;
+        private System.Windows.Forms.TextBox qtyptxtbox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox qtyltxtbox;
+        private System.Windows.Forms.TextBox packtxtbox;
+        private System.Windows.Forms.TextBox packnametxtbox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
     }
 }
