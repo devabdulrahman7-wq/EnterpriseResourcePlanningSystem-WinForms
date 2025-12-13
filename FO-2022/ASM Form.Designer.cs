@@ -30,17 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ASM_Form));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.newbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.closebtn = new System.Windows.Forms.Button();
             this.removebtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.clearbtn = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
             this.isactivechkbox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.nsmcombobox = new System.Windows.Forms.ComboBox();
@@ -49,9 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mbltxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.asmnametxtbox1 = new System.Windows.Forms.TextBox();
             this.nsmcombobox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.asmnametxtbox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -59,25 +57,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(273, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(346, 292);
             this.dataGridView1.TabIndex = 606;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ASM ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ASM Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -125,21 +109,22 @@
             this.newbtn.TabIndex = 612;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
-            // button1
+            // closebtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(494, 511);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 611;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.closebtn.FlatAppearance.BorderSize = 0;
+            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closebtn.Location = new System.Drawing.Point(494, 511);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(75, 28);
+            this.closebtn.TabIndex = 611;
+            this.closebtn.Text = "Close";
+            this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -154,6 +139,7 @@
             this.removebtn.TabIndex = 610;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -168,34 +154,37 @@
             this.editbtn.TabIndex = 609;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
-            // button2
+            // clearbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(415, 511);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 608;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.FlatAppearance.BorderSize = 0;
+            this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearbtn.Location = new System.Drawing.Point(415, 511);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(75, 28);
+            this.clearbtn.TabIndex = 608;
+            this.clearbtn.Text = "Clear";
+            this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
-            // button3
+            // savebtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(336, 511);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
-            this.button3.TabIndex = 607;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.FlatAppearance.BorderSize = 0;
+            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(336, 511);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(75, 28);
+            this.savebtn.TabIndex = 607;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // isactivechkbox
             // 
@@ -279,16 +268,6 @@
             this.label3.TabIndex = 616;
             this.label3.Text = "ASM Name:";
             // 
-            // asmnametxtbox1
-            // 
-            this.asmnametxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.asmnametxtbox1.Location = new System.Drawing.Point(43, 247);
-            this.asmnametxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.asmnametxtbox1.Multiline = true;
-            this.asmnametxtbox1.Name = "asmnametxtbox1";
-            this.asmnametxtbox1.Size = new System.Drawing.Size(212, 20);
-            this.asmnametxtbox1.TabIndex = 615;
-            // 
             // nsmcombobox1
             // 
             this.nsmcombobox1.FormattingEnabled = true;
@@ -306,7 +285,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 625;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // asmnametxtbox1
+            // 
+            this.asmnametxtbox1.Location = new System.Drawing.Point(39, 245);
+            this.asmnametxtbox1.Multiline = true;
+            this.asmnametxtbox1.Name = "asmnametxtbox1";
+            this.asmnametxtbox1.Size = new System.Drawing.Size(215, 23);
+            this.asmnametxtbox1.TabIndex = 626;
             // 
             // ASM_Form
             // 
@@ -314,6 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(669, 550);
+            this.Controls.Add(this.asmnametxtbox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.nsmcombobox1);
             this.Controls.Add(this.isactivechkbox);
@@ -324,17 +311,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mbltxtbox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.asmnametxtbox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.newbtn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
             this.Controls.Add(this.editbtn);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.clearbtn);
+            this.Controls.Add(this.savebtn);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -356,13 +342,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button newbtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button removebtn;
         private System.Windows.Forms.Button editbtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button clearbtn;
+        private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.CheckBox isactivechkbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox nsmcombobox;
@@ -371,8 +355,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox mbltxtbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox asmnametxtbox1;
         private System.Windows.Forms.ComboBox nsmcombobox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox asmnametxtbox1;
     }
 }

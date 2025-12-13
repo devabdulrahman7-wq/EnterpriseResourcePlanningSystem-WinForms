@@ -36,18 +36,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.sonametxtbox = new System.Windows.Forms.TextBox();
             this.salesofficertxtbox = new System.Windows.Forms.TextBox();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.newbtn = new System.Windows.Forms.Button();
-            this.closebtn = new System.Windows.Forms.Button();
-            this.removebtn = new System.Windows.Forms.Button();
-            this.editbtn = new System.Windows.Forms.Button();
-            this.clearbtn = new System.Windows.Forms.Button();
-            this.savebtn = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.rmcombobox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -98,6 +96,7 @@
             this.nsmcombobox.Name = "nsmcombobox";
             this.nsmcombobox.Size = new System.Drawing.Size(174, 24);
             this.nsmcombobox.TabIndex = 641;
+            this.nsmcombobox.SelectedIndexChanged += new System.EventHandler(this.nsmcombobox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -130,28 +129,14 @@
             this.salesofficertxtbox.Size = new System.Drawing.Size(216, 20);
             this.salesofficertxtbox.TabIndex = 637;
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ASM Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ASM ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(43, 184);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(346, 396);
             this.dataGridView1.TabIndex = 627;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -186,89 +171,94 @@
             this.label10.TabIndex = 634;
             this.label10.Text = "NSM Name:";
             // 
-            // newbtn
+            // btnNew
             // 
-            this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.newbtn.FlatAppearance.BorderSize = 0;
-            this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(463, 552);
-            this.newbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.newbtn.Name = "newbtn";
-            this.newbtn.Size = new System.Drawing.Size(75, 28);
-            this.newbtn.TabIndex = 633;
-            this.newbtn.Text = "New";
-            this.newbtn.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(463, 552);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 28);
+            this.btnNew.TabIndex = 633;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
             // 
-            // closebtn
+            // btnClose
             // 
-            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.closebtn.FlatAppearance.BorderSize = 0;
-            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(621, 520);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 28);
-            this.closebtn.TabIndex = 632;
-            this.closebtn.Text = "Close";
-            this.closebtn.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(621, 520);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 28);
+            this.btnClose.TabIndex = 632;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // removebtn
+            // btnRemove
             // 
-            this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.removebtn.FlatAppearance.BorderSize = 0;
-            this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(621, 552);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(75, 28);
-            this.removebtn.TabIndex = 631;
-            this.removebtn.Text = "Remove";
-            this.removebtn.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(621, 552);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 28);
+            this.btnRemove.TabIndex = 631;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // editbtn
+            // btnEdit
             // 
-            this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.editbtn.FlatAppearance.BorderSize = 0;
-            this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(542, 552);
-            this.editbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.editbtn.Name = "editbtn";
-            this.editbtn.Size = new System.Drawing.Size(75, 28);
-            this.editbtn.TabIndex = 630;
-            this.editbtn.Text = "Edit";
-            this.editbtn.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(542, 552);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 28);
+            this.btnEdit.TabIndex = 630;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // clearbtn
+            // btnClear
             // 
-            this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.clearbtn.FlatAppearance.BorderSize = 0;
-            this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(542, 520);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 28);
-            this.clearbtn.TabIndex = 629;
-            this.clearbtn.Text = "Clear";
-            this.clearbtn.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(542, 520);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 28);
+            this.btnClear.TabIndex = 629;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // savebtn
+            // btnSave
             // 
-            this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.savebtn.FlatAppearance.BorderSize = 0;
-            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(463, 520);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 28);
-            this.savebtn.TabIndex = 628;
-            this.savebtn.Text = "Save";
-            this.savebtn.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(463, 520);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 28);
+            this.btnSave.TabIndex = 628;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
             // 
@@ -288,6 +278,7 @@
             this.rmcombobox.Name = "rmcombobox";
             this.rmcombobox.Size = new System.Drawing.Size(166, 24);
             this.rmcombobox.TabIndex = 645;
+            //this.rmcombobox.SelectedIndexChanged += new System.EventHandler(this.rmcombobox_SelectedIndexChanged_1);
             // 
             // label7
             // 
@@ -307,6 +298,7 @@
             this.rmcombobox1.Name = "rmcombobox1";
             this.rmcombobox1.Size = new System.Drawing.Size(216, 24);
             this.rmcombobox1.TabIndex = 649;
+            //this.rmcombobox1.SelectedIndexChanged += new System.EventHandler(this.rmcombobox1_SelectedIndexChanged_1);
             // 
             // label3
             // 
@@ -368,7 +360,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 656;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // SO_s_ASM_Wise
             // 
@@ -397,12 +388,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.newbtn);
-            this.Controls.Add(this.closebtn);
-            this.Controls.Add(this.removebtn);
-            this.Controls.Add(this.editbtn);
-            this.Controls.Add(this.clearbtn);
-            this.Controls.Add(this.savebtn);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -425,18 +416,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox sonametxtbox;
         private System.Windows.Forms.TextBox salesofficertxtbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button newbtn;
-        private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.Button removebtn;
-        private System.Windows.Forms.Button editbtn;
-        private System.Windows.Forms.Button clearbtn;
-        private System.Windows.Forms.Button savebtn;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox rmcombobox;
         private System.Windows.Forms.Label label7;
