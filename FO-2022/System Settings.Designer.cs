@@ -50,8 +50,8 @@
             this.wwwtxtbox = new System.Windows.Forms.TextBox();
             this.emailtxtbox = new System.Windows.Forms.TextBox();
             this.mbltxtbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.browseimgbtn = new System.Windows.Forms.Button();
+            this.clearimgbtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.configurationbtn = new System.Windows.Forms.Button();
             this.dellosoftsetting = new System.Windows.Forms.Button();
@@ -119,7 +119,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(357, 301);
+            this.label8.Location = new System.Drawing.Point(380, 301);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 16);
             this.label8.TabIndex = 7;
@@ -146,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(596, 199);
+            this.label6.Location = new System.Drawing.Point(636, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 16);
             this.label6.TabIndex = 10;
@@ -154,11 +154,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(557, 218);
+            this.pictureBox1.Location = new System.Drawing.Point(597, 218);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 149);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // closebtn
             // 
@@ -179,7 +180,7 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(330, 441);
+            this.savebtn.Location = new System.Drawing.Point(319, 441);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(77, 31);
             this.savebtn.TabIndex = 399;
@@ -194,6 +195,8 @@
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(360, 20);
             this.cmpnynametxtbox.TabIndex = 402;
+            this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
+            this.cmpnynametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // phonenotxtbox
             // 
@@ -203,6 +206,8 @@
             this.phonenotxtbox.Name = "phonenotxtbox";
             this.phonenotxtbox.Size = new System.Drawing.Size(138, 20);
             this.phonenotxtbox.TabIndex = 408;
+            this.phonenotxtbox.TextChanged += new System.EventHandler(this.phonenotxtbox_TextChanged);
+            this.phonenotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // phonetxtbox
             // 
@@ -212,6 +217,8 @@
             this.phonetxtbox.Name = "phonetxtbox";
             this.phonetxtbox.Size = new System.Drawing.Size(153, 20);
             this.phonetxtbox.TabIndex = 409;
+            this.phonetxtbox.TextChanged += new System.EventHandler(this.phonetxtbox_TextChanged);
+            this.phonetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // addresstxtbox
             // 
@@ -222,6 +229,7 @@
             this.addresstxtbox.Size = new System.Drawing.Size(360, 20);
             this.addresstxtbox.TabIndex = 410;
             this.addresstxtbox.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.addresstxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // faxtxtbox
             // 
@@ -231,6 +239,8 @@
             this.faxtxtbox.Name = "faxtxtbox";
             this.faxtxtbox.Size = new System.Drawing.Size(138, 20);
             this.faxtxtbox.TabIndex = 412;
+            this.faxtxtbox.TextChanged += new System.EventHandler(this.faxtxtbox_TextChanged);
+            this.faxtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // wwwtxtbox
             // 
@@ -240,6 +250,8 @@
             this.wwwtxtbox.Name = "wwwtxtbox";
             this.wwwtxtbox.Size = new System.Drawing.Size(360, 20);
             this.wwwtxtbox.TabIndex = 413;
+            this.wwwtxtbox.TextChanged += new System.EventHandler(this.wwwtxtbox_TextChanged);
+            this.wwwtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // emailtxtbox
             // 
@@ -249,6 +261,8 @@
             this.emailtxtbox.Name = "emailtxtbox";
             this.emailtxtbox.Size = new System.Drawing.Size(360, 20);
             this.emailtxtbox.TabIndex = 414;
+            this.emailtxtbox.TextChanged += new System.EventHandler(this.emailtxtbox_TextChanged);
+            this.emailtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
             // mbltxtbox
             // 
@@ -258,32 +272,36 @@
             this.mbltxtbox.Name = "mbltxtbox";
             this.mbltxtbox.Size = new System.Drawing.Size(153, 20);
             this.mbltxtbox.TabIndex = 415;
+            this.mbltxtbox.TextChanged += new System.EventHandler(this.mbltxtbox_TextChanged);
+            this.mbltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
-            // button1
+            // browseimgbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(661, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 31);
-            this.button1.TabIndex = 417;
-            this.button1.Text = " Browse";
-            this.button1.UseVisualStyleBackColor = false;
+            this.browseimgbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.browseimgbtn.FlatAppearance.BorderSize = 0;
+            this.browseimgbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.browseimgbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browseimgbtn.Location = new System.Drawing.Point(701, 373);
+            this.browseimgbtn.Name = "browseimgbtn";
+            this.browseimgbtn.Size = new System.Drawing.Size(77, 31);
+            this.browseimgbtn.TabIndex = 417;
+            this.browseimgbtn.Text = " Browse";
+            this.browseimgbtn.UseVisualStyleBackColor = false;
+            this.browseimgbtn.Click += new System.EventHandler(this.browseimgbtn_Click);
             // 
-            // button2
+            // clearimgbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(557, 373);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 31);
-            this.button2.TabIndex = 416;
-            this.button2.Text = "Clear ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.clearimgbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearimgbtn.FlatAppearance.BorderSize = 0;
+            this.clearimgbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearimgbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearimgbtn.Location = new System.Drawing.Point(597, 373);
+            this.clearimgbtn.Name = "clearimgbtn";
+            this.clearimgbtn.Size = new System.Drawing.Size(77, 31);
+            this.clearimgbtn.TabIndex = 416;
+            this.clearimgbtn.Text = "Clear ";
+            this.clearimgbtn.UseVisualStyleBackColor = false;
+            this.clearimgbtn.Click += new System.EventHandler(this.clearimgbtn_Click);
             // 
             // pictureBox2
             // 
@@ -325,6 +343,7 @@
             this.dellosoftsetting.TabIndex = 655;
             this.dellosoftsetting.Text = "DelloSoft Setting";
             this.dellosoftsetting.UseVisualStyleBackColor = false;
+            this.dellosoftsetting.Click += new System.EventHandler(this.dellosoftsetting_Click);
             // 
             // cmpnyinformationbtn
             // 
@@ -340,6 +359,7 @@
             this.cmpnyinformationbtn.TabIndex = 656;
             this.cmpnyinformationbtn.Text = "Company Information";
             this.cmpnyinformationbtn.UseVisualStyleBackColor = false;
+            this.cmpnyinformationbtn.Click += new System.EventHandler(this.cmpnyinformationbtn_Click);
             // 
             // System_Settings
             // 
@@ -351,8 +371,8 @@
             this.Controls.Add(this.dellosoftsetting);
             this.Controls.Add(this.configurationbtn);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.browseimgbtn);
+            this.Controls.Add(this.clearimgbtn);
             this.Controls.Add(this.mbltxtbox);
             this.Controls.Add(this.emailtxtbox);
             this.Controls.Add(this.wwwtxtbox);
@@ -376,11 +396,12 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "System_Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System_Settings";
             this.Load += new System.EventHandler(this.System_Settings_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -411,8 +432,8 @@
         private System.Windows.Forms.TextBox wwwtxtbox;
         private System.Windows.Forms.TextBox emailtxtbox;
         private System.Windows.Forms.TextBox mbltxtbox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button browseimgbtn;
+        private System.Windows.Forms.Button clearimgbtn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button configurationbtn;
         private System.Windows.Forms.Button dellosoftsetting;

@@ -574,45 +574,26 @@ namespace FO_2022
                 purchaseCmd.Parameters.AddWithValue("@BillDate", billdatepicker.Value);
                 purchaseCmd.Parameters.AddWithValue("@Narration", string.IsNullOrEmpty(narrationtxtbox.Text) ? "" : narrationtxtbox.Text);
 
-                // ✅ CORRECTED DATE HANDLING - ONLY ONE PARAMETER ADDITION
+                // Date handling
                 object dueDateParam = DBNull.Value;
 
                 if (!string.IsNullOrWhiteSpace(duedatetxtbox.Text))
                 {
                     string dateText = duedatetxtbox.Text.Trim();
-
-                    // Try different date formats
                     DateTime dueDate;
 
-                    // First try: General parse
                     if (DateTime.TryParse(dateText, out dueDate))
                     {
                         dueDateParam = dueDate;
                     }
-                    // Second try: Specific formats
                     else
                     {
-                        // Common date formats
-                        string[] formats = {
-                    "dd-MM-yyyy", "dd/MM/yyyy",
-                    "d-MM-yyyy", "d/MM/yyyy",
-                    "dd-M-yyyy", "dd/M/yyyy",
-                    "d-M-yyyy", "d/M/yyyy",
-                    "yyyy-MM-dd", "yyyy/MM/dd"
-                };
-
+                        string[] formats = { "dd-MM-yyyy", "dd/MM/yyyy", "yyyy-MM-dd", "yyyy/MM/dd" };
                         if (DateTime.TryParseExact(dateText, formats,
                             System.Globalization.CultureInfo.InvariantCulture,
                             System.Globalization.DateTimeStyles.None, out dueDate))
                         {
                             dueDateParam = dueDate;
-                        }
-                        else
-                        {
-                            // If still can't parse, show warning but continue
-                            MessageBox.Show("Invalid Due Date format. Using empty date.",
-                                "Date Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            dueDateParam = DBNull.Value;
                         }
                     }
                 }
@@ -629,14 +610,21 @@ namespace FO_2022
                     if (row.RowState != DataRowState.Deleted)
                     {
                         string proId = row["Pro ID"].ToString();
+                        string packName = row["Pack Name"]?.ToString() ?? "Piece";
+
                         if (!string.IsNullOrEmpty(proId))
                         {
-                            string purchasesBodyQuery = @"INSERT INTO PurchasesBody (PurchaseId, ProductId, QtyPack, QtyLose, BnsLose)
-                                                VALUES (@PurchaseId, @ProductId, @QtyPack, @QtyLose, @BnsLose)";
+                            // Get PackingId from Packings table using Pack Name
+                            int packingId = GetPackingIdFromName(packName, transaction);
+
+                            string purchasesBodyQuery = @"INSERT INTO PurchasesBody 
+                    (PurchaseId, ProductId, PackingId, QtyPack, QtyLose, BnsLose)
+                    VALUES (@PurchaseId, @ProductId, @PackingId, @QtyPack, @QtyLose, @BnsLose)";
 
                             SqlCommand bodyCmd = new SqlCommand(purchasesBodyQuery, connection, transaction);
                             bodyCmd.Parameters.AddWithValue("@PurchaseId", currentPurchaseId);
                             bodyCmd.Parameters.AddWithValue("@ProductId", proId);
+                            bodyCmd.Parameters.AddWithValue("@PackingId", packingId);
                             bodyCmd.Parameters.AddWithValue("@QtyPack", row["Qty(P)"] != DBNull.Value ? Convert.ToInt32(row["Qty(P)"]) : 0);
                             bodyCmd.Parameters.AddWithValue("@QtyLose", row["Qty(L)"] != DBNull.Value ? Convert.ToInt32(row["Qty(L)"]) : 0);
                             bodyCmd.Parameters.AddWithValue("@BnsLose", row["Bns(L)"] != DBNull.Value ? Convert.ToInt32(row["Bns(L)"]) : 0);
@@ -822,6 +810,26 @@ namespace FO_2022
                 SearchProduct();
 
                 e.SuppressKeyPress = true;
+            }
+        }
+        private int GetPackingIdFromName(string packingName, SqlTransaction transaction)
+        {
+            try
+            {
+                string query = "SELECT PackingId FROM Packings WHERE PackingName = @PackingName";
+                SqlCommand cmd = new SqlCommand(query, connection, transaction);
+                cmd.Parameters.AddWithValue("@PackingName", packingName);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                    return Convert.ToInt32(result);
+                else
+                    return 1; // Default if not found
+            }
+            catch
+            {
+                return 1; // Default if error
             }
         }
         private void pictureBox2_Click(object sender, EventArgs e)
