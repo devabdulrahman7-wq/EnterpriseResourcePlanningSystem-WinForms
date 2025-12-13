@@ -55,7 +55,7 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.urdubtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.distributorcombobox = new System.Windows.Forms.ComboBox();
             this.addresstxtbox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.sectoranamecombobox1 = new System.Windows.Forms.ComboBox();
@@ -80,13 +80,13 @@
             this.creditlmttxtbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.creditlmycombobox = new System.Windows.Forms.ComboBox();
+            this.cstmrctgrycombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.blockbtn = new System.Windows.Forms.Button();
+            this.unblockbtn = new System.Windows.Forms.Button();
+            this.canalsobeavendorchkbox = new System.Windows.Forms.CheckBox();
+            this.isdistributorchkbox = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -159,7 +159,7 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(18, 175);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(307, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(307, 398);
             this.dataGridView1.TabIndex = 443;
             // 
             // Column1
@@ -199,7 +199,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(335, 61);
+            this.label5.Location = new System.Drawing.Point(339, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 445;
@@ -229,7 +229,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(458, 61);
+            this.label12.Location = new System.Drawing.Point(454, 58);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(103, 16);
             this.label12.TabIndex = 452;
@@ -248,7 +248,7 @@
             // distributortxtbox
             // 
             this.distributortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.distributortxtbox.Location = new System.Drawing.Point(453, 78);
+            this.distributortxtbox.Location = new System.Drawing.Point(457, 78);
             this.distributortxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.distributortxtbox.Multiline = true;
             this.distributortxtbox.Name = "distributortxtbox";
@@ -282,7 +282,7 @@
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(312, 607);
+            this.newbtn.Location = new System.Drawing.Point(282, 607);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
@@ -296,7 +296,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(549, 607);
+            this.closebtn.Location = new System.Drawing.Point(519, 607);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -311,7 +311,7 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(154, 607);
+            this.removebtn.Location = new System.Drawing.Point(124, 607);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -325,7 +325,7 @@
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(391, 607);
+            this.editbtn.Location = new System.Drawing.Point(361, 607);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
@@ -339,7 +339,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(233, 607);
+            this.clearbtn.Location = new System.Drawing.Point(203, 607);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -353,7 +353,7 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(470, 607);
+            this.savebtn.Location = new System.Drawing.Point(440, 607);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -367,21 +367,21 @@
             this.urdubtn.FlatAppearance.BorderSize = 0;
             this.urdubtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urdubtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urdubtn.Location = new System.Drawing.Point(623, 78);
+            this.urdubtn.Location = new System.Drawing.Point(626, 78);
             this.urdubtn.Margin = new System.Windows.Forms.Padding(2);
             this.urdubtn.Name = "urdubtn";
-            this.urdubtn.Size = new System.Drawing.Size(56, 40);
+            this.urdubtn.Size = new System.Drawing.Size(56, 48);
             this.urdubtn.TabIndex = 471;
             this.urdubtn.Text = "Urdu ";
             this.urdubtn.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // distributorcombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(457, 105);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 472;
+            this.distributorcombobox.FormattingEnabled = true;
+            this.distributorcombobox.Location = new System.Drawing.Point(457, 105);
+            this.distributorcombobox.Name = "distributorcombobox";
+            this.distributorcombobox.Size = new System.Drawing.Size(164, 21);
+            this.distributorcombobox.TabIndex = 472;
             // 
             // addresstxtbox
             // 
@@ -573,7 +573,7 @@
             // creditdaytxtbox
             // 
             this.creditdaytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.creditdaytxtbox.Location = new System.Drawing.Point(434, 460);
+            this.creditdaytxtbox.Location = new System.Drawing.Point(435, 460);
             this.creditdaytxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.creditdaytxtbox.Multiline = true;
             this.creditdaytxtbox.Name = "creditdaytxtbox";
@@ -584,7 +584,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(434, 433);
+            this.label7.Location = new System.Drawing.Point(432, 440);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 494;
@@ -593,7 +593,7 @@
             // creditlmttxtbox
             // 
             this.creditlmttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.creditlmttxtbox.Location = new System.Drawing.Point(337, 460);
+            this.creditlmttxtbox.Location = new System.Drawing.Point(338, 460);
             this.creditlmttxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.creditlmttxtbox.Multiline = true;
             this.creditlmttxtbox.Name = "creditlmttxtbox";
@@ -604,7 +604,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(336, 433);
+            this.label8.Location = new System.Drawing.Point(334, 440);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 16);
             this.label8.TabIndex = 492;
@@ -614,27 +614,27 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(338, 484);
+            this.label9.Location = new System.Drawing.Point(339, 481);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.Size = new System.Drawing.Size(117, 16);
             this.label9.TabIndex = 496;
-            this.label9.Text = "Credit Limit";
+            this.label9.Text = "Customer Category";
             // 
-            // creditlmycombobox
+            // cstmrctgrycombobox
             // 
-            this.creditlmycombobox.FormattingEnabled = true;
-            this.creditlmycombobox.Location = new System.Drawing.Point(337, 500);
-            this.creditlmycombobox.Name = "creditlmycombobox";
-            this.creditlmycombobox.Size = new System.Drawing.Size(164, 21);
-            this.creditlmycombobox.TabIndex = 497;
+            this.cstmrctgrycombobox.FormattingEnabled = true;
+            this.cstmrctgrycombobox.Location = new System.Drawing.Point(337, 500);
+            this.cstmrctgrycombobox.Name = "cstmrctgrycombobox";
+            this.cstmrctgrycombobox.Size = new System.Drawing.Size(164, 21);
+            this.cstmrctgrycombobox.TabIndex = 497;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.blockbtn);
+            this.groupBox1.Controls.Add(this.unblockbtn);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(534, 445);
+            this.groupBox1.Location = new System.Drawing.Point(534, 473);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(160, 100);
             this.groupBox1.TabIndex = 498;
@@ -651,55 +651,55 @@
             this.label10.TabIndex = 499;
             this.label10.Text = "Party Status:";
             // 
-            // button2
+            // blockbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 73);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 22);
-            this.button2.TabIndex = 500;
-            this.button2.Text = "Block";
-            this.button2.UseVisualStyleBackColor = false;
+            this.blockbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.blockbtn.FlatAppearance.BorderSize = 0;
+            this.blockbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.blockbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blockbtn.Location = new System.Drawing.Point(5, 72);
+            this.blockbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.blockbtn.Name = "blockbtn";
+            this.blockbtn.Size = new System.Drawing.Size(59, 22);
+            this.blockbtn.TabIndex = 500;
+            this.blockbtn.Text = "Block";
+            this.blockbtn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // unblockbtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(76, 72);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 23);
-            this.button3.TabIndex = 499;
-            this.button3.Text = "Unblock";
-            this.button3.UseVisualStyleBackColor = false;
+            this.unblockbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.unblockbtn.FlatAppearance.BorderSize = 0;
+            this.unblockbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.unblockbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unblockbtn.Location = new System.Drawing.Point(86, 72);
+            this.unblockbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.unblockbtn.Name = "unblockbtn";
+            this.unblockbtn.Size = new System.Drawing.Size(69, 23);
+            this.unblockbtn.TabIndex = 499;
+            this.unblockbtn.Text = "Unblock";
+            this.unblockbtn.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // canalsobeavendorchkbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(342, 527);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 20);
-            this.checkBox1.TabIndex = 499;
-            this.checkBox1.Text = "Can also be a Vendor";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.canalsobeavendorchkbox.AutoSize = true;
+            this.canalsobeavendorchkbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.canalsobeavendorchkbox.Location = new System.Drawing.Point(341, 527);
+            this.canalsobeavendorchkbox.Name = "canalsobeavendorchkbox";
+            this.canalsobeavendorchkbox.Size = new System.Drawing.Size(149, 20);
+            this.canalsobeavendorchkbox.TabIndex = 499;
+            this.canalsobeavendorchkbox.Text = "Can also be a Vendor";
+            this.canalsobeavendorchkbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // isdistributorchkbox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(342, 553);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(99, 20);
-            this.checkBox2.TabIndex = 500;
-            this.checkBox2.Text = "Is Distributor";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.isdistributorchkbox.AutoSize = true;
+            this.isdistributorchkbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isdistributorchkbox.Location = new System.Drawing.Point(342, 553);
+            this.isdistributorchkbox.Name = "isdistributorchkbox";
+            this.isdistributorchkbox.Size = new System.Drawing.Size(99, 20);
+            this.isdistributorchkbox.TabIndex = 500;
+            this.isdistributorchkbox.Text = "Is Distributor";
+            this.isdistributorchkbox.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -718,10 +718,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(705, 663);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.isdistributorchkbox);
+            this.Controls.Add(this.canalsobeavendorchkbox);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.creditlmycombobox);
+            this.Controls.Add(this.cstmrctgrycombobox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.creditdaytxtbox);
             this.Controls.Add(this.label7);
@@ -746,7 +746,7 @@
             this.Controls.Add(this.sectoranamecombobox1);
             this.Controls.Add(this.addresstxtbox);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.distributorcombobox);
             this.Controls.Add(this.urdubtn);
             this.Controls.Add(this.newbtn);
             this.Controls.Add(this.closebtn);
@@ -813,7 +813,7 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button urdubtn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox distributorcombobox;
         private System.Windows.Forms.TextBox addresstxtbox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox sectoranamecombobox1;
@@ -838,13 +838,13 @@
         private System.Windows.Forms.TextBox creditlmttxtbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox creditlmycombobox;
+        private System.Windows.Forms.ComboBox cstmrctgrycombobox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button blockbtn;
+        private System.Windows.Forms.Button unblockbtn;
+        private System.Windows.Forms.CheckBox canalsobeavendorchkbox;
+        private System.Windows.Forms.CheckBox isdistributorchkbox;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

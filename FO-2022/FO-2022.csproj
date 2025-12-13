@@ -500,10 +500,6 @@
     <Compile Include="Monthly Expense Chart.Designer.cs">
       <DependentUpon>Monthly Expense Chart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Opening Stock.cs" />
-    <Compile Include="Opening Stock.Designer.cs">
-      <DependentUpon>Opening Stock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Opening_stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1282,9 +1278,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Monthly Expense Chart.resx">
       <DependentUpon>Monthly Expense Chart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Opening Stock.resx">
-      <DependentUpon>Opening Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opening_stock.resx">
       <DependentUpon>Opening_stock.cs</DependentUpon>
