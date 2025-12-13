@@ -170,7 +170,7 @@ namespace FO_2022
 
         private void purchaseInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseInvoice pi=new PurchaseInvoice();
+            Purchase_Invoice_01 pi=new Purchase_Invoice_01();
             pi.Show();
             this.Hide();
         }

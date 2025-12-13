@@ -73,7 +73,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.packnamecombobox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).BeginInit();
@@ -104,7 +104,6 @@
             this.showloaddocxhkbox.TabIndex = 290;
             this.showloaddocxhkbox.Text = "Show Load Document";
             this.showloaddocxhkbox.UseVisualStyleBackColor = true;
-            this.showloaddocxhkbox.CheckedChanged += new System.EventHandler(this.showloaddocxhkbox_CheckedChanged);
             // 
             // nightshftradiobtn
             // 
@@ -118,7 +117,6 @@
             this.nightshftradiobtn.TabStop = true;
             this.nightshftradiobtn.Text = "Night Shift";
             this.nightshftradiobtn.UseVisualStyleBackColor = true;
-            this.nightshftradiobtn.CheckedChanged += new System.EventHandler(this.nightshftbtn_CheckedChanged);
             // 
             // duedatetxtbox
             // 
@@ -128,7 +126,6 @@
             this.duedatetxtbox.Name = "duedatetxtbox";
             this.duedatetxtbox.Size = new System.Drawing.Size(128, 16);
             this.duedatetxtbox.TabIndex = 288;
-            this.duedatetxtbox.TextChanged += new System.EventHandler(this.duedatetxtbox_TextChanged);
             // 
             // label22
             // 
@@ -140,7 +137,6 @@
             this.label22.Size = new System.Drawing.Size(59, 16);
             this.label22.TabIndex = 287;
             this.label22.Text = "Due Date";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label19
             // 
@@ -152,7 +148,6 @@
             this.label19.Size = new System.Drawing.Size(53, 16);
             this.label19.TabIndex = 286;
             this.label19.Text = "Bill Date";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // dayshftradiobtn
             // 
@@ -166,7 +161,6 @@
             this.dayshftradiobtn.TabStop = true;
             this.dayshftradiobtn.Text = "Day Shift ";
             this.dayshftradiobtn.UseVisualStyleBackColor = true;
-            this.dayshftradiobtn.CheckedChanged += new System.EventHandler(this.dayshftbtn_CheckedChanged);
             // 
             // billdatepicker
             // 
@@ -175,7 +169,6 @@
             this.billdatepicker.Name = "billdatepicker";
             this.billdatepicker.Size = new System.Drawing.Size(97, 23);
             this.billdatepicker.TabIndex = 296;
-            this.billdatepicker.ValueChanged += new System.EventHandler(this.billdatepicker_ValueChanged);
             // 
             // purchasedatepicker
             // 
@@ -184,7 +177,6 @@
             this.purchasedatepicker.Name = "purchasedatepicker";
             this.purchasedatepicker.Size = new System.Drawing.Size(118, 23);
             this.purchasedatepicker.TabIndex = 295;
-            this.purchasedatepicker.ValueChanged += new System.EventHandler(this.purchasedatepicker_ValueChanged);
             // 
             // narrationtxtbox
             // 
@@ -195,7 +187,6 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(494, 30);
             this.narrationtxtbox.TabIndex = 293;
-            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label21
             // 
@@ -220,7 +211,6 @@
             this.groupBox1.Size = new System.Drawing.Size(261, 47);
             this.groupBox1.TabIndex = 291;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pendignchkbox
             // 
@@ -233,7 +223,6 @@
             this.pendignchkbox.TabIndex = 289;
             this.pendignchkbox.Text = "Pending Rate";
             this.pendignchkbox.UseVisualStyleBackColor = true;
-            this.pendignchkbox.CheckedChanged += new System.EventHandler(this.pendignchkbox_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -244,6 +233,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 298;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // closebtn
             // 
@@ -288,7 +278,6 @@
             this.openbtn.TabIndex = 283;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
-            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -323,12 +312,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(114, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(84, 273);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(620, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(691, 300);
             this.dataGridView1.TabIndex = 280;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label9
             // 
@@ -349,7 +337,6 @@
             this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 278;
             this.label3.Text = "Vendor Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -361,7 +348,6 @@
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 277;
             this.label2.Text = "Vendor ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // vendornametxtbox
             // 
@@ -370,9 +356,8 @@
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(349, 21);
+            this.vendornametxtbox.Size = new System.Drawing.Size(349, 22);
             this.vendornametxtbox.TabIndex = 276;
-            this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -381,9 +366,8 @@
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(128, 21);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(128, 23);
             this.vendoridtxtbox.TabIndex = 275;
-            this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // billnotxtbox
             // 
@@ -393,7 +377,6 @@
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(128, 16);
             this.billnotxtbox.TabIndex = 274;
-            this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // purchaseidtxtbox
             // 
@@ -403,7 +386,6 @@
             this.purchaseidtxtbox.Name = "purchaseidtxtbox";
             this.purchaseidtxtbox.Size = new System.Drawing.Size(128, 16);
             this.purchaseidtxtbox.TabIndex = 273;
-            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged);
             // 
             // billlnolbl
             // 
@@ -415,7 +397,6 @@
             this.billlnolbl.Size = new System.Drawing.Size(42, 16);
             this.billlnolbl.TabIndex = 272;
             this.billlnolbl.Text = "Bill No";
-            this.billlnolbl.Click += new System.EventHandler(this.billlnolbl_Click);
             // 
             // purchasedatelbl
             // 
@@ -427,7 +408,6 @@
             this.purchasedatelbl.Size = new System.Drawing.Size(89, 16);
             this.purchasedatelbl.TabIndex = 271;
             this.purchasedatelbl.Text = "Purchase Date";
-            this.purchasedatelbl.Click += new System.EventHandler(this.purchasedatelbl_Click);
             // 
             // purchaseidlbl
             // 
@@ -439,7 +419,6 @@
             this.purchaseidlbl.Size = new System.Drawing.Size(75, 16);
             this.purchaseidlbl.TabIndex = 270;
             this.purchaseidlbl.Text = "Purchase ID";
-            this.purchaseidlbl.Click += new System.EventHandler(this.purchaseidlbl_Click);
             // 
             // label1
             // 
@@ -462,7 +441,6 @@
             this.bnsltxtbox.Name = "bnsltxtbox";
             this.bnsltxtbox.Size = new System.Drawing.Size(70, 24);
             this.bnsltxtbox.TabIndex = 312;
-            this.bnsltxtbox.TextChanged += new System.EventHandler(this.bnsltxtbox_TextChanged);
             // 
             // qtyptxtbox
             // 
@@ -473,7 +451,6 @@
             this.qtyptxtbox.Name = "qtyptxtbox";
             this.qtyptxtbox.Size = new System.Drawing.Size(63, 24);
             this.qtyptxtbox.TabIndex = 311;
-            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
             // 
             // label18
             // 
@@ -485,7 +462,6 @@
             this.label18.Size = new System.Drawing.Size(42, 16);
             this.label18.TabIndex = 310;
             this.label18.Text = "Qty(L)";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label4
             // 
@@ -497,7 +473,6 @@
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 309;
             this.label4.Text = "Bns(L)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // qtyltxtbox
             // 
@@ -508,7 +483,6 @@
             this.qtyltxtbox.Name = "qtyltxtbox";
             this.qtyltxtbox.Size = new System.Drawing.Size(70, 24);
             this.qtyltxtbox.TabIndex = 308;
-            this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
             // 
             // packtxtbox
             // 
@@ -519,7 +493,6 @@
             this.packtxtbox.Name = "packtxtbox";
             this.packtxtbox.Size = new System.Drawing.Size(69, 24);
             this.packtxtbox.TabIndex = 307;
-            this.packtxtbox.TextChanged += new System.EventHandler(this.packtxtbox_TextChanged);
             // 
             // productnametxtbox
             // 
@@ -530,7 +503,6 @@
             this.productnametxtbox.Name = "productnametxtbox";
             this.productnametxtbox.Size = new System.Drawing.Size(96, 24);
             this.productnametxtbox.TabIndex = 305;
-            this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // productidtxtbox
             // 
@@ -541,7 +513,7 @@
             this.productidtxtbox.Name = "productidtxtbox";
             this.productidtxtbox.Size = new System.Drawing.Size(69, 24);
             this.productidtxtbox.TabIndex = 304;
-            this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
+            this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown_1);
             // 
             // label7
             // 
@@ -553,7 +525,6 @@
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 303;
             this.label7.Text = "Qty(P)";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -565,7 +536,6 @@
             this.label8.Size = new System.Drawing.Size(38, 16);
             this.label8.TabIndex = 302;
             this.label8.Text = "Pack";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label12
             // 
@@ -577,7 +547,6 @@
             this.label12.Size = new System.Drawing.Size(78, 16);
             this.label12.TabIndex = 301;
             this.label12.Text = "Pack Name";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -589,7 +558,6 @@
             this.label13.Size = new System.Drawing.Size(68, 16);
             this.label13.TabIndex = 300;
             this.label13.Text = "Pro.Name";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label15
             // 
@@ -601,16 +569,14 @@
             this.label15.Size = new System.Drawing.Size(44, 16);
             this.label15.TabIndex = 299;
             this.label15.Text = "Pro.ID";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
-            // comboBox1
+            // packnamecombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(298, 244);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 24);
-            this.comboBox1.TabIndex = 313;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.packnamecombobox.FormattingEnabled = true;
+            this.packnamecombobox.Location = new System.Drawing.Point(298, 244);
+            this.packnamecombobox.Name = "packnamecombobox";
+            this.packnamecombobox.Size = new System.Drawing.Size(95, 24);
+            this.packnamecombobox.TabIndex = 313;
             // 
             // button2
             // 
@@ -642,7 +608,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(867, 686);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.packnamecombobox);
             this.Controls.Add(this.bnsltxtbox);
             this.Controls.Add(this.qtyptxtbox);
             this.Controls.Add(this.label18);
@@ -693,7 +659,6 @@
             this.Name = "Purchase_Invoice_01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Invoice_01";
-            this.Load += new System.EventHandler(this.Purchase_Invoice_01_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -750,7 +715,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox packnamecombobox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
     }

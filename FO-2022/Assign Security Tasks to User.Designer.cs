@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 96);
+            this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 92;
@@ -141,7 +141,7 @@
             // usernamecombox
             // 
             this.usernamecombox.FormattingEnabled = true;
-            this.usernamecombox.Location = new System.Drawing.Point(52, 117);
+            this.usernamecombox.Location = new System.Drawing.Point(33, 117);
             this.usernamecombox.Name = "usernamecombox";
             this.usernamecombox.Size = new System.Drawing.Size(222, 24);
             this.usernamecombox.TabIndex = 93;
