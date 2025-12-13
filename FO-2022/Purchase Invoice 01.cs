@@ -579,5 +579,120 @@ namespace FO_2022
         private void bnsltxtbox_TextChanged(object sender, EventArgs e) { }
         private void qtyltxtbox_TextChanged(object sender, EventArgs e) { }
         private void qtyptxtbox_TextChanged(object sender, EventArgs e) { }
+
+        private void Purchase_Invoice_01_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productidtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pendignchkbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void billlnolbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productnametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void purchasedatepicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void packtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void purchasedatelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void billdatepicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void purchaseidlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

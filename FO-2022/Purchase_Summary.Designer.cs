@@ -53,10 +53,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(173, 306);
+            this.previewbtn.Location = new System.Drawing.Point(176, 287);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(105, 31);
+            this.previewbtn.Size = new System.Drawing.Size(90, 26);
             this.previewbtn.TabIndex = 446;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -67,10 +67,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(286, 306);
+            this.printbtn.Location = new System.Drawing.Point(276, 287);
             this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(82, 31);
+            this.printbtn.Size = new System.Drawing.Size(63, 26);
             this.printbtn.TabIndex = 444;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -81,10 +81,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(371, 306);
+            this.closebtn.Location = new System.Drawing.Point(344, 287);
             this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(80, 31);
+            this.closebtn.Size = new System.Drawing.Size(61, 26);
             this.closebtn.TabIndex = 445;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Purchase_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Summary";
