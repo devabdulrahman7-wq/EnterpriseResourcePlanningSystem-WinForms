@@ -227,7 +227,7 @@
             // 
             this.saledatelbl.AutoSize = true;
             this.saledatelbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saledatelbl.Location = new System.Drawing.Point(166, 82);
+            this.saledatelbl.Location = new System.Drawing.Point(141, 82);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
             this.saledatelbl.Size = new System.Drawing.Size(75, 16);
@@ -249,9 +249,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(853, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(867, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(54, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 386;
             this.pictureBox2.TabStop = false;
@@ -259,7 +259,7 @@
             // returndatepcker
             // 
             this.returndatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.returndatepcker.Location = new System.Drawing.Point(146, 101);
+            this.returndatepcker.Location = new System.Drawing.Point(146, 103);
             this.returndatepcker.Name = "returndatepcker";
             this.returndatepcker.Size = new System.Drawing.Size(109, 23);
             this.returndatepcker.TabIndex = 384;
@@ -382,9 +382,9 @@
             this.Column11,
             this.Column13,
             this.Column14});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 280);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 235);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(899, 203);
+            this.dataGridView1.Size = new System.Drawing.Size(899, 248);
             this.dataGridView1.TabIndex = 359;
             // 
             // Column1
@@ -465,7 +465,7 @@
             // 
             this.saleidlbl.AutoSize = true;
             this.saleidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saleidlbl.Location = new System.Drawing.Point(44, 89);
+            this.saleidlbl.Location = new System.Drawing.Point(30, 89);
             this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saleidlbl.Name = "saleidlbl";
             this.saleidlbl.Size = new System.Drawing.Size(61, 16);

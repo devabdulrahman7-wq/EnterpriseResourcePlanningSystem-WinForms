@@ -16,5 +16,10 @@ namespace FO_2022
         {
             InitializeComponent();
         }
+
+        private void Stock_Current_Sheet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

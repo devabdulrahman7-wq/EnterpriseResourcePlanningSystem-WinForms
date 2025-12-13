@@ -36,8 +36,6 @@
             this.townnamecombobox = new System.Windows.Forms.ComboBox();
             this.sectornamecombobox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -128,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(192, 102);
+            this.label3.Location = new System.Drawing.Point(176, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 439;
@@ -141,37 +139,24 @@
             this.townnamecombobox.Name = "townnamecombobox";
             this.townnamecombobox.Size = new System.Drawing.Size(143, 21);
             this.townnamecombobox.TabIndex = 440;
+            this.townnamecombobox.SelectedIndexChanged += new System.EventHandler(this.townnamecombobox_SelectedIndexChanged);
             // 
             // sectornamecombobox
             // 
             this.sectornamecombobox.FormattingEnabled = true;
-            this.sectornamecombobox.Location = new System.Drawing.Point(190, 121);
+            this.sectornamecombobox.Location = new System.Drawing.Point(179, 121);
             this.sectornamecombobox.Name = "sectornamecombobox";
-            this.sectornamecombobox.Size = new System.Drawing.Size(135, 21);
+            this.sectornamecombobox.Size = new System.Drawing.Size(146, 21);
             this.sectornamecombobox.TabIndex = 441;
             this.sectornamecombobox.SelectedIndexChanged += new System.EventHandler(this.sectornamecombobox_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(18, 175);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(307, 398);
             this.dataGridView1.TabIndex = 443;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Party ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = " Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 160;
             // 
             // textBox1
             // 
@@ -274,7 +259,6 @@
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(38, 20);
             this.partyidtxtbox.TabIndex = 460;
-            this.partyidtxtbox.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // newbtn
             // 
@@ -289,6 +273,7 @@
             this.newbtn.TabIndex = 470;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -311,13 +296,14 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(124, 607);
+            this.removebtn.Location = new System.Drawing.Point(440, 607);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
             this.removebtn.TabIndex = 468;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -332,6 +318,7 @@
             this.editbtn.TabIndex = 467;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -346,6 +333,7 @@
             this.clearbtn.TabIndex = 466;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -353,13 +341,14 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(440, 607);
+            this.savebtn.Location = new System.Drawing.Point(124, 607);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 465;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // urdubtn
             // 
@@ -374,6 +363,7 @@
             this.urdubtn.TabIndex = 471;
             this.urdubtn.Text = "Urdu ";
             this.urdubtn.UseVisualStyleBackColor = false;
+            this.urdubtn.Click += new System.EventHandler(this.urdubtn_Click);
             // 
             // distributorcombobox
             // 
@@ -382,6 +372,7 @@
             this.distributorcombobox.Name = "distributorcombobox";
             this.distributorcombobox.Size = new System.Drawing.Size(164, 21);
             this.distributorcombobox.TabIndex = 472;
+            this.distributorcombobox.SelectedIndexChanged += new System.EventHandler(this.distributorcombobox_SelectedIndexChanged);
             // 
             // addresstxtbox
             // 
@@ -410,7 +401,6 @@
             this.sectoranamecombobox1.Name = "sectoranamecombobox1";
             this.sectoranamecombobox1.Size = new System.Drawing.Size(153, 21);
             this.sectoranamecombobox1.TabIndex = 475;
-            this.sectoranamecombobox1.SelectedIndexChanged += new System.EventHandler(this.sectoramecombobox_SelectedIndexChanged);
             // 
             // townnametxtbox1
             // 
@@ -657,7 +647,7 @@
             this.blockbtn.FlatAppearance.BorderSize = 0;
             this.blockbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.blockbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blockbtn.Location = new System.Drawing.Point(5, 72);
+            this.blockbtn.Location = new System.Drawing.Point(9, 72);
             this.blockbtn.Margin = new System.Windows.Forms.Padding(2);
             this.blockbtn.Name = "blockbtn";
             this.blockbtn.Size = new System.Drawing.Size(59, 22);
@@ -671,7 +661,7 @@
             this.unblockbtn.FlatAppearance.BorderSize = 0;
             this.unblockbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.unblockbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unblockbtn.Location = new System.Drawing.Point(86, 72);
+            this.unblockbtn.Location = new System.Drawing.Point(79, 71);
             this.unblockbtn.Margin = new System.Windows.Forms.Padding(2);
             this.unblockbtn.Name = "unblockbtn";
             this.unblockbtn.Size = new System.Drawing.Size(69, 23);
@@ -704,12 +694,13 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(646, -1);
+            this.pictureBox2.Location = new System.Drawing.Point(657, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 501;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Customers
             // 
@@ -794,8 +785,6 @@
         private System.Windows.Forms.ComboBox townnamecombobox;
         private System.Windows.Forms.ComboBox sectornamecombobox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

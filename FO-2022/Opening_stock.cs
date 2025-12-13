@@ -506,6 +506,8 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            Mainform1 mf = new Mainform1();
+            mf.Show();
         }
 
         private void prodidtxtbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -530,6 +532,13 @@ namespace FO_2022
             {
                 e.Handled = true;
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Mainform1 mf = new Mainform1();
+            mf.Show();
         }
     }
 }

@@ -65,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 56);
+            this.label2.Location = new System.Drawing.Point(53, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(194, 56);
+            this.label3.Location = new System.Drawing.Point(274, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 86);
+            this.label4.Location = new System.Drawing.Point(53, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 3;
@@ -94,22 +94,22 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 52);
+            this.dateTimePicker1.Location = new System.Drawing.Point(139, 84);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(252, 52);
+            this.dateTimePicker2.Location = new System.Drawing.Point(332, 84);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(85, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // purchaseidtxtbox
             // 
-            this.purchaseidtxtbox.Location = new System.Drawing.Point(102, 82);
+            this.purchaseidtxtbox.Location = new System.Drawing.Point(139, 114);
             this.purchaseidtxtbox.Name = "purchaseidtxtbox";
             this.purchaseidtxtbox.Size = new System.Drawing.Size(109, 20);
             this.purchaseidtxtbox.TabIndex = 6;
@@ -117,7 +117,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(219, 85);
+            this.radioButton1.Location = new System.Drawing.Point(256, 117);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(92, 17);
             this.radioButton1.TabIndex = 7;
@@ -128,7 +128,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(317, 85);
+            this.radioButton2.Location = new System.Drawing.Point(354, 117);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(80, 17);
             this.radioButton2.TabIndex = 8;
@@ -142,9 +142,9 @@
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(102, 425);
+            this.refreshbtn.Location = new System.Drawing.Point(139, 479);
             this.refreshbtn.Name = "refreshbtn";
-            this.refreshbtn.Size = new System.Drawing.Size(75, 29);
+            this.refreshbtn.Size = new System.Drawing.Size(75, 26);
             this.refreshbtn.TabIndex = 9;
             this.refreshbtn.Text = "Refresh";
             this.refreshbtn.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@
             this.selectbtn.FlatAppearance.BorderSize = 0;
             this.selectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectbtn.Location = new System.Drawing.Point(187, 425);
+            this.selectbtn.Location = new System.Drawing.Point(224, 479);
             this.selectbtn.Name = "selectbtn";
-            this.selectbtn.Size = new System.Drawing.Size(75, 29);
+            this.selectbtn.Size = new System.Drawing.Size(75, 26);
             this.selectbtn.TabIndex = 10;
             this.selectbtn.Text = "Select";
             this.selectbtn.UseVisualStyleBackColor = false;
@@ -168,9 +168,9 @@
             this.cancelbtn.FlatAppearance.BorderSize = 0;
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(268, 425);
+            this.cancelbtn.Location = new System.Drawing.Point(305, 479);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(75, 29);
+            this.cancelbtn.Size = new System.Drawing.Size(75, 26);
             this.cancelbtn.TabIndex = 11;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(56, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(428, 311);
             this.dataGridView1.TabIndex = 12;
@@ -214,9 +214,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(393, -3);
+            this.pictureBox2.Location = new System.Drawing.Point(485, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 267;
             this.pictureBox2.TabStop = false;
@@ -227,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(436, 457);
+            this.ClientSize = new System.Drawing.Size(541, 542);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancelbtn);
