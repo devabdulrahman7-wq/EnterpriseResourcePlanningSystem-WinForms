@@ -175,12 +175,12 @@ namespace FO_2022
             this.Hide();
         }
 
-        private void purchaseInvoiceShortToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Purchase_Invoice_01 pin = new Purchase_Invoice_01();
-            pin.Show();
-            this.Hide();
-        }
+        //private void purchaseInvoiceShortToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Purchase_Invoice_01 pin = new Purchase_Invoice_01();
+        //    pin.Show();
+        //    this.Hide();
+        //}
 
         private void saleReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -191,9 +191,11 @@ namespace FO_2022
 
         private void purchaseReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
-            prs.Show();
-            this.Hide();
+          //Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
+          //Purchase_Returns_Invoice prs=new Purchase_Returns_Invoice();
+          Purhcase_Return_Invoice prs = new Purhcase_Return_Invoice();
+           prs.Show();
+          this.Hide();
         }
 
         private void stockIssueToSalesmenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -485,7 +487,7 @@ namespace FO_2022
         }
         private void purchaseReturnReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void stockReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
