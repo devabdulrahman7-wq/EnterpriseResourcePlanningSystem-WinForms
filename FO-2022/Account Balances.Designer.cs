@@ -246,9 +246,9 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(253, 562);
+            this.previewbtn.Location = new System.Drawing.Point(253, 557);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(77, 31);
+            this.previewbtn.Size = new System.Drawing.Size(77, 24);
             this.previewbtn.TabIndex = 276;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -259,9 +259,9 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(419, 562);
+            this.closebtn.Location = new System.Drawing.Point(419, 557);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(77, 31);
+            this.closebtn.Size = new System.Drawing.Size(77, 24);
             this.closebtn.TabIndex = 275;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -273,9 +273,9 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(336, 562);
+            this.printbtn.Location = new System.Drawing.Point(336, 557);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(77, 31);
+            this.printbtn.Size = new System.Drawing.Size(77, 24);
             this.printbtn.TabIndex = 274;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;

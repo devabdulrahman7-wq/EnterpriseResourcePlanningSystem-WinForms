@@ -149,7 +149,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(458, 272);
+            this.closebtn.Location = new System.Drawing.Point(446, 268);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -164,7 +164,7 @@
             this.updatebtn.FlatAppearance.BorderSize = 0;
             this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updatebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.Location = new System.Drawing.Point(350, 272);
+            this.updatebtn.Location = new System.Drawing.Point(338, 268);
             this.updatebtn.Margin = new System.Windows.Forms.Padding(2);
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Size = new System.Drawing.Size(104, 28);
@@ -178,7 +178,7 @@
             this.findbtn.FlatAppearance.BorderSize = 0;
             this.findbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.findbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findbtn.Location = new System.Drawing.Point(271, 272);
+            this.findbtn.Location = new System.Drawing.Point(259, 268);
             this.findbtn.Margin = new System.Windows.Forms.Padding(2);
             this.findbtn.Name = "findbtn";
             this.findbtn.Size = new System.Drawing.Size(75, 28);
