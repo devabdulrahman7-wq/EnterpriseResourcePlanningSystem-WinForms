@@ -57,18 +57,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.purhcaseidsearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleidlbl = new System.Windows.Forms.Label();
             this.vendoridsearch = new System.Windows.Forms.PictureBox();
             this.grossvaluetxtbox = new System.Windows.Forms.TextBox();
@@ -99,7 +87,6 @@
             this.valuetxtbox = new System.Windows.Forms.TextBox();
             this.qtyltxtbox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.packnametxtbox = new System.Windows.Forms.TextBox();
             this.productnametxtbox = new System.Windows.Forms.TextBox();
             this.productidtxtbox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -109,6 +96,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.packnamecombobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purhcaseidsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -171,7 +159,6 @@
             this.vendornametxtbox.Name = "vendornametxtbox";
             this.vendornametxtbox.Size = new System.Drawing.Size(322, 18);
             this.vendornametxtbox.TabIndex = 353;
-            this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -181,7 +168,6 @@
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(120, 18);
             this.vendoridtxtbox.TabIndex = 352;
-            this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // purchaseidtxtbox
             // 
@@ -191,7 +177,7 @@
             this.purchaseidtxtbox.Name = "purchaseidtxtbox";
             this.purchaseidtxtbox.Size = new System.Drawing.Size(120, 18);
             this.purchaseidtxtbox.TabIndex = 345;
-            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged);
+            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged_1);
             // 
             // purchasedatetxtbox
             // 
@@ -210,7 +196,6 @@
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(110, 18);
             this.billnotxtbox.TabIndex = 343;
-            this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // returnidtxtbox
             // 
@@ -220,7 +205,6 @@
             this.returnidtxtbox.Name = "returnidtxtbox";
             this.returnidtxtbox.Size = new System.Drawing.Size(110, 18);
             this.returnidtxtbox.TabIndex = 342;
-            this.returnidtxtbox.TextChanged += new System.EventHandler(this.returnidtxtbox_TextChanged);
             // 
             // billlnolbl
             // 
@@ -336,7 +320,6 @@
             this.openbtn.TabIndex = 380;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
-            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -350,7 +333,7 @@
             this.clearbtn.TabIndex = 379;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
-            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click_1);
             // 
             // savebtn
             // 
@@ -374,7 +357,6 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(563, 31);
             this.narrationtxtbox.TabIndex = 369;
-            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label21
             // 
@@ -408,98 +390,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column11,
-            this.Column13,
-            this.Column14});
             this.dataGridView1.Location = new System.Drawing.Point(12, 293);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(987, 190);
             this.dataGridView1.TabIndex = 359;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Pro ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 85;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 115;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pack ";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Qty(P)";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 45;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty(L)";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Bns(L)";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 50;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Price";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Disc%";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 60;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Disc.Val";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 75;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Sales Tax";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 90;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Net Value";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 95;
             // 
             // saleidlbl
             // 
@@ -521,7 +415,7 @@
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 387;
             this.vendoridsearch.TabStop = false;
-            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
+            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click_1);
             // 
             // grossvaluetxtbox
             // 
@@ -531,7 +425,6 @@
             this.grossvaluetxtbox.Name = "grossvaluetxtbox";
             this.grossvaluetxtbox.Size = new System.Drawing.Size(129, 18);
             this.grossvaluetxtbox.TabIndex = 391;
-            this.grossvaluetxtbox.TextChanged += new System.EventHandler(this.grossvaluetxtbox_TextChanged);
             // 
             // label2
             // 
@@ -586,7 +479,6 @@
             this.totalvaluetxtbox.Name = "totalvaluetxtbox";
             this.totalvaluetxtbox.Size = new System.Drawing.Size(124, 18);
             this.totalvaluetxtbox.TabIndex = 396;
-            this.totalvaluetxtbox.TextChanged += new System.EventHandler(this.totalvaluetxtbox_TextChanged);
             // 
             // receivedamounttxtbox
             // 
@@ -596,7 +488,6 @@
             this.receivedamounttxtbox.Name = "receivedamounttxtbox";
             this.receivedamounttxtbox.Size = new System.Drawing.Size(128, 18);
             this.receivedamounttxtbox.TabIndex = 397;
-            this.receivedamounttxtbox.TextChanged += new System.EventHandler(this.receivedamounttxtbox_TextChanged);
             // 
             // netvaluetxtbox
             // 
@@ -606,7 +497,6 @@
             this.netvaluetxtbox.Name = "netvaluetxtbox";
             this.netvaluetxtbox.Size = new System.Drawing.Size(127, 18);
             this.netvaluetxtbox.TabIndex = 398;
-            this.netvaluetxtbox.TextChanged += new System.EventHandler(this.netvaluetxtbox_TextChanged);
             // 
             // topsalestaxtxtbox
             // 
@@ -616,7 +506,6 @@
             this.topsalestaxtxtbox.Name = "topsalestaxtxtbox";
             this.topsalestaxtxtbox.Size = new System.Drawing.Size(125, 18);
             this.topsalestaxtxtbox.TabIndex = 399;
-            this.topsalestaxtxtbox.TextChanged += new System.EventHandler(this.topsalestaxtxtbox_TextChanged);
             // 
             // totaldiscounttxtbox
             // 
@@ -626,7 +515,6 @@
             this.totaldiscounttxtbox.Name = "totaldiscounttxtbox";
             this.totaldiscounttxtbox.Size = new System.Drawing.Size(110, 18);
             this.totaldiscounttxtbox.TabIndex = 400;
-            this.totaldiscounttxtbox.TextChanged += new System.EventHandler(this.totaldiscounttxtbox_TextChanged);
             // 
             // label26
             // 
@@ -659,7 +547,6 @@
             this.discvaltxtbox.Name = "discvaltxtbox";
             this.discvaltxtbox.Size = new System.Drawing.Size(65, 19);
             this.discvaltxtbox.TabIndex = 425;
-            //this.discvaltxtbox.TextChanged += new System.EventHandler(this.discvaltxtbox_TextChanged);
             // 
             // discvalltxtbox
             // 
@@ -670,7 +557,6 @@
             this.discvalltxtbox.Name = "discvalltxtbox";
             this.discvalltxtbox.Size = new System.Drawing.Size(66, 19);
             this.discvalltxtbox.TabIndex = 424;
-            //this.discvalltxtbox.TextChanged += new System.EventHandler(this.discvalltxtbox_TextChanged);
             // 
             // salestaxtxtbox
             // 
@@ -681,7 +567,6 @@
             this.salestaxtxtbox.Name = "salestaxtxtbox";
             this.salestaxtxtbox.Size = new System.Drawing.Size(93, 19);
             this.salestaxtxtbox.TabIndex = 423;
-            //this.salestaxtxtbox.TextChanged += new System.EventHandler(this.salestaxtxtbox_TextChanged);
             // 
             // bnsltxtbox
             // 
@@ -692,7 +577,6 @@
             this.bnsltxtbox.Name = "bnsltxtbox";
             this.bnsltxtbox.Size = new System.Drawing.Size(51, 19);
             this.bnsltxtbox.TabIndex = 422;
-            //this.bnsltxtbox.TextChanged += new System.EventHandler(this.bnsltxtbox_TextChanged);
             // 
             // qtyptxtbox
             // 
@@ -703,7 +587,6 @@
             this.qtyptxtbox.Name = "qtyptxtbox";
             this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
             this.qtyptxtbox.TabIndex = 421;
-            //this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
             // 
             // discpercenttxtbox
             // 
@@ -714,7 +597,6 @@
             this.discpercenttxtbox.Name = "discpercenttxtbox";
             this.discpercenttxtbox.Size = new System.Drawing.Size(66, 19);
             this.discpercenttxtbox.TabIndex = 420;
-            //this.discpercenttxtbox.TextChanged += new System.EventHandler(this.discpercenttxtbox_TextChanged);
             // 
             // label24
             // 
@@ -769,7 +651,6 @@
             this.pricetxtbox.Name = "pricetxtbox";
             this.pricetxtbox.Size = new System.Drawing.Size(62, 19);
             this.pricetxtbox.TabIndex = 415;
-            //this.pricetxtbox.TextChanged += new System.EventHandler(this.pricetxtbox_TextChanged);
             // 
             // label12
             // 
@@ -791,7 +672,6 @@
             this.valuetxtbox.Name = "valuetxtbox";
             this.valuetxtbox.Size = new System.Drawing.Size(82, 19);
             this.valuetxtbox.TabIndex = 413;
-            //this.valuetxtbox.TextChanged += new System.EventHandler(this.valuetxtbox_TextChanged);
             // 
             // qtyltxtbox
             // 
@@ -802,7 +682,6 @@
             this.qtyltxtbox.Name = "qtyltxtbox";
             this.qtyltxtbox.Size = new System.Drawing.Size(51, 19);
             this.qtyltxtbox.TabIndex = 412;
-            //this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
             // 
             // textBox4
             // 
@@ -813,18 +692,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(69, 20);
             this.textBox4.TabIndex = 411;
-            //this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // packnametxtbox
-            // 
-            this.packnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.packnametxtbox.Location = new System.Drawing.Point(196, 265);
-            this.packnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.packnametxtbox.Multiline = true;
-            this.packnametxtbox.Name = "packnametxtbox";
-            this.packnametxtbox.Size = new System.Drawing.Size(90, 19);
-            this.packnametxtbox.TabIndex = 410;
-            //this.packnametxtbox.TextChanged += new System.EventHandler(this.packnametxtbox_TextChanged);
             // 
             // productnametxtbox
             // 
@@ -835,7 +702,6 @@
             this.productnametxtbox.Name = "productnametxtbox";
             this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
             this.productnametxtbox.TabIndex = 409;
-            //this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // productidtxtbox
             // 
@@ -846,7 +712,6 @@
             this.productidtxtbox.Name = "productidtxtbox";
             this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
             this.productidtxtbox.TabIndex = 408;
-            //this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
             // label13
             // 
@@ -923,12 +788,22 @@
             this.label27.Size = new System.Drawing.Size(0, 16);
             this.label27.TabIndex = 401;
             // 
+            // packnamecombobox
+            // 
+            this.packnamecombobox.FormattingEnabled = true;
+            this.packnamecombobox.Location = new System.Drawing.Point(195, 262);
+            this.packnamecombobox.Name = "packnamecombobox";
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.TabIndex = 428;
+            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
+            // 
             // Purhcase_Return_Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1009, 684);
+            this.Controls.Add(this.packnamecombobox);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.discvaltxtbox);
@@ -946,7 +821,6 @@
             this.Controls.Add(this.valuetxtbox);
             this.Controls.Add(this.qtyltxtbox);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.packnametxtbox);
             this.Controls.Add(this.productnametxtbox);
             this.Controls.Add(this.productidtxtbox);
             this.Controls.Add(this.label13);
@@ -1043,18 +917,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label saleidlbl;
         private System.Windows.Forms.PictureBox vendoridsearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.TextBox grossvaluetxtbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
@@ -1083,7 +945,6 @@
         private System.Windows.Forms.TextBox valuetxtbox;
         private System.Windows.Forms.TextBox qtyltxtbox;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox packnametxtbox;
         private System.Windows.Forms.TextBox productnametxtbox;
         private System.Windows.Forms.TextBox productidtxtbox;
         private System.Windows.Forms.Label label13;
@@ -1093,5 +954,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox packnamecombobox;
     }
 }

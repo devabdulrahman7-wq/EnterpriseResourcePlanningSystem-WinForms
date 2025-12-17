@@ -160,35 +160,42 @@ namespace FO_2022
         {
             
         }
+
         private void saleInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleInvoice ci=new SaleInvoice();
             ci.Show();  
             this.Hide();
         }
+
         private void purchaseInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseInvoice pi=new PurchaseInvoice();
+            Purchase_Invoice_01 pi=new Purchase_Invoice_01();
             pi.Show();
             this.Hide();
         }
+
         private void purchaseInvoiceShortToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Purchase_Invoice_01 pin = new Purchase_Invoice_01();
             pin.Show();
             this.Hide();
         }
+
         private void saleReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sale_Return_Invoice sri=new Sale_Return_Invoice();
             sri.Show();
             this.Hide();    
         }
+
         private void purchaseReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
-            prs.Show();
-            this.Hide();
+          //Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
+          //Purchase_Returns_Invoice prs=new Purchase_Returns_Invoice();
+          Purhcase_Return_Invoice prs = new Purhcase_Return_Invoice();
+           prs.Show();
+          this.Hide();
         }
 
         private void stockIssueToSalesmenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -204,12 +211,14 @@ namespace FO_2022
             srs.Show();
             this.Hide();
         }
+
         private void productReplacementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Stock_Transfer_Salesmen_to_Salesmen stss = new Stock_Transfer_Salesmen_to_Salesmen();
             stss.Show();
             this.Hide();
         }
+
         private void purchaseDirectToSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -219,7 +228,7 @@ namespace FO_2022
         {
             Purchase_Direct_to_Sale pds = new Purchase_Direct_to_Sale();
             pds.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void postShortStockSalesOrderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -478,7 +487,7 @@ namespace FO_2022
         }
         private void purchaseReturnReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void stockReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {

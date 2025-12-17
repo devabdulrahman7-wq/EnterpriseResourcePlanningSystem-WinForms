@@ -31,7 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Direct_to_Sale));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.totalratediff = new System.Windows.Forms.TextBox();
+            this.packnamecombobox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.salepricetxtbox = new System.Windows.Forms.TextBox();
+            this.discvalltxtbox = new System.Windows.Forms.TextBox();
+            this.salestaxtxtbox = new System.Windows.Forms.TextBox();
+            this.bnsltxtbox = new System.Windows.Forms.TextBox();
+            this.qtyptxtbox = new System.Windows.Forms.TextBox();
+            this.discpercenttxtbox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.purpricetxtbox = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ratedifftxtbox = new System.Windows.Forms.TextBox();
+            this.qtyltxtbox = new System.Windows.Forms.TextBox();
+            this.multipliertxtbox = new System.Windows.Forms.TextBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.totalratedifftxtbox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.totalsalevaluetxtbox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -73,8 +101,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.vehiclenotxtbox = new System.Windows.Forms.Label();
             this.netpurvaluetxtbox = new System.Windows.Forms.Label();
-            this.vendortxtbox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.vendoridtxtbox = new System.Windows.Forms.TextBox();
+            this.vendornametxtbox = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.billpurchasetxtbox = new System.Windows.Forms.TextBox();
             this.purchasedtxtbox = new System.Windows.Forms.TextBox();
@@ -135,7 +163,35 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.totalratediff);
+            this.groupBox1.Controls.Add(this.packnamecombobox);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.salepricetxtbox);
+            this.groupBox1.Controls.Add(this.discvalltxtbox);
+            this.groupBox1.Controls.Add(this.salestaxtxtbox);
+            this.groupBox1.Controls.Add(this.bnsltxtbox);
+            this.groupBox1.Controls.Add(this.qtyptxtbox);
+            this.groupBox1.Controls.Add(this.discpercenttxtbox);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.purpricetxtbox);
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.ratedifftxtbox);
+            this.groupBox1.Controls.Add(this.qtyltxtbox);
+            this.groupBox1.Controls.Add(this.multipliertxtbox);
+            this.groupBox1.Controls.Add(this.productnametxtbox);
+            this.groupBox1.Controls.Add(this.productidtxtbox);
+            this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.label40);
+            this.groupBox1.Controls.Add(this.label41);
+            this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.label43);
+            this.groupBox1.Controls.Add(this.label44);
+            this.groupBox1.Controls.Add(this.totalratedifftxtbox);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.totalsalevaluetxtbox);
             this.groupBox1.Controls.Add(this.label14);
@@ -164,8 +220,8 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.vehiclenotxtbox);
             this.groupBox1.Controls.Add(this.netpurvaluetxtbox);
-            this.groupBox1.Controls.Add(this.vendortxtbox);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.vendoridtxtbox);
+            this.groupBox1.Controls.Add(this.vendornametxtbox);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.billpurchasetxtbox);
             this.groupBox1.Controls.Add(this.purchasedtxtbox);
@@ -182,17 +238,308 @@
             this.groupBox1.TabIndex = 391;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchase Section";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // totalratediff
+            // packnamecombobox
             // 
-            this.totalratediff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.totalratediff.Location = new System.Drawing.Point(711, 289);
-            this.totalratediff.Multiline = true;
-            this.totalratediff.Name = "totalratediff";
-            this.totalratediff.Size = new System.Drawing.Size(110, 22);
-            this.totalratediff.TabIndex = 425;
-            this.totalratediff.TextChanged += new System.EventHandler(this.totalratediff_TextChanged);
+            this.packnamecombobox.FormattingEnabled = true;
+            this.packnamecombobox.Location = new System.Drawing.Point(187, 126);
+            this.packnamecombobox.Name = "packnamecombobox";
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.TabIndex = 456;
+            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(594, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 455;
+            this.label3.Text = "Disc%";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(663, 109);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 16);
+            this.label25.TabIndex = 454;
+            this.label25.Text = "Disc Val-l";
+            // 
+            // salepricetxtbox
+            // 
+            this.salepricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salepricetxtbox.Location = new System.Drawing.Point(740, 129);
+            this.salepricetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.salepricetxtbox.Multiline = true;
+            this.salepricetxtbox.Name = "salepricetxtbox";
+            this.salepricetxtbox.Size = new System.Drawing.Size(65, 19);
+            this.salepricetxtbox.TabIndex = 453;
+            // 
+            // discvalltxtbox
+            // 
+            this.discvalltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discvalltxtbox.Location = new System.Drawing.Point(666, 129);
+            this.discvalltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.discvalltxtbox.Multiline = true;
+            this.discvalltxtbox.Name = "discvalltxtbox";
+            this.discvalltxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discvalltxtbox.TabIndex = 452;
+            // 
+            // salestaxtxtbox
+            // 
+            this.salestaxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salestaxtxtbox.Location = new System.Drawing.Point(808, 129);
+            this.salestaxtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.salestaxtxtbox.Multiline = true;
+            this.salestaxtxtbox.Name = "salestaxtxtbox";
+            this.salestaxtxtbox.Size = new System.Drawing.Size(93, 19);
+            this.salestaxtxtbox.TabIndex = 451;
+            // 
+            // bnsltxtbox
+            // 
+            this.bnsltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bnsltxtbox.Location = new System.Drawing.Point(467, 129);
+            this.bnsltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.bnsltxtbox.Multiline = true;
+            this.bnsltxtbox.Name = "bnsltxtbox";
+            this.bnsltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.bnsltxtbox.TabIndex = 450;
+            // 
+            // qtyptxtbox
+            // 
+            this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyptxtbox.Location = new System.Drawing.Point(359, 130);
+            this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyptxtbox.Multiline = true;
+            this.qtyptxtbox.Name = "qtyptxtbox";
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.TabIndex = 449;
+            // 
+            // discpercenttxtbox
+            // 
+            this.discpercenttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discpercenttxtbox.Location = new System.Drawing.Point(596, 129);
+            this.discpercenttxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.discpercenttxtbox.Multiline = true;
+            this.discpercenttxtbox.Name = "discpercenttxtbox";
+            this.discpercenttxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discpercenttxtbox.TabIndex = 448;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(814, 109);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 16);
+            this.label24.TabIndex = 447;
+            this.label24.Text = "Sales Tax";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(906, 110);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(100, 16);
+            this.label23.TabIndex = 446;
+            this.label23.Text = "Rate Difference";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(519, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 16);
+            this.label4.TabIndex = 445;
+            this.label4.Text = "Price";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(405, 107);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 16);
+            this.label22.TabIndex = 444;
+            this.label22.Text = "Qty(L)";
+            // 
+            // purpricetxtbox
+            // 
+            this.purpricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.purpricetxtbox.Location = new System.Drawing.Point(526, 129);
+            this.purpricetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.purpricetxtbox.Multiline = true;
+            this.purpricetxtbox.Name = "purpricetxtbox";
+            this.purpricetxtbox.Size = new System.Drawing.Size(62, 19);
+            this.purpricetxtbox.TabIndex = 443;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(460, 107);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(45, 16);
+            this.label27.TabIndex = 442;
+            this.label27.Text = "Bns(L)";
+            // 
+            // ratedifftxtbox
+            // 
+            this.ratedifftxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ratedifftxtbox.Location = new System.Drawing.Point(909, 129);
+            this.ratedifftxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.ratedifftxtbox.Multiline = true;
+            this.ratedifftxtbox.Name = "ratedifftxtbox";
+            this.ratedifftxtbox.Size = new System.Drawing.Size(82, 19);
+            this.ratedifftxtbox.TabIndex = 441;
+            // 
+            // qtyltxtbox
+            // 
+            this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyltxtbox.Location = new System.Drawing.Point(408, 129);
+            this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyltxtbox.Multiline = true;
+            this.qtyltxtbox.Name = "qtyltxtbox";
+            this.qtyltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.qtyltxtbox.TabIndex = 440;
+            this.qtyltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyltxtbox_KeyDown);
+            // 
+            // multipliertxtbox
+            // 
+            this.multipliertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.multipliertxtbox.Location = new System.Drawing.Point(285, 129);
+            this.multipliertxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.multipliertxtbox.Multiline = true;
+            this.multipliertxtbox.Name = "multipliertxtbox";
+            this.multipliertxtbox.Size = new System.Drawing.Size(69, 20);
+            this.multipliertxtbox.TabIndex = 439;
+            this.multipliertxtbox.TextChanged += new System.EventHandler(this.multipliertxtbox_TextChanged);
+            // 
+            // productnametxtbox
+            // 
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(84, 128);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.TabIndex = 438;
+            // 
+            // productidtxtbox
+            // 
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(7, 129);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.TabIndex = 437;
+            this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
+            this.productidtxtbox.Leave += new System.EventHandler(this.productidtxtbox_Leave);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(737, 109);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(69, 16);
+            this.label30.TabIndex = 436;
+            this.label30.Text = "Sale Price";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(356, 110);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(44, 16);
+            this.label36.TabIndex = 435;
+            this.label36.Text = "Qty(P)";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(286, 110);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(38, 16);
+            this.label39.TabIndex = 434;
+            this.label39.Text = "Pack";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(185, 109);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(78, 16);
+            this.label40.TabIndex = 433;
+            this.label40.Text = "Pack Name";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(81, 110);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(68, 16);
+            this.label41.TabIndex = 432;
+            this.label41.Text = "Pro.Name";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(7, 109);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(44, 16);
+            this.label42.TabIndex = 431;
+            this.label42.Text = "Pro.ID";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(747, 104);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 16);
+            this.label43.TabIndex = 430;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(738, 123);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(0, 16);
+            this.label44.TabIndex = 429;
+            // 
+            // totalratedifftxtbox
+            // 
+            this.totalratedifftxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalratedifftxtbox.Location = new System.Drawing.Point(711, 289);
+            this.totalratedifftxtbox.Multiline = true;
+            this.totalratedifftxtbox.Name = "totalratedifftxtbox";
+            this.totalratedifftxtbox.Size = new System.Drawing.Size(110, 22);
+            this.totalratedifftxtbox.TabIndex = 425;
             // 
             // label15
             // 
@@ -211,7 +558,6 @@
             this.totalsalevaluetxtbox.Name = "totalsalevaluetxtbox";
             this.totalsalevaluetxtbox.Size = new System.Drawing.Size(94, 22);
             this.totalsalevaluetxtbox.TabIndex = 423;
-            this.totalsalevaluetxtbox.TextChanged += new System.EventHandler(this.totalsalevaluetxtbox_TextChanged);
             // 
             // label14
             // 
@@ -230,7 +576,6 @@
             this.totaldiscounttxtbox.Name = "totaldiscounttxtbox";
             this.totaldiscounttxtbox.Size = new System.Drawing.Size(122, 22);
             this.totaldiscounttxtbox.TabIndex = 421;
-            this.totaldiscounttxtbox.TextChanged += new System.EventHandler(this.totaldiscounttxtbox_TextChanged);
             // 
             // topsalestaxtxtbox
             // 
@@ -240,7 +585,6 @@
             this.topsalestaxtxtbox.Name = "topsalestaxtxtbox";
             this.topsalestaxtxtbox.Size = new System.Drawing.Size(107, 22);
             this.topsalestaxtxtbox.TabIndex = 420;
-            this.topsalestaxtxtbox.TextChanged += new System.EventHandler(this.topsalestaxtxtbox_TextChanged);
             // 
             // netvaluetxtbox
             // 
@@ -250,7 +594,6 @@
             this.netvaluetxtbox.Name = "netvaluetxtbox";
             this.netvaluetxtbox.Size = new System.Drawing.Size(114, 22);
             this.netvaluetxtbox.TabIndex = 419;
-            this.netvaluetxtbox.TextChanged += new System.EventHandler(this.netvaluetxtbox_TextChanged);
             // 
             // paidamounttxtbox
             // 
@@ -260,7 +603,6 @@
             this.paidamounttxtbox.Name = "paidamounttxtbox";
             this.paidamounttxtbox.Size = new System.Drawing.Size(120, 22);
             this.paidamounttxtbox.TabIndex = 418;
-            this.paidamounttxtbox.TextChanged += new System.EventHandler(this.paidamounttxtbox_TextChanged);
             // 
             // totalpurvaluetxtbox
             // 
@@ -270,7 +612,6 @@
             this.totalpurvaluetxtbox.Name = "totalpurvaluetxtbox";
             this.totalpurvaluetxtbox.Size = new System.Drawing.Size(94, 22);
             this.totalpurvaluetxtbox.TabIndex = 417;
-            this.totalpurvaluetxtbox.TextChanged += new System.EventHandler(this.totalpurvaluetxtbox_TextChanged);
             // 
             // label9
             // 
@@ -298,7 +639,6 @@
             this.totalgrosstxtbox.Name = "totalgrosstxtbox";
             this.totalgrosstxtbox.Size = new System.Drawing.Size(109, 22);
             this.totalgrosstxtbox.TabIndex = 414;
-            this.totalgrosstxtbox.TextChanged += new System.EventHandler(this.totalgrosstxtbox_TextChanged);
             // 
             // label11
             // 
@@ -335,7 +675,6 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(170, 37);
             this.narrationtxtbox.TabIndex = 410;
-            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label21
             // 
@@ -358,19 +697,18 @@
             // currentstocltxtbox
             // 
             this.currentstocltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currentstocltxtbox.Location = new System.Drawing.Point(602, 109);
+            this.currentstocltxtbox.Location = new System.Drawing.Point(561, 74);
             this.currentstocltxtbox.Multiline = true;
             this.currentstocltxtbox.Name = "currentstocltxtbox";
             this.currentstocltxtbox.Size = new System.Drawing.Size(127, 18);
             this.currentstocltxtbox.TabIndex = 407;
-            this.currentstocltxtbox.TextChanged += new System.EventHandler(this.currentstocltxtbox_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(491, 111);
+            this.label8.Location = new System.Drawing.Point(450, 76);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 16);
@@ -394,9 +732,9 @@
             this.Column11,
             this.Column14,
             this.Column13});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 133);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 155);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1020, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(1020, 100);
             this.dataGridView1.TabIndex = 392;
             // 
             // Column1
@@ -481,18 +819,17 @@
             // netsalevaluetxtbox
             // 
             this.netsalevaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.netsalevaluetxtbox.Location = new System.Drawing.Point(735, 109);
+            this.netsalevaluetxtbox.Location = new System.Drawing.Point(793, 75);
             this.netsalevaluetxtbox.Multiline = true;
             this.netsalevaluetxtbox.Name = "netsalevaluetxtbox";
             this.netsalevaluetxtbox.Size = new System.Drawing.Size(155, 18);
             this.netsalevaluetxtbox.TabIndex = 405;
-            this.netsalevaluetxtbox.TextChanged += new System.EventHandler(this.netsalevaluetxtbox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(742, 90);
+            this.label7.Location = new System.Drawing.Point(695, 74);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 16);
@@ -502,7 +839,7 @@
             // citytxtbox
             // 
             this.citytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.citytxtbox.Location = new System.Drawing.Point(606, 53);
+            this.citytxtbox.Location = new System.Drawing.Point(602, 45);
             this.citytxtbox.Multiline = true;
             this.citytxtbox.Name = "citytxtbox";
             this.citytxtbox.Size = new System.Drawing.Size(86, 23);
@@ -511,28 +848,26 @@
             // netpurvaluetxt
             // 
             this.netpurvaluetxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.netpurvaluetxt.Location = new System.Drawing.Point(838, 53);
+            this.netpurvaluetxt.Location = new System.Drawing.Point(834, 45);
             this.netpurvaluetxt.Multiline = true;
             this.netpurvaluetxt.Name = "netpurvaluetxt";
             this.netpurvaluetxt.Size = new System.Drawing.Size(86, 23);
             this.netpurvaluetxt.TabIndex = 402;
-            this.netpurvaluetxt.TextChanged += new System.EventHandler(this.netpurvaluetxt_TextChanged);
             // 
             // vehiclenotxt
             // 
             this.vehiclenotxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vehiclenotxt.Location = new System.Drawing.Point(718, 53);
+            this.vehiclenotxt.Location = new System.Drawing.Point(714, 45);
             this.vehiclenotxt.Multiline = true;
             this.vehiclenotxt.Name = "vehiclenotxt";
             this.vehiclenotxt.Size = new System.Drawing.Size(86, 23);
             this.vehiclenotxt.TabIndex = 401;
-            this.vehiclenotxt.TextChanged += new System.EventHandler(this.vehiclenotxt_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(619, 29);
+            this.label5.Location = new System.Drawing.Point(615, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 16);
@@ -543,7 +878,7 @@
             // 
             this.vehiclenotxtbox.AutoSize = true;
             this.vehiclenotxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vehiclenotxtbox.Location = new System.Drawing.Point(715, 29);
+            this.vehiclenotxtbox.Location = new System.Drawing.Point(711, 21);
             this.vehiclenotxtbox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.vehiclenotxtbox.Name = "vehiclenotxtbox";
             this.vehiclenotxtbox.Size = new System.Drawing.Size(71, 16);
@@ -554,35 +889,37 @@
             // 
             this.netpurvaluetxtbox.AutoSize = true;
             this.netpurvaluetxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.netpurvaluetxtbox.Location = new System.Drawing.Point(839, 29);
+            this.netpurvaluetxtbox.Location = new System.Drawing.Point(835, 21);
             this.netpurvaluetxtbox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.netpurvaluetxtbox.Name = "netpurvaluetxtbox";
             this.netpurvaluetxtbox.Size = new System.Drawing.Size(85, 16);
             this.netpurvaluetxtbox.TabIndex = 398;
             this.netpurvaluetxtbox.Text = "Net Pur Value";
             // 
-            // vendortxtbox
+            // vendoridtxtbox
             // 
-            this.vendortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendortxtbox.Location = new System.Drawing.Point(404, 53);
-            this.vendortxtbox.Multiline = true;
-            this.vendortxtbox.Name = "vendortxtbox";
-            this.vendortxtbox.Size = new System.Drawing.Size(86, 23);
-            this.vendortxtbox.TabIndex = 397;
+            this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vendoridtxtbox.Location = new System.Drawing.Point(400, 45);
+            this.vendoridtxtbox.Multiline = true;
+            this.vendoridtxtbox.Name = "vendoridtxtbox";
+            this.vendoridtxtbox.Size = new System.Drawing.Size(86, 23);
+            this.vendoridtxtbox.TabIndex = 397;
+            this.vendoridtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.vendoridtxtbox_KeyDown);
+            this.vendoridtxtbox.Leave += new System.EventHandler(this.vendoridtxtbox_Leave);
             // 
-            // textBox2
+            // vendornametxtbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(496, 53);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(86, 23);
-            this.textBox2.TabIndex = 396;
+            this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vendornametxtbox.Location = new System.Drawing.Point(492, 45);
+            this.vendornametxtbox.Multiline = true;
+            this.vendornametxtbox.Name = "vendornametxtbox";
+            this.vendornametxtbox.Size = new System.Drawing.Size(86, 23);
+            this.vendornametxtbox.TabIndex = 396;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(302, 53);
+            this.dateTimePicker1.Location = new System.Drawing.Point(298, 45);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(93, 23);
             this.dateTimePicker1.TabIndex = 395;
@@ -590,28 +927,26 @@
             // billpurchasetxtbox
             // 
             this.billpurchasetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.billpurchasetxtbox.Location = new System.Drawing.Point(210, 53);
+            this.billpurchasetxtbox.Location = new System.Drawing.Point(206, 45);
             this.billpurchasetxtbox.Multiline = true;
             this.billpurchasetxtbox.Name = "billpurchasetxtbox";
             this.billpurchasetxtbox.Size = new System.Drawing.Size(86, 23);
             this.billpurchasetxtbox.TabIndex = 394;
-            this.billpurchasetxtbox.TextChanged += new System.EventHandler(this.billpurchasetxtbox_TextChanged_1);
             // 
             // purchasedtxtbox
             // 
             this.purchasedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.purchasedtxtbox.Location = new System.Drawing.Point(10, 53);
+            this.purchasedtxtbox.Location = new System.Drawing.Point(6, 45);
             this.purchasedtxtbox.Multiline = true;
             this.purchasedtxtbox.Name = "purchasedtxtbox";
             this.purchasedtxtbox.Size = new System.Drawing.Size(92, 23);
             this.purchasedtxtbox.TabIndex = 393;
-            this.purchasedtxtbox.TextChanged += new System.EventHandler(this.purchasedtxtbox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(309, 29);
+            this.label2.Location = new System.Drawing.Point(305, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
@@ -622,7 +957,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(417, 29);
+            this.label6.Location = new System.Drawing.Point(413, 21);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
@@ -633,46 +968,42 @@
             // 
             this.orderidlbl.AutoSize = true;
             this.orderidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderidlbl.Location = new System.Drawing.Point(7, 29);
+            this.orderidlbl.Location = new System.Drawing.Point(3, 21);
             this.orderidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderidlbl.Name = "orderidlbl";
             this.orderidlbl.Size = new System.Drawing.Size(79, 16);
             this.orderidlbl.TabIndex = 386;
             this.orderidlbl.Text = "Purchase  ID";
-            this.orderidlbl.Click += new System.EventHandler(this.orderidlbl_Click);
             // 
             // orderdatelbl
             // 
             this.orderdatelbl.AutoSize = true;
             this.orderdatelbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderdatelbl.Location = new System.Drawing.Point(105, 29);
+            this.orderdatelbl.Location = new System.Drawing.Point(101, 21);
             this.orderdatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderdatelbl.Name = "orderdatelbl";
             this.orderdatelbl.Size = new System.Drawing.Size(89, 16);
             this.orderdatelbl.TabIndex = 387;
             this.orderdatelbl.Text = "Purchase Date";
-            this.orderdatelbl.Click += new System.EventHandler(this.orderdatelbl_Click);
             // 
             // purchasedatepcker
             // 
             this.purchasedatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.purchasedatepcker.Location = new System.Drawing.Point(108, 53);
+            this.purchasedatepcker.Location = new System.Drawing.Point(104, 45);
             this.purchasedatepcker.Name = "purchasedatepcker";
             this.purchasedatepcker.Size = new System.Drawing.Size(97, 23);
             this.purchasedatepcker.TabIndex = 385;
-            this.purchasedatepcker.ValueChanged += new System.EventHandler(this.returndatepcker_ValueChanged);
             // 
             // billlnolbl
             // 
             this.billlnolbl.AutoSize = true;
             this.billlnolbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billlnolbl.Location = new System.Drawing.Point(221, 29);
+            this.billlnolbl.Location = new System.Drawing.Point(217, 21);
             this.billlnolbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.billlnolbl.Name = "billlnolbl";
             this.billlnolbl.Size = new System.Drawing.Size(42, 16);
             this.billlnolbl.TabIndex = 388;
             this.billlnolbl.Text = "Bill No";
-            this.billlnolbl.Click += new System.EventHandler(this.billlnolbl_Click);
             // 
             // groupBox2
             // 
@@ -779,6 +1110,8 @@
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
             this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 22);
             this.salesmanidtxtbox.TabIndex = 452;
+            this.salesmanidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmanidtxtbox_KeyDown);
+            this.salesmanidtxtbox.Leave += new System.EventHandler(this.salesmanidtxtbox_Leave);
             // 
             // label32
             // 
@@ -859,6 +1192,8 @@
             this.customeridtxtbox.Name = "customeridtxtbox";
             this.customeridtxtbox.Size = new System.Drawing.Size(95, 22);
             this.customeridtxtbox.TabIndex = 444;
+            this.customeridtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.customeridtxtbox_KeyDown);
+            this.customeridtxtbox.Leave += new System.EventHandler(this.customeridtxtbox_Leave);
             // 
             // label31
             // 
@@ -989,7 +1324,6 @@
             this.label19.Size = new System.Drawing.Size(42, 16);
             this.label19.TabIndex = 398;
             this.label19.Text = "Bill No";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // closebtn
             // 
@@ -1042,6 +1376,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 396;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // Purchase_Direct_to_Sale
             // 
@@ -1062,6 +1397,7 @@
             this.Name = "Purchase_Direct_to_Sale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Direct_to_Sale";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1095,8 +1431,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label vehiclenotxtbox;
         private System.Windows.Forms.Label netpurvaluetxtbox;
-        private System.Windows.Forms.TextBox vendortxtbox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox vendoridtxtbox;
+        private System.Windows.Forms.TextBox vendornametxtbox;
         private System.Windows.Forms.TextBox currentstocltxtbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -1112,7 +1448,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.TextBox totalratediff;
+        private System.Windows.Forms.TextBox totalratedifftxtbox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox totalsalevaluetxtbox;
         private System.Windows.Forms.Label label14;
@@ -1163,5 +1499,33 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.TextBox alenetvaluetxtbox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox packnamecombobox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox salepricetxtbox;
+        private System.Windows.Forms.TextBox discvalltxtbox;
+        private System.Windows.Forms.TextBox salestaxtxtbox;
+        private System.Windows.Forms.TextBox bnsltxtbox;
+        private System.Windows.Forms.TextBox qtyptxtbox;
+        private System.Windows.Forms.TextBox discpercenttxtbox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox purpricetxtbox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox ratedifftxtbox;
+        private System.Windows.Forms.TextBox qtyltxtbox;
+        private System.Windows.Forms.TextBox multipliertxtbox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
     }
 }
