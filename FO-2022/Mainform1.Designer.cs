@@ -395,21 +395,21 @@
             // companyNSMToolStripMenuItem
             // 
             this.companyNSMToolStripMenuItem.Name = "companyNSMToolStripMenuItem";
-            this.companyNSMToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.companyNSMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.companyNSMToolStripMenuItem.Text = "Company\'s NSM";
             this.companyNSMToolStripMenuItem.Click += new System.EventHandler(this.companyNSMToolStripMenuItem_Click);
             // 
             // companyASMToolStripMenuItem
             // 
             this.companyASMToolStripMenuItem.Name = "companyASMToolStripMenuItem";
-            this.companyASMToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.companyASMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.companyASMToolStripMenuItem.Text = "Company\'s ASM";
             this.companyASMToolStripMenuItem.Click += new System.EventHandler(this.companyASMToolStripMenuItem_Click);
             // 
             // companySOsToolStripMenuItem
             // 
             this.companySOsToolStripMenuItem.Name = "companySOsToolStripMenuItem";
-            this.companySOsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.companySOsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.companySOsToolStripMenuItem.Text = "Company SO\'s";
             this.companySOsToolStripMenuItem.Click += new System.EventHandler(this.companySOsToolStripMenuItem_Click);
             // 
@@ -478,7 +478,6 @@
             this.purchaseInvoiceShortToolStripMenuItem.Name = "purchaseInvoiceShortToolStripMenuItem";
             this.purchaseInvoiceShortToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
             this.purchaseInvoiceShortToolStripMenuItem.Text = "Purchase Invoice Short";
-            //this.purchaseInvoiceShortToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceShortToolStripMenuItem_Click);
             // 
             // saleReturnToolStripMenuItem
             // 
@@ -1089,14 +1088,14 @@
             // helpTopicsToolStripMenuItem
             // 
             this.helpTopicsToolStripMenuItem.Name = "helpTopicsToolStripMenuItem";
-            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.helpTopicsToolStripMenuItem.Text = "Help Topics";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About ";
             // 
             // toolStripButton1

@@ -37,7 +37,13 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,12 +60,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.paidamounttxtbox = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -163,6 +163,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Process Type";
             // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(11, 18);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(49, 20);
+            this.radioButton5.TabIndex = 688;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Full ";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(109, 18);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(61, 20);
+            this.radioButton4.TabIndex = 687;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Partial";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(217, 18);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(81, 20);
+            this.radioButton3.TabIndex = 686;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Post Pone";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -174,6 +207,23 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(464, 100);
             this.dataGridView1.TabIndex = 687;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Promise Date";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 144;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Account Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Amount";
+            this.Column3.Name = "Column3";
             // 
             // label9
             // 
@@ -333,56 +383,6 @@
             this.paidamounttxtbox.Size = new System.Drawing.Size(132, 23);
             this.paidamounttxtbox.TabIndex = 700;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Promise Date";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 144;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Account Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 175;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Amount";
-            this.Column3.Name = "Column3";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(217, 18);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(81, 20);
-            this.radioButton3.TabIndex = 686;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Post Pone";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(109, 18);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(61, 20);
-            this.radioButton4.TabIndex = 687;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Partial";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(11, 18);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(49, 20);
-            this.radioButton5.TabIndex = 688;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Full ";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
             // Promises_Processing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -416,7 +416,7 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Promises_Processing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promises_Processing";

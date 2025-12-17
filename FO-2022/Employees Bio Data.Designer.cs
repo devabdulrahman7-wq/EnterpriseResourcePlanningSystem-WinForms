@@ -38,37 +38,33 @@
             this.nametxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cnictxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.eduacationtxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.faxtxtbox = new System.Windows.Forms.TextBox();
+            this.phonenotxtbox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.mblnotxtbox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.joiningdatetimepcker = new System.Windows.Forms.DateTimePicker();
+            this.designationcombobox = new System.Windows.Forms.ComboBox();
             this.employeeidtxtbox = new System.Windows.Forms.TextBox();
             this.employeeidtxtbox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.employeeidtxtbox2 = new System.Windows.Forms.TextBox();
-            this.employeeidtxtbo3 = new System.Windows.Forms.TextBox();
-            this.employeeidtxtbo4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.urdunametxtbox = new System.Windows.Forms.TextBox();
+            this.fatherurdunametxtbox = new System.Windows.Forms.TextBox();
+            this.urduaddresstxtbox = new System.Windows.Forms.TextBox();
+            this.referencetxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.jobtypecpmbobox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.yearlyleavesallowedtxtbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.salarytxtbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.newbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -76,7 +72,7 @@
             this.editbtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.employeepictxtbox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.deactivebtn = new System.Windows.Forms.Button();
             this.activebtn = new System.Windows.Forms.Button();
@@ -88,7 +84,7 @@
             this.empchkbar = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeepictxtbox)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +108,7 @@
             this.citytxtbox.Name = "citytxtbox";
             this.citytxtbox.Size = new System.Drawing.Size(111, 20);
             this.citytxtbox.TabIndex = 584;
+            this.citytxtbox.TextChanged += new System.EventHandler(this.citytxtbox_TextChanged);
             // 
             // label17
             // 
@@ -183,15 +180,16 @@
             this.label5.TabIndex = 576;
             this.label5.Text = "Father Name:";
             // 
-            // textBox1
+            // cnictxtbox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(4, 190);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 586;
+            this.cnictxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cnictxtbox.Location = new System.Drawing.Point(4, 190);
+            this.cnictxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.cnictxtbox.Multiline = true;
+            this.cnictxtbox.Name = "cnictxtbox";
+            this.cnictxtbox.Size = new System.Drawing.Size(129, 20);
+            this.cnictxtbox.TabIndex = 586;
+            this.cnictxtbox.TextChanged += new System.EventHandler(this.cnictxtbox_TextChanged);
             // 
             // label1
             // 
@@ -203,15 +201,16 @@
             this.label1.TabIndex = 585;
             this.label1.Text = "CNIC";
             // 
-            // textBox2
+            // eduacationtxtbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(141, 190);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 20);
-            this.textBox2.TabIndex = 588;
+            this.eduacationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.eduacationtxtbox.Location = new System.Drawing.Point(141, 190);
+            this.eduacationtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.eduacationtxtbox.Multiline = true;
+            this.eduacationtxtbox.Name = "eduacationtxtbox";
+            this.eduacationtxtbox.Size = new System.Drawing.Size(111, 20);
+            this.eduacationtxtbox.TabIndex = 588;
+            this.eduacationtxtbox.TextChanged += new System.EventHandler(this.eduacationtxtbox_TextChanged);
             // 
             // label2
             // 
@@ -233,15 +232,16 @@
             this.label3.TabIndex = 589;
             this.label3.Text = "Designation";
             // 
-            // faxtxtbox
+            // phonenotxtbox
             // 
-            this.faxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.faxtxtbox.Location = new System.Drawing.Point(652, 190);
-            this.faxtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.faxtxtbox.Multiline = true;
-            this.faxtxtbox.Name = "faxtxtbox";
-            this.faxtxtbox.Size = new System.Drawing.Size(169, 20);
-            this.faxtxtbox.TabIndex = 594;
+            this.phonenotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.phonenotxtbox.Location = new System.Drawing.Point(652, 190);
+            this.phonenotxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.phonenotxtbox.Multiline = true;
+            this.phonenotxtbox.Name = "phonenotxtbox";
+            this.phonenotxtbox.Size = new System.Drawing.Size(169, 20);
+            this.phonenotxtbox.TabIndex = 594;
+            this.phonenotxtbox.TextChanged += new System.EventHandler(this.phonenotxtbox_TextChanged);
             // 
             // label20
             // 
@@ -262,6 +262,7 @@
             this.mblnotxtbox.Name = "mblnotxtbox";
             this.mblnotxtbox.Size = new System.Drawing.Size(134, 20);
             this.mblnotxtbox.TabIndex = 592;
+            this.mblnotxtbox.TextChanged += new System.EventHandler(this.mblnotxtbox_TextChanged);
             // 
             // label21
             // 
@@ -279,25 +280,25 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 16);
+            this.label7.Size = new System.Drawing.Size(80, 16);
             this.label7.TabIndex = 595;
-            this.label7.Text = "CNIC";
+            this.label7.Text = "Joining date:";
             // 
-            // dateTimePicker1
+            // joiningdatetimepcker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(4, 90);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 23);
-            this.dateTimePicker1.TabIndex = 596;
+            this.joiningdatetimepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.joiningdatetimepcker.Location = new System.Drawing.Point(4, 90);
+            this.joiningdatetimepcker.Name = "joiningdatetimepcker";
+            this.joiningdatetimepcker.Size = new System.Drawing.Size(86, 23);
+            this.joiningdatetimepcker.TabIndex = 596;
             // 
-            // comboBox1
+            // designationcombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(259, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 597;
+            this.designationcombobox.FormattingEnabled = true;
+            this.designationcombobox.Location = new System.Drawing.Point(259, 186);
+            this.designationcombobox.Name = "designationcombobox";
+            this.designationcombobox.Size = new System.Drawing.Size(121, 24);
+            this.designationcombobox.TabIndex = 597;
             // 
             // employeeidtxtbox
             // 
@@ -308,6 +309,7 @@
             this.employeeidtxtbox.Name = "employeeidtxtbox";
             this.employeeidtxtbox.Size = new System.Drawing.Size(66, 20);
             this.employeeidtxtbox.TabIndex = 600;
+            this.employeeidtxtbox.TextChanged += new System.EventHandler(this.employeeidtxtbox_TextChanged);
             // 
             // employeeidtxtbox1
             // 
@@ -329,45 +331,46 @@
             this.label8.TabIndex = 598;
             this.label8.Text = "Employee ID";
             // 
-            // employeeidtxtbox2
+            // urdunametxtbox
             // 
-            this.employeeidtxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.employeeidtxtbox2.Location = new System.Drawing.Point(144, 146);
-            this.employeeidtxtbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.employeeidtxtbox2.Multiline = true;
-            this.employeeidtxtbox2.Name = "employeeidtxtbox2";
-            this.employeeidtxtbox2.Size = new System.Drawing.Size(210, 20);
-            this.employeeidtxtbox2.TabIndex = 601;
+            this.urdunametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.urdunametxtbox.Location = new System.Drawing.Point(144, 146);
+            this.urdunametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.urdunametxtbox.Multiline = true;
+            this.urdunametxtbox.Name = "urdunametxtbox";
+            this.urdunametxtbox.Size = new System.Drawing.Size(210, 20);
+            this.urdunametxtbox.TabIndex = 601;
             // 
-            // employeeidtxtbo3
+            // fatherurdunametxtbox
             // 
-            this.employeeidtxtbo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.employeeidtxtbo3.Location = new System.Drawing.Point(362, 146);
-            this.employeeidtxtbo3.Margin = new System.Windows.Forms.Padding(4);
-            this.employeeidtxtbo3.Multiline = true;
-            this.employeeidtxtbo3.Name = "employeeidtxtbo3";
-            this.employeeidtxtbo3.Size = new System.Drawing.Size(224, 20);
-            this.employeeidtxtbo3.TabIndex = 603;
+            this.fatherurdunametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fatherurdunametxtbox.Location = new System.Drawing.Point(362, 146);
+            this.fatherurdunametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fatherurdunametxtbox.Multiline = true;
+            this.fatherurdunametxtbox.Name = "fatherurdunametxtbox";
+            this.fatherurdunametxtbox.Size = new System.Drawing.Size(224, 20);
+            this.fatherurdunametxtbox.TabIndex = 603;
             // 
-            // employeeidtxtbo4
+            // urduaddresstxtbox
             // 
-            this.employeeidtxtbo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.employeeidtxtbo4.Location = new System.Drawing.Point(594, 146);
-            this.employeeidtxtbo4.Margin = new System.Windows.Forms.Padding(4);
-            this.employeeidtxtbo4.Multiline = true;
-            this.employeeidtxtbo4.Name = "employeeidtxtbo4";
-            this.employeeidtxtbo4.Size = new System.Drawing.Size(227, 20);
-            this.employeeidtxtbo4.TabIndex = 604;
+            this.urduaddresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.urduaddresstxtbox.Location = new System.Drawing.Point(594, 146);
+            this.urduaddresstxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.urduaddresstxtbox.Multiline = true;
+            this.urduaddresstxtbox.Name = "urduaddresstxtbox";
+            this.urduaddresstxtbox.Size = new System.Drawing.Size(227, 20);
+            this.urduaddresstxtbox.TabIndex = 604;
             // 
-            // textBox6
+            // referencetxtbox
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(11, 256);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(111, 20);
-            this.textBox6.TabIndex = 606;
+            this.referencetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.referencetxtbox.Location = new System.Drawing.Point(11, 256);
+            this.referencetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.referencetxtbox.Multiline = true;
+            this.referencetxtbox.Name = "referencetxtbox";
+            this.referencetxtbox.Size = new System.Drawing.Size(111, 20);
+            this.referencetxtbox.TabIndex = 606;
+            this.referencetxtbox.TextChanged += new System.EventHandler(this.referencetxtbox_TextChanged);
             // 
             // label9
             // 
@@ -379,13 +382,14 @@
             this.label9.TabIndex = 605;
             this.label9.Text = "Reference";
             // 
-            // comboBox2
+            // jobtypecpmbobox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(127, 252);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 608;
+            this.jobtypecpmbobox.FormattingEnabled = true;
+            this.jobtypecpmbobox.Location = new System.Drawing.Point(127, 252);
+            this.jobtypecpmbobox.Name = "jobtypecpmbobox";
+            this.jobtypecpmbobox.Size = new System.Drawing.Size(121, 24);
+            this.jobtypecpmbobox.TabIndex = 608;
+            this.jobtypecpmbobox.SelectedIndexChanged += new System.EventHandler(this.jobtypecpmbobox_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -397,15 +401,16 @@
             this.label10.TabIndex = 607;
             this.label10.Text = "Job Type";
             // 
-            // textBox10
+            // yearlyleavesallowedtxtbox
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(381, 256);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(111, 20);
-            this.textBox10.TabIndex = 610;
+            this.yearlyleavesallowedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.yearlyleavesallowedtxtbox.Location = new System.Drawing.Point(381, 256);
+            this.yearlyleavesallowedtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.yearlyleavesallowedtxtbox.Multiline = true;
+            this.yearlyleavesallowedtxtbox.Name = "yearlyleavesallowedtxtbox";
+            this.yearlyleavesallowedtxtbox.Size = new System.Drawing.Size(121, 20);
+            this.yearlyleavesallowedtxtbox.TabIndex = 610;
+            this.yearlyleavesallowedtxtbox.TextChanged += new System.EventHandler(this.yearlyleavesallowedtxtbox_TextChanged);
             // 
             // label11
             // 
@@ -417,15 +422,16 @@
             this.label11.TabIndex = 609;
             this.label11.Text = "Yearly leaves allowed";
             // 
-            // textBox11
+            // salarytxtbox
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(255, 256);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(118, 20);
-            this.textBox11.TabIndex = 612;
+            this.salarytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salarytxtbox.Location = new System.Drawing.Point(255, 256);
+            this.salarytxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.salarytxtbox.Multiline = true;
+            this.salarytxtbox.Name = "salarytxtbox";
+            this.salarytxtbox.Size = new System.Drawing.Size(118, 20);
+            this.salarytxtbox.TabIndex = 612;
+            this.salarytxtbox.TextChanged += new System.EventHandler(this.salarytxtbox_TextChanged);
             // 
             // label12
             // 
@@ -440,38 +446,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(9, 316);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 263);
             this.dataGridView1.TabIndex = 613;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Employee ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Employee Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 135;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Father Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 135;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Salary";
-            this.Column4.Name = "Column4";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textBox12
             // 
@@ -491,13 +470,14 @@
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(362, 665);
+            this.newbtn.Location = new System.Drawing.Point(346, 622);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
             this.newbtn.TabIndex = 620;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -505,7 +485,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(599, 665);
+            this.closebtn.Location = new System.Drawing.Point(583, 622);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -520,13 +500,14 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(520, 665);
+            this.removebtn.Location = new System.Drawing.Point(504, 622);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
             this.removebtn.TabIndex = 618;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -534,13 +515,14 @@
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(441, 665);
+            this.editbtn.Location = new System.Drawing.Point(425, 622);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
             this.editbtn.TabIndex = 617;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -548,13 +530,14 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(283, 665);
+            this.clearbtn.Location = new System.Drawing.Point(267, 622);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
             this.clearbtn.TabIndex = 616;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -562,21 +545,25 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(204, 665);
+            this.savebtn.Location = new System.Drawing.Point(188, 622);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 615;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
-            // pictureBox1
+            // employeepictxtbox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(559, 256);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 138);
-            this.pictureBox1.TabIndex = 621;
-            this.pictureBox1.TabStop = false;
+            this.employeepictxtbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.employeepictxtbox.Location = new System.Drawing.Point(568, 256);
+            this.employeepictxtbox.Name = "employeepictxtbox";
+            this.employeepictxtbox.Size = new System.Drawing.Size(242, 138);
+            this.employeepictxtbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employeepictxtbox.TabIndex = 621;
+            this.employeepictxtbox.TabStop = false;
+            this.employeepictxtbox.Click += new System.EventHandler(this.employeepictxtbox_Click);
             // 
             // groupBox1
             // 
@@ -606,6 +593,7 @@
             this.deactivebtn.TabIndex = 629;
             this.deactivebtn.Text = "Deactive";
             this.deactivebtn.UseVisualStyleBackColor = false;
+            this.deactivebtn.Click += new System.EventHandler(this.deactivebtn_Click);
             // 
             // activebtn
             // 
@@ -620,6 +608,7 @@
             this.activebtn.TabIndex = 628;
             this.activebtn.Text = "Active";
             this.activebtn.UseVisualStyleBackColor = false;
+            this.activebtn.Click += new System.EventHandler(this.activebtn_Click);
             // 
             // label18
             // 
@@ -663,7 +652,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(649, 237);
+            this.label13.Location = new System.Drawing.Point(634, 237);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 16);
             this.label13.TabIndex = 623;
@@ -672,7 +661,7 @@
             // empchkbar
             // 
             this.empchkbar.AutoSize = true;
-            this.empchkbar.Location = new System.Drawing.Point(567, 549);
+            this.empchkbar.Location = new System.Drawing.Point(565, 559);
             this.empchkbar.Name = "empchkbar";
             this.empchkbar.Size = new System.Drawing.Size(154, 20);
             this.empchkbar.TabIndex = 624;
@@ -700,7 +689,7 @@
             this.Controls.Add(this.empchkbar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.employeepictxtbox);
             this.Controls.Add(this.newbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
@@ -709,31 +698,31 @@
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.salarytxtbox);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.yearlyleavesallowedtxtbox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.jobtypecpmbobox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.referencetxtbox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.employeeidtxtbo4);
-            this.Controls.Add(this.employeeidtxtbo3);
-            this.Controls.Add(this.employeeidtxtbox2);
+            this.Controls.Add(this.urduaddresstxtbox);
+            this.Controls.Add(this.fatherurdunametxtbox);
+            this.Controls.Add(this.urdunametxtbox);
             this.Controls.Add(this.employeeidtxtbox);
             this.Controls.Add(this.employeeidtxtbox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.designationcombobox);
+            this.Controls.Add(this.joiningdatetimepcker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.faxtxtbox);
+            this.Controls.Add(this.phonenotxtbox);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.mblnotxtbox);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.eduacationtxtbox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cnictxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.citytxtbox);
             this.Controls.Add(this.label17);
@@ -751,7 +740,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees_Bio_Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeepictxtbox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -771,37 +760,33 @@
         private System.Windows.Forms.TextBox nametxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cnictxtbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox eduacationtxtbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox faxtxtbox;
+        private System.Windows.Forms.TextBox phonenotxtbox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox mblnotxtbox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker joiningdatetimepcker;
+        private System.Windows.Forms.ComboBox designationcombobox;
         private System.Windows.Forms.TextBox employeeidtxtbox;
         private System.Windows.Forms.TextBox employeeidtxtbox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox employeeidtxtbox2;
-        private System.Windows.Forms.TextBox employeeidtxtbo3;
-        private System.Windows.Forms.TextBox employeeidtxtbo4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox urdunametxtbox;
+        private System.Windows.Forms.TextBox fatherurdunametxtbox;
+        private System.Windows.Forms.TextBox urduaddresstxtbox;
+        private System.Windows.Forms.TextBox referencetxtbox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox jobtypecpmbobox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox yearlyleavesallowedtxtbox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox salarytxtbox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button newbtn;
         private System.Windows.Forms.Button closebtn;
@@ -809,7 +794,7 @@
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox employeepictxtbox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button deactivebtn;

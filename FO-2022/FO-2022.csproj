@@ -416,6 +416,12 @@
     <Compile Include="Deposit_Reconciliation.Designer.cs">
       <DependentUpon>Deposit_Reconciliation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designation.Designer.cs">
+      <DependentUpon>Designation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Distributor%27s Parties Management .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -706,7 +712,9 @@
     <Compile Include="Purchase Direct to Sale.Designer.cs">
       <DependentUpon>Purchase Direct to Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase Invoice 01.cs" />
+    <Compile Include="Purchase Invoice 01.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Purchase Invoice 01.Designer.cs">
       <DependentUpon>Purchase Invoice 01.cs</DependentUpon>
     </Compile>
@@ -1250,6 +1258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Deposit_Reconciliation.resx">
       <DependentUpon>Deposit_Reconciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designation.resx">
+      <DependentUpon>Designation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Distributor%27s Parties Management .resx">
       <DependentUpon>Distributor%27s Parties Management .cs</DependentUpon>

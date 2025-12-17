@@ -108,7 +108,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 218);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 222);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(965, 248);
             this.dataGridView1.TabIndex = 182;
@@ -418,10 +418,10 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(233, 611);
+            this.openbtn.Location = new System.Drawing.Point(229, 611);
             this.openbtn.Margin = new System.Windows.Forms.Padding(2);
             this.openbtn.Name = "openbtn";
-            this.openbtn.Size = new System.Drawing.Size(75, 28);
+            this.openbtn.Size = new System.Drawing.Size(79, 28);
             this.openbtn.TabIndex = 639;
             this.openbtn.Text = "Open ";
             this.openbtn.UseVisualStyleBackColor = false;

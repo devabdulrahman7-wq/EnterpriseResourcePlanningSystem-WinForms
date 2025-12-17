@@ -96,7 +96,6 @@
             this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Phone ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -173,6 +172,7 @@
             this.closebtn.TabIndex = 401;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click_1);
             // 
             // savebtn
             // 
@@ -186,6 +186,7 @@
             this.savebtn.TabIndex = 399;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click_1);
             // 
             // cmpnynametxtbox
             // 

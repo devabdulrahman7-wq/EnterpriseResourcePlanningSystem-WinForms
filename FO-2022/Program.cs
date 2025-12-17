@@ -16,7 +16,7 @@ namespace FO_2022
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Purhcase_Return_Invoice());
+            Application.Run(new Mainform1());
         }
     }
 }
