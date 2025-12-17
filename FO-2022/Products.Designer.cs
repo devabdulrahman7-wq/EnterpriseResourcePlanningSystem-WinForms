@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewavlblepkng = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slctprdctgrpcomboBox1 = new System.Windows.Forms.ComboBox();
             this.slctcmpnycombobox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -72,6 +70,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.retailpricetxtbox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -95,7 +94,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.salepackcombobox = new System.Windows.Forms.ComboBox();
-            this.retailpricetxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewavlblepkng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -118,36 +116,21 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(482, 419);
+            this.textBox1.Location = new System.Drawing.Point(482, 258);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(284, 19);
             this.textBox1.TabIndex = 315;
-            this.textBox1.Text = "           Available Packings";
+            this.textBox1.Text = "           Available Products";
             // 
             // dataGridViewavlblepkng
             // 
             this.dataGridViewavlblepkng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewavlblepkng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridViewavlblepkng.Location = new System.Drawing.Point(483, 445);
+            this.dataGridViewavlblepkng.Location = new System.Drawing.Point(483, 284);
             this.dataGridViewavlblepkng.Name = "dataGridViewavlblepkng";
-            this.dataGridViewavlblepkng.Size = new System.Drawing.Size(283, 243);
+            this.dataGridViewavlblepkng.Size = new System.Drawing.Size(283, 406);
             this.dataGridViewavlblepkng.TabIndex = 314;
             this.dataGridViewavlblepkng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewavlblepkng_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
             // 
             // slctprdctgrpcomboBox1
             // 
@@ -347,7 +330,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(32, 255);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(734, 149);
+            this.dataGridView2.Size = new System.Drawing.Size(350, 149);
             this.dataGridView2.TabIndex = 351;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -542,6 +525,14 @@
             this.groupBox2.Size = new System.Drawing.Size(177, 89);
             this.groupBox2.TabIndex = 364;
             this.groupBox2.TabStop = false;
+            // 
+            // retailpricetxtbox
+            // 
+            this.retailpricetxtbox.Location = new System.Drawing.Point(78, 21);
+            this.retailpricetxtbox.Multiline = true;
+            this.retailpricetxtbox.Name = "retailpricetxtbox";
+            this.retailpricetxtbox.Size = new System.Drawing.Size(92, 20);
+            this.retailpricetxtbox.TabIndex = 374;
             // 
             // label21
             // 
@@ -808,14 +799,6 @@
             this.salepackcombobox.TabIndex = 357;
             this.salepackcombobox.SelectedIndexChanged += new System.EventHandler(this.salepackcombobox_SelectedIndexChanged);
             // 
-            // retailpricetxtbox
-            // 
-            this.retailpricetxtbox.Location = new System.Drawing.Point(78, 21);
-            this.retailpricetxtbox.Multiline = true;
-            this.retailpricetxtbox.Name = "retailpricetxtbox";
-            this.retailpricetxtbox.Size = new System.Drawing.Size(92, 20);
-            this.retailpricetxtbox.TabIndex = 374;
-            // 
             // stockalertlvltxtbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -951,8 +934,6 @@
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox genbarcodetxtbox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox2;

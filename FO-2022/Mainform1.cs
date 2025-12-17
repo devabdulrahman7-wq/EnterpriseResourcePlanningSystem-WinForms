@@ -175,12 +175,12 @@ namespace FO_2022
             this.Hide();
         }
 
-        //private void purchaseInvoiceShortToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Purchase_Invoice_01 pin = new Purchase_Invoice_01();
-        //    pin.Show();
-        //    this.Hide();
-        //}
+        private void purchaseInvoiceShortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Invoice_01 pin = new Purchase_Invoice_01();
+            pin.Show();
+            this.Hide();
+        }
 
         private void saleReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -228,7 +228,7 @@ namespace FO_2022
         {
             Purchase_Direct_to_Sale pds = new Purchase_Direct_to_Sale();
             pds.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void postShortStockSalesOrderToolStripMenuItem_Click(object sender, EventArgs e)

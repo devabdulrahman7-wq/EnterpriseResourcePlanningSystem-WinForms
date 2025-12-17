@@ -321,7 +321,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(760, 241);
+            this.label9.Location = new System.Drawing.Point(754, 220);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 16);
@@ -642,7 +642,7 @@
             // pricetxtbox
             // 
             this.pricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pricetxtbox.Location = new System.Drawing.Point(539, 266);
+            this.pricetxtbox.Location = new System.Drawing.Point(533, 245);
             this.pricetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.pricetxtbox.Multiline = true;
             this.pricetxtbox.Name = "pricetxtbox";
@@ -655,7 +655,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(473, 244);
+            this.label5.Location = new System.Drawing.Point(467, 223);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
@@ -665,7 +665,7 @@
             // valuetxtbox
             // 
             this.valuetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.valuetxtbox.Location = new System.Drawing.Point(922, 266);
+            this.valuetxtbox.Location = new System.Drawing.Point(916, 245);
             this.valuetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.valuetxtbox.Multiline = true;
             this.valuetxtbox.Name = "valuetxtbox";
@@ -677,7 +677,7 @@
             // qtyltxtbox
             // 
             this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.qtyltxtbox.Location = new System.Drawing.Point(421, 266);
+            this.qtyltxtbox.Location = new System.Drawing.Point(415, 245);
             this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.qtyltxtbox.Multiline = true;
             this.qtyltxtbox.Name = "qtyltxtbox";
@@ -689,7 +689,7 @@
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(298, 266);
+            this.textBox4.Location = new System.Drawing.Point(292, 245);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -701,7 +701,7 @@
             // packnametxtbox
             // 
             this.packnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.packnametxtbox.Location = new System.Drawing.Point(201, 266);
+            this.packnametxtbox.Location = new System.Drawing.Point(195, 245);
             this.packnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.packnametxtbox.Multiline = true;
             this.packnametxtbox.Name = "packnametxtbox";
@@ -713,7 +713,7 @@
             // productnametxtbox
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productnametxtbox.Location = new System.Drawing.Point(97, 265);
+            this.productnametxtbox.Location = new System.Drawing.Point(91, 244);
             this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
@@ -725,7 +725,7 @@
             // productidtxtbox
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productidtxtbox.Location = new System.Drawing.Point(20, 266);
+            this.productidtxtbox.Location = new System.Drawing.Point(14, 245);
             this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
@@ -738,7 +738,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(750, 242);
+            this.label6.Location = new System.Drawing.Point(744, 221);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 16);
@@ -749,7 +749,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(369, 247);
+            this.label7.Location = new System.Drawing.Point(363, 226);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 16);
@@ -760,7 +760,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(299, 247);
+            this.label8.Location = new System.Drawing.Point(293, 226);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 16);
@@ -771,7 +771,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(198, 246);
+            this.label12.Location = new System.Drawing.Point(192, 225);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 16);
@@ -782,7 +782,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(94, 247);
+            this.label13.Location = new System.Drawing.Point(88, 226);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 16);
@@ -793,7 +793,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(17, 248);
+            this.label15.Location = new System.Drawing.Point(11, 227);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 16);
@@ -804,7 +804,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(418, 244);
+            this.label18.Location = new System.Drawing.Point(412, 223);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 16);
@@ -815,7 +815,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(532, 244);
+            this.label20.Location = new System.Drawing.Point(526, 223);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 16);
@@ -826,7 +826,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(919, 240);
+            this.label23.Location = new System.Drawing.Point(913, 219);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 16);
@@ -837,7 +837,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(818, 240);
+            this.label24.Location = new System.Drawing.Point(812, 219);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(68, 16);
@@ -847,7 +847,7 @@
             // discpercenttxtbox
             // 
             this.discpercenttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.discpercenttxtbox.Location = new System.Drawing.Point(609, 266);
+            this.discpercenttxtbox.Location = new System.Drawing.Point(603, 245);
             this.discpercenttxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.discpercenttxtbox.Multiline = true;
             this.discpercenttxtbox.Name = "discpercenttxtbox";
@@ -859,7 +859,7 @@
             // qtyptxtbox
             // 
             this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.qtyptxtbox.Location = new System.Drawing.Point(372, 267);
+            this.qtyptxtbox.Location = new System.Drawing.Point(366, 246);
             this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.qtyptxtbox.Multiline = true;
             this.qtyptxtbox.Name = "qtyptxtbox";
@@ -871,7 +871,7 @@
             // bnsltxtbox
             // 
             this.bnsltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bnsltxtbox.Location = new System.Drawing.Point(480, 266);
+            this.bnsltxtbox.Location = new System.Drawing.Point(474, 245);
             this.bnsltxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.bnsltxtbox.Multiline = true;
             this.bnsltxtbox.Name = "bnsltxtbox";
@@ -883,7 +883,7 @@
             // salestaxtxtbox
             // 
             this.salestaxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salestaxtxtbox.Location = new System.Drawing.Point(821, 266);
+            this.salestaxtxtbox.Location = new System.Drawing.Point(815, 245);
             this.salestaxtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.salestaxtxtbox.Multiline = true;
             this.salestaxtxtbox.Name = "salestaxtxtbox";
@@ -895,7 +895,7 @@
             // discvalltxtbox
             // 
             this.discvalltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.discvalltxtbox.Location = new System.Drawing.Point(679, 266);
+            this.discvalltxtbox.Location = new System.Drawing.Point(673, 245);
             this.discvalltxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.discvalltxtbox.Multiline = true;
             this.discvalltxtbox.Name = "discvalltxtbox";
@@ -907,7 +907,7 @@
             // discvaltxtbox
             // 
             this.discvaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.discvaltxtbox.Location = new System.Drawing.Point(753, 266);
+            this.discvaltxtbox.Location = new System.Drawing.Point(747, 245);
             this.discvaltxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.discvaltxtbox.Multiline = true;
             this.discvaltxtbox.Name = "discvaltxtbox";
@@ -920,7 +920,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(676, 246);
+            this.label25.Location = new System.Drawing.Point(670, 225);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(64, 16);
@@ -931,7 +931,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(607, 244);
+            this.label26.Location = new System.Drawing.Point(601, 223);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(46, 16);
