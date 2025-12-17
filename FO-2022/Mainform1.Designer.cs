@@ -478,7 +478,7 @@
             this.purchaseInvoiceShortToolStripMenuItem.Name = "purchaseInvoiceShortToolStripMenuItem";
             this.purchaseInvoiceShortToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
             this.purchaseInvoiceShortToolStripMenuItem.Text = "Purchase Invoice Short";
-            this.purchaseInvoiceShortToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceShortToolStripMenuItem_Click);
+            //this.purchaseInvoiceShortToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceShortToolStripMenuItem_Click);
             // 
             // saleReturnToolStripMenuItem
             // 

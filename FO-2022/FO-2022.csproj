@@ -706,9 +706,7 @@
     <Compile Include="Purchase Direct to Sale.Designer.cs">
       <DependentUpon>Purchase Direct to Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase Invoice 01.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Purchase Invoice 01.cs" />
     <Compile Include="Purchase Invoice 01.Designer.cs">
       <DependentUpon>Purchase Invoice 01.cs</DependentUpon>
     </Compile>
