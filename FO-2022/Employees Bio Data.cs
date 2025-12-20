@@ -1250,11 +1250,18 @@ namespace FO_2022
                         // Insert picture if available
                         if (employeePicture != null)
                         {
+                            // Pehle next SerialNo get karen
+                            string getNextSerialQuery = "SELECT ISNULL(MAX(SerialNo), 0) + 1 FROM EmployeesPicture";
+                            SqlCommand getCmd = new SqlCommand(getNextSerialQuery, connection, transaction);
+                            long nextSerial = Convert.ToInt64(getCmd.ExecuteScalar());
+
+                            // Phir insert karen with SerialNo
                             string pictureQuery = @"
-                                INSERT INTO EmployeesPicture (EmployeeID, Picture)
-                                VALUES (@EmployeeID, @Picture)";
+        INSERT INTO EmployeesPicture (SerialNo, EmployeeID, Picture)
+        VALUES (@SerialNo, @EmployeeID, @Picture)";
 
                             SqlCommand pictureCmd = new SqlCommand(pictureQuery, connection, transaction);
+                            pictureCmd.Parameters.AddWithValue("@SerialNo", nextSerial);
                             pictureCmd.Parameters.AddWithValue("@EmployeeID", employeeId);
                             pictureCmd.Parameters.Add("@Picture", SqlDbType.Image).Value = employeePicture;
                             pictureCmd.ExecuteNonQuery();
@@ -1478,7 +1485,7 @@ namespace FO_2022
                 {
                     string query = @"
                         SELECT 
-                            e.NICNo, e.Education, e.Address, e.City, e.Phone, e.Mobile,
+                            e.NICNo, e.Education, e.Address, e.City, e.Phone,
                             e.Reference, e.JobType, e.JoiningDate, e.TerminationDate,
                             e.YearlyLeavesAllowed, e.EmployeeNameUrdu, e.FatherNameUrdu,
                             e.AddressUrdu, d.DesignationName,
@@ -1501,7 +1508,7 @@ namespace FO_2022
                         addresstxtbox.Text = reader["Address"].ToString();
                         citytxtbox.Text = reader["City"].ToString();
                         phonenotxtbox.Text = reader["Phone"].ToString();
-                        mblnotxtbox.Text = reader["Mobile"].ToString();
+                        //mblnotxtbox.Text = reader["Mobile"].ToString();
                         referencetxtbox.Text = reader["Reference"].ToString();
 
                         // Set job type
