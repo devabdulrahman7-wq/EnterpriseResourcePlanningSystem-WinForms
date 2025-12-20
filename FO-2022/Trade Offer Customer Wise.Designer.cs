@@ -40,7 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.datepckr = new System.Windows.Forms.DateTimePicker();
-            this.iddatepckr = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.newbtn = new System.Windows.Forms.Button();
@@ -50,24 +49,27 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.slctcstmrtxtbox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.slabidtxtbox = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.packnamecombobox = new System.Windows.Forms.ComboBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.qtyptxtbox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ratetxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.disctxtbox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.disctwotxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cstmrididsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -89,7 +91,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(495, 144);
+            this.label10.Location = new System.Drawing.Point(437, 136);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 16);
@@ -100,7 +102,7 @@
             // 
             this.cstmrdatetxtbox.AutoSize = true;
             this.cstmrdatetxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cstmrdatetxtbox.Location = new System.Drawing.Point(664, 144);
+            this.cstmrdatetxtbox.Location = new System.Drawing.Point(606, 136);
             this.cstmrdatetxtbox.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.cstmrdatetxtbox.Name = "cstmrdatetxtbox";
             this.cstmrdatetxtbox.Size = new System.Drawing.Size(99, 16);
@@ -110,55 +112,60 @@
             // cstmridtxtbox
             // 
             this.cstmridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cstmridtxtbox.Location = new System.Drawing.Point(497, 164);
+            this.cstmridtxtbox.Location = new System.Drawing.Point(439, 156);
             this.cstmridtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.cstmridtxtbox.Multiline = true;
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(130, 20);
             this.cstmridtxtbox.TabIndex = 402;
+            this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmrnametxtbox
             // 
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cstmrnametxtbox.Location = new System.Drawing.Point(661, 164);
+            this.cstmrnametxtbox.Location = new System.Drawing.Point(603, 156);
             this.cstmrnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(240, 20);
             this.cstmrnametxtbox.TabIndex = 401;
+            this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmrididsearch
             // 
             this.cstmrididsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmrididsearch.Image")));
-            this.cstmrididsearch.Location = new System.Drawing.Point(627, 162);
+            this.cstmrididsearch.Location = new System.Drawing.Point(569, 154);
             this.cstmrididsearch.Margin = new System.Windows.Forms.Padding(4);
             this.cstmrididsearch.Name = "cstmrididsearch";
             this.cstmrididsearch.Size = new System.Drawing.Size(26, 22);
             this.cstmrididsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cstmrididsearch.TabIndex = 400;
             this.cstmrididsearch.TabStop = false;
+            this.cstmrididsearch.Click += new System.EventHandler(this.cstmrididsearch_Click);
             // 
             // enddatetimepicker
             // 
             this.enddatetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.enddatetimepicker.Location = new System.Drawing.Point(619, 207);
+            this.enddatetimepicker.Location = new System.Drawing.Point(561, 199);
             this.enddatetimepicker.Name = "enddatetimepicker";
             this.enddatetimepicker.Size = new System.Drawing.Size(95, 23);
             this.enddatetimepicker.TabIndex = 408;
+            this.enddatetimepicker.ValueChanged += new System.EventHandler(this.enddatetimepicker_ValueChanged);
             // 
             // startdatetimepicker
             // 
             this.startdatetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startdatetimepicker.Location = new System.Drawing.Point(498, 207);
+            this.startdatetimepicker.Location = new System.Drawing.Point(440, 199);
             this.startdatetimepicker.Name = "startdatetimepicker";
             this.startdatetimepicker.Size = new System.Drawing.Size(95, 23);
             this.startdatetimepicker.TabIndex = 407;
+            this.startdatetimepicker.ValueChanged += new System.EventHandler(this.startdatetimepicker_ValueChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(614, 188);
+            this.label6.Location = new System.Drawing.Point(556, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 16);
@@ -169,7 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(495, 188);
+            this.label5.Location = new System.Drawing.Point(437, 180);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 16);
@@ -179,24 +186,17 @@
             // datepckr
             // 
             this.datepckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepckr.Location = new System.Drawing.Point(599, 117);
+            this.datepckr.Location = new System.Drawing.Point(541, 109);
             this.datepckr.Name = "datepckr";
             this.datepckr.Size = new System.Drawing.Size(95, 23);
             this.datepckr.TabIndex = 412;
-            // 
-            // iddatepckr
-            // 
-            this.iddatepckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.iddatepckr.Location = new System.Drawing.Point(498, 117);
-            this.iddatepckr.Name = "iddatepckr";
-            this.iddatepckr.Size = new System.Drawing.Size(95, 23);
-            this.iddatepckr.TabIndex = 411;
+            this.datepckr.ValueChanged += new System.EventHandler(this.datepckr_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(596, 93);
+            this.label2.Location = new System.Drawing.Point(538, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 16);
@@ -207,7 +207,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(503, 93);
+            this.label3.Location = new System.Drawing.Point(437, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 16);
@@ -227,6 +227,7 @@
             this.newbtn.TabIndex = 418;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -241,6 +242,7 @@
             this.closebtn.TabIndex = 417;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -255,6 +257,7 @@
             this.removebtn.TabIndex = 416;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -269,6 +272,7 @@
             this.editbtn.TabIndex = 415;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -283,6 +287,7 @@
             this.clearbtn.TabIndex = 414;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -297,122 +302,27 @@
             this.savebtn.TabIndex = 413;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column9,
-            this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(438, 239);
+            this.dataGridView1.Location = new System.Drawing.Point(438, 295);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(488, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(488, 205);
             this.dataGridView1.TabIndex = 419;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Pro ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 135;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 55;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Qty";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 40;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Rate";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Disc";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 45;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Disc.2";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 50;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column10,
-            this.Column12});
             this.dataGridView2.Location = new System.Drawing.Point(3, 126);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(429, 374);
             this.dataGridView2.TabIndex = 420;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ID";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 35;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Date";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 50;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Spol ID";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 80;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Spo Name";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 140;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Items";
-            this.Column12.Name = "Column12";
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column12.Width = 75;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(436, 509);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
-            this.label4.TabIndex = 421;
-            this.label4.Text = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // label7
             // 
@@ -432,6 +342,7 @@
             this.slctcstmrtxtbox.Name = "slctcstmrtxtbox";
             this.slctcstmrtxtbox.Size = new System.Drawing.Size(270, 20);
             this.slctcstmrtxtbox.TabIndex = 423;
+            this.slctcstmrtxtbox.TextChanged += new System.EventHandler(this.slctcstmrtxtbox_TextChanged);
             // 
             // textBox1
             // 
@@ -456,17 +367,188 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // slabidtxtbox
+            // 
+            this.slabidtxtbox.BackColor = System.Drawing.Color.White;
+            this.slabidtxtbox.Location = new System.Drawing.Point(435, 109);
+            this.slabidtxtbox.Name = "slabidtxtbox";
+            this.slabidtxtbox.Size = new System.Drawing.Size(100, 23);
+            this.slabidtxtbox.TabIndex = 454;
+            this.slabidtxtbox.TextChanged += new System.EventHandler(this.slabidtxtbox_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(438, 499);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 455;
+            // 
+            // packnamecombobox
+            // 
+            this.packnamecombobox.FormattingEnabled = true;
+            this.packnamecombobox.Location = new System.Drawing.Point(621, 266);
+            this.packnamecombobox.Name = "packnamecombobox";
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.TabIndex = 462;
+            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
+            // 
+            // productnametxtbox
+            // 
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(518, 268);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.TabIndex = 461;
+            // 
+            // productidtxtbox
+            // 
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(441, 269);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.TabIndex = 460;
+            this.productidtxtbox.Click += new System.EventHandler(this.productidsearch_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(619, 249);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(78, 16);
+            this.label40.TabIndex = 459;
+            this.label40.Text = "Pack Name";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(515, 250);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(68, 16);
+            this.label41.TabIndex = 458;
+            this.label41.Text = "Pro.Name";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(441, 249);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(44, 16);
+            this.label42.TabIndex = 457;
+            this.label42.Text = "Pro.ID";
+            // 
+            // qtyptxtbox
+            // 
+            this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyptxtbox.Location = new System.Drawing.Point(719, 269);
+            this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyptxtbox.Multiline = true;
+            this.qtyptxtbox.Name = "qtyptxtbox";
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.TabIndex = 464;
+            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(716, 249);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(44, 16);
+            this.label36.TabIndex = 463;
+            this.label36.Text = "Qty(P)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(767, 249);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.TabIndex = 465;
+            this.label4.Text = "Rate ";
+            // 
+            // ratetxt
+            // 
+            this.ratetxt.Location = new System.Drawing.Point(768, 266);
+            this.ratetxt.Name = "ratetxt";
+            this.ratetxt.Size = new System.Drawing.Size(33, 23);
+            this.ratetxt.TabIndex = 466;
+            this.ratetxt.TextChanged += new System.EventHandler(this.ratetxt_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(806, 249);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 15);
+            this.label8.TabIndex = 465;
+            this.label8.Text = "Disc";
+            // 
+            // disctxtbox
+            // 
+            this.disctxtbox.Location = new System.Drawing.Point(807, 266);
+            this.disctxtbox.Name = "disctxtbox";
+            this.disctxtbox.Size = new System.Drawing.Size(33, 23);
+            this.disctxtbox.TabIndex = 466;
+            this.disctxtbox.TextChanged += new System.EventHandler(this.disctxtbox_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(845, 249);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 15);
+            this.label9.TabIndex = 465;
+            this.label9.Text = "Disc-2";
+            // 
+            // disctwotxt
+            // 
+            this.disctwotxt.Location = new System.Drawing.Point(846, 266);
+            this.disctwotxt.Name = "disctwotxt";
+            this.disctwotxt.Size = new System.Drawing.Size(33, 23);
+            this.disctwotxt.TabIndex = 466;
+            this.disctwotxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.disctwotxt_KeyDown);
+            // 
             // Trade_Offer_Customer_Wise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(938, 579);
+            this.Controls.Add(this.disctwotxt);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.disctxtbox);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.ratetxt);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.qtyptxtbox);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.packnamecombobox);
+            this.Controls.Add(this.productnametxtbox);
+            this.Controls.Add(this.productidtxtbox);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.slabidtxtbox);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.slctcstmrtxtbox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.newbtn);
@@ -476,7 +558,6 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.datepckr);
-            this.Controls.Add(this.iddatepckr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.enddatetimepicker);
@@ -518,7 +599,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker datepckr;
-        private System.Windows.Forms.DateTimePicker iddatepckr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button newbtn;
@@ -529,22 +609,25 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox slctcstmrtxtbox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox slabidtxtbox;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox packnamecombobox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox qtyptxtbox;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox ratetxt;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox disctxtbox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox disctwotxt;
     }
 }

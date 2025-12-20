@@ -40,10 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewavlblepkng = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchoffertxtbox = new System.Windows.Forms.TextBox();
-            this.offeridtxtbox = new System.Windows.Forms.TextBox();
+            this.offeridsearchtxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.offerid1txtbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -80,13 +78,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.enterbtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effecticeprdctchkbox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.totalpartiestxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewavlblepkng)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prdctididsearch)).BeginInit();
@@ -118,6 +113,7 @@
             this.newbtn.TabIndex = 386;
             this.newbtn.Text = "New";
             this.newbtn.UseVisualStyleBackColor = false;
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // closebtn
             // 
@@ -132,6 +128,7 @@
             this.closebtn.TabIndex = 385;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -146,6 +143,7 @@
             this.removebtn.TabIndex = 384;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
@@ -160,6 +158,7 @@
             this.editbtn.TabIndex = 383;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clearbtn
             // 
@@ -174,6 +173,7 @@
             this.clearbtn.TabIndex = 382;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -188,6 +188,7 @@
             this.savebtn.TabIndex = 381;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // label2
             // 
@@ -226,26 +227,12 @@
             // dataGridViewavlblepkng
             // 
             this.dataGridViewavlblepkng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewavlblepkng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridViewavlblepkng.Location = new System.Drawing.Point(10, 162);
             this.dataGridViewavlblepkng.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridViewavlblepkng.Name = "dataGridViewavlblepkng";
             this.dataGridViewavlblepkng.Size = new System.Drawing.Size(284, 389);
             this.dataGridViewavlblepkng.TabIndex = 391;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
+            this.dataGridViewavlblepkng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewavlblepkng_CellContentClick);
             // 
             // searchoffertxtbox
             // 
@@ -255,15 +242,18 @@
             this.searchoffertxtbox.Name = "searchoffertxtbox";
             this.searchoffertxtbox.Size = new System.Drawing.Size(187, 16);
             this.searchoffertxtbox.TabIndex = 392;
+            this.searchoffertxtbox.TextChanged += new System.EventHandler(this.searchoffertxtbox_TextChanged);
             // 
-            // offeridtxtbox
+            // offeridsearchtxtbox
             // 
-            this.offeridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.offeridtxtbox.Location = new System.Drawing.Point(10, 118);
-            this.offeridtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.offeridtxtbox.Name = "offeridtxtbox";
-            this.offeridtxtbox.Size = new System.Drawing.Size(96, 16);
-            this.offeridtxtbox.TabIndex = 393;
+            this.offeridsearchtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.offeridsearchtxtbox.Location = new System.Drawing.Point(10, 118);
+            this.offeridsearchtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.offeridsearchtxtbox.Name = "offeridsearchtxtbox";
+            this.offeridsearchtxtbox.Size = new System.Drawing.Size(96, 16);
+            this.offeridsearchtxtbox.TabIndex = 393;
+            this.offeridsearchtxtbox.TextChanged += new System.EventHandler(this.offeridsearchtxtbox_TextChanged);
+            this.offeridsearchtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OfferIdSearchTextBox_KeyPress);
             // 
             // label4
             // 
@@ -285,6 +275,7 @@
             this.offerid1txtbox.Name = "offerid1txtbox";
             this.offerid1txtbox.Size = new System.Drawing.Size(114, 23);
             this.offerid1txtbox.TabIndex = 395;
+            this.offerid1txtbox.TextChanged += new System.EventHandler(this.offerid1txtbox_TextChanged);
             // 
             // label5
             // 
@@ -326,6 +317,7 @@
             this.offerdateTimePicker1.Name = "offerdateTimePicker1";
             this.offerdateTimePicker1.Size = new System.Drawing.Size(95, 23);
             this.offerdateTimePicker1.TabIndex = 402;
+            this.offerdateTimePicker1.ValueChanged += new System.EventHandler(this.offerdateTimePicker1_ValueChanged);
             // 
             // effectivetodateTimePicker2
             // 
@@ -334,6 +326,7 @@
             this.effectivetodateTimePicker2.Name = "effectivetodateTimePicker2";
             this.effectivetodateTimePicker2.Size = new System.Drawing.Size(95, 23);
             this.effectivetodateTimePicker2.TabIndex = 403;
+            this.effectivetodateTimePicker2.ValueChanged += new System.EventHandler(this.effectivetodateTimePicker2_ValueChanged);
             // 
             // effectivefromTimePicker3
             // 
@@ -342,6 +335,7 @@
             this.effectivefromTimePicker3.Name = "effectivefromTimePicker3";
             this.effectivefromTimePicker3.Size = new System.Drawing.Size(95, 23);
             this.effectivefromTimePicker3.TabIndex = 404;
+            this.effectivefromTimePicker3.ValueChanged += new System.EventHandler(this.effectivefromTimePicker3_ValueChanged);
             // 
             // label8
             // 
@@ -363,6 +357,7 @@
             this.offernametxtbox.Name = "offernametxtbox";
             this.offernametxtbox.Size = new System.Drawing.Size(418, 22);
             this.offernametxtbox.TabIndex = 406;
+            this.offernametxtbox.TextChanged += new System.EventHandler(this.offernametxtbox_TextChanged);
             // 
             // groupBox1
             // 
@@ -408,6 +403,7 @@
             this.prdctidtxtbox.Name = "prdctidtxtbox";
             this.prdctidtxtbox.Size = new System.Drawing.Size(130, 22);
             this.prdctidtxtbox.TabIndex = 397;
+            this.prdctidtxtbox.TextChanged += new System.EventHandler(this.prdctidtxtbox_TextChanged);
             // 
             // prdctnametxtbox
             // 
@@ -418,6 +414,7 @@
             this.prdctnametxtbox.Name = "prdctnametxtbox";
             this.prdctnametxtbox.Size = new System.Drawing.Size(240, 22);
             this.prdctnametxtbox.TabIndex = 396;
+            this.prdctnametxtbox.TextChanged += new System.EventHandler(this.prdctnametxtbox_TextChanged);
             // 
             // prdctididsearch
             // 
@@ -429,6 +426,7 @@
             this.prdctididsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.prdctididsearch.TabIndex = 327;
             this.prdctididsearch.TabStop = false;
+            this.prdctididsearch.Click += new System.EventHandler(this.prdctididsearch_Click);
             // 
             // qtytxtbox
             // 
@@ -436,20 +434,23 @@
             this.qtytxtbox.Name = "qtytxtbox";
             this.qtytxtbox.Size = new System.Drawing.Size(84, 23);
             this.qtytxtbox.TabIndex = 408;
+            this.qtytxtbox.TextChanged += new System.EventHandler(this.qtytxtbox_TextChanged);
             // 
             // discvaltxtbox
             // 
-            this.discvaltxtbox.Location = new System.Drawing.Point(675, 283);
+            this.discvaltxtbox.Location = new System.Drawing.Point(669, 283);
             this.discvaltxtbox.Name = "discvaltxtbox";
-            this.discvaltxtbox.Size = new System.Drawing.Size(65, 23);
+            this.discvaltxtbox.Size = new System.Drawing.Size(70, 23);
             this.discvaltxtbox.TabIndex = 409;
+            this.discvaltxtbox.TextChanged += new System.EventHandler(this.discvaltxtbox_TextChanged);
             // 
             // disctxtbox
             // 
-            this.disctxtbox.Location = new System.Drawing.Point(577, 283);
+            this.disctxtbox.Location = new System.Drawing.Point(583, 283);
             this.disctxtbox.Name = "disctxtbox";
-            this.disctxtbox.Size = new System.Drawing.Size(98, 23);
+            this.disctxtbox.Size = new System.Drawing.Size(86, 23);
             this.disctxtbox.TabIndex = 410;
+            this.disctxtbox.TextChanged += new System.EventHandler(this.disctxtbox_TextChanged);
             // 
             // pricetxtbox
             // 
@@ -457,6 +458,7 @@
             this.pricetxtbox.Name = "pricetxtbox";
             this.pricetxtbox.Size = new System.Drawing.Size(94, 23);
             this.pricetxtbox.TabIndex = 411;
+            this.pricetxtbox.TextChanged += new System.EventHandler(this.pricetxtbox_TextChanged);
             // 
             // bonustxtbox
             // 
@@ -464,6 +466,7 @@
             this.bonustxtbox.Name = "bonustxtbox";
             this.bonustxtbox.Size = new System.Drawing.Size(85, 23);
             this.bonustxtbox.TabIndex = 412;
+            this.bonustxtbox.TextChanged += new System.EventHandler(this.bonustxtbox_TextChanged);
             // 
             // label11
             // 
@@ -527,6 +530,7 @@
             this.towncomobobox.Name = "towncomobobox";
             this.towncomobobox.Size = new System.Drawing.Size(169, 24);
             this.towncomobobox.TabIndex = 418;
+            this.towncomobobox.SelectedIndexChanged += new System.EventHandler(this.towncomobobox_SelectedIndexChanged);
             // 
             // sectorcombobox
             // 
@@ -535,6 +539,7 @@
             this.sectorcombobox.Name = "sectorcombobox";
             this.sectorcombobox.Size = new System.Drawing.Size(166, 24);
             this.sectorcombobox.TabIndex = 419;
+            this.sectorcombobox.SelectedIndexChanged += new System.EventHandler(this.sectorcombobox_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -564,13 +569,15 @@
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(100, 23);
             this.partyidtxtbox.TabIndex = 423;
+            this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
             // searchpartynametxtbox
             // 
             this.searchpartynametxtbox.Location = new System.Drawing.Point(419, 389);
             this.searchpartynametxtbox.Name = "searchpartynametxtbox";
-            this.searchpartynametxtbox.Size = new System.Drawing.Size(321, 23);
+            this.searchpartynametxtbox.Size = new System.Drawing.Size(243, 23);
             this.searchpartynametxtbox.TabIndex = 422;
+            this.searchpartynametxtbox.TextChanged += new System.EventHandler(this.searchpartynametxtbox_TextChanged);
             // 
             // label18
             // 
@@ -600,43 +607,25 @@
             this.enterbtn.FlatAppearance.BorderSize = 0;
             this.enterbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enterbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterbtn.Location = new System.Drawing.Point(667, 341);
+            this.enterbtn.Location = new System.Drawing.Point(663, 389);
             this.enterbtn.Margin = new System.Windows.Forms.Padding(2);
             this.enterbtn.Name = "enterbtn";
             this.enterbtn.Size = new System.Drawing.Size(73, 24);
             this.enterbtn.TabIndex = 426;
             this.enterbtn.Text = "Enter";
             this.enterbtn.UseVisualStyleBackColor = false;
+            this.enterbtn.Click += new System.EventHandler(this.enterbtn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(321, 413);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(421, 118);
+            this.dataGridView1.Size = new System.Drawing.Size(419, 118);
             this.dataGridView1.TabIndex = 427;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Customer ID";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 140;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Customer Name";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 140;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Select";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // effecticeprdctchkbox
             // 
@@ -647,6 +636,7 @@
             this.effecticeprdctchkbox.TabIndex = 428;
             this.effecticeprdctchkbox.Text = "Effect Product Price in Sale";
             this.effecticeprdctchkbox.UseVisualStyleBackColor = true;
+            this.effecticeprdctchkbox.CheckedChanged += new System.EventHandler(this.effecticeprdctchkbox_CheckedChanged);
             // 
             // label20
             // 
@@ -656,15 +646,6 @@
             this.label20.Size = new System.Drawing.Size(137, 16);
             this.label20.TabIndex = 429;
             this.label20.Text = "Total Selected Parties:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(677, 535);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 16);
-            this.label21.TabIndex = 430;
-            this.label21.Text = "label21";
             // 
             // pictureBox2
             // 
@@ -677,14 +658,22 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // totalpartiestxtbox
+            // 
+            this.totalpartiestxtbox.BackColor = System.Drawing.Color.White;
+            this.totalpartiestxtbox.Location = new System.Drawing.Point(677, 532);
+            this.totalpartiestxtbox.Name = "totalpartiestxtbox";
+            this.totalpartiestxtbox.Size = new System.Drawing.Size(64, 23);
+            this.totalpartiestxtbox.TabIndex = 432;
+            // 
             // Trade_Offers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(752, 621);
+            this.Controls.Add(this.totalpartiestxtbox);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.effecticeprdctchkbox);
             this.Controls.Add(this.dataGridView1);
@@ -718,7 +707,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.offerid1txtbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.offeridtxtbox);
+            this.Controls.Add(this.offeridsearchtxtbox);
             this.Controls.Add(this.searchoffertxtbox);
             this.Controls.Add(this.dataGridViewavlblepkng);
             this.Controls.Add(this.textBox1);
@@ -761,10 +750,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridViewavlblepkng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox searchoffertxtbox;
-        private System.Windows.Forms.TextBox offeridtxtbox;
+        private System.Windows.Forms.TextBox offeridsearchtxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox offerid1txtbox;
         private System.Windows.Forms.Label label5;
@@ -801,12 +788,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button enterbtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.CheckBox effecticeprdctchkbox;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox totalpartiestxtbox;
     }
 }
