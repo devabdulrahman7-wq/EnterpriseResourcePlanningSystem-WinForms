@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock_Receive_to_Salesmen));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.returndatedtp = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.salesmennametxtbox = new System.Windows.Forms.TextBox();
@@ -51,17 +51,30 @@
             this.savebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Multipliertxtbox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.packnamecombobox = new System.Windows.Forms.ComboBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.qtyptxtbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.qtyloosetxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // returndatedtp
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 101);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 23);
-            this.dateTimePicker1.TabIndex = 338;
+            this.returndatedtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.returndatedtp.Location = new System.Drawing.Point(128, 101);
+            this.returndatedtp.Name = "returndatedtp";
+            this.returndatedtp.Size = new System.Drawing.Size(133, 23);
+            this.returndatedtp.TabIndex = 338;
+            //this.returndatedtp.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label5
             // 
@@ -92,6 +105,7 @@
             this.salesmennametxtbox.Name = "salesmennametxtbox";
             this.salesmennametxtbox.Size = new System.Drawing.Size(322, 16);
             this.salesmennametxtbox.TabIndex = 335;
+            this.salesmennametxtbox.TextChanged += new System.EventHandler(this.salesmennametxtbox_TextChanged);
             // 
             // salesmenidtxtbox
             // 
@@ -100,6 +114,8 @@
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
             this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.salesmenidtxtbox.TabIndex = 334;
+            this.salesmenidtxtbox.TextChanged += new System.EventHandler(this.salesmenidtxtbox_TextChanged);
+            this.salesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmenidtxtbox_KeyDown);
             // 
             // saleidtxtbox
             // 
@@ -109,6 +125,7 @@
             this.saleidtxtbox.Name = "saleidtxtbox";
             this.saleidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.saleidtxtbox.TabIndex = 333;
+            this.saleidtxtbox.TextChanged += new System.EventHandler(this.saleidtxtbox_TextChanged);
             // 
             // saledatelbl
             // 
@@ -142,10 +159,11 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 245);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(531, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(531, 192);
             this.dataGridView1.TabIndex = 339;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -198,6 +216,7 @@
             this.closebtn.TabIndex = 385;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -212,6 +231,7 @@
             this.removebtn.TabIndex = 384;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // openbtn
             // 
@@ -226,6 +246,7 @@
             this.openbtn.TabIndex = 383;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -240,6 +261,7 @@
             this.clearbtn.TabIndex = 382;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -254,6 +276,7 @@
             this.savebtn.TabIndex = 381;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // label1
             // 
@@ -278,12 +301,156 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // Multipliertxtbox
+            // 
+            this.Multipliertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Multipliertxtbox.Location = new System.Drawing.Point(291, 221);
+            this.Multipliertxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Multipliertxtbox.Multiline = true;
+            this.Multipliertxtbox.Name = "Multipliertxtbox";
+            this.Multipliertxtbox.Size = new System.Drawing.Size(44, 19);
+            this.Multipliertxtbox.TabIndex = 472;
+            this.Multipliertxtbox.TextChanged += new System.EventHandler(this.Multipliertxtbox_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(288, 201);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(38, 16);
+            this.label36.TabIndex = 471;
+            this.label36.Text = "Pack";
+            // 
+            // packnamecombobox
+            // 
+            this.packnamecombobox.FormattingEnabled = true;
+            this.packnamecombobox.Location = new System.Drawing.Point(193, 218);
+            this.packnamecombobox.Name = "packnamecombobox";
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.TabIndex = 470;
+            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
+            // 
+            // productnametxtbox
+            // 
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(90, 220);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.TabIndex = 469;
+            this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
+            // 
+            // productidtxtbox
+            // 
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(13, 221);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.TabIndex = 468;
+            this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
+            this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(191, 201);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(78, 16);
+            this.label40.TabIndex = 467;
+            this.label40.Text = "Pack Name";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(87, 202);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(68, 16);
+            this.label41.TabIndex = 466;
+            this.label41.Text = "Pro.Name";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(13, 201);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(44, 16);
+            this.label42.TabIndex = 465;
+            this.label42.Text = "Pro.ID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(340, 201);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 471;
+            this.label2.Text = "Qty(P)";
+            // 
+            // qtyptxtbox
+            // 
+            this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyptxtbox.Location = new System.Drawing.Point(343, 221);
+            this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyptxtbox.Multiline = true;
+            this.qtyptxtbox.Name = "qtyptxtbox";
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.TabIndex = 472;
+            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(392, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.TabIndex = 471;
+            this.label3.Text = "Qty(L)";
+            // 
+            // qtyloosetxtbox
+            // 
+            this.qtyloosetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyloosetxtbox.Location = new System.Drawing.Point(395, 222);
+            this.qtyloosetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyloosetxtbox.Multiline = true;
+            this.qtyloosetxtbox.Name = "qtyloosetxtbox";
+            this.qtyloosetxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyloosetxtbox.TabIndex = 472;
+            this.qtyloosetxtbox.TextChanged += new System.EventHandler(this.qtyloosetxtbox_TextChanged);
+            this.qtyloosetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyloosetxtbox_KeyDown);
+            // 
             // Stock_Receive_to_Salesmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(740, 488);
+            this.Controls.Add(this.qtyloosetxtbox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.qtyptxtbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Multipliertxtbox);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.packnamecombobox);
+            this.Controls.Add(this.productnametxtbox);
+            this.Controls.Add(this.productidtxtbox);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label42);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.closebtn);
@@ -292,7 +459,7 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.returndatedtp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.salesmennametxtbox);
@@ -306,6 +473,7 @@
             this.Name = "Stock_Receive_to_Salesmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Receive_to_Salesmen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stock_Receive_to_Salesmen_FormClosing);
             this.Load += new System.EventHandler(this.Stock_Receive_to_Salesmen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -316,7 +484,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker returndatedtp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox salesmennametxtbox;
@@ -338,5 +506,17 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox Multipliertxtbox;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ComboBox packnamecombobox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox qtyptxtbox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox qtyloosetxtbox;
     }
 }
