@@ -16,5 +16,50 @@ namespace FO_2022
         {
             InitializeComponent();
         }
+
+        private void openbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void issueidtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salesmenidtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Stock_Issue_to_Salesmen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
