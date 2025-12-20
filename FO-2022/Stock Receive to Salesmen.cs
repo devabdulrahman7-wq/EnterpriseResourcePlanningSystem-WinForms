@@ -46,6 +46,7 @@ namespace FO_2022
             }
             else
             {
+                //salesmennametxtbox.Clear();
                 salesmennametxtbox.Clear();
             }
         }
