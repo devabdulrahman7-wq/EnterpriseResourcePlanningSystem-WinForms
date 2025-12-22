@@ -43,12 +43,6 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.packnamecombobox = new System.Windows.Forms.ComboBox();
@@ -115,6 +109,7 @@
             this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 18);
             this.salesmenidtxtbox.TabIndex = 342;
             this.salesmenidtxtbox.TextChanged += new System.EventHandler(this.salesmenidtxtbox_TextChanged);
+            this.salesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmenidtxtbox_KeyDown);
             // 
             // issueidtxtbox
             // 
@@ -122,6 +117,7 @@
             this.issueidtxtbox.Location = new System.Drawing.Point(78, 131);
             this.issueidtxtbox.Multiline = true;
             this.issueidtxtbox.Name = "issueidtxtbox";
+            this.issueidtxtbox.ReadOnly = true;
             this.issueidtxtbox.Size = new System.Drawing.Size(110, 23);
             this.issueidtxtbox.TabIndex = 341;
             this.issueidtxtbox.TextChanged += new System.EventHandler(this.issueidtxtbox_TextChanged);
@@ -160,6 +156,7 @@
             this.closebtn.TabIndex = 389;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -220,57 +217,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(75, 264);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(570, 223);
             this.dataGridView1.TabIndex = 384;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Pro ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 85;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 115;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pack ";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Qty Pack";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty Loose";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 95;
             // 
             // label1
             // 
@@ -292,6 +244,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 391;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // packnamecombobox
             // 
@@ -300,6 +253,7 @@
             this.packnamecombobox.Name = "packnamecombobox";
             this.packnamecombobox.Size = new System.Drawing.Size(109, 24);
             this.packnamecombobox.TabIndex = 407;
+            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
             // qtyptxtbox
             // 
@@ -310,6 +264,8 @@
             this.qtyptxtbox.Name = "qtyptxtbox";
             this.qtyptxtbox.Size = new System.Drawing.Size(82, 19);
             this.qtyptxtbox.TabIndex = 405;
+            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
+            this.qtyptxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyptxtbox_KeyDown);
             // 
             // label8
             // 
@@ -331,6 +287,8 @@
             this.qtyltxtbox.Name = "qtyltxtbox";
             this.qtyltxtbox.Size = new System.Drawing.Size(81, 21);
             this.qtyltxtbox.TabIndex = 400;
+            this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
+            this.qtyltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyltxtbox_KeyDown);
             // 
             // packtxtbox
             // 
@@ -341,6 +299,7 @@
             this.packtxtbox.Name = "packtxtbox";
             this.packtxtbox.Size = new System.Drawing.Size(90, 19);
             this.packtxtbox.TabIndex = 399;
+            this.packtxtbox.TextChanged += new System.EventHandler(this.packtxtbox_TextChanged);
             // 
             // productnametxtbox
             // 
@@ -361,6 +320,7 @@
             this.productidtxtbox.Name = "productidtxtbox";
             this.productidtxtbox.Size = new System.Drawing.Size(71, 19);
             this.productidtxtbox.TabIndex = 397;
+            this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
             // 
             // label28
             // 
@@ -481,12 +441,6 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox packnamecombobox;
