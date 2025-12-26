@@ -150,7 +150,9 @@ namespace FO_2022
             voucherDataTable.Columns.Add("AccountName", typeof(string));
             voucherDataTable.Columns.Add("Narration", typeof(string));
             voucherDataTable.Columns.Add("Amount", typeof(decimal));
+            //voucherDataTable.Columns.Add("BillNo", typeof(string));
             voucherDataTable.Columns.Add("BillNo", typeof(string));
+
 
             dataGridView1.DataSource = voucherDataTable;
 
