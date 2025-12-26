@@ -399,6 +399,12 @@
     <Compile Include="Dead_Parties.Designer.cs">
       <DependentUpon>Dead_Parties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Debit_Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debit_Voucher.Designer.cs">
+      <DependentUpon>Debit_Voucher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Define Company NSM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1258,6 +1264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dead_Parties.resx">
       <DependentUpon>Dead_Parties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debit_Voucher.resx">
+      <DependentUpon>Debit_Voucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Define Company NSM.resx">
       <DependentUpon>Define Company NSM.cs</DependentUpon>

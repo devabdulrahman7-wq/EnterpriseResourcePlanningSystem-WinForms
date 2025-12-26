@@ -132,7 +132,7 @@ namespace FO_2022
             }
         }
 
-        // Load Sector ComboBox1 (Entry)
+       
         void LoadSectorComboBox1()
         {
             try
@@ -141,13 +141,26 @@ namespace FO_2022
                 query = "SELECT SectorID, SectorName FROM Sectors ORDER BY SectorName";
                 cmd = new SqlCommand(query, con);
                 SqlDataReader dr = cmd.ExecuteReader();
+
                 sectoranamecombobox1.Items.Clear();
+
+                // Create a list to store items
+                var sectorList = new List<object>();
+
                 while (dr.Read())
                 {
-                    sectoranamecombobox1.Items.Add(new { ID = dr["SectorID"], Name = dr["SectorName"].ToString() });
-                    sectoranamecombobox1.DisplayMember = "Name";
-                    sectoranamecombobox1.ValueMember = "ID";
+                    sectorList.Add(new
+                    {
+                        ID = Convert.ToInt32(dr["SectorID"]),
+                        Name = dr["SectorName"].ToString()
+                    });
                 }
+
+                // Set DataSource instead of adding items individually
+                sectoranamecombobox1.DataSource = sectorList;
+                sectoranamecombobox1.DisplayMember = "Name";
+                sectoranamecombobox1.ValueMember = "ID";
+
                 dr.Close();
                 con.Close();
             }
@@ -157,7 +170,6 @@ namespace FO_2022
                 con.Close();
             }
         }
-
         // Load Category ComboBox
         void LoadCategoryComboBox()
         {
@@ -384,7 +396,7 @@ namespace FO_2022
         //    }
         //}
 
-        // Save Button
+       
         private void savebtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(nametxtbox1.Text) || string.IsNullOrEmpty(addresstxtbox.Text))
@@ -402,6 +414,31 @@ namespace FO_2022
                 con.Open();
                 string partyID = partyidtxtbox.Text + partyidtxtbox1.Text;
 
+                // Get selected values properly
+                object sectorIDValue = null;
+                object categoryIdValue = null;
+                object distributorIdValue = null;
+
+                // Get SectorID
+                if (sectoranamecombobox1.SelectedItem != null)
+                {
+                    dynamic sector = sectoranamecombobox1.SelectedItem;
+                    sectorIDValue = sector.ID;
+                }
+
+                // Get CategoryId
+                if (cstmrctgrycombobox.SelectedItem != null)
+                {
+                    dynamic category = cstmrctgrycombobox.SelectedItem;
+                    categoryIdValue = category.ID;
+                }
+
+                // Get DistributorId
+                if (!string.IsNullOrEmpty(distributortxtbox.Text))
+                {
+                    distributorIdValue = distributortxtbox.Text;
+                }
+
                 // Check if new or update
                 query = "SELECT COUNT(*) FROM Parties WHERE PartyID = @PartyID";
                 cmd = new SqlCommand(query, con);
@@ -411,24 +448,30 @@ namespace FO_2022
                 if (count == 0) // New
                 {
                     query = @"INSERT INTO Parties (PartyID, PartyName, SectorID, Address, City, Phone1, Phone2, Mobile, Fax, EMail, 
-                              ContactPerson, PartyType, CategoryId, CreditLimit, CreditDays, IsRetailPrice, IsBlock, IsDistributor, DistributorId, IsMultiDistributor) 
-                              VALUES (@PartyID, @PartyName, @SectorID, @Address, @City, @Phone1, @Phone2, @Mobile, @Fax, @EMail, 
-                              @ContactPerson, @PartyType, @CategoryId, @CreditLimit, @CreditDays, @IsRetailPrice, @IsBlock, @IsDistributor, @DistributorId, @IsMultiDistributor)";
+                      ContactPerson, PartyType, CategoryId, CreditLimit, CreditDays, IsRetailPrice, IsBlock, IsDistributor, DistributorId, IsMultiDistributor) 
+                      VALUES (@PartyID, @PartyName, @SectorID, @Address, @City, @Phone1, @Phone2, @Mobile, @Fax, @EMail, 
+                      @ContactPerson, @PartyType, @CategoryId, @CreditLimit, @CreditDays, @IsRetailPrice, @IsBlock, @IsDistributor, @DistributorId, @IsMultiDistributor)";
                 }
                 else // Update
                 {
                     query = @"UPDATE Parties SET PartyName = @PartyName, SectorID = @SectorID, Address = @Address, City = @City, 
-                              Phone1 = @Phone1, Phone2 = @Phone2, Mobile = @Mobile, Fax = @Fax, EMail = @EMail, 
-                              ContactPerson = @ContactPerson, PartyType = @PartyType, CategoryId = @CategoryId, 
-                              CreditLimit = @CreditLimit, CreditDays = @CreditDays, IsRetailPrice = @IsRetailPrice, 
-                              IsBlock = @IsBlock, IsDistributor = @IsDistributor, DistributorId = @DistributorId, 
-                              IsMultiDistributor = @IsMultiDistributor WHERE PartyID = @PartyID";
+                      Phone1 = @Phone1, Phone2 = @Phone2, Mobile = @Mobile, Fax = @Fax, EMail = @EMail, 
+                      ContactPerson = @ContactPerson, PartyType = @PartyType, CategoryId = @CategoryId, 
+                      CreditLimit = @CreditLimit, CreditDays = @CreditDays, IsRetailPrice = @IsRetailPrice, 
+                      IsBlock = @IsBlock, IsDistributor = @IsDistributor, DistributorId = @DistributorId, 
+                      IsMultiDistributor = @IsMultiDistributor WHERE PartyID = @PartyID";
                 }
 
                 cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@PartyID", partyID);
                 cmd.Parameters.AddWithValue("@PartyName", nametxtbox1.Text);
-                cmd.Parameters.AddWithValue("@SectorID", sectoranamecombobox1.SelectedValue ?? (object)DBNull.Value);
+
+                // Handle SectorID parameter properly
+                if (sectorIDValue != null)
+                    cmd.Parameters.AddWithValue("@SectorID", sectorIDValue);
+                else
+                    cmd.Parameters.AddWithValue("@SectorID", DBNull.Value);
+
                 cmd.Parameters.AddWithValue("@Address", addresstxtbox.Text);
                 cmd.Parameters.AddWithValue("@City", citytxtbox.Text);
                 cmd.Parameters.AddWithValue("@Phone1", phonetxtbox.Text);
@@ -438,24 +481,36 @@ namespace FO_2022
                 cmd.Parameters.AddWithValue("@EMail", emailtxtbox.Text);
                 cmd.Parameters.AddWithValue("@ContactPerson", conatacttxtbox.Text);
                 cmd.Parameters.AddWithValue("@PartyType", partyType);
-                cmd.Parameters.AddWithValue("@CategoryId", cstmrctgrycombobox.SelectedValue ?? (object)DBNull.Value);
+
+                // Handle CategoryId parameter
+                if (categoryIdValue != null)
+                    cmd.Parameters.AddWithValue("@CategoryId", categoryIdValue);
+                else
+                    cmd.Parameters.AddWithValue("@CategoryId", DBNull.Value);
+
                 cmd.Parameters.AddWithValue("@CreditLimit", decimal.Parse(creditlmttxtbox.Text));
                 cmd.Parameters.AddWithValue("@CreditDays", int.Parse(creditdaytxtbox.Text));
                 cmd.Parameters.AddWithValue("@IsRetailPrice", false);
                 cmd.Parameters.AddWithValue("@IsBlock", false);
                 cmd.Parameters.AddWithValue("@IsDistributor", isdistributorchkbox.Checked);
-                cmd.Parameters.AddWithValue("@DistributorId", string.IsNullOrEmpty(distributortxtbox.Text) ? (object)DBNull.Value : distributortxtbox.Text);
+
+                // Handle DistributorId parameter
+                if (distributorIdValue != null)
+                    cmd.Parameters.AddWithValue("@DistributorId", distributorIdValue);
+                else
+                    cmd.Parameters.AddWithValue("@DistributorId", DBNull.Value);
+
                 cmd.Parameters.AddWithValue("@IsMultiDistributor", false);
 
-                cmd.ExecuteNonQuery();
+                int rowsAffected = cmd.ExecuteNonQuery();
 
                 // Also insert into ChartOfAccounts if new
                 if (count == 0)
                 {
                     query = @"INSERT INTO ChartOfAccounts (AccountNo, UserNo, AccountName, AccountType, AccountDepth, 
-                              OpeningDebit, OpeningCredit, AdjustedDebit, AdjustedCredit, IsDetailed, IsLocked, 
-                              IsPosted, IsEditable, BalFlag, PLFlag, ExpFlag) 
-                              VALUES (@AccountNo, 1, @AccountName, 'Party', 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,0, 0)";
+                      OpeningDebit, OpeningCredit, AdjustedDebit, AdjustedCredit, IsDetailed, IsLocked, 
+                      IsPosted, IsEditable, BalFlag, PLFlag, ExpFlag) 
+                      VALUES (@AccountNo, 1, @AccountName, 'Party', 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)";
                     cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@AccountNo", partyID);
                     cmd.Parameters.AddWithValue("@AccountName", nametxtbox1.Text);

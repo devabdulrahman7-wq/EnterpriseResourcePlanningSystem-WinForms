@@ -82,6 +82,7 @@
             this.datepcker.Name = "datepcker";
             this.datepcker.Size = new System.Drawing.Size(163, 23);
             this.datepcker.TabIndex = 388;
+            this.datepcker.ValueChanged += new System.EventHandler(this.datepcker_ValueChanged);
             // 
             // closebtn
             // 
@@ -95,6 +96,7 @@
             this.closebtn.TabIndex = 398;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // postsalebtn
             // 
@@ -108,6 +110,7 @@
             this.postsalebtn.TabIndex = 397;
             this.postsalebtn.Text = "Post Selcted Sales\r\n\r\n";
             this.postsalebtn.UseVisualStyleBackColor = false;
+            this.postsalebtn.Click += new System.EventHandler(this.postsalebtn_Click);
             // 
             // slctbtn
             // 
@@ -121,6 +124,7 @@
             this.slctbtn.TabIndex = 396;
             this.slctbtn.Text = "Select All";
             this.slctbtn.UseVisualStyleBackColor = false;
+            this.slctbtn.Click += new System.EventHandler(this.slctbtn_Click);
             // 
             // searchdate
             // 
@@ -131,6 +135,7 @@
             this.searchdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchdate.TabIndex = 399;
             this.searchdate.TabStop = false;
+            this.searchdate.Click += new System.EventHandler(this.searchdate_Click);
             // 
             // dataGridView1
             // 
@@ -146,6 +151,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(730, 384);
             this.dataGridView1.TabIndex = 400;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -210,6 +216,7 @@
             this.totalnetsalestxtbox.Name = "totalnetsalestxtbox";
             this.totalnetsalestxtbox.Size = new System.Drawing.Size(86, 18);
             this.totalnetsalestxtbox.TabIndex = 403;
+            this.totalnetsalestxtbox.TextChanged += new System.EventHandler(this.totalnetsalestxtbox_TextChanged);
             // 
             // noofsalestxtbox
             // 
@@ -219,6 +226,7 @@
             this.noofsalestxtbox.Name = "noofsalestxtbox";
             this.noofsalestxtbox.Size = new System.Drawing.Size(86, 18);
             this.noofsalestxtbox.TabIndex = 404;
+            this.noofsalestxtbox.TextChanged += new System.EventHandler(this.noofsalestxtbox_TextChanged);
             // 
             // pictureBox2
             // 
@@ -252,7 +260,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Post_Short_Stock_Order_Invoices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Post_Short_Stock_Order_Invoices";

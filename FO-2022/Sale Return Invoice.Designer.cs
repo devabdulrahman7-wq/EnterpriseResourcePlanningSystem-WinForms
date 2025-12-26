@@ -38,7 +38,7 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.paidamounttxtbox = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.remainingbalancextxtbox = new System.Windows.Forms.TextBox();
             this.prevbaltxtbox = new System.Windows.Forms.TextBox();
             this.totalvaluetxtbox = new System.Windows.Forms.TextBox();
             this.specialdisctxtbox = new System.Windows.Forms.TextBox();
@@ -57,19 +57,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.orderidsearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -93,6 +80,33 @@
             this.saledatelbl = new System.Windows.Forms.Label();
             this.saleidlbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.discvaltxtbox = new System.Windows.Forms.TextBox();
+            this.discvalltxtbox = new System.Windows.Forms.TextBox();
+            this.salestaxtxtbox = new System.Windows.Forms.TextBox();
+            this.bnsltxtbox = new System.Windows.Forms.TextBox();
+            this.qtyptxtbox = new System.Windows.Forms.TextBox();
+            this.discpercenttxtbox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pricetxtbox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ttlvaluetxtbox = new System.Windows.Forms.TextBox();
+            this.qtyltxtbox = new System.Windows.Forms.TextBox();
+            this.multipliertxtbox = new System.Windows.Forms.TextBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.packnamecomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderidsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -115,7 +129,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(133, 23);
             this.dateTimePicker1.TabIndex = 330;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // closebtn
             // 
@@ -129,6 +142,7 @@
             this.closebtn.TabIndex = 327;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -142,6 +156,7 @@
             this.removebtn.TabIndex = 326;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // printbtn
             // 
@@ -168,6 +183,7 @@
             this.openbtn.TabIndex = 324;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -181,6 +197,7 @@
             this.clearbtn.TabIndex = 322;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -194,6 +211,7 @@
             this.savebtn.TabIndex = 320;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // paidamounttxtbox
             // 
@@ -203,13 +221,13 @@
             this.paidamounttxtbox.Size = new System.Drawing.Size(112, 16);
             this.paidamounttxtbox.TabIndex = 319;
             // 
-            // textBox12
+            // remainingbalancextxtbox
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(867, 523);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(114, 16);
-            this.textBox12.TabIndex = 318;
+            this.remainingbalancextxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.remainingbalancextxtbox.Location = new System.Drawing.Point(867, 523);
+            this.remainingbalancextxtbox.Name = "remainingbalancextxtbox";
+            this.remainingbalancextxtbox.Size = new System.Drawing.Size(114, 16);
+            this.remainingbalancextxtbox.TabIndex = 318;
             // 
             // prevbaltxtbox
             // 
@@ -363,104 +381,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column13,
-            this.Column14});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 245);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 285);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(960, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 208);
             this.dataGridView1.TabIndex = 294;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Pro ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 85;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 115;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pack Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pack ";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Qty(P)";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 45;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty(L)";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Bns(L)";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 50;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Price";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Disc%";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 60;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Disc 2%";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 60;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Disc.Val";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 75;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "S-T Val";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 90;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "TTL Value";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 95;
             // 
             // label9
             // 
@@ -527,6 +451,7 @@
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
             this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.salesmenidtxtbox.TabIndex = 284;
+            this.salesmenidtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salesmenidtxtbox_KeyPress);
             // 
             // searchtowntxtbox
             // 
@@ -536,7 +461,6 @@
             this.searchtowntxtbox.Name = "searchtowntxtbox";
             this.searchtowntxtbox.Size = new System.Drawing.Size(192, 16);
             this.searchtowntxtbox.TabIndex = 283;
-            this.searchtowntxtbox.TextChanged += new System.EventHandler(this.searchtowntxtbox_TextChanged);
             // 
             // label4
             // 
@@ -547,8 +471,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 282;
-            this.label4.Text = "Search/Town";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Text = "Sector, Town";
             // 
             // label3
             // 
@@ -560,7 +483,6 @@
             this.label3.Size = new System.Drawing.Size(99, 16);
             this.label3.TabIndex = 281;
             this.label3.Text = "Customer Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -572,7 +494,6 @@
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 280;
             this.label2.Text = "Customer ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // customernametxtbox
             // 
@@ -582,7 +503,6 @@
             this.customernametxtbox.Name = "customernametxtbox";
             this.customernametxtbox.Size = new System.Drawing.Size(322, 16);
             this.customernametxtbox.TabIndex = 279;
-            this.customernametxtbox.TextChanged += new System.EventHandler(this.customernametxtbox_TextChanged);
             // 
             // customeridtxtbox
             // 
@@ -592,17 +512,16 @@
             this.customeridtxtbox.Name = "customeridtxtbox";
             this.customeridtxtbox.Size = new System.Drawing.Size(110, 16);
             this.customeridtxtbox.TabIndex = 278;
-            this.customeridtxtbox.TextChanged += new System.EventHandler(this.customeridtxtbox_TextChanged);
+            this.customeridtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.customeridtxtbox_KeyPress);
             // 
             // orderidtxtbox
             // 
             this.orderidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderidtxtbox.Location = new System.Drawing.Point(281, 97);
+            this.orderidtxtbox.Location = new System.Drawing.Point(281, 92);
             this.orderidtxtbox.Multiline = true;
             this.orderidtxtbox.Name = "orderidtxtbox";
-            this.orderidtxtbox.Size = new System.Drawing.Size(120, 16);
+            this.orderidtxtbox.Size = new System.Drawing.Size(120, 23);
             this.orderidtxtbox.TabIndex = 277;
-            this.orderidtxtbox.TextChanged += new System.EventHandler(this.orderidtxtbox_TextChanged);
             // 
             // orderdatetxtbo
             // 
@@ -611,7 +530,6 @@
             this.orderdatetxtbo.Name = "orderdatetxtbo";
             this.orderdatetxtbo.Size = new System.Drawing.Size(103, 16);
             this.orderdatetxtbo.TabIndex = 276;
-            this.orderdatetxtbo.TextChanged += new System.EventHandler(this.orderdatetxtbo_TextChanged);
             // 
             // billnootxtbox
             // 
@@ -621,17 +539,15 @@
             this.billnootxtbox.Name = "billnootxtbox";
             this.billnootxtbox.Size = new System.Drawing.Size(110, 16);
             this.billnootxtbox.TabIndex = 275;
-            this.billnootxtbox.TextChanged += new System.EventHandler(this.billnootxtbox_TextChanged);
             // 
             // saleidtxtbox
             // 
             this.saleidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.saleidtxtbox.Location = new System.Drawing.Point(30, 99);
+            this.saleidtxtbox.Location = new System.Drawing.Point(30, 92);
             this.saleidtxtbox.Multiline = true;
             this.saleidtxtbox.Name = "saleidtxtbox";
-            this.saleidtxtbox.Size = new System.Drawing.Size(110, 16);
+            this.saleidtxtbox.Size = new System.Drawing.Size(110, 23);
             this.saleidtxtbox.TabIndex = 274;
-            this.saleidtxtbox.TextChanged += new System.EventHandler(this.saleidtxtbox_TextChanged);
             // 
             // billlnolbl
             // 
@@ -643,7 +559,6 @@
             this.billlnolbl.Size = new System.Drawing.Size(42, 16);
             this.billlnolbl.TabIndex = 273;
             this.billlnolbl.Text = "Bill No";
-            this.billlnolbl.Click += new System.EventHandler(this.billlnolbl_Click);
             // 
             // orderdatelbl
             // 
@@ -655,19 +570,17 @@
             this.orderdatelbl.Size = new System.Drawing.Size(62, 16);
             this.orderdatelbl.TabIndex = 272;
             this.orderdatelbl.Text = "Sale Date";
-            this.orderdatelbl.Click += new System.EventHandler(this.orderdatelbl_Click);
             // 
             // orderidlbl
             // 
             this.orderidlbl.AutoSize = true;
             this.orderidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderidlbl.Location = new System.Drawing.Point(278, 78);
+            this.orderidlbl.Location = new System.Drawing.Point(278, 73);
             this.orderidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderidlbl.Name = "orderidlbl";
             this.orderidlbl.Size = new System.Drawing.Size(48, 16);
             this.orderidlbl.TabIndex = 271;
             this.orderidlbl.Text = "Sale ID";
-            this.orderidlbl.Click += new System.EventHandler(this.orderidlbl_Click);
             // 
             // saledatelbl
             // 
@@ -679,7 +592,6 @@
             this.saledatelbl.Size = new System.Drawing.Size(75, 16);
             this.saledatelbl.TabIndex = 270;
             this.saledatelbl.Text = "Return Date";
-            this.saledatelbl.Click += new System.EventHandler(this.saledatelbl_Click);
             // 
             // saleidlbl
             // 
@@ -691,7 +603,6 @@
             this.saleidlbl.Size = new System.Drawing.Size(61, 16);
             this.saleidlbl.TabIndex = 269;
             this.saleidlbl.Text = "Return ID";
-            this.saleidlbl.Click += new System.EventHandler(this.saleidlbl_Click);
             // 
             // label1
             // 
@@ -705,12 +616,326 @@
             this.label1.TabIndex = 268;
             this.label1.Text = "Sale Invoice";
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(602, 241);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 16);
+            this.label26.TabIndex = 362;
+            this.label26.Text = "Disc%";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(669, 241);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 16);
+            this.label25.TabIndex = 361;
+            this.label25.Text = "Disc Val-l";
+            // 
+            // discvaltxtbox
+            // 
+            this.discvaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discvaltxtbox.Location = new System.Drawing.Point(746, 259);
+            this.discvaltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.discvaltxtbox.Multiline = true;
+            this.discvaltxtbox.Name = "discvaltxtbox";
+            this.discvaltxtbox.Size = new System.Drawing.Size(65, 19);
+            this.discvaltxtbox.TabIndex = 360;
+            // 
+            // discvalltxtbox
+            // 
+            this.discvalltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discvalltxtbox.Location = new System.Drawing.Point(672, 259);
+            this.discvalltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.discvalltxtbox.Multiline = true;
+            this.discvalltxtbox.Name = "discvalltxtbox";
+            this.discvalltxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discvalltxtbox.TabIndex = 359;
+            // 
+            // salestaxtxtbox
+            // 
+            this.salestaxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salestaxtxtbox.Location = new System.Drawing.Point(814, 259);
+            this.salestaxtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.salestaxtxtbox.Multiline = true;
+            this.salestaxtxtbox.Name = "salestaxtxtbox";
+            this.salestaxtxtbox.Size = new System.Drawing.Size(93, 19);
+            this.salestaxtxtbox.TabIndex = 358;
+            this.salestaxtxtbox.TextChanged += new System.EventHandler(this.salestaxtxtbox_TextChanged);
+            // 
+            // bnsltxtbox
+            // 
+            this.bnsltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bnsltxtbox.Location = new System.Drawing.Point(473, 259);
+            this.bnsltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.bnsltxtbox.Multiline = true;
+            this.bnsltxtbox.Name = "bnsltxtbox";
+            this.bnsltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.bnsltxtbox.TabIndex = 357;
+            this.bnsltxtbox.TextChanged += new System.EventHandler(this.bnsltxtbox_TextChanged);
+            // 
+            // qtyptxtbox
+            // 
+            this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyptxtbox.Location = new System.Drawing.Point(365, 260);
+            this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyptxtbox.Multiline = true;
+            this.qtyptxtbox.Name = "qtyptxtbox";
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.TabIndex = 356;
+            this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
+            // 
+            // discpercenttxtbox
+            // 
+            this.discpercenttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discpercenttxtbox.Location = new System.Drawing.Point(602, 259);
+            this.discpercenttxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.discpercenttxtbox.Multiline = true;
+            this.discpercenttxtbox.Name = "discpercenttxtbox";
+            this.discpercenttxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discpercenttxtbox.TabIndex = 355;
+            this.discpercenttxtbox.TextChanged += new System.EventHandler(this.discpercenttxtbox_TextChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(814, 241);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(52, 16);
+            this.label24.TabIndex = 354;
+            this.label24.Text = "S-T Val";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(907, 241);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 16);
+            this.label23.TabIndex = 353;
+            this.label23.Text = "TTL Value";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(532, 241);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(38, 16);
+            this.label20.TabIndex = 352;
+            this.label20.Text = "Price";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(411, 241);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 16);
+            this.label13.TabIndex = 351;
+            this.label13.Text = "Qty(L)";
+            // 
+            // pricetxtbox
+            // 
+            this.pricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pricetxtbox.Location = new System.Drawing.Point(532, 259);
+            this.pricetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.pricetxtbox.Multiline = true;
+            this.pricetxtbox.Name = "pricetxtbox";
+            this.pricetxtbox.Size = new System.Drawing.Size(62, 19);
+            this.pricetxtbox.TabIndex = 350;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(470, 241);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 16);
+            this.label15.TabIndex = 349;
+            this.label15.Text = "Bns(L)";
+            // 
+            // ttlvaluetxtbox
+            // 
+            this.ttlvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ttlvaluetxtbox.Location = new System.Drawing.Point(910, 259);
+            this.ttlvaluetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.ttlvaluetxtbox.Multiline = true;
+            this.ttlvaluetxtbox.Name = "ttlvaluetxtbox";
+            this.ttlvaluetxtbox.Size = new System.Drawing.Size(66, 19);
+            this.ttlvaluetxtbox.TabIndex = 348;
+            this.ttlvaluetxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ttlvaluetxtbox_KeyPress);
+            // 
+            // qtyltxtbox
+            // 
+            this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtyltxtbox.Location = new System.Drawing.Point(414, 259);
+            this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.qtyltxtbox.Multiline = true;
+            this.qtyltxtbox.Name = "qtyltxtbox";
+            this.qtyltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.qtyltxtbox.TabIndex = 347;
+            this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
+            // 
+            // multipliertxtbox
+            // 
+            this.multipliertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.multipliertxtbox.Location = new System.Drawing.Point(291, 259);
+            this.multipliertxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.multipliertxtbox.Multiline = true;
+            this.multipliertxtbox.Name = "multipliertxtbox";
+            this.multipliertxtbox.Size = new System.Drawing.Size(69, 20);
+            this.multipliertxtbox.TabIndex = 346;
+            // 
+            // productnametxtbox
+            // 
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(90, 258);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.TabIndex = 344;
+            // 
+            // productidtxtbox
+            // 
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(13, 259);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.TabIndex = 343;
+            this.productidtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.productidtxtbox_KeyPress);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(749, 241);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 16);
+            this.label19.TabIndex = 342;
+            this.label19.Text = "Disc Val";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(362, 240);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(44, 16);
+            this.label22.TabIndex = 341;
+            this.label22.Text = "Qty(P)";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(292, 240);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 16);
+            this.label27.TabIndex = 340;
+            this.label27.Text = "Pack";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(191, 239);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(78, 16);
+            this.label28.TabIndex = 339;
+            this.label28.Text = "Pack Name";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(87, 240);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(68, 16);
+            this.label29.TabIndex = 338;
+            this.label29.Text = "Pro.Name";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(10, 241);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(44, 16);
+            this.label30.TabIndex = 337;
+            this.label30.Text = "Pro.ID";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(753, 236);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(0, 16);
+            this.label31.TabIndex = 336;
+            // 
+            // packnamecomboBox
+            // 
+            this.packnamecomboBox.FormattingEnabled = true;
+            this.packnamecomboBox.Location = new System.Drawing.Point(192, 256);
+            this.packnamecomboBox.Name = "packnamecomboBox";
+            this.packnamecomboBox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecomboBox.TabIndex = 363;
+            // 
             // Sale_Return_Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(993, 654);
+            this.Controls.Add(this.packnamecomboBox);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.discvaltxtbox);
+            this.Controls.Add(this.discvalltxtbox);
+            this.Controls.Add(this.salestaxtxtbox);
+            this.Controls.Add(this.bnsltxtbox);
+            this.Controls.Add(this.qtyptxtbox);
+            this.Controls.Add(this.discpercenttxtbox);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.pricetxtbox);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.ttlvaluetxtbox);
+            this.Controls.Add(this.qtyltxtbox);
+            this.Controls.Add(this.multipliertxtbox);
+            this.Controls.Add(this.productnametxtbox);
+            this.Controls.Add(this.productidtxtbox);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.closebtn);
@@ -720,7 +945,7 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.paidamounttxtbox);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.remainingbalancextxtbox);
             this.Controls.Add(this.prevbaltxtbox);
             this.Controls.Add(this.totalvaluetxtbox);
             this.Controls.Add(this.specialdisctxtbox);
@@ -768,6 +993,7 @@
             this.Name = "Sale_Return_Invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale_Return_Invoice";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sale_Return_Invoice_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -787,7 +1013,7 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.TextBox paidamounttxtbox;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox remainingbalancextxtbox;
         private System.Windows.Forms.TextBox prevbaltxtbox;
         private System.Windows.Forms.TextBox totalvaluetxtbox;
         private System.Windows.Forms.TextBox specialdisctxtbox;
@@ -829,18 +1055,32 @@
         private System.Windows.Forms.Label saledatelbl;
         private System.Windows.Forms.Label saleidlbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox discvaltxtbox;
+        private System.Windows.Forms.TextBox discvalltxtbox;
+        private System.Windows.Forms.TextBox salestaxtxtbox;
+        private System.Windows.Forms.TextBox bnsltxtbox;
+        private System.Windows.Forms.TextBox qtyptxtbox;
+        private System.Windows.Forms.TextBox discpercenttxtbox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox pricetxtbox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox ttlvaluetxtbox;
+        private System.Windows.Forms.TextBox qtyltxtbox;
+        private System.Windows.Forms.TextBox multipliertxtbox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox packnamecomboBox;
     }
 }

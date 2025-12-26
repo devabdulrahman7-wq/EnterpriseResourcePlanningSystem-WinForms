@@ -1,6 +1,6 @@
 ﻿namespace FO_2022
 {
-    partial class totalbtn
+    partial class Credit_Voucher
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(totalbtn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credit_Voucher));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.accountnametxtbox = new System.Windows.Forms.TextBox();
@@ -43,11 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Button();
             this.removebtn = new System.Windows.Forms.Button();
@@ -55,7 +50,7 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.totaltxtbox = new System.Windows.Forms.Button();
             this.vouchernotxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.todate = new System.Windows.Forms.Label();
@@ -75,6 +70,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 493;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -83,14 +79,14 @@
             this.label2.Location = new System.Drawing.Point(357, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 32);
+            this.label2.Size = new System.Drawing.Size(200, 32);
             this.label2.TabIndex = 492;
-            this.label2.Text = "Debit Voucher";
+            this.label2.Text = "Credit Voucher";
             // 
             // accountnametxtbox
             // 
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnametxtbox.Location = new System.Drawing.Point(166, 144);
+            this.accountnametxtbox.Location = new System.Drawing.Point(164, 144);
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
@@ -117,6 +113,7 @@
             this.accountidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.accountidsearch.TabIndex = 498;
             this.accountidsearch.TabStop = false;
+            this.accountidsearch.Click += new System.EventHandler(this.accountidsearch_Click);
             // 
             // a
             // 
@@ -142,12 +139,13 @@
             // amounttxtbox
             // 
             this.amounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.amounttxtbox.Location = new System.Drawing.Point(390, 144);
+            this.amounttxtbox.Location = new System.Drawing.Point(389, 144);
             this.amounttxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.amounttxtbox.Multiline = true;
             this.amounttxtbox.Name = "amounttxtbox";
             this.amounttxtbox.Size = new System.Drawing.Size(113, 25);
             this.amounttxtbox.TabIndex = 503;
+            this.amounttxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amounttxtbox_KeyPress);
             // 
             // narrationtxtbox
             // 
@@ -168,6 +166,7 @@
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(100, 25);
             this.billnotxtbox.TabIndex = 505;
+            this.billnotxtbox.Click += new System.EventHandler(this.showBillsbtn_Click);
             // 
             // label4
             // 
@@ -205,45 +204,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(12, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(851, 244);
             this.dataGridView1.TabIndex = 509;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Amount No";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Amount Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 229;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Debit";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 117;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Bill No";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 104;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Narration";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 253;
             // 
             // label7
             // 
@@ -284,6 +248,7 @@
             this.removebtn.TabIndex = 514;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // openbtn
             // 
@@ -298,6 +263,7 @@
             this.openbtn.TabIndex = 513;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -312,6 +278,7 @@
             this.clearbtn.TabIndex = 512;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -326,6 +293,7 @@
             this.savebtn.TabIndex = 511;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // printbtn
             // 
@@ -339,19 +307,20 @@
             this.printbtn.TabIndex = 516;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
-            // button1
+            // totaltxtbox
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(790, 424);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 517;
-            this.button1.UseVisualStyleBackColor = false;
+            this.totaltxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.totaltxtbox.FlatAppearance.BorderSize = 0;
+            this.totaltxtbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.totaltxtbox.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totaltxtbox.Location = new System.Drawing.Point(790, 424);
+            this.totaltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox.Name = "totaltxtbox";
+            this.totaltxtbox.Size = new System.Drawing.Size(75, 25);
+            this.totaltxtbox.TabIndex = 517;
+            this.totaltxtbox.UseVisualStyleBackColor = false;
             // 
             // vouchernotxtbox
             // 
@@ -392,7 +361,7 @@
             this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
             this.voucherdatepcker.TabIndex = 529;
             // 
-            // totalbtn
+            // Credit_Voucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -402,7 +371,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.todate);
             this.Controls.Add(this.voucherdatepcker);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.totaltxtbox);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
@@ -427,9 +396,10 @@
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "totalbtn";
+            this.Name = "Credit_Voucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credit_Voucher";
+            this.Load += new System.EventHandler(this.Credit_Voucher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -461,12 +431,7 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button printbtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button totaltxtbox;
         private System.Windows.Forms.TextBox vouchernotxtbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label todate;

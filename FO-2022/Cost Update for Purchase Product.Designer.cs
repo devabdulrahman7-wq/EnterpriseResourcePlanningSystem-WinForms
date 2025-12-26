@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.purchaseidtxtbox = new System.Windows.Forms.TextBox();
+            this.TTLvaluetxtbox = new System.Windows.Forms.TextBox();
+            this.discountpercentagetxtbox = new System.Windows.Forms.TextBox();
+            this.pricepacktxtbox = new System.Windows.Forms.TextBox();
+            this.qtytxtbox = new System.Windows.Forms.TextBox();
+            this.productnametxtbox = new System.Windows.Forms.TextBox();
+            this.productidtxtbox = new System.Windows.Forms.TextBox();
             this.closebtn = new System.Windows.Forms.Button();
             this.updatebtn = new System.Windows.Forms.Button();
             this.findbtn = new System.Windows.Forms.Button();
@@ -67,81 +67,91 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(141, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Product Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 104);
+            this.label3.Location = new System.Drawing.Point(23, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Purchase ID";
             // 
-            // textBox2
+            // purchaseidtxtbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(19, 123);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 23);
-            this.textBox2.TabIndex = 397;
+            this.purchaseidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.purchaseidtxtbox.Location = new System.Drawing.Point(23, 120);
+            this.purchaseidtxtbox.Multiline = true;
+            this.purchaseidtxtbox.Name = "purchaseidtxtbox";
+            this.purchaseidtxtbox.Size = new System.Drawing.Size(113, 23);
+            this.purchaseidtxtbox.TabIndex = 397;
+            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged);
             // 
-            // textBox1
+            // TTLvaluetxtbox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(637, 177);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 23);
-            this.textBox1.TabIndex = 398;
+            this.TTLvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TTLvaluetxtbox.Location = new System.Drawing.Point(637, 177);
+            this.TTLvaluetxtbox.Multiline = true;
+            this.TTLvaluetxtbox.Name = "TTLvaluetxtbox";
+            this.TTLvaluetxtbox.ReadOnly = true;
+            this.TTLvaluetxtbox.Size = new System.Drawing.Size(93, 23);
+            this.TTLvaluetxtbox.TabIndex = 398;
+            this.TTLvaluetxtbox.TextChanged += new System.EventHandler(this.TTLvaluetxtbox_TextChanged);
             // 
-            // textBox3
+            // discountpercentagetxtbox
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(557, 177);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 23);
-            this.textBox3.TabIndex = 399;
+            this.discountpercentagetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discountpercentagetxtbox.Location = new System.Drawing.Point(557, 177);
+            this.discountpercentagetxtbox.Multiline = true;
+            this.discountpercentagetxtbox.Name = "discountpercentagetxtbox";
+            this.discountpercentagetxtbox.Size = new System.Drawing.Size(74, 23);
+            this.discountpercentagetxtbox.TabIndex = 399;
+            this.discountpercentagetxtbox.TextChanged += new System.EventHandler(this.discountpercentagetxtbox_TextChanged);
             // 
-            // textBox4
+            // pricepacktxtbox
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(456, 177);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(95, 23);
-            this.textBox4.TabIndex = 400;
+            this.pricepacktxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pricepacktxtbox.Location = new System.Drawing.Point(456, 177);
+            this.pricepacktxtbox.Multiline = true;
+            this.pricepacktxtbox.Name = "pricepacktxtbox";
+            this.pricepacktxtbox.Size = new System.Drawing.Size(95, 23);
+            this.pricepacktxtbox.TabIndex = 400;
+            this.pricepacktxtbox.TextChanged += new System.EventHandler(this.pricepacktxtbox_TextChanged);
             // 
-            // textBox5
+            // qtytxtbox
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(350, 177);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 401;
+            this.qtytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qtytxtbox.Location = new System.Drawing.Point(350, 177);
+            this.qtytxtbox.Multiline = true;
+            this.qtytxtbox.Name = "qtytxtbox";
+            this.qtytxtbox.ReadOnly = true;
+            this.qtytxtbox.Size = new System.Drawing.Size(100, 23);
+            this.qtytxtbox.TabIndex = 401;
+            this.qtytxtbox.TextChanged += new System.EventHandler(this.qtytxtbox_TextChanged);
             // 
-            // textBox6
+            // productnametxtbox
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(141, 177);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 23);
-            this.textBox6.TabIndex = 402;
+            this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productnametxtbox.Location = new System.Drawing.Point(141, 177);
+            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Name = "productnametxtbox";
+            this.productnametxtbox.ReadOnly = true;
+            this.productnametxtbox.Size = new System.Drawing.Size(203, 23);
+            this.productnametxtbox.TabIndex = 402;
+            this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
-            // textBox7
+            // productidtxtbox
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(22, 177);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(113, 23);
-            this.textBox7.TabIndex = 403;
+            this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productidtxtbox.Location = new System.Drawing.Point(22, 177);
+            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Name = "productidtxtbox";
+            this.productidtxtbox.Size = new System.Drawing.Size(113, 23);
+            this.productidtxtbox.TabIndex = 403;
+            this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
             // closebtn
             // 
@@ -171,6 +181,7 @@
             this.updatebtn.TabIndex = 644;
             this.updatebtn.Text = "Update Cost";
             this.updatebtn.UseVisualStyleBackColor = false;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // findbtn
             // 
@@ -185,6 +196,7 @@
             this.findbtn.TabIndex = 643;
             this.findbtn.Text = "Find";
             this.findbtn.UseVisualStyleBackColor = false;
+            this.findbtn.Click += new System.EventHandler(this.findbtn_Click);
             // 
             // label4
             // 
@@ -268,13 +280,13 @@
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.updatebtn);
             this.Controls.Add(this.findbtn);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.productidtxtbox);
+            this.Controls.Add(this.productnametxtbox);
+            this.Controls.Add(this.qtytxtbox);
+            this.Controls.Add(this.pricepacktxtbox);
+            this.Controls.Add(this.discountpercentagetxtbox);
+            this.Controls.Add(this.TTLvaluetxtbox);
+            this.Controls.Add(this.purchaseidtxtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -284,6 +296,7 @@
             this.Name = "Cost_Update_for_Purchase_Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cost_Update_for_Purchase_Product";
+            this.Load += new System.EventHandler(this.Cost_Update_for_Purchase_Product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,13 +308,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox purchaseidtxtbox;
+        private System.Windows.Forms.TextBox TTLvaluetxtbox;
+        private System.Windows.Forms.TextBox discountpercentagetxtbox;
+        private System.Windows.Forms.TextBox pricepacktxtbox;
+        private System.Windows.Forms.TextBox qtytxtbox;
+        private System.Windows.Forms.TextBox productnametxtbox;
+        private System.Windows.Forms.TextBox productidtxtbox;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button findbtn;
