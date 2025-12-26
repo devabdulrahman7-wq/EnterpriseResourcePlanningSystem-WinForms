@@ -33,11 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.purchaseidtxtbox = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.fromdatepicker = new System.Windows.Forms.DateTimePicker();
+            this.todatepicker = new System.Windows.Forms.DateTimePicker();
+            this.searchpurchaseidtxtbox = new System.Windows.Forms.TextBox();
+            this.radioButtonorderbydate = new System.Windows.Forms.RadioButton();
+            this.radioButtonorderbyid = new System.Windows.Forms.RadioButton();
             this.refreshbtn = new System.Windows.Forms.Button();
             this.selectbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
@@ -91,50 +91,55 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Purchase ID:";
             // 
-            // dateTimePicker1
+            // fromdatepicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 84);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.fromdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fromdatepicker.Location = new System.Drawing.Point(139, 84);
+            this.fromdatepicker.Name = "fromdatepicker";
+            this.fromdatepicker.Size = new System.Drawing.Size(109, 20);
+            this.fromdatepicker.TabIndex = 4;
+            this.fromdatepicker.ValueChanged += new System.EventHandler(this.fromdatepicker_ValueChanged);
             // 
-            // dateTimePicker2
+            // todatepicker
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(332, 84);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 5;
+            this.todatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.todatepicker.Location = new System.Drawing.Point(332, 84);
+            this.todatepicker.Name = "todatepicker";
+            this.todatepicker.Size = new System.Drawing.Size(102, 20);
+            this.todatepicker.TabIndex = 5;
+            this.todatepicker.ValueChanged += new System.EventHandler(this.todatepicker_ValueChanged);
             // 
-            // purchaseidtxtbox
+            // searchpurchaseidtxtbox
             // 
-            this.purchaseidtxtbox.Location = new System.Drawing.Point(139, 114);
-            this.purchaseidtxtbox.Name = "purchaseidtxtbox";
-            this.purchaseidtxtbox.Size = new System.Drawing.Size(109, 20);
-            this.purchaseidtxtbox.TabIndex = 6;
+            this.searchpurchaseidtxtbox.Location = new System.Drawing.Point(139, 114);
+            this.searchpurchaseidtxtbox.Name = "searchpurchaseidtxtbox";
+            this.searchpurchaseidtxtbox.Size = new System.Drawing.Size(109, 20);
+            this.searchpurchaseidtxtbox.TabIndex = 6;
+            this.searchpurchaseidtxtbox.TextChanged += new System.EventHandler(this.searchpurchaseidtxtbox_TextChanged);
             // 
-            // radioButton1
+            // radioButtonorderbydate
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(256, 117);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Order By Date";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonorderbydate.AutoSize = true;
+            this.radioButtonorderbydate.Location = new System.Drawing.Point(256, 117);
+            this.radioButtonorderbydate.Name = "radioButtonorderbydate";
+            this.radioButtonorderbydate.Size = new System.Drawing.Size(92, 17);
+            this.radioButtonorderbydate.TabIndex = 7;
+            this.radioButtonorderbydate.TabStop = true;
+            this.radioButtonorderbydate.Text = "Order By Date";
+            this.radioButtonorderbydate.UseVisualStyleBackColor = true;
+            this.radioButtonorderbydate.CheckedChanged += new System.EventHandler(this.radioButtonorderbydate_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonorderbyid
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(354, 117);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Order By ID";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonorderbyid.AutoSize = true;
+            this.radioButtonorderbyid.Location = new System.Drawing.Point(354, 117);
+            this.radioButtonorderbyid.Name = "radioButtonorderbyid";
+            this.radioButtonorderbyid.Size = new System.Drawing.Size(80, 17);
+            this.radioButtonorderbyid.TabIndex = 8;
+            this.radioButtonorderbyid.TabStop = true;
+            this.radioButtonorderbyid.Text = "Order By ID";
+            this.radioButtonorderbyid.UseVisualStyleBackColor = true;
+            this.radioButtonorderbyid.CheckedChanged += new System.EventHandler(this.radioButtonorderbyid_CheckedChanged);
             // 
             // refreshbtn
             // 
@@ -148,6 +153,7 @@
             this.refreshbtn.TabIndex = 9;
             this.refreshbtn.Text = "Refresh";
             this.refreshbtn.UseVisualStyleBackColor = false;
+            this.refreshbtn.Click += new System.EventHandler(this.refreshbtn_Click);
             // 
             // selectbtn
             // 
@@ -161,6 +167,7 @@
             this.selectbtn.TabIndex = 10;
             this.selectbtn.Text = "Select";
             this.selectbtn.UseVisualStyleBackColor = false;
+            this.selectbtn.Click += new System.EventHandler(this.selectbtn_Click);
             // 
             // cancelbtn
             // 
@@ -174,6 +181,7 @@
             this.cancelbtn.TabIndex = 11;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // dataGridView1
             // 
@@ -187,6 +195,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(428, 311);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
@@ -233,11 +242,11 @@
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.selectbtn);
             this.Controls.Add(this.refreshbtn);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.purchaseidtxtbox);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.radioButtonorderbyid);
+            this.Controls.Add(this.radioButtonorderbydate);
+            this.Controls.Add(this.searchpurchaseidtxtbox);
+            this.Controls.Add(this.todatepicker);
+            this.Controls.Add(this.fromdatepicker);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -246,6 +255,7 @@
             this.Name = "SearchPurchaseInvoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchPurchaseInvoice";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -259,11 +269,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox purchaseidtxtbox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DateTimePicker fromdatepicker;
+        private System.Windows.Forms.DateTimePicker todatepicker;
+        private System.Windows.Forms.TextBox searchpurchaseidtxtbox;
+        private System.Windows.Forms.RadioButton radioButtonorderbydate;
+        private System.Windows.Forms.RadioButton radioButtonorderbyid;
         private System.Windows.Forms.Button refreshbtn;
         private System.Windows.Forms.Button selectbtn;
         private System.Windows.Forms.Button cancelbtn;

@@ -38,7 +38,7 @@
             this.onlinebtn = new System.Windows.Forms.RadioButton();
             this.vpaymentbtn = new System.Windows.Forms.RadioButton();
             this.cashbtn = new System.Windows.Forms.RadioButton();
-            this.recoveridtxtbox = new System.Windows.Forms.TextBox();
+            this.recoveyridtxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,39 +46,46 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.partyrecoverytxtbox = new System.Windows.Forms.TextBox();
+            this.vendorpartyrecoverytxtbox = new System.Windows.Forms.TextBox();
             this.cstmridtxtbox = new System.Windows.Forms.TextBox();
-            this.customernametxtbox = new System.Windows.Forms.TextBox();
-            this.vendornametxtbox = new System.Windows.Forms.TextBox();
+            this.fetchedcustomernametxtbox = new System.Windows.Forms.TextBox();
+            this.fetchedvendornametxtbox = new System.Windows.Forms.TextBox();
             this.vendoridtxtbox = new System.Windows.Forms.TextBox();
-            this.balancetxtbox = new System.Windows.Forms.TextBox();
+            this.cstmrbalancetxtbox = new System.Windows.Forms.TextBox();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.customeridsearch = new System.Windows.Forms.PictureBox();
             this.vendoridsearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.closebtn = new System.Windows.Forms.Button();
             this.removebtn = new System.Windows.Forms.Button();
             this.openbtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.totaltxtbox1 = new System.Windows.Forms.TextBox();
+            this.totaltxtbox2 = new System.Windows.Forms.TextBox();
+            this.totaltxtbox14 = new System.Windows.Forms.TextBox();
+            this.totaltxtbox3 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.saleidtxtbox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.customeridtxtbox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.customernametxtbox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.townandsectortxtbox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.recoveredtxtbox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.invoiceamounttxtbox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.disctxtbox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.recoverytxtbox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.balancetxtbox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.chkwitninvoice = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customeridsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).BeginInit();
@@ -90,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(466, 24);
+            this.label1.Location = new System.Drawing.Point(423, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(366, 31);
@@ -101,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 95);
+            this.label2.Location = new System.Drawing.Point(26, 91);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
@@ -127,6 +134,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(107, 23);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox1
             // 
@@ -155,6 +163,7 @@
             this.chqbtn.TabStop = true;
             this.chqbtn.Text = "Cheque";
             this.chqbtn.UseVisualStyleBackColor = true;
+            this.chqbtn.CheckedChanged += new System.EventHandler(this.chqbtn_CheckedChanged);
             // 
             // onlinebtn
             // 
@@ -168,6 +177,7 @@
             this.onlinebtn.TabStop = true;
             this.onlinebtn.Text = "Online";
             this.onlinebtn.UseVisualStyleBackColor = true;
+            this.onlinebtn.CheckedChanged += new System.EventHandler(this.onlinebtn_CheckedChanged);
             // 
             // vpaymentbtn
             // 
@@ -181,6 +191,7 @@
             this.vpaymentbtn.TabStop = true;
             this.vpaymentbtn.Text = "V-Payment";
             this.vpaymentbtn.UseVisualStyleBackColor = true;
+            this.vpaymentbtn.CheckedChanged += new System.EventHandler(this.vpaymentbtn_CheckedChanged);
             // 
             // cashbtn
             // 
@@ -194,22 +205,24 @@
             this.cashbtn.TabStop = true;
             this.cashbtn.Text = "Cash";
             this.cashbtn.UseVisualStyleBackColor = true;
+            //this.cashbtn.CheckedChanged += new System.EventHandler(this.cashbtn_CheckedChanged);
             // 
-            // recoveridtxtbox
+            // recoveyridtxtbox
             // 
-            this.recoveridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recoveridtxtbox.Location = new System.Drawing.Point(51, 115);
-            this.recoveridtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.recoveridtxtbox.Multiline = true;
-            this.recoveridtxtbox.Name = "recoveridtxtbox";
-            this.recoveridtxtbox.Size = new System.Drawing.Size(104, 19);
-            this.recoveridtxtbox.TabIndex = 189;
+            this.recoveyridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recoveyridtxtbox.Location = new System.Drawing.Point(29, 111);
+            this.recoveyridtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.recoveyridtxtbox.Multiline = true;
+            this.recoveyridtxtbox.Name = "recoveyridtxtbox";
+            this.recoveyridtxtbox.Size = new System.Drawing.Size(104, 19);
+            this.recoveyridtxtbox.TabIndex = 189;
+            //this.recoveyridtxtbox.TextChanged += new System.EventHandler(this.recoveridtxtbox_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(48, 156);
+            this.label4.Location = new System.Drawing.Point(26, 152);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
@@ -270,7 +283,7 @@
             this.label9.Size = new System.Drawing.Size(99, 16);
             this.label9.TabIndex = 195;
             this.label9.Text = "Customer Name";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            //this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -282,17 +295,18 @@
             this.label10.Size = new System.Drawing.Size(83, 16);
             this.label10.TabIndex = 196;
             this.label10.Text = "Custromer ID";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            //this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // partyrecoverytxtbox
+            // vendorpartyrecoverytxtbox
             // 
-            this.partyrecoverytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyrecoverytxtbox.Location = new System.Drawing.Point(1030, 147);
-            this.partyrecoverytxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partyrecoverytxtbox.Multiline = true;
-            this.partyrecoverytxtbox.Name = "partyrecoverytxtbox";
-            this.partyrecoverytxtbox.Size = new System.Drawing.Size(102, 17);
-            this.partyrecoverytxtbox.TabIndex = 197;
+            this.vendorpartyrecoverytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vendorpartyrecoverytxtbox.Location = new System.Drawing.Point(1030, 147);
+            this.vendorpartyrecoverytxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.vendorpartyrecoverytxtbox.Multiline = true;
+            this.vendorpartyrecoverytxtbox.Name = "vendorpartyrecoverytxtbox";
+            this.vendorpartyrecoverytxtbox.Size = new System.Drawing.Size(102, 17);
+            this.vendorpartyrecoverytxtbox.TabIndex = 197;
+            this.vendorpartyrecoverytxtbox.TextChanged += new System.EventHandler(this.vendorpartyrecoverytxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -305,26 +319,25 @@
             this.cstmridtxtbox.TabIndex = 197;
             this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
-            // customernametxtbox
+            // fetchedcustomernametxtbox
             // 
-            this.customernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.customernametxtbox.Location = new System.Drawing.Point(789, 100);
-            this.customernametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.customernametxtbox.Multiline = true;
-            this.customernametxtbox.Name = "customernametxtbox";
-            this.customernametxtbox.Size = new System.Drawing.Size(239, 16);
-            this.customernametxtbox.TabIndex = 198;
-            this.customernametxtbox.TextChanged += new System.EventHandler(this.customernametxtbox_TextChanged);
+            this.fetchedcustomernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fetchedcustomernametxtbox.Location = new System.Drawing.Point(792, 100);
+            this.fetchedcustomernametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fetchedcustomernametxtbox.Multiline = true;
+            this.fetchedcustomernametxtbox.Name = "fetchedcustomernametxtbox";
+            this.fetchedcustomernametxtbox.Size = new System.Drawing.Size(236, 16);
+            this.fetchedcustomernametxtbox.TabIndex = 198;
             // 
-            // vendornametxtbox
+            // fetchedvendornametxtbox
             // 
-            this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendornametxtbox.Location = new System.Drawing.Point(789, 148);
-            this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.vendornametxtbox.Multiline = true;
-            this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(239, 16);
-            this.vendornametxtbox.TabIndex = 200;
+            this.fetchedvendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fetchedvendornametxtbox.Location = new System.Drawing.Point(792, 148);
+            this.fetchedvendornametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fetchedvendornametxtbox.Multiline = true;
+            this.fetchedvendornametxtbox.Name = "fetchedvendornametxtbox";
+            this.fetchedvendornametxtbox.Size = new System.Drawing.Size(236, 16);
+            this.fetchedvendornametxtbox.TabIndex = 200;
             // 
             // vendoridtxtbox
             // 
@@ -336,33 +349,35 @@
             this.vendoridtxtbox.Size = new System.Drawing.Size(94, 22);
             this.vendoridtxtbox.TabIndex = 199;
             // 
-            // balancetxtbox
+            // cstmrbalancetxtbox
             // 
-            this.balancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.balancetxtbox.Location = new System.Drawing.Point(1030, 100);
-            this.balancetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.balancetxtbox.Multiline = true;
-            this.balancetxtbox.Name = "balancetxtbox";
-            this.balancetxtbox.Size = new System.Drawing.Size(102, 16);
-            this.balancetxtbox.TabIndex = 202;
+            this.cstmrbalancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cstmrbalancetxtbox.Location = new System.Drawing.Point(1030, 100);
+            this.cstmrbalancetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.cstmrbalancetxtbox.Multiline = true;
+            this.cstmrbalancetxtbox.Name = "cstmrbalancetxtbox";
+            this.cstmrbalancetxtbox.Size = new System.Drawing.Size(102, 16);
+            this.cstmrbalancetxtbox.TabIndex = 202;
+            this.cstmrbalancetxtbox.TextChanged += new System.EventHandler(this.cstmrbalancetxtbox_TextChanged);
             // 
             // narrationtxtbox
             // 
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.narrationtxtbox.Location = new System.Drawing.Point(51, 176);
+            this.narrationtxtbox.Location = new System.Drawing.Point(29, 172);
             this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(882, 22);
+            this.narrationtxtbox.Size = new System.Drawing.Size(1103, 22);
             this.narrationtxtbox.TabIndex = 201;
+            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // customeridsearch
             // 
             this.customeridsearch.Image = ((System.Drawing.Image)(resources.GetObject("customeridsearch.Image")));
-            this.customeridsearch.Location = new System.Drawing.Point(758, 97);
+            this.customeridsearch.Location = new System.Drawing.Point(767, 98);
             this.customeridsearch.Margin = new System.Windows.Forms.Padding(4);
             this.customeridsearch.Name = "customeridsearch";
-            this.customeridsearch.Size = new System.Drawing.Size(26, 22);
+            this.customeridsearch.Size = new System.Drawing.Size(22, 22);
             this.customeridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customeridsearch.TabIndex = 203;
             this.customeridsearch.TabStop = false;
@@ -371,106 +386,25 @@
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(758, 142);
+            this.vendoridsearch.Location = new System.Drawing.Point(767, 143);
             this.vendoridsearch.Margin = new System.Windows.Forms.Padding(4);
             this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(26, 22);
+            this.vendoridsearch.Size = new System.Drawing.Size(22, 22);
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 204;
             this.vendoridsearch.TabStop = false;
+            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 211);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 285);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1209, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(1208, 261);
             this.dataGridView1.TabIndex = 205;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Sale ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Customer ID";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 110;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Customer Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 130;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Sector & Town Name";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 180;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Inv Amount";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 110;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Recovered";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Recovery";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 80;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Disc ";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Balance";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 60;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Payment Mode";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Account #";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 90;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Narration";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 70;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             // 
             // closebtn
             // 
@@ -478,7 +412,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(792, 721);
+            this.closebtn.Location = new System.Drawing.Point(800, 593);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -493,7 +427,7 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(709, 721);
+            this.removebtn.Location = new System.Drawing.Point(717, 593);
             this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -508,7 +442,7 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(626, 721);
+            this.openbtn.Location = new System.Drawing.Point(634, 593);
             this.openbtn.Margin = new System.Windows.Forms.Padding(4);
             this.openbtn.Name = "openbtn";
             this.openbtn.Size = new System.Drawing.Size(75, 28);
@@ -523,7 +457,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(545, 721);
+            this.clearbtn.Location = new System.Drawing.Point(553, 593);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -538,7 +472,7 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(462, 721);
+            this.savebtn.Location = new System.Drawing.Point(470, 593);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -550,56 +484,60 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(369, 676);
+            this.label11.Location = new System.Drawing.Point(357, 548);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 16);
             this.label11.TabIndex = 211;
             this.label11.Text = "Total:";
             // 
-            // textBox1
+            // totaltxtbox1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(407, 676);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 16);
-            this.textBox1.TabIndex = 212;
+            this.totaltxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totaltxtbox1.Location = new System.Drawing.Point(415, 548);
+            this.totaltxtbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox1.Multiline = true;
+            this.totaltxtbox1.Name = "totaltxtbox1";
+            this.totaltxtbox1.Size = new System.Drawing.Size(94, 16);
+            this.totaltxtbox1.TabIndex = 212;
+            this.totaltxtbox1.TextChanged += new System.EventHandler(this.totaltxtbox1_TextChanged);
             // 
-            // textBox2
+            // totaltxtbox2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(503, 676);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(94, 16);
-            this.textBox2.TabIndex = 213;
+            this.totaltxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totaltxtbox2.Location = new System.Drawing.Point(511, 548);
+            this.totaltxtbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox2.Multiline = true;
+            this.totaltxtbox2.Name = "totaltxtbox2";
+            this.totaltxtbox2.Size = new System.Drawing.Size(94, 16);
+            this.totaltxtbox2.TabIndex = 213;
+            this.totaltxtbox2.TextChanged += new System.EventHandler(this.totaltxtbox2_TextChanged);
             // 
-            // textBox3
+            // totaltxtbox14
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(693, 676);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 16);
-            this.textBox3.TabIndex = 214;
+            this.totaltxtbox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totaltxtbox14.Location = new System.Drawing.Point(701, 548);
+            this.totaltxtbox14.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox14.Multiline = true;
+            this.totaltxtbox14.Name = "totaltxtbox14";
+            this.totaltxtbox14.Size = new System.Drawing.Size(174, 16);
+            this.totaltxtbox14.TabIndex = 214;
+            this.totaltxtbox14.TextChanged += new System.EventHandler(this.totaltxtbox14_TextChanged);
             // 
-            // textBox4
+            // totaltxtbox3
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(598, 676);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 16);
-            this.textBox4.TabIndex = 215;
+            this.totaltxtbox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totaltxtbox3.Location = new System.Drawing.Point(606, 548);
+            this.totaltxtbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox3.Multiline = true;
+            this.totaltxtbox3.Name = "totaltxtbox3";
+            this.totaltxtbox3.Size = new System.Drawing.Size(94, 16);
+            this.totaltxtbox3.TabIndex = 215;
+            this.totaltxtbox3.TextChanged += new System.EventHandler(this.totaltxtbox3_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1177, -3);
+            this.pictureBox2.Location = new System.Drawing.Point(1187, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 43);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -607,17 +545,250 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // saleidtxtbox
+            // 
+            this.saleidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saleidtxtbox.Location = new System.Drawing.Point(29, 259);
+            this.saleidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.saleidtxtbox.Multiline = true;
+            this.saleidtxtbox.Name = "saleidtxtbox";
+            this.saleidtxtbox.ReadOnly = true;
+            this.saleidtxtbox.Size = new System.Drawing.Size(81, 19);
+            this.saleidtxtbox.TabIndex = 270;
+            this.saleidtxtbox.TextChanged += new System.EventHandler(this.saleidtxtbox_TextChanged);
+            //this.saleidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.saleidtxtbox_KeyDown);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(26, 239);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 16);
+            this.label12.TabIndex = 269;
+            this.label12.Text = "Sale ID";
+            // 
+            // customeridtxtbox
+            // 
+            this.customeridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customeridtxtbox.Location = new System.Drawing.Point(118, 259);
+            this.customeridtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.customeridtxtbox.Multiline = true;
+            this.customeridtxtbox.Name = "customeridtxtbox";
+            this.customeridtxtbox.ReadOnly = true;
+            this.customeridtxtbox.Size = new System.Drawing.Size(93, 19);
+            this.customeridtxtbox.TabIndex = 272;
+            this.customeridtxtbox.TextChanged += new System.EventHandler(this.customeridtxtbox_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(115, 239);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 16);
+            this.label13.TabIndex = 271;
+            this.label13.Text = "Customer ID";
+            // 
+            // customernametxtbox
+            // 
+            this.customernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customernametxtbox.Location = new System.Drawing.Point(219, 259);
+            this.customernametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.customernametxtbox.Multiline = true;
+            this.customernametxtbox.Name = "customernametxtbox";
+            this.customernametxtbox.ReadOnly = true;
+            this.customernametxtbox.Size = new System.Drawing.Size(122, 19);
+            this.customernametxtbox.TabIndex = 274;
+            this.customernametxtbox.TextChanged += new System.EventHandler(this.customernametxtbox_TextChanged_1);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(216, 239);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 16);
+            this.label14.TabIndex = 273;
+            this.label14.Text = "Customer Name";
+            // 
+            // townandsectortxtbox
+            // 
+            this.townandsectortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.townandsectortxtbox.Location = new System.Drawing.Point(349, 259);
+            this.townandsectortxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.townandsectortxtbox.Multiline = true;
+            this.townandsectortxtbox.Name = "townandsectortxtbox";
+            this.townandsectortxtbox.ReadOnly = true;
+            this.townandsectortxtbox.Size = new System.Drawing.Size(196, 19);
+            this.townandsectortxtbox.TabIndex = 276;
+            this.townandsectortxtbox.TextChanged += new System.EventHandler(this.townandsectortxtbox_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(346, 239);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 16);
+            this.label15.TabIndex = 275;
+            this.label15.Text = "Sector / Town Name";
+            // 
+            // recoveredtxtbox
+            // 
+            this.recoveredtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recoveredtxtbox.Location = new System.Drawing.Point(637, 259);
+            this.recoveredtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.recoveredtxtbox.Multiline = true;
+            this.recoveredtxtbox.Name = "recoveredtxtbox";
+            this.recoveredtxtbox.Size = new System.Drawing.Size(84, 19);
+            this.recoveredtxtbox.TabIndex = 280;
+            this.recoveredtxtbox.TextChanged += new System.EventHandler(this.recoveredtxtbox_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(634, 239);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(67, 16);
+            this.label16.TabIndex = 279;
+            this.label16.Text = "Recovered";
+            // 
+            // invoiceamounttxtbox
+            // 
+            this.invoiceamounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.invoiceamounttxtbox.Location = new System.Drawing.Point(548, 259);
+            this.invoiceamounttxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.invoiceamounttxtbox.Multiline = true;
+            this.invoiceamounttxtbox.Name = "invoiceamounttxtbox";
+            this.invoiceamounttxtbox.Size = new System.Drawing.Size(81, 19);
+            this.invoiceamounttxtbox.TabIndex = 278;
+            //this.invoiceamounttxtbox.TextChanged += new System.EventHandler(this.invoiceamounttxtbox_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(545, 239);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(72, 16);
+            this.label17.TabIndex = 277;
+            this.label17.Text = "Inv Amount";
+            // 
+            // disctxtbox
+            // 
+            this.disctxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.disctxtbox.Location = new System.Drawing.Point(818, 259);
+            this.disctxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.disctxtbox.Multiline = true;
+            this.disctxtbox.Name = "disctxtbox";
+            this.disctxtbox.Size = new System.Drawing.Size(93, 19);
+            this.disctxtbox.TabIndex = 284;
+            //this.disctxtbox.TextChanged += new System.EventHandler(this.disctxtbox_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(815, 239);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(30, 16);
+            this.label18.TabIndex = 283;
+            this.label18.Text = "Disc";
+            // 
+            // recoverytxtbox
+            // 
+            this.recoverytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recoverytxtbox.Location = new System.Drawing.Point(729, 259);
+            this.recoverytxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.recoverytxtbox.Multiline = true;
+            this.recoverytxtbox.Name = "recoverytxtbox";
+            this.recoverytxtbox.Size = new System.Drawing.Size(81, 19);
+            this.recoverytxtbox.TabIndex = 282;
+            this.recoverytxtbox.TextChanged += new System.EventHandler(this.recoverytxtbox_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(726, 239);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 16);
+            this.label19.TabIndex = 281;
+            this.label19.Text = "Recovery ";
+            // 
+            // balancetxtbox
+            // 
+            this.balancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.balancetxtbox.Location = new System.Drawing.Point(919, 259);
+            this.balancetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.balancetxtbox.Multiline = true;
+            this.balancetxtbox.Name = "balancetxtbox";
+            this.balancetxtbox.Size = new System.Drawing.Size(295, 19);
+            this.balancetxtbox.TabIndex = 286;
+            this.balancetxtbox.TextChanged += new System.EventHandler(this.balancetxtbox_TextChanged);
+            this.balancetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.balancetxtbox_KeyDown);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(916, 239);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 16);
+            this.label21.TabIndex = 285;
+            this.label21.Text = "Balance";
+            // 
+            // chkwitninvoice
+            // 
+            this.chkwitninvoice.AutoSize = true;
+            this.chkwitninvoice.Location = new System.Drawing.Point(931, 33);
+            this.chkwitninvoice.Name = "chkwitninvoice";
+            this.chkwitninvoice.Size = new System.Drawing.Size(97, 20);
+            this.chkwitninvoice.TabIndex = 287;
+            this.chkwitninvoice.Text = "WIth Invoice";
+            this.chkwitninvoice.UseVisualStyleBackColor = true;
+            // 
             // Sales_Recvery__Invoice_Voice_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1215, 749);
+            this.ClientSize = new System.Drawing.Size(1227, 749);
+            this.Controls.Add(this.chkwitninvoice);
+            this.Controls.Add(this.balancetxtbox);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.disctxtbox);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.recoverytxtbox);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.recoveredtxtbox);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.invoiceamounttxtbox);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.townandsectortxtbox);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.customernametxtbox);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.customeridtxtbox);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.saleidtxtbox);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totaltxtbox3);
+            this.Controls.Add(this.totaltxtbox14);
+            this.Controls.Add(this.totaltxtbox2);
+            this.Controls.Add(this.totaltxtbox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
@@ -627,13 +798,13 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.vendoridsearch);
             this.Controls.Add(this.customeridsearch);
-            this.Controls.Add(this.balancetxtbox);
+            this.Controls.Add(this.cstmrbalancetxtbox);
             this.Controls.Add(this.narrationtxtbox);
-            this.Controls.Add(this.vendornametxtbox);
+            this.Controls.Add(this.fetchedvendornametxtbox);
             this.Controls.Add(this.vendoridtxtbox);
-            this.Controls.Add(this.customernametxtbox);
+            this.Controls.Add(this.fetchedcustomernametxtbox);
             this.Controls.Add(this.cstmridtxtbox);
-            this.Controls.Add(this.partyrecoverytxtbox);
+            this.Controls.Add(this.vendorpartyrecoverytxtbox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -641,7 +812,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.recoveridtxtbox);
+            this.Controls.Add(this.recoveyridtxtbox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
@@ -676,7 +847,7 @@
         private System.Windows.Forms.RadioButton onlinebtn;
         private System.Windows.Forms.RadioButton vpaymentbtn;
         private System.Windows.Forms.RadioButton cashbtn;
-        private System.Windows.Forms.TextBox recoveridtxtbox;
+        private System.Windows.Forms.TextBox recoveyridtxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -684,38 +855,45 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox partyrecoverytxtbox;
+        private System.Windows.Forms.TextBox vendorpartyrecoverytxtbox;
         private System.Windows.Forms.TextBox cstmridtxtbox;
-        private System.Windows.Forms.TextBox customernametxtbox;
-        private System.Windows.Forms.TextBox vendornametxtbox;
+        private System.Windows.Forms.TextBox fetchedcustomernametxtbox;
+        private System.Windows.Forms.TextBox fetchedvendornametxtbox;
         private System.Windows.Forms.TextBox vendoridtxtbox;
-        private System.Windows.Forms.TextBox balancetxtbox;
+        private System.Windows.Forms.TextBox cstmrbalancetxtbox;
         private System.Windows.Forms.TextBox narrationtxtbox;
         private System.Windows.Forms.PictureBox customeridsearch;
         private System.Windows.Forms.PictureBox vendoridsearch;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button removebtn;
         private System.Windows.Forms.Button openbtn;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox totaltxtbox1;
+        private System.Windows.Forms.TextBox totaltxtbox2;
+        private System.Windows.Forms.TextBox totaltxtbox14;
+        private System.Windows.Forms.TextBox totaltxtbox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox saleidtxtbox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox customeridtxtbox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox customernametxtbox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox townandsectortxtbox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox recoveredtxtbox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox invoiceamounttxtbox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox disctxtbox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox recoverytxtbox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox balancetxtbox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.CheckBox chkwitninvoice;
     }
 }

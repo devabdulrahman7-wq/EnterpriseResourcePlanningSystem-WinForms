@@ -39,16 +39,16 @@
             this.banknotxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.banknametxtbox = new System.Windows.Forms.TextBox();
-            this.cstmridsearch = new System.Windows.Forms.PictureBox();
-            this.chqtxtbox = new System.Windows.Forms.TextBox();
+            this.accountsearch = new System.Windows.Forms.PictureBox();
+            this.chqnotxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chqdatepcker = new System.Windows.Forms.DateTimePicker();
-            this.depositchqbox = new System.Windows.Forms.CheckBox();
+            this.reconcilethisdepositchqbox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.paytxtbox = new System.Windows.Forms.TextBox();
+            this.paytotxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.accountnametxtbox = new System.Windows.Forms.TextBox();
+            this.paytoaccountnametxtbox = new System.Windows.Forms.TextBox();
             this.paysearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.amounttxtbox = new System.Windows.Forms.TextBox();
@@ -56,9 +56,9 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receivedtxtbox = new System.Windows.Forms.TextBox();
+            this.receivedbytxtbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.totalchqtxtbox = new System.Windows.Forms.TextBox();
+            this.totalchqamounttxtbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paysearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,12 +84,13 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 527;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(239, 27);
+            this.label2.Location = new System.Drawing.Point(221, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(260, 32);
@@ -115,6 +116,7 @@
             this.vouchernotxtbox.Name = "vouchernotxtbox";
             this.vouchernotxtbox.Size = new System.Drawing.Size(122, 23);
             this.vouchernotxtbox.TabIndex = 530;
+            this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
             // 
             // label8
             // 
@@ -134,6 +136,7 @@
             this.voucherdatepcker.Name = "voucherdatepcker";
             this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
             this.voucherdatepcker.TabIndex = 528;
+            this.voucherdatepcker.ValueChanged += new System.EventHandler(this.voucherdatepcker_ValueChanged);
             // 
             // label7
             // 
@@ -152,8 +155,9 @@
             this.banknotxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.banknotxtbox.Multiline = true;
             this.banknotxtbox.Name = "banknotxtbox";
-            this.banknotxtbox.Size = new System.Drawing.Size(132, 23);
+            this.banknotxtbox.Size = new System.Drawing.Size(123, 23);
             this.banknotxtbox.TabIndex = 535;
+            this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
             // 
             // label6
             // 
@@ -172,29 +176,33 @@
             this.banknametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.banknametxtbox.Multiline = true;
             this.banknametxtbox.Name = "banknametxtbox";
+            this.banknametxtbox.ReadOnly = true;
             this.banknametxtbox.Size = new System.Drawing.Size(317, 23);
             this.banknametxtbox.TabIndex = 533;
+            this.banknametxtbox.TextChanged += new System.EventHandler(this.banknametxtbox_TextChanged);
             // 
-            // cstmridsearch
+            // accountsearch
             // 
-            this.cstmridsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmridsearch.Image")));
-            this.cstmridsearch.Location = new System.Drawing.Point(277, 167);
-            this.cstmridsearch.Margin = new System.Windows.Forms.Padding(5);
-            this.cstmridsearch.Name = "cstmridsearch";
-            this.cstmridsearch.Size = new System.Drawing.Size(40, 23);
-            this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cstmridsearch.TabIndex = 532;
-            this.cstmridsearch.TabStop = false;
+            this.accountsearch.Image = ((System.Drawing.Image)(resources.GetObject("accountsearch.Image")));
+            this.accountsearch.Location = new System.Drawing.Point(268, 167);
+            this.accountsearch.Margin = new System.Windows.Forms.Padding(5);
+            this.accountsearch.Name = "accountsearch";
+            this.accountsearch.Size = new System.Drawing.Size(40, 23);
+            this.accountsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.accountsearch.TabIndex = 532;
+            this.accountsearch.TabStop = false;
+            this.accountsearch.Click += new System.EventHandler(this.accountsearch_Click);
             // 
-            // chqtxtbox
+            // chqnotxtbox
             // 
-            this.chqtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.chqtxtbox.Location = new System.Drawing.Point(144, 220);
-            this.chqtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.chqtxtbox.Multiline = true;
-            this.chqtxtbox.Name = "chqtxtbox";
-            this.chqtxtbox.Size = new System.Drawing.Size(122, 23);
-            this.chqtxtbox.TabIndex = 538;
+            this.chqnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.chqnotxtbox.Location = new System.Drawing.Point(144, 220);
+            this.chqnotxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.chqnotxtbox.Multiline = true;
+            this.chqnotxtbox.Name = "chqnotxtbox";
+            this.chqnotxtbox.Size = new System.Drawing.Size(122, 23);
+            this.chqnotxtbox.TabIndex = 538;
+            this.chqnotxtbox.TextChanged += new System.EventHandler(this.chqnotxtbox_TextChanged);
             // 
             // label1
             // 
@@ -224,18 +232,20 @@
             this.chqdatepcker.Name = "chqdatepcker";
             this.chqdatepcker.Size = new System.Drawing.Size(132, 23);
             this.chqdatepcker.TabIndex = 540;
+            this.chqdatepcker.ValueChanged += new System.EventHandler(this.chqdatepcker_ValueChanged);
             // 
-            // depositchqbox
+            // reconcilethisdepositchqbox
             // 
-            this.depositchqbox.AutoSize = true;
-            this.depositchqbox.Checked = true;
-            this.depositchqbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.depositchqbox.Location = new System.Drawing.Point(458, 223);
-            this.depositchqbox.Name = "depositchqbox";
-            this.depositchqbox.Size = new System.Drawing.Size(177, 20);
-            this.depositchqbox.TabIndex = 542;
-            this.depositchqbox.Text = "Reconcile this deposit now";
-            this.depositchqbox.UseVisualStyleBackColor = true;
+            this.reconcilethisdepositchqbox.AutoSize = true;
+            this.reconcilethisdepositchqbox.Checked = true;
+            this.reconcilethisdepositchqbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.reconcilethisdepositchqbox.Location = new System.Drawing.Point(458, 223);
+            this.reconcilethisdepositchqbox.Name = "reconcilethisdepositchqbox";
+            this.reconcilethisdepositchqbox.Size = new System.Drawing.Size(177, 20);
+            this.reconcilethisdepositchqbox.TabIndex = 542;
+            this.reconcilethisdepositchqbox.Text = "Reconcile this deposit now";
+            this.reconcilethisdepositchqbox.UseVisualStyleBackColor = true;
+            this.reconcilethisdepositchqbox.CheckedChanged += new System.EventHandler(this.reconcilethisdepositchqbox_CheckedChanged);
             // 
             // label4
             // 
@@ -247,15 +257,16 @@
             this.label4.TabIndex = 547;
             this.label4.Text = "Pay To";
             // 
-            // paytxtbox
+            // paytotxtbox
             // 
-            this.paytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.paytxtbox.Location = new System.Drawing.Point(144, 271);
-            this.paytxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.paytxtbox.Multiline = true;
-            this.paytxtbox.Name = "paytxtbox";
-            this.paytxtbox.Size = new System.Drawing.Size(132, 23);
-            this.paytxtbox.TabIndex = 546;
+            this.paytotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paytotxtbox.Location = new System.Drawing.Point(144, 271);
+            this.paytotxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.paytotxtbox.Multiline = true;
+            this.paytotxtbox.Name = "paytotxtbox";
+            this.paytotxtbox.Size = new System.Drawing.Size(123, 23);
+            this.paytotxtbox.TabIndex = 546;
+            this.paytotxtbox.TextChanged += new System.EventHandler(this.paytotxtbox_TextChanged);
             // 
             // label9
             // 
@@ -267,20 +278,22 @@
             this.label9.TabIndex = 545;
             this.label9.Text = "Account Name";
             // 
-            // accountnametxtbox
+            // paytoaccountnametxtbox
             // 
-            this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnametxtbox.Location = new System.Drawing.Point(318, 271);
-            this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.accountnametxtbox.Multiline = true;
-            this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(223, 23);
-            this.accountnametxtbox.TabIndex = 544;
+            this.paytoaccountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paytoaccountnametxtbox.Location = new System.Drawing.Point(318, 271);
+            this.paytoaccountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.paytoaccountnametxtbox.Multiline = true;
+            this.paytoaccountnametxtbox.Name = "paytoaccountnametxtbox";
+            this.paytoaccountnametxtbox.ReadOnly = true;
+            this.paytoaccountnametxtbox.Size = new System.Drawing.Size(223, 23);
+            this.paytoaccountnametxtbox.TabIndex = 544;
+            this.paytoaccountnametxtbox.TextChanged += new System.EventHandler(this.paytoaccountnametxtbox_TextChanged);
             // 
             // paysearch
             // 
             this.paysearch.Image = ((System.Drawing.Image)(resources.GetObject("paysearch.Image")));
-            this.paysearch.Location = new System.Drawing.Point(277, 271);
+            this.paysearch.Location = new System.Drawing.Point(268, 271);
             this.paysearch.Margin = new System.Windows.Forms.Padding(5);
             this.paysearch.Name = "paysearch";
             this.paysearch.Size = new System.Drawing.Size(40, 23);
@@ -307,6 +320,7 @@
             this.amounttxtbox.Name = "amounttxtbox";
             this.amounttxtbox.Size = new System.Drawing.Size(140, 23);
             this.amounttxtbox.TabIndex = 549;
+            this.amounttxtbox.TextChanged += new System.EventHandler(this.amounttxtbox_TextChanged);
             // 
             // dataGridView1
             // 
@@ -319,6 +333,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 119);
             this.dataGridView1.TabIndex = 550;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -338,15 +354,16 @@
             this.Column3.Name = "Column3";
             this.Column3.Width = 140;
             // 
-            // receivedtxtbox
+            // receivedbytxtbox
             // 
-            this.receivedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.receivedtxtbox.Location = new System.Drawing.Point(144, 450);
-            this.receivedtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.receivedtxtbox.Multiline = true;
-            this.receivedtxtbox.Name = "receivedtxtbox";
-            this.receivedtxtbox.Size = new System.Drawing.Size(271, 23);
-            this.receivedtxtbox.TabIndex = 552;
+            this.receivedbytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.receivedbytxtbox.Location = new System.Drawing.Point(144, 450);
+            this.receivedbytxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.receivedbytxtbox.Multiline = true;
+            this.receivedbytxtbox.Name = "receivedbytxtbox";
+            this.receivedbytxtbox.Size = new System.Drawing.Size(271, 23);
+            this.receivedbytxtbox.TabIndex = 552;
+            this.receivedbytxtbox.TextChanged += new System.EventHandler(this.receivedbytxtbox_TextChanged);
             // 
             // label11
             // 
@@ -358,15 +375,17 @@
             this.label11.TabIndex = 551;
             this.label11.Text = "Received By";
             // 
-            // totalchqtxtbox
+            // totalchqamounttxtbox
             // 
-            this.totalchqtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.totalchqtxtbox.Location = new System.Drawing.Point(419, 450);
-            this.totalchqtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.totalchqtxtbox.Multiline = true;
-            this.totalchqtxtbox.Name = "totalchqtxtbox";
-            this.totalchqtxtbox.Size = new System.Drawing.Size(266, 23);
-            this.totalchqtxtbox.TabIndex = 554;
+            this.totalchqamounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalchqamounttxtbox.Location = new System.Drawing.Point(419, 450);
+            this.totalchqamounttxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.totalchqamounttxtbox.Multiline = true;
+            this.totalchqamounttxtbox.Name = "totalchqamounttxtbox";
+            this.totalchqamounttxtbox.ReadOnly = true;
+            this.totalchqamounttxtbox.Size = new System.Drawing.Size(266, 23);
+            this.totalchqamounttxtbox.TabIndex = 554;
+            this.totalchqamounttxtbox.TextChanged += new System.EventHandler(this.totalchqamounttxtbox_TextChanged);
             // 
             // label12
             // 
@@ -387,6 +406,7 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(541, 23);
             this.narrationtxtbox.TabIndex = 556;
+            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label13
             // 
@@ -411,6 +431,7 @@
             this.openbtn.TabIndex = 645;
             this.openbtn.Text = "Open ";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // closebtn
             // 
@@ -440,10 +461,12 @@
             this.removebtn.TabIndex = 643;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // prntbtn
             // 
             this.prntbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.prntbtn.Enabled = false;
             this.prntbtn.FlatAppearance.BorderSize = 0;
             this.prntbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prntbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -468,6 +491,7 @@
             this.clearbtn.TabIndex = 641;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -482,6 +506,7 @@
             this.savebtn.TabIndex = 640;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Bank_Cheques_Issue
             // 
@@ -497,28 +522,28 @@
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.narrationtxtbox);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.totalchqtxtbox);
+            this.Controls.Add(this.totalchqamounttxtbox);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.receivedtxtbox);
+            this.Controls.Add(this.receivedbytxtbox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.amounttxtbox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.paytxtbox);
+            this.Controls.Add(this.paytotxtbox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.accountnametxtbox);
+            this.Controls.Add(this.paytoaccountnametxtbox);
             this.Controls.Add(this.paysearch);
-            this.Controls.Add(this.depositchqbox);
+            this.Controls.Add(this.reconcilethisdepositchqbox);
             this.Controls.Add(this.chqdatepcker);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.chqtxtbox);
+            this.Controls.Add(this.chqnotxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.banknotxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.banknametxtbox);
-            this.Controls.Add(this.cstmridsearch);
+            this.Controls.Add(this.accountsearch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.vouchernotxtbox);
             this.Controls.Add(this.label8);
@@ -531,8 +556,9 @@
             this.Name = "Bank_Cheques_Issue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Cheques_Issue";
+            this.Load += new System.EventHandler(this.Bank_Cheques_Issue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paysearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -552,16 +578,16 @@
         private System.Windows.Forms.TextBox banknotxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox banknametxtbox;
-        private System.Windows.Forms.PictureBox cstmridsearch;
-        private System.Windows.Forms.TextBox chqtxtbox;
+        private System.Windows.Forms.PictureBox accountsearch;
+        private System.Windows.Forms.TextBox chqnotxtbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker chqdatepcker;
-        private System.Windows.Forms.CheckBox depositchqbox;
+        private System.Windows.Forms.CheckBox reconcilethisdepositchqbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox paytxtbox;
+        private System.Windows.Forms.TextBox paytotxtbox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox accountnametxtbox;
+        private System.Windows.Forms.TextBox paytoaccountnametxtbox;
         private System.Windows.Forms.PictureBox paysearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox amounttxtbox;
@@ -569,9 +595,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.TextBox receivedtxtbox;
+        private System.Windows.Forms.TextBox receivedbytxtbox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox totalchqtxtbox;
+        private System.Windows.Forms.TextBox totalchqamounttxtbox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox narrationtxtbox;
         private System.Windows.Forms.Label label13;

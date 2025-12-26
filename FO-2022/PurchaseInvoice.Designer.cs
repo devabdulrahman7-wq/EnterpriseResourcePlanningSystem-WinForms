@@ -79,7 +79,6 @@
             this.valuetxtbox = new System.Windows.Forms.TextBox();
             this.qtyltxtbox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.packnametxtbox = new System.Windows.Forms.TextBox();
             this.productnametxtbox = new System.Windows.Forms.TextBox();
             this.productidtxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -100,6 +99,7 @@
             this.discvaltxtbox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.packnametxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -226,7 +226,6 @@
             this.specialdisctxtbox.Name = "specialdisctxtbox";
             this.specialdisctxtbox.Size = new System.Drawing.Size(120, 19);
             this.specialdisctxtbox.TabIndex = 136;
-            this.specialdisctxtbox.TextChanged += new System.EventHandler(this.specialdisctxtbox_TextChanged_1);
             this.specialdisctxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.purchaseidtxtbox_KeyDown);
             // 
             // totaldiscounttxtbox
@@ -562,7 +561,6 @@
             this.paidtxtbox.Name = "paidtxtbox";
             this.paidtxtbox.Size = new System.Drawing.Size(148, 19);
             this.paidtxtbox.TabIndex = 158;
-            this.paidtxtbox.TextChanged += new System.EventHandler(this.paidtxtbox_TextChanged_1);
             this.paidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.purchaseidtxtbox_KeyDown);
             // 
             // label4
@@ -697,18 +695,6 @@
             this.textBox4.TabIndex = 279;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.purchaseidtxtbox_KeyDown);
-            // 
-            // packnametxtbox
-            // 
-            this.packnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.packnametxtbox.Location = new System.Drawing.Point(201, 266);
-            this.packnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.packnametxtbox.Multiline = true;
-            this.packnametxtbox.Name = "packnametxtbox";
-            this.packnametxtbox.Size = new System.Drawing.Size(90, 19);
-            this.packnametxtbox.TabIndex = 278;
-            this.packnametxtbox.TextChanged += new System.EventHandler(this.packnametxtbox_TextChanged);
-            this.packnametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.purchaseidtxtbox_KeyDown);
             // 
             // productnametxtbox
             // 
@@ -938,6 +924,18 @@
             this.label26.TabIndex = 295;
             this.label26.Text = "Disc%";
             // 
+            // packnametxtbox
+            // 
+            this.packnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.packnametxtbox.Location = new System.Drawing.Point(201, 266);
+            this.packnametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.packnametxtbox.Multiline = true;
+            this.packnametxtbox.Name = "packnametxtbox";
+            this.packnametxtbox.Size = new System.Drawing.Size(90, 19);
+            this.packnametxtbox.TabIndex = 278;
+            this.packnametxtbox.TextChanged += new System.EventHandler(this.packnametxtbox_TextChanged);
+            this.packnametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.purchaseidtxtbox_KeyDown);
+            // 
             // PurchaseInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1083,7 +1081,6 @@
         private System.Windows.Forms.TextBox valuetxtbox;
         private System.Windows.Forms.TextBox qtyltxtbox;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox packnametxtbox;
         private System.Windows.Forms.TextBox productnametxtbox;
         private System.Windows.Forms.TextBox productidtxtbox;
         private System.Windows.Forms.Label label6;
@@ -1104,5 +1101,6 @@
         private System.Windows.Forms.TextBox discvaltxtbox;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox packnametxtbox;
     }
 }

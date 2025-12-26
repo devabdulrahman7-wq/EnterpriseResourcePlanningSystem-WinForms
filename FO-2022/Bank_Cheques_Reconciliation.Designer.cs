@@ -35,13 +35,13 @@
             this.banknotxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.banknametxtbox = new System.Windows.Forms.TextBox();
-            this.cstmridsearch = new System.Windows.Forms.PictureBox();
+            this.accountnosearch = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.unreconciledbtn = new System.Windows.Forms.RadioButton();
-            this.lostbtn = new System.Windows.Forms.RadioButton();
-            this.reconciledbtn = new System.Windows.Forms.RadioButton();
-            this.allbtn = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.unreconciledradiobtn = new System.Windows.Forms.RadioButton();
+            this.lostradiobtn = new System.Windows.Forms.RadioButton();
+            this.reconciledradiobtn = new System.Windows.Forms.RadioButton();
+            this.allradiobtn = new System.Windows.Forms.RadioButton();
+            this.availablechequegrid = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,16 +52,16 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtbox = new System.Windows.Forms.Label();
-            this.reconciledtxtbox = new System.Windows.Forms.TextBox();
-            this.unreconciledtxtbox = new System.Windows.Forms.TextBox();
+            this.reconciledbalancetxtbox = new System.Windows.Forms.TextBox();
+            this.unreconciledbalancetxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.availablechequegrid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -79,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(213, 30);
+            this.label2.Location = new System.Drawing.Point(212, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(375, 32);
@@ -105,6 +105,7 @@
             this.banknotxtbox.Name = "banknotxtbox";
             this.banknotxtbox.Size = new System.Drawing.Size(132, 23);
             this.banknotxtbox.TabIndex = 540;
+            this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
             // 
             // label6
             // 
@@ -125,78 +126,84 @@
             this.banknametxtbox.Name = "banknametxtbox";
             this.banknametxtbox.Size = new System.Drawing.Size(276, 23);
             this.banknametxtbox.TabIndex = 538;
+            this.banknametxtbox.TextChanged += new System.EventHandler(this.banknametxtbox_TextChanged);
             // 
-            // cstmridsearch
+            // accountnosearch
             // 
-            this.cstmridsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmridsearch.Image")));
-            this.cstmridsearch.Location = new System.Drawing.Point(156, 127);
-            this.cstmridsearch.Margin = new System.Windows.Forms.Padding(5);
-            this.cstmridsearch.Name = "cstmridsearch";
-            this.cstmridsearch.Size = new System.Drawing.Size(40, 23);
-            this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cstmridsearch.TabIndex = 537;
-            this.cstmridsearch.TabStop = false;
+            this.accountnosearch.Image = ((System.Drawing.Image)(resources.GetObject("accountnosearch.Image")));
+            this.accountnosearch.Location = new System.Drawing.Point(156, 127);
+            this.accountnosearch.Margin = new System.Windows.Forms.Padding(5);
+            this.accountnosearch.Name = "accountnosearch";
+            this.accountnosearch.Size = new System.Drawing.Size(40, 23);
+            this.accountnosearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.accountnosearch.TabIndex = 537;
+            this.accountnosearch.TabStop = false;
+            this.accountnosearch.Click += new System.EventHandler(this.accountnosearch_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.unreconciledbtn);
-            this.groupBox1.Controls.Add(this.lostbtn);
-            this.groupBox1.Controls.Add(this.reconciledbtn);
-            this.groupBox1.Controls.Add(this.allbtn);
+            this.groupBox1.Controls.Add(this.unreconciledradiobtn);
+            this.groupBox1.Controls.Add(this.lostradiobtn);
+            this.groupBox1.Controls.Add(this.reconciledradiobtn);
+            this.groupBox1.Controls.Add(this.allradiobtn);
             this.groupBox1.Location = new System.Drawing.Point(481, 106);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(380, 44);
             this.groupBox1.TabIndex = 542;
             this.groupBox1.TabStop = false;
             // 
-            // unreconciledbtn
+            // unreconciledradiobtn
             // 
-            this.unreconciledbtn.AutoSize = true;
-            this.unreconciledbtn.Location = new System.Drawing.Point(192, 19);
-            this.unreconciledbtn.Name = "unreconciledbtn";
-            this.unreconciledbtn.Size = new System.Drawing.Size(108, 20);
-            this.unreconciledbtn.TabIndex = 3;
-            this.unreconciledbtn.TabStop = true;
-            this.unreconciledbtn.Text = "Un_Reconciled";
-            this.unreconciledbtn.UseVisualStyleBackColor = true;
+            this.unreconciledradiobtn.AutoSize = true;
+            this.unreconciledradiobtn.Location = new System.Drawing.Point(192, 19);
+            this.unreconciledradiobtn.Name = "unreconciledradiobtn";
+            this.unreconciledradiobtn.Size = new System.Drawing.Size(108, 20);
+            this.unreconciledradiobtn.TabIndex = 3;
+            this.unreconciledradiobtn.TabStop = true;
+            this.unreconciledradiobtn.Text = "Un_Reconciled";
+            this.unreconciledradiobtn.UseVisualStyleBackColor = true;
+            this.unreconciledradiobtn.CheckedChanged += new System.EventHandler(this.unreconciledradiobtn_CheckedChanged);
             // 
-            // lostbtn
+            // lostradiobtn
             // 
-            this.lostbtn.AutoSize = true;
-            this.lostbtn.Location = new System.Drawing.Point(315, 18);
-            this.lostbtn.Name = "lostbtn";
-            this.lostbtn.Size = new System.Drawing.Size(48, 20);
-            this.lostbtn.TabIndex = 2;
-            this.lostbtn.TabStop = true;
-            this.lostbtn.Text = "Lost";
-            this.lostbtn.UseVisualStyleBackColor = true;
+            this.lostradiobtn.AutoSize = true;
+            this.lostradiobtn.Location = new System.Drawing.Point(315, 18);
+            this.lostradiobtn.Name = "lostradiobtn";
+            this.lostradiobtn.Size = new System.Drawing.Size(48, 20);
+            this.lostradiobtn.TabIndex = 2;
+            this.lostradiobtn.TabStop = true;
+            this.lostradiobtn.Text = "Lost";
+            this.lostradiobtn.UseVisualStyleBackColor = true;
+            this.lostradiobtn.CheckedChanged += new System.EventHandler(this.lostradiobtn_CheckedChanged);
             // 
-            // reconciledbtn
+            // reconciledradiobtn
             // 
-            this.reconciledbtn.AutoSize = true;
-            this.reconciledbtn.Location = new System.Drawing.Point(81, 19);
-            this.reconciledbtn.Name = "reconciledbtn";
-            this.reconciledbtn.Size = new System.Drawing.Size(86, 20);
-            this.reconciledbtn.TabIndex = 1;
-            this.reconciledbtn.TabStop = true;
-            this.reconciledbtn.Text = "Reconciled";
-            this.reconciledbtn.UseVisualStyleBackColor = true;
+            this.reconciledradiobtn.AutoSize = true;
+            this.reconciledradiobtn.Location = new System.Drawing.Point(81, 19);
+            this.reconciledradiobtn.Name = "reconciledradiobtn";
+            this.reconciledradiobtn.Size = new System.Drawing.Size(86, 20);
+            this.reconciledradiobtn.TabIndex = 1;
+            this.reconciledradiobtn.TabStop = true;
+            this.reconciledradiobtn.Text = "Reconciled";
+            this.reconciledradiobtn.UseVisualStyleBackColor = true;
+            this.reconciledradiobtn.CheckedChanged += new System.EventHandler(this.reconciledradiobtn_CheckedChanged);
             // 
-            // allbtn
+            // allradiobtn
             // 
-            this.allbtn.AutoSize = true;
-            this.allbtn.Location = new System.Drawing.Point(12, 19);
-            this.allbtn.Name = "allbtn";
-            this.allbtn.Size = new System.Drawing.Size(39, 20);
-            this.allbtn.TabIndex = 0;
-            this.allbtn.TabStop = true;
-            this.allbtn.Text = "All";
-            this.allbtn.UseVisualStyleBackColor = true;
+            this.allradiobtn.AutoSize = true;
+            this.allradiobtn.Location = new System.Drawing.Point(12, 19);
+            this.allradiobtn.Name = "allradiobtn";
+            this.allradiobtn.Size = new System.Drawing.Size(39, 20);
+            this.allradiobtn.TabIndex = 0;
+            this.allradiobtn.TabStop = true;
+            this.allradiobtn.Text = "All";
+            this.allradiobtn.UseVisualStyleBackColor = true;
+            this.allradiobtn.CheckedChanged += new System.EventHandler(this.allradiobtn_CheckedChanged);
             // 
-            // dataGridView1
+            // availablechequegrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.availablechequegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.availablechequegrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -205,10 +212,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(838, 270);
-            this.dataGridView1.TabIndex = 544;
+            this.availablechequegrid.Location = new System.Drawing.Point(23, 195);
+            this.availablechequegrid.Name = "availablechequegrid";
+            this.availablechequegrid.Size = new System.Drawing.Size(838, 270);
+            this.availablechequegrid.TabIndex = 544;
+            this.availablechequegrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablechequegrid_CellClick);
+            this.availablechequegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablechequegrid_CellContentClick);
             // 
             // Column1
             // 
@@ -279,25 +288,25 @@
             this.txtbox.TabIndex = 547;
             this.txtbox.Text = "Reconciled Balance:";
             // 
-            // reconciledtxtbox
+            // reconciledbalancetxtbox
             // 
-            this.reconciledtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reconciledtxtbox.Location = new System.Drawing.Point(735, 466);
-            this.reconciledtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.reconciledtxtbox.Multiline = true;
-            this.reconciledtxtbox.Name = "reconciledtxtbox";
-            this.reconciledtxtbox.Size = new System.Drawing.Size(126, 23);
-            this.reconciledtxtbox.TabIndex = 546;
+            this.reconciledbalancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reconciledbalancetxtbox.Location = new System.Drawing.Point(735, 466);
+            this.reconciledbalancetxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.reconciledbalancetxtbox.Multiline = true;
+            this.reconciledbalancetxtbox.Name = "reconciledbalancetxtbox";
+            this.reconciledbalancetxtbox.Size = new System.Drawing.Size(126, 23);
+            this.reconciledbalancetxtbox.TabIndex = 546;
             // 
-            // unreconciledtxtbox
+            // unreconciledbalancetxtbox
             // 
-            this.unreconciledtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.unreconciledtxtbox.Location = new System.Drawing.Point(735, 499);
-            this.unreconciledtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.unreconciledtxtbox.Multiline = true;
-            this.unreconciledtxtbox.Name = "unreconciledtxtbox";
-            this.unreconciledtxtbox.Size = new System.Drawing.Size(126, 23);
-            this.unreconciledtxtbox.TabIndex = 548;
+            this.unreconciledbalancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unreconciledbalancetxtbox.Location = new System.Drawing.Point(735, 499);
+            this.unreconciledbalancetxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.unreconciledbalancetxtbox.Multiline = true;
+            this.unreconciledbalancetxtbox.Name = "unreconciledbalancetxtbox";
+            this.unreconciledbalancetxtbox.Size = new System.Drawing.Size(126, 23);
+            this.unreconciledbalancetxtbox.TabIndex = 548;
             // 
             // label3
             // 
@@ -315,10 +324,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(464, 536);
+            this.closebtn.Location = new System.Drawing.Point(457, 538);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 30);
+            this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 647;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -330,13 +339,14 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(385, 536);
+            this.clearbtn.Location = new System.Drawing.Point(378, 538);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 30);
+            this.clearbtn.Size = new System.Drawing.Size(75, 25);
             this.clearbtn.TabIndex = 646;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -344,13 +354,14 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(306, 536);
+            this.savebtn.Location = new System.Drawing.Point(299, 538);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 30);
+            this.savebtn.Size = new System.Drawing.Size(75, 25);
             this.savebtn.TabIndex = 645;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Bank_Cheques_Reconciliation
             // 
@@ -362,17 +373,17 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.unreconciledtxtbox);
+            this.Controls.Add(this.unreconciledbalancetxtbox);
             this.Controls.Add(this.txtbox);
-            this.Controls.Add(this.reconciledtxtbox);
+            this.Controls.Add(this.reconciledbalancetxtbox);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.availablechequegrid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.banknotxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.banknametxtbox);
-            this.Controls.Add(this.cstmridsearch);
+            this.Controls.Add(this.accountnosearch);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -381,11 +392,12 @@
             this.Name = "Bank_Cheques_Reconciliation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Cheques_Reconciliation";
+            this.Load += new System.EventHandler(this.Bank_Cheques_Reconciliation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.availablechequegrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,13 +411,13 @@
         private System.Windows.Forms.TextBox banknotxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox banknametxtbox;
-        private System.Windows.Forms.PictureBox cstmridsearch;
+        private System.Windows.Forms.PictureBox accountnosearch;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton unreconciledbtn;
-        private System.Windows.Forms.RadioButton lostbtn;
-        private System.Windows.Forms.RadioButton reconciledbtn;
-        private System.Windows.Forms.RadioButton allbtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton unreconciledradiobtn;
+        private System.Windows.Forms.RadioButton lostradiobtn;
+        private System.Windows.Forms.RadioButton reconciledradiobtn;
+        private System.Windows.Forms.RadioButton allradiobtn;
+        private System.Windows.Forms.DataGridView availablechequegrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -416,8 +428,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtbox;
-        private System.Windows.Forms.TextBox reconciledtxtbox;
-        private System.Windows.Forms.TextBox unreconciledtxtbox;
+        private System.Windows.Forms.TextBox reconciledbalancetxtbox;
+        private System.Windows.Forms.TextBox unreconciledbalancetxtbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button clearbtn;

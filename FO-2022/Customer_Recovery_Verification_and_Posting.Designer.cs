@@ -108,7 +108,7 @@
             this.nextbtn.FlatAppearance.BorderSize = 0;
             this.nextbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextbtn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextbtn.Location = new System.Drawing.Point(473, 267);
+            this.nextbtn.Location = new System.Drawing.Point(473, 282);
             this.nextbtn.Margin = new System.Windows.Forms.Padding(2);
             this.nextbtn.Name = "nextbtn";
             this.nextbtn.Size = new System.Drawing.Size(41, 23);
@@ -173,7 +173,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 105);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(447, 19);
+            this.textBox1.Size = new System.Drawing.Size(456, 19);
             this.textBox1.TabIndex = 650;
             this.textBox1.Text = "                Available Un-Posted Recoveries";
             // 

@@ -43,7 +43,7 @@
             this.accountnametxtbox = new System.Windows.Forms.TextBox();
             this.accountnosearch = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.amounttxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.wordstxtbox = new System.Windows.Forms.TextBox();
             this.amountsearch = new System.Windows.Forms.PictureBox();
@@ -84,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(278, 124);
+            this.label5.Location = new System.Drawing.Point(322, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 16);
@@ -100,6 +100,7 @@
             this.promisesidtxtbox.Name = "promisesidtxtbox";
             this.promisesidtxtbox.Size = new System.Drawing.Size(122, 23);
             this.promisesidtxtbox.TabIndex = 659;
+            this.promisesidtxtbox.TextChanged += new System.EventHandler(this.promisesidtxtbox_TextChanged);
             // 
             // label8
             // 
@@ -114,16 +115,17 @@
             // entrydatepcker
             // 
             this.entrydatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.entrydatepcker.Location = new System.Drawing.Point(281, 145);
+            this.entrydatepcker.Location = new System.Drawing.Point(325, 145);
             this.entrydatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.entrydatepcker.Name = "entrydatepcker";
-            this.entrydatepcker.Size = new System.Drawing.Size(132, 23);
+            this.entrydatepcker.Size = new System.Drawing.Size(115, 23);
             this.entrydatepcker.TabIndex = 657;
+            this.entrydatepcker.ValueChanged += new System.EventHandler(this.entrydatepcker_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 124);
+            this.label1.Location = new System.Drawing.Point(481, 124);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 16);
@@ -133,11 +135,12 @@
             // promisesdatepcker
             // 
             this.promisesdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.promisesdatepcker.Location = new System.Drawing.Point(423, 145);
+            this.promisesdatepcker.Location = new System.Drawing.Point(484, 145);
             this.promisesdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.promisesdatepcker.Name = "promisesdatepcker";
-            this.promisesdatepcker.Size = new System.Drawing.Size(132, 23);
+            this.promisesdatepcker.Size = new System.Drawing.Size(115, 23);
             this.promisesdatepcker.TabIndex = 661;
+            this.promisesdatepcker.ValueChanged += new System.EventHandler(this.promisesdatepcker_ValueChanged);
             // 
             // label7
             // 
@@ -158,6 +161,7 @@
             this.accountnotxtbox.Name = "accountnotxtbox";
             this.accountnotxtbox.Size = new System.Drawing.Size(132, 23);
             this.accountnotxtbox.TabIndex = 668;
+            this.accountnotxtbox.TextChanged += new System.EventHandler(this.accountnotxtbox_TextChanged);
             // 
             // label6
             // 
@@ -185,10 +189,11 @@
             this.accountnosearch.Location = new System.Drawing.Point(282, 206);
             this.accountnosearch.Margin = new System.Windows.Forms.Padding(5);
             this.accountnosearch.Name = "accountnosearch";
-            this.accountnosearch.Size = new System.Drawing.Size(40, 23);
+            this.accountnosearch.Size = new System.Drawing.Size(31, 23);
             this.accountnosearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.accountnosearch.TabIndex = 665;
             this.accountnosearch.TabStop = false;
+            this.accountnosearch.Click += new System.EventHandler(this.accountnosearch_Click);
             // 
             // label3
             // 
@@ -200,15 +205,15 @@
             this.label3.TabIndex = 674;
             this.label3.Text = "Amount";
             // 
-            // textBox1
+            // amounttxtbox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(149, 261);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 23);
-            this.textBox1.TabIndex = 673;
+            this.amounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.amounttxtbox.Location = new System.Drawing.Point(149, 261);
+            this.amounttxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.amounttxtbox.Multiline = true;
+            this.amounttxtbox.Name = "amounttxtbox";
+            this.amounttxtbox.Size = new System.Drawing.Size(132, 23);
+            this.amounttxtbox.TabIndex = 673;
             // 
             // label4
             // 
@@ -236,10 +241,11 @@
             this.amountsearch.Location = new System.Drawing.Point(282, 261);
             this.amountsearch.Margin = new System.Windows.Forms.Padding(5);
             this.amountsearch.Name = "amountsearch";
-            this.amountsearch.Size = new System.Drawing.Size(40, 23);
+            this.amountsearch.Size = new System.Drawing.Size(31, 23);
             this.amountsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.amountsearch.TabIndex = 670;
             this.amountsearch.TabStop = false;
+            this.amountsearch.Click += new System.EventHandler(this.amountsearch_Click);
             // 
             // label9
             // 
@@ -260,6 +266,7 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(450, 23);
             this.narrationtxtbox.TabIndex = 675;
+            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // openbtn
             // 
@@ -267,13 +274,14 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(428, 407);
+            this.openbtn.Location = new System.Drawing.Point(413, 403);
             this.openbtn.Margin = new System.Windows.Forms.Padding(2);
             this.openbtn.Name = "openbtn";
             this.openbtn.Size = new System.Drawing.Size(75, 28);
             this.openbtn.TabIndex = 681;
             this.openbtn.Text = "Open ";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // closebtn
             // 
@@ -281,13 +289,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(507, 407);
+            this.closebtn.Location = new System.Drawing.Point(492, 403);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 680;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // removebtn
             // 
@@ -295,13 +304,14 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(349, 407);
+            this.removebtn.Location = new System.Drawing.Point(334, 403);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
             this.removebtn.TabIndex = 679;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // clearbtn
             // 
@@ -309,13 +319,14 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(270, 407);
+            this.clearbtn.Location = new System.Drawing.Point(255, 403);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
             this.clearbtn.TabIndex = 678;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -323,13 +334,14 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(191, 407);
+            this.savebtn.Location = new System.Drawing.Point(176, 403);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 677;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Post_Date_Recovery_Promises
             // 
@@ -345,7 +357,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.narrationtxtbox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.amounttxtbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wordstxtbox);
             this.Controls.Add(this.amountsearch);
@@ -364,10 +376,11 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Post_Date_Recovery_Promises";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Post_Date_Recovery_Promises";
+            this.Load += new System.EventHandler(this.Post_Date_Recovery_Promises_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountsearch)).EndInit();
@@ -392,7 +405,7 @@
         private System.Windows.Forms.TextBox accountnametxtbox;
         private System.Windows.Forms.PictureBox accountnosearch;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox amounttxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox wordstxtbox;
         private System.Windows.Forms.PictureBox amountsearch;
