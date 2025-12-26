@@ -615,6 +615,11 @@
     <Compile Include="Preview_of_Stock_Current_Sheet.Designer.cs">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preview_of_Stock_Current_Sheet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Preview_Purchase_Summary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1364,6 +1369,7 @@
     <EmbeddedResource Include="Post_Date_Recovery_Promises.resx">
       <DependentUpon>Post_Date_Recovery_Promises.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.rdlc" />
     <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.resx">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </EmbeddedResource>
@@ -1617,6 +1623,17 @@
       <DependentUpon>Weekly Payment Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Preview_of_Stock_Current_Sheet.xsc">
+      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
+    </None>
+    <None Include="Preview_of_Stock_Current_Sheet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Preview_of_Stock_Current_Sheet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Preview_of_Stock_Current_Sheet.xss">
+      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

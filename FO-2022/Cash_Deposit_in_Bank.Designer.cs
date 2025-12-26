@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cash_Deposit_in_Bank));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cstmridsearch = new System.Windows.Forms.PictureBox();
+            this.accountnosearch = new System.Windows.Forms.PictureBox();
             this.depositdatepcker = new System.Windows.Forms.DateTimePicker();
             this.voucherdatepcker = new System.Windows.Forms.DateTimePicker();
             this.vouchernotxtbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.sliptxtbox = new System.Windows.Forms.TextBox();
+            this.slipnotxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.depositchqbox = new System.Windows.Forms.CheckBox();
+            this.reconcilethisdepositchqbox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.banknametxtbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.amounttxtbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.amountwordstxtbox = new System.Windows.Forms.TextBox();
+            this.amountinwordstxtbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.narrationtxtbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -73,6 +73,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 389;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -85,16 +86,17 @@
             this.label2.TabIndex = 388;
             this.label2.Text = "Cash Deposit in Bank";
             // 
-            // cstmridsearch
+            // accountnosearch
             // 
-            this.cstmridsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmridsearch.Image")));
-            this.cstmridsearch.Location = new System.Drawing.Point(240, 219);
-            this.cstmridsearch.Margin = new System.Windows.Forms.Padding(5);
-            this.cstmridsearch.Name = "cstmridsearch";
-            this.cstmridsearch.Size = new System.Drawing.Size(40, 23);
-            this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cstmridsearch.TabIndex = 390;
-            this.cstmridsearch.TabStop = false;
+            this.accountnosearch.Image = ((System.Drawing.Image)(resources.GetObject("accountnosearch.Image")));
+            this.accountnosearch.Location = new System.Drawing.Point(243, 219);
+            this.accountnosearch.Margin = new System.Windows.Forms.Padding(5);
+            this.accountnosearch.Name = "accountnosearch";
+            this.accountnosearch.Size = new System.Drawing.Size(38, 23);
+            this.accountnosearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.accountnosearch.TabIndex = 390;
+            this.accountnosearch.TabStop = false;
+            this.accountnosearch.Click += new System.EventHandler(this.accountnosearch_Click);
             // 
             // depositdatepcker
             // 
@@ -104,6 +106,7 @@
             this.depositdatepcker.Name = "depositdatepcker";
             this.depositdatepcker.Size = new System.Drawing.Size(132, 23);
             this.depositdatepcker.TabIndex = 391;
+            this.depositdatepcker.ValueChanged += new System.EventHandler(this.depositdatepcker_ValueChanged);
             // 
             // voucherdatepcker
             // 
@@ -113,7 +116,6 @@
             this.voucherdatepcker.Name = "voucherdatepcker";
             this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
             this.voucherdatepcker.TabIndex = 392;
-            this.voucherdatepcker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // vouchernotxtbox
             // 
@@ -122,8 +124,10 @@
             this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.vouchernotxtbox.Multiline = true;
             this.vouchernotxtbox.Name = "vouchernotxtbox";
+            this.vouchernotxtbox.ReadOnly = true;
             this.vouchernotxtbox.Size = new System.Drawing.Size(122, 23);
             this.vouchernotxtbox.TabIndex = 395;
+            this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
             // 
             // label8
             // 
@@ -135,15 +139,16 @@
             this.label8.TabIndex = 394;
             this.label8.Text = "Voucher No";
             // 
-            // sliptxtbox
+            // slipnotxtbox
             // 
-            this.sliptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sliptxtbox.Location = new System.Drawing.Point(393, 112);
-            this.sliptxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.sliptxtbox.Multiline = true;
-            this.sliptxtbox.Name = "sliptxtbox";
-            this.sliptxtbox.Size = new System.Drawing.Size(122, 23);
-            this.sliptxtbox.TabIndex = 396;
+            this.slipnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.slipnotxtbox.Location = new System.Drawing.Point(393, 112);
+            this.slipnotxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.slipnotxtbox.Multiline = true;
+            this.slipnotxtbox.Name = "slipnotxtbox";
+            this.slipnotxtbox.Size = new System.Drawing.Size(122, 23);
+            this.slipnotxtbox.TabIndex = 396;
+            this.slipnotxtbox.TextChanged += new System.EventHandler(this.slipnotxtbox_TextChanged);
             // 
             // label3
             // 
@@ -175,17 +180,18 @@
             this.label5.TabIndex = 400;
             this.label5.Text = "Voucher Date";
             // 
-            // depositchqbox
+            // reconcilethisdepositchqbox
             // 
-            this.depositchqbox.AutoSize = true;
-            this.depositchqbox.Checked = true;
-            this.depositchqbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.depositchqbox.Location = new System.Drawing.Point(251, 165);
-            this.depositchqbox.Name = "depositchqbox";
-            this.depositchqbox.Size = new System.Drawing.Size(177, 20);
-            this.depositchqbox.TabIndex = 401;
-            this.depositchqbox.Text = "Reconcile this deposit now";
-            this.depositchqbox.UseVisualStyleBackColor = true;
+            this.reconcilethisdepositchqbox.AutoSize = true;
+            this.reconcilethisdepositchqbox.Checked = true;
+            this.reconcilethisdepositchqbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.reconcilethisdepositchqbox.Location = new System.Drawing.Point(281, 165);
+            this.reconcilethisdepositchqbox.Name = "reconcilethisdepositchqbox";
+            this.reconcilethisdepositchqbox.Size = new System.Drawing.Size(177, 20);
+            this.reconcilethisdepositchqbox.TabIndex = 401;
+            this.reconcilethisdepositchqbox.Text = "Reconcile this deposit now";
+            this.reconcilethisdepositchqbox.UseVisualStyleBackColor = true;
+            this.reconcilethisdepositchqbox.CheckedChanged += new System.EventHandler(this.depositchqbox_CheckedChanged);
             // 
             // label6
             // 
@@ -204,8 +210,10 @@
             this.banknametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.banknametxtbox.Multiline = true;
             this.banknametxtbox.Name = "banknametxtbox";
+            this.banknametxtbox.ReadOnly = true;
             this.banknametxtbox.Size = new System.Drawing.Size(234, 23);
             this.banknametxtbox.TabIndex = 402;
+            this.banknametxtbox.TextChanged += new System.EventHandler(this.banknametxtbox_TextChanged);
             // 
             // label7
             // 
@@ -226,6 +234,7 @@
             this.banknotxtbox.Name = "banknotxtbox";
             this.banknotxtbox.Size = new System.Drawing.Size(132, 23);
             this.banknotxtbox.TabIndex = 404;
+            this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
             // 
             // label9
             // 
@@ -246,6 +255,8 @@
             this.amounttxtbox.Name = "amounttxtbox";
             this.amounttxtbox.Size = new System.Drawing.Size(132, 23);
             this.amounttxtbox.TabIndex = 409;
+            this.amounttxtbox.TextChanged += new System.EventHandler(this.amounttxtbox_TextChanged);
+            this.amounttxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.amounttxtbox_KeyDown);
             // 
             // label10
             // 
@@ -257,15 +268,17 @@
             this.label10.TabIndex = 408;
             this.label10.Text = "Amount in Words";
             // 
-            // amountwordstxtbox
+            // amountinwordstxtbox
             // 
-            this.amountwordstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.amountwordstxtbox.Location = new System.Drawing.Point(281, 273);
-            this.amountwordstxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.amountwordstxtbox.Multiline = true;
-            this.amountwordstxtbox.Name = "amountwordstxtbox";
-            this.amountwordstxtbox.Size = new System.Drawing.Size(234, 23);
-            this.amountwordstxtbox.TabIndex = 407;
+            this.amountinwordstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.amountinwordstxtbox.Location = new System.Drawing.Point(281, 273);
+            this.amountinwordstxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.amountinwordstxtbox.Multiline = true;
+            this.amountinwordstxtbox.Name = "amountinwordstxtbox";
+            this.amountinwordstxtbox.ReadOnly = true;
+            this.amountinwordstxtbox.Size = new System.Drawing.Size(234, 23);
+            this.amountinwordstxtbox.TabIndex = 407;
+            this.amountinwordstxtbox.TextChanged += new System.EventHandler(this.amountinwordstxtbox_TextChanged);
             // 
             // label11
             // 
@@ -286,6 +299,7 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(408, 23);
             this.narrationtxtbox.TabIndex = 411;
+            this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // label12
             // 
@@ -306,6 +320,7 @@
             this.depositedtxtbox.Name = "depositedtxtbox";
             this.depositedtxtbox.Size = new System.Drawing.Size(408, 23);
             this.depositedtxtbox.TabIndex = 413;
+            this.depositedtxtbox.TextChanged += new System.EventHandler(this.depositedtxtbox_TextChanged);
             // 
             // openbtn
             // 
@@ -320,6 +335,7 @@
             this.openbtn.TabIndex = 645;
             this.openbtn.Text = "Open ";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // closebtn
             // 
@@ -349,10 +365,12 @@
             this.removebtn.TabIndex = 643;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // prntbtn
             // 
             this.prntbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.prntbtn.Enabled = false;
             this.prntbtn.FlatAppearance.BorderSize = 0;
             this.prntbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prntbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -363,6 +381,7 @@
             this.prntbtn.TabIndex = 642;
             this.prntbtn.Text = "Print";
             this.prntbtn.UseVisualStyleBackColor = false;
+            this.prntbtn.Click += new System.EventHandler(this.prntbtn_Click);
             // 
             // clearbtn
             // 
@@ -377,6 +396,7 @@
             this.clearbtn.TabIndex = 641;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -391,6 +411,7 @@
             this.savebtn.TabIndex = 640;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Cash_Deposit_in_Bank
             // 
@@ -411,21 +432,21 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.amounttxtbox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.amountwordstxtbox);
+            this.Controls.Add(this.amountinwordstxtbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.banknotxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.banknametxtbox);
-            this.Controls.Add(this.depositchqbox);
+            this.Controls.Add(this.reconcilethisdepositchqbox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.sliptxtbox);
+            this.Controls.Add(this.slipnotxtbox);
             this.Controls.Add(this.vouchernotxtbox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.voucherdatepcker);
             this.Controls.Add(this.depositdatepcker);
-            this.Controls.Add(this.cstmridsearch);
+            this.Controls.Add(this.accountnosearch);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,8 +455,9 @@
             this.Name = "Cash_Deposit_in_Bank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash_Deposit_in_Bank";
+            this.Load += new System.EventHandler(this.Cash_Deposit_in_Bank_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,16 +467,16 @@
 
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox cstmridsearch;
+        private System.Windows.Forms.PictureBox accountnosearch;
         private System.Windows.Forms.DateTimePicker depositdatepcker;
         private System.Windows.Forms.DateTimePicker voucherdatepcker;
         private System.Windows.Forms.TextBox vouchernotxtbox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox sliptxtbox;
+        private System.Windows.Forms.TextBox slipnotxtbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox depositchqbox;
+        private System.Windows.Forms.CheckBox reconcilethisdepositchqbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox banknametxtbox;
         private System.Windows.Forms.Label label7;
@@ -462,7 +484,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox amounttxtbox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox amountwordstxtbox;
+        private System.Windows.Forms.TextBox amountinwordstxtbox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox narrationtxtbox;
         private System.Windows.Forms.Label label12;
