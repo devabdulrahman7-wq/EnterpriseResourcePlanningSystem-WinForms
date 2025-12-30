@@ -234,6 +234,7 @@ namespace FO_2022
                 // Update this connection string according to your database configuration
                 string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 con = new SqlConnection(connectionString);
+                //con.Open();
                 con.Open();
             }
             catch (Exception ex)
