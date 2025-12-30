@@ -253,35 +253,10 @@ namespace FO_2022
         }
 
         // When TreeView node is selected, filter DataGridView
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            try
-            {
-                string selectedNodeText = e.Node.Text;
-
-                // If it's a main category node (Assets, Liabilities, etc.)
-                if (e.Node.Level == 0)
-                {
-                    FilterByAccountType(selectedNodeText);
-                }
-                // If it's a subcategory node (Current Assets, Fixed Assets, etc.)
-                else if (e.Node.Level == 1 && e.Node.Parent != null)
-                {
-                    FilterBySubcategory(e.Node.Parent.Text, selectedNodeText);
-                }
-                // If it's an actual account node
-                else if (e.Node.Level >= 2 && e.Node.Tag != null)
-                {
-                    string accountNo = e.Node.Tag.ToString();
-                    FilterByAccountNo(accountNo);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error filtering accounts: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        //{
+           
+        //}
 
         // Filter by main account type
         private void FilterByAccountType(string accountType)
@@ -435,17 +410,10 @@ namespace FO_2022
         }
 
         // Double click on DataGridView to show details
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                string accountNo = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string accountName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-                MessageBox.Show($"Account No: {accountNo}\nAccount Name: {accountName}",
-                    "Account Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //{
+          
+        //}
 
         // Search functionality (if you add a search textbox)
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -486,6 +454,48 @@ namespace FO_2022
             catch (Exception ex)
             {
                 MessageBox.Show("Error searching: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                string accountNo = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string accountName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                MessageBox.Show($"Account No: {accountNo}\nAccount Name: {accountName}",
+                    "Account Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+        {
+            try
+            {
+                string selectedNodeText = e.Node.Text;
+
+                // If it's a main category node (Assets, Liabilities, etc.)
+                if (e.Node.Level == 0)
+                {
+                    FilterByAccountType(selectedNodeText);
+                }
+                // If it's a subcategory node (Current Assets, Fixed Assets, etc.)
+                else if (e.Node.Level == 1 && e.Node.Parent != null)
+                {
+                    FilterBySubcategory(e.Node.Parent.Text, selectedNodeText);
+                }
+                // If it's an actual account node
+                else if (e.Node.Level >= 2 && e.Node.Tag != null)
+                {
+                    string accountNo = e.Node.Tag.ToString();
+                    FilterByAccountNo(accountNo);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error filtering accounts: " + ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

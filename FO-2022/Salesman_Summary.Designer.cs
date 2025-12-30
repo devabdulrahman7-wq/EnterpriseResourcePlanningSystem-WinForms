@@ -43,6 +43,7 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +99,7 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(121, 23);
             this.todatepcker.TabIndex = 410;
+            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -107,6 +109,7 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
             this.fromdatepcker.TabIndex = 409;
+            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // salesmannametxtbox
             // 
@@ -117,6 +120,7 @@
             this.salesmannametxtbox.Name = "salesmannametxtbox";
             this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
             this.salesmannametxtbox.TabIndex = 419;
+            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
@@ -127,6 +131,7 @@
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
             this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.salesmanidtxtbox.TabIndex = 418;
+            this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
@@ -138,6 +143,7 @@
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 417;
             this.salesmanidsearch.TabStop = false;
+            this.salesmanidsearch.Click += new System.EventHandler(this.salesmanidsearch_Click);
             // 
             // label3
             // 
@@ -173,6 +179,7 @@
             this.previewbtn.TabIndex = 426;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // printbtn
             // 
@@ -187,6 +194,7 @@
             this.printbtn.TabIndex = 424;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // closebtn
             // 
@@ -201,6 +209,17 @@
             this.closebtn.TabIndex = 425;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(445, 138);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(17, 16);
+            this.lblStatus.TabIndex = 427;
+            this.lblStatus.Text = "--";
             // 
             // Salesman_Summary
             // 
@@ -208,6 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(631, 427);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
@@ -224,7 +244,7 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Salesman_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salesman_Summary";
@@ -252,5 +272,6 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Button closebtn;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

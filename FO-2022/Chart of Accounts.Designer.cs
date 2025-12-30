@@ -55,6 +55,7 @@
             this.accountcombobox.Name = "accountcombobox";
             this.accountcombobox.Size = new System.Drawing.Size(227, 24);
             this.accountcombobox.TabIndex = 672;
+            this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -139,6 +140,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Chart_of_Accounts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chart_of_Accounts";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

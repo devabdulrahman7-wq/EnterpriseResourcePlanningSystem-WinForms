@@ -62,6 +62,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(346, 396);
             this.dataGridView1.TabIndex = 629;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -146,6 +147,7 @@
             treeNode10});
             this.treeView1.Size = new System.Drawing.Size(407, 396);
             this.treeView1.TabIndex = 640;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
             // 
             // Charts_of_Accounts
             // 

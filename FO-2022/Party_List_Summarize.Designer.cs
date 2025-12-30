@@ -53,9 +53,9 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(140, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 32);
+            this.label2.Size = new System.Drawing.Size(283, 32);
             this.label2.TabIndex = 471;
-            this.label2.Text = "Salesman Sectors List";
+            this.label2.Text = "Party List Summarize\r\n";
             // 
             // previewbtn
             // 
@@ -69,6 +69,7 @@
             this.previewbtn.TabIndex = 476;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -82,6 +83,7 @@
             this.closebtn.TabIndex = 475;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -95,6 +97,7 @@
             this.printbtn.TabIndex = 474;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // Party_List_Summarize
             // 
@@ -109,10 +112,11 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Party_List_Summarize";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_List_Summarize";
+            this.Load += new System.EventHandler(this.Party_List_Summarize_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
