@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FO_2022
@@ -15,6 +8,28 @@ namespace FO_2022
         public Party_List_Summarize()
         {
             InitializeComponent();
+        }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+            Reports.Part_List_rv reportViewerForm = new Reports.Part_List_rv();
+            reportViewerForm.Show();
+        }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            Reports.Part_List_rv reportViewerForm = new Reports.Part_List_rv();
+            reportViewerForm.PrintReport();
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Party_List_Summarize_Load(object sender, EventArgs e)
+        {
+            // Nothing needed here
         }
     }
 }

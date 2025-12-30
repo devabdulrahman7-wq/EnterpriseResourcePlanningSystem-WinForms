@@ -16,7 +16,7 @@ namespace FO_2022
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Debit_Voucher());
+            Application.Run(new Employees_Salary_Sheet());
         }
     }
 }

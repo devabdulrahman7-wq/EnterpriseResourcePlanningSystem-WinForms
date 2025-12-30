@@ -20,7 +20,7 @@ namespace FO_2022
         private void Preview_of_Stock_Current_Sheet_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
             //this.reportViewer2.RefreshReport();
             //this.reportViewer2.RefreshReport();
         }

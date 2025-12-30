@@ -14,12 +14,14 @@ namespace FO_2022
     {
         public Company_Wise_Profits()
         {
-            InitializeComponent();
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Mainform1 mf = new Mainform1();
+            mf.Show();
+            this.Hide();
         }
 
         private void Company_Wise_Profits_Load(object sender, EventArgs e)
@@ -33,5 +35,38 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fromdatepcker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todatepcker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // Company_Wise_Profits
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(429, 261);
+        //    this.Name = "Company_Wise_Profits";
+        //    this.ResumeLayout(false);
+
+        //}
     }
 }
+

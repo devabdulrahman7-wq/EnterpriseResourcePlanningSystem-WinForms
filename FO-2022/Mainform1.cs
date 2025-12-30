@@ -303,7 +303,7 @@ namespace FO_2022
 
         private void townsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Towns t=new Towns();
+            Town_List t=new Town_List();
             t.Show();
             this.Hide();
         }
@@ -705,7 +705,7 @@ namespace FO_2022
         }
         private void companyNSMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Define_Company_NSM nsm=new Define_Company_NSM();
+            Customer_Wise_Profits nsm =new Customer_Wise_Profits();
             nsm.Show();
             this.Hide();
         }
@@ -717,7 +717,7 @@ namespace FO_2022
         }
         private void companySOsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SO_s_ASM_Wise so=new SO_s_ASM_Wise();  
+            Company_Wise_Profits so=new Company_Wise_Profits();  
             so.Show();
             this.Hide();
         }

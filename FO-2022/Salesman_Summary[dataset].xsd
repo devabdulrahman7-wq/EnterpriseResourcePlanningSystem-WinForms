@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Salesman_Summary_x005B_dataset_x005D_" targetNamespace="http://tempuri.org/Salesman_Summary[dataset].xsd" xmlns:mstns="http://tempuri.org/Salesman_Summary[dataset].xsd" xmlns="http://tempuri.org/Salesman_Summary[dataset].xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Salesman_Summary_x005B_dataset_x005D_" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Salesman_Summary[dataset]" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="_Salesman_Summary_dataset_">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Salesman_Summary_x005B_dataset_x005D_" msprop:Generator_RowClassName="_Salesman_Summary_dataset_Row" msprop:Generator_RowEvHandlerName="_Salesman_Summary_dataset_RowChangeEventHandler" msprop:Generator_RowDeletedName="_Salesman_Summary_dataset_RowDeleted" msprop:Generator_RowDeletingName="_Salesman_Summary_dataset_RowDeleting" msprop:Generator_RowEvArgName="_Salesman_Summary_dataset_RowChangeEvent" msprop:Generator_TablePropName="__Salesman_Summary_dataset_" msprop:Generator_RowChangedName="_Salesman_Summary_dataset_RowChanged" msprop:Generator_UserTableName="Salesman_Summary[dataset]" msprop:Generator_RowChangingName="_Salesman_Summary_dataset_RowChanging" msprop:Generator_TableClassName="_Salesman_Summary_dataset_DataTable" msprop:Generator_TableVarName="_tableSalesman_Summary_dataset_">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_UserColumnName="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" type="xs:string" default="&quot; &quot;" minOccurs="0" />
+              <xs:element name="CustomerName" msprop:Generator_UserColumnName="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" default="&quot; &quot;" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SaleValue" msprop:Generator_UserColumnName="SaleValue" msprop:Generator_ColumnPropNameInTable="SaleValueColumn" msprop:Generator_ColumnPropNameInRow="SaleValue" msprop:Generator_ColumnVarNameInTable="columnSaleValue" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ReturnValue" msprop:Generator_UserColumnName="ReturnValue" msprop:Generator_ColumnPropNameInTable="ReturnValueColumn" msprop:Generator_ColumnPropNameInRow="ReturnValue" msprop:Generator_ColumnVarNameInTable="columnReturnValue" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="NetValue" msprop:Generator_UserColumnName="NetValue" msprop:Generator_ColumnPropNameInTable="NetValueColumn" msprop:Generator_ColumnPropNameInRow="NetValue" msprop:Generator_ColumnVarNameInTable="columnNetValue" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ReturnPercentage" msprop:Generator_UserColumnName="ReturnPercentage" msprop:Generator_ColumnPropNameInTable="ReturnPercentageColumn" msprop:Generator_ColumnPropNameInRow="ReturnPercentage" msprop:Generator_ColumnVarNameInTable="columnReturnPercentage" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ReceivedAmount" msprop:Generator_UserColumnName="ReceivedAmount" msprop:Generator_ColumnPropNameInTable="ReceivedAmountColumn" msprop:Generator_ColumnPropNameInRow="ReceivedAmount" msprop:Generator_ColumnVarNameInTable="columnReceivedAmount" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="BalanceAmount" msprop:Generator_UserColumnName="BalanceAmount" msprop:Generator_ColumnPropNameInTable="BalanceAmountColumn" msprop:Generator_ColumnPropNameInRow="BalanceAmount" msprop:Generator_ColumnVarNameInTable="columnBalanceAmount" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

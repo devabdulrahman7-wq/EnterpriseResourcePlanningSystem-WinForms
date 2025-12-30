@@ -16,5 +16,44 @@ namespace FO_2022
         {
             InitializeComponent();
         }
+
+        private void fromdatepcker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todatepcker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Purchase_Summary_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendoridtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendoridsearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendornametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

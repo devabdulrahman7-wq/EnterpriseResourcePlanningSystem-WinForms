@@ -621,11 +621,6 @@
     <Compile Include="Preview_of_Stock_Current_Sheet.Designer.cs">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preview_of_Stock_Current_Sheet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Preview_Purchase_Summary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -796,6 +791,90 @@
     <Compile Include="Quaterely Sales Party Wise  .Designer.cs">
       <DependentUpon>Quaterely Sales Party Wise  .cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Charts_of_Accounts_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Charts_of_Accounts_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Charts_of_Accounts_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Charts_of_Accounts_rv.Designer.cs">
+      <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Company_Wise_Profits_ds.cs">
+      <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Company_Wise_Profits_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Company_Wise_Profits_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Company_Wise_Profits_rv.Designer.cs">
+      <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Employee_Salary_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Employee_Salary_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Employee_Salary_report.Designer.cs">
+      <DependentUpon>Employee_Salary_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Party_List_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Party_List_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Part_List_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Part_List_rv.Designer.cs">
+      <DependentUpon>Part_List_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase_Summary_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase_Summary_rv.Designer.cs">
+      <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sector_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sector_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sector_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Sector_rv.Designer.cs">
+      <DependentUpon>Sector_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Town_ds.cs">
+      <DependentUpon>Town_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Town_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Town_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Town_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Town_rv.Designer.cs">
+      <DependentUpon>Town_rv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale Order.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -939,6 +1018,20 @@
     </Compile>
     <Compile Include="Salesman_Summary.Designer.cs">
       <DependentUpon>Salesman_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salesman_Summary[dataset].cs">
+      <DependentUpon>Salesman_Summary[dataset].xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Salesman_Summary[dataset].Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salesman_Summary[dataset].xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Salesman_Summary[win].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salesman_Summary[win].Designer.cs">
+      <DependentUpon>Salesman_Summary[win].cs</DependentUpon>
     </Compile>
     <Compile Include="Sales_and_Stock_Statement.cs">
       <SubType>Form</SubType>
@@ -1378,7 +1471,6 @@
     <EmbeddedResource Include="Post_Date_Recovery_Promises.resx">
       <DependentUpon>Post_Date_Recovery_Promises.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.rdlc" />
     <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.resx">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </EmbeddedResource>
@@ -1475,6 +1567,41 @@
     <EmbeddedResource Include="Quaterely Sales Party Wise  .resx">
       <DependentUpon>Quaterely Sales Party Wise  .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Charts_of_Accounts_rv.resx">
+      <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Chats_of_Accounts_report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Company_Wise_Profits_report.rdlc" />
+    <EmbeddedResource Include="Reports\Company_Wise_Profits_rv.resx">
+      <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
+      <DependentUpon>Employee_Salary_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc" />
+    <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
+    <EmbeddedResource Include="Reports\Part_List_rv.resx">
+      <DependentUpon>Part_List_rv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase_Summary.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Summary_rv.resx">
+      <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sector.rdlc" />
+    <EmbeddedResource Include="Reports\Sector_rv.resx">
+      <DependentUpon>Sector_rv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Town_report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Town_rv.resx">
+      <DependentUpon>Town_rv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale Order.resx">
       <DependentUpon>Sale Order.cs</DependentUpon>
     </EmbeddedResource>
@@ -1546,6 +1673,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Salesman_Summary.resx">
       <DependentUpon>Salesman_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salesman_Summary[report].rdlc" />
+    <EmbeddedResource Include="Salesman_Summary[win].resx">
+      <DependentUpon>Salesman_Summary[win].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales_and_Stock_Statement.resx">
       <DependentUpon>Sales_and_Stock_Statement.cs</DependentUpon>
@@ -1632,17 +1763,6 @@
       <DependentUpon>Weekly Payment Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Preview_of_Stock_Current_Sheet.xsc">
-      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
-    </None>
-    <None Include="Preview_of_Stock_Current_Sheet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Preview_of_Stock_Current_Sheet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Preview_of_Stock_Current_Sheet.xss">
-      <DependentUpon>Preview_of_Stock_Current_Sheet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1652,10 +1772,88 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reports\Charts_of_Accounts_ds.xsc">
+      <DependentUpon>Charts_of_Accounts_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Charts_of_Accounts_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Charts_of_Accounts_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Charts_of_Accounts_ds.xss">
+      <DependentUpon>Charts_of_Accounts_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Company_Wise_Profits_ds.xsc">
+      <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Company_Wise_Profits_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Company_Wise_Profits_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Company_Wise_Profits_ds.xss">
+      <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Employee_Salary_ds.xsc">
+      <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Employee_Salary_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Employee_Salary_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Employee_Salary_ds.xss">
+      <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Party_List_ds.xsc">
+      <DependentUpon>Party_List_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Party_List_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Party_List_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Party_List_ds.xss">
+      <DependentUpon>Party_List_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Sector_ds.xsc">
+      <DependentUpon>Sector_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Sector_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sector_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Sector_ds.xss">
+      <DependentUpon>Sector_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Town_ds.xsc">
+      <DependentUpon>Town_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Town_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Town_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Town_ds.xss">
+      <DependentUpon>Town_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Salesman_Summary[dataset].xsc">
+      <DependentUpon>Salesman_Summary[dataset].xsd</DependentUpon>
+    </None>
+    <None Include="Salesman_Summary[dataset].xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Salesman_Summary[dataset].Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Salesman_Summary[dataset].xss">
+      <DependentUpon>Salesman_Summary[dataset].xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
