@@ -35,7 +35,7 @@
             this.salesmannametxtbox = new System.Windows.Forms.TextBox();
             this.salesmanidsearch = new System.Windows.Forms.PictureBox();
             this.actualsectorcombobox = new System.Windows.Forms.ComboBox();
-            this.actualtoencombobox = new System.Windows.Forms.ComboBox();
+            this.actualtowncombobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.refreshbtn = new System.Windows.Forms.Button();
@@ -43,11 +43,11 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.multiplesalesmancheckbox = new System.Windows.Forms.CheckBox();
+            this.UnAssignedCustomersdataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.AssignedCustomerdataGridView = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,8 +58,8 @@
             this.bdlbackbtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnAssignedCustomersdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssignedCustomerdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,7 @@
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 405;
             this.salesmanidsearch.TabStop = false;
+            this.salesmanidsearch.Click += new System.EventHandler(this.salesmanidsearch_Click);
             // 
             // actualsectorcombobox
             // 
@@ -123,14 +124,16 @@
             this.actualsectorcombobox.Name = "actualsectorcombobox";
             this.actualsectorcombobox.Size = new System.Drawing.Size(231, 24);
             this.actualsectorcombobox.TabIndex = 410;
+            this.actualsectorcombobox.SelectedIndexChanged += new System.EventHandler(this.actualsectorcombobox_SelectedIndexChanged);
             // 
-            // actualtoencombobox
+            // actualtowncombobox
             // 
-            this.actualtoencombobox.FormattingEnabled = true;
-            this.actualtoencombobox.Location = new System.Drawing.Point(101, 129);
-            this.actualtoencombobox.Name = "actualtoencombobox";
-            this.actualtoencombobox.Size = new System.Drawing.Size(231, 24);
-            this.actualtoencombobox.TabIndex = 411;
+            this.actualtowncombobox.FormattingEnabled = true;
+            this.actualtowncombobox.Location = new System.Drawing.Point(101, 129);
+            this.actualtowncombobox.Name = "actualtowncombobox";
+            this.actualtowncombobox.Size = new System.Drawing.Size(231, 24);
+            this.actualtowncombobox.TabIndex = 411;
+            this.actualtowncombobox.SelectedIndexChanged += new System.EventHandler(this.actualtowncombobox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -163,6 +166,7 @@
             this.refreshbtn.TabIndex = 575;
             this.refreshbtn.Text = "Refresh";
             this.refreshbtn.UseVisualStyleBackColor = false;
+            this.refreshbtn.Click += new System.EventHandler(this.refreshbtn_Click);
             // 
             // closebtn
             // 
@@ -192,6 +196,7 @@
             this.clearbtn.TabIndex = 573;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -206,6 +211,7 @@
             this.savebtn.TabIndex = 572;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // label3
             // 
@@ -217,26 +223,27 @@
             this.label3.TabIndex = 576;
             this.label3.Text = "Assign Customers to Salesman";
             // 
-            // checkBox1
+            // multiplesalesmancheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(101, 159);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(188, 20);
-            this.checkBox1.TabIndex = 577;
-            this.checkBox1.Text = "Multiple Salesman Allotment";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.multiplesalesmancheckbox.AutoSize = true;
+            this.multiplesalesmancheckbox.Location = new System.Drawing.Point(101, 159);
+            this.multiplesalesmancheckbox.Name = "multiplesalesmancheckbox";
+            this.multiplesalesmancheckbox.Size = new System.Drawing.Size(188, 20);
+            this.multiplesalesmancheckbox.TabIndex = 577;
+            this.multiplesalesmancheckbox.Text = "Multiple Salesman Allotment";
+            this.multiplesalesmancheckbox.UseVisualStyleBackColor = true;
+            this.multiplesalesmancheckbox.CheckedChanged += new System.EventHandler(this.multiplesalesmancheckbox_CheckedChanged);
             // 
-            // dataGridView1
+            // UnAssignedCustomersdataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UnAssignedCustomersdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UnAssignedCustomersdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(4, 216);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(337, 294);
-            this.dataGridView1.TabIndex = 578;
+            this.UnAssignedCustomersdataGridView.Location = new System.Drawing.Point(4, 216);
+            this.UnAssignedCustomersdataGridView.Name = "UnAssignedCustomersdataGridView";
+            this.UnAssignedCustomersdataGridView.Size = new System.Drawing.Size(337, 294);
+            this.UnAssignedCustomersdataGridView.TabIndex = 578;
             // 
             // Column1
             // 
@@ -250,16 +257,16 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 135;
             // 
-            // dataGridView2
+            // AssignedCustomerdataGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AssignedCustomerdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AssignedCustomerdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(438, 216);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(340, 294);
-            this.dataGridView2.TabIndex = 579;
+            this.AssignedCustomerdataGridView.Location = new System.Drawing.Point(438, 216);
+            this.AssignedCustomerdataGridView.Name = "AssignedCustomerdataGridView";
+            this.AssignedCustomerdataGridView.Size = new System.Drawing.Size(340, 294);
+            this.AssignedCustomerdataGridView.TabIndex = 579;
             // 
             // Column3
             // 
@@ -310,6 +317,7 @@
             this.nextbtn.TabIndex = 582;
             this.nextbtn.Text = "<";
             this.nextbtn.UseVisualStyleBackColor = false;
+            this.nextbtn.Click += new System.EventHandler(this.nextbtn_Click);
             // 
             // backbtn
             // 
@@ -324,6 +332,7 @@
             this.backbtn.TabIndex = 583;
             this.backbtn.Text = ">";
             this.backbtn.UseVisualStyleBackColor = false;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
             // dblnextbtn
             // 
@@ -338,6 +347,7 @@
             this.dblnextbtn.TabIndex = 584;
             this.dblnextbtn.Text = "<<";
             this.dblnextbtn.UseVisualStyleBackColor = false;
+            this.dblnextbtn.Click += new System.EventHandler(this.dblnextbtn_Click);
             // 
             // bdlbackbtn
             // 
@@ -352,6 +362,7 @@
             this.bdlbackbtn.TabIndex = 585;
             this.bdlbackbtn.Text = ">>";
             this.bdlbackbtn.UseVisualStyleBackColor = false;
+            this.bdlbackbtn.Click += new System.EventHandler(this.bdlbackbtn_Click);
             // 
             // pictureBox2
             // 
@@ -377,9 +388,9 @@
             this.Controls.Add(this.nextbtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.AssignedCustomerdataGridView);
+            this.Controls.Add(this.UnAssignedCustomersdataGridView);
+            this.Controls.Add(this.multiplesalesmancheckbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.refreshbtn);
             this.Controls.Add(this.closebtn);
@@ -387,7 +398,7 @@
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.actualtoencombobox);
+            this.Controls.Add(this.actualtowncombobox);
             this.Controls.Add(this.actualsectorcombobox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cstmrdatetxtbox);
@@ -400,9 +411,10 @@
             this.Name = "Assign_Customers_to_Salesman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assign_Customers_to_Salesman";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Assign_Customers_to_Salesman_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnAssignedCustomersdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssignedCustomerdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -417,7 +429,7 @@
         private System.Windows.Forms.TextBox salesmannametxtbox;
         private System.Windows.Forms.PictureBox salesmanidsearch;
         private System.Windows.Forms.ComboBox actualsectorcombobox;
-        private System.Windows.Forms.ComboBox actualtoencombobox;
+        private System.Windows.Forms.ComboBox actualtowncombobox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button refreshbtn;
@@ -425,9 +437,9 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.CheckBox multiplesalesmancheckbox;
+        private System.Windows.Forms.DataGridView UnAssignedCustomersdataGridView;
+        private System.Windows.Forms.DataGridView AssignedCustomerdataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox textBox1;

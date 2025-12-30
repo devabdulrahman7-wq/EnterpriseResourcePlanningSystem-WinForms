@@ -66,6 +66,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(529, 312);
             this.dataGridView1.TabIndex = 673;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -113,6 +114,7 @@
             this.accountcombobox.Name = "accountcombobox";
             this.accountcombobox.Size = new System.Drawing.Size(227, 24);
             this.accountcombobox.TabIndex = 670;
+            this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -152,6 +154,7 @@
             this.clearbtn.TabIndex = 675;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -166,6 +169,7 @@
             this.savebtn.TabIndex = 674;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Expense_Report_Setting
             // 

@@ -53,9 +53,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.amounttxtbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receivedbytxtbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.totalchqamounttxtbox = new System.Windows.Forms.TextBox();
@@ -114,6 +111,7 @@
             this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.vouchernotxtbox.Multiline = true;
             this.vouchernotxtbox.Name = "vouchernotxtbox";
+            this.vouchernotxtbox.ReadOnly = true;
             this.vouchernotxtbox.Size = new System.Drawing.Size(122, 23);
             this.vouchernotxtbox.TabIndex = 530;
             this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
@@ -300,6 +298,7 @@
             this.paysearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.paysearch.TabIndex = 543;
             this.paysearch.TabStop = false;
+            this.paysearch.Click += new System.EventHandler(this.paysearch_Click);
             // 
             // label10
             // 
@@ -325,34 +324,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(144, 302);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 119);
             this.dataGridView1.TabIndex = 550;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Account No";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 145;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Account Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Amount";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 140;
             // 
             // receivedbytxtbox
             // 
@@ -477,6 +454,7 @@
             this.prntbtn.TabIndex = 642;
             this.prntbtn.Text = "Print";
             this.prntbtn.UseVisualStyleBackColor = false;
+            this.prntbtn.Click += new System.EventHandler(this.prntbtn_Click);
             // 
             // clearbtn
             // 
@@ -592,9 +570,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox amounttxtbox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox receivedbytxtbox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox totalchqamounttxtbox;

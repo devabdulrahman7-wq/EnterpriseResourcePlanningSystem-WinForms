@@ -36,20 +36,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.partynamegrptxtbox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.prdctnametxtbox = new System.Windows.Forms.TextBox();
-            this.distributortxtbox = new System.Windows.Forms.TextBox();
+            this.distributorNametxtbox = new System.Windows.Forms.TextBox();
+            this.distributorIdtxtbox = new System.Windows.Forms.TextBox();
             this.partyidtxtbox = new System.Windows.Forms.TextBox();
             this.partynametxtbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectortxtbox = new System.Windows.Forms.TextBox();
+            this.SearchdataGridView = new System.Windows.Forms.DataGridView();
+            this.sectornametxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.partiesdataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,9 +56,11 @@
             this.addmodbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label = new System.Windows.Forms.Label();
+            this.townnametxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.distributoridsearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +92,7 @@
             this.distributoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.distributoridsearch.TabIndex = 173;
             this.distributoridsearch.TabStop = false;
+            this.distributoridsearch.Click += new System.EventHandler(this.distributoridsearch_Click);
             // 
             // label6
             // 
@@ -124,6 +123,7 @@
             this.partynamegrptxtbox.Name = "partynamegrptxtbox";
             this.partynamegrptxtbox.Size = new System.Drawing.Size(283, 16);
             this.partynamegrptxtbox.TabIndex = 174;
+            this.partynamegrptxtbox.TextChanged += new System.EventHandler(this.partynamegrptxtbox_TextChanged);
             // 
             // textBox1
             // 
@@ -137,23 +137,26 @@
             this.textBox1.TabIndex = 425;
             this.textBox1.Text = "                      Distributor\'List";
             // 
-            // prdctnametxtbox
+            // distributorNametxtbox
             // 
-            this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctnametxtbox.Location = new System.Drawing.Point(557, 134);
-            this.prdctnametxtbox.Multiline = true;
-            this.prdctnametxtbox.Name = "prdctnametxtbox";
-            this.prdctnametxtbox.Size = new System.Drawing.Size(209, 17);
-            this.prdctnametxtbox.TabIndex = 427;
+            this.distributorNametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.distributorNametxtbox.Location = new System.Drawing.Point(557, 134);
+            this.distributorNametxtbox.Multiline = true;
+            this.distributorNametxtbox.Name = "distributorNametxtbox";
+            this.distributorNametxtbox.Size = new System.Drawing.Size(209, 17);
+            this.distributorNametxtbox.TabIndex = 427;
+            this.distributorNametxtbox.TextChanged += new System.EventHandler(this.distributorNametxtbox_TextChanged);
             // 
-            // distributortxtbox
+            // distributorIdtxtbox
             // 
-            this.distributortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.distributortxtbox.Location = new System.Drawing.Point(426, 132);
-            this.distributortxtbox.Multiline = true;
-            this.distributortxtbox.Name = "distributortxtbox";
-            this.distributortxtbox.Size = new System.Drawing.Size(96, 19);
-            this.distributortxtbox.TabIndex = 428;
+            this.distributorIdtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.distributorIdtxtbox.Location = new System.Drawing.Point(426, 132);
+            this.distributorIdtxtbox.Multiline = true;
+            this.distributorIdtxtbox.Name = "distributorIdtxtbox";
+            this.distributorIdtxtbox.Size = new System.Drawing.Size(96, 19);
+            this.distributorIdtxtbox.TabIndex = 428;
+            this.distributorIdtxtbox.TextChanged += new System.EventHandler(this.distributorIdtxtbox_TextChanged);
+            this.distributorIdtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.distributorIdtxtbox_KeyPress);
             // 
             // partyidtxtbox
             // 
@@ -162,6 +165,7 @@
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(96, 16);
             this.partyidtxtbox.TabIndex = 433;
+            this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
             // partynametxtbox
             // 
@@ -170,6 +174,8 @@
             this.partynametxtbox.Name = "partynametxtbox";
             this.partynametxtbox.Size = new System.Drawing.Size(99, 16);
             this.partynametxtbox.TabIndex = 432;
+            this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
+            this.partynametxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partynamegrptxtbox_KeyPress);
             // 
             // label7
             // 
@@ -193,50 +199,24 @@
             this.label5.TabIndex = 429;
             this.label5.Text = "Party ID";
             // 
-            // dataGridView1
+            // SearchdataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(396, 281);
-            this.dataGridView1.TabIndex = 434;
+            this.SearchdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchdataGridView.Location = new System.Drawing.Point(12, 197);
+            this.SearchdataGridView.Name = "SearchdataGridView";
+            this.SearchdataGridView.Size = new System.Drawing.Size(396, 281);
+            this.SearchdataGridView.TabIndex = 434;
+            this.SearchdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchdataGridView_CellContentClick);
+            this.SearchdataGridView.SelectionChanged += new System.EventHandler(this.SearchdataGridView_SelectionChanged);
             // 
-            // Column1
+            // sectornametxtbox
             // 
-            this.Column1.HeaderText = "Cust ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 90;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Customer Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 130;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Town";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 65;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Sector";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 65;
-            // 
-            // sectortxtbox
-            // 
-            this.sectortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sectortxtbox.Location = new System.Drawing.Point(662, 173);
-            this.sectortxtbox.Name = "sectortxtbox";
-            this.sectortxtbox.Size = new System.Drawing.Size(104, 16);
-            this.sectortxtbox.TabIndex = 436;
+            this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sectornametxtbox.Location = new System.Drawing.Point(662, 173);
+            this.sectornametxtbox.Name = "sectornametxtbox";
+            this.sectornametxtbox.Size = new System.Drawing.Size(104, 16);
+            this.sectornametxtbox.TabIndex = 436;
+            this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // label2
             // 
@@ -249,18 +229,20 @@
             this.label2.TabIndex = 435;
             this.label2.Text = "Sector Name";
             // 
-            // dataGridView2
+            // partiesdataGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.partiesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.partiesdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView2.Location = new System.Drawing.Point(426, 198);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(484, 277);
-            this.dataGridView2.TabIndex = 437;
+            this.partiesdataGridView.Location = new System.Drawing.Point(426, 198);
+            this.partiesdataGridView.Name = "partiesdataGridView";
+            this.partiesdataGridView.Size = new System.Drawing.Size(484, 277);
+            this.partiesdataGridView.TabIndex = 437;
+            this.partiesdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.partiesdataGridView_CellContentClick);
+            this.partiesdataGridView.SelectionChanged += new System.EventHandler(this.partiesdataGridView_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -314,6 +296,7 @@
             this.removebtn.TabIndex = 441;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // switchbtn
             // 
@@ -328,6 +311,7 @@
             this.switchbtn.TabIndex = 440;
             this.switchbtn.Text = "Switch";
             this.switchbtn.UseVisualStyleBackColor = false;
+            this.switchbtn.Click += new System.EventHandler(this.switchbtn_Click);
             // 
             // addmodbtn
             // 
@@ -342,6 +326,7 @@
             this.addmodbtn.TabIndex = 439;
             this.addmodbtn.Text = "Add/Modify";
             this.addmodbtn.UseVisualStyleBackColor = false;
+            this.addmodbtn.Click += new System.EventHandler(this.addmodbtn_Click);
             // 
             // savebtn
             // 
@@ -356,6 +341,7 @@
             this.savebtn.TabIndex = 438;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // pictureBox1
             // 
@@ -367,6 +353,26 @@
             this.pictureBox1.TabIndex = 443;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(769, 154);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(76, 16);
+            this.label.TabIndex = 435;
+            this.label.Text = "Town Name";
+            // 
+            // townnametxtbox
+            // 
+            this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.townnametxtbox.Location = new System.Drawing.Point(772, 173);
+            this.townnametxtbox.Name = "townnametxtbox";
+            this.townnametxtbox.Size = new System.Drawing.Size(104, 16);
+            this.townnametxtbox.TabIndex = 436;
+            this.townnametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // Distributor_s_Parties_Management
             // 
@@ -380,16 +386,18 @@
             this.Controls.Add(this.switchbtn);
             this.Controls.Add(this.addmodbtn);
             this.Controls.Add(this.savebtn);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.sectortxtbox);
+            this.Controls.Add(this.partiesdataGridView);
+            this.Controls.Add(this.townnametxtbox);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.sectornametxtbox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SearchdataGridView);
             this.Controls.Add(this.partyidtxtbox);
             this.Controls.Add(this.partynametxtbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.distributortxtbox);
-            this.Controls.Add(this.prdctnametxtbox);
+            this.Controls.Add(this.distributorIdtxtbox);
+            this.Controls.Add(this.distributorNametxtbox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.partynamegrptxtbox);
             this.Controls.Add(this.distributoridsearch);
@@ -404,8 +412,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Distributor_s_Parties_Management";
             ((System.ComponentModel.ISupportInitialize)(this.distributoridsearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -421,20 +429,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox partynamegrptxtbox;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox prdctnametxtbox;
-        private System.Windows.Forms.TextBox distributortxtbox;
+        private System.Windows.Forms.TextBox distributorNametxtbox;
+        private System.Windows.Forms.TextBox distributorIdtxtbox;
         private System.Windows.Forms.TextBox partyidtxtbox;
         private System.Windows.Forms.TextBox partynametxtbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.TextBox sectortxtbox;
+        private System.Windows.Forms.DataGridView SearchdataGridView;
+        private System.Windows.Forms.TextBox sectornametxtbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView partiesdataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -445,5 +449,7 @@
         private System.Windows.Forms.Button addmodbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox townnametxtbox;
     }
 }
