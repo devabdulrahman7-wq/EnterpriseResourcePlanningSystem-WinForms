@@ -8,14 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace FO_2022
 {
     public partial class Bank_Cheques_Issue : Form
     {
+        private string connectionString;
+        private DataTable gridDataTable;
+
         public Bank_Cheques_Issue()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            gridDataTable = new DataTable();
         }
 
         private void closebtn_Click(object sender, EventArgs e)
@@ -97,32 +103,491 @@ namespace FO_2022
 
         private void openbtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Create custom input dialog
+                Form inputForm = new Form();
+                inputForm.Text = "Open Cheque Issue";
+                inputForm.Width = 300;
+                inputForm.Height = 150;
+                inputForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+                inputForm.MaximizeBox = false;
+                inputForm.MinimizeBox = false;
+                inputForm.StartPosition = FormStartPosition.CenterParent;
 
+                Label label = new Label();
+                label.Text = "Enter Voucher No to open:";
+                label.SetBounds(10, 20, 280, 20);
+
+                TextBox textBox = new TextBox();
+                textBox.SetBounds(10, 45, 260, 20);
+
+                Button okButton = new Button();
+                okButton.Text = "OK";
+                okButton.DialogResult = DialogResult.OK;
+                okButton.SetBounds(60, 80, 75, 25);
+
+                Button cancelButton = new Button();
+                cancelButton.Text = "Cancel";
+                cancelButton.DialogResult = DialogResult.Cancel;
+                cancelButton.SetBounds(140, 80, 75, 25);
+
+                inputForm.Controls.Add(label);
+                inputForm.Controls.Add(textBox);
+                inputForm.Controls.Add(okButton);
+                inputForm.Controls.Add(cancelButton);
+                inputForm.AcceptButton = okButton;
+                inputForm.CancelButton = cancelButton;
+
+                if (inputForm.ShowDialog() == DialogResult.OK)
+                {
+                    string input = textBox.Text;
+
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        if (decimal.TryParse(input, out decimal voucherNo))
+                        {
+                            LoadBankCheque(voucherNo);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a valid Voucher Number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening cheque issue: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private void LoadBankCheque(decimal voucherNo)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = @"SELECT * FROM BankCheques WHERE VoucherNo = @VoucherNo";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@VoucherNo", voucherNo);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                vouchernotxtbox.Text = reader["VoucherNo"].ToString();
+                                voucherdatepcker.Value = Convert.ToDateTime(reader["VoucherDate"]);
+                                chqnotxtbox.Text = reader["ChequeNo"].ToString();
+                                chqdatepcker.Value = reader["ChequeDate"] != DBNull.Value ? Convert.ToDateTime(reader["ChequeDate"]) : DateTime.Now;
+                                banknotxtbox.Text = reader["BankAccountNo"].ToString();
+                                paytotxtbox.Text = reader["AccountNo"].ToString();
+                                // amounttxtbox.Text = reader["Amount"].ToString(); // Remove this line
+                                receivedbytxtbox.Text = reader["ReceivedBy"]?.ToString();
+                                narrationtxtbox.Text = reader["Narration"]?.ToString();
+
+                                // Load bank name
+                                LoadBankAccountName(reader["BankAccountNo"].ToString());
+                                // Load pay to account name
+                                LoadPayToAccountName(reader["AccountNo"].ToString());
+
+                                // Add the amount to grid
+                                decimal amount = Convert.ToDecimal(reader["Amount"]);
+                                if (amount > 0)
+                                {
+                                    // Clear existing grid data
+                                    gridDataTable.Clear();
+
+                                    // Add row to grid
+                                    DataRow newRow = gridDataTable.NewRow();
+                                    newRow["AccountNo"] = reader["AccountNo"].ToString();
+                                    newRow["AccountName"] = paytoaccountnametxtbox.Text;
+                                    newRow["Amount"] = amount;
+                                    gridDataTable.Rows.Add(newRow);
+
+                                    // Update total amount
+                                    UpdateTotalAmount();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Voucher not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading cheque: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void removebtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(vouchernotxtbox.Text))
+                {
+                    MessageBox.Show("Please select a cheque to remove!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                DialogResult result = MessageBox.Show("Are you sure you want to remove this cheque?", "Confirm Delete",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        string query = "DELETE FROM BankCheques WHERE VoucherNo = @VoucherNo";
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@VoucherNo", decimal.Parse(vouchernotxtbox.Text));
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Cheque removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                clearbtn.PerformClick(); // Clear all fields
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error removing cheque: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void savebtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Validation
+                if (string.IsNullOrEmpty(banknotxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Bank Account No!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                if (string.IsNullOrEmpty(paytotxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Pay To Account No!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(chqnotxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Cheque No!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Check if there's any amount in the grid
+                if (gridDataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Please add at least one amount to the grid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Get total amount from grid
+                decimal totalAmount = 0;
+                foreach (DataRow row in gridDataTable.Rows)
+                {
+                    totalAmount += Convert.ToDecimal(row["Amount"]);
+                }
+
+                if (totalAmount <= 0)
+                {
+                    MessageBox.Show("Please enter a valid amount in the grid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                decimal voucherNo = 0;
+                bool isUpdate = false;
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Check if voucher exists (for update)
+                    string checkQuery = "SELECT COUNT(*) FROM BankCheques WHERE VoucherNo = @VoucherNo";
+
+                    if (string.IsNullOrEmpty(vouchernotxtbox.Text))
+                    {
+                        // Get next voucher number for new record
+                        voucherNo = GetNextVoucherNumber(conn);
+                        vouchernotxtbox.Text = voucherNo.ToString();
+                    }
+                    else
+                    {
+                        voucherNo = decimal.Parse(vouchernotxtbox.Text);
+
+                        using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                        {
+                            checkCmd.Parameters.AddWithValue("@VoucherNo", voucherNo);
+                            isUpdate = (int)checkCmd.ExecuteScalar() > 0;
+                        }
+                    }
+
+                    string query;
+                    if (isUpdate)
+                    {
+                        query = @"UPDATE BankCheques SET 
+                        VoucherDate = @VoucherDate,
+                        ChequeNo = @ChequeNo,
+                        ChequeDate = @ChequeDate,
+                        ReconcileDate = @ReconcileDate,
+                        BankAccountNo = @BankAccountNo,
+                        AccountNo = @AccountNo,
+                        UserNo = @UserNo,
+                        Amount = @Amount,
+                        ReceivedBy = @ReceivedBy,
+                        IsPosted = @IsPosted,
+                        Narration = @Narration,
+                        IsLost = @IsLost
+                        WHERE VoucherNo = @VoucherNo";
+                    }
+                    else
+                    {
+                        query = @"INSERT INTO BankCheques 
+                        (VoucherNo, VoucherDate, ChequeNo, ChequeDate, ReconcileDate, 
+                        BankAccountNo, AccountNo, UserNo, Amount, ReceivedBy, IsPosted, Narration, IsLost)
+                        VALUES 
+                        (@VoucherNo, @VoucherDate, @ChequeNo, @ChequeDate, @ReconcileDate,
+                        @BankAccountNo, @AccountNo, @UserNo, @Amount, @ReceivedBy, @IsPosted, @Narration, @IsLost)";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@VoucherNo", voucherNo);
+                        cmd.Parameters.AddWithValue("@VoucherDate", voucherdatepcker.Value.Date);
+                        cmd.Parameters.AddWithValue("@ChequeNo", chqnotxtbox.Text);
+                        cmd.Parameters.AddWithValue("@ChequeDate", chqdatepcker.Value.Date);
+                        cmd.Parameters.AddWithValue("@ReconcileDate", reconcilethisdepositchqbox.Checked ? (object)DateTime.Now.Date : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@BankAccountNo", banknotxtbox.Text);
+                        cmd.Parameters.AddWithValue("@AccountNo", paytotxtbox.Text);
+                        cmd.Parameters.AddWithValue("@UserNo", 1); // Replace with actual user no
+                        cmd.Parameters.AddWithValue("@Amount", totalAmount); // Use total amount from grid
+                        cmd.Parameters.AddWithValue("@ReceivedBy", string.IsNullOrEmpty(receivedbytxtbox.Text) ? DBNull.Value : (object)receivedbytxtbox.Text);
+                        cmd.Parameters.AddWithValue("@IsPosted", false);
+                        cmd.Parameters.AddWithValue("@Narration", string.IsNullOrEmpty(narrationtxtbox.Text) ? DBNull.Value : (object)narrationtxtbox.Text);
+                        cmd.Parameters.AddWithValue("@IsLost", false);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Cheque saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // **NEW: Auto clear form after successful save**
+                            ClearFormAfterSave(conn);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving cheque: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private void ClearFormAfterSave(SqlConnection conn)
+        {
+            try
+            {
+                // Clear all text boxes except voucherno (we'll reload it)
+                vouchernotxtbox.Clear();
+                voucherdatepcker.Value = DateTime.Now;
+                banknotxtbox.Clear();
+                banknametxtbox.Clear();
+                chqnotxtbox.Clear();
+                chqdatepcker.Value = DateTime.Now;
+                reconcilethisdepositchqbox.Checked = false;
+                paytotxtbox.Clear();
+                paytoaccountnametxtbox.Clear();
+                amounttxtbox.Clear();
+                receivedbytxtbox.Clear();
+                narrationtxtbox.Clear();
+                totalchqamounttxtbox.Clear();
+
+                // Clear data grid view
+                gridDataTable.Clear();
+
+                // **Load next voucher number immediately**
+                LoadNextVoucherNumber();
+
+                // Set focus to first field
+                banknotxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error clearing form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadNextVoucherNumber()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    decimal nextVoucherNo = GetNextVoucherNumber(conn);
+                    vouchernotxtbox.Text = nextVoucherNo.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading voucher number: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private decimal GetNextVoucherNumber(SqlConnection conn)
+        {
+            string query = "SELECT ISNULL(MAX(VoucherNo), 0) + 1 FROM BankCheques";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                return Convert.ToDecimal(cmd.ExecuteScalar());
+            }
+        }
+        
         private void clearbtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Clear all text boxes
+                vouchernotxtbox.Clear();
+                voucherdatepcker.Value = DateTime.Now;
+                banknotxtbox.Clear();
+                banknametxtbox.Clear();
+                chqnotxtbox.Clear();
+                chqdatepcker.Value = DateTime.Now;
+                reconcilethisdepositchqbox.Checked = false;
+                paytotxtbox.Clear();
+                paytoaccountnametxtbox.Clear();
+                amounttxtbox.Clear();
+                receivedbytxtbox.Clear();
+                narrationtxtbox.Clear();
+                totalchqamounttxtbox.Clear();
 
+                // Clear data grid view
+                gridDataTable.Clear();
+
+                // **Reload next voucher number**
+                LoadNextVoucherNumber();
+
+                // Set focus to first field
+                banknotxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error clearing form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Bank_Cheques_Issue_Load(object sender, EventArgs e)
         {
+            try
+            {
+                // Initialize grid data table structure
+                InitializeGridDataTable();
 
+                // Load initial voucher number
+                LoadNextVoucherNumber();
+
+                // Set current date
+                voucherdatepcker.Value = DateTime.Now;
+                chqdatepcker.Value = DateTime.Now;
+
+                // Make voucherno textbox read-only
+                vouchernotxtbox.ReadOnly = true;
+
+                // Set Enter key behavior for amount textbox
+                amounttxtbox.KeyDown += Amounttxtbox_KeyDown;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void InitializeGridDataTable()
+        {
+            gridDataTable.Columns.Clear();
+            gridDataTable.Columns.Add("AccountNo", typeof(string));
+            gridDataTable.Columns.Add("AccountName", typeof(string));
+            gridDataTable.Columns.Add("Amount", typeof(decimal));
+            dataGridView1.DataSource = gridDataTable;
+        }
+
+       
+        private void Amounttxtbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AddAmountToGrid();
+                e.SuppressKeyPress = true; // Prevent the beep sound
+            }
+        }
+
+        private void AddAmountToGrid()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(amounttxtbox.Text) || !decimal.TryParse(amounttxtbox.Text, out decimal amount))
+                {
+                    MessageBox.Show("Please enter a valid amount!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(paytotxtbox.Text) || string.IsNullOrEmpty(paytoaccountnametxtbox.Text))
+                {
+                    MessageBox.Show("Please select an account first!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Add row to grid
+                DataRow newRow = gridDataTable.NewRow();
+                newRow["AccountNo"] = paytotxtbox.Text;
+                newRow["AccountName"] = paytoaccountnametxtbox.Text;
+                newRow["Amount"] = amount;
+                gridDataTable.Rows.Add(newRow);
+
+                // Update total amount
+                UpdateTotalAmount();
+
+                // Clear amount field
+                amounttxtbox.Clear();
+
+                // Focus back to amount field
+                amounttxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding amount to grid: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateTotalAmount()
+        {
+            decimal total = 0;
+            foreach (DataRow row in gridDataTable.Rows)
+            {
+                total += Convert.ToDecimal(row["Amount"]);
+            }
+            totalchqamounttxtbox.Text = total.ToString("N2");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // You can implement row selection logic here if needed
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -134,862 +599,162 @@ namespace FO_2022
 
         private void accountsearch_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(banknotxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Bank Account No!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                LoadBankAccountName(banknotxtbox.Text);
+                LoadChequeNumbers(banknotxtbox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching account: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadBankAccountName(string accountNo)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT AccountName FROM ChartOfAccounts WHERE AccountNo = @AccountNo";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@AccountNo", accountNo);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            banknametxtbox.Text = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            banknametxtbox.Clear();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading bank account name: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadChequeNumbers(string accountNo)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = @"SELECT TOP 1 ChequeNo FROM ChequeBookBody 
+                                   WHERE AccountNo = @AccountNo AND IsCancel = 0 AND IsDeleted = 0
+                                   ORDER BY SerialNo";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@AccountNo", accountNo);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            chqnotxtbox.Text = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No available cheque numbers found for this account!", "Information",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            chqnotxtbox.Clear();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading cheque numbers: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void paysearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(paytotxtbox.Text))
+                {
+                    MessageBox.Show("Please enter Account No!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                LoadPayToAccountName(paytotxtbox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching account: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadPayToAccountName(string accountNo)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT AccountName FROM ChartOfAccounts WHERE AccountNo = @AccountNo";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@AccountNo", accountNo);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            paytoaccountnametxtbox.Text = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account not found!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            paytoaccountnametxtbox.Clear();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading account name: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void prntbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(vouchernotxtbox.Text))
+                {
+                    MessageBox.Show("No cheque data to print!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Here you can implement your printing logic
+                // For now, just show a message
+                MessageBox.Show("Print functionality to be implemented. Voucher No: " + vouchernotxtbox.Text,
+                    "Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // You can add code to print the cheque voucher
+                // Example: PrintDocument, Crystal Reports, RDLC, etc.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error printing: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
-//using System;
-//using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Data;
-//using System.Data.SqlClient;
-//using System.Drawing;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Windows.Forms;
-
-//namespace FO_2022
-//{
-//    public partial class Promises_Processing : Form
-//    {
-//        private SqlConnection connection;
-//        private DataTable promisesDataTable;
-//        private int selectedPromiseNo = 0;
-//        private decimal originalAmount = 0;
-//        private DateTime originalPromiseDate;
-//        private bool isLoading = false;
-//        private string currentUserNo = "1"; // Replace with actual user session
-
-//        public Promises_Processing()
-//        {
-//            InitializeComponent();
-//            InitializeConnection();
-//        }
-
-//        private void InitializeConnection()
-//        {
-//            try
-//            {
-//                string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-//                connection = new SqlConnection(connectionString);
-//            }
-//            catch (Exception ex)
-//            {
-//                MessageBox.Show("Error initializing database connection: " + ex.Message,
-//                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//            }
-//        }
-
-//        private void Promises_Processing_Load(object sender, EventArgs e)
-//        {
-//            try
-//            {
-//                // Set default dates
-//                promisesdatepcker.Value = DateTime.Now.Date;
-//                newpromisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-//                promisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-
-//                // Load initial data
-//                LoadPromisesForDate(DateTime.Now.Date);
-
-//                // Initialize form controls state
-//                ResetForm();
-//                SetControlsReadOnly(true);
-
-//                // Select default radio button
-//                radioButtonprocessrecovery.Checked = true;
-//                fullprocessradiobtn.Checked = true;
-
-//                // Focus on grid
-//                dataGridView1.Focus();
-//            }
-//            catch (Exception ex)
-//            {
-//                MessageBox.Show("Error loading form: " + ex.Message,
-//                    "Initialization Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//            }
-//        }
-
-//        private void LoadPromisesForDate(DateTime date)
-//        {
-//            try
-//            {
-//                Cursor = Cursors.WaitCursor;
-
-//                if (connection.State != ConnectionState.Open)
-//                    connection.Open();
-
-//                string query = @"SELECT p.PromiseNo, 
-//                                CONVERT(varchar, p.CurrentDate, 103) as CurrentDate,
-//                                p.AccountNo, 
-//                                c.AccountName, 
-//                                CONVERT(varchar, p.PromiseDate, 103) as PromiseDate,
-//                                p.Amount, 
-//                                p.Narration, 
-//                                p.IsPayment,
-//                                p.IsPosted
-//                                FROM Promises p
-//                                LEFT JOIN ChartOfAccounts c ON p.AccountNo = c.AccountNo
-//                                WHERE CAST(p.PromiseDate AS DATE) = @PromiseDate 
-//                                AND p.IsPosted = 0
-//                                ORDER BY p.PromiseDate, p.PromiseNo";
-
-//                SqlCommand cmd = new SqlCommand(query, connection);
-//                cmd.Parameters.AddWithValue("@PromiseDate", date.Date);
-
-//                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-//                promisesDataTable = new DataTable();
-//                adapter.Fill(promisesDataTable);
-
-//                // Bind to DataGridView
-//                dataGridView1.DataSource = promisesDataTable;
-
-//                // Format columns
-//                FormatDataGridView();
-
-//                // Update status label
-//                lblStatus.Text = $"Loaded {promisesDataTable.Rows.Count} promise(s) for {date.ToString("dd/MM/yyyy")}";
-//            }
-//            catch (Exception ex)
-//            {
-//                MessageBox.Show("Error loading promises: " + ex.Message,
-//                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//            }
-//            finally
-//            {
-//                if (connection.State == ConnectionState.Open)
-//                    connection.Close();
-//                Cursor = Cursors.Default;
-//            }
-//        }
-
-//        private void FormatDataGridView()
-//        {
-//            try
-//            {
-//                if (dataGridView1.Columns.Count > 0)
-//                {
-//                    // Hide technical columns
-//                    dataGridView1.Columns["IsPayment"].Visible = false;
-//                    dataGridView1.Columns["IsPosted"].Visible = false;
-
-//                    // Set column headers
-//                    if (dataGridView1.Columns.Contains("PromiseNo"))
-//                        dataGridView1.Columns["PromiseNo"].HeaderText = "Promise ID";
-
-//                    if (dataGridView1.Columns.Contains("CurrentDate"))
-//                        dataGridView1.Columns["CurrentDate"].HeaderText = "Entry Date";
-
-//                    if (dataGridView1.Columns.Contains("AccountNo"))
-//                        dataGridView1.Columns["AccountNo"].HeaderText = "Account No";
-
-//                    if (dataGridView1.Columns.Contains("AccountName"))
-//                        dataGridView1.Columns["AccountName"].HeaderText = "Account Name";
-
-//                    if (dataGridView1.Columns.Contains("PromiseDate"))
-//                        dataGridView1.Columns["PromiseDate"].HeaderText = "Promise Date";
-
-//                    if (dataGridView1.Columns.Contains("Amount"))
-//                    {
-//                        dataGridView1.Columns["Amount"].HeaderText = "Amount";
-//                        dataGridView1.Columns["Amount"].DefaultCellStyle.Format = "N2";
-//                        dataGridView1.Columns["Amount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-//                    }
-
-//                    if (dataGridView1.Columns.Contains("Narration"))
-//                        dataGridView1.Columns["Narration"].HeaderText = "Narration";
-
-//                    // Auto-size columns
-//                    dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
-
-//                    // Set selection mode
-//                    dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-//                    dataGridView1.MultiSelect = false;
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                Console.WriteLine("Error formatting grid: " + ex.Message);
-//            }
-//        }
-
-//        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-//        {
-//            try
-//            {
-//                if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-//                {
-//                    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
-//                    isLoading = true;
-
-//                    // Populate form fields
-//                    selectedPromiseNo = Convert.ToInt32(row.Cells["PromiseNo"].Value);
-//                    promisesidtxtbox.Text = selectedPromiseNo.ToString();
-//                    accountnotxtbox.Text = row.Cells["AccountNo"].Value?.ToString() ?? "";
-//                    accountnametxtbox.Text = row.Cells["AccountName"].Value?.ToString() ?? "";
-//                    promisedatetxtbox.Text = row.Cells["PromiseDate"].Value?.ToString() ?? "";
-//                    amounttxtbox.Text = Convert.ToDecimal(row.Cells["Amount"].Value).ToString("N2");
-//                    narrationtxtbox.Text = row.Cells["Narration"].Value?.ToString() ?? "";
-
-//                    // Store original values for validation
-//                    originalAmount = Convert.ToDecimal(row.Cells["Amount"].Value);
-//                    originalPromiseDate = DateTime.Parse(row.Cells["PromiseDate"].Value?.ToString() ?? DateTime.Now.ToString());
-
-//                    // Set initial values for processing
-//                    paidamounttxtbox.Text = originalAmount.ToString("N2");
-//                    newpromisedatetxtbox.Text = promisedatetxtbox.Text;
-
-//                    // Enable process controls
-//                    EnableProcessControls(true);
-
-//                    // Highlight selected row
-//                    dataGridView1.Rows[e.RowIndex].Selected = true;
-
-//                    isLoading = false;
-
-//                    lblStatus.Text = $"Selected Promise #{selectedPromiseNo} - {accountnametxtbox.Text}";
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                isLoading = false;
-//                MessageBox.Show("Error selecting promise: " + ex.Message,
-//                    "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//            }
-//        }
-
-//        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-//        {
-//            // No specific action needed for content click
-//        }
-
-//        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-//        {
-//            // No validation needed for read-only grid
-//        }
-
-//        private void radioButtonprocesspayment_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (radioButtonprocesspayment.Checked && !isLoading)
-//            {
-//                lblProcessType.Text = "Processing: Payments";
-//                FilterGridByPaymentType(true);
-//            }
-//        }
-
-//        private void radioButtonprocessrecovery_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (radioButtonprocessrecovery.Checked && !isLoading)
-//            {
-//                lblProcessType.Text = "Processing: Recoveries";
-//                FilterGridByPaymentType(false);
-//            }
-//        }
-
-//        private void FilterGridByPaymentType(bool isPayment)
-//        {
-//            try
-//            {
-//                if (promisesDataTable != null && promisesDataTable.Rows.Count > 0)
-//                {
-//                    DataView dv = new DataView(promisesDataTable);
-//                    dv.RowFilter = $"IsPayment = {(isPayment ? "1" : "0")}";
-//                    dataGridView1.DataSource = dv.ToTable();
-//                    FormatDataGridView();
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                MessageBox.Show("Error filtering data: " + ex.Message,
-//                    "Filter Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//            }
-//        }
-
-//        private void fullprocessradiobtn_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (fullprocessradiobtn.Checked && !isLoading)
-//            {
-//                paidamounttxtbox.Text = originalAmount.ToString("N2");
-//                paidamounttxtbox.ReadOnly = true;
-//                newpromisedatetxtbox.ReadOnly = true;
-//                paidamounttxtbox.BackColor = SystemColors.Control;
-//                newpromisedatetxtbox.BackColor = SystemColors.Control;
-//            }
-//        }
-
-//        private void partialprocessradiobtn_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (partialprocessradiobtn.Checked && !isLoading)
-//            {
-//                paidamounttxtbox.Text = "0.00";
-//                paidamounttxtbox.ReadOnly = false;
-//                newpromisedatetxtbox.ReadOnly = true;
-//                paidamounttxtbox.BackColor = Color.White;
-//                newpromisedatetxtbox.BackColor = SystemColors.Control;
-//                paidamounttxtbox.Focus();
-//                paidamounttxtbox.SelectAll();
-//            }
-//        }
-
-//        private void postponeprocessradiobtn_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (postponeprocessradiobtn.Checked && !isLoading)
-//            {
-//                paidamounttxtbox.Text = "0.00";
-//                paidamounttxtbox.ReadOnly = true;
-//                newpromisedatetxtbox.ReadOnly = false;
-//                paidamounttxtbox.BackColor = SystemColors.Control;
-//                newpromisedatetxtbox.BackColor = Color.White;
-//                newpromisedatetxtbox.Focus();
-//                newpromisedatetxtbox.SelectAll();
-//            }
-//        }
-
-//        private void promisesdatepcker_ValueChanged(object sender, EventArgs e)
-//        {
-//            if (!isLoading)
-//            {
-//                LoadPromisesForDate(promisesdatepcker.Value);
-//                ResetForm();
-//            }
-//        }
-
-//        private void amounttxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Format amount as user types
-//            if (!isLoading && !string.IsNullOrEmpty(amounttxtbox.Text))
-//            {
-//                if (decimal.TryParse(amounttxtbox.Text.Replace(",", ""), out decimal amount))
-//                {
-//                    amounttxtbox.Text = amount.ToString("N2");
-//                    amounttxtbox.SelectionStart = amounttxtbox.Text.Length;
-//                }
-//            }
-//        }
-
-//        private void paidamounttxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Validate and format paid amount
-//            if (!isLoading && !string.IsNullOrEmpty(paidamounttxtbox.Text))
-//            {
-//                if (decimal.TryParse(paidamounttxtbox.Text.Replace(",", ""), out decimal paidAmount))
-//                {
-//                    // Validate against original amount
-//                    if (paidAmount > originalAmount)
-//                    {
-//                        MessageBox.Show("Paid amount cannot exceed original amount!",
-//                            "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                        paidamounttxtbox.Text = originalAmount.ToString("N2");
-//                    }
-//                    else
-//                    {
-//                        paidamounttxtbox.Text = paidAmount.ToString("N2");
-//                    }
-//                    paidamounttxtbox.SelectionStart = paidamounttxtbox.Text.Length;
-//                }
-//            }
-//        }
-
-//        private void promisesidtxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Read-only field
-//        }
-
-//        private void accountnotxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Read-only field
-//        }
-
-//        private void accountnametxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Read-only field
-//        }
-
-//        private void narrationtxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Limit narration to 100 characters
-//            if (narrationtxtbox.Text.Length > 100)
-//            {
-//                narrationtxtbox.Text = narrationtxtbox.Text.Substring(0, 100);
-//                narrationtxtbox.SelectionStart = 100;
-//            }
-//        }
-
-//        private void promisedatetxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Read-only field
-//        }
-
-//        private void newpromisedatetxtbox_TextChanged(object sender, EventArgs e)
-//        {
-//            // Validate date format
-//            if (!isLoading && !string.IsNullOrEmpty(newpromisedatetxtbox.Text))
-//            {
-//                if (DateTime.TryParse(newpromisedatetxtbox.Text, out DateTime newDate))
-//                {
-//                    newpromisedatetxtbox.Text = newDate.ToString("dd/MM/yyyy");
-
-//                    // Validate new date is not before today for postpone
-//                    if (postponeprocessradiobtn.Checked && newDate < DateTime.Now.Date)
-//                    {
-//                        MessageBox.Show("New promise date cannot be in the past!",
-//                            "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                        newpromisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-//                    }
-//                }
-//            }
-//        }
-
-//        private void savebtn_Click(object sender, EventArgs e)
-//        {
-//            try
-//            {
-//                // Validate input
-//                if (!ValidateInput())
-//                    return;
-
-//                // Confirm action
-//                DialogResult result = MessageBox.Show($"Are you sure you want to process Promise #{selectedPromiseNo}?\n\n" +
-//                    $"Account: {accountnametxtbox.Text}\nAmount: {originalAmount:N2}\nProcess Type: {GetProcessTypeDescription()}",
-//                    "Confirm Processing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-//                if (result != DialogResult.Yes)
-//                    return;
-
-//                Cursor = Cursors.WaitCursor;
-
-//                if (connection.State != ConnectionState.Open)
-//                    connection.Open();
-
-//                using (SqlTransaction transaction = connection.BeginTransaction())
-//                {
-//                    try
-//                    {
-//                        bool success = false;
-
-//                        if (fullprocessradiobtn.Checked)
-//                        {
-//                            success = ProcessFull(transaction);
-//                        }
-//                        else if (partialprocessradiobtn.Checked)
-//                        {
-//                            success = ProcessPartial(transaction);
-//                        }
-//                        else if (postponeprocessradiobtn.Checked)
-//                        {
-//                            success = ProcessPostpone(transaction);
-//                        }
-
-//                        if (success)
-//                        {
-//                            transaction.Commit();
-//                            MessageBox.Show("Promise processed successfully!",
-//                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-//                            // Refresh grid and reset form
-//                            LoadPromisesForDate(promisesdatepcker.Value);
-//                            ResetForm();
-//                        }
-//                        else
-//                        {
-//                            transaction.Rollback();
-//                            MessageBox.Show("Failed to process promise.",
-//                                "Processing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//                        }
-//                    }
-//                    catch (Exception ex)
-//                    {
-//                        transaction.Rollback();
-//                        throw new Exception("Transaction failed: " + ex.Message, ex);
-//                    }
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                MessageBox.Show("Error processing promise: " + ex.Message,
-//                    "Processing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//            }
-//            finally
-//            {
-//                if (connection.State == ConnectionState.Open)
-//                    connection.Close();
-//                Cursor = Cursors.Default;
-//            }
-//        }
-
-//        private bool ValidateInput()
-//        {
-//            // Check if promise is selected
-//            if (selectedPromiseNo == 0)
-//            {
-//                MessageBox.Show("Please select a promise from the list.",
-//                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                dataGridView1.Focus();
-//                return false;
-//            }
-
-//            // Check process type selection
-//            if (!fullprocessradiobtn.Checked && !partialprocessradiobtn.Checked && !postponeprocessradiobtn.Checked)
-//            {
-//                MessageBox.Show("Please select a process type (Full/Partial/Postpone).",
-//                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                return false;
-//            }
-
-//            // Validate partial process
-//            if (partialprocessradiobtn.Checked)
-//            {
-//                if (!decimal.TryParse(paidamounttxtbox.Text.Replace(",", ""), out decimal paidAmount))
-//                {
-//                    MessageBox.Show("Please enter a valid paid amount.",
-//                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                    paidamounttxtbox.Focus();
-//                    return false;
-//                }
-
-//                if (paidAmount <= 0)
-//                {
-//                    MessageBox.Show("Paid amount must be greater than 0 for partial processing.",
-//                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                    paidamounttxtbox.Focus();
-//                    return false;
-//                }
-
-//                if (paidAmount >= originalAmount)
-//                {
-//                    MessageBox.Show("For partial processing, paid amount must be less than original amount.",
-//                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                    paidamounttxtbox.Focus();
-//                    return false;
-//                }
-//            }
-
-//            // Validate postpone process
-//            if (postponeprocessradiobtn.Checked)
-//            {
-//                if (!DateTime.TryParse(newpromisedatetxtbox.Text, out DateTime newDate))
-//                {
-//                    MessageBox.Show("Please enter a valid new promise date.",
-//                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                    newpromisedatetxtbox.Focus();
-//                    return false;
-//                }
-
-//                if (newDate <= originalPromiseDate)
-//                {
-//                    MessageBox.Show("New promise date must be after the original promise date.",
-//                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-//                    newpromisedatetxtbox.Focus();
-//                    return false;
-//                }
-//            }
-
-//            return true;
-//        }
-
-//        private bool ProcessFull(SqlTransaction transaction)
-//        {
-//            try
-//            {
-//                // Update promise as posted
-//                string updatePromise = @"UPDATE Promises 
-//                                       SET IsPosted = 1, 
-//                                           Narration = @Narration
-//                                       WHERE PromiseNo = @PromiseNo";
-
-//                SqlCommand cmd = new SqlCommand(updatePromise, connection, transaction);
-//                cmd.Parameters.AddWithValue("@PromiseNo", selectedPromiseNo);
-//                cmd.Parameters.AddWithValue("@Narration", narrationtxtbox.Text.Trim());
-//                cmd.ExecuteNonQuery();
-
-//                // Create transaction record
-//                CreateTransactionRecord(transaction, originalAmount);
-
-//                return true;
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("Full processing failed: " + ex.Message, ex);
-//            }
-//        }
-
-//        private bool ProcessPartial(SqlTransaction transaction)
-//        {
-//            try
-//            {
-//                decimal paidAmount = decimal.Parse(paidamounttxtbox.Text.Replace(",", ""));
-//                decimal remainingAmount = originalAmount - paidAmount;
-
-//                // Update original promise with partial amount and mark as posted
-//                string updatePromise = @"UPDATE Promises 
-//                                       SET Amount = @PaidAmount,
-//                                           IsPosted = 1,
-//                                           Narration = @Narration
-//                                       WHERE PromiseNo = @PromiseNo";
-
-//                SqlCommand cmd = new SqlCommand(updatePromise, connection, transaction);
-//                cmd.Parameters.AddWithValue("@PromiseNo", selectedPromiseNo);
-//                cmd.Parameters.AddWithValue("@PaidAmount", paidAmount);
-//                cmd.Parameters.AddWithValue("@Narration", narrationtxtbox.Text.Trim() + " (Partial - Paid: " + paidAmount.ToString("N2") + ")");
-//                cmd.ExecuteNonQuery();
-
-//                // Create new promise for remaining amount
-//                string newNarration = "Remaining from Promise #" + selectedPromiseNo;
-//                if (!string.IsNullOrEmpty(narrationtxtbox.Text))
-//                    newNarration += " - " + narrationtxtbox.Text.Trim();
-
-//                string insertPromise = @"INSERT INTO Promises 
-//                                       (CurrentDate, AccountNo, PromiseDate, IsPayment, 
-//                                        Narration, Amount, UserNo, IsPosted)
-//                                       VALUES (@CurrentDate, @AccountNo, @PromiseDate, @IsPayment,
-//                                               @Narration, @Amount, @UserNo, 0)";
-
-//                cmd = new SqlCommand(insertPromise, connection, transaction);
-//                cmd.Parameters.AddWithValue("@CurrentDate", DateTime.Now);
-//                cmd.Parameters.AddWithValue("@AccountNo", accountnotxtbox.Text);
-//                cmd.Parameters.AddWithValue("@PromiseDate", originalPromiseDate);
-//                cmd.Parameters.AddWithValue("@IsPayment", radioButtonprocesspayment.Checked ? 1 : 0);
-//                cmd.Parameters.AddWithValue("@Narration", newNarration);
-//                cmd.Parameters.AddWithValue("@Amount", remainingAmount);
-//                cmd.Parameters.AddWithValue("@UserNo", currentUserNo);
-//                cmd.ExecuteNonQuery();
-
-//                // Create transaction record for paid amount
-//                CreateTransactionRecord(transaction, paidAmount);
-
-//                return true;
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("Partial processing failed: " + ex.Message, ex);
-//            }
-//        }
-
-//        private bool ProcessPostpone(SqlTransaction transaction)
-//        {
-//            try
-//            {
-//                DateTime newDate = DateTime.Parse(newpromisedatetxtbox.Text);
-
-//                // Update promise date
-//                string updatePromise = @"UPDATE Promises 
-//                                       SET PromiseDate = @NewPromiseDate,
-//                                           Narration = @Narration
-//                                       WHERE PromiseNo = @PromiseNo";
-
-//                SqlCommand cmd = new SqlCommand(updatePromise, connection, transaction);
-//                cmd.Parameters.AddWithValue("@PromiseNo", selectedPromiseNo);
-//                cmd.Parameters.AddWithValue("@NewPromiseDate", newDate);
-//                cmd.Parameters.AddWithValue("@Narration", narrationtxtbox.Text.Trim() + " (Postponed to: " + newDate.ToString("dd/MM/yyyy") + ")");
-//                cmd.ExecuteNonQuery();
-
-//                return true;
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("Postpone processing failed: " + ex.Message, ex);
-//            }
-//        }
-
-//        private void CreateTransactionRecord(SqlTransaction transaction, decimal amount)
-//        {
-//            bool isPayment = radioButtonprocesspayment.Checked;
-
-//            if (isPayment)
-//            {
-//                // Create Payment transaction (BankVoucher or CreditVoucher)
-//                CreatePaymentTransaction(transaction, amount);
-//            }
-//            else
-//            {
-//                // Create Recovery transaction
-//                CreateRecoveryTransaction(transaction, amount);
-//            }
-//        }
-
-//        private void CreatePaymentTransaction(SqlTransaction transaction, decimal amount)
-//        {
-//            // Implementation depends on your specific payment system
-//            // This is a template - adjust based on your requirements
-
-//            /*
-//            string voucherQuery = @"INSERT INTO BankVouchers (VoucherNo, VoucherDate, LastUpdateDate, UserNo, IsPosted)
-//                                   VALUES (@VoucherNo, @VoucherDate, @LastUpdateDate, @UserNo, 1)";
-            
-//            // Get next voucher number
-//            SqlCommand cmd = new SqlCommand("SELECT ISNULL(MAX(VoucherNo), 0) + 1 FROM BankVouchers", connection, transaction);
-//            int voucherNo = Convert.ToInt32(cmd.ExecuteScalar());
-            
-//            cmd.CommandText = voucherQuery;
-//            cmd.Parameters.AddWithValue("@VoucherNo", voucherNo);
-//            cmd.Parameters.AddWithValue("@VoucherDate", DateTime.Now);
-//            cmd.Parameters.AddWithValue("@LastUpdateDate", DateTime.Now);
-//            cmd.Parameters.AddWithValue("@UserNo", currentUserNo);
-//            cmd.ExecuteNonQuery();
-//            */
-
-//            // For now, just log it
-//            Console.WriteLine($"Payment transaction created for amount: {amount:N2}");
-//        }
-
-//        private void CreateRecoveryTransaction(SqlTransaction transaction, decimal amount)
-//        {
-//            try
-//            {
-//                // Insert into Recovery table
-//                string recoveryQuery = @"INSERT INTO Recovery 
-//                                       (RecoveryDate, IsWithInvoice, SalesmanID, UserNO, IsPosted)
-//                                       VALUES (@RecoveryDate, 0, NULL, @UserNO, 1);
-//                                       SELECT SCOPE_IDENTITY();";
-
-//                SqlCommand cmd = new SqlCommand(recoveryQuery, connection, transaction);
-//                cmd.Parameters.AddWithValue("@RecoveryDate", DateTime.Now);
-//                cmd.Parameters.AddWithValue("@UserNO", currentUserNo);
-
-//                int recoveryId = Convert.ToInt32(cmd.ExecuteScalar());
-
-//                // Insert into RecoveryBody
-//                string recoveryBodyQuery = @"INSERT INTO RecoveryBody 
-//                                           (RecoveryID, SaleID, CustomerID, Amount, Discount, 
-//                                            IsDeleted, Narration, CompanyID, PaymentMode, IsPosted, VendorID)
-//                                           VALUES (@RecoveryID, NULL, @CustomerID, @Amount, 0, 
-//                                                   0, @Narration, NULL, 'Cash', 1, NULL)";
-
-//                cmd = new SqlCommand(recoveryBodyQuery, connection, transaction);
-//                cmd.Parameters.AddWithValue("@RecoveryID", recoveryId);
-//                cmd.Parameters.AddWithValue("@CustomerID", accountnotxtbox.Text);
-//                cmd.Parameters.AddWithValue("@Amount", amount);
-//                cmd.Parameters.AddWithValue("@Narration", narrationtxtbox.Text.Trim());
-//                cmd.ExecuteNonQuery();
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("Recovery transaction creation failed: " + ex.Message, ex);
-//            }
-//        }
-
-//        private string GetProcessTypeDescription()
-//        {
-//            if (fullprocessradiobtn.Checked)
-//                return "Full " + (radioButtonprocesspayment.Checked ? "Payment" : "Recovery");
-//            else if (partialprocessradiobtn.Checked)
-//                return "Partial " + (radioButtonprocesspayment.Checked ? "Payment" : "Recovery");
-//            else if (postponeprocessradiobtn.Checked)
-//                return "Postpone";
-//            else
-//                return "Unknown";
-//        }
-
-//        private void clearbtn_Click(object sender, EventArgs e)
-//        {
-//            ResetForm();
-//        }
-
-//        private void ResetForm()
-//        {
-//            isLoading = true;
-
-//            // Clear all textboxes
-//            promisesidtxtbox.Clear();
-//            accountnotxtbox.Clear();
-//            accountnametxtbox.Clear();
-//            promisedatetxtbox.Clear();
-//            amounttxtbox.Clear();
-//            paidamounttxtbox.Clear();
-//            newpromisedatetxtbox.Clear();
-//            narrationtxtbox.Clear();
-
-//            // Set default values
-//            promisesdatepcker.Value = DateTime.Now.Date;
-//            newpromisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-//            promisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-
-//            // Reset selection
-//            selectedPromiseNo = 0;
-//            originalAmount = 0;
-//            originalPromiseDate = DateTime.Now;
-
-//            // Reset radio buttons to defaults
-//            radioButtonprocessrecovery.Checked = true;
-//            fullprocessradiobtn.Checked = true;
-
-//            // Disable process controls
-//            EnableProcessControls(false);
-
-//            // Clear status
-//            lblStatus.Text = "Select a promise to process";
-
-//            isLoading = false;
-
-//            // Focus on grid
-//            dataGridView1.Focus();
-//        }
-
-//        private void EnableProcessControls(bool enable)
-//        {
-//            // Enable/disable process type radio buttons
-//            fullprocessradiobtn.Enabled = enable;
-//            partialprocessradiobtn.Enabled = enable;
-//            postponeprocessradiobtn.Enabled = enable;
-
-//            // Enable/disable save button
-//            savebtn.Enabled = enable;
-
-//            // Set textbox backgrounds
-//            if (enable)
-//            {
-//                paidamounttxtbox.BackColor = fullprocessradiobtn.Checked ? SystemColors.Control : Color.White;
-//                newpromisedatetxtbox.BackColor = postponeprocessradiobtn.Checked ? Color.White : SystemColors.Control;
-//            }
-//            else
-//            {
-//                paidamounttxtbox.BackColor = SystemColors.Control;
-//                newpromisedatetxtbox.BackColor = SystemColors.Control;
-//            }
-//        }
-
-//        private void SetControlsReadOnly(bool readOnly)
-//        {
-//            promisesidtxtbox.ReadOnly = true;
-//            accountnotxtbox.ReadOnly = true;
-//            accountnametxtbox.ReadOnly = true;
-//            promisedatetxtbox.ReadOnly = true;
-//            amounttxtbox.ReadOnly = true;
-
-//            // These will be controlled by radio buttons
-//            paidamounttxtbox.ReadOnly = true;
-//            newpromisedatetxtbox.ReadOnly = true;
-
-//            narrationtxtbox.ReadOnly = false; // User can always edit narration
-
-//            // Set background colors for read-only fields
-//            Color backColor = readOnly ? SystemColors.Control : Color.White;
-//            promisesidtxtbox.BackColor = backColor;
-//            accountnotxtbox.BackColor = backColor;
-//            accountnametxtbox.BackColor = backColor;
-//            promisedatetxtbox.BackColor = backColor;
-//            amounttxtbox.BackColor = backColor;
-//        }
-
-//        private void closebtn_Click(object sender, EventArgs e)
-//        {
-//            this.Close();
-//        }
-
-//        // Helper method to format currency
-//        private string FormatCurrency(decimal amount)
-//        {
-//            return amount.ToString("N2");
-//        }
-
-//        // Add this to your form if not already present
-//        private Label lblStatus;
-//        private Label lblProcessType;
-
-//        // Initialize these labels in your form designer:
-//        // lblStatus: For displaying status messages
-//        // lblProcessType: For showing current process type
-//    }
-//}

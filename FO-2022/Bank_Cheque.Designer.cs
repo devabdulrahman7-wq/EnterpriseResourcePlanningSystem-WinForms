@@ -50,10 +50,6 @@
             this.firstchqtxtbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banknosearch)).BeginInit();
@@ -88,6 +84,7 @@
             this.removebtn.TabIndex = 153;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // openbtn
             // 
@@ -102,6 +99,7 @@
             this.openbtn.TabIndex = 152;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
             // 
             // clearbtn
             // 
@@ -116,6 +114,7 @@
             this.clearbtn.TabIndex = 151;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -130,6 +129,7 @@
             this.savebtn.TabIndex = 150;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // idtxtbox
             // 
@@ -138,8 +138,10 @@
             this.idtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.idtxtbox.Multiline = true;
             this.idtxtbox.Name = "idtxtbox";
+            this.idtxtbox.ReadOnly = true;
             this.idtxtbox.Size = new System.Drawing.Size(114, 23);
             this.idtxtbox.TabIndex = 439;
+            this.idtxtbox.TextChanged += new System.EventHandler(this.idtxtbox_TextChanged);
             // 
             // label7
             // 
@@ -169,6 +171,7 @@
             this.datepcker.Name = "datepcker";
             this.datepcker.Size = new System.Drawing.Size(132, 23);
             this.datepcker.TabIndex = 440;
+            this.datepcker.ValueChanged += new System.EventHandler(this.datepcker_ValueChanged);
             // 
             // pictureBox2
             // 
@@ -200,6 +203,7 @@
             this.banknosearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.banknosearch.TabIndex = 444;
             this.banknosearch.TabStop = false;
+            this.banknosearch.Click += new System.EventHandler(this.banknosearch_Click);
             // 
             // banknotxtbox
             // 
@@ -210,6 +214,9 @@
             this.banknotxtbox.Name = "banknotxtbox";
             this.banknotxtbox.Size = new System.Drawing.Size(133, 23);
             this.banknotxtbox.TabIndex = 446;
+            this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
+            this.banknotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.banknotxtbox_KeyDown);
+            this.banknotxtbox.Leave += new System.EventHandler(this.banknotxtbox_Leave);
             // 
             // label2
             // 
@@ -230,6 +237,7 @@
             this.bankaccounttxtbox.Name = "bankaccounttxtbox";
             this.bankaccounttxtbox.Size = new System.Drawing.Size(292, 23);
             this.bankaccounttxtbox.TabIndex = 448;
+            this.bankaccounttxtbox.TextChanged += new System.EventHandler(this.bankaccounttxtbox_TextChanged);
             // 
             // label3
             // 
@@ -250,6 +258,9 @@
             this.lastchqtxtbox.Name = "lastchqtxtbox";
             this.lastchqtxtbox.Size = new System.Drawing.Size(135, 23);
             this.lastchqtxtbox.TabIndex = 450;
+            this.lastchqtxtbox.TextChanged += new System.EventHandler(this.lastchqtxtbox_TextChanged);
+            this.lastchqtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastchqtxtbox_KeyDown);
+            //this.lastchqtxtbox.Leave += new System.EventHandler(this.lastchqtxtbox_Leave);
             // 
             // label4
             // 
@@ -270,6 +281,8 @@
             this.firstchqtxtbox.Name = "firstchqtxtbox";
             this.firstchqtxtbox.Size = new System.Drawing.Size(122, 23);
             this.firstchqtxtbox.TabIndex = 452;
+            this.firstchqtxtbox.TextChanged += new System.EventHandler(this.firstchqtxtbox_TextChanged);
+            //this.firstchqtxtbox.Leave += new System.EventHandler(this.firstchqtxtbox_Leave);
             // 
             // label5
             // 
@@ -284,38 +297,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(12, 181);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(734, 296);
             this.dataGridView1.TabIndex = 453;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Sr. No";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Account No";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Bank Account Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 280;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cheque No";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 180;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
@@ -392,10 +378,6 @@
         private System.Windows.Forms.TextBox firstchqtxtbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

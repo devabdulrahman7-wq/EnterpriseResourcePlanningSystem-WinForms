@@ -44,27 +44,33 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.singleentrybtn = new System.Windows.Forms.RadioButton();
-            this.allsavebtn = new System.Windows.Forms.RadioButton();
+            this.chequebtn = new System.Windows.Forms.RadioButton();
+            this.onlinebtn = new System.Windows.Forms.RadioButton();
+            this.vbtn = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.recoverydatepcker = new System.Windows.Forms.DateTimePicker();
+            this.getentrybtn = new System.Windows.Forms.Button();
+            this.refreshbtn = new System.Windows.Forms.Button();
             this.allbtn = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.allsavebtn = new System.Windows.Forms.RadioButton();
+            this.singleentrybtn = new System.Windows.Forms.RadioButton();
             this.closebtn = new System.Windows.Forms.Button();
             this.removebtn = new System.Windows.Forms.Button();
             this.openbtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.refreshbtn = new System.Windows.Forms.Button();
-            this.getentrybtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.recoverydatepcker = new System.Windows.Forms.DateTimePicker();
-            this.vbtn = new System.Windows.Forms.RadioButton();
-            this.onlinebtn = new System.Windows.Forms.RadioButton();
-            this.chequebtn = new System.Windows.Forms.RadioButton();
             this.getentryalbtn = new System.Windows.Forms.Button();
-            this.totalbtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.AccountdataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,13 +82,6 @@
             this.accountidsearch = new System.Windows.Forms.PictureBox();
             this.a = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ischeckbox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.referencetxtbox = new System.Windows.Forms.TextBox();
@@ -90,11 +89,13 @@
             this.credittxtbox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clearpicbtn = new System.Windows.Forms.Button();
+            this.debitfetchtxtbox = new System.Windows.Forms.TextBox();
+            this.creditfetchtxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountidsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -128,8 +129,10 @@
             this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.vouchernotxtbox.Multiline = true;
             this.vouchernotxtbox.Name = "vouchernotxtbox";
+            this.vouchernotxtbox.ReadOnly = true;
             this.vouchernotxtbox.Size = new System.Drawing.Size(95, 23);
             this.vouchernotxtbox.TabIndex = 532;
+            //this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
             // 
             // label3
             // 
@@ -159,6 +162,7 @@
             this.voucherdatepcker.Name = "voucherdatepcker";
             this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
             this.voucherdatepcker.TabIndex = 529;
+            //this.voucherdatepcker.ValueChanged += new System.EventHandler(this.voucherdatepcker_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -175,6 +179,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(740, 259);
             this.dataGridView1.TabIndex = 533;
+            //this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -233,162 +238,43 @@
             this.groupBox1.Size = new System.Drawing.Size(284, 124);
             this.groupBox1.TabIndex = 534;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // chequebtn
             // 
-            this.groupBox2.Controls.Add(this.allsavebtn);
-            this.groupBox2.Controls.Add(this.singleentrybtn);
-            this.groupBox2.Location = new System.Drawing.Point(758, 127);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(284, 43);
-            this.groupBox2.TabIndex = 535;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Recovery\'s Voucher";
+            this.chequebtn.AutoSize = true;
+            this.chequebtn.Location = new System.Drawing.Point(7, 98);
+            this.chequebtn.Name = "chequebtn";
+            this.chequebtn.Size = new System.Drawing.Size(68, 20);
+            this.chequebtn.TabIndex = 555;
+            this.chequebtn.TabStop = true;
+            this.chequebtn.Text = "Cheque";
+            this.chequebtn.UseVisualStyleBackColor = true;
+            //this.chequebtn.CheckedChanged += new System.EventHandler(this.chequebtn_CheckedChanged);
             // 
-            // singleentrybtn
+            // onlinebtn
             // 
-            this.singleentrybtn.AutoSize = true;
-            this.singleentrybtn.Location = new System.Drawing.Point(6, 20);
-            this.singleentrybtn.Name = "singleentrybtn";
-            this.singleentrybtn.Size = new System.Drawing.Size(116, 20);
-            this.singleentrybtn.TabIndex = 0;
-            this.singleentrybtn.TabStop = true;
-            this.singleentrybtn.Text = "Get Single Entry";
-            this.singleentrybtn.UseVisualStyleBackColor = true;
+            this.onlinebtn.AutoSize = true;
+            this.onlinebtn.Location = new System.Drawing.Point(142, 98);
+            this.onlinebtn.Name = "onlinebtn";
+            this.onlinebtn.Size = new System.Drawing.Size(61, 20);
+            this.onlinebtn.TabIndex = 554;
+            this.onlinebtn.TabStop = true;
+            this.onlinebtn.Text = "Online";
+            this.onlinebtn.UseVisualStyleBackColor = true;
+            //this.onlinebtn.CheckedChanged += new System.EventHandler(this.onlinebtn_CheckedChanged);
             // 
-            // allsavebtn
+            // vbtn
             // 
-            this.allsavebtn.AutoSize = true;
-            this.allsavebtn.Location = new System.Drawing.Point(128, 20);
-            this.allsavebtn.Name = "allsavebtn";
-            this.allsavebtn.Size = new System.Drawing.Size(137, 20);
-            this.allsavebtn.TabIndex = 1;
-            this.allsavebtn.TabStop = true;
-            this.allsavebtn.Text = "Get Entry All (Save)";
-            this.allsavebtn.UseVisualStyleBackColor = true;
-            // 
-            // allbtn
-            // 
-            this.allbtn.AutoSize = true;
-            this.allbtn.Location = new System.Drawing.Point(7, 79);
-            this.allbtn.Name = "allbtn";
-            this.allbtn.Size = new System.Drawing.Size(39, 20);
-            this.allbtn.TabIndex = 0;
-            this.allbtn.TabStop = true;
-            this.allbtn.Text = "All";
-            this.allbtn.UseVisualStyleBackColor = true;
-            // 
-            // closebtn
-            // 
-            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.closebtn.FlatAppearance.BorderSize = 0;
-            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(632, 667);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 25);
-            this.closebtn.TabIndex = 547;
-            this.closebtn.Text = "Close";
-            this.closebtn.UseVisualStyleBackColor = false;
-            // 
-            // removebtn
-            // 
-            this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.removebtn.FlatAppearance.BorderSize = 0;
-            this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(475, 666);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
-            this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(75, 25);
-            this.removebtn.TabIndex = 546;
-            this.removebtn.Text = "Remove";
-            this.removebtn.UseVisualStyleBackColor = false;
-            // 
-            // openbtn
-            // 
-            this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.openbtn.FlatAppearance.BorderSize = 0;
-            this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(394, 666);
-            this.openbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.openbtn.Name = "openbtn";
-            this.openbtn.Size = new System.Drawing.Size(75, 25);
-            this.openbtn.TabIndex = 545;
-            this.openbtn.Text = "Open";
-            this.openbtn.UseVisualStyleBackColor = false;
-            // 
-            // clearbtn
-            // 
-            this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.clearbtn.FlatAppearance.BorderSize = 0;
-            this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(311, 666);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 25);
-            this.clearbtn.TabIndex = 544;
-            this.clearbtn.Text = "Clear";
-            this.clearbtn.UseVisualStyleBackColor = false;
-            // 
-            // savebtn
-            // 
-            this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.savebtn.FlatAppearance.BorderSize = 0;
-            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(228, 666);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
-            this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 25);
-            this.savebtn.TabIndex = 543;
-            this.savebtn.Text = "Save";
-            this.savebtn.UseVisualStyleBackColor = false;
-            // 
-            // printbtn
-            // 
-            this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.printbtn.FlatAppearance.BorderSize = 0;
-            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(557, 667);
-            this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(68, 25);
-            this.printbtn.TabIndex = 548;
-            this.printbtn.Text = "Print";
-            this.printbtn.UseVisualStyleBackColor = false;
-            // 
-            // refreshbtn
-            // 
-            this.refreshbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.refreshbtn.FlatAppearance.BorderSize = 0;
-            this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(7, 12);
-            this.refreshbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.refreshbtn.Name = "refreshbtn";
-            this.refreshbtn.Size = new System.Drawing.Size(127, 27);
-            this.refreshbtn.TabIndex = 549;
-            this.refreshbtn.Text = "Refresh";
-            this.refreshbtn.UseVisualStyleBackColor = false;
-            // 
-            // getentrybtn
-            // 
-            this.getentrybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.getentrybtn.FlatAppearance.BorderSize = 0;
-            this.getentrybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.getentrybtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getentrybtn.Location = new System.Drawing.Point(142, 14);
-            this.getentrybtn.Margin = new System.Windows.Forms.Padding(4);
-            this.getentrybtn.Name = "getentrybtn";
-            this.getentrybtn.Size = new System.Drawing.Size(127, 25);
-            this.getentrybtn.TabIndex = 550;
-            this.getentrybtn.Text = "Get Entry";
-            this.getentrybtn.UseVisualStyleBackColor = false;
+            this.vbtn.AutoSize = true;
+            this.vbtn.Location = new System.Drawing.Point(142, 79);
+            this.vbtn.Name = "vbtn";
+            this.vbtn.Size = new System.Drawing.Size(87, 20);
+            this.vbtn.TabIndex = 553;
+            this.vbtn.TabStop = true;
+            this.vbtn.Text = "V-Payment";
+            this.vbtn.UseVisualStyleBackColor = true;
+            //this.vbtn.CheckedChanged += new System.EventHandler(this.vbtn_CheckedChanged);
             // 
             // label1
             // 
@@ -408,39 +294,173 @@
             this.recoverydatepcker.Name = "recoverydatepcker";
             this.recoverydatepcker.Size = new System.Drawing.Size(132, 23);
             this.recoverydatepcker.TabIndex = 551;
+            //this.recoverydatepcker.ValueChanged += new System.EventHandler(this.recoverydatepcker_ValueChanged);
             // 
-            // vbtn
+            // getentrybtn
             // 
-            this.vbtn.AutoSize = true;
-            this.vbtn.Location = new System.Drawing.Point(142, 79);
-            this.vbtn.Name = "vbtn";
-            this.vbtn.Size = new System.Drawing.Size(87, 20);
-            this.vbtn.TabIndex = 553;
-            this.vbtn.TabStop = true;
-            this.vbtn.Text = "V-Payment";
-            this.vbtn.UseVisualStyleBackColor = true;
+            this.getentrybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.getentrybtn.Enabled = false;
+            this.getentrybtn.FlatAppearance.BorderSize = 0;
+            this.getentrybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getentrybtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getentrybtn.Location = new System.Drawing.Point(142, 14);
+            this.getentrybtn.Margin = new System.Windows.Forms.Padding(4);
+            this.getentrybtn.Name = "getentrybtn";
+            this.getentrybtn.Size = new System.Drawing.Size(127, 25);
+            this.getentrybtn.TabIndex = 550;
+            this.getentrybtn.Text = "Get Entry";
+            this.getentrybtn.UseVisualStyleBackColor = false;
             // 
-            // onlinebtn
+            // refreshbtn
             // 
-            this.onlinebtn.AutoSize = true;
-            this.onlinebtn.Location = new System.Drawing.Point(142, 98);
-            this.onlinebtn.Name = "onlinebtn";
-            this.onlinebtn.Size = new System.Drawing.Size(61, 20);
-            this.onlinebtn.TabIndex = 554;
-            this.onlinebtn.TabStop = true;
-            this.onlinebtn.Text = "Online";
-            this.onlinebtn.UseVisualStyleBackColor = true;
+            this.refreshbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.refreshbtn.FlatAppearance.BorderSize = 0;
+            this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshbtn.Location = new System.Drawing.Point(7, 12);
+            this.refreshbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.refreshbtn.Name = "refreshbtn";
+            this.refreshbtn.Size = new System.Drawing.Size(127, 27);
+            this.refreshbtn.TabIndex = 549;
+            this.refreshbtn.Text = "Refresh";
+            this.refreshbtn.UseVisualStyleBackColor = false;
+            this.refreshbtn.Click += new System.EventHandler(this.refreshbtn_Click);
             // 
-            // chequebtn
+            // allbtn
             // 
-            this.chequebtn.AutoSize = true;
-            this.chequebtn.Location = new System.Drawing.Point(7, 98);
-            this.chequebtn.Name = "chequebtn";
-            this.chequebtn.Size = new System.Drawing.Size(68, 20);
-            this.chequebtn.TabIndex = 555;
-            this.chequebtn.TabStop = true;
-            this.chequebtn.Text = "Cheque";
-            this.chequebtn.UseVisualStyleBackColor = true;
+            this.allbtn.AutoSize = true;
+            this.allbtn.Location = new System.Drawing.Point(7, 79);
+            this.allbtn.Name = "allbtn";
+            this.allbtn.Size = new System.Drawing.Size(39, 20);
+            this.allbtn.TabIndex = 0;
+            this.allbtn.TabStop = true;
+            this.allbtn.Text = "All";
+            this.allbtn.UseVisualStyleBackColor = true;
+            //this.allbtn.CheckedChanged += new System.EventHandler(this.allbtn_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.allsavebtn);
+            this.groupBox2.Controls.Add(this.singleentrybtn);
+            this.groupBox2.Location = new System.Drawing.Point(758, 127);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(284, 43);
+            this.groupBox2.TabIndex = 535;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Recovery\'s Voucher";
+            // 
+            // allsavebtn
+            // 
+            this.allsavebtn.AutoSize = true;
+            this.allsavebtn.Location = new System.Drawing.Point(128, 20);
+            this.allsavebtn.Name = "allsavebtn";
+            this.allsavebtn.Size = new System.Drawing.Size(137, 20);
+            this.allsavebtn.TabIndex = 1;
+            this.allsavebtn.TabStop = true;
+            this.allsavebtn.Text = "Get Entry All (Save)";
+            this.allsavebtn.UseVisualStyleBackColor = true;
+            //this.allsavebtn.CheckedChanged += new System.EventHandler(this.allsavebtn_CheckedChanged);
+            // 
+            // singleentrybtn
+            // 
+            this.singleentrybtn.AutoSize = true;
+            this.singleentrybtn.Location = new System.Drawing.Point(6, 20);
+            this.singleentrybtn.Name = "singleentrybtn";
+            this.singleentrybtn.Size = new System.Drawing.Size(116, 20);
+            this.singleentrybtn.TabIndex = 0;
+            this.singleentrybtn.TabStop = true;
+            this.singleentrybtn.Text = "Get Single Entry";
+            this.singleentrybtn.UseVisualStyleBackColor = true;
+            //this.singleentrybtn.CheckedChanged += new System.EventHandler(this.singleentrybtn_CheckedChanged);
+            // 
+            // closebtn
+            // 
+            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.closebtn.FlatAppearance.BorderSize = 0;
+            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closebtn.Location = new System.Drawing.Point(632, 667);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(75, 25);
+            this.closebtn.TabIndex = 547;
+            this.closebtn.Text = "Close";
+            this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
+            // removebtn
+            // 
+            this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.FlatAppearance.BorderSize = 0;
+            this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removebtn.Location = new System.Drawing.Point(475, 666);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.removebtn.Name = "removebtn";
+            this.removebtn.Size = new System.Drawing.Size(75, 25);
+            this.removebtn.TabIndex = 546;
+            this.removebtn.Text = "Remove";
+            this.removebtn.UseVisualStyleBackColor = false;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
+            // 
+            // openbtn
+            // 
+            this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.FlatAppearance.BorderSize = 0;
+            this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openbtn.Location = new System.Drawing.Point(394, 666);
+            this.openbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.openbtn.Name = "openbtn";
+            this.openbtn.Size = new System.Drawing.Size(75, 25);
+            this.openbtn.TabIndex = 545;
+            this.openbtn.Text = "Open";
+            this.openbtn.UseVisualStyleBackColor = false;
+            this.openbtn.Click += new System.EventHandler(this.openbtn_Click);
+            // 
+            // clearbtn
+            // 
+            this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.FlatAppearance.BorderSize = 0;
+            this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearbtn.Location = new System.Drawing.Point(311, 666);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(75, 25);
+            this.clearbtn.TabIndex = 544;
+            this.clearbtn.Text = "Clear";
+            this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
+            // 
+            // savebtn
+            // 
+            this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.FlatAppearance.BorderSize = 0;
+            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(228, 666);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(75, 25);
+            this.savebtn.TabIndex = 543;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // printbtn
+            // 
+            this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.printbtn.FlatAppearance.BorderSize = 0;
+            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn.Location = new System.Drawing.Point(557, 667);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(68, 25);
+            this.printbtn.TabIndex = 548;
+            this.printbtn.Text = "Print";
+            this.printbtn.UseVisualStyleBackColor = false;
+            //this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // getentryalbtn
             // 
@@ -455,25 +475,12 @@
             this.getentryalbtn.TabIndex = 550;
             this.getentryalbtn.Text = "Get Entry All";
             this.getentryalbtn.UseVisualStyleBackColor = false;
-            this.getentryalbtn.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // totalbtn
-            // 
-            this.totalbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.totalbtn.FlatAppearance.BorderSize = 0;
-            this.totalbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.totalbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalbtn.Location = new System.Drawing.Point(690, 597);
-            this.totalbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.totalbtn.Name = "totalbtn";
-            this.totalbtn.Size = new System.Drawing.Size(93, 16);
-            this.totalbtn.TabIndex = 553;
-            this.totalbtn.UseVisualStyleBackColor = false;
+            //this.getentryalbtn.Click += new System.EventHandler(this.getentryalbtn_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(592, 598);
+            this.label7.Location = new System.Drawing.Point(537, 597);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 16);
@@ -481,10 +488,10 @@
             this.label7.Text = "Total Amount:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView2
+            // AccountdataGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AccountdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AccountdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -492,10 +499,52 @@
             this.dataGridViewTextBoxColumn4,
             this.Column8,
             this.Column9});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 395);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(771, 199);
-            this.dataGridView2.TabIndex = 551;
+            this.AccountdataGridView.Location = new System.Drawing.Point(12, 395);
+            this.AccountdataGridView.Name = "AccountdataGridView";
+            this.AccountdataGridView.Size = new System.Drawing.Size(771, 199);
+            this.AccountdataGridView.TabIndex = 551;
+            //this.AccountdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountdataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Amount No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 96;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Amount Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 185;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Narration";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 145;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Reference";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Bill No";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 66;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Debit";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Credit";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 65;
             // 
             // label6
             // 
@@ -539,6 +588,7 @@
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(84, 25);
             this.billnotxtbox.TabIndex = 561;
+            //this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // narrationtxtbox
             // 
@@ -549,6 +599,7 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(161, 25);
             this.narrationtxtbox.TabIndex = 560;
+            //this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // debittxtbox
             // 
@@ -559,6 +610,7 @@
             this.debittxtbox.Name = "debittxtbox";
             this.debittxtbox.Size = new System.Drawing.Size(71, 25);
             this.debittxtbox.TabIndex = 559;
+            this.debittxtbox.TextChanged += new System.EventHandler(this.debittxtbox_TextChanged);
             // 
             // accountnametxtbox
             // 
@@ -567,8 +619,10 @@
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
+            this.accountnametxtbox.ReadOnly = true;
             this.accountnametxtbox.Size = new System.Drawing.Size(120, 25);
             this.accountnametxtbox.TabIndex = 558;
+            //this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountidtxtbox
             // 
@@ -579,6 +633,8 @@
             this.accountidtxtbox.Name = "accountidtxtbox";
             this.accountidtxtbox.Size = new System.Drawing.Size(104, 25);
             this.accountidtxtbox.TabIndex = 557;
+            //this.accountidtxtbox.TextChanged += new System.EventHandler(this.accountidtxtbox_TextChanged);
+            this.accountidtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.accountidtxtbox_KeyPress);
             // 
             // accountidsearch
             // 
@@ -590,6 +646,7 @@
             this.accountidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.accountidsearch.TabIndex = 556;
             this.accountidsearch.TabStop = false;
+            this.accountidsearch.Click += new System.EventHandler(this.accountidsearch_Click);
             // 
             // a
             // 
@@ -612,47 +669,6 @@
             this.label8.TabIndex = 554;
             this.label8.Text = "Account No";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Amount No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 96;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Amount Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 185;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Narration";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 145;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Reference";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Bill No";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 66;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Debit";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 70;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Credit";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 65;
-            // 
             // ischeckbox
             // 
             this.ischeckbox.AutoSize = true;
@@ -662,6 +678,7 @@
             this.ischeckbox.TabIndex = 565;
             this.ischeckbox.Text = "Is From Recovery";
             this.ischeckbox.UseVisualStyleBackColor = true;
+            //this.ischeckbox.CheckedChanged += new System.EventHandler(this.ischeckbox_CheckedChanged);
             // 
             // label9
             // 
@@ -683,6 +700,7 @@
             this.referencetxtbox.Name = "referencetxtbox";
             this.referencetxtbox.Size = new System.Drawing.Size(100, 25);
             this.referencetxtbox.TabIndex = 566;
+            //this.referencetxtbox.TextChanged += new System.EventHandler(this.referencetxtbox_TextChanged);
             // 
             // label10
             // 
@@ -704,6 +722,8 @@
             this.credittxtbox.Name = "credittxtbox";
             this.credittxtbox.Size = new System.Drawing.Size(71, 25);
             this.credittxtbox.TabIndex = 568;
+            this.credittxtbox.TextChanged += new System.EventHandler(this.credittxtbox_TextChanged);
+            this.credittxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.credittxtbox_KeyPress);
             // 
             // pictureBox1
             // 
@@ -712,6 +732,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(215, 199);
             this.pictureBox1.TabIndex = 570;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // clearpicbtn
             // 
@@ -726,6 +747,23 @@
             this.clearpicbtn.TabIndex = 571;
             this.clearpicbtn.Text = "Clear";
             this.clearpicbtn.UseVisualStyleBackColor = false;
+            this.clearpicbtn.Click += new System.EventHandler(this.clearpicbtn_Click);
+            // 
+            // debitfetchtxtbox
+            // 
+            this.debitfetchtxtbox.Location = new System.Drawing.Point(630, 595);
+            this.debitfetchtxtbox.Name = "debitfetchtxtbox";
+            this.debitfetchtxtbox.Size = new System.Drawing.Size(79, 23);
+            this.debitfetchtxtbox.TabIndex = 572;
+            //this.debitfetchtxtbox.TextChanged += new System.EventHandler(this.debitfetchtxtbox_TextChanged);
+            // 
+            // creditfetchtxtbox
+            // 
+            this.creditfetchtxtbox.Location = new System.Drawing.Point(710, 595);
+            this.creditfetchtxtbox.Name = "creditfetchtxtbox";
+            this.creditfetchtxtbox.Size = new System.Drawing.Size(73, 23);
+            this.creditfetchtxtbox.TabIndex = 572;
+            //this.creditfetchtxtbox.TextChanged += new System.EventHandler(this.creditfetchtxtbox_TextChanged);
             // 
             // Journal_Voucher
             // 
@@ -733,6 +771,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1054, 704);
+            this.Controls.Add(this.creditfetchtxtbox);
+            this.Controls.Add(this.debitfetchtxtbox);
             this.Controls.Add(this.clearpicbtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
@@ -751,9 +791,8 @@
             this.Controls.Add(this.accountidsearch);
             this.Controls.Add(this.a);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.totalbtn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.AccountdataGridView);
             this.Controls.Add(this.getentryalbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.removebtn);
@@ -772,7 +811,7 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Journal_Voucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Journal_Voucher";
@@ -782,7 +821,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -825,9 +864,8 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Button getentryalbtn;
-        private System.Windows.Forms.Button totalbtn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView AccountdataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -853,5 +891,7 @@
         private System.Windows.Forms.TextBox credittxtbox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button clearpicbtn;
+        private System.Windows.Forms.TextBox debitfetchtxtbox;
+        private System.Windows.Forms.TextBox creditfetchtxtbox;
     }
 }
