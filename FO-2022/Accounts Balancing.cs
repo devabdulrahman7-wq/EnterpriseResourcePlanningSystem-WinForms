@@ -23,5 +23,30 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void accountcombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prntbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void excludeaccountshavingzerobalancecheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Accounts_Balancing_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

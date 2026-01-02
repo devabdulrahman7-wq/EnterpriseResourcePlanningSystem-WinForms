@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Purchase_Summary" targetNamespace="http://tempuri.org/Purchase_Summary.xsd" xmlns:mstns="http://tempuri.org/Purchase_Summary.xsd" xmlns="http://tempuri.org/Purchase_Summary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Purchase_Summary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="Purchase_Summary" msprop:Generator_DataSetName="Purchase_Summary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable2" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_UserTableName="DataTable2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PurchaseID" msprop:Generator_ColumnPropNameInRow="PurchaseID" msprop:Generator_ColumnPropNameInTable="PurchaseIDColumn" msprop:Generator_ColumnVarNameInTable="columnPurchaseID" msprop:Generator_UserColumnName="PurchaseID" type="xs:string" minOccurs="0" />
+              <xs:element name="PurchaseDate" msprop:Generator_ColumnPropNameInRow="PurchaseDate" msprop:Generator_ColumnPropNameInTable="PurchaseDateColumn" msprop:Generator_ColumnVarNameInTable="columnPurchaseDate" msprop:Generator_UserColumnName="PurchaseDate" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" msprop:Generator_ColumnPropNameInRow="VendorName" msprop:Generator_ColumnPropNameInTable="VendorNameColumn" msprop:Generator_ColumnVarNameInTable="columnVendorName" msprop:Generator_UserColumnName="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossValue" msprop:Generator_ColumnPropNameInRow="GrossValue" msprop:Generator_ColumnPropNameInTable="GrossValueColumn" msprop:Generator_ColumnVarNameInTable="columnGrossValue" msprop:Generator_UserColumnName="GrossValue" type="xs:string" minOccurs="0" />
+              <xs:element name="Discount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_UserColumnName="Discount" type="xs:string" minOccurs="0" />
+              <xs:element name="SalesTax" msprop:Generator_ColumnPropNameInRow="SalesTax" msprop:Generator_ColumnPropNameInTable="SalesTaxColumn" msprop:Generator_ColumnVarNameInTable="columnSalesTax" msprop:Generator_UserColumnName="SalesTax" type="xs:string" minOccurs="0" />
+              <xs:element name="NetValue" msprop:Generator_ColumnPropNameInRow="NetValue" msprop:Generator_ColumnPropNameInTable="NetValueColumn" msprop:Generator_ColumnVarNameInTable="columnNetValue" msprop:Generator_UserColumnName="NetValue" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -42,6 +42,7 @@
             this.todatepcker = new System.Windows.Forms.DateTimePicker();
             this.fromdatepcker = new System.Windows.Forms.DateTimePicker();
             this.vendoridsearch = new System.Windows.Forms.PictureBox();
+            this.printbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).BeginInit();
             this.SuspendLayout();
@@ -52,10 +53,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(204, 287);
+            this.previewbtn.Location = new System.Drawing.Point(177, 275);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(109, 26);
+            this.previewbtn.Size = new System.Drawing.Size(79, 26);
             this.previewbtn.TabIndex = 446;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -67,7 +68,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(323, 287);
+            this.closebtn.Location = new System.Drawing.Point(349, 275);
             this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(61, 26);
@@ -85,7 +86,7 @@
             this.vendornametxtbox.Name = "vendornametxtbox";
             this.vendornametxtbox.Size = new System.Drawing.Size(190, 27);
             this.vendornametxtbox.TabIndex = 443;
-            this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
+            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -195,12 +196,28 @@
             this.vendoridsearch.TabStop = false;
             this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
             // 
+            // printbtn
+            // 
+            this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.printbtn.FlatAppearance.BorderSize = 0;
+            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn.Location = new System.Drawing.Point(266, 275);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(73, 26);
+            this.printbtn.TabIndex = 462;
+            this.printbtn.Text = "Print";
+            this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
+            // 
             // Purchase_Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(600, 353);
+            this.ClientSize = new System.Drawing.Size(598, 339);
+            this.Controls.Add(this.printbtn);
             this.Controls.Add(this.vendoridsearch);
             this.Controls.Add(this.todate);
             this.Controls.Add(this.fromdatepckr);
@@ -242,5 +259,6 @@
         private System.Windows.Forms.DateTimePicker todatepcker;
         private System.Windows.Forms.DateTimePicker fromdatepcker;
         private System.Windows.Forms.PictureBox vendoridsearch;
+        private System.Windows.Forms.Button printbtn;
     }
 }

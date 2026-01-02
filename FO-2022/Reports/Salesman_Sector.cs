@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FO_2022
+namespace FO_2022.Reports
 {
-    public partial class Preview_Purchase_Summary : Form
+    public partial class Salesman_Sector : Form
     {
-        public Preview_Purchase_Summary()
+        public Salesman_Sector()
         {
             InitializeComponent();
+        }
+
+        private void Salesman_Sector_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

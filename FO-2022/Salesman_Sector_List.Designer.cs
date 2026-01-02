@@ -39,7 +39,7 @@
             this.printbtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.includepartiesforthereasoncheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.salesmannametxtbox.Name = "salesmannametxtbox";
             this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
             this.salesmannametxtbox.TabIndex = 377;
+            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
@@ -63,6 +64,7 @@
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
             this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.salesmanidtxtbox.TabIndex = 376;
+            this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
@@ -74,6 +76,7 @@
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 375;
             this.salesmanidsearch.TabStop = false;
+            this.salesmanidsearch.Click += new System.EventHandler(this.salesmanidsearch_Click);
             // 
             // label3
             // 
@@ -85,7 +88,7 @@
             this.label3.TabIndex = 374;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -109,6 +112,7 @@
             this.previewbtn.TabIndex = 473;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -135,6 +139,7 @@
             this.printbtn.TabIndex = 471;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox1
             // 
@@ -156,15 +161,16 @@
             this.label2.TabIndex = 469;
             this.label2.Text = "Salesman Sectors List";
             // 
-            // checkBox1
+            // includepartiesforthereasoncheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(149, 181);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(195, 20);
-            this.checkBox1.TabIndex = 474;
-            this.checkBox1.Text = "Include Parties for the reason";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.includepartiesforthereasoncheckbox.AutoSize = true;
+            this.includepartiesforthereasoncheckbox.Location = new System.Drawing.Point(149, 181);
+            this.includepartiesforthereasoncheckbox.Name = "includepartiesforthereasoncheckbox";
+            this.includepartiesforthereasoncheckbox.Size = new System.Drawing.Size(195, 20);
+            this.includepartiesforthereasoncheckbox.TabIndex = 474;
+            this.includepartiesforthereasoncheckbox.Text = "Include Parties for the reason";
+            this.includepartiesforthereasoncheckbox.UseVisualStyleBackColor = true;
+            this.includepartiesforthereasoncheckbox.CheckedChanged += new System.EventHandler(this.includepartiesforthereasoncheckbox_CheckedChanged);
             // 
             // Salesman_Sector_List
             // 
@@ -172,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(613, 362);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.includepartiesforthereasoncheckbox);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
@@ -185,9 +191,10 @@
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Salesman_Sector_List";
             this.Text = "ccc";
+            //this.Load += new System.EventHandler(this.Salesman_Sector_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -207,6 +214,6 @@
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox includepartiesforthereasoncheckbox;
     }
 }

@@ -486,7 +486,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Top>0.01389in</Top>
             <Height>0.5in</Height>
-            <Width>8.125in</Width>
+            <Width>8.12497in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -711,10 +711,10 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

@@ -358,7 +358,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.51737in</Left>
             <Height>0.5in</Height>
-            <Width>5.74826in</Width>
+            <Width>5.74825in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -376,7 +376,7 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>0.50917in</Height>
+    <Height>0.66542in</Height>
     <Style />
   </Body>
   <Width>7.20708in</Width>
@@ -407,7 +407,7 @@
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.01389in</Top>
           <Height>0.21875in</Height>
-          <Width>6.99653in</Width>
+          <Width>7.20708in</Width>
           <Style>
             <Border>
               <Style>None</Style>

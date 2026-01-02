@@ -621,12 +621,6 @@
     <Compile Include="Preview_of_Stock_Current_Sheet.Designer.cs">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preview_Purchase_Summary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preview_Purchase_Summary.Designer.cs">
-      <DependentUpon>Preview_Purchase_Summary.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product Group.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -827,6 +821,17 @@
     <Compile Include="Reports\Employee_Salary_report.Designer.cs">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\General_Journal_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>General_Journal_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\General_Journal_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\General_Journal_rv.Designer.cs">
+      <DependentUpon>General_Journal_rv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Party_List_ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -837,6 +842,14 @@
     </Compile>
     <Compile Include="Reports\Part_List_rv.Designer.cs">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase_Summary.cs">
+      <DependentUpon>Purchase_Summary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase_Summary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase_Summary.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\Purchase_Summary_rv.cs">
       <SubType>Form</SubType>
@@ -849,6 +862,12 @@
     </Compile>
     <Compile Include="Reports\ReportViewer.Designer.cs">
       <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector.Designer.cs">
+      <DependentUpon>Salesman_Sector.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Sector_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1474,9 +1493,6 @@
     <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.resx">
       <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preview_Purchase_Summary.resx">
-      <DependentUpon>Preview_Purchase_Summary.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Product Group.resx">
       <DependentUpon>Product Group.cs</DependentUpon>
     </EmbeddedResource>
@@ -1581,16 +1597,28 @@
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc" />
+    <EmbeddedResource Include="Reports\General_Journal.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\General_Journal_rv.resx">
+      <DependentUpon>General_Journal_rv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Part_List_rv.resx">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Purchase_Summary.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Summary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Purchase_Summary_rv.resx">
       <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportViewer.resx">
       <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salesman_Sector.rdlc" />
+    <EmbeddedResource Include="Reports\Salesman_Sector.resx">
+      <DependentUpon>Salesman_Sector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Sector.rdlc" />
     <EmbeddedResource Include="Reports\Sector_rv.resx">
@@ -1805,6 +1833,17 @@
     <None Include="Reports\Employee_Salary_ds.xss">
       <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>
     </None>
+    <None Include="Reports\General_Journal_ds.xsc">
+      <DependentUpon>General_Journal_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\General_Journal_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>General_Journal_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\General_Journal_ds.xss">
+      <DependentUpon>General_Journal_ds.xsd</DependentUpon>
+    </None>
     <None Include="Reports\Party_List_ds.xsc">
       <DependentUpon>Party_List_ds.xsd</DependentUpon>
     </None>
@@ -1815,6 +1854,17 @@
     </None>
     <None Include="Reports\Party_List_ds.xss">
       <DependentUpon>Party_List_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Purchase_Summary.xsc">
+      <DependentUpon>Purchase_Summary.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Purchase_Summary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Purchase_Summary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Purchase_Summary.xss">
+      <DependentUpon>Purchase_Summary.xsd</DependentUpon>
     </None>
     <None Include="Reports\Sector_ds.xsc">
       <DependentUpon>Sector_ds.xsd</DependentUpon>

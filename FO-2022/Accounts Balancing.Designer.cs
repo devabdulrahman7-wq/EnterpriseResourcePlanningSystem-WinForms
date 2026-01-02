@@ -36,7 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.accountcombobox = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.excludeaccountshavingzerobalancecheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 49);
+            this.label1.Location = new System.Drawing.Point(92, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 32);
             this.label1.TabIndex = 689;
@@ -56,7 +56,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(328, 299);
+            this.closebtn.Location = new System.Drawing.Point(315, 269);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -71,13 +71,14 @@
             this.prntbtn.FlatAppearance.BorderSize = 0;
             this.prntbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prntbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prntbtn.Location = new System.Drawing.Point(249, 299);
+            this.prntbtn.Location = new System.Drawing.Point(236, 269);
             this.prntbtn.Margin = new System.Windows.Forms.Padding(2);
             this.prntbtn.Name = "prntbtn";
             this.prntbtn.Size = new System.Drawing.Size(75, 28);
             this.prntbtn.TabIndex = 687;
             this.prntbtn.Text = "Print";
             this.prntbtn.UseVisualStyleBackColor = false;
+            this.prntbtn.Click += new System.EventHandler(this.prntbtn_Click);
             // 
             // previewbtn
             // 
@@ -85,13 +86,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(170, 299);
+            this.previewbtn.Location = new System.Drawing.Point(157, 269);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(2);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(75, 28);
             this.previewbtn.TabIndex = 686;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // pictureBox2
             // 
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(169, 151);
+            this.label3.Location = new System.Drawing.Point(156, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 684;
@@ -115,20 +117,22 @@
             // accountcombobox
             // 
             this.accountcombobox.FormattingEnabled = true;
-            this.accountcombobox.Location = new System.Drawing.Point(172, 170);
+            this.accountcombobox.Location = new System.Drawing.Point(159, 140);
             this.accountcombobox.Name = "accountcombobox";
             this.accountcombobox.Size = new System.Drawing.Size(244, 24);
             this.accountcombobox.TabIndex = 683;
+            this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
-            // checkBox1
+            // excludeaccountshavingzerobalancecheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(172, 216);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(244, 20);
-            this.checkBox1.TabIndex = 690;
-            this.checkBox1.Text = "Exclude Accounts Having Zero Balance";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.excludeaccountshavingzerobalancecheckbox.AutoSize = true;
+            this.excludeaccountshavingzerobalancecheckbox.Location = new System.Drawing.Point(159, 186);
+            this.excludeaccountshavingzerobalancecheckbox.Name = "excludeaccountshavingzerobalancecheckbox";
+            this.excludeaccountshavingzerobalancecheckbox.Size = new System.Drawing.Size(244, 20);
+            this.excludeaccountshavingzerobalancecheckbox.TabIndex = 690;
+            this.excludeaccountshavingzerobalancecheckbox.Text = "Exclude Accounts Having Zero Balance";
+            this.excludeaccountshavingzerobalancecheckbox.UseVisualStyleBackColor = true;
+            this.excludeaccountshavingzerobalancecheckbox.CheckedChanged += new System.EventHandler(this.excludeaccountshavingzerobalancecheckbox_CheckedChanged);
             // 
             // Accounts_Balancing
             // 
@@ -136,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(580, 355);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.excludeaccountshavingzerobalancecheckbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.prntbtn);
@@ -150,6 +154,7 @@
             this.Name = "Accounts_Balancing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Balancing";
+            this.Load += new System.EventHandler(this.Accounts_Balancing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,6 +170,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox accountcombobox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox excludeaccountshavingzerobalancecheckbox;
     }
 }
