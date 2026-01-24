@@ -133,5 +133,10 @@ namespace FO_2022
         {
             // Optional: Add validation if needed
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            this.Close();   
         }
 
         private void previewbtn_Click(object sender, EventArgs e)

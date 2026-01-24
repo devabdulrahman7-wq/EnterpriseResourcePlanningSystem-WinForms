@@ -265,5 +265,10 @@ namespace FO_2022
             ResetFields();
             GenerateASMId();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

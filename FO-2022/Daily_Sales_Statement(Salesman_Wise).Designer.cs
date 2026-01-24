@@ -127,7 +127,7 @@
             this.label3.Location = new System.Drawing.Point(305, 228);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(129, 21);
             this.label3.TabIndex = 420;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +138,7 @@
             this.label4.Location = new System.Drawing.Point(146, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 419;
             this.label4.Text = "Salesman ID";
             // 
@@ -152,6 +152,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 418;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -160,7 +161,7 @@
             this.label2.Location = new System.Drawing.Point(131, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 64);
+            this.label2.Size = new System.Drawing.Size(353, 84);
             this.label2.TabIndex = 417;
             this.label2.Text = "Daily Sale Statement \r\n(Statement Wise)";
             // 
@@ -170,7 +171,7 @@
             this.todate.Location = new System.Drawing.Point(303, 169);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 416;
             this.todate.Text = "To Date";
             // 
@@ -180,7 +181,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(142, 169);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 415;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -190,7 +191,7 @@
             this.todatepcker.Location = new System.Drawing.Point(308, 189);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 414;
             // 
             // fromdatepcker
@@ -199,12 +200,12 @@
             this.fromdatepcker.Location = new System.Drawing.Point(147, 189);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(111, 27);
             this.fromdatepcker.TabIndex = 413;
             // 
             // Daily_Sales_Statement_Salesman_Wise_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(637, 460);
@@ -228,6 +229,7 @@
             this.Name = "Daily_Sales_Statement_Salesman_Wise_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily_Sales_Statement_Salesman_Wise_";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

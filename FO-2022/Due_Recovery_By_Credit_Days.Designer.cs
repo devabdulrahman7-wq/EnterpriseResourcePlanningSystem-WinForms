@@ -112,7 +112,7 @@
             this.label15.Location = new System.Drawing.Point(121, 29);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(363, 31);
+            this.label15.Size = new System.Drawing.Size(450, 38);
             this.label15.TabIndex = 399;
             this.label15.Text = "Due Recovery By Credit Days";
             // 
@@ -123,7 +123,7 @@
             this.a.Location = new System.Drawing.Point(164, 209);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(113, 18);
+            this.a.Size = new System.Drawing.Size(146, 23);
             this.a.TabIndex = 398;
             this.a.Text = "Select Salesman";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             this.slctsalesmamcombobox.FormattingEnabled = true;
             this.slctsalesmamcombobox.Location = new System.Drawing.Point(167, 230);
             this.slctsalesmamcombobox.Name = "slctsalesmamcombobox";
-            this.slctsalesmamcombobox.Size = new System.Drawing.Size(300, 24);
+            this.slctsalesmamcombobox.Size = new System.Drawing.Size(300, 27);
             this.slctsalesmamcombobox.TabIndex = 397;
             // 
             // balancetxtbox
@@ -161,7 +161,7 @@
             this.oldbtn.AutoSize = true;
             this.oldbtn.Location = new System.Drawing.Point(153, 18);
             this.oldbtn.Name = "oldbtn";
-            this.oldbtn.Size = new System.Drawing.Size(135, 20);
+            this.oldbtn.Size = new System.Drawing.Size(174, 25);
             this.oldbtn.TabIndex = 1;
             this.oldbtn.TabStop = true;
             this.oldbtn.Text = "Old Petron  Report ";
@@ -172,7 +172,7 @@
             this.newbtn.AutoSize = true;
             this.newbtn.Location = new System.Drawing.Point(14, 18);
             this.newbtn.Name = "newbtn";
-            this.newbtn.Size = new System.Drawing.Size(133, 20);
+            this.newbtn.Size = new System.Drawing.Size(172, 25);
             this.newbtn.TabIndex = 0;
             this.newbtn.TabStop = true;
             this.newbtn.Text = "New Petron Report";
@@ -183,7 +183,7 @@
             this.recovercombobox.FormattingEnabled = true;
             this.recovercombobox.Location = new System.Drawing.Point(167, 177);
             this.recovercombobox.Name = "recovercombobox";
-            this.recovercombobox.Size = new System.Drawing.Size(203, 24);
+            this.recovercombobox.Size = new System.Drawing.Size(203, 27);
             this.recovercombobox.TabIndex = 405;
             // 
             // label1
@@ -193,7 +193,7 @@
             this.label1.Location = new System.Drawing.Point(164, 156);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 18);
+            this.label1.Size = new System.Drawing.Size(134, 23);
             this.label1.TabIndex = 406;
             this.label1.Text = "Recover %Age";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +205,7 @@
             this.label2.Location = new System.Drawing.Point(164, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 18);
+            this.label2.Size = new System.Drawing.Size(228, 23);
             this.label2.TabIndex = 407;
             this.label2.Text = "Due Balance Greater than";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +227,7 @@
             this.label3.Location = new System.Drawing.Point(164, 309);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 18);
+            this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 409;
             this.label3.Text = "A/C Prefix";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +244,7 @@
             // 
             // Due_Recovery_By_Credit_Days
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(644, 489);
@@ -269,6 +269,7 @@
             this.Name = "Due_Recovery_By_Credit_Days";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Due_Recovery_By_Credit_Days";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

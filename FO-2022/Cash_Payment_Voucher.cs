@@ -23,5 +23,10 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

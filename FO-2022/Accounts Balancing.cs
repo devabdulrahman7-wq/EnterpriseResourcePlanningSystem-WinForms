@@ -205,5 +205,10 @@ namespace FO_2022
         {
             // Optional
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

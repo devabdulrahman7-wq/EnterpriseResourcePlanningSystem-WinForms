@@ -1127,7 +1127,8 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ReturnToMainForm();
+            //ReturnToMainForm();
+            this.Close();
         }
 
         private void closebtn_Click(object sender, EventArgs e)

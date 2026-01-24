@@ -85,7 +85,7 @@
             this.a.Location = new System.Drawing.Point(326, 204);
             this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(94, 16);
+            this.a.Size = new System.Drawing.Size(124, 21);
             this.a.TabIndex = 307;
             this.a.Text = "Account Name:";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,7 +96,7 @@
             this.label1.Location = new System.Drawing.Point(190, 204);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
+            this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 306;
             this.label1.Text = "Account No:";
             // 
@@ -106,7 +106,7 @@
             this.todate.Location = new System.Drawing.Point(190, 159);
             this.todate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 321;
             this.todate.Text = "To Date";
             // 
@@ -116,7 +116,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(190, 117);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 320;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -126,7 +126,7 @@
             this.todatepcker.Location = new System.Drawing.Point(275, 159);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(245, 23);
+            this.todatepcker.Size = new System.Drawing.Size(245, 27);
             this.todatepcker.TabIndex = 319;
             this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
@@ -136,7 +136,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(275, 117);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(245, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(245, 27);
             this.fromdatepcker.TabIndex = 318;
             // 
             // checkBox1
@@ -144,7 +144,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(193, 264);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(276, 20);
+            this.checkBox1.Size = new System.Drawing.Size(356, 25);
             this.checkBox1.TabIndex = 322;
             this.checkBox1.Text = "Include journal,debit,credit $ bank vouchers";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -211,13 +211,13 @@
             this.label2.Location = new System.Drawing.Point(225, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 33);
+            this.label2.Size = new System.Drawing.Size(251, 42);
             this.label2.TabIndex = 327;
             this.label2.Text = "Bank Statement";
             // 
             // Bank_Statement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(639, 405);
@@ -242,6 +242,7 @@
             this.Name = "Bank_Statement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Statement";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

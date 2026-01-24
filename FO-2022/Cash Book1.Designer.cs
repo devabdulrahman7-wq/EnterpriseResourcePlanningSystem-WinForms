@@ -68,7 +68,7 @@
             this.viewlandscapebtn.Location = new System.Drawing.Point(126, 16);
             this.viewlandscapebtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewlandscapebtn.Name = "viewlandscapebtn";
-            this.viewlandscapebtn.Size = new System.Drawing.Size(96, 20);
+            this.viewlandscapebtn.Size = new System.Drawing.Size(122, 25);
             this.viewlandscapebtn.TabIndex = 1;
             this.viewlandscapebtn.TabStop = true;
             this.viewlandscapebtn.Text = "Cash Ledger";
@@ -81,7 +81,7 @@
             this.viewprntbtn.Location = new System.Drawing.Point(15, 16);
             this.viewprntbtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewprntbtn.Name = "viewprntbtn";
-            this.viewprntbtn.Size = new System.Drawing.Size(84, 20);
+            this.viewprntbtn.Size = new System.Drawing.Size(108, 25);
             this.viewprntbtn.TabIndex = 0;
             this.viewprntbtn.TabStop = true;
             this.viewprntbtn.Text = "Cash Book";
@@ -94,7 +94,7 @@
             this.todaybtn.Location = new System.Drawing.Point(170, 205);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(4);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(60, 20);
+            this.todaybtn.Size = new System.Drawing.Size(76, 25);
             this.todaybtn.TabIndex = 278;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
@@ -107,7 +107,7 @@
             this.daybtn.Location = new System.Drawing.Point(170, 176);
             this.daybtn.Margin = new System.Windows.Forms.Padding(4);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(58, 20);
+            this.daybtn.Size = new System.Drawing.Size(76, 25);
             this.daybtn.TabIndex = 277;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
@@ -120,7 +120,7 @@
             this.datebwbtn.Location = new System.Drawing.Point(170, 148);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(4);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
             this.datebwbtn.TabIndex = 276;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
@@ -133,7 +133,7 @@
             this.alldatebtn.Location = new System.Drawing.Point(170, 120);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(69, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(91, 25);
             this.alldatebtn.TabIndex = 275;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Date";
@@ -189,7 +189,7 @@
             this.label1.Location = new System.Drawing.Point(133, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 32);
+            this.label1.Size = new System.Drawing.Size(188, 42);
             this.label1.TabIndex = 271;
             this.label1.Text = "Cash Book";
             // 
@@ -214,7 +214,7 @@
             this.viewprtrtbtn.Location = new System.Drawing.Point(15, 28);
             this.viewprtrtbtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewprtrtbtn.Name = "viewprtrtbtn";
-            this.viewprtrtbtn.Size = new System.Drawing.Size(99, 20);
+            this.viewprtrtbtn.Size = new System.Drawing.Size(127, 25);
             this.viewprtrtbtn.TabIndex = 3;
             this.viewprtrtbtn.TabStop = true;
             this.viewprtrtbtn.Text = "View Portrait";
@@ -227,7 +227,7 @@
             this.viewlndscpbtn.Location = new System.Drawing.Point(15, 57);
             this.viewlndscpbtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewlndscpbtn.Name = "viewlndscpbtn";
-            this.viewlndscpbtn.Size = new System.Drawing.Size(117, 20);
+            this.viewlndscpbtn.Size = new System.Drawing.Size(150, 25);
             this.viewlndscpbtn.TabIndex = 2;
             this.viewlndscpbtn.TabStop = true;
             this.viewlndscpbtn.Text = "View Landscape";
@@ -247,7 +247,7 @@
             // 
             // Cash_Book1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(548, 487);
@@ -267,6 +267,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cash_Book1";
             this.Text = "Cash_Book1";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

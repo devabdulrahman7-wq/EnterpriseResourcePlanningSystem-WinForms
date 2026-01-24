@@ -71,7 +71,7 @@
             this.label3.Location = new System.Drawing.Point(186, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 32);
+            this.label3.Size = new System.Drawing.Size(283, 42);
             this.label3.TabIndex = 679;
             this.label3.Text = "Create New User";
             // 
@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(411, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(148, 21);
             this.label2.TabIndex = 678;
             this.label2.Text = "Re-Type Password";
             // 
@@ -102,7 +102,7 @@
             this.label1.Location = new System.Drawing.Point(411, 204);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 676;
             this.label1.Text = "Password";
             // 
@@ -122,7 +122,7 @@
             this.label6.Location = new System.Drawing.Point(411, 157);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 16);
+            this.label6.Size = new System.Drawing.Size(85, 21);
             this.label6.TabIndex = 674;
             this.label6.Text = "Username";
             // 
@@ -210,7 +210,7 @@
             this.administratorbtn.AutoSize = true;
             this.administratorbtn.Location = new System.Drawing.Point(28, 56);
             this.administratorbtn.Name = "administratorbtn";
-            this.administratorbtn.Size = new System.Drawing.Size(106, 20);
+            this.administratorbtn.Size = new System.Drawing.Size(137, 25);
             this.administratorbtn.TabIndex = 1;
             this.administratorbtn.TabStop = true;
             this.administratorbtn.Text = "Administrator ";
@@ -221,7 +221,7 @@
             this.standarduserbtn.AutoSize = true;
             this.standarduserbtn.Location = new System.Drawing.Point(27, 22);
             this.standarduserbtn.Name = "standarduserbtn";
-            this.standarduserbtn.Size = new System.Drawing.Size(107, 20);
+            this.standarduserbtn.Size = new System.Drawing.Size(136, 25);
             this.standarduserbtn.TabIndex = 0;
             this.standarduserbtn.TabStop = true;
             this.standarduserbtn.Text = "Standard User";
@@ -257,6 +257,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 111);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(344, 293);
             this.dataGridView1.TabIndex = 665;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -269,13 +270,13 @@
             this.textBox2.Location = new System.Drawing.Point(13, 87);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 19);
+            this.textBox2.Size = new System.Drawing.Size(344, 23);
             this.textBox2.TabIndex = 664;
             this.textBox2.Text = "      List  of Un-Closed Dates";
             // 
             // Create_New_Users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(692, 509);
@@ -302,6 +303,7 @@
             this.Name = "Create_New_Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create_New_Users";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Create_New_Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);

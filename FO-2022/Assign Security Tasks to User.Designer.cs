@@ -97,24 +97,28 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(33, 168);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(611, 353);
             this.dataGridView1.TabIndex = 90;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Task Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 225;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Task Group ";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 250;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Allowed";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 75;
             // 
@@ -124,7 +128,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(159, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 32);
+            this.label1.Size = new System.Drawing.Size(493, 42);
             this.label1.TabIndex = 91;
             this.label1.Text = "Assign Security Tasks to Users";
             // 
@@ -134,7 +138,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 18);
+            this.label2.Size = new System.Drawing.Size(102, 23);
             this.label2.TabIndex = 92;
             this.label2.Text = "User Name";
             // 
@@ -143,7 +147,7 @@
             this.usernamecombox.FormattingEnabled = true;
             this.usernamecombox.Location = new System.Drawing.Point(33, 117);
             this.usernamecombox.Name = "usernamecombox";
-            this.usernamecombox.Size = new System.Drawing.Size(222, 24);
+            this.usernamecombox.Size = new System.Drawing.Size(222, 27);
             this.usernamecombox.TabIndex = 93;
             // 
             // textBox2
@@ -154,7 +158,7 @@
             this.textBox2.Location = new System.Drawing.Point(33, 146);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(611, 19);
+            this.textBox2.Size = new System.Drawing.Size(611, 23);
             this.textBox2.TabIndex = 648;
             this.textBox2.Text = "                                                                 Available Tasks";
             // 
@@ -171,7 +175,7 @@
             // 
             // Assign_Security_Tasks_to_User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(691, 621);
@@ -190,6 +194,7 @@
             this.Name = "Assign_Security_Tasks_to_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assign_Security_Tasks_to_User";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Assign_Security_Tasks_to_User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

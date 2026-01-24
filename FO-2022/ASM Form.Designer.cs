@@ -59,6 +59,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(273, 200);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(346, 292);
             this.dataGridView1.TabIndex = 606;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -69,7 +70,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(306, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 33);
+            this.label1.Size = new System.Drawing.Size(96, 42);
             this.label1.TabIndex = 605;
             this.label1.Text = "ASM";
             // 
@@ -81,7 +82,7 @@
             this.textBox1.Location = new System.Drawing.Point(273, 176);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 19);
+            this.textBox1.Size = new System.Drawing.Size(346, 23);
             this.textBox1.TabIndex = 604;
             this.textBox1.Text = "                Available ASM";
             // 
@@ -92,7 +93,7 @@
             this.label10.Location = new System.Drawing.Point(45, 179);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 16);
+            this.label10.Size = new System.Drawing.Size(97, 21);
             this.label10.TabIndex = 614;
             this.label10.Text = "NSM Name:";
             // 
@@ -191,7 +192,7 @@
             this.isactivechkbox.AutoSize = true;
             this.isactivechkbox.Location = new System.Drawing.Point(43, 330);
             this.isactivechkbox.Name = "isactivechkbox";
-            this.isactivechkbox.Size = new System.Drawing.Size(74, 20);
+            this.isactivechkbox.Size = new System.Drawing.Size(97, 25);
             this.isactivechkbox.TabIndex = 623;
             this.isactivechkbox.Text = "Is Active";
             this.isactivechkbox.UseVisualStyleBackColor = true;
@@ -203,7 +204,7 @@
             this.label6.Location = new System.Drawing.Point(270, 130);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 622;
             this.label6.Text = "NSM Name:";
             // 
@@ -212,7 +213,7 @@
             this.nsmcombobox.FormattingEnabled = true;
             this.nsmcombobox.Location = new System.Drawing.Point(273, 149);
             this.nsmcombobox.Name = "nsmcombobox";
-            this.nsmcombobox.Size = new System.Drawing.Size(153, 24);
+            this.nsmcombobox.Size = new System.Drawing.Size(153, 27);
             this.nsmcombobox.TabIndex = 621;
             // 
             // label5
@@ -222,7 +223,7 @@
             this.label5.Location = new System.Drawing.Point(441, 130);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(97, 21);
             this.label5.TabIndex = 620;
             this.label5.Text = "ASM Name:";
             // 
@@ -243,7 +244,7 @@
             this.label2.Location = new System.Drawing.Point(43, 271);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.Size = new System.Drawing.Size(121, 21);
             this.label2.TabIndex = 618;
             this.label2.Text = "Mobile Number";
             // 
@@ -264,7 +265,7 @@
             this.label3.Location = new System.Drawing.Point(42, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(97, 21);
             this.label3.TabIndex = 616;
             this.label3.Text = "ASM Name:";
             // 
@@ -273,7 +274,7 @@
             this.nsmcombobox1.FormattingEnabled = true;
             this.nsmcombobox1.Location = new System.Drawing.Point(39, 196);
             this.nsmcombobox1.Name = "nsmcombobox1";
-            this.nsmcombobox1.Size = new System.Drawing.Size(216, 24);
+            this.nsmcombobox1.Size = new System.Drawing.Size(216, 27);
             this.nsmcombobox1.TabIndex = 624;
             // 
             // pictureBox2
@@ -285,6 +286,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 625;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // asmnametxtbox1
             // 
@@ -296,7 +298,7 @@
             // 
             // ASM_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(669, 550);
@@ -327,6 +329,7 @@
             this.Name = "ASM_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ASM_Form";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ASM_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -106,7 +106,7 @@
             this.label3.Location = new System.Drawing.Point(33, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(475, 31);
+            this.label3.Size = new System.Drawing.Size(586, 38);
             this.label3.TabIndex = 306;
             this.label3.Text = "Daily activity Done Parties Ledger(pdf)";
             // 
@@ -148,7 +148,7 @@
             this.label2.Location = new System.Drawing.Point(240, 206);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 302;
             this.label2.Text = "Party Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@
             this.label1.Location = new System.Drawing.Point(104, 206);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 301;
             this.label1.Text = "Party ID ";
             // 
@@ -170,7 +170,7 @@
             this.todayradiobtn.Location = new System.Drawing.Point(176, 164);
             this.todayradiobtn.Margin = new System.Windows.Forms.Padding(4);
             this.todayradiobtn.Name = "todayradiobtn";
-            this.todayradiobtn.Size = new System.Drawing.Size(60, 20);
+            this.todayradiobtn.Size = new System.Drawing.Size(76, 25);
             this.todayradiobtn.TabIndex = 296;
             this.todayradiobtn.TabStop = true;
             this.todayradiobtn.Text = "Today";
@@ -183,7 +183,7 @@
             this.datebwradiobtn.Location = new System.Drawing.Point(176, 124);
             this.datebwradiobtn.Margin = new System.Windows.Forms.Padding(4);
             this.datebwradiobtn.Name = "datebwradiobtn";
-            this.datebwradiobtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwradiobtn.Size = new System.Drawing.Size(137, 25);
             this.datebwradiobtn.TabIndex = 294;
             this.datebwradiobtn.TabStop = true;
             this.datebwradiobtn.Text = "Date Between";
@@ -195,12 +195,12 @@
             this.todaydatetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todaydatetimepicker.Location = new System.Drawing.Point(243, 161);
             this.todaydatetimepicker.Name = "todaydatetimepicker";
-            this.todaydatetimepicker.Size = new System.Drawing.Size(89, 23);
+            this.todaydatetimepicker.Size = new System.Drawing.Size(89, 27);
             this.todaydatetimepicker.TabIndex = 312;
             // 
             // Daily_activity_Done_Parties_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(561, 395);
@@ -223,6 +223,7 @@
             this.Name = "Daily_activity_Done_Parties_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily_activity_Done_Parties_Ledger";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Daily_activity_Done_Parties_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();

@@ -40,9 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.categorycombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.engbtn = new System.Windows.Forms.RadioButton();
             this.urdubtn = new System.Windows.Forms.RadioButton();
+            this.engbtn = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -95,13 +95,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 303;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // todatepcker
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(281, 150);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(96, 23);
+            this.todatepcker.Size = new System.Drawing.Size(96, 27);
             this.todatepcker.TabIndex = 302;
             // 
             // fromdatepcker
@@ -109,7 +110,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(141, 150);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(104, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(104, 27);
             this.fromdatepcker.TabIndex = 301;
             // 
             // label15
@@ -118,7 +119,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(135, 47);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(242, 31);
+            this.label15.Size = new System.Drawing.Size(303, 38);
             this.label15.TabIndex = 300;
             this.label15.Text = "Language Category";
             // 
@@ -128,7 +129,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(282, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 299;
             this.label2.Text = "To Date";
             // 
@@ -138,7 +139,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(144, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 298;
             this.label1.Text = "From Date ";
             // 
@@ -147,7 +148,7 @@
             this.categorycombobox.FormattingEnabled = true;
             this.categorycombobox.Location = new System.Drawing.Point(141, 208);
             this.categorycombobox.Name = "categorycombobox";
-            this.categorycombobox.Size = new System.Drawing.Size(277, 24);
+            this.categorycombobox.Size = new System.Drawing.Size(277, 27);
             this.categorycombobox.TabIndex = 307;
             // 
             // groupBox1
@@ -160,41 +161,41 @@
             this.groupBox1.TabIndex = 308;
             this.groupBox1.TabStop = false;
             // 
-            // label3
+            // urdubtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(144, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 309;
-            this.label3.Text = "Category";
+            this.urdubtn.AutoSize = true;
+            this.urdubtn.Location = new System.Drawing.Point(144, 18);
+            this.urdubtn.Name = "urdubtn";
+            this.urdubtn.Size = new System.Drawing.Size(66, 25);
+            this.urdubtn.TabIndex = 1;
+            this.urdubtn.TabStop = true;
+            this.urdubtn.Text = "Urdu";
+            this.urdubtn.UseVisualStyleBackColor = true;
             // 
             // engbtn
             // 
             this.engbtn.AutoSize = true;
             this.engbtn.Location = new System.Drawing.Point(14, 18);
             this.engbtn.Name = "engbtn";
-            this.engbtn.Size = new System.Drawing.Size(65, 20);
+            this.engbtn.Size = new System.Drawing.Size(84, 25);
             this.engbtn.TabIndex = 0;
             this.engbtn.TabStop = true;
             this.engbtn.Text = "English";
             this.engbtn.UseVisualStyleBackColor = true;
             // 
-            // urdubtn
+            // label3
             // 
-            this.urdubtn.AutoSize = true;
-            this.urdubtn.Location = new System.Drawing.Point(144, 18);
-            this.urdubtn.Name = "urdubtn";
-            this.urdubtn.Size = new System.Drawing.Size(52, 20);
-            this.urdubtn.TabIndex = 1;
-            this.urdubtn.TabStop = true;
-            this.urdubtn.Text = "Urdu";
-            this.urdubtn.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.TabIndex = 309;
+            this.label3.Text = "Category";
             // 
             // Language_Category
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(541, 438);
@@ -212,10 +213,11 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Language_Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Language_Category";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

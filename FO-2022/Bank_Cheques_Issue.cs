@@ -593,8 +593,8 @@ namespace FO_2022
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.Show();
+            //Mainform1 mainform1 = new Mainform1();
+            //mainform1.Show();
         }
 
         private void accountsearch_Click(object sender, EventArgs e)

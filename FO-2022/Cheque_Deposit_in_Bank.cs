@@ -891,6 +891,11 @@ namespace FO_2022
                 MessageBox.Show("Error fetching account: " + ex.Message);
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //private void chqdatepcker_ValueChanged(object sender, EventArgs e) { }
     }
 }

@@ -69,7 +69,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(239, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 31);
+            this.label1.Size = new System.Drawing.Size(351, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Change Product Prices";
             // 
@@ -123,7 +123,7 @@
             this.cmpnynamecombobox2.FormattingEnabled = true;
             this.cmpnynamecombobox2.Location = new System.Drawing.Point(255, 128);
             this.cmpnynamecombobox2.Name = "cmpnynamecombobox2";
-            this.cmpnynamecombobox2.Size = new System.Drawing.Size(224, 24);
+            this.cmpnynamecombobox2.Size = new System.Drawing.Size(224, 27);
             this.cmpnynamecombobox2.TabIndex = 390;
             this.cmpnynamecombobox2.SelectedIndexChanged += new System.EventHandler(this.cmpnynamecombobox2_SelectedIndexChanged);
             // 
@@ -134,7 +134,7 @@
             this.label4.Location = new System.Drawing.Point(37, 109);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 389;
             this.label4.Text = "Company Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -144,7 +144,7 @@
             this.cmpnynamecombobox1.FormattingEnabled = true;
             this.cmpnynamecombobox1.Location = new System.Drawing.Point(27, 128);
             this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
-            this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 24);
+            this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 27);
             this.cmpnynamecombobox1.TabIndex = 392;
             this.cmpnynamecombobox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -155,7 +155,7 @@
             this.label3.Location = new System.Drawing.Point(270, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 16);
+            this.label3.Size = new System.Drawing.Size(126, 21);
             this.label3.TabIndex = 391;
             this.label3.Text = "Company Name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -183,7 +183,7 @@
             this.textBox1.Location = new System.Drawing.Point(27, 157);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(844, 19);
+            this.textBox1.Size = new System.Drawing.Size(844, 23);
             this.textBox1.TabIndex = 394;
             this.textBox1.Text = "                                                   Available Packings";
             // 
@@ -205,6 +205,7 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(12, 212);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(859, 350);
             this.dataGridView1.TabIndex = 395;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -214,18 +215,21 @@
             // Column1
             // 
             this.Column1.HeaderText = "Pro ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 75;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Product Name";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Packing";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -234,6 +238,7 @@
             // Column4
             // 
             this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -242,48 +247,56 @@
             // Column9
             // 
             this.Column9.HeaderText = "Disc%";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Width = 60;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Disc.Val";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.Width = 75;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "S-T%";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.Width = 45;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "Packing";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.Width = 60;
             // 
             // Column14
             // 
             this.Column14.HeaderText = "Price";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.Width = 60;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Disc%";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 65;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Disc Val";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 75;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "S.T%";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 70;
             // 
@@ -292,7 +305,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(78, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 396;
             // 
             // label5
@@ -300,7 +313,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(414, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.Size = new System.Drawing.Size(0, 21);
             this.label5.TabIndex = 397;
             // 
             // label6
@@ -308,7 +321,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(731, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.Size = new System.Drawing.Size(0, 21);
             this.label6.TabIndex = 398;
             // 
             // prdctinfotxtbox
@@ -316,7 +329,7 @@
             this.prdctinfotxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.prdctinfotxtbox.Location = new System.Drawing.Point(27, 188);
             this.prdctinfotxtbox.Name = "prdctinfotxtbox";
-            this.prdctinfotxtbox.Size = new System.Drawing.Size(212, 23);
+            this.prdctinfotxtbox.Size = new System.Drawing.Size(212, 27);
             this.prdctinfotxtbox.TabIndex = 399;
             this.prdctinfotxtbox.Text = "Products Information";
             // 
@@ -325,7 +338,7 @@
             this.purchasetxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.purchasetxtbox.Location = new System.Drawing.Point(245, 188);
             this.purchasetxtbox.Name = "purchasetxtbox";
-            this.purchasetxtbox.Size = new System.Drawing.Size(295, 23);
+            this.purchasetxtbox.Size = new System.Drawing.Size(295, 27);
             this.purchasetxtbox.TabIndex = 400;
             this.purchasetxtbox.Text = "Purhcase";
             // 
@@ -334,7 +347,7 @@
             this.saletxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.saletxtbox.Location = new System.Drawing.Point(541, 188);
             this.saletxtbox.Name = "saletxtbox";
-            this.saletxtbox.Size = new System.Drawing.Size(330, 23);
+            this.saletxtbox.Size = new System.Drawing.Size(330, 27);
             this.saletxtbox.TabIndex = 401;
             this.saletxtbox.Text = "       Sale ";
             // 
@@ -351,7 +364,7 @@
             // 
             // Change_Product_Prices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(883, 622);
@@ -379,6 +392,7 @@
             this.Name = "Change_Product_Prices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change_Product_Prices";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Change_Product_Prices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

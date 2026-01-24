@@ -84,7 +84,7 @@
             this.label7.Location = new System.Drawing.Point(263, 105);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 16);
+            this.label7.Size = new System.Drawing.Size(126, 21);
             this.label7.TabIndex = 384;
             this.label7.Text = "Company Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             this.label8.Location = new System.Drawing.Point(104, 105);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 16);
+            this.label8.Size = new System.Drawing.Size(101, 21);
             this.label8.TabIndex = 383;
             this.label8.Text = "Company ID";
             // 
@@ -109,6 +109,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 389;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -117,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(132, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 32);
+            this.label2.Size = new System.Drawing.Size(391, 42);
             this.label2.TabIndex = 388;
             this.label2.Text = "Account Balance (C/W)";
             // 
@@ -183,7 +184,7 @@
             this.label1.Location = new System.Drawing.Point(104, 198);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(104, 21);
             this.label1.TabIndex = 394;
             this.label1.Text = "Customer ID";
             // 
@@ -203,7 +204,7 @@
             // 
             // Account_Balance__C_W
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(661, 375);
@@ -226,6 +227,7 @@
             this.Name = "Account_Balance__C_W";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account_Balance__C_W";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

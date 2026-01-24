@@ -63,7 +63,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(113, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(437, 31);
+            this.label15.Size = new System.Drawing.Size(547, 38);
             this.label15.TabIndex = 383;
             this.label15.Text = "Company Discount Claim Summary";
             // 
@@ -72,7 +72,7 @@
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(313, 135);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(96, 23);
+            this.todatepcker.Size = new System.Drawing.Size(96, 27);
             this.todatepcker.TabIndex = 382;
             // 
             // fromdatepcker
@@ -80,7 +80,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(169, 135);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(104, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(104, 27);
             this.fromdatepcker.TabIndex = 381;
             // 
             // pictureBox1
@@ -119,7 +119,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(312, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 377;
             this.label4.Text = "Company Name";
             // 
@@ -129,7 +129,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(169, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 376;
             this.label3.Text = "Company ID";
             // 
@@ -139,7 +139,7 @@
             this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(312, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 16);
+            this.label16.Size = new System.Drawing.Size(70, 21);
             this.label16.TabIndex = 375;
             this.label16.Text = "To Date";
             // 
@@ -149,7 +149,7 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(169, 116);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 16);
+            this.label17.Size = new System.Drawing.Size(94, 21);
             this.label17.TabIndex = 374;
             this.label17.Text = "From Date ";
             // 
@@ -169,7 +169,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(334, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 372;
             this.label2.Text = "To Date";
             // 
@@ -179,7 +179,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(191, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 371;
             this.label1.Text = "From Date ";
             // 
@@ -188,7 +188,7 @@
             this.prdctgrocombobox.FormattingEnabled = true;
             this.prdctgrocombobox.Location = new System.Drawing.Point(169, 239);
             this.prdctgrocombobox.Name = "prdctgrocombobox";
-            this.prdctgrocombobox.Size = new System.Drawing.Size(396, 24);
+            this.prdctgrocombobox.Size = new System.Drawing.Size(396, 27);
             this.prdctgrocombobox.TabIndex = 384;
             // 
             // label5
@@ -197,7 +197,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(169, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.Size = new System.Drawing.Size(75, 21);
             this.label5.TabIndex = 385;
             this.label5.Text = "Discount";
             // 
@@ -207,7 +207,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(169, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(115, 21);
             this.label6.TabIndex = 386;
             this.label6.Text = "Product Group";
             // 
@@ -226,7 +226,7 @@
             this.discountcombobox.FormattingEnabled = true;
             this.discountcombobox.Location = new System.Drawing.Point(172, 297);
             this.discountcombobox.Name = "discountcombobox";
-            this.discountcombobox.Size = new System.Drawing.Size(90, 24);
+            this.discountcombobox.Size = new System.Drawing.Size(90, 27);
             this.discountcombobox.TabIndex = 388;
             // 
             // label7
@@ -235,7 +235,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(268, 278);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(56, 21);
             this.label7.TabIndex = 389;
             this.label7.Text = "%Age";
             // 
@@ -291,10 +291,11 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 393;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // Company_Discount_Claim_Summary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(672, 431);
@@ -327,6 +328,7 @@
             this.Name = "Company_Discount_Claim_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Company_Discount_Claim_Summary";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

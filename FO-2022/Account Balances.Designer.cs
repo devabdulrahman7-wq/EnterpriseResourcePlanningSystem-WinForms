@@ -72,7 +72,7 @@
             this.includepartiesbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.includepartiesbtn.Location = new System.Drawing.Point(13, 62);
             this.includepartiesbtn.Name = "includepartiesbtn";
-            this.includepartiesbtn.Size = new System.Drawing.Size(109, 20);
+            this.includepartiesbtn.Size = new System.Drawing.Size(141, 25);
             this.includepartiesbtn.TabIndex = 4;
             this.includepartiesbtn.TabStop = true;
             this.includepartiesbtn.Text = "Include Parties";
@@ -84,7 +84,7 @@
             this.excludepartiesbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excludepartiesbtn.Location = new System.Drawing.Point(13, 13);
             this.excludepartiesbtn.Name = "excludepartiesbtn";
-            this.excludepartiesbtn.Size = new System.Drawing.Size(111, 20);
+            this.excludepartiesbtn.Size = new System.Drawing.Size(144, 25);
             this.excludepartiesbtn.TabIndex = 3;
             this.excludepartiesbtn.TabStop = true;
             this.excludepartiesbtn.Text = "Exclude Parties";
@@ -96,7 +96,7 @@
             this.onlypartiesbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onlypartiesbtn.Location = new System.Drawing.Point(13, 36);
             this.onlypartiesbtn.Name = "onlypartiesbtn";
-            this.onlypartiesbtn.Size = new System.Drawing.Size(93, 20);
+            this.onlypartiesbtn.Size = new System.Drawing.Size(120, 25);
             this.onlypartiesbtn.TabIndex = 2;
             this.onlypartiesbtn.TabStop = true;
             this.onlypartiesbtn.Text = "Only Parties";
@@ -119,7 +119,7 @@
             this.showbothbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showbothbtn.Location = new System.Drawing.Point(13, 65);
             this.showbothbtn.Name = "showbothbtn";
-            this.showbothbtn.Size = new System.Drawing.Size(141, 20);
+            this.showbothbtn.Size = new System.Drawing.Size(183, 25);
             this.showbothbtn.TabIndex = 2;
             this.showbothbtn.TabStop = true;
             this.showbothbtn.Text = "Show Both Accounts";
@@ -131,7 +131,7 @@
             this.showaccountgrpbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showaccountgrpbtn.Location = new System.Drawing.Point(13, 39);
             this.showaccountgrpbtn.Name = "showaccountgrpbtn";
-            this.showaccountgrpbtn.Size = new System.Drawing.Size(177, 20);
+            this.showaccountgrpbtn.Size = new System.Drawing.Size(228, 25);
             this.showaccountgrpbtn.TabIndex = 1;
             this.showaccountgrpbtn.TabStop = true;
             this.showaccountgrpbtn.Text = "Show only Accounts Group";
@@ -143,7 +143,7 @@
             this.showtransactionbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showtransactionbtn.Location = new System.Drawing.Point(13, 13);
             this.showtransactionbtn.Name = "showtransactionbtn";
-            this.showtransactionbtn.Size = new System.Drawing.Size(216, 20);
+            this.showtransactionbtn.Size = new System.Drawing.Size(279, 25);
             this.showtransactionbtn.TabIndex = 0;
             this.showtransactionbtn.TabStop = true;
             this.showtransactionbtn.Text = "Show only Transactions Accounts";
@@ -155,7 +155,7 @@
             this.tilldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tilldatebtn.Location = new System.Drawing.Point(233, 151);
             this.tilldatebtn.Name = "tilldatebtn";
-            this.tilldatebtn.Size = new System.Drawing.Size(72, 20);
+            this.tilldatebtn.Size = new System.Drawing.Size(94, 25);
             this.tilldatebtn.TabIndex = 206;
             this.tilldatebtn.TabStop = true;
             this.tilldatebtn.Text = "Till Date";
@@ -167,7 +167,7 @@
             this.daterangebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daterangebtn.Location = new System.Drawing.Point(233, 125);
             this.daterangebtn.Name = "daterangebtn";
-            this.daterangebtn.Size = new System.Drawing.Size(91, 20);
+            this.daterangebtn.Size = new System.Drawing.Size(119, 25);
             this.daterangebtn.TabIndex = 205;
             this.daterangebtn.TabStop = true;
             this.daterangebtn.Text = "Date Range";
@@ -179,7 +179,7 @@
             this.alldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alldatebtn.Location = new System.Drawing.Point(233, 102);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(69, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(91, 25);
             this.alldatebtn.TabIndex = 204;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Date";
@@ -190,7 +190,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(351, 148);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(99, 27);
             this.dateTimePicker1.TabIndex = 210;
             // 
             // checkBox1
@@ -198,7 +198,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(223, 314);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(241, 20);
+            this.checkBox1.Size = new System.Drawing.Size(312, 25);
             this.checkBox1.TabIndex = 211;
             this.checkBox1.Text = "Exclude accounts having zero balance";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(255, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 33);
+            this.label1.Size = new System.Drawing.Size(290, 42);
             this.label1.TabIndex = 212;
             this.label1.Text = "Account Balances ";
             // 
@@ -229,7 +229,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(220, 467);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.Size = new System.Drawing.Size(89, 21);
             this.label2.TabIndex = 272;
             this.label2.Text = "Party Type";
             // 
@@ -238,7 +238,7 @@
             this.partytypecombobox.FormattingEnabled = true;
             this.partytypecombobox.Location = new System.Drawing.Point(223, 486);
             this.partytypecombobox.Name = "partytypecombobox";
-            this.partytypecombobox.Size = new System.Drawing.Size(291, 24);
+            this.partytypecombobox.Size = new System.Drawing.Size(291, 27);
             this.partytypecombobox.TabIndex = 273;
             // 
             // previewbtn
@@ -285,7 +285,7 @@
             // 
             // Account_Balances
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(679, 618);

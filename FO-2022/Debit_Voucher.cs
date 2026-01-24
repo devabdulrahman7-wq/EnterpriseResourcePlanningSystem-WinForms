@@ -832,5 +832,10 @@ namespace FO_2022
         {
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
