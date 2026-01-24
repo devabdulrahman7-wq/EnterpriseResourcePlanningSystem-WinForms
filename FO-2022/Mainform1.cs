@@ -518,7 +518,7 @@ namespace FO_2022
         }
         private void salesmenPartyDetailLedgerCombineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Party_Detailed_Ledger_Combine pdlc=new Party_Detailed_Ledger_Combine();
+            Party_Detailed_Ledger_Combine   pdlc=new Party_Detailed_Ledger_Combine();
             pdlc.Show();
             //this.Hide();
         }
@@ -736,6 +736,11 @@ namespace FO_2022
         }
 
         private void toolStripSplitButton5_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
         {
 
         }

@@ -101,7 +101,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(204, 148);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(135, 23);
             this.dateTimePicker1.TabIndex = 283;
             // 
             // dateTimePicker2
@@ -109,7 +109,7 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(204, 188);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(135, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(135, 23);
             this.dateTimePicker2.TabIndex = 284;
             // 
             // label1
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(105, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 21);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 285;
             this.label1.Text = "From Date";
             // 
@@ -126,7 +126,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(105, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 21);
+            this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 286;
             this.label2.Text = "To Date";
             // 
@@ -137,13 +137,13 @@
             this.label3.Location = new System.Drawing.Point(142, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 42);
+            this.label3.Size = new System.Drawing.Size(133, 32);
             this.label3.TabIndex = 287;
             this.label3.Text = "Day Book";
             // 
             // Day_Book
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(520, 387);
@@ -160,6 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Day_Book";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Day_Book";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -17,16 +17,12 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="PartyName">
-          <DataField>PartyName</DataField>
+        <Field Name="VoucherNo">
+          <DataField>VoucherNo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PartyPhone">
-          <DataField>PartyPhone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Date">
-          <DataField>Date</DataField>
+        <Field Name="VoucherDate">
+          <DataField>VoucherDate</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Debit">
@@ -37,19 +33,23 @@
           <DataField>Credit</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Description">
-          <DataField>Description</DataField>
+        <Field Name="Shipment">
+          <DataField>Shipment</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Voucher">
-          <DataField>Voucher</DataField>
+        <Field Name="OrderCol">
+          <DataField>OrderCol</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Refrence">
+          <DataField>Refrence</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Charts_of_Accounts_ds</rd:DataSetName>
         <rd:SchemaPath>E:\FO-2022\FO-2022\Reports\Charts_of_Accounts_ds.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable7</rd:TableName>
+        <rd:TableName>DataTable10</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -66,25 +66,25 @@
                 <TablixBody>
                   <TablixColumns>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>1.19252in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>1.13084in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>1.19252in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>1.19252in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>0.75777in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>0.77312in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.06168in</Width>
+                      <Width>0.98418in</Width>
                     </TablixColumn>
                   </TablixColumns>
                   <TablixRows>
@@ -100,7 +100,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Party Name</Value>
+                                      <Value>Voucher No</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -127,7 +127,7 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox17">
+                            <Textbox Name="Textbox4">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -135,6 +135,40 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Date</Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox4</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox17">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Debit</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -161,40 +195,6 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox19">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>Party Phone</Value>
-                                      <Style>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Center</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox19</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Color>LightGrey</Color>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
                             <Textbox Name="Textbox28">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
@@ -202,7 +202,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Debit</Value>
+                                      <Value>Credit</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -236,7 +236,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Credit</Value>
+                                      <Value>Shipment</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -270,7 +270,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Voucher</Value>
+                                      <Value>Order No</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -304,7 +304,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Description</Value>
+                                      <Value>Reference</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -336,21 +336,21 @@
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="PartyName">
+                            <Textbox Name="VoucherNo1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!PartyName.Value</Value>
+                                      <Value>=Fields!VoucherNo.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>PartyName</rd:DefaultName>
+                              <rd:DefaultName>VoucherNo1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -366,21 +366,21 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Date">
+                            <Textbox Name="VoucherDate">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Date.Value</Value>
+                                      <Value>=Fields!VoucherDate.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Date</rd:DefaultName>
+                              <rd:DefaultName>VoucherDate</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -396,37 +396,7 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="PartyPhone">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!PartyPhone.Value</Value>
-                                      <Style />
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>PartyPhone</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Color>LightGrey</Color>
-                                  <Style>Solid</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Debit">
+                            <Textbox Name="Debit1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -440,7 +410,7 @@
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Debit</rd:DefaultName>
+                              <rd:DefaultName>Debit1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -456,7 +426,7 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Credit">
+                            <Textbox Name="Credit1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -470,7 +440,7 @@
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Credit</rd:DefaultName>
+                              <rd:DefaultName>Credit1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -486,21 +456,21 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Voucher">
+                            <Textbox Name="Shipment">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Voucher.Value</Value>
+                                      <Value>=Fields!Shipment.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Voucher</rd:DefaultName>
+                              <rd:DefaultName>Shipment</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -516,21 +486,51 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Description">
+                            <Textbox Name="OrderCol">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Description.Value</Value>
+                                      <Value>=Fields!OrderCol.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Description</rd:DefaultName>
+                              <rd:DefaultName>OrderCol</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Refrence">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Refrence.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Refrence</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -571,7 +571,7 @@
                 </TablixRowHierarchy>
                 <DataSetName>DataSet1</DataSetName>
                 <Height>0.5in</Height>
-                <Width>7.43176in</Width>
+                <Width>7.22346in</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -673,7 +673,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!PartyID.Value</Value>
+                      <Value>=Parameters!FromDate.Value</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -703,7 +703,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!PartyName.Value</Value>
+                      <Value>=Parameters!ToDate.Value</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -794,7 +794,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.51528in</Height>
+          <Height>0.54653in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -813,8 +813,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.23611in</Top>
-              <Left>6.20746in</Left>
+              <Top>0.24861in</Top>
+              <Left>6.08246in</Left>
               <Height>0.2375in</Height>
               <Width>0.75125in</Width>
               <Style>
@@ -842,8 +842,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>TotalPages</rd:DefaultName>
-              <Top>0.23611in</Top>
-              <Left>4.90365in</Left>
+              <Top>0.24861in</Top>
+              <Left>4.77865in</Left>
               <Height>0.2375in</Height>
               <Width>0.5625in</Width>
               <ZIndex>1</ZIndex>
@@ -872,8 +872,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.23611in</Top>
-              <Left>4.01475in</Left>
+              <Top>0.24861in</Top>
+              <Left>3.88975in</Left>
               <Height>0.2375in</Height>
               <Width>0.83333in</Width>
               <ZIndex>2</ZIndex>
@@ -902,8 +902,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.23611in</Top>
-              <Left>5.50608in</Left>
+              <Top>0.24861in</Top>
+              <Left>5.38108in</Left>
               <Height>0.2375in</Height>
               <Width>0.6875in</Width>
               <ZIndex>3</ZIndex>
@@ -933,7 +933,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox25</rd:DefaultName>
               <Top>0.01389in</Top>
-              <Left>4.24674in</Left>
+              <Left>3.49674in</Left>
               <Height>0.20833in</Height>
               <Width>1.06168in</Width>
               <ZIndex>4</ZIndex>
@@ -963,7 +963,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox25</rd:DefaultName>
               <Top>0.01389in</Top>
-              <Left>3.21902in</Left>
+              <Left>2.46902in</Left>
               <Height>0.20833in</Height>
               <Width>1.02609in</Width>
               <ZIndex>5</ZIndex>
@@ -995,7 +995,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox25</rd:DefaultName>
               <Top>0.01389in</Top>
-              <Left>2.72308in</Left>
+              <Left>1.84808in</Left>
               <Height>0.20833in</Height>
               <Width>0.43333in</Width>
               <ZIndex>6</ZIndex>
@@ -1044,6 +1044,18 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="FromDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1059,6 +1071,16 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>PartyName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>FromDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ToDate</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
