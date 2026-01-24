@@ -1,6 +1,6 @@
 ﻿namespace FO_2022.Reports
 {
-    partial class ReportViewer
+    partial class Report_viewer
     {
         /// <summary>
         /// Required designer variable.
@@ -37,19 +37,20 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(1047, 517);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ReportViewer
+            // Report_viewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1047, 517);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "ReportViewer";
-            this.Text = "ReportViewer";
-            this.Load += new System.EventHandler(this.ReportViewer_Load);
+            this.Name = "Report_viewer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Report_viewer";
+            this.Load += new System.EventHandler(this.Report_viewer_Load);
             this.ResumeLayout(false);
 
         }

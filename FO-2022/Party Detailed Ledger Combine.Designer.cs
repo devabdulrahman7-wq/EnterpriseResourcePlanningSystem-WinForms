@@ -59,9 +59,9 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(198, 476);
+            this.previewbtn.Location = new System.Drawing.Point(153, 417);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(70, 30);
+            this.previewbtn.Size = new System.Drawing.Size(70, 26);
             this.previewbtn.TabIndex = 290;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -72,9 +72,9 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(360, 476);
+            this.closebtn.Location = new System.Drawing.Point(315, 417);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(70, 30);
+            this.closebtn.Size = new System.Drawing.Size(70, 26);
             this.closebtn.TabIndex = 289;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -85,9 +85,9 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(279, 476);
+            this.printbtn.Location = new System.Drawing.Point(234, 417);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(70, 30);
+            this.printbtn.Size = new System.Drawing.Size(70, 26);
             this.printbtn.TabIndex = 288;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -95,7 +95,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(553, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(512, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(168, 55);
+            this.label3.Location = new System.Drawing.Point(130, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(273, 31);
@@ -116,7 +116,7 @@
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(310, 280);
+            this.partynametxtbox.Location = new System.Drawing.Point(265, 205);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
@@ -126,7 +126,7 @@
             // partyidtxtbox
             // 
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidtxtbox.Location = new System.Drawing.Point(174, 280);
+            this.partyidtxtbox.Location = new System.Drawing.Point(129, 205);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
@@ -136,7 +136,7 @@
             // searchpartyid
             // 
             this.searchpartyid.Image = ((System.Drawing.Image)(resources.GetObject("searchpartyid.Image")));
-            this.searchpartyid.Location = new System.Drawing.Point(270, 280);
+            this.searchpartyid.Location = new System.Drawing.Point(225, 205);
             this.searchpartyid.Margin = new System.Windows.Forms.Padding(4);
             this.searchpartyid.Name = "searchpartyid";
             this.searchpartyid.Size = new System.Drawing.Size(40, 20);
@@ -147,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(332, 260);
+            this.label2.Location = new System.Drawing.Point(262, 185);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
@@ -158,7 +158,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 260);
+            this.label1.Location = new System.Drawing.Point(133, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -169,7 +169,7 @@
             // 
             this.landscapebtn.AutoSize = true;
             this.landscapebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.landscapebtn.Location = new System.Drawing.Point(294, 315);
+            this.landscapebtn.Location = new System.Drawing.Point(265, 252);
             this.landscapebtn.Margin = new System.Windows.Forms.Padding(4);
             this.landscapebtn.Name = "landscapebtn";
             this.landscapebtn.Size = new System.Drawing.Size(85, 20);
@@ -182,7 +182,7 @@
             // 
             this.detaillgrasdbtn.AutoSize = true;
             this.detaillgrasdbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detaillgrasdbtn.Location = new System.Drawing.Point(294, 343);
+            this.detaillgrasdbtn.Location = new System.Drawing.Point(265, 280);
             this.detaillgrasdbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detaillgrasdbtn.Name = "detaillgrasdbtn";
             this.detaillgrasdbtn.Size = new System.Drawing.Size(170, 20);
@@ -195,7 +195,7 @@
             // 
             this.detailbtn.AutoSize = true;
             this.detailbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailbtn.Location = new System.Drawing.Point(181, 343);
+            this.detailbtn.Location = new System.Drawing.Point(152, 280);
             this.detailbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detailbtn.Name = "detailbtn";
             this.detailbtn.Size = new System.Drawing.Size(100, 20);
@@ -208,7 +208,7 @@
             // 
             this.portrtbtn.AutoSize = true;
             this.portrtbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.portrtbtn.Location = new System.Drawing.Point(181, 315);
+            this.portrtbtn.Location = new System.Drawing.Point(152, 252);
             this.portrtbtn.Margin = new System.Windows.Forms.Padding(4);
             this.portrtbtn.Name = "portrtbtn";
             this.portrtbtn.Size = new System.Drawing.Size(67, 20);
@@ -221,7 +221,7 @@
             // 
             this.todaybtn.AutoSize = true;
             this.todaybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaybtn.Location = new System.Drawing.Point(207, 210);
+            this.todaybtn.Location = new System.Drawing.Point(259, 149);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(4);
             this.todaybtn.Name = "todaybtn";
             this.todaybtn.Size = new System.Drawing.Size(60, 20);
@@ -234,7 +234,7 @@
             // 
             this.daybtn.AutoSize = true;
             this.daybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daybtn.Location = new System.Drawing.Point(206, 182);
+            this.daybtn.Location = new System.Drawing.Point(164, 149);
             this.daybtn.Margin = new System.Windows.Forms.Padding(4);
             this.daybtn.Name = "daybtn";
             this.daybtn.Size = new System.Drawing.Size(58, 20);
@@ -247,7 +247,7 @@
             // 
             this.datebwbtn.AutoSize = true;
             this.datebwbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datebwbtn.Location = new System.Drawing.Point(206, 153);
+            this.datebwbtn.Location = new System.Drawing.Point(259, 111);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(4);
             this.datebwbtn.Name = "datebwbtn";
             this.datebwbtn.Size = new System.Drawing.Size(104, 20);
@@ -261,7 +261,7 @@
             // 
             this.alldatebtn.AutoSize = true;
             this.alldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alldatebtn.Location = new System.Drawing.Point(206, 125);
+            this.alldatebtn.Location = new System.Drawing.Point(164, 111);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.alldatebtn.Name = "alldatebtn";
             this.alldatebtn.Size = new System.Drawing.Size(62, 20);
@@ -273,7 +273,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(178, 399);
+            this.label4.Location = new System.Drawing.Point(126, 320);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
@@ -283,7 +283,7 @@
             // salesmancombobox
             // 
             this.salesmancombobox.FormattingEnabled = true;
-            this.salesmancombobox.Location = new System.Drawing.Point(181, 418);
+            this.salesmancombobox.Location = new System.Drawing.Point(129, 339);
             this.salesmancombobox.Name = "salesmancombobox";
             this.salesmancombobox.Size = new System.Drawing.Size(290, 24);
             this.salesmancombobox.TabIndex = 292;
@@ -293,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(614, 535);
+            this.ClientSize = new System.Drawing.Size(551, 486);
             this.Controls.Add(this.salesmancombobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.previewbtn);
@@ -316,10 +316,11 @@
             this.Controls.Add(this.alldatebtn);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Party_Detailed_Ledger_Combine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Detailed_Ledger_Combine";
+            this.Load += new System.EventHandler(this.Party_Detailed_Ledger_Combine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();
             this.ResumeLayout(false);

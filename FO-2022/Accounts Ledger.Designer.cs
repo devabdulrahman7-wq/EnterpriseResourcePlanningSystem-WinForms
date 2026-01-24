@@ -63,13 +63,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(174, 507);
+            this.previewbtn.Location = new System.Drawing.Point(123, 432);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(88, 36);
+            this.previewbtn.Size = new System.Drawing.Size(88, 28);
             this.previewbtn.TabIndex = 290;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -77,10 +78,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(363, 507);
+            this.closebtn.Location = new System.Drawing.Point(312, 432);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(88, 36);
+            this.closebtn.Size = new System.Drawing.Size(88, 28);
             this.closebtn.TabIndex = 289;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -92,18 +93,19 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(268, 507);
+            this.printbtn.Location = new System.Drawing.Point(217, 432);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(88, 36);
+            this.printbtn.Size = new System.Drawing.Size(88, 28);
             this.printbtn.TabIndex = 288;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(552, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(459, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 37);
@@ -115,7 +117,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(160, 37);
+            this.label3.Location = new System.Drawing.Point(144, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 31);
@@ -125,39 +127,42 @@
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(311, 214);
+            this.partynametxtbox.Location = new System.Drawing.Point(222, 209);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(171, 25);
+            this.partynametxtbox.Size = new System.Drawing.Size(159, 25);
             this.partynametxtbox.TabIndex = 285;
+            this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
             // 
             // partyidtxtbox
             // 
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidtxtbox.Location = new System.Drawing.Point(178, 214);
+            this.partyidtxtbox.Location = new System.Drawing.Point(89, 209);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(93, 25);
             this.partyidtxtbox.TabIndex = 284;
+            this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
             // searchpartyid
             // 
             this.searchpartyid.Image = ((System.Drawing.Image)(resources.GetObject("searchpartyid.Image")));
-            this.searchpartyid.Location = new System.Drawing.Point(273, 214);
+            this.searchpartyid.Location = new System.Drawing.Point(184, 209);
             this.searchpartyid.Margin = new System.Windows.Forms.Padding(5);
             this.searchpartyid.Name = "searchpartyid";
             this.searchpartyid.Size = new System.Drawing.Size(38, 25);
             this.searchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchpartyid.TabIndex = 283;
             this.searchpartyid.TabStop = false;
+            this.searchpartyid.Click += new System.EventHandler(this.searchpartyid_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(301, 189);
+            this.label2.Location = new System.Drawing.Point(220, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
@@ -169,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 189);
+            this.label1.Location = new System.Drawing.Point(85, 188);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -188,6 +193,7 @@
             this.ledgergrpbtn.TabStop = true;
             this.ledgergrpbtn.Text = "Ledger Group (Datewise)";
             this.ledgergrpbtn.UseVisualStyleBackColor = true;
+            this.ledgergrpbtn.CheckedChanged += new System.EventHandler(this.ledgergrpbtn_CheckedChanged);
             // 
             // smallpaperbtn
             // 
@@ -201,6 +207,7 @@
             this.smallpaperbtn.TabStop = true;
             this.smallpaperbtn.Text = "Small Paper Size";
             this.smallpaperbtn.UseVisualStyleBackColor = true;
+            this.smallpaperbtn.CheckedChanged += new System.EventHandler(this.smallpaperbtn_CheckedChanged);
             // 
             // normalpaperbtn
             // 
@@ -214,6 +221,7 @@
             this.normalpaperbtn.TabStop = true;
             this.normalpaperbtn.Text = "Normal Paper Size";
             this.normalpaperbtn.UseVisualStyleBackColor = true;
+            this.normalpaperbtn.CheckedChanged += new System.EventHandler(this.normalpaperbtn_CheckedChanged);
             // 
             // normalledgerbtn
             // 
@@ -227,12 +235,13 @@
             this.normalledgerbtn.TabStop = true;
             this.normalledgerbtn.Text = "Ledger Normal";
             this.normalledgerbtn.UseVisualStyleBackColor = true;
+            this.normalledgerbtn.CheckedChanged += new System.EventHandler(this.normalledgerbtn_CheckedChanged);
             // 
             // todaybtn
             // 
             this.todaybtn.AutoSize = true;
             this.todaybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaybtn.Location = new System.Drawing.Point(213, 147);
+            this.todaybtn.Location = new System.Drawing.Point(173, 136);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(5);
             this.todaybtn.Name = "todaybtn";
             this.todaybtn.Size = new System.Drawing.Size(60, 20);
@@ -240,12 +249,13 @@
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
             this.todaybtn.UseVisualStyleBackColor = true;
+            this.todaybtn.CheckedChanged += new System.EventHandler(this.todaybtn_CheckedChanged);
             // 
             // daybtn
             // 
             this.daybtn.AutoSize = true;
             this.daybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daybtn.Location = new System.Drawing.Point(213, 124);
+            this.daybtn.Location = new System.Drawing.Point(101, 136);
             this.daybtn.Margin = new System.Windows.Forms.Padding(5);
             this.daybtn.Name = "daybtn";
             this.daybtn.Size = new System.Drawing.Size(58, 20);
@@ -253,12 +263,13 @@
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
             this.daybtn.UseVisualStyleBackColor = true;
+            this.daybtn.CheckedChanged += new System.EventHandler(this.daybtn_CheckedChanged);
             // 
             // datebwbtn
             // 
             this.datebwbtn.AutoSize = true;
             this.datebwbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datebwbtn.Location = new System.Drawing.Point(213, 104);
+            this.datebwbtn.Location = new System.Drawing.Point(173, 95);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(5);
             this.datebwbtn.Name = "datebwbtn";
             this.datebwbtn.Size = new System.Drawing.Size(104, 20);
@@ -267,12 +278,13 @@
             this.datebwbtn.Text = "Date Between";
             this.datebwbtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.datebwbtn.UseVisualStyleBackColor = true;
+            this.datebwbtn.CheckedChanged += new System.EventHandler(this.datebwbtn_CheckedChanged);
             // 
             // alldatebtn
             // 
             this.alldatebtn.AutoSize = true;
             this.alldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alldatebtn.Location = new System.Drawing.Point(213, 83);
+            this.alldatebtn.Location = new System.Drawing.Point(101, 95);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(5);
             this.alldatebtn.Name = "alldatebtn";
             this.alldatebtn.Size = new System.Drawing.Size(62, 20);
@@ -280,6 +292,7 @@
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Dte";
             this.alldatebtn.UseVisualStyleBackColor = true;
+            this.alldatebtn.CheckedChanged += new System.EventHandler(this.alldatebtn_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -287,9 +300,9 @@
             this.groupBox1.Controls.Add(this.normalledgerbtn);
             this.groupBox1.Controls.Add(this.normalpaperbtn);
             this.groupBox1.Controls.Add(this.ledgergrpbtn);
-            this.groupBox1.Location = new System.Drawing.Point(141, 258);
+            this.groupBox1.Location = new System.Drawing.Point(88, 237);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(341, 102);
+            this.groupBox1.Size = new System.Drawing.Size(317, 102);
             this.groupBox1.TabIndex = 291;
             this.groupBox1.TabStop = false;
             // 
@@ -297,9 +310,9 @@
             // 
             this.groupBox2.Controls.Add(this.urdubtn);
             this.groupBox2.Controls.Add(this.engbtn);
-            this.groupBox2.Location = new System.Drawing.Point(141, 407);
+            this.groupBox2.Location = new System.Drawing.Point(89, 345);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 50);
+            this.groupBox2.Size = new System.Drawing.Size(316, 50);
             this.groupBox2.TabIndex = 292;
             this.groupBox2.TabStop = false;
             // 
@@ -315,6 +328,7 @@
             this.urdubtn.TabStop = true;
             this.urdubtn.Text = "Urdu Ledger ";
             this.urdubtn.UseVisualStyleBackColor = true;
+            this.urdubtn.CheckedChanged += new System.EventHandler(this.urdubtn_CheckedChanged);
             // 
             // engbtn
             // 
@@ -328,13 +342,14 @@
             this.engbtn.TabStop = true;
             this.engbtn.Text = "English Ledger";
             this.engbtn.UseVisualStyleBackColor = true;
+            this.engbtn.CheckedChanged += new System.EventHandler(this.engbtn_CheckedChanged);
             // 
             // Accounts_Ledger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(609, 642);
+            this.ClientSize = new System.Drawing.Size(508, 498);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.previewbtn);
@@ -355,7 +370,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Accounts_Ledger";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger";
+            this.Load += new System.EventHandler(this.Accounts_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();
             this.groupBox1.ResumeLayout(false);

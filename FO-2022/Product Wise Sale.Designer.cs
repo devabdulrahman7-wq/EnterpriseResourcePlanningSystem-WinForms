@@ -309,7 +309,7 @@
             this.grpcombobox.FormattingEnabled = true;
             this.grpcombobox.Location = new System.Drawing.Point(97, 231);
             this.grpcombobox.Name = "grpcombobox";
-            this.grpcombobox.Size = new System.Drawing.Size(237, 21);
+            this.grpcombobox.Size = new System.Drawing.Size(217, 21);
             this.grpcombobox.TabIndex = 265;
             // 
             // pictureBox2

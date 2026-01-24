@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FO_2022.Reports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -607,7 +608,8 @@ namespace FO_2022
         }
         private void balanceSheetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Balance_Sheet_Reporting_Setting bsrs = new Balance_Sheet_Reporting_Setting();
+            //Balance_Sheet_Reporting_Setting bsrs = new Balance_Sheet_Reporting_Setting();
+            Balance_Sheet bsrs = new Balance_Sheet();
             bsrs.Show();
             this.Hide();
         }

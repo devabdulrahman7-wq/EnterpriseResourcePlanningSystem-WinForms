@@ -177,7 +177,6 @@
             this.purchaseidtxtbox.Name = "purchaseidtxtbox";
             this.purchaseidtxtbox.Size = new System.Drawing.Size(120, 18);
             this.purchaseidtxtbox.TabIndex = 345;
-            this.purchaseidtxtbox.TextChanged += new System.EventHandler(this.purchaseidtxtbox_TextChanged_1);
             // 
             // purchasedatetxtbox
             // 
@@ -255,7 +254,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(210, 27);
+            this.label1.Location = new System.Drawing.Point(311, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(352, 36);
@@ -265,12 +264,13 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(867, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(955, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 386;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // returndatepcker
             // 
@@ -587,6 +587,7 @@
             this.qtyptxtbox.Name = "qtyptxtbox";
             this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
             this.qtyptxtbox.TabIndex = 421;
+            this.qtyptxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyptxtbox_KeyDown);
             // 
             // discpercenttxtbox
             // 
@@ -682,6 +683,7 @@
             this.qtyltxtbox.Name = "qtyltxtbox";
             this.qtyltxtbox.Size = new System.Drawing.Size(51, 19);
             this.qtyltxtbox.TabIndex = 412;
+            this.qtyltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyltxtbox_KeyDown);
             // 
             // textBox4
             // 
@@ -795,7 +797,6 @@
             this.packnamecombobox.Name = "packnamecombobox";
             this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
             this.packnamecombobox.TabIndex = 428;
-            this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
             // Purhcase_Return_Invoice
             // 

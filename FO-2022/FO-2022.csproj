@@ -785,6 +785,15 @@
     <Compile Include="Quaterely Sales Party Wise  .Designer.cs">
       <DependentUpon>Quaterely Sales Party Wise  .cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Balance_Sheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Balance_Sheet.Designer.cs">
+      <DependentUpon>Balance_Sheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Charts_of_Accounts_ds.cs">
+      <DependentUpon>Charts_of_Accounts_ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Charts_of_Accounts_ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -843,6 +852,11 @@
     <Compile Include="Reports\Part_List_rv.Designer.cs">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Product_Price_List.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product_Price_List.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Purchase_Summary.cs">
       <DependentUpon>Purchase_Summary.xsd</DependentUpon>
     </Compile>
@@ -857,17 +871,27 @@
     <Compile Include="Reports\Purchase_Summary_rv.Designer.cs">
       <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ReportViewer.cs">
+    <Compile Include="Reports\Report_viewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\ReportViewer.Designer.cs">
-      <DependentUpon>ReportViewer.cs</DependentUpon>
+    <Compile Include="Reports\Report_viewer.Designer.cs">
+      <DependentUpon>Report_viewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Salesman_Sector.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Reports\Salesman_Sector_Dataset_1.cs">
+      <DependentUpon>Salesman_Sector_Dataset_1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Salesman_Sector.Designer.cs">
-      <DependentUpon>Salesman_Sector.cs</DependentUpon>
+    <Compile Include="Reports\Salesman_Sector_Dataset_1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salesman_Sector_Dataset_1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector_Dataset_2.cs">
+      <DependentUpon>Salesman_Sector_Dataset_2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector_Dataset_2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salesman_Sector_Dataset_2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\Sector_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1583,6 +1607,12 @@
     <EmbeddedResource Include="Quaterely Sales Party Wise  .resx">
       <DependentUpon>Quaterely Sales Party Wise  .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Balance_Sheet.rdlc" />
+    <EmbeddedResource Include="Reports\Balance_Sheet.resx">
+      <DependentUpon>Balance_Sheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Charts_of_Accounts_rv.resx">
       <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
     </EmbeddedResource>
@@ -1593,33 +1623,41 @@
     <EmbeddedResource Include="Reports\Company_Wise_Profits_rv.resx">
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc" />
+    <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\General_Journal.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\General_Journal_rv.resx">
       <DependentUpon>General_Journal_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="Reports\Party_List.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Part_List_rv.resx">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Product_Price_List.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Return_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Summary.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Purchase_Summary_rv.resx">
       <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ReportViewer.resx">
-      <DependentUpon>ReportViewer.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\Report_viewer.resx">
+      <DependentUpon>Report_viewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Salesman_Sector.rdlc" />
-    <EmbeddedResource Include="Reports\Salesman_Sector.resx">
-      <DependentUpon>Salesman_Sector.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\Salesman_Sector.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sale_Return_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Sector.rdlc" />
     <EmbeddedResource Include="Reports\Sector_rv.resx">
       <DependentUpon>Sector_rv.cs</DependentUpon>
@@ -1855,6 +1893,17 @@
     <None Include="Reports\Party_List_ds.xss">
       <DependentUpon>Party_List_ds.xsd</DependentUpon>
     </None>
+    <None Include="Reports\Product_Price_List.xsc">
+      <DependentUpon>Product_Price_List.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Product_Price_List.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Product_Price_List.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Product_Price_List.xss">
+      <DependentUpon>Product_Price_List.xsd</DependentUpon>
+    </None>
     <None Include="Reports\Purchase_Summary.xsc">
       <DependentUpon>Purchase_Summary.xsd</DependentUpon>
     </None>
@@ -1865,6 +1914,28 @@
     </None>
     <None Include="Reports\Purchase_Summary.xss">
       <DependentUpon>Purchase_Summary.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_1.xsc">
+      <DependentUpon>Salesman_Sector_Dataset_1.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Salesman_Sector_Dataset_1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_1.xss">
+      <DependentUpon>Salesman_Sector_Dataset_1.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_2.xsc">
+      <DependentUpon>Salesman_Sector_Dataset_2.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Salesman_Sector_Dataset_2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Salesman_Sector_Dataset_2.xss">
+      <DependentUpon>Salesman_Sector_Dataset_2.xsd</DependentUpon>
     </None>
     <None Include="Reports\Sector_ds.xsc">
       <DependentUpon>Sector_ds.xsd</DependentUpon>

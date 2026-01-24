@@ -84,7 +84,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(320, 362);
+            this.label10.Location = new System.Drawing.Point(320, 366);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 16);
@@ -94,7 +94,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(155, 362);
+            this.label9.Location = new System.Drawing.Point(155, 366);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 16);
@@ -155,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(312, 157);
+            this.label7.Location = new System.Drawing.Point(312, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 16);
@@ -166,7 +166,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(153, 157);
+            this.label8.Location = new System.Drawing.Point(153, 161);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 16);
@@ -207,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(318, 259);
+            this.label5.Location = new System.Drawing.Point(318, 263);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 16);
@@ -218,7 +218,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(159, 259);
+            this.label6.Location = new System.Drawing.Point(159, 263);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
@@ -259,7 +259,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 209);
+            this.label3.Location = new System.Drawing.Point(312, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
@@ -270,7 +270,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 209);
+            this.label4.Location = new System.Drawing.Point(153, 213);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 16);
@@ -333,7 +333,7 @@
             // todate
             // 
             this.todate.AutoSize = true;
-            this.todate.Location = new System.Drawing.Point(312, 101);
+            this.todate.Location = new System.Drawing.Point(312, 109);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
             this.todate.Size = new System.Drawing.Size(52, 16);
@@ -343,7 +343,7 @@
             // fromdatepckr
             // 
             this.fromdatepckr.AutoSize = true;
-            this.fromdatepckr.Location = new System.Drawing.Point(151, 101);
+            this.fromdatepckr.Location = new System.Drawing.Point(151, 109);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
             this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
@@ -402,7 +402,7 @@
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(318, 311);
+            this.a.Location = new System.Drawing.Point(318, 315);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(81, 16);
@@ -413,7 +413,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 311);
+            this.label1.Location = new System.Drawing.Point(153, 315);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);

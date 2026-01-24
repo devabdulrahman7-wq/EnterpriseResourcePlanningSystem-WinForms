@@ -290,7 +290,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!C.ID.Value</Value>
+                                  <Value>=Fields!C.ID</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -550,7 +550,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.03207in</Left>
             <Height>0.56944in</Height>
-            <Width>6.21359in</Width>
+            <Width>6.21357in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

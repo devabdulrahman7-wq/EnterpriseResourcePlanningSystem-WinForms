@@ -56,15 +56,16 @@
             // partycombobox
             // 
             this.partycombobox.FormattingEnabled = true;
-            this.partycombobox.Location = new System.Drawing.Point(91, 162);
+            this.partycombobox.Location = new System.Drawing.Point(113, 123);
             this.partycombobox.Name = "partycombobox";
             this.partycombobox.Size = new System.Drawing.Size(245, 24);
             this.partycombobox.TabIndex = 479;
+            this.partycombobox.SelectedIndexChanged += new System.EventHandler(this.partycombobox_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 143);
+            this.label3.Location = new System.Drawing.Point(114, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 16);
@@ -77,12 +78,13 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(157, 398);
+            this.previewbtn.Location = new System.Drawing.Point(147, 350);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 477;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -90,12 +92,13 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(312, 398);
+            this.closebtn.Location = new System.Drawing.Point(302, 350);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 476;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -103,12 +106,13 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(238, 398);
+            this.printbtn.Location = new System.Drawing.Point(228, 350);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 475;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox1
             // 
@@ -133,38 +137,41 @@
             // townnametxtbox
             // 
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.townnametxtbox.Location = new System.Drawing.Point(252, 261);
+            this.townnametxtbox.Location = new System.Drawing.Point(274, 224);
             this.townnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.townnametxtbox.Size = new System.Drawing.Size(181, 25);
             this.townnametxtbox.TabIndex = 472;
+            this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.townidtxtbox.Location = new System.Drawing.Point(91, 261);
+            this.townidtxtbox.Location = new System.Drawing.Point(113, 224);
             this.townidtxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
             this.townidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.townidtxtbox.TabIndex = 471;
+            this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(206, 261);
+            this.townidsearch.Location = new System.Drawing.Point(228, 224);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.townidsearch.Name = "townidsearch";
             this.townidsearch.Size = new System.Drawing.Size(40, 25);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 470;
             this.townidsearch.TabStop = false;
+            this.townidsearch.Click += new System.EventHandler(this.townidsearch_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(255, 240);
+            this.label5.Location = new System.Drawing.Point(277, 203);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 16);
@@ -175,7 +182,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(95, 240);
+            this.label6.Location = new System.Drawing.Point(117, 203);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
@@ -185,38 +192,41 @@
             // sectornametxtbox
             // 
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sectornametxtbox.Location = new System.Drawing.Point(252, 313);
+            this.sectornametxtbox.Location = new System.Drawing.Point(274, 276);
             this.sectornametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.sectornametxtbox.Multiline = true;
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.sectornametxtbox.Size = new System.Drawing.Size(181, 25);
             this.sectornametxtbox.TabIndex = 467;
+            this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
             this.sectoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sectoridtxtbox.Location = new System.Drawing.Point(91, 313);
+            this.sectoridtxtbox.Location = new System.Drawing.Point(113, 276);
             this.sectoridtxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.sectoridtxtbox.Multiline = true;
             this.sectoridtxtbox.Name = "sectoridtxtbox";
             this.sectoridtxtbox.Size = new System.Drawing.Size(111, 25);
             this.sectoridtxtbox.TabIndex = 466;
+            this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
             // 
             // sectoridsearch
             // 
             this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(206, 313);
+            this.sectoridsearch.Location = new System.Drawing.Point(228, 276);
             this.sectoridsearch.Margin = new System.Windows.Forms.Padding(5);
             this.sectoridsearch.Name = "sectoridsearch";
             this.sectoridsearch.Size = new System.Drawing.Size(40, 25);
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 465;
             this.sectoridsearch.TabStop = false;
+            this.sectoridsearch.Click += new System.EventHandler(this.sectoridsearch_Click);
             // 
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(255, 292);
+            this.a.Location = new System.Drawing.Point(277, 255);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(81, 16);
@@ -227,7 +237,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 292);
+            this.label1.Location = new System.Drawing.Point(117, 255);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
@@ -237,15 +247,16 @@
             // categorycombobox
             // 
             this.categorycombobox.FormattingEnabled = true;
-            this.categorycombobox.Location = new System.Drawing.Point(91, 213);
+            this.categorycombobox.Location = new System.Drawing.Point(113, 172);
             this.categorycombobox.Name = "categorycombobox";
             this.categorycombobox.Size = new System.Drawing.Size(245, 24);
             this.categorycombobox.TabIndex = 481;
+            this.categorycombobox.SelectedIndexChanged += new System.EventHandler(this.categorycombobox_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 194);
+            this.label4.Location = new System.Drawing.Point(117, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 16);
@@ -279,7 +290,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Party_List_Detailed_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_List_Detailed_1";

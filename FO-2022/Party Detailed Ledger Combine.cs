@@ -16,5 +16,10 @@ namespace FO_2022
         {
             InitializeComponent();
         }
+
+        private void Party_Detailed_Ledger_Combine_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

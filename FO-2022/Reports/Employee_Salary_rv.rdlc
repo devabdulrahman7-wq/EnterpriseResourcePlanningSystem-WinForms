@@ -8,19 +8,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.14965in</Width>
+                  <Width>1.3847in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14965in</Width>
+                  <Width>1.3847in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14965in</Width>
+                  <Width>1.3847in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14965in</Width>
+                  <Width>1.3847in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14965in</Width>
+                  <Width>1.3847in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -37,10 +37,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Employee ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -67,10 +71,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Employee Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -97,10 +105,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Father Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -127,10 +139,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Job Type</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -157,10 +173,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Salary Wages</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -356,19 +376,20 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.51737in</Left>
+            <Left>0.1007in</Left>
             <Height>0.5in</Height>
-            <Width>5.74825in</Width>
+            <Width>6.92348in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
             </Style>
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.50917in</Height>
-        <Width>6.88877in</Width>
+        <Width>7.02419in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -376,8 +397,13 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>0.66542in</Height>
-    <Style />
+    <Height>0.51959in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+        <Width>0.5pt</Width>
+      </Border>
+    </Style>
   </Body>
   <Width>7.20708in</Width>
   <Page>
@@ -585,11 +611,18 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
-    <Style />
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.3in</TopMargin>
+    <BottomMargin>0.3in</BottomMargin>
+    <Style>
+      <Border>
+        <Style>None</Style>
+        <Width>0.5pt</Width>
+      </Border>
+    </Style>
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>

@@ -215,13 +215,13 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.01215in</Top>
-          <Left>0in</Left>
           <Height>0.21875in</Height>
           <Width>8.31251in</Width>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>SlateBlue</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>

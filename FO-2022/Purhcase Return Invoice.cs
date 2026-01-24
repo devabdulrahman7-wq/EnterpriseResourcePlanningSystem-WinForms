@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace FO_2022
 {
     public partial class Purhcase_Return_Invoice : Form
     {
-        // Connection string
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        // Connection string from App.config
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         private SqlConnection connection;
         private DataTable dataTable;
-        private DataTable productsDataTable; // New: For storing products data
         private decimal grossValue = 0;
         private decimal totalDiscount = 0;
         private decimal netValue = 0;
@@ -57,8 +57,6 @@ namespace FO_2022
             dataGridView1.DataSource = dataTable;
         }
 
-       
-
         private void LoadAllProductsData()
         {
             try
@@ -69,7 +67,7 @@ namespace FO_2022
                     string query = @"SELECT 
                         p.ProductID,
                         p.ProductName,
-                        pk.PackingName,
+                        COALESCE(pk.PackingName, 'Not Set') as PackingName,
                         p.PurchasePrice,
                         p.PurDiscRatio,
                         p.PurSTRatio
@@ -80,58 +78,44 @@ namespace FO_2022
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable productsTable = new DataTable();
+                    adapter.Fill(productsTable);
 
-                    // Create a new DataTable to store all products
-                    productsDataTable = new DataTable();
-                    adapter.Fill(productsDataTable);
-
-                    // Show data in grid
-                    DisplayProductsInGrid(productsDataTable);
+                    DisplayProductsInGrid(productsTable);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading products data: " + ex.Message);
+                MessageBox.Show("Error loading products: " + ex.Message);
             }
         }
 
         private void DisplayProductsInGrid(DataTable productsTable)
         {
-            
-            // Clear existing data in dataTable
             dataTable.Clear();
 
-            // Add rows from productsTable to dataTable
             foreach (DataRow productRow in productsTable.Rows)
             {
                 DataRow newRow = dataTable.NewRow();
                 newRow["ProductID"] = productRow["ProductID"].ToString();
                 newRow["ProductName"] = productRow["ProductName"].ToString();
 
-                // PackingName ko check karein
                 string packingName = productRow["PackingName"] != DBNull.Value ?
-                                    productRow["PackingName"].ToString() :
-                                    "Not Set";
+                    productRow["PackingName"].ToString() : "Not Set";
                 newRow["Packing"] = packingName;
 
                 newRow["QtyPack"] = 0;
                 newRow["QtyLose"] = 0;
                 newRow["BnsLose"] = 0;
 
-                // Price ko safe way se handle karein
-                decimal price = 0;
-                if (productRow["PurchasePrice"] != DBNull.Value)
-                    price = Convert.ToDecimal(productRow["PurchasePrice"]);
+                decimal price = productRow["PurchasePrice"] != DBNull.Value ?
+                    Convert.ToDecimal(productRow["PurchasePrice"]) : 0;
                 newRow["PricePack"] = price;
 
-                decimal discPercent = 0;
-                decimal salesTaxPercent = 0;
-
-                if (productRow["PurDiscRatio"] != DBNull.Value)
-                    discPercent = Convert.ToDecimal(productRow["PurDiscRatio"]);
-
-                if (productRow["PurSTRatio"] != DBNull.Value)
-                    salesTaxPercent = Convert.ToDecimal(productRow["PurSTRatio"]);
+                decimal discPercent = productRow["PurDiscRatio"] != DBNull.Value ?
+                    Convert.ToDecimal(productRow["PurDiscRatio"]) : 0;
+                decimal salesTaxPercent = productRow["PurSTRatio"] != DBNull.Value ?
+                    Convert.ToDecimal(productRow["PurSTRatio"]) : 0;
 
                 decimal discValue = (price * discPercent) / 100;
                 decimal discountedPrice = price - discValue;
@@ -161,7 +145,6 @@ namespace FO_2022
                     DataTable packingTable = new DataTable();
                     adapter.Fill(packingTable);
 
-                    // Add items to combobox
                     packnamecombobox.Items.Clear();
                     packnamecombobox.DisplayMember = "PackingName";
                     packnamecombobox.ValueMember = "PackingId";
@@ -173,98 +156,34 @@ namespace FO_2022
                 MessageBox.Show("Error loading packing data: " + ex.Message);
             }
         }
+
         private void SetupForm()
         {
-            // Set date format
             purchasedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-
-            // Load all products data in grid when form loads
             LoadAllProductsData();
-
-            // Load packings data in combobox
             LoadPackingData();
 
-            // Add Enter key event for productidtxtbox
             productidtxtbox.KeyDown += (sender, e) =>
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    LoadProductData();
-                }
+                if (e.KeyCode == Keys.Enter) LoadProductData();
             };
 
-            // Add cell click event for dataGridView1
             dataGridView1.CellClick += DataGridView1_CellClick;
-
-            // NEW: Add event handler for combobox selection change
             packnamecombobox.SelectedIndexChanged += Packnamecombobox_SelectedIndexChanged;
         }
-        private void Packnamecombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Agar koi row select hai grid mein
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                // Get selected row
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                int selectedIndex = selectedRow.Index;
 
-                // Get selected packing name from combobox
-                string selectedPacking = packnamecombobox.Text;
-
-                // Update grid cell
-                if (selectedIndex >= 0 && selectedIndex < dataTable.Rows.Count)
-                {
-                    dataTable.Rows[selectedIndex]["Packing"] = selectedPacking;
-
-                    // Optional: Recalculate values if needed
-                    CalculateTotals();
-                }
-            }
-
-            // Ya phir agar product ID textbox mein product hai
-            else if (!string.IsNullOrEmpty(productidtxtbox.Text))
-            {
-                // Product ID ke hisaab se grid mein row dhundhein
-                for (int i = 0; i < dataTable.Rows.Count; i++)
-                {
-                    if (dataTable.Rows[i]["ProductID"].ToString() == productidtxtbox.Text)
-                    {
-                        // Update packing in grid
-                        dataTable.Rows[i]["Packing"] = packnamecombobox.Text;
-
-                        // Optional: Recalculate values if needed
-                        CalculateTotals();
-                        break;
-                    }
-                }
-            }
-        }
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-           
             if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
             {
-                // Get the selected row
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                // Populate textboxes with selected row data
                 productidtxtbox.Text = row.Cells["ProductID"].Value?.ToString() ?? "";
                 productnametxtbox.Text = row.Cells["ProductName"].Value?.ToString() ?? "";
 
-                // Set combobox value from grid - IMPORTANT
                 string packingName = row.Cells["Packing"].Value?.ToString() ?? "";
-                if (!string.IsNullOrEmpty(packingName))
-                {
-                    // Direct text set karein
-                    packnamecombobox.Text = packingName;
-                }
-                else
-                {
-                    // Agar packing name nahi hai to first item select karein
-                    if (packnamecombobox.Items.Count > 0)
-                        packnamecombobox.SelectedIndex = 0;
-                }
+                packnamecombobox.Text = !string.IsNullOrEmpty(packingName) ? packingName :
+                    (packnamecombobox.Items.Count > 0 ? packnamecombobox.Text : "");
 
                 qtyptxtbox.Text = row.Cells["QtyPack"].Value?.ToString() ?? "0";
                 qtyltxtbox.Text = row.Cells["QtyLose"].Value?.ToString() ?? "0";
@@ -278,32 +197,7 @@ namespace FO_2022
             }
         }
 
-        private void returnidtxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-generate Return ID if needed
-            if (string.IsNullOrEmpty(returnidtxtbox.Text))
-            {
-                returnidtxtbox.Text = GetNextReturnId().ToString();
-            }
-        }
-
-        private void billnotxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // You can add validation here
-        }
-
-        private void purchaseidtxtbox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void purchasedatetxtbo_TextChanged(object sender, EventArgs e)
-        {
-            // Date validation can be added here
-        }
-
-       
-        private void vendoridsearch_Click(object sender, EventArgs e)
+        private void vendoridsearch_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(vendoridtxtbox.Text))
             {
@@ -311,6 +205,11 @@ namespace FO_2022
                 return;
             }
 
+            LoadVendorName(vendoridtxtbox.Text);
+        }
+
+        private void LoadVendorName(string vendorId)
+        {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -318,7 +217,7 @@ namespace FO_2022
                     conn.Open();
                     string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@PartyID", vendoridtxtbox.Text);
+                    cmd.Parameters.AddWithValue("@PartyID", vendorId);
 
                     object result = cmd.ExecuteScalar();
                     if (result != null)
@@ -328,23 +227,18 @@ namespace FO_2022
                     else
                     {
                         MessageBox.Show("Vendor ID not found");
+                        vendornametxtbox.Clear();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading vendor name: " + ex.Message);
+                MessageBox.Show("Error loading vendor: " + ex.Message);
             }
-        }
-
-        private void vendornametxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Nothing needed here
         }
 
         private void LoadProductData()
         {
-           
             if (string.IsNullOrEmpty(productidtxtbox.Text))
             {
                 MessageBox.Show("Please enter Product ID");
@@ -357,18 +251,17 @@ namespace FO_2022
                 {
                     conn.Open();
                     string query = @"SELECT 
-                    p.ProductID,
-                    p.ProductName,
-                    COALESCE(pk.PackingName, 'Not Set') as PackingName,
-                    pp.PackingId,
-                    pp.Multiplier,
-                    p.PurchasePrice,
-                    p.PurDiscRatio,
-                    p.PurSTRatio
-                FROM Products p
-                LEFT JOIN ProductPacking pp ON p.ProductID = pp.ProductId
-                LEFT JOIN Packings pk ON pp.PackingId = pk.PackingId
-                WHERE p.ProductID = @ProductID";
+                        p.ProductID,
+                        p.ProductName,
+                        COALESCE(pk.PackingName, 'Not Set') as PackingName,
+                        pp.PackingId,
+                        p.PurchasePrice,
+                        p.PurDiscRatio,
+                        p.PurSTRatio
+                    FROM Products p
+                    LEFT JOIN ProductPacking pp ON p.ProductID = pp.ProductId
+                    LEFT JOIN Packings pk ON pp.PackingId = pk.PackingId
+                    WHERE p.ProductID = @ProductID";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@ProductID", productidtxtbox.Text);
@@ -379,7 +272,6 @@ namespace FO_2022
                         {
                             productnametxtbox.Text = reader["ProductName"].ToString();
 
-                            // Set combobox value based on PackingId
                             if (reader["PackingId"] != DBNull.Value)
                             {
                                 int packingId = Convert.ToInt32(reader["PackingId"]);
@@ -390,42 +282,27 @@ namespace FO_2022
                                 packnamecombobox.SelectedIndex = -1;
                             }
 
-                            // Get multiplier
-                            int multiplier = 1;
-                            if (reader["Multiplier"] != DBNull.Value)
-                                multiplier = Convert.ToInt32(reader["Multiplier"]);
-
-                            // Set default quantities
-                            qtyptxtbox.Text = "0";
-                            qtyltxtbox.Text = "0";
-                            bnsltxtbox.Text = "0";
-
-                            // Get prices and calculate
                             decimal price = reader["PurchasePrice"] != DBNull.Value ?
-                                          Convert.ToDecimal(reader["PurchasePrice"]) : 0;
+                                Convert.ToDecimal(reader["PurchasePrice"]) : 0;
                             decimal discPercent = reader["PurDiscRatio"] != DBNull.Value ?
-                                                Convert.ToDecimal(reader["PurDiscRatio"]) : 0;
+                                Convert.ToDecimal(reader["PurDiscRatio"]) : 0;
                             decimal salesTaxPercent = reader["PurSTRatio"] != DBNull.Value ?
-                                                    Convert.ToDecimal(reader["PurSTRatio"]) : 0;
+                                Convert.ToDecimal(reader["PurSTRatio"]) : 0;
 
                             pricetxtbox.Text = price.ToString("N2");
                             discpercenttxtbox.Text = discPercent.ToString("N2");
 
-                            // Calculate discount value
                             decimal discValue = (price * discPercent) / 100;
                             discvalltxtbox.Text = discValue.ToString("N2");
                             discvaltxtbox.Text = discValue.ToString("N2");
 
-                            // Calculate sales tax on discounted price
                             decimal discountedPrice = price - discValue;
                             decimal salesTaxValue = (discountedPrice * salesTaxPercent) / 100;
                             salestaxtxtbox.Text = salesTaxValue.ToString("N2");
 
-                            // Calculate total value (including sales tax)
                             decimal value = discountedPrice + salesTaxValue;
                             valuetxtbox.Text = value.ToString("N2");
 
-                            // Set focus to quantity
                             qtyptxtbox.Focus();
                         }
                         else
@@ -437,37 +314,25 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading product data: " + ex.Message);
+                MessageBox.Show("Error loading product: " + ex.Message);
             }
         }
+
         private void SetComboBoxByPackingId(int packingId)
         {
-            try
+            foreach (DataRowView item in packnamecombobox.Items)
             {
-                foreach (DataRowView item in packnamecombobox.Items)
+                if (Convert.ToInt32(item["PackingId"]) == packingId)
                 {
-                    if (Convert.ToInt32(item["PackingId"]) == packingId)
-                    {
-                        packnamecombobox.SelectedItem = item;
-                        return;
-                    }
+                    packnamecombobox.SelectedItem = item;
+                    return;
                 }
-
-                // Agar packing ID nahi mila to first item select kar lein
-                if (packnamecombobox.Items.Count > 0)
-                    packnamecombobox.SelectedIndex = 0;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error setting combobox: " + ex.Message);
-            }
+            if (packnamecombobox.Items.Count > 0) packnamecombobox.SelectedIndex = 0;
         }
 
         private void AddProductToGrid()
         {
-
-           
-            // Validate all required fields
             if (string.IsNullOrEmpty(productidtxtbox.Text) ||
                 string.IsNullOrEmpty(productnametxtbox.Text))
             {
@@ -475,16 +340,8 @@ namespace FO_2022
                 return;
             }
 
-            // Validate packing selection
-            if (packnamecombobox.SelectedIndex == -1 && string.IsNullOrEmpty(packnamecombobox.Text))
-            {
-                MessageBox.Show("Please select packing type");
-                return;
-            }
-
             try
             {
-                // Parse values
                 int qtyPack = string.IsNullOrEmpty(qtyptxtbox.Text) ? 0 : Convert.ToInt32(qtyptxtbox.Text);
                 int qtyLose = string.IsNullOrEmpty(qtyltxtbox.Text) ? 0 : Convert.ToInt32(qtyltxtbox.Text);
                 int bnsLose = string.IsNullOrEmpty(bnsltxtbox.Text) ? 0 : Convert.ToInt32(bnsltxtbox.Text);
@@ -495,29 +352,9 @@ namespace FO_2022
                 decimal salesTax = string.IsNullOrEmpty(salestaxtxtbox.Text) ? 0 : Convert.ToDecimal(salestaxtxtbox.Text);
                 decimal value = string.IsNullOrEmpty(valuetxtbox.Text) ? 0 : Convert.ToDecimal(valuetxtbox.Text);
 
-                // Get packing name from combobox - FIXED
-                string packingName = "";
+                string packingName = packnamecombobox.Text;
+                if (string.IsNullOrEmpty(packingName)) packingName = "Not Set";
 
-                // Check if combobox has selected item
-                if (packnamecombobox.SelectedItem != null)
-                {
-                    DataRowView selectedRow = packnamecombobox.SelectedItem as DataRowView;
-                    if (selectedRow != null)
-                    {
-                        packingName = selectedRow["PackingName"].ToString();
-                    }
-                }
-                // If no selected item, try to get from text
-                else if (!string.IsNullOrEmpty(packnamecombobox.Text))
-                {
-                    packingName = packnamecombobox.Text;
-                }
-                else
-                {
-                    packingName = "Not Set";
-                }
-
-                // Add row to DataTable
                 DataRow row = dataTable.NewRow();
                 row["ProductID"] = productidtxtbox.Text;
                 row["ProductName"] = productnametxtbox.Text;
@@ -533,25 +370,18 @@ namespace FO_2022
                 row["Value"] = value;
 
                 dataTable.Rows.Add(row);
-
-                // Calculate totals
                 CalculateTotals();
-
-                // Clear product fields for next entry
                 ClearProductFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error adding product to grid: " + ex.Message);
+                MessageBox.Show("Error adding product: " + ex.Message);
             }
         }
 
         private void CalculateTotals()
         {
-            grossValue = 0;
-            totalDiscount = 0;
-            totalSalesTax = 0;
-            totalValue = 0;
+            grossValue = 0; totalDiscount = 0; totalSalesTax = 0; totalValue = 0;
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -562,25 +392,15 @@ namespace FO_2022
                 decimal salesTax = Convert.ToDecimal(row["SalesTax"]);
                 decimal value = Convert.ToDecimal(row["Value"]);
 
-                // Calculate gross value (price * quantity)
-                decimal lineGross = price * (qtyPack + qtyLose);
-                grossValue += lineGross;
-
-                // Calculate total discount
-                decimal lineDiscount = discVal * (qtyPack + qtyLose);
-                totalDiscount += lineDiscount;
-
-                // Calculate sales tax
-                decimal lineSalesTax = salesTax * (qtyPack + qtyLose);
-                totalSalesTax += lineSalesTax;
-
-                // Calculate net value
-                totalValue += value * (qtyPack + qtyLose);
+                int totalQty = qtyPack + qtyLose;
+                grossValue += price * totalQty;
+                totalDiscount += discVal * totalQty;
+                totalSalesTax += salesTax * totalQty;
+                totalValue += value * totalQty;
             }
 
             netValue = grossValue - totalDiscount;
 
-            // Update text boxes
             grossvaluetxtbox.Text = grossValue.ToString("N2");
             totaldiscounttxtbox.Text = totalDiscount.ToString("N2");
             netvaluetxtbox.Text = netValue.ToString("N2");
@@ -590,14 +410,9 @@ namespace FO_2022
 
         private void ClearProductFields()
         {
-            
             productidtxtbox.Clear();
             productnametxtbox.Clear();
-
-            // Combobox ko reset karein
-            if (packnamecombobox.Items.Count > 0)
-                packnamecombobox.SelectedIndex = 0;
-
+            if (packnamecombobox.Items.Count > 0) packnamecombobox.SelectedIndex = 0;
             qtyptxtbox.Clear();
             qtyltxtbox.Clear();
             bnsltxtbox.Clear();
@@ -607,84 +422,7 @@ namespace FO_2022
             discvaltxtbox.Clear();
             salestaxtxtbox.Clear();
             valuetxtbox.Clear();
-
             productidtxtbox.Focus();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle grid cell clicks if needed
-        }
-
-        private void grossvaluetxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-calculated field
-        }
-
-        private void totaldiscounttxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-calculated field
-        }
-
-        private void netvaluetxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-calculated field
-        }
-
-        private void topsalestaxtxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-calculated field
-        }
-
-        private void receivedamounttxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // You can add validation for received amount
-            if (!string.IsNullOrEmpty(receivedamounttxtbox.Text))
-            {
-                try
-                {
-                    decimal received = Convert.ToDecimal(receivedamounttxtbox.Text);
-                    // Validate against total value
-                }
-                catch
-                {
-                    MessageBox.Show("Please enter a valid amount");
-                    receivedamounttxtbox.Clear();
-                }
-            }
-        }
-
-        private void totalvaluetxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Auto-calculated field
-        }
-
-        private void narrationtxtbox_TextChanged(object sender, EventArgs e)
-        {
-            // Nothing needed here
-        }
-
-        
-
-        private int GetPackingId(string packingName)
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT PackingId FROM Packings WHERE PackingName = @PackingName";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@PackingName", packingName);
-
-                    object result = cmd.ExecuteScalar();
-                    return result != null ? Convert.ToInt32(result) : 1; // Default to 1 if not found
-                }
-            }
-            catch
-            {
-                return 1; // Default packing ID
-            }
         }
 
         private int GetNextReturnId()
@@ -696,22 +434,50 @@ namespace FO_2022
                     conn.Open();
                     string query = "SELECT ISNULL(MAX(PurReturnId), 0) + 1 FROM PurReturns";
                     SqlCommand cmd = new SqlCommand(query, conn);
-
-                    object result = cmd.ExecuteScalar();
-                    return Convert.ToInt32(result);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
-            catch
-            {
-                return 1; // Default starting ID
-            }
+            catch { return 1; }
         }
+        //private int GetPackingId(string packingName)
+        //{
+        //    if (string.IsNullOrEmpty(packingName) || packingName == "Not Set") return 1;
 
-       
+        //    try
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(connectionString))
+        //        {
+        //            conn.Open();
+        //            string query = "SELECT PackingId FROM Packings WHERE PackingName = @PackingName";
+        //            SqlCommand cmd = new SqlCommand(query, conn);
+        //            cmd.Parameters.AddWithValue("@PackingName", packingName);
+        //            object result = cmd.ExecuteScalar();
+        //            return result != null ? Convert.ToInt32(result) : 1;
+        //        }
+        //    }
+        //    catch { return 1; }
+        //}
+        private int GetPackingId(string packingName)
+        {
+            if (string.IsNullOrEmpty(packingName) || packingName == "Not Set")
+                return 1; // Default packing ID
 
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT PackingId FROM Packings WHERE PackingName = @PackingName";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@PackingName", packingName);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 1;
+                }
+            }
+            catch { return 1; }
+        }
         private void ClearAllFields()
         {
-            // Clear all text boxes
             returnidtxtbox.Clear();
             billnotxtbox.Clear();
             purchaseidtxtbox.Clear();
@@ -737,113 +503,19 @@ namespace FO_2022
             totalvaluetxtbox.Clear();
             narrationtxtbox.Clear();
 
-            // Clear data grid and reload products
             dataTable.Clear();
             LoadAllProductsData();
 
-            // Reset totals
-            grossValue = 0;
-            totalDiscount = 0;
-            netValue = 0;
-            totalSalesTax = 0;
-            totalValue = 0;
-
-            // Generate new return ID
+            grossValue = totalDiscount = netValue = totalSalesTax = totalValue = 0;
             returnidtxtbox.Text = GetNextReturnId().ToString();
-
-            // Set focus to purchase ID
             purchaseidtxtbox.Focus();
         }
 
-        private void openbtn_Click(object sender, EventArgs e)
+        // Event Handlers
+        private void returnidtxtbox_TextChanged(object sender, EventArgs e)
         {
-            // Implement open functionality if needed
-            MessageBox.Show("Open functionality not implemented yet");
-        }
-
-        private void removebtn_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                {
-                    dataGridView1.Rows.Remove(row);
-                }
-
-                // Recalculate totals
-                CalculateTotals();
-            }
-            else
-            {
-                MessageBox.Show("Please select a row to remove");
-            }
-        }
-
-        private void closebtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        // Add this method to handle adding product when Enter is pressed in quantity fields
-        private void qtyptxtbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                AddProductToGrid();
-            }
-        }
-
-        private void qtyltxtbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                AddProductToGrid();
-            }
-        }
-
-        // Add these event handlers in your InitializeComponent or constructor
-        private void SetupEventHandlers()
-        {
-            qtyptxtbox.KeyDown += qtyptxtbox_KeyDown;
-            qtyltxtbox.KeyDown += qtyltxtbox_KeyDown;
-        }
-
-        private void packnamecombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // You can add logic here if needed when packing selection changes
-            UpdateSelectedRowPacking();
-        }
-        private void UpdateSelectedRowPacking()
-        {
-            // Agar koi product select hai textboxes mein
-            if (!string.IsNullOrEmpty(productidtxtbox.Text))
-            {
-                // Product ID ke hisaab se existing row dhundhein
-                DataRow existingRow = null;
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    if (row["ProductID"].ToString() == productidtxtbox.Text)
-                    {
-                        existingRow = row;
-                        break;
-                    }
-                }
-
-                if (existingRow != null)
-                {
-                    // Update existing row
-                    string packingName = packnamecombobox.Text;
-                    existingRow["Packing"] = packingName;
-
-                    // Recalculate totals
-                    CalculateTotals();
-                }
-            }
-        }
-        // Add this method to refresh products data
-        private void RefreshProductsData()
-        {
-            LoadAllProductsData();
+            if (string.IsNullOrEmpty(returnidtxtbox.Text))
+                returnidtxtbox.Text = GetNextReturnId().ToString();
         }
 
         private void purhcaseidsearch_Click(object sender, EventArgs e)
@@ -859,14 +531,8 @@ namespace FO_2022
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT 
-                PurchaseDate,
-                BillDate,
-                VendorID,
-                BillNo
-            FROM Purchase 
-            WHERE PurchaseID = @PurchaseID";
-
+                    string query = @"SELECT PurchaseDate, VendorID, BillNo 
+                                  FROM Purchase WHERE PurchaseID = @PurchaseID";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@PurchaseID", Convert.ToInt32(purchaseidtxtbox.Text));
 
@@ -874,211 +540,72 @@ namespace FO_2022
                     {
                         if (reader.Read())
                         {
-                            // Purchase date lein
-                            DateTime purchaseDate = Convert.ToDateTime(reader["PurchaseDate"]);
-                            purchasedatetxtbox.Text = purchaseDate.ToString("dd/MM/yyyy");
-
-                            // Bill date agar hai to
-                            if (reader["BillDate"] != DBNull.Value)
-                            {
-                                DateTime billDate = Convert.ToDateTime(reader["BillDate"]);
-                                // Bill date ko kisi aur textbox main show kar sakte hain
-                                // Agar aap ko chahiye to
-                            }
-
-                            // Vendor ID automatic fill kar dein
+                            purchasedatetxtbox.Text = Convert.ToDateTime(reader["PurchaseDate"]).ToString("dd/MM/yyyy");
                             vendoridtxtbox.Text = reader["VendorID"].ToString();
-
-                            // Bill number automatic fill kar dein
                             if (reader["BillNo"] != DBNull.Value)
-                            {
                                 billnotxtbox.Text = reader["BillNo"].ToString();
-                            }
 
-                            // Ab vendor ka name bhi automatically fetch kar lein
                             LoadVendorName(reader["VendorID"].ToString());
                         }
-                        else
-                        {
-                            MessageBox.Show("Purchase ID not found");
-                        }
+                        else MessageBox.Show("Purchase ID not found");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading purchase data: " + ex.Message);
+                MessageBox.Show("Error loading purchase: " + ex.Message);
             }
         }
 
-        private void vendoridsearch_Click_1(object sender, EventArgs e)
+        private void openbtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(vendoridtxtbox.Text))
-            {
-                MessageBox.Show("Please enter Vendor ID");
-                return;
-            }
-
-            LoadVendorName(vendoridtxtbox.Text);
+            MessageBox.Show("Open functionality not implemented yet");
         }
 
-        private void LoadVendorName(string vendorId)
+        private void removebtn_Click(object sender, EventArgs e)
         {
-            try
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    dataGridView1.Rows.Remove(row);
+                CalculateTotals();
+            }
+            else MessageBox.Show("Please select a row to remove");
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void qtyptxtbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) AddProductToGrid();
+        }
+
+        private void qtyltxtbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) AddProductToGrid();
+        }
+
+        private void Packnamecombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedRowPacking();
+        }
+
+        private void UpdateSelectedRowPacking()
+        {
+            if (!string.IsNullOrEmpty(productidtxtbox.Text))
+            {
+                foreach (DataRow row in dataTable.Rows)
                 {
-                    conn.Open();
-
-                    // Sab se pehle check karein ke ye vendor Parties table main hai
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@PartyID", vendorId);
-
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
+                    if (row["ProductID"].ToString() == productidtxtbox.Text)
                     {
-                        vendornametxtbox.Text = result.ToString();
-                    }
-                    else
-                    {
-                        // Agar Parties main nahi mila to ChartOfAccounts main check karein
-                        query = "SELECT AccountName FROM ChartOfAccounts WHERE AccountNo = @AccountNo";
-                        cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@AccountNo", vendorId);
-
-                        result = cmd.ExecuteScalar();
-                        if (result != null)
-                        {
-                            vendornametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Vendor ID not found in Parties or Chart of Accounts");
-                            vendornametxtbox.Clear();
-                        }
+                        row["Packing"] = packnamecombobox.Text;
+                        CalculateTotals();
+                        break;
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading vendor name: " + ex.Message);
-            }
-        }
-
-        private void savebtn_Click(object sender, EventArgs e)
-        {
-
-            // Validate required fields
-            if (string.IsNullOrEmpty(returnidtxtbox.Text) ||
-                string.IsNullOrEmpty(vendoridtxtbox.Text) ||
-                dataTable.Rows.Count == 0)
-            {
-                MessageBox.Show("Please fill all required fields and add at least one product");
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    // Begin transaction
-                    SqlTransaction transaction = conn.BeginTransaction();
-
-                    try
-                    {
-                        DateTime returnDate;
-
-                        if (!DateTime.TryParseExact(purchasedatetxtbox.Text,
-                            new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "MM/dd/yyyy", "yyyy-MM-dd" },
-                            System.Globalization.CultureInfo.InvariantCulture,
-                            System.Globalization.DateTimeStyles.None,
-                            out returnDate))
-                        {
-                            returnDate = DateTime.Now;
-                            purchasedatetxtbox.Text = returnDate.ToString("dd/MM/yyyy");
-                        }
-
-                       
-                        // MODIFIED QUERY - Corrected column name to PurchaseId
-                        string headerQuery = @"INSERT INTO PurReturns 
-    (PurReturnId, PurchaseId, VendorId, ReturnDate, Disc2Ratio, FTaxRatio, 
-     SpecialDiscount, InvOfferDiscount, InvOfferSTax, InvOfferFTax,
-     ReceivedAmount, PreviousCredit, Narration, IsPosted, UserNo, BillNo)
-    VALUES 
-    (@PurReturnId, @PurchaseId, @VendorId, @ReturnDate, @Disc2Ratio, @FTaxRatio,
-     @SpecialDiscount, @InvOfferDiscount, @InvOfferSTax, @InvOfferFTax,
-     @ReceivedAmount, @PreviousCredit, @Narration, @IsPosted, @UserNo, @BillNo)";
-
-                        SqlCommand headerCmd = new SqlCommand(headerQuery, conn, transaction);
-                        headerCmd.Parameters.AddWithValue("@PurReturnId", Convert.ToInt32(returnidtxtbox.Text));
-
-                        // Correct parameter name
-                        if (!string.IsNullOrEmpty(purchaseidtxtbox.Text) && int.TryParse(purchaseidtxtbox.Text, out int purchaseId))
-                        {
-                            headerCmd.Parameters.AddWithValue("@PurchaseId", purchaseId);
-                        }
-                        else
-                        {
-                            headerCmd.Parameters.AddWithValue("@PurchaseId", 0);
-                        }
-
-                        headerCmd.Parameters.AddWithValue("@VendorId", vendoridtxtbox.Text);
-                        headerCmd.Parameters.AddWithValue("@ReturnDate", returnDate);
-                        headerCmd.Parameters.AddWithValue("@Disc2Ratio", 0);
-                        headerCmd.Parameters.AddWithValue("@FTaxRatio", 0);
-                        headerCmd.Parameters.AddWithValue("@SpecialDiscount", 0);
-                        headerCmd.Parameters.AddWithValue("@InvOfferDiscount", 0);
-                        headerCmd.Parameters.AddWithValue("@InvOfferSTax", 0);
-                        headerCmd.Parameters.AddWithValue("@InvOfferFTax", 0);
-                        headerCmd.Parameters.AddWithValue("@ReceivedAmount",
-                            string.IsNullOrEmpty(receivedamounttxtbox.Text) ? 0 : Convert.ToDecimal(receivedamounttxtbox.Text));
-                        headerCmd.Parameters.AddWithValue("@PreviousCredit", 0);
-                        headerCmd.Parameters.AddWithValue("@Narration",
-                            string.IsNullOrEmpty(narrationtxtbox.Text) ? DBNull.Value : (object)narrationtxtbox.Text);
-                        headerCmd.Parameters.AddWithValue("@IsPosted", 1);
-                        headerCmd.Parameters.AddWithValue("@UserNo", 1);
-
-                        if (!string.IsNullOrEmpty(billnotxtbox.Text) && int.TryParse(billnotxtbox.Text, out int billNo))
-                        {
-                            headerCmd.Parameters.AddWithValue("@BillNo", billNo);
-                        }
-                        else
-                        {
-                            headerCmd.Parameters.AddWithValue("@BillNo", DBNull.Value);
-                        }
-
-                        headerCmd.ExecuteNonQuery();
-
-                        // ... rest of your code for PurReturnsBody ...
-
-                        transaction.Commit();
-                        MessageBox.Show("Purchase Return saved successfully!");
-                        ClearAllFields();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        MessageBox.Show("Error in transaction: " + ex.Message);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error saving purchase return: " + ex.Message);
-            }
-        }
-
-        
-
-        private void purchaseidtxtbox_TextChanged_1(object sender, EventArgs e)
-        {
-            // Reset purchase date when purchase ID changes
-            if (string.IsNullOrEmpty(purchaseidtxtbox.Text))
-            {
-                purchasedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
             }
         }
 
@@ -1086,5 +613,179 @@ namespace FO_2022
         {
             ClearAllFields();
         }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+                // Validation
+                if (string.IsNullOrEmpty(returnidtxtbox.Text) ||
+                    string.IsNullOrEmpty(vendoridtxtbox.Text) ||
+                    dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Please fill all required fields");
+                    return;
+                }
+
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        SqlTransaction transaction = conn.BeginTransaction();
+
+                        try
+                        {
+                            int purReturnId = Convert.ToInt32(returnidtxtbox.Text);
+
+                            // 1. Insert Header
+                            string headerQuery = @"INSERT INTO PurReturns 
+                    (PurReturnId, PurchaseId, VendorId, ReturnDate, Disc2Ratio, FTaxRatio, 
+                    SpecialDiscount, InvOfferDiscount, InvOfferSTax, InvOfferFTax,
+                    ReceivedAmount, PreviousCredit, Narration, IsPosted, UserNo, BillNo)
+                    VALUES 
+                    (@PurReturnId, @PurchaseId, @VendorId, @ReturnDate, @Disc2Ratio, @FTaxRatio,
+                    @SpecialDiscount, @InvOfferDiscount, @InvOfferSTax, @InvOfferFTax,
+                    @ReceivedAmount, @PreviousCredit, @Narration, @IsPosted, @UserNo, @BillNo)";
+
+                            using (SqlCommand headerCmd = new SqlCommand(headerQuery, conn, transaction))
+                            {
+                                headerCmd.Parameters.AddWithValue("@PurReturnId", purReturnId);
+                                headerCmd.Parameters.AddWithValue("@VendorId", vendoridtxtbox.Text);
+                                headerCmd.Parameters.AddWithValue("@ReturnDate", DateTime.Now);
+                                headerCmd.Parameters.AddWithValue("@IsPosted", 1);
+                                headerCmd.Parameters.AddWithValue("@UserNo", 1);
+
+                                if (!string.IsNullOrEmpty(purchaseidtxtbox.Text) &&
+                                    int.TryParse(purchaseidtxtbox.Text, out int purchaseId))
+                                    headerCmd.Parameters.AddWithValue("@PurchaseId", purchaseId);
+                                else
+                                    headerCmd.Parameters.AddWithValue("@PurchaseId", DBNull.Value);
+
+                                headerCmd.Parameters.AddWithValue("@Disc2Ratio", 0.00m);
+                                headerCmd.Parameters.AddWithValue("@FTaxRatio", 0.00m);
+                                headerCmd.Parameters.AddWithValue("@SpecialDiscount", 0.00m);
+                                headerCmd.Parameters.AddWithValue("@InvOfferDiscount", 0.00m);
+                                headerCmd.Parameters.AddWithValue("@InvOfferSTax", 0.00m);
+                                headerCmd.Parameters.AddWithValue("@InvOfferFTax", 0.00m);
+
+                                decimal receivedAmount = 0;
+                                if (!string.IsNullOrEmpty(receivedamounttxtbox.Text))
+                                    decimal.TryParse(receivedamounttxtbox.Text, out receivedAmount);
+                                headerCmd.Parameters.AddWithValue("@ReceivedAmount", receivedAmount);
+
+                                headerCmd.Parameters.AddWithValue("@PreviousCredit", 0.00m);
+
+                                if (!string.IsNullOrEmpty(narrationtxtbox.Text))
+                                    headerCmd.Parameters.AddWithValue("@Narration", narrationtxtbox.Text);
+                                else
+                                    headerCmd.Parameters.AddWithValue("@Narration", DBNull.Value);
+
+                                if (!string.IsNullOrEmpty(billnotxtbox.Text))
+                                    headerCmd.Parameters.AddWithValue("@BillNo", billnotxtbox.Text);
+                                else
+                                    headerCmd.Parameters.AddWithValue("@BillNo", DBNull.Value);
+
+                                headerCmd.ExecuteNonQuery();
+                            }
+
+                            // 2. Insert Body Rows - WITH DUPLICATE CHECKING
+                            string bodyQuery = @"INSERT INTO PurReturnsBody 
+                    (PurReturnId, ProductId, PackingId, Multiplier, QtyPack, QtyLose, BnsLose,
+                    PricePack, DiscRatio, DiscValPack, DiscValLose, OfferDiscount,
+                    STaxRatio, STaxValPack, IsValueB4Ratio, IsSTaxOnBns, IsFTaxExempted,
+                    TTLValue, TTLSTax, TTLFTax, ExtraSTaxBns, ExtraFTaxBns,
+                    PerUnitCostLose, IsFreeProduct, IsDeleted)
+                    VALUES 
+                    (@PurReturnId, @ProductId, @PackingId, @Multiplier, @QtyPack, @QtyLose, @BnsLose,
+                    @PricePack, @DiscRatio, @DiscValPack, @DiscValLose, @OfferDiscount,
+                    @STaxRatio, @STaxValPack, @IsValueB4Ratio, @IsSTaxOnBns, @IsFTaxExempted,
+                    @TTLValue, @TTLSTax, @TTLFTax, @ExtraSTaxBns, @ExtraFTaxBns,
+                    @PerUnitCostLose, @IsFreeProduct, @IsDeleted)";
+
+                            // Group rows by (ProductId, PackingId) to avoid duplicates
+                            var groupedRows = dataTable.AsEnumerable()
+                                .GroupBy(row => new
+                                {
+                                    ProductId = row["ProductID"].ToString(),
+                                    PackingId = GetPackingId(row["Packing"]?.ToString())
+                                })
+                                .Select(group => new
+                                {
+                                    ProductId = group.Key.ProductId,
+                                    PackingId = group.Key.PackingId,
+                                    QtyPack = group.Sum(r => Convert.ToInt32(r["QtyPack"])),
+                                    QtyLose = group.Sum(r => Convert.ToInt32(r["QtyLose"])),
+                                    // Take first row's values for other fields (they should be same for same product+packing)
+                                    FirstRow = group.First()
+                                })
+                                .ToList();
+
+                            int rowsInserted = 0;
+                            foreach (var item in groupedRows)
+                            {
+                                using (SqlCommand bodyCmd = new SqlCommand(bodyQuery, conn, transaction))
+                                {
+                                    DataRow row = item.FirstRow;
+
+                                    bodyCmd.Parameters.AddWithValue("@PurReturnId", purReturnId);
+                                    bodyCmd.Parameters.AddWithValue("@ProductId", item.ProductId);
+                                    bodyCmd.Parameters.AddWithValue("@PackingId", item.PackingId);
+                                    bodyCmd.Parameters.AddWithValue("@Multiplier", (short)1);
+                                    bodyCmd.Parameters.AddWithValue("@QtyPack", item.QtyPack);
+                                    bodyCmd.Parameters.AddWithValue("@QtyLose", item.QtyLose);
+                                    bodyCmd.Parameters.AddWithValue("@BnsLose", (short)0);
+                                    bodyCmd.Parameters.AddWithValue("@PricePack", Convert.ToDecimal(row["PricePack"]));
+                                    bodyCmd.Parameters.AddWithValue("@DiscRatio", Convert.ToDecimal(row["DiscPercent"]));
+                                    bodyCmd.Parameters.AddWithValue("@DiscValPack", Convert.ToDecimal(row["DiscVal"]));
+                                    bodyCmd.Parameters.AddWithValue("@DiscValLose", Convert.ToDecimal(row["DiscValLose"]));
+                                    bodyCmd.Parameters.AddWithValue("@OfferDiscount", 0.00m);
+                                    bodyCmd.Parameters.AddWithValue("@STaxRatio", 0.00m);
+                                    bodyCmd.Parameters.AddWithValue("@STaxValPack", Convert.ToDecimal(row["SalesTax"]));
+                                    bodyCmd.Parameters.AddWithValue("@IsValueB4Ratio", 0);
+                                    bodyCmd.Parameters.AddWithValue("@IsSTaxOnBns", 0);
+                                    bodyCmd.Parameters.AddWithValue("@IsFTaxExempted", 0);
+
+                                    int totalQty = item.QtyPack + item.QtyLose;
+                                    decimal valuePerUnit = Convert.ToDecimal(row["Value"]);
+                                    decimal salesTaxPerUnit = Convert.ToDecimal(row["SalesTax"]);
+
+                                    bodyCmd.Parameters.AddWithValue("@TTLValue",
+                                        Math.Round(valuePerUnit * totalQty, 2));
+                                    bodyCmd.Parameters.AddWithValue("@TTLSTax",
+                                        Math.Round(salesTaxPerUnit * totalQty, 2));
+                                    bodyCmd.Parameters.AddWithValue("@TTLFTax", 0.00m);
+                                    bodyCmd.Parameters.AddWithValue("@ExtraSTaxBns", 0.00m);
+                                    bodyCmd.Parameters.AddWithValue("@ExtraFTaxBns", 0.00m);
+                                    bodyCmd.Parameters.AddWithValue("@PerUnitCostLose", DBNull.Value);
+                                    bodyCmd.Parameters.AddWithValue("@IsFreeProduct", 0);
+                                    bodyCmd.Parameters.AddWithValue("@IsDeleted", 0);
+
+                                    bodyCmd.ExecuteNonQuery();
+                                    rowsInserted++;
+                                }
+                            }
+
+                            transaction.Commit();
+                            MessageBox.Show($"Purchase Return saved successfully!\nReturn ID: {purReturnId}\nProducts: {rowsInserted}");
+                            ClearAllFields();
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error saving: " + ex.Message + "\n\nStack Trace: " + ex.StackTrace);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Connection error: " + ex.Message);
+                }
+            }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Mainform1 m = new Mainform1();
+            m.Show();
+        }
     }
-    }
+}

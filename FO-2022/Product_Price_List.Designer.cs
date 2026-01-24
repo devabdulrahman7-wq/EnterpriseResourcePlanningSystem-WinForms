@@ -35,17 +35,18 @@
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.salebtn = new System.Windows.Forms.RadioButton();
-            this.retailbtn = new System.Windows.Forms.RadioButton();
-            this.purchasebtn = new System.Windows.Forms.RadioButton();
-            this.sectornametxtbox = new System.Windows.Forms.TextBox();
+            this.purchasepricewiseradiobtn = new System.Windows.Forms.RadioButton();
+            this.retailpricewiseradiobtn = new System.Windows.Forms.RadioButton();
+            this.salepricewiseradiobtn = new System.Windows.Forms.RadioButton();
+            this.companynametxtbox = new System.Windows.Forms.TextBox();
             this.cmpnyidtxtbox = new System.Windows.Forms.TextBox();
-            this.sectoridsearch = new System.Windows.Forms.PictureBox();
+            this.searchcompany = new System.Windows.Forms.PictureBox();
             this.a = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchcompany)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -80,6 +81,7 @@
             this.previewbtn.TabIndex = 489;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -93,6 +95,7 @@
             this.closebtn.TabIndex = 488;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -106,60 +109,65 @@
             this.printbtn.TabIndex = 487;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.purchasebtn);
-            this.groupBox1.Controls.Add(this.retailbtn);
-            this.groupBox1.Controls.Add(this.salebtn);
+            this.groupBox1.Controls.Add(this.purchasepricewiseradiobtn);
+            this.groupBox1.Controls.Add(this.retailpricewiseradiobtn);
+            this.groupBox1.Controls.Add(this.salepricewiseradiobtn);
             this.groupBox1.Location = new System.Drawing.Point(142, 186);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 109);
+            this.groupBox1.Size = new System.Drawing.Size(258, 129);
             this.groupBox1.TabIndex = 490;
             this.groupBox1.TabStop = false;
             // 
-            // salebtn
+            // purchasepricewiseradiobtn
             // 
-            this.salebtn.AutoSize = true;
-            this.salebtn.Location = new System.Drawing.Point(27, 21);
-            this.salebtn.Name = "salebtn";
-            this.salebtn.Size = new System.Drawing.Size(114, 20);
-            this.salebtn.TabIndex = 0;
-            this.salebtn.TabStop = true;
-            this.salebtn.Text = "Sale Price Wise";
-            this.salebtn.UseVisualStyleBackColor = true;
+            this.purchasepricewiseradiobtn.AutoSize = true;
+            this.purchasepricewiseradiobtn.Location = new System.Drawing.Point(27, 94);
+            this.purchasepricewiseradiobtn.Name = "purchasepricewiseradiobtn";
+            this.purchasepricewiseradiobtn.Size = new System.Drawing.Size(141, 20);
+            this.purchasepricewiseradiobtn.TabIndex = 2;
+            this.purchasepricewiseradiobtn.TabStop = true;
+            this.purchasepricewiseradiobtn.Text = "Purchase Price Wise";
+            this.purchasepricewiseradiobtn.UseVisualStyleBackColor = true;
+            this.purchasepricewiseradiobtn.CheckedChanged += new System.EventHandler(this.purchasepricewiseradiobtn_CheckedChanged);
             // 
-            // retailbtn
+            // retailpricewiseradiobtn
             // 
-            this.retailbtn.AutoSize = true;
-            this.retailbtn.Location = new System.Drawing.Point(27, 48);
-            this.retailbtn.Name = "retailbtn";
-            this.retailbtn.Size = new System.Drawing.Size(121, 20);
-            this.retailbtn.TabIndex = 1;
-            this.retailbtn.TabStop = true;
-            this.retailbtn.Text = "Retail Price Wise";
-            this.retailbtn.UseVisualStyleBackColor = true;
+            this.retailpricewiseradiobtn.AutoSize = true;
+            this.retailpricewiseradiobtn.Location = new System.Drawing.Point(27, 59);
+            this.retailpricewiseradiobtn.Name = "retailpricewiseradiobtn";
+            this.retailpricewiseradiobtn.Size = new System.Drawing.Size(121, 20);
+            this.retailpricewiseradiobtn.TabIndex = 1;
+            this.retailpricewiseradiobtn.TabStop = true;
+            this.retailpricewiseradiobtn.Text = "Retail Price Wise";
+            this.retailpricewiseradiobtn.UseVisualStyleBackColor = true;
+            this.retailpricewiseradiobtn.CheckedChanged += new System.EventHandler(this.retailpricewiseradiobtn_CheckedChanged);
             // 
-            // purchasebtn
+            // salepricewiseradiobtn
             // 
-            this.purchasebtn.AutoSize = true;
-            this.purchasebtn.Location = new System.Drawing.Point(27, 74);
-            this.purchasebtn.Name = "purchasebtn";
-            this.purchasebtn.Size = new System.Drawing.Size(141, 20);
-            this.purchasebtn.TabIndex = 2;
-            this.purchasebtn.TabStop = true;
-            this.purchasebtn.Text = "Purchase Price Wise";
-            this.purchasebtn.UseVisualStyleBackColor = true;
+            this.salepricewiseradiobtn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.salepricewiseradiobtn.AutoSize = true;
+            this.salepricewiseradiobtn.Location = new System.Drawing.Point(27, 21);
+            this.salepricewiseradiobtn.Name = "salepricewiseradiobtn";
+            this.salepricewiseradiobtn.Size = new System.Drawing.Size(114, 20);
+            this.salepricewiseradiobtn.TabIndex = 0;
+            this.salepricewiseradiobtn.TabStop = true;
+            this.salepricewiseradiobtn.Text = "Sale Price Wise";
+            this.salepricewiseradiobtn.UseVisualStyleBackColor = true;
+            this.salepricewiseradiobtn.CheckedChanged += new System.EventHandler(this.salepricewiseradiobtn_CheckedChanged);
             // 
-            // sectornametxtbox
+            // companynametxtbox
             // 
-            this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sectornametxtbox.Location = new System.Drawing.Point(302, 144);
-            this.sectornametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.sectornametxtbox.Multiline = true;
-            this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(223, 25);
-            this.sectornametxtbox.TabIndex = 495;
+            this.companynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.companynametxtbox.Location = new System.Drawing.Point(302, 144);
+            this.companynametxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.companynametxtbox.Multiline = true;
+            this.companynametxtbox.Name = "companynametxtbox";
+            this.companynametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.companynametxtbox.TabIndex = 495;
             // 
             // cmpnyidtxtbox
             // 
@@ -170,17 +178,20 @@
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
             this.cmpnyidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.cmpnyidtxtbox.TabIndex = 494;
+            this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
+            this.cmpnyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmpnyidtxtbox_KeyDown);
             // 
-            // sectoridsearch
+            // searchcompany
             // 
-            this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(256, 144);
-            this.sectoridsearch.Margin = new System.Windows.Forms.Padding(5);
-            this.sectoridsearch.Name = "sectoridsearch";
-            this.sectoridsearch.Size = new System.Drawing.Size(40, 25);
-            this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.sectoridsearch.TabIndex = 493;
-            this.sectoridsearch.TabStop = false;
+            this.searchcompany.Image = ((System.Drawing.Image)(resources.GetObject("searchcompany.Image")));
+            this.searchcompany.Location = new System.Drawing.Point(256, 144);
+            this.searchcompany.Margin = new System.Windows.Forms.Padding(5);
+            this.searchcompany.Name = "searchcompany";
+            this.searchcompany.Size = new System.Drawing.Size(40, 25);
+            this.searchcompany.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchcompany.TabIndex = 493;
+            this.searchcompany.TabStop = false;
+            this.searchcompany.Click += new System.EventHandler(this.searchcompany_Click);
             // 
             // a
             // 
@@ -202,15 +213,26 @@
             this.label1.TabIndex = 491;
             this.label1.Text = "Company";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(299, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.TabIndex = 496;
+            this.label2.Text = "Company Name";
+            // 
             // Product_Price_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(647, 411);
-            this.Controls.Add(this.sectornametxtbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.companynametxtbox);
             this.Controls.Add(this.cmpnyidtxtbox);
-            this.Controls.Add(this.sectoridsearch);
+            this.Controls.Add(this.searchcompany);
             this.Controls.Add(this.a);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -221,14 +243,15 @@
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Price_List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Price_List";
+            this.Load += new System.EventHandler(this.Product_Price_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchcompany)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,13 +265,14 @@
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton purchasebtn;
-        private System.Windows.Forms.RadioButton retailbtn;
-        private System.Windows.Forms.RadioButton salebtn;
-        private System.Windows.Forms.TextBox sectornametxtbox;
+        private System.Windows.Forms.RadioButton purchasepricewiseradiobtn;
+        private System.Windows.Forms.RadioButton retailpricewiseradiobtn;
+        private System.Windows.Forms.RadioButton salepricewiseradiobtn;
+        private System.Windows.Forms.TextBox companynametxtbox;
         private System.Windows.Forms.TextBox cmpnyidtxtbox;
-        private System.Windows.Forms.PictureBox sectoridsearch;
+        private System.Windows.Forms.PictureBox searchcompany;
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

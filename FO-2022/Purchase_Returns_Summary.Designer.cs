@@ -54,8 +54,9 @@
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.vendornametxtbox.Size = new System.Drawing.Size(159, 28);
             this.vendornametxtbox.TabIndex = 462;
+            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -66,6 +67,7 @@
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(118, 28);
             this.vendoridtxtbox.TabIndex = 461;
+            this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // vendoridsearch
             // 
@@ -77,6 +79,7 @@
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 460;
             this.vendoridsearch.TabStop = false;
+            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
             // 
             // label5
             // 
@@ -113,6 +116,7 @@
             this.previewbtn.TabIndex = 457;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -126,6 +130,7 @@
             this.closebtn.TabIndex = 456;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -139,6 +144,7 @@
             this.printbtn.TabIndex = 455;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox1
             // 
@@ -154,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 39);
+            this.label1.Location = new System.Drawing.Point(117, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(348, 32);
             this.label1.TabIndex = 453;
@@ -167,6 +173,7 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 452;
+            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -175,6 +182,7 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
             this.fromdatepcker.TabIndex = 451;
+            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // label3
             // 
@@ -220,10 +228,11 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Purchase_Returns_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Returns_Summary";
+            this.Load += new System.EventHandler(this.Purchase_Returns_Summary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

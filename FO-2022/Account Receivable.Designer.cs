@@ -142,7 +142,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 241);
+            this.label4.Location = new System.Drawing.Point(78, 250);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 16);
@@ -163,10 +163,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(217, 394);
+            this.previewbtn.Location = new System.Drawing.Point(146, 394);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 31);
+            this.previewbtn.Size = new System.Drawing.Size(90, 27);
             this.previewbtn.TabIndex = 312;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -177,10 +177,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(415, 394);
+            this.closebtn.Location = new System.Drawing.Point(344, 394);
             this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 31);
+            this.closebtn.Size = new System.Drawing.Size(90, 27);
             this.closebtn.TabIndex = 311;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -192,10 +192,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(316, 394);
+            this.printbtn.Location = new System.Drawing.Point(245, 394);
             this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 31);
+            this.printbtn.Size = new System.Drawing.Size(90, 27);
             this.printbtn.TabIndex = 310;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;

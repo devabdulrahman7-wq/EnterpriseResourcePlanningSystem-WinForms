@@ -23,5 +23,25 @@ namespace FO_2022
             mf.Show();
             this.Hide();
         }
+
+        private void Account_Balances_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

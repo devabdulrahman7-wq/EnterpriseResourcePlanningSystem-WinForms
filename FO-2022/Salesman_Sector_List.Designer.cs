@@ -53,7 +53,6 @@
             this.salesmannametxtbox.Name = "salesmannametxtbox";
             this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
             this.salesmannametxtbox.TabIndex = 377;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
@@ -65,6 +64,7 @@
             this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.salesmanidtxtbox.TabIndex = 376;
             this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
+            this.salesmanidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmanidtxtbox_KeyDown);
             // 
             // salesmanidsearch
             // 
@@ -88,7 +88,6 @@
             this.label3.TabIndex = 374;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -150,6 +149,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 470;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -193,8 +193,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Salesman_Sector_List";
-            this.Text = "ccc";
-            //this.Load += new System.EventHandler(this.Salesman_Sector_List_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Salesman_Sector_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
