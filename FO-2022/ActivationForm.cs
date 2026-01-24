@@ -26,6 +26,10 @@ namespace FO_2022
                 LicenseEngine.SaveLicense(year);
                 MessageBox.Show("Activated for year " + year);
                 this.Close();
+
+                Login login = new Login();
+                login.Show();
+
             }
             else
             {
