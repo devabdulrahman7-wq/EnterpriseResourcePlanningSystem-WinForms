@@ -270,7 +270,7 @@ namespace FO_2022
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             stockalertlvltxtbox  stockalertlvltxtbox=new stockalertlvltxtbox ();
-            stockalertlvltxtbox .Show();
+            stockalertlvltxtbox.Show();
             //this.Hide();
         }
 

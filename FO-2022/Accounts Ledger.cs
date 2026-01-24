@@ -22,7 +22,7 @@ namespace FO_2022
         {
             InitializeComponent();
         }
-
+        //=======================================================
         // ===================== PARTY SEARCH =====================
         private void searchpartyid_Click(object sender, EventArgs e)
         {
