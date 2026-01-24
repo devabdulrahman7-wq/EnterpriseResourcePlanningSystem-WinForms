@@ -65,6 +65,7 @@
             this.previewbtn.TabIndex = 290;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -78,6 +79,7 @@
             this.closebtn.TabIndex = 289;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -91,6 +93,7 @@
             this.printbtn.TabIndex = 288;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox2
             // 
@@ -122,6 +125,8 @@
             this.partynametxtbox.Name = "partynametxtbox";
             this.partynametxtbox.Size = new System.Drawing.Size(161, 20);
             this.partynametxtbox.TabIndex = 285;
+            this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
+            this.partynametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partynametxtbox_KeyDown);
             // 
             // partyidtxtbox
             // 
@@ -132,6 +137,8 @@
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(93, 20);
             this.partyidtxtbox.TabIndex = 284;
+            this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
+            this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
             // searchpartyid
             // 
@@ -143,6 +150,7 @@
             this.searchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchpartyid.TabIndex = 283;
             this.searchpartyid.TabStop = false;
+            this.searchpartyid.Click += new System.EventHandler(this.searchpartyid_Click);
             // 
             // label2
             // 
@@ -177,6 +185,7 @@
             this.landscapebtn.TabStop = true;
             this.landscapebtn.Text = "Landscape";
             this.landscapebtn.UseVisualStyleBackColor = true;
+            this.landscapebtn.CheckedChanged += new System.EventHandler(this.landscapebtn_CheckedChanged);
             // 
             // detaillgrasdbtn
             // 
@@ -190,6 +199,7 @@
             this.detaillgrasdbtn.TabStop = true;
             this.detaillgrasdbtn.Text = "Detail Ledger Asad Umair";
             this.detaillgrasdbtn.UseVisualStyleBackColor = true;
+            this.detaillgrasdbtn.CheckedChanged += new System.EventHandler(this.detaillgrasdbtn_CheckedChanged);
             // 
             // detailbtn
             // 
@@ -203,6 +213,7 @@
             this.detailbtn.TabStop = true;
             this.detailbtn.Text = "Detail Ledger";
             this.detailbtn.UseVisualStyleBackColor = true;
+            this.detailbtn.CheckedChanged += new System.EventHandler(this.detailbtn_CheckedChanged);
             // 
             // portrtbtn
             // 
@@ -216,6 +227,7 @@
             this.portrtbtn.TabStop = true;
             this.portrtbtn.Text = "Portrait";
             this.portrtbtn.UseVisualStyleBackColor = true;
+            this.portrtbtn.CheckedChanged += new System.EventHandler(this.portrtbtn_CheckedChanged);
             // 
             // todaybtn
             // 
@@ -229,6 +241,7 @@
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
             this.todaybtn.UseVisualStyleBackColor = true;
+            this.todaybtn.CheckedChanged += new System.EventHandler(this.todaybtn_CheckedChanged);
             // 
             // daybtn
             // 
@@ -242,6 +255,7 @@
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
             this.daybtn.UseVisualStyleBackColor = true;
+            this.daybtn.CheckedChanged += new System.EventHandler(this.daybtn_CheckedChanged);
             // 
             // datebwbtn
             // 
@@ -256,6 +270,7 @@
             this.datebwbtn.Text = "Date Between";
             this.datebwbtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.datebwbtn.UseVisualStyleBackColor = true;
+            this.datebwbtn.CheckedChanged += new System.EventHandler(this.datebwbtn_CheckedChanged);
             // 
             // alldatebtn
             // 
@@ -264,11 +279,12 @@
             this.alldatebtn.Location = new System.Drawing.Point(164, 111);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(62, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(69, 20);
             this.alldatebtn.TabIndex = 273;
             this.alldatebtn.TabStop = true;
-            this.alldatebtn.Text = "All Dte";
+            this.alldatebtn.Text = "All Date";
             this.alldatebtn.UseVisualStyleBackColor = true;
+            this.alldatebtn.CheckedChanged += new System.EventHandler(this.alldatebtn_CheckedChanged);
             // 
             // label4
             // 
@@ -285,8 +301,9 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(129, 339);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(290, 24);
+            this.salesmancombobox.Size = new System.Drawing.Size(306, 24);
             this.salesmancombobox.TabIndex = 292;
+            this.salesmancombobox.SelectedIndexChanged += new System.EventHandler(this.salesmancombobox_SelectedIndexChanged);
             // 
             // Party_Detailed_Ledger_Combine
             // 
