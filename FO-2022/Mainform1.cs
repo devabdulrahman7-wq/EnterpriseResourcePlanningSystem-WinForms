@@ -500,13 +500,15 @@ namespace FO_2022
         }
         private void accountsListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Chart_of_Accounts ca = new Chart_of_Accounts();
+            ca.Show();
+            //this.Hide();
         }
         private void openingBalancesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Accounts_Opening_Balance apb= new Accounts_Opening_Balance();
+            Accounts_Balancing apb= new Accounts_Balancing();
             apb.Show();
-            this.Hide();
+            //this.Hide();
         }
         private void accountLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {

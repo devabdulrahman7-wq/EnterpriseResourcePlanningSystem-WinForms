@@ -104,15 +104,15 @@ namespace FO_2022
                 // Agar sirf opening balance row hai (transactions nahi)
                 if (ledgerData.Rows.Count <= 2) // Opening + Closing rows
                 {
-                    DialogResult result = MessageBox.Show(
-                        "No transactions found for this party.\nDo you want to show empty ledger?",
-                        "No Transactions",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+                    //DialogResult result = MessageBox.Show(
+                        //"No transactions found for this party.\nDo you want to show empty ledger?",
+                        //"No Transactions",
+                        //MessageBoxButtons.YesNo,
+                        //MessageBoxIcon.Question);
 
-                    if (result == DialogResult.No)
+                    //if (result == DialogResult.No)
                     {
-                        return;
+                        //return;
                     }
                 }
 

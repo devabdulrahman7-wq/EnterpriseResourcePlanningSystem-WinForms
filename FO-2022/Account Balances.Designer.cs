@@ -309,6 +309,7 @@
             this.Name = "Account_Balances";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account_Balances";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Account_Balances_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
