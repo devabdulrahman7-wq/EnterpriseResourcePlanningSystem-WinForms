@@ -66,7 +66,7 @@
             this.label2.Location = new System.Drawing.Point(164, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(337, 32);
+            this.label2.Size = new System.Drawing.Size(430, 42);
             this.label2.TabIndex = 392;
             this.label2.Text = "Sales and Stock Statement\r\n";
             // 
@@ -76,7 +76,7 @@
             this.todate.Location = new System.Drawing.Point(351, 151);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 391;
             this.todate.Text = "To Date";
             // 
@@ -86,7 +86,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(180, 141);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 390;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -96,7 +96,7 @@
             this.todatepcker.Location = new System.Drawing.Point(354, 172);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 389;
             // 
             // fromdatepcker
@@ -105,7 +105,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(183, 165);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 388;
             // 
             // cmpnyidsearch
@@ -148,7 +148,7 @@
             this.label4.Location = new System.Drawing.Point(339, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 414;
             this.label4.Text = "Company Name";
             // 
@@ -159,7 +159,7 @@
             this.label3.Location = new System.Drawing.Point(179, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 413;
             this.label3.Text = "Company ID";
             // 
@@ -207,7 +207,7 @@
             // 
             // Sales_and_Stock_Statement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(694, 450);
@@ -227,10 +227,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sales_and_Stock_Statement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_and_Stock_Statement";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Sales_and_Stock_Statement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();

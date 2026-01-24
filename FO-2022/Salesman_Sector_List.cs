@@ -172,7 +172,7 @@ namespace FO_2022
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void Salesman_Sector_List_Load(object sender, EventArgs e)

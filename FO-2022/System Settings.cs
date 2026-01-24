@@ -456,8 +456,8 @@ namespace FO_2022
         {
             //closebtn_Click(sender, e);
             this.Close();
-            Mainform1 mf = new Mainform1();
-            mf.Show();
+            //Mainform1 mf = new Mainform1();
+            //mf.Show();
         }
 
         private void savebtn_Click_1(object sender, EventArgs e)

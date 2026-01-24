@@ -65,7 +65,7 @@
             this.nsmcombobox1.FormattingEnabled = true;
             this.nsmcombobox1.Location = new System.Drawing.Point(463, 208);
             this.nsmcombobox1.Name = "nsmcombobox1";
-            this.nsmcombobox1.Size = new System.Drawing.Size(216, 24);
+            this.nsmcombobox1.Size = new System.Drawing.Size(216, 27);
             this.nsmcombobox1.TabIndex = 644;
             // 
             // isactivechkbox
@@ -73,7 +73,7 @@
             this.isactivechkbox.AutoSize = true;
             this.isactivechkbox.Location = new System.Drawing.Point(463, 457);
             this.isactivechkbox.Name = "isactivechkbox";
-            this.isactivechkbox.Size = new System.Drawing.Size(74, 20);
+            this.isactivechkbox.Size = new System.Drawing.Size(97, 25);
             this.isactivechkbox.TabIndex = 643;
             this.isactivechkbox.Text = "Is Active";
             this.isactivechkbox.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.label6.Location = new System.Drawing.Point(42, 68);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 642;
             this.label6.Text = "NSM Name:";
             // 
@@ -94,7 +94,7 @@
             this.nsmcombobox.FormattingEnabled = true;
             this.nsmcombobox.Location = new System.Drawing.Point(43, 87);
             this.nsmcombobox.Name = "nsmcombobox";
-            this.nsmcombobox.Size = new System.Drawing.Size(174, 24);
+            this.nsmcombobox.Size = new System.Drawing.Size(174, 27);
             this.nsmcombobox.TabIndex = 641;
             this.nsmcombobox.SelectedIndexChanged += new System.EventHandler(this.nsmcombobox_SelectedIndexChanged);
             // 
@@ -105,7 +105,7 @@
             this.label5.Location = new System.Drawing.Point(42, 114);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 640;
             this.label5.Text = "SO Name:";
             // 
@@ -134,6 +134,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(43, 184);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(346, 396);
             this.dataGridView1.TabIndex = 627;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -144,7 +145,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(322, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 33);
+            this.label1.Size = new System.Drawing.Size(96, 42);
             this.label1.TabIndex = 626;
             this.label1.Text = "ASM";
             // 
@@ -156,7 +157,7 @@
             this.textBox1.Location = new System.Drawing.Point(43, 160);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 19);
+            this.textBox1.Size = new System.Drawing.Size(346, 23);
             this.textBox1.TabIndex = 625;
             this.textBox1.Text = "                Available ASM";
             // 
@@ -167,7 +168,7 @@
             this.label10.Location = new System.Drawing.Point(460, 189);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 16);
+            this.label10.Size = new System.Drawing.Size(97, 21);
             this.label10.TabIndex = 634;
             this.label10.Text = "NSM Name:";
             // 
@@ -267,7 +268,7 @@
             this.label4.Location = new System.Drawing.Point(229, 68);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(157, 21);
             this.label4.TabIndex = 646;
             this.label4.Text = "RM/FM/ASM Name:";
             // 
@@ -276,9 +277,8 @@
             this.rmcombobox.FormattingEnabled = true;
             this.rmcombobox.Location = new System.Drawing.Point(223, 87);
             this.rmcombobox.Name = "rmcombobox";
-            this.rmcombobox.Size = new System.Drawing.Size(166, 24);
+            this.rmcombobox.Size = new System.Drawing.Size(166, 27);
             this.rmcombobox.TabIndex = 645;
-            //this.rmcombobox.SelectedIndexChanged += new System.EventHandler(this.rmcombobox_SelectedIndexChanged_1);
             // 
             // label7
             // 
@@ -287,7 +287,7 @@
             this.label7.Location = new System.Drawing.Point(460, 234);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 16);
+            this.label7.Size = new System.Drawing.Size(157, 21);
             this.label7.TabIndex = 650;
             this.label7.Text = "RM/FM/ASM Name:";
             // 
@@ -296,9 +296,8 @@
             this.rmcombobox1.FormattingEnabled = true;
             this.rmcombobox1.Location = new System.Drawing.Point(463, 253);
             this.rmcombobox1.Name = "rmcombobox1";
-            this.rmcombobox1.Size = new System.Drawing.Size(216, 24);
+            this.rmcombobox1.Size = new System.Drawing.Size(216, 27);
             this.rmcombobox1.TabIndex = 649;
-            //this.rmcombobox1.SelectedIndexChanged += new System.EventHandler(this.rmcombobox1_SelectedIndexChanged_1);
             // 
             // label3
             // 
@@ -307,7 +306,7 @@
             this.label3.Location = new System.Drawing.Point(460, 288);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 16);
+            this.label3.Size = new System.Drawing.Size(135, 21);
             this.label3.TabIndex = 652;
             this.label3.Text = "Salesman Name:";
             // 
@@ -316,7 +315,7 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(463, 307);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(216, 24);
+            this.salesmancombobox.Size = new System.Drawing.Size(216, 27);
             this.salesmancombobox.TabIndex = 651;
             // 
             // label8
@@ -326,7 +325,7 @@
             this.label8.Location = new System.Drawing.Point(464, 345);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 16);
+            this.label8.Size = new System.Drawing.Size(159, 21);
             this.label8.TabIndex = 653;
             this.label8.Text = "Sales Officers Name";
             // 
@@ -337,7 +336,7 @@
             this.label9.Location = new System.Drawing.Point(464, 398);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.Size = new System.Drawing.Size(89, 21);
             this.label9.TabIndex = 655;
             this.label9.Text = "Mobile No:";
             // 
@@ -360,10 +359,11 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 656;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // SO_s_ASM_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(717, 618);
@@ -400,6 +400,7 @@
             this.Name = "SO_s_ASM_Wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SO_s_ASM_Wise";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

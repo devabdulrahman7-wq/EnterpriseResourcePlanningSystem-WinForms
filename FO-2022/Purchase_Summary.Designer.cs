@@ -86,7 +86,6 @@
             this.vendornametxtbox.Name = "vendornametxtbox";
             this.vendornametxtbox.Size = new System.Drawing.Size(190, 27);
             this.vendornametxtbox.TabIndex = 443;
-            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -106,7 +105,7 @@
             this.label5.Location = new System.Drawing.Point(320, 170);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
+            this.label5.Size = new System.Drawing.Size(110, 21);
             this.label5.TabIndex = 440;
             this.label5.Text = "Vendor Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,7 +117,7 @@
             this.label6.Location = new System.Drawing.Point(131, 170);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.Size = new System.Drawing.Size(85, 21);
             this.label6.TabIndex = 439;
             this.label6.Text = "Vendor ID";
             // 
@@ -132,6 +131,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 438;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -140,7 +140,7 @@
             this.label3.Location = new System.Drawing.Point(199, 18);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 31);
+            this.label3.Size = new System.Drawing.Size(304, 38);
             this.label3.TabIndex = 437;
             this.label3.Text = "Purhcase Summary";
             // 
@@ -150,7 +150,7 @@
             this.todate.Location = new System.Drawing.Point(319, 108);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 450;
             this.todate.Text = "To Date";
             // 
@@ -160,7 +160,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(131, 108);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 449;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -170,7 +170,7 @@
             this.todatepcker.Location = new System.Drawing.Point(322, 130);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(101, 23);
+            this.todatepcker.Size = new System.Drawing.Size(101, 27);
             this.todatepcker.TabIndex = 448;
             this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
@@ -180,7 +180,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(134, 130);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(100, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(100, 27);
             this.fromdatepcker.TabIndex = 447;
             this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
@@ -213,7 +213,7 @@
             // 
             // Purchase_Summary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(598, 339);
@@ -237,6 +237,7 @@
             this.Name = "Purchase_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Summary";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Purchase_Summary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).EndInit();

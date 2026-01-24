@@ -52,12 +52,13 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(628, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 398;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -66,7 +67,7 @@
             this.label3.Location = new System.Drawing.Point(177, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 31);
+            this.label3.Size = new System.Drawing.Size(263, 38);
             this.label3.TabIndex = 397;
             this.label3.Text = "Accounts Ledger";
             // 
@@ -76,7 +77,7 @@
             this.todate.Location = new System.Drawing.Point(298, 94);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 396;
             this.todate.Text = "To Date";
             // 
@@ -86,7 +87,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(110, 94);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 395;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -94,18 +95,18 @@
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(301, 116);
-            this.todatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(153, 23);
+            this.todatepcker.Size = new System.Drawing.Size(153, 27);
             this.todatepcker.TabIndex = 394;
             // 
             // fromdatepcker
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(113, 116);
-            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(160, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(160, 27);
             this.fromdatepcker.TabIndex = 393;
             // 
             // checkBox1
@@ -113,9 +114,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(113, 219);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(231, 20);
+            this.checkBox1.Size = new System.Drawing.Size(297, 25);
             this.checkBox1.TabIndex = 399;
             this.checkBox1.Text = "Show Only Pending Rate\'s Purchase";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -124,7 +125,7 @@
             // 
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(301, 173);
-            this.townnametxtbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.townnametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
             this.townnametxtbox.Size = new System.Drawing.Size(243, 27);
@@ -134,7 +135,7 @@
             // 
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townidtxtbox.Location = new System.Drawing.Point(113, 173);
-            this.townidtxtbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.townidtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
             this.townidtxtbox.Size = new System.Drawing.Size(142, 27);
@@ -144,7 +145,7 @@
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
             this.townidsearch.Location = new System.Drawing.Point(255, 173);
-            this.townidsearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.townidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.townidsearch.Name = "townidsearch";
             this.townidsearch.Size = new System.Drawing.Size(43, 27);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +160,7 @@
             this.label5.Location = new System.Drawing.Point(299, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
+            this.label5.Size = new System.Drawing.Size(110, 21);
             this.label5.TabIndex = 401;
             this.label5.Text = "Vendor Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,7 +172,7 @@
             this.label6.Location = new System.Drawing.Point(110, 151);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.Size = new System.Drawing.Size(85, 21);
             this.label6.TabIndex = 400;
             this.label6.Text = "Vendor ID";
             // 
@@ -182,7 +183,7 @@
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewbtn.Location = new System.Drawing.Point(171, 326);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(105, 31);
             this.previewbtn.TabIndex = 427;
@@ -197,7 +198,7 @@
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Location = new System.Drawing.Point(284, 326);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(82, 31);
             this.printbtn.TabIndex = 425;
@@ -212,7 +213,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(369, 326);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(80, 31);
             this.closebtn.TabIndex = 426;
@@ -222,7 +223,7 @@
             // 
             // Purchase_Registerr_Date_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(663, 382);
@@ -243,10 +244,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Purchase_Registerr_Date_Wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Registerr_Date_Wise";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             this.ResumeLayout(false);

@@ -32,7 +32,7 @@
             // 
             // Sales_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(811, 370);
@@ -41,6 +41,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sales_Register";
             this.Text = "Sales_Register";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Sales_Register_Load);
             this.ResumeLayout(false);
 

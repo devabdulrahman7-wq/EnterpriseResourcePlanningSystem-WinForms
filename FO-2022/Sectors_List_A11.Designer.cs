@@ -43,9 +43,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(125, 268);
+            this.previewbtn.Location = new System.Drawing.Point(167, 330);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(77, 25);
+            this.previewbtn.Size = new System.Drawing.Size(103, 31);
             this.previewbtn.TabIndex = 468;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(280, 268);
+            this.closebtn.Location = new System.Drawing.Point(373, 330);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 25);
+            this.closebtn.Size = new System.Drawing.Size(100, 31);
             this.closebtn.TabIndex = 467;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(206, 268);
+            this.printbtn.Location = new System.Drawing.Point(275, 330);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(68, 25);
+            this.printbtn.Size = new System.Drawing.Size(91, 31);
             this.printbtn.TabIndex = 466;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -82,38 +85,43 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(451, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(601, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 465;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 66);
+            this.label2.Location = new System.Drawing.Point(144, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 32);
+            this.label2.Size = new System.Drawing.Size(344, 42);
             this.label2.TabIndex = 464;
             this.label2.Text = "Salesman Sector List";
             // 
             // Sectors_List_A11
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(492, 385);
+            this.ClientSize = new System.Drawing.Size(656, 474);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Sectors_List_A11";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sectors_List_A11";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Sectors_List_A11_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

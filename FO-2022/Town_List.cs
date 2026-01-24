@@ -57,5 +57,10 @@ namespace FO_2022
             Mainform1 mf = new Mainform1();
             mf.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

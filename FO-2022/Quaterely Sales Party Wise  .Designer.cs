@@ -95,6 +95,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 380;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -102,7 +103,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(181, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 32);
+            this.label1.Size = new System.Drawing.Size(444, 42);
             this.label1.TabIndex = 381;
             this.label1.Text = "Quaterely Sales Party Wise";
             // 
@@ -113,7 +114,7 @@
             this.label2.Location = new System.Drawing.Point(198, 129);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 383;
             this.label2.Text = "Select Salesman";
             // 
@@ -122,7 +123,7 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(201, 148);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(292, 24);
+            this.salesmancombobox.Size = new System.Drawing.Size(292, 27);
             this.salesmancombobox.TabIndex = 382;
             // 
             // label4
@@ -132,7 +133,7 @@
             this.label4.Location = new System.Drawing.Point(198, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(156, 21);
             this.label4.TabIndex = 384;
             this.label4.Text = "Select Year Quarter";
             // 
@@ -141,7 +142,7 @@
             this.yearquartercombobox.FormattingEnabled = true;
             this.yearquartercombobox.Location = new System.Drawing.Point(197, 230);
             this.yearquartercombobox.Name = "yearquartercombobox";
-            this.yearquartercombobox.Size = new System.Drawing.Size(121, 24);
+            this.yearquartercombobox.Size = new System.Drawing.Size(121, 27);
             this.yearquartercombobox.TabIndex = 385;
             // 
             // slctyearcombobox
@@ -149,7 +150,7 @@
             this.slctyearcombobox.FormattingEnabled = true;
             this.slctyearcombobox.Location = new System.Drawing.Point(341, 230);
             this.slctyearcombobox.Name = "slctyearcombobox";
-            this.slctyearcombobox.Size = new System.Drawing.Size(121, 24);
+            this.slctyearcombobox.Size = new System.Drawing.Size(121, 27);
             this.slctyearcombobox.TabIndex = 386;
             // 
             // label3
@@ -159,13 +160,13 @@
             this.label3.Location = new System.Drawing.Point(342, 200);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(99, 21);
             this.label3.TabIndex = 387;
             this.label3.Text = "Select Year ";
             // 
             // Quaterely_Sales_Party_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(639, 395);
@@ -182,10 +183,11 @@
             this.Controls.Add(this.printbtn);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Quaterely_Sales_Party_Wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quaterely_Sales_Party_Wise";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

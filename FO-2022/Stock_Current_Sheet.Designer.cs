@@ -51,6 +51,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 484;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -58,7 +59,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(192, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 32);
+            this.label3.Size = new System.Drawing.Size(336, 42);
             this.label3.TabIndex = 483;
             this.label3.Text = "Stock Current Sheet";
             // 
@@ -108,7 +109,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(138, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 489;
             this.label2.Text = "Select Company";
             // 
@@ -131,7 +132,7 @@
             this.slctbox.AutoSize = true;
             this.slctbox.Location = new System.Drawing.Point(381, 111);
             this.slctbox.Name = "slctbox";
-            this.slctbox.Size = new System.Drawing.Size(146, 20);
+            this.slctbox.Size = new System.Drawing.Size(187, 25);
             this.slctbox.TabIndex = 490;
             this.slctbox.Text = "Select All Companies";
             this.slctbox.UseVisualStyleBackColor = true;
@@ -141,14 +142,14 @@
             this.showbox.AutoSize = true;
             this.showbox.Location = new System.Drawing.Point(137, 353);
             this.showbox.Name = "showbox";
-            this.showbox.Size = new System.Drawing.Size(269, 20);
+            this.showbox.Size = new System.Drawing.Size(344, 25);
             this.showbox.TabIndex = 491;
             this.showbox.Text = "Show All Products of Selected Companies:\r\n";
             this.showbox.UseVisualStyleBackColor = true;
             // 
             // Stock_Current_Sheet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(675, 481);
@@ -167,6 +168,7 @@
             this.Name = "Stock_Current_Sheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Current_Sheet";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Stock_Current_Sheet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

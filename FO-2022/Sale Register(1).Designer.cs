@@ -85,13 +85,14 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 308;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // todatepcker
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(317, 132);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(96, 23);
+            this.todatepcker.Size = new System.Drawing.Size(96, 27);
             this.todatepcker.TabIndex = 307;
             // 
             // fromdatepcker
@@ -99,7 +100,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(173, 132);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(104, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(104, 27);
             this.fromdatepcker.TabIndex = 306;
             // 
             // cstmridsearch
@@ -258,7 +259,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(216, 50);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(175, 32);
+            this.label15.Size = new System.Drawing.Size(223, 42);
             this.label15.TabIndex = 288;
             this.label15.Text = "Sale Register";
             // 
@@ -268,7 +269,7 @@
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(315, 392);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 16);
+            this.label14.Size = new System.Drawing.Size(81, 21);
             this.label14.TabIndex = 286;
             this.label14.Text = "To Bill No";
             // 
@@ -278,7 +279,7 @@
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(172, 394);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 16);
+            this.label13.Size = new System.Drawing.Size(100, 21);
             this.label13.TabIndex = 285;
             this.label13.Text = "From Bill No";
             // 
@@ -288,7 +289,7 @@
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(315, 450);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.Size = new System.Drawing.Size(88, 21);
             this.label12.TabIndex = 284;
             this.label12.Text = "To Sale ID";
             // 
@@ -298,7 +299,7 @@
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(172, 452);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 16);
+            this.label11.Size = new System.Drawing.Size(107, 21);
             this.label11.TabIndex = 283;
             this.label11.Text = "From Sale ID";
             // 
@@ -308,7 +309,7 @@
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(315, 341);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 16);
+            this.label10.Size = new System.Drawing.Size(99, 21);
             this.label10.TabIndex = 282;
             this.label10.Text = "Town Name";
             // 
@@ -318,7 +319,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(172, 343);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 16);
+            this.label9.Size = new System.Drawing.Size(74, 21);
             this.label9.TabIndex = 281;
             this.label9.Text = "Town ID";
             // 
@@ -328,7 +329,7 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(315, 293);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.Size = new System.Drawing.Size(105, 21);
             this.label8.TabIndex = 280;
             this.label8.Text = "Sector Name";
             // 
@@ -338,7 +339,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(172, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 16);
+            this.label7.Size = new System.Drawing.Size(80, 21);
             this.label7.TabIndex = 279;
             this.label7.Text = "Sector ID";
             // 
@@ -348,7 +349,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(315, 246);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 16);
+            this.label6.Size = new System.Drawing.Size(129, 21);
             this.label6.TabIndex = 278;
             this.label6.Text = "Customer Name";
             // 
@@ -358,7 +359,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(172, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.Size = new System.Drawing.Size(104, 21);
             this.label5.TabIndex = 277;
             this.label5.Text = "Customer ID";
             // 
@@ -368,7 +369,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(315, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 276;
             this.label4.Text = "Company Name";
             // 
@@ -378,7 +379,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(172, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 275;
             this.label3.Text = "Company ID";
             // 
@@ -388,7 +389,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(316, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 274;
             this.label2.Text = "To Date";
             // 
@@ -398,7 +399,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(173, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 273;
             this.label1.Text = "From Date ";
             // 
@@ -467,14 +468,14 @@
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(172, 516);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(223, 22);
+            this.checkBox1.Size = new System.Drawing.Size(289, 27);
             this.checkBox1.TabIndex = 309;
             this.checkBox1.Text = "Show Only pending Rate Sales";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Sale_Register_1_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(708, 625);
@@ -519,9 +520,10 @@
             this.Controls.Add(this.datesearch);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sale_Register_1_";
             this.Text = "Sale_Register_1_";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();

@@ -49,9 +49,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(205, 8);
+            this.label1.Location = new System.Drawing.Point(273, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 26);
+            this.label1.Size = new System.Drawing.Size(322, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Recovery Invoice";
             // 
@@ -59,9 +60,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 87);
+            this.label2.Location = new System.Drawing.Point(45, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
+            this.label2.Size = new System.Drawing.Size(112, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Recovery ID";
             // 
@@ -69,9 +71,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(299, 81);
+            this.label3.Location = new System.Drawing.Point(399, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 18);
+            this.label3.Size = new System.Drawing.Size(98, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "From Date";
             // 
@@ -79,9 +82,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(411, 81);
+            this.label4.Location = new System.Drawing.Point(548, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "To Date";
             // 
@@ -91,10 +95,10 @@
             this.cancelbtn.FlatAppearance.BorderSize = 0;
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(331, 428);
-            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelbtn.Location = new System.Drawing.Point(441, 527);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(75, 28);
+            this.cancelbtn.Size = new System.Drawing.Size(100, 34);
             this.cancelbtn.TabIndex = 210;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
@@ -106,10 +110,10 @@
             this.selectbtn.FlatAppearance.BorderSize = 0;
             this.selectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectbtn.Location = new System.Drawing.Point(250, 428);
-            this.selectbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.selectbtn.Location = new System.Drawing.Point(333, 527);
+            this.selectbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.selectbtn.Name = "selectbtn";
-            this.selectbtn.Size = new System.Drawing.Size(75, 28);
+            this.selectbtn.Size = new System.Drawing.Size(100, 34);
             this.selectbtn.TabIndex = 209;
             this.selectbtn.Text = "Select";
             this.selectbtn.UseVisualStyleBackColor = false;
@@ -121,10 +125,10 @@
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(414, 428);
-            this.refreshbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.refreshbtn.Location = new System.Drawing.Point(552, 527);
+            this.refreshbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.refreshbtn.Name = "refreshbtn";
-            this.refreshbtn.Size = new System.Drawing.Size(75, 28);
+            this.refreshbtn.Size = new System.Drawing.Size(100, 34);
             this.refreshbtn.TabIndex = 211;
             this.refreshbtn.Text = "Refresh";
             this.refreshbtn.UseVisualStyleBackColor = false;
@@ -133,38 +137,42 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(302, 102);
+            this.dateTimePicker1.Location = new System.Drawing.Point(403, 126);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(104, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(137, 22);
             this.dateTimePicker1.TabIndex = 212;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(414, 102);
+            this.dateTimePicker2.Location = new System.Drawing.Point(552, 126);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(81, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(107, 22);
             this.dateTimePicker2.TabIndex = 213;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // searchrecoveryidtxtbox
             // 
             this.searchrecoveryidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchrecoveryidtxtbox.Location = new System.Drawing.Point(37, 108);
-            this.searchrecoveryidtxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchrecoveryidtxtbox.Location = new System.Drawing.Point(49, 133);
+            this.searchrecoveryidtxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.searchrecoveryidtxtbox.Multiline = true;
             this.searchrecoveryidtxtbox.Name = "searchrecoveryidtxtbox";
-            this.searchrecoveryidtxtbox.Size = new System.Drawing.Size(123, 20);
+            this.searchrecoveryidtxtbox.Size = new System.Drawing.Size(164, 25);
             this.searchrecoveryidtxtbox.TabIndex = 214;
             this.searchrecoveryidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchrecoveryidtxtbox_KeyDown);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 183);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 252);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(867, 310);
             this.dataGridView1.TabIndex = 215;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -172,19 +180,21 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(684, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(912, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(53, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 268;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Search_Recovery_Invoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(726, 484);
+            this.ClientSize = new System.Drawing.Size(968, 596);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.searchrecoveryidtxtbox);
@@ -198,9 +208,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Search_Recovery_Invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search_Recovery_Invoice";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Search_Recovery_Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

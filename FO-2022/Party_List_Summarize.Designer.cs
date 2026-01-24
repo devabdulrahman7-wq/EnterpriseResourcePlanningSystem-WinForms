@@ -46,6 +46,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 472;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -53,7 +54,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(140, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 32);
+            this.label2.Size = new System.Drawing.Size(360, 42);
             this.label2.TabIndex = 471;
             this.label2.Text = "Party List Summarize\r\n";
             // 
@@ -101,7 +102,7 @@
             // 
             // Party_List_Summarize
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(588, 318);
@@ -116,6 +117,7 @@
             this.Name = "Party_List_Summarize";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_List_Summarize";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Party_List_Summarize_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

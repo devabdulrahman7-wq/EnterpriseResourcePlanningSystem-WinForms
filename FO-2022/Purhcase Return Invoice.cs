@@ -784,8 +784,8 @@ namespace FO_2022
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 m = new Mainform1();
-            m.Show();
+            //Mainform1 m = new Mainform1();
+            //m.Show();
         }
     }
 }

@@ -96,7 +96,7 @@
             this.label7.Location = new System.Drawing.Point(307, 196);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 16);
+            this.label7.Size = new System.Drawing.Size(114, 21);
             this.label7.TabIndex = 451;
             this.label7.Text = "Product Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             this.label8.Location = new System.Drawing.Point(122, 196);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 16);
+            this.label8.Size = new System.Drawing.Size(89, 21);
             this.label8.TabIndex = 450;
             this.label8.Text = "Product ID";
             // 
@@ -118,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(94, 54);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 32);
+            this.label2.Size = new System.Drawing.Size(463, 42);
             this.label2.TabIndex = 449;
             this.label2.Text = "Product Sale Return Ledger\r\n";
             // 
@@ -128,7 +128,7 @@
             this.todate.Location = new System.Drawing.Point(321, 132);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 448;
             this.todate.Text = "To Date";
             // 
@@ -138,7 +138,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(122, 132);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 447;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -148,7 +148,7 @@
             this.todatepcker.Location = new System.Drawing.Point(312, 154);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(142, 23);
+            this.todatepcker.Size = new System.Drawing.Size(142, 27);
             this.todatepcker.TabIndex = 446;
             // 
             // fromdatepcker
@@ -157,7 +157,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(124, 154);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(128, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(128, 27);
             this.fromdatepcker.TabIndex = 445;
             // 
             // previewbtn
@@ -204,7 +204,7 @@
             // 
             // Peoduct_Sale_Return_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(631, 408);
@@ -224,10 +224,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Peoduct_Sale_Return_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Peoduct_Sale_Return_Ledger";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prdctidsearch)).EndInit();
             this.ResumeLayout(false);

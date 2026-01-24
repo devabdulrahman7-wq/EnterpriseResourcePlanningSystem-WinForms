@@ -524,5 +524,10 @@ namespace FO_2022
                 UpdateSubGroupSafe();  // Database update
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -46,10 +46,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(617, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(823, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 363;
             this.pictureBox1.TabStop = false;
@@ -59,39 +59,39 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(89, 40);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(119, 49);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(487, 64);
+            this.label15.Size = new System.Drawing.Size(626, 84);
             this.label15.TabIndex = 362;
             this.label15.Text = "Sales Month Comparison Distributors \r\n                            Wise Product ";
             // 
             // currentmonthdatepcker
             // 
             this.currentmonthdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.currentmonthdatepcker.Location = new System.Drawing.Point(418, 165);
-            this.currentmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
+            this.currentmonthdatepcker.Location = new System.Drawing.Point(557, 203);
+            this.currentmonthdatepcker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.currentmonthdatepcker.Name = "currentmonthdatepcker";
-            this.currentmonthdatepcker.Size = new System.Drawing.Size(111, 20);
+            this.currentmonthdatepcker.Size = new System.Drawing.Size(147, 22);
             this.currentmonthdatepcker.TabIndex = 361;
             // 
             // lastmonthdatepcker
             // 
             this.lastmonthdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.lastmonthdatepcker.Location = new System.Drawing.Point(250, 165);
-            this.lastmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
+            this.lastmonthdatepcker.Location = new System.Drawing.Point(333, 203);
+            this.lastmonthdatepcker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.lastmonthdatepcker.Name = "lastmonthdatepcker";
-            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 20);
+            this.lastmonthdatepcker.Size = new System.Drawing.Size(160, 22);
             this.lastmonthdatepcker.TabIndex = 360;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(417, 141);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(556, 174);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(157, 21);
             this.label2.TabIndex = 359;
             this.label2.Text = "Current Month Date";
             // 
@@ -99,20 +99,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 141);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(333, 174);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.Size = new System.Drawing.Size(133, 21);
             this.label1.TabIndex = 358;
             this.label1.Text = "Last Month Date";
             // 
             // datesearch
             // 
             this.datesearch.Image = ((System.Drawing.Image)(resources.GetObject("datesearch.Image")));
-            this.datesearch.Location = new System.Drawing.Point(375, 161);
-            this.datesearch.Margin = new System.Windows.Forms.Padding(4);
+            this.datesearch.Location = new System.Drawing.Point(500, 198);
+            this.datesearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.datesearch.Name = "datesearch";
-            this.datesearch.Size = new System.Drawing.Size(35, 28);
+            this.datesearch.Size = new System.Drawing.Size(47, 34);
             this.datesearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.datesearch.TabIndex = 357;
             this.datesearch.TabStop = false;
@@ -123,10 +123,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(251, 327);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.previewbtn.Location = new System.Drawing.Point(335, 402);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 33);
+            this.previewbtn.Size = new System.Drawing.Size(120, 41);
             this.previewbtn.TabIndex = 366;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(442, 327);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.closebtn.Location = new System.Drawing.Point(589, 402);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 33);
+            this.closebtn.Size = new System.Drawing.Size(120, 41);
             this.closebtn.TabIndex = 365;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -151,20 +151,20 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(348, 327);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.printbtn.Location = new System.Drawing.Point(464, 402);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 33);
+            this.printbtn.Size = new System.Drawing.Size(120, 41);
             this.printbtn.TabIndex = 364;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
             // 
             // Sales_Month_Comparison_Distributors_Wise_Products
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(661, 450);
+            this.ClientSize = new System.Drawing.Size(881, 554);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
@@ -176,8 +176,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.datesearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Sales_Month_Comparison_Distributors_Wise_Products";
             this.Text = "Sales_Month_Comparison_Distributors_Wise_Products";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datesearch)).EndInit();
             this.ResumeLayout(false);

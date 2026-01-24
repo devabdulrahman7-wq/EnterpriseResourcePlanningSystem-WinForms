@@ -50,6 +50,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(295, 125);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(357, 370);
             this.dataGridView1.TabIndex = 439;
             // 
@@ -61,7 +62,7 @@
             this.textBox1.Location = new System.Drawing.Point(295, 101);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(357, 19);
+            this.textBox1.Size = new System.Drawing.Size(357, 23);
             this.textBox1.TabIndex = 438;
             this.textBox1.Text = "                Available Towns";
             // 
@@ -81,7 +82,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(29, 214);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 16);
+            this.label7.Size = new System.Drawing.Size(105, 21);
             this.label7.TabIndex = 436;
             this.label7.Text = "Town Name:\r\n";
             // 
@@ -182,7 +183,7 @@
             this.label1.Location = new System.Drawing.Point(247, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 32);
+            this.label1.Size = new System.Drawing.Size(119, 42);
             this.label1.TabIndex = 429;
             this.label1.Text = "Towns";
             // 
@@ -199,7 +200,7 @@
             // 
             // Towns
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(675, 570);
@@ -221,6 +222,7 @@
             this.Name = "Towns";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Towns";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

@@ -55,7 +55,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(161, 166);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 24);
+            this.comboBox1.Size = new System.Drawing.Size(109, 27);
             this.comboBox1.TabIndex = 383;
             // 
             // pictureBox2
@@ -68,6 +68,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 392;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label15
             // 
@@ -76,7 +77,7 @@
             this.label15.Location = new System.Drawing.Point(148, 30);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(209, 31);
+            this.label15.Size = new System.Drawing.Size(259, 38);
             this.label15.TabIndex = 391;
             this.label15.Text = "Party Sale Aging";
             // 
@@ -87,7 +88,7 @@
             this.a.Location = new System.Drawing.Point(158, 145);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(81, 18);
+            this.a.Size = new System.Drawing.Size(104, 23);
             this.a.TabIndex = 390;
             this.a.Text = "Aging Days";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,7 +138,7 @@
             // 
             // Party_Sale_Aging
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(525, 394);
@@ -151,10 +152,11 @@
             this.Controls.Add(this.sectoridtxtbox);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Party_Sale_Aging";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Sale_Aging";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

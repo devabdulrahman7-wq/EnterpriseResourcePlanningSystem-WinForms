@@ -53,7 +53,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(504, 241);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(87, 20);
+            this.checkBox1.Size = new System.Drawing.Size(110, 25);
             this.checkBox1.TabIndex = 508;
             this.checkBox1.Text = "Show Cost";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.label2.Location = new System.Drawing.Point(195, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(83, 21);
             this.label2.TabIndex = 507;
             this.label2.Text = "Company ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,6 +118,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 503;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -125,7 +126,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(210, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 32);
+            this.label1.Size = new System.Drawing.Size(399, 42);
             this.label1.TabIndex = 502;
             this.label1.Text = "Salesman Current Stock";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -168,7 +169,7 @@
             this.label3.Location = new System.Drawing.Point(195, 182);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 513;
             this.label3.Text = "Salesman";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,7 +207,7 @@
             // 
             // Saleman_Current_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(689, 400);
@@ -226,10 +227,11 @@
             this.Controls.Add(this.cmpnyidsearch);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Saleman_Current_Stock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saleman_Current_Stock";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Saleman_Current_Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();

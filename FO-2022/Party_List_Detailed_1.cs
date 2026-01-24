@@ -270,5 +270,10 @@ namespace FO_2022
         private void categorycombobox_SelectedIndexChanged(object sender, EventArgs e) { }
         private void townnametxtbox_TextChanged(object sender, EventArgs e) { }
         private void sectornametxtbox_TextChanged(object sender, EventArgs e) { }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

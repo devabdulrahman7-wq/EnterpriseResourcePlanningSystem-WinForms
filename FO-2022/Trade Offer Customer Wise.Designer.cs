@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(285, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 32);
+            this.label1.Size = new System.Drawing.Size(377, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = " Customer Trade Offer";
             // 
@@ -94,7 +94,7 @@
             this.label10.Location = new System.Drawing.Point(437, 136);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.Size = new System.Drawing.Size(104, 21);
             this.label10.TabIndex = 404;
             this.label10.Text = "Customer ID";
             // 
@@ -105,7 +105,7 @@
             this.cstmrdatetxtbox.Location = new System.Drawing.Point(606, 136);
             this.cstmrdatetxtbox.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.cstmrdatetxtbox.Name = "cstmrdatetxtbox";
-            this.cstmrdatetxtbox.Size = new System.Drawing.Size(99, 16);
+            this.cstmrdatetxtbox.Size = new System.Drawing.Size(129, 21);
             this.cstmrdatetxtbox.TabIndex = 403;
             this.cstmrdatetxtbox.Text = "Customer Name";
             // 
@@ -148,7 +148,7 @@
             this.enddatetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.enddatetimepicker.Location = new System.Drawing.Point(561, 199);
             this.enddatetimepicker.Name = "enddatetimepicker";
-            this.enddatetimepicker.Size = new System.Drawing.Size(95, 23);
+            this.enddatetimepicker.Size = new System.Drawing.Size(95, 27);
             this.enddatetimepicker.TabIndex = 408;
             this.enddatetimepicker.ValueChanged += new System.EventHandler(this.enddatetimepicker_ValueChanged);
             // 
@@ -157,7 +157,7 @@
             this.startdatetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startdatetimepicker.Location = new System.Drawing.Point(440, 199);
             this.startdatetimepicker.Name = "startdatetimepicker";
-            this.startdatetimepicker.Size = new System.Drawing.Size(95, 23);
+            this.startdatetimepicker.Size = new System.Drawing.Size(95, 27);
             this.startdatetimepicker.TabIndex = 407;
             this.startdatetimepicker.ValueChanged += new System.EventHandler(this.startdatetimepicker_ValueChanged);
             // 
@@ -168,7 +168,7 @@
             this.label6.Location = new System.Drawing.Point(556, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 16);
+            this.label6.Size = new System.Drawing.Size(79, 21);
             this.label6.TabIndex = 406;
             this.label6.Text = "End Date";
             // 
@@ -179,7 +179,7 @@
             this.label5.Location = new System.Drawing.Point(437, 180);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 405;
             this.label5.Text = "Start Date";
             // 
@@ -188,7 +188,7 @@
             this.datepckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepckr.Location = new System.Drawing.Point(541, 109);
             this.datepckr.Name = "datepckr";
-            this.datepckr.Size = new System.Drawing.Size(95, 23);
+            this.datepckr.Size = new System.Drawing.Size(95, 27);
             this.datepckr.TabIndex = 412;
             this.datepckr.ValueChanged += new System.EventHandler(this.datepckr_ValueChanged);
             // 
@@ -199,7 +199,7 @@
             this.label2.Location = new System.Drawing.Point(538, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 16);
+            this.label2.Size = new System.Drawing.Size(46, 21);
             this.label2.TabIndex = 410;
             this.label2.Text = "Date";
             // 
@@ -210,7 +210,7 @@
             this.label3.Location = new System.Drawing.Point(437, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 16);
+            this.label3.Size = new System.Drawing.Size(28, 21);
             this.label3.TabIndex = 409;
             this.label3.Text = "ID";
             // 
@@ -309,6 +309,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(438, 295);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(488, 205);
             this.dataGridView1.TabIndex = 419;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -318,6 +319,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(3, 126);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(429, 374);
             this.dataGridView2.TabIndex = 420;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
@@ -329,7 +331,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(39, 86);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 16);
+            this.label7.Size = new System.Drawing.Size(137, 21);
             this.label7.TabIndex = 422;
             this.label7.Text = "Select Customer:";
             // 
@@ -352,7 +354,7 @@
             this.textBox1.Location = new System.Drawing.Point(3, 108);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(429, 19);
+            this.textBox1.Size = new System.Drawing.Size(429, 23);
             this.textBox1.TabIndex = 424;
             this.textBox1.Text = "                      Available Targets";
             // 
@@ -372,7 +374,7 @@
             this.slabidtxtbox.BackColor = System.Drawing.Color.White;
             this.slabidtxtbox.Location = new System.Drawing.Point(435, 109);
             this.slabidtxtbox.Name = "slabidtxtbox";
-            this.slabidtxtbox.Size = new System.Drawing.Size(100, 23);
+            this.slabidtxtbox.Size = new System.Drawing.Size(100, 27);
             this.slabidtxtbox.TabIndex = 454;
             this.slabidtxtbox.TextChanged += new System.EventHandler(this.slabidtxtbox_TextChanged);
             // 
@@ -381,7 +383,7 @@
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(438, 499);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.Size = new System.Drawing.Size(100, 27);
             this.textBox2.TabIndex = 455;
             // 
             // packnamecombobox
@@ -389,7 +391,7 @@
             this.packnamecombobox.FormattingEnabled = true;
             this.packnamecombobox.Location = new System.Drawing.Point(621, 266);
             this.packnamecombobox.Name = "packnamecombobox";
-            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 27);
             this.packnamecombobox.TabIndex = 462;
             this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
@@ -421,7 +423,7 @@
             this.label40.Location = new System.Drawing.Point(619, 249);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(78, 16);
+            this.label40.Size = new System.Drawing.Size(95, 20);
             this.label40.TabIndex = 459;
             this.label40.Text = "Pack Name";
             // 
@@ -432,7 +434,7 @@
             this.label41.Location = new System.Drawing.Point(515, 250);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(68, 16);
+            this.label41.Size = new System.Drawing.Size(83, 20);
             this.label41.TabIndex = 458;
             this.label41.Text = "Pro.Name";
             // 
@@ -443,7 +445,7 @@
             this.label42.Location = new System.Drawing.Point(441, 249);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(44, 16);
+            this.label42.Size = new System.Drawing.Size(56, 20);
             this.label42.TabIndex = 457;
             this.label42.Text = "Pro.ID";
             // 
@@ -465,7 +467,7 @@
             this.label36.Location = new System.Drawing.Point(716, 249);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(44, 16);
+            this.label36.Size = new System.Drawing.Size(58, 20);
             this.label36.TabIndex = 463;
             this.label36.Text = "Qty(P)";
             // 
@@ -475,7 +477,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(767, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 465;
             this.label4.Text = "Rate ";
             // 
@@ -483,7 +485,7 @@
             // 
             this.ratetxt.Location = new System.Drawing.Point(768, 266);
             this.ratetxt.Name = "ratetxt";
-            this.ratetxt.Size = new System.Drawing.Size(33, 23);
+            this.ratetxt.Size = new System.Drawing.Size(33, 27);
             this.ratetxt.TabIndex = 466;
             this.ratetxt.TextChanged += new System.EventHandler(this.ratetxt_TextChanged);
             // 
@@ -493,7 +495,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(806, 249);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 15);
+            this.label8.Size = new System.Drawing.Size(38, 18);
             this.label8.TabIndex = 465;
             this.label8.Text = "Disc";
             // 
@@ -501,7 +503,7 @@
             // 
             this.disctxtbox.Location = new System.Drawing.Point(807, 266);
             this.disctxtbox.Name = "disctxtbox";
-            this.disctxtbox.Size = new System.Drawing.Size(33, 23);
+            this.disctxtbox.Size = new System.Drawing.Size(33, 27);
             this.disctxtbox.TabIndex = 466;
             this.disctxtbox.TextChanged += new System.EventHandler(this.disctxtbox_TextChanged);
             // 
@@ -511,7 +513,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(845, 249);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 15);
+            this.label9.Size = new System.Drawing.Size(51, 18);
             this.label9.TabIndex = 465;
             this.label9.Text = "Disc-2";
             // 
@@ -519,13 +521,13 @@
             // 
             this.disctwotxt.Location = new System.Drawing.Point(846, 266);
             this.disctwotxt.Name = "disctwotxt";
-            this.disctwotxt.Size = new System.Drawing.Size(33, 23);
+            this.disctwotxt.Size = new System.Drawing.Size(33, 27);
             this.disctwotxt.TabIndex = 466;
             this.disctwotxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.disctwotxt_KeyDown);
             // 
             // Trade_Offer_Customer_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(938, 579);
@@ -577,6 +579,7 @@
             this.Name = "Trade_Offer_Customer_Wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trade_Offer_Customer_Wise";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.cstmrididsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

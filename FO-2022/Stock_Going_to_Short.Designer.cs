@@ -52,7 +52,7 @@
             this.label2.Location = new System.Drawing.Point(122, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 496;
             this.label2.Text = "Company ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,6 +105,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 492;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -112,7 +113,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(157, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 32);
+            this.label1.Size = new System.Drawing.Size(346, 42);
             this.label1.TabIndex = 491;
             this.label1.Text = "Stock Going to Short\r\n";
             // 
@@ -154,7 +155,7 @@
             this.label5.Location = new System.Drawing.Point(291, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
+            this.label5.Size = new System.Drawing.Size(126, 21);
             this.label5.TabIndex = 487;
             this.label5.Text = "Company Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,7 +165,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(125, 205);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(171, 20);
+            this.checkBox1.Size = new System.Drawing.Size(218, 25);
             this.checkBox1.TabIndex = 497;
             this.checkBox1.Text = "Include SM Current Stock";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -174,14 +175,14 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(125, 231);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(203, 20);
+            this.checkBox2.Size = new System.Drawing.Size(259, 25);
             this.checkBox2.TabIndex = 498;
             this.checkBox2.Text = "Show only order level products";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Stock_Going_to_Short
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(618, 373);
@@ -199,10 +200,11 @@
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock_Going_to_Short";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Going_to_Short";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();
             this.ResumeLayout(false);
