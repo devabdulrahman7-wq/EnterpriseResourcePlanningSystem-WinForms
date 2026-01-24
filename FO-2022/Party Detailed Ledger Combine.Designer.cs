@@ -65,6 +65,7 @@
             this.previewbtn.TabIndex = 290;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -78,6 +79,7 @@
             this.closebtn.TabIndex = 289;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -91,6 +93,7 @@
             this.printbtn.TabIndex = 288;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox2
             // 
@@ -101,7 +104,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 287;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -110,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(130, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(339, 38);
+            this.label3.Size = new System.Drawing.Size(273, 31);
             this.label3.TabIndex = 286;
             this.label3.Text = "Party Detailed Ledger";
             // 
@@ -123,6 +125,8 @@
             this.partynametxtbox.Name = "partynametxtbox";
             this.partynametxtbox.Size = new System.Drawing.Size(161, 20);
             this.partynametxtbox.TabIndex = 285;
+            this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
+            this.partynametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partynametxtbox_KeyDown);
             // 
             // partyidtxtbox
             // 
@@ -133,6 +137,8 @@
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(93, 20);
             this.partyidtxtbox.TabIndex = 284;
+            this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
+            this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
             // searchpartyid
             // 
@@ -144,6 +150,7 @@
             this.searchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchpartyid.TabIndex = 283;
             this.searchpartyid.TabStop = false;
+            this.searchpartyid.Click += new System.EventHandler(this.searchpartyid_Click);
             // 
             // label2
             // 
@@ -151,7 +158,7 @@
             this.label2.Location = new System.Drawing.Point(262, 185);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 21);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 282;
             this.label2.Text = "Party Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +169,7 @@
             this.label1.Location = new System.Drawing.Point(133, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 21);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 281;
             this.label1.Text = "Party ID ";
             // 
@@ -173,11 +180,12 @@
             this.landscapebtn.Location = new System.Drawing.Point(265, 252);
             this.landscapebtn.Margin = new System.Windows.Forms.Padding(4);
             this.landscapebtn.Name = "landscapebtn";
-            this.landscapebtn.Size = new System.Drawing.Size(109, 25);
+            this.landscapebtn.Size = new System.Drawing.Size(85, 20);
             this.landscapebtn.TabIndex = 280;
             this.landscapebtn.TabStop = true;
             this.landscapebtn.Text = "Landscape";
             this.landscapebtn.UseVisualStyleBackColor = true;
+            this.landscapebtn.CheckedChanged += new System.EventHandler(this.landscapebtn_CheckedChanged);
             // 
             // detaillgrasdbtn
             // 
@@ -186,11 +194,12 @@
             this.detaillgrasdbtn.Location = new System.Drawing.Point(265, 280);
             this.detaillgrasdbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detaillgrasdbtn.Name = "detaillgrasdbtn";
-            this.detaillgrasdbtn.Size = new System.Drawing.Size(221, 25);
+            this.detaillgrasdbtn.Size = new System.Drawing.Size(170, 20);
             this.detaillgrasdbtn.TabIndex = 279;
             this.detaillgrasdbtn.TabStop = true;
             this.detaillgrasdbtn.Text = "Detail Ledger Asad Umair";
             this.detaillgrasdbtn.UseVisualStyleBackColor = true;
+            this.detaillgrasdbtn.CheckedChanged += new System.EventHandler(this.detaillgrasdbtn_CheckedChanged);
             // 
             // detailbtn
             // 
@@ -199,11 +208,12 @@
             this.detailbtn.Location = new System.Drawing.Point(152, 280);
             this.detailbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detailbtn.Name = "detailbtn";
-            this.detailbtn.Size = new System.Drawing.Size(130, 25);
+            this.detailbtn.Size = new System.Drawing.Size(100, 20);
             this.detailbtn.TabIndex = 278;
             this.detailbtn.TabStop = true;
             this.detailbtn.Text = "Detail Ledger";
             this.detailbtn.UseVisualStyleBackColor = true;
+            this.detailbtn.CheckedChanged += new System.EventHandler(this.detailbtn_CheckedChanged);
             // 
             // portrtbtn
             // 
@@ -212,11 +222,12 @@
             this.portrtbtn.Location = new System.Drawing.Point(152, 252);
             this.portrtbtn.Margin = new System.Windows.Forms.Padding(4);
             this.portrtbtn.Name = "portrtbtn";
-            this.portrtbtn.Size = new System.Drawing.Size(86, 25);
+            this.portrtbtn.Size = new System.Drawing.Size(67, 20);
             this.portrtbtn.TabIndex = 277;
             this.portrtbtn.TabStop = true;
             this.portrtbtn.Text = "Portrait";
             this.portrtbtn.UseVisualStyleBackColor = true;
+            this.portrtbtn.CheckedChanged += new System.EventHandler(this.portrtbtn_CheckedChanged);
             // 
             // todaybtn
             // 
@@ -225,11 +236,12 @@
             this.todaybtn.Location = new System.Drawing.Point(259, 149);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(4);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(76, 25);
+            this.todaybtn.Size = new System.Drawing.Size(60, 20);
             this.todaybtn.TabIndex = 276;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
             this.todaybtn.UseVisualStyleBackColor = true;
+            this.todaybtn.CheckedChanged += new System.EventHandler(this.todaybtn_CheckedChanged);
             // 
             // daybtn
             // 
@@ -238,11 +250,12 @@
             this.daybtn.Location = new System.Drawing.Point(164, 149);
             this.daybtn.Margin = new System.Windows.Forms.Padding(4);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(76, 25);
+            this.daybtn.Size = new System.Drawing.Size(58, 20);
             this.daybtn.TabIndex = 275;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
             this.daybtn.UseVisualStyleBackColor = true;
+            this.daybtn.CheckedChanged += new System.EventHandler(this.daybtn_CheckedChanged);
             // 
             // datebwbtn
             // 
@@ -251,12 +264,13 @@
             this.datebwbtn.Location = new System.Drawing.Point(259, 111);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(4);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
+            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
             this.datebwbtn.TabIndex = 274;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
             this.datebwbtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.datebwbtn.UseVisualStyleBackColor = true;
+            this.datebwbtn.CheckedChanged += new System.EventHandler(this.datebwbtn_CheckedChanged);
             // 
             // alldatebtn
             // 
@@ -265,11 +279,12 @@
             this.alldatebtn.Location = new System.Drawing.Point(164, 111);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(82, 25);
+            this.alldatebtn.Size = new System.Drawing.Size(69, 20);
             this.alldatebtn.TabIndex = 273;
             this.alldatebtn.TabStop = true;
-            this.alldatebtn.Text = "All Dte";
+            this.alldatebtn.Text = "All Date";
             this.alldatebtn.UseVisualStyleBackColor = true;
+            this.alldatebtn.CheckedChanged += new System.EventHandler(this.alldatebtn_CheckedChanged);
             // 
             // label4
             // 
@@ -277,7 +292,7 @@
             this.label4.Location = new System.Drawing.Point(126, 320);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 21);
+            this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 291;
             this.label4.Text = "Select Salesman";
             // 
@@ -286,12 +301,13 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(129, 339);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(290, 27);
+            this.salesmancombobox.Size = new System.Drawing.Size(306, 24);
             this.salesmancombobox.TabIndex = 292;
+            this.salesmancombobox.SelectedIndexChanged += new System.EventHandler(this.salesmancombobox_SelectedIndexChanged);
             // 
             // Party_Detailed_Ledger_Combine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(551, 486);
@@ -321,7 +337,6 @@
             this.Name = "Party_Detailed_Ledger_Combine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Detailed_Ledger_Combine";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Party_Detailed_Ledger_Combine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();

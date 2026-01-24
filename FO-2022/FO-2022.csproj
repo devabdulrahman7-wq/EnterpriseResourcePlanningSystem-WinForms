@@ -1617,6 +1617,7 @@
       <DependentUpon>Quaterely Sales Party Wise  .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">
@@ -1648,6 +1649,7 @@
     <Content Include="Reports\Party_List.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Part_List_rv.resx">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
