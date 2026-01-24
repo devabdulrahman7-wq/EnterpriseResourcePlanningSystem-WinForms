@@ -32,12 +32,14 @@
             // 
             // Preview_of_Stock_Current_Sheet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 514);
+            this.ClientSize = new System.Drawing.Size(1187, 633);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Preview_of_Stock_Current_Sheet";
             this.Text = "Preview_of_Stock_Current_Sheet";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Preview_of_Stock_Current_Sheet_Load);
             this.ResumeLayout(false);
 

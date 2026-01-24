@@ -101,6 +101,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 287;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -109,7 +110,7 @@
             this.label3.Location = new System.Drawing.Point(130, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 31);
+            this.label3.Size = new System.Drawing.Size(339, 38);
             this.label3.TabIndex = 286;
             this.label3.Text = "Party Detailed Ledger";
             // 
@@ -150,7 +151,7 @@
             this.label2.Location = new System.Drawing.Point(262, 185);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 282;
             this.label2.Text = "Party Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +162,7 @@
             this.label1.Location = new System.Drawing.Point(133, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 281;
             this.label1.Text = "Party ID ";
             // 
@@ -172,7 +173,7 @@
             this.landscapebtn.Location = new System.Drawing.Point(265, 252);
             this.landscapebtn.Margin = new System.Windows.Forms.Padding(4);
             this.landscapebtn.Name = "landscapebtn";
-            this.landscapebtn.Size = new System.Drawing.Size(85, 20);
+            this.landscapebtn.Size = new System.Drawing.Size(109, 25);
             this.landscapebtn.TabIndex = 280;
             this.landscapebtn.TabStop = true;
             this.landscapebtn.Text = "Landscape";
@@ -185,7 +186,7 @@
             this.detaillgrasdbtn.Location = new System.Drawing.Point(265, 280);
             this.detaillgrasdbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detaillgrasdbtn.Name = "detaillgrasdbtn";
-            this.detaillgrasdbtn.Size = new System.Drawing.Size(170, 20);
+            this.detaillgrasdbtn.Size = new System.Drawing.Size(221, 25);
             this.detaillgrasdbtn.TabIndex = 279;
             this.detaillgrasdbtn.TabStop = true;
             this.detaillgrasdbtn.Text = "Detail Ledger Asad Umair";
@@ -198,7 +199,7 @@
             this.detailbtn.Location = new System.Drawing.Point(152, 280);
             this.detailbtn.Margin = new System.Windows.Forms.Padding(4);
             this.detailbtn.Name = "detailbtn";
-            this.detailbtn.Size = new System.Drawing.Size(100, 20);
+            this.detailbtn.Size = new System.Drawing.Size(130, 25);
             this.detailbtn.TabIndex = 278;
             this.detailbtn.TabStop = true;
             this.detailbtn.Text = "Detail Ledger";
@@ -211,7 +212,7 @@
             this.portrtbtn.Location = new System.Drawing.Point(152, 252);
             this.portrtbtn.Margin = new System.Windows.Forms.Padding(4);
             this.portrtbtn.Name = "portrtbtn";
-            this.portrtbtn.Size = new System.Drawing.Size(67, 20);
+            this.portrtbtn.Size = new System.Drawing.Size(86, 25);
             this.portrtbtn.TabIndex = 277;
             this.portrtbtn.TabStop = true;
             this.portrtbtn.Text = "Portrait";
@@ -224,7 +225,7 @@
             this.todaybtn.Location = new System.Drawing.Point(259, 149);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(4);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(60, 20);
+            this.todaybtn.Size = new System.Drawing.Size(76, 25);
             this.todaybtn.TabIndex = 276;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
@@ -237,7 +238,7 @@
             this.daybtn.Location = new System.Drawing.Point(164, 149);
             this.daybtn.Margin = new System.Windows.Forms.Padding(4);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(58, 20);
+            this.daybtn.Size = new System.Drawing.Size(76, 25);
             this.daybtn.TabIndex = 275;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
@@ -250,7 +251,7 @@
             this.datebwbtn.Location = new System.Drawing.Point(259, 111);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(4);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
             this.datebwbtn.TabIndex = 274;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
@@ -264,7 +265,7 @@
             this.alldatebtn.Location = new System.Drawing.Point(164, 111);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(62, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(82, 25);
             this.alldatebtn.TabIndex = 273;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Dte";
@@ -276,7 +277,7 @@
             this.label4.Location = new System.Drawing.Point(126, 320);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 16);
+            this.label4.Size = new System.Drawing.Size(131, 21);
             this.label4.TabIndex = 291;
             this.label4.Text = "Select Salesman";
             // 
@@ -285,12 +286,12 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(129, 339);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(290, 24);
+            this.salesmancombobox.Size = new System.Drawing.Size(290, 27);
             this.salesmancombobox.TabIndex = 292;
             // 
             // Party_Detailed_Ledger_Combine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(551, 486);
@@ -320,6 +321,7 @@
             this.Name = "Party_Detailed_Ledger_Combine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Detailed_Ledger_Combine";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Party_Detailed_Ledger_Combine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();

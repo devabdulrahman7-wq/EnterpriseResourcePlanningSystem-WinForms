@@ -50,7 +50,7 @@
             this.label5.Location = new System.Drawing.Point(157, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 33);
+            this.label5.Size = new System.Drawing.Size(367, 42);
             this.label5.TabIndex = 323;
             this.label5.Text = "Monthly Expense Chart";
             // 
@@ -101,7 +101,7 @@
             this.ctgrycombobox.FormattingEnabled = true;
             this.ctgrycombobox.Location = new System.Drawing.Point(268, 218);
             this.ctgrycombobox.Name = "ctgrycombobox";
-            this.ctgrycombobox.Size = new System.Drawing.Size(219, 24);
+            this.ctgrycombobox.Size = new System.Drawing.Size(219, 27);
             this.ctgrycombobox.TabIndex = 319;
             // 
             // label4
@@ -110,7 +110,7 @@
             this.label4.Location = new System.Drawing.Point(89, 226);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(156, 21);
             this.label4.TabIndex = 318;
             this.label4.Text = "Select Year Quarter";
             // 
@@ -120,7 +120,7 @@
             this.todate.Location = new System.Drawing.Point(89, 185);
             this.todate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 317;
             this.todate.Text = "To Date";
             // 
@@ -130,7 +130,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(89, 154);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 316;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -140,7 +140,7 @@
             this.todatepcker.Location = new System.Drawing.Point(269, 178);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(218, 23);
+            this.todatepcker.Size = new System.Drawing.Size(218, 27);
             this.todatepcker.TabIndex = 315;
             // 
             // fromdatepcker
@@ -149,7 +149,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(269, 147);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(218, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(218, 27);
             this.fromdatepcker.TabIndex = 314;
             // 
             // pictureBox2
@@ -166,7 +166,7 @@
             // 
             // Monthly_Expense_Chart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(606, 370);
@@ -183,10 +183,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Monthly_Expense_Chart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monthly_Expense_Chart";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

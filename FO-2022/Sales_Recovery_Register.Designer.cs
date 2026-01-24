@@ -96,7 +96,7 @@
             this.label7.Location = new System.Drawing.Point(273, 156);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 16);
+            this.label7.Size = new System.Drawing.Size(129, 21);
             this.label7.TabIndex = 399;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             this.label8.Location = new System.Drawing.Point(114, 156);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
+            this.label8.Size = new System.Drawing.Size(104, 21);
             this.label8.TabIndex = 398;
             this.label8.Text = "Customer ID";
             // 
@@ -148,7 +148,7 @@
             this.label5.Location = new System.Drawing.Point(272, 261);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.Size = new System.Drawing.Size(99, 21);
             this.label5.TabIndex = 394;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@
             this.label6.Location = new System.Drawing.Point(113, 261);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 16);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 393;
             this.label6.Text = "Town ID";
             // 
@@ -200,7 +200,7 @@
             this.label3.Location = new System.Drawing.Point(272, 208);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(129, 21);
             this.label3.TabIndex = 389;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +211,7 @@
             this.label4.Location = new System.Drawing.Point(113, 208);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 388;
             this.label4.Text = "Salesman ID";
             // 
@@ -222,7 +222,7 @@
             this.label2.Location = new System.Drawing.Point(133, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(307, 32);
+            this.label2.Size = new System.Drawing.Size(391, 42);
             this.label2.TabIndex = 387;
             this.label2.Text = "Sales Recovery Register";
             // 
@@ -232,7 +232,7 @@
             this.todate.Location = new System.Drawing.Point(265, 100);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 386;
             this.todate.Text = "To Date";
             // 
@@ -242,7 +242,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(104, 100);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 385;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -252,7 +252,7 @@
             this.todatepcker.Location = new System.Drawing.Point(268, 124);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 384;
             // 
             // fromdatepcker
@@ -261,7 +261,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(107, 124);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 383;
             // 
             // pictureBox4
@@ -274,6 +274,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 403;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // closebtn
             // 
@@ -319,7 +320,7 @@
             // 
             // Sales_Recovery_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(623, 421);
@@ -349,10 +350,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sales_Recovery_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Recovery_Register";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();

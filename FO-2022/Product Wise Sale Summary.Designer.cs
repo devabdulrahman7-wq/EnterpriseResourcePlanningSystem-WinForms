@@ -87,7 +87,7 @@
             this.label10.Location = new System.Drawing.Point(320, 366);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.Size = new System.Drawing.Size(88, 21);
             this.label10.TabIndex = 386;
             this.label10.Text = "To Sale ID";
             // 
@@ -97,7 +97,7 @@
             this.label9.Location = new System.Drawing.Point(155, 366);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 16);
+            this.label9.Size = new System.Drawing.Size(107, 21);
             this.label9.TabIndex = 385;
             this.label9.Text = "From Sale ID";
             // 
@@ -158,7 +158,7 @@
             this.label7.Location = new System.Drawing.Point(312, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 16);
+            this.label7.Size = new System.Drawing.Size(129, 21);
             this.label7.TabIndex = 379;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,7 +169,7 @@
             this.label8.Location = new System.Drawing.Point(153, 161);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
+            this.label8.Size = new System.Drawing.Size(104, 21);
             this.label8.TabIndex = 378;
             this.label8.Text = "Customer ID";
             // 
@@ -210,7 +210,7 @@
             this.label5.Location = new System.Drawing.Point(318, 263);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.Size = new System.Drawing.Size(99, 21);
             this.label5.TabIndex = 374;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,7 +221,7 @@
             this.label6.Location = new System.Drawing.Point(159, 263);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 16);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 373;
             this.label6.Text = "Town ID";
             // 
@@ -262,7 +262,7 @@
             this.label3.Location = new System.Drawing.Point(312, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(129, 21);
             this.label3.TabIndex = 369;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,7 +273,7 @@
             this.label4.Location = new System.Drawing.Point(153, 213);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 368;
             this.label4.Text = "Salesman ID";
             // 
@@ -284,7 +284,7 @@
             this.label2.Location = new System.Drawing.Point(123, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(372, 32);
+            this.label2.Size = new System.Drawing.Size(479, 42);
             this.label2.TabIndex = 367;
             this.label2.Text = "Sales Summary Product Wise";
             // 
@@ -336,7 +336,7 @@
             this.todate.Location = new System.Drawing.Point(312, 109);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 363;
             this.todate.Text = "To Date";
             // 
@@ -346,7 +346,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(151, 109);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 362;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -356,7 +356,7 @@
             this.todatepcker.Location = new System.Drawing.Point(315, 125);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 361;
             // 
             // fromdatepcker
@@ -365,7 +365,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(154, 125);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 360;
             // 
             // sectornametxtbox
@@ -405,7 +405,7 @@
             this.a.Location = new System.Drawing.Point(318, 315);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(81, 16);
+            this.a.Size = new System.Drawing.Size(105, 21);
             this.a.TabIndex = 356;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -416,13 +416,13 @@
             this.label1.Location = new System.Drawing.Point(153, 315);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 355;
             this.label1.Text = "Sector ID";
             // 
             // Product_Wise_Sale_Summary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(704, 549);
@@ -464,6 +464,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Wise_Sale_Summary";
             this.Text = "Product_Wise_Sale_Summary";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();

@@ -54,6 +54,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(49, 160);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(529, 312);
             this.dataGridView1.TabIndex = 664;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -63,17 +64,21 @@
             // Column1
             // 
             this.Column1.HeaderText = "Account No";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Account Name";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 260;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Setting";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -87,7 +92,7 @@
             this.textBox2.Location = new System.Drawing.Point(49, 136);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(529, 19);
+            this.textBox2.Size = new System.Drawing.Size(529, 23);
             this.textBox2.TabIndex = 663;
             this.textBox2.Text = "                Available Accounts";
             // 
@@ -96,7 +101,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(46, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 662;
             this.label3.Text = "Account Type";
             // 
@@ -105,7 +110,7 @@
             this.accountcombobox.FormattingEnabled = true;
             this.accountcombobox.Location = new System.Drawing.Point(49, 93);
             this.accountcombobox.Name = "accountcombobox";
-            this.accountcombobox.Size = new System.Drawing.Size(227, 24);
+            this.accountcombobox.Size = new System.Drawing.Size(227, 27);
             this.accountcombobox.TabIndex = 661;
             this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
@@ -115,7 +120,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(164, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 32);
+            this.label1.Size = new System.Drawing.Size(498, 42);
             this.label1.TabIndex = 660;
             this.label1.Text = "Profit and Loss Report Setting";
             // 
@@ -177,7 +182,7 @@
             // 
             // Profit_and_Loss_Report_Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(652, 554);
@@ -195,6 +200,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Profit_and_Loss_Report_Setting";
             this.Text = "Profit_and_Loss_Report_Setting";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Profit_and_Loss_Report_Setting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -60,7 +60,7 @@
             this.label1.Location = new System.Drawing.Point(242, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 32);
+            this.label1.Size = new System.Drawing.Size(518, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Post Short Stock Order Invoices";
             // 
@@ -71,7 +71,7 @@
             this.orderdatelbl.Location = new System.Drawing.Point(48, 99);
             this.orderdatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderdatelbl.Name = "orderdatelbl";
-            this.orderdatelbl.Size = new System.Drawing.Size(144, 16);
+            this.orderdatelbl.Size = new System.Drawing.Size(195, 21);
             this.orderdatelbl.TabIndex = 389;
             this.orderdatelbl.Text = "Date (Year/Month/Date)";
             // 
@@ -80,7 +80,7 @@
             this.datepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepcker.Location = new System.Drawing.Point(42, 118);
             this.datepcker.Name = "datepcker";
-            this.datepcker.Size = new System.Drawing.Size(163, 23);
+            this.datepcker.Size = new System.Drawing.Size(163, 27);
             this.datepcker.TabIndex = 388;
             this.datepcker.ValueChanged += new System.EventHandler(this.datepcker_ValueChanged);
             // 
@@ -149,6 +149,7 @@
             this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(42, 147);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(730, 384);
             this.dataGridView1.TabIndex = 400;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -156,33 +157,42 @@
             // Column1
             // 
             this.Column1.HeaderText = "Sale ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Sale Date";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Customer ID";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 135;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Customer Name";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 175;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Net Sale";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Post";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 75;
             // 
@@ -193,7 +203,7 @@
             this.label2.Location = new System.Drawing.Point(580, 534);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 401;
             this.label2.Text = "Total Net Sales:";
             // 
@@ -204,7 +214,7 @@
             this.label3.Location = new System.Drawing.Point(49, 534);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(99, 21);
             this.label3.TabIndex = 402;
             this.label3.Text = "No of Sales:";
             // 
@@ -241,7 +251,7 @@
             // 
             // Post_Short_Stock_Order_Invoices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(814, 653);
@@ -264,6 +274,7 @@
             this.Name = "Post_Short_Stock_Order_Invoices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Post_Short_Stock_Order_Invoices";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.searchdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

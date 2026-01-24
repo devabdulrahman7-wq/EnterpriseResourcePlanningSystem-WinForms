@@ -1579,5 +1579,10 @@ WHERE SaleId = @SaleId AND ProductId = @ProductId";
             decimal remainingBalance = (prevBalance + totalValue) - specialDisc - paidAmount;
             remainingbalancextxtbox.Text = remainingBalance.ToString("N2");
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

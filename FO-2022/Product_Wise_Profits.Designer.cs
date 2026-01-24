@@ -138,7 +138,7 @@
             this.label7.Location = new System.Drawing.Point(259, 195);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 16);
+            this.label7.Size = new System.Drawing.Size(129, 21);
             this.label7.TabIndex = 471;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,7 +149,7 @@
             this.label8.Location = new System.Drawing.Point(88, 193);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
+            this.label8.Size = new System.Drawing.Size(104, 21);
             this.label8.TabIndex = 470;
             this.label8.Text = "Customer ID";
             // 
@@ -160,7 +160,7 @@
             this.label2.Location = new System.Drawing.Point(135, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 32);
+            this.label2.Size = new System.Drawing.Size(342, 42);
             this.label2.TabIndex = 469;
             this.label2.Text = "Product Wise Profits";
             // 
@@ -170,7 +170,7 @@
             this.todate.Location = new System.Drawing.Point(259, 133);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 468;
             this.todate.Text = "To Date";
             // 
@@ -180,7 +180,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(86, 131);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 467;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -190,7 +190,7 @@
             this.todatepcker.Location = new System.Drawing.Point(261, 155);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(125, 23);
+            this.todatepcker.Size = new System.Drawing.Size(125, 27);
             this.todatepcker.TabIndex = 466;
             // 
             // fromdatepcker
@@ -199,12 +199,12 @@
             this.fromdatepcker.Location = new System.Drawing.Point(88, 153);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(113, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(113, 27);
             this.fromdatepcker.TabIndex = 465;
             // 
             // Product_Wise_Profits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(613, 442);
@@ -224,10 +224,11 @@
             this.Controls.Add(this.fromdatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Wise_Profits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Product_Wise_Profits";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             this.ResumeLayout(false);

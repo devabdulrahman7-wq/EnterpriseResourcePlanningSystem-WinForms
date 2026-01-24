@@ -46,9 +46,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 9);
+            this.label1.Location = new System.Drawing.Point(100, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 31);
+            this.label1.Size = new System.Drawing.Size(358, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Pending Invoice";
             // 
@@ -56,9 +57,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(113, 69);
+            this.label2.Location = new System.Drawing.Point(151, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(89, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "From Date";
             // 
@@ -66,36 +68,41 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(264, 69);
+            this.label3.Location = new System.Drawing.Point(352, 85);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "To Date";
             // 
             // fromdatepcker
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromdatepcker.Location = new System.Drawing.Point(116, 88);
+            this.fromdatepcker.Location = new System.Drawing.Point(155, 108);
+            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(97, 20);
+            this.fromdatepcker.Size = new System.Drawing.Size(128, 22);
             this.fromdatepcker.TabIndex = 3;
             this.fromdatepcker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // todatepcker
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.todatepcker.Location = new System.Drawing.Point(267, 88);
+            this.todatepcker.Location = new System.Drawing.Point(356, 108);
+            this.todatepcker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(96, 20);
+            this.todatepcker.Size = new System.Drawing.Size(127, 22);
             this.todatepcker.TabIndex = 4;
             this.todatepcker.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 140);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(452, 345);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(603, 425);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -106,9 +113,10 @@
             this.selectbtn.FlatAppearance.BorderSize = 0;
             this.selectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectbtn.Location = new System.Drawing.Point(174, 483);
+            this.selectbtn.Location = new System.Drawing.Point(232, 594);
+            this.selectbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selectbtn.Name = "selectbtn";
-            this.selectbtn.Size = new System.Drawing.Size(75, 23);
+            this.selectbtn.Size = new System.Drawing.Size(100, 28);
             this.selectbtn.TabIndex = 6;
             this.selectbtn.Text = "Select";
             this.selectbtn.UseVisualStyleBackColor = false;
@@ -120,9 +128,10 @@
             this.cancelbtn.FlatAppearance.BorderSize = 0;
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(267, 483);
+            this.cancelbtn.Location = new System.Drawing.Point(356, 594);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelbtn.Size = new System.Drawing.Size(100, 28);
             this.cancelbtn.TabIndex = 7;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
@@ -131,9 +140,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(489, -2);
+            this.pictureBox2.Location = new System.Drawing.Point(652, -2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(47, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 267;
             this.pictureBox2.TabStop = false;
@@ -141,10 +151,10 @@
             // 
             // Search_Pending_Invoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(528, 521);
+            this.ClientSize = new System.Drawing.Size(704, 641);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.selectbtn);
@@ -155,9 +165,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Search_Pending_Invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search_Pending_Invoice";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

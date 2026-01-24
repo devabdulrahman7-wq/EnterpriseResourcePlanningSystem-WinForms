@@ -66,7 +66,7 @@
             this.issuedatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.issuedatepcker.Location = new System.Drawing.Point(194, 131);
             this.issuedatepcker.Name = "issuedatepcker";
-            this.issuedatepcker.Size = new System.Drawing.Size(133, 23);
+            this.issuedatepcker.Size = new System.Drawing.Size(133, 27);
             this.issuedatepcker.TabIndex = 346;
             // 
             // label5
@@ -76,7 +76,7 @@
             this.label5.Location = new System.Drawing.Point(214, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 345;
             this.label5.Text = "Salesman Name";
             // 
@@ -87,7 +87,7 @@
             this.label6.Location = new System.Drawing.Point(80, 165);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(104, 21);
             this.label6.TabIndex = 344;
             this.label6.Text = "Salesman ID";
             // 
@@ -129,7 +129,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(191, 112);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(67, 16);
+            this.saledatelbl.Size = new System.Drawing.Size(91, 21);
             this.saledatelbl.TabIndex = 340;
             this.saledatelbl.Text = "Issue Date";
             // 
@@ -140,7 +140,7 @@
             this.saleidlbl.Location = new System.Drawing.Point(75, 112);
             this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saleidlbl.Name = "saleidlbl";
-            this.saleidlbl.Size = new System.Drawing.Size(53, 16);
+            this.saleidlbl.Size = new System.Drawing.Size(73, 21);
             this.saleidlbl.TabIndex = 339;
             this.saleidlbl.Text = "Issue ID";
             // 
@@ -219,6 +219,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(75, 264);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(570, 223);
             this.dataGridView1.TabIndex = 384;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -231,7 +232,7 @@
             this.label1.Location = new System.Drawing.Point(189, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 32);
+            this.label1.Size = new System.Drawing.Size(385, 42);
             this.label1.TabIndex = 390;
             this.label1.Text = "Stock Issue to Salesmen";
             // 
@@ -251,7 +252,7 @@
             this.packnamecombobox.FormattingEnabled = true;
             this.packnamecombobox.Location = new System.Drawing.Point(260, 237);
             this.packnamecombobox.Name = "packnamecombobox";
-            this.packnamecombobox.Size = new System.Drawing.Size(109, 24);
+            this.packnamecombobox.Size = new System.Drawing.Size(109, 27);
             this.packnamecombobox.TabIndex = 407;
             this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
@@ -274,7 +275,7 @@
             this.label8.Location = new System.Drawing.Point(561, 218);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 16);
+            this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 403;
             this.label8.Text = "Qty(L)";
             // 
@@ -329,7 +330,7 @@
             this.label28.Location = new System.Drawing.Point(471, 218);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(44, 16);
+            this.label28.Size = new System.Drawing.Size(58, 20);
             this.label28.TabIndex = 396;
             this.label28.Text = "Qty(P)";
             // 
@@ -340,7 +341,7 @@
             this.label29.Location = new System.Drawing.Point(374, 219);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(38, 16);
+            this.label29.Size = new System.Drawing.Size(46, 20);
             this.label29.TabIndex = 395;
             this.label29.Text = "Pack";
             // 
@@ -351,7 +352,7 @@
             this.label30.Location = new System.Drawing.Point(258, 218);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(78, 16);
+            this.label30.Size = new System.Drawing.Size(95, 20);
             this.label30.TabIndex = 394;
             this.label30.Text = "Pack Name";
             // 
@@ -362,7 +363,7 @@
             this.label31.Location = new System.Drawing.Point(154, 219);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 16);
+            this.label31.Size = new System.Drawing.Size(83, 20);
             this.label31.TabIndex = 393;
             this.label31.Text = "Pro.Name";
             // 
@@ -373,13 +374,13 @@
             this.label32.Location = new System.Drawing.Point(77, 220);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(44, 16);
+            this.label32.Size = new System.Drawing.Size(56, 20);
             this.label32.TabIndex = 392;
             this.label32.Text = "Pro.ID";
             // 
             // Stock_Issue_to_Salesmen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(718, 577);
@@ -417,6 +418,7 @@
             this.Name = "Stock_Issue_to_Salesmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Issue_to_Salesmen";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Stock_Issue_to_Salesmen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

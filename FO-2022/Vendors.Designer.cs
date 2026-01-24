@@ -84,7 +84,7 @@
             this.vendorctgrycombobox.FormattingEnabled = true;
             this.vendorctgrycombobox.Location = new System.Drawing.Point(334, 488);
             this.vendorctgrycombobox.Name = "vendorctgrycombobox";
-            this.vendorctgrycombobox.Size = new System.Drawing.Size(160, 24);
+            this.vendorctgrycombobox.Size = new System.Drawing.Size(160, 27);
             this.vendorctgrycombobox.TabIndex = 551;
             // 
             // label9
@@ -93,7 +93,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(331, 469);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 16);
+            this.label9.Size = new System.Drawing.Size(133, 21);
             this.label9.TabIndex = 550;
             this.label9.Text = "Vendor Category";
             // 
@@ -114,7 +114,7 @@
             this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(334, 362);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 16);
+            this.label23.Size = new System.Drawing.Size(57, 21);
             this.label23.TabIndex = 544;
             this.label23.Text = "E-mail";
             // 
@@ -135,7 +135,7 @@
             this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(331, 415);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 16);
+            this.label22.Size = new System.Drawing.Size(122, 21);
             this.label22.TabIndex = 542;
             this.label22.Text = "Contact Person";
             // 
@@ -156,7 +156,7 @@
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(501, 305);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 16);
+            this.label20.Size = new System.Drawing.Size(36, 21);
             this.label20.TabIndex = 540;
             this.label20.Text = "Fax";
             // 
@@ -177,7 +177,7 @@
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(331, 305);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(63, 16);
+            this.label21.Size = new System.Drawing.Size(83, 21);
             this.label21.TabIndex = 538;
             this.label21.Text = "Mobile No";
             // 
@@ -198,7 +198,7 @@
             this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(547, 251);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 16);
+            this.label19.Size = new System.Drawing.Size(69, 21);
             this.label19.TabIndex = 536;
             this.label19.Text = "Phone 2";
             // 
@@ -219,7 +219,7 @@
             this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(427, 251);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 16);
+            this.label18.Size = new System.Drawing.Size(80, 21);
             this.label18.TabIndex = 534;
             this.label18.Text = "Phone No";
             // 
@@ -240,7 +240,7 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(334, 251);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 16);
+            this.label17.Size = new System.Drawing.Size(38, 21);
             this.label17.TabIndex = 532;
             this.label17.Text = "City";
             // 
@@ -261,7 +261,7 @@
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(331, 198);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 16);
+            this.label15.Size = new System.Drawing.Size(76, 21);
             this.label15.TabIndex = 527;
             this.label15.Text = "Address:";
             // 
@@ -394,7 +394,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(327, 145);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 16);
+            this.label6.Size = new System.Drawing.Size(59, 21);
             this.label6.TabIndex = 512;
             this.label6.Text = "Name:";
             // 
@@ -404,7 +404,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(325, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
+            this.label5.Size = new System.Drawing.Size(71, 21);
             this.label5.TabIndex = 511;
             this.label5.Text = "Party ID";
             // 
@@ -414,7 +414,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(264, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 32);
+            this.label4.Size = new System.Drawing.Size(148, 42);
             this.label4.TabIndex = 510;
             this.label4.Text = "Vendors";
             // 
@@ -423,6 +423,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 136);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(307, 386);
             this.dataGridView1.TabIndex = 509;
             // 
@@ -434,7 +435,7 @@
             this.textBox1.Location = new System.Drawing.Point(1, 112);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 19);
+            this.textBox1.Size = new System.Drawing.Size(307, 23);
             this.textBox1.TabIndex = 508;
             this.textBox1.Text = "                Available Towns";
             // 
@@ -455,13 +456,13 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(59, 21);
             this.label1.TabIndex = 502;
             this.label1.Text = "Name:";
             // 
             // Vendors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(681, 599);
@@ -506,6 +507,7 @@
             this.Name = "Vendors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendors";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

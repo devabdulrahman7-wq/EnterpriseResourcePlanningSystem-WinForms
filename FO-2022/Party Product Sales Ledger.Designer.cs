@@ -65,9 +65,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 41);
+            this.label1.Location = new System.Drawing.Point(124, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 32);
+            this.label1.Size = new System.Drawing.Size(452, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Party Product Sales Ledger";
             // 
@@ -76,9 +77,10 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 100);
+            this.label2.Location = new System.Drawing.Point(171, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(89, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "From Date";
             // 
@@ -87,9 +89,10 @@
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(287, 100);
+            this.label3.Location = new System.Drawing.Point(383, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "To Date";
             // 
@@ -98,9 +101,10 @@
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(128, 151);
+            this.label4.Location = new System.Drawing.Point(171, 186);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(89, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Product ID";
             // 
@@ -109,9 +113,10 @@
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 207);
+            this.label5.Location = new System.Drawing.Point(169, 255);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
+            this.label5.Size = new System.Drawing.Size(71, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Party ID";
             // 
@@ -120,9 +125,10 @@
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(275, 151);
+            this.label6.Location = new System.Drawing.Point(367, 186);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 16);
+            this.label6.Size = new System.Drawing.Size(114, 21);
             this.label6.TabIndex = 5;
             this.label6.Text = "Product Name";
             // 
@@ -131,9 +137,10 @@
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(275, 207);
+            this.label7.Location = new System.Drawing.Point(367, 255);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.Size = new System.Drawing.Size(96, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Party Name";
             // 
@@ -146,9 +153,11 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(131, 278);
+            this.groupBox1.Location = new System.Drawing.Point(175, 342);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 77);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(457, 95);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Party to be Skip ";
@@ -156,18 +165,20 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(138, 21);
+            this.label9.Location = new System.Drawing.Point(184, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.Size = new System.Drawing.Size(96, 21);
             this.label9.TabIndex = 1;
             this.label9.Text = "Party Name";
             // 
             // grpsearchpartyid
             // 
             this.grpsearchpartyid.Image = ((System.Drawing.Image)(resources.GetObject("grpsearchpartyid.Image")));
-            this.grpsearchpartyid.Location = new System.Drawing.Point(113, 40);
+            this.grpsearchpartyid.Location = new System.Drawing.Point(151, 49);
+            this.grpsearchpartyid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpsearchpartyid.Name = "grpsearchpartyid";
-            this.grpsearchpartyid.Size = new System.Drawing.Size(22, 18);
+            this.grpsearchpartyid.Size = new System.Drawing.Size(29, 22);
             this.grpsearchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.grpsearchpartyid.TabIndex = 169;
             this.grpsearchpartyid.TabStop = false;
@@ -175,52 +186,58 @@
             // partynamegrptxtbox
             // 
             this.partynamegrptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynamegrptxtbox.Location = new System.Drawing.Point(141, 40);
+            this.partynamegrptxtbox.Location = new System.Drawing.Point(188, 49);
+            this.partynamegrptxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.partynamegrptxtbox.Multiline = true;
             this.partynamegrptxtbox.Name = "partynamegrptxtbox";
-            this.partynamegrptxtbox.Size = new System.Drawing.Size(172, 16);
+            this.partynamegrptxtbox.Size = new System.Drawing.Size(229, 20);
             this.partynamegrptxtbox.TabIndex = 171;
             // 
             // partyidgrptxtbox
             // 
             this.partyidgrptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidgrptxtbox.Location = new System.Drawing.Point(6, 42);
+            this.partyidgrptxtbox.Location = new System.Drawing.Point(8, 52);
+            this.partyidgrptxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.partyidgrptxtbox.Multiline = true;
             this.partyidgrptxtbox.Name = "partyidgrptxtbox";
-            this.partyidgrptxtbox.Size = new System.Drawing.Size(110, 16);
+            this.partyidgrptxtbox.Size = new System.Drawing.Size(147, 20);
             this.partyidgrptxtbox.TabIndex = 172;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 18);
+            this.label8.Location = new System.Drawing.Point(8, 22);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.Size = new System.Drawing.Size(71, 21);
             this.label8.TabIndex = 0;
             this.label8.Text = "Party ID";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 119);
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 146);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(85, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 22);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(281, 119);
+            this.dateTimePicker2.Location = new System.Drawing.Point(375, 146);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(81, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(107, 22);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // searchpartyid
             // 
             this.searchpartyid.Image = ((System.Drawing.Image)(resources.GetObject("searchpartyid.Image")));
-            this.searchpartyid.Location = new System.Drawing.Point(242, 228);
+            this.searchpartyid.Location = new System.Drawing.Point(323, 281);
+            this.searchpartyid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchpartyid.Name = "searchpartyid";
-            this.searchpartyid.Size = new System.Drawing.Size(22, 18);
+            this.searchpartyid.Size = new System.Drawing.Size(29, 22);
             this.searchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchpartyid.TabIndex = 168;
             this.searchpartyid.TabStop = false;
@@ -228,9 +245,10 @@
             // searchproductid
             // 
             this.searchproductid.Image = ((System.Drawing.Image)(resources.GetObject("searchproductid.Image")));
-            this.searchproductid.Location = new System.Drawing.Point(242, 172);
+            this.searchproductid.Location = new System.Drawing.Point(323, 212);
+            this.searchproductid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchproductid.Name = "searchproductid";
-            this.searchproductid.Size = new System.Drawing.Size(22, 18);
+            this.searchproductid.Size = new System.Drawing.Size(29, 22);
             this.searchproductid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchproductid.TabIndex = 170;
             this.searchproductid.TabStop = false;
@@ -238,37 +256,41 @@
             // productnametxtbox
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productnametxtbox.Location = new System.Drawing.Point(278, 170);
+            this.productnametxtbox.Location = new System.Drawing.Point(371, 209);
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(167, 20);
+            this.productnametxtbox.Size = new System.Drawing.Size(223, 25);
             this.productnametxtbox.TabIndex = 173;
             // 
             // productidtxtbox
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productidtxtbox.Location = new System.Drawing.Point(131, 170);
+            this.productidtxtbox.Location = new System.Drawing.Point(175, 209);
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(105, 20);
+            this.productidtxtbox.Size = new System.Drawing.Size(140, 25);
             this.productidtxtbox.TabIndex = 174;
             // 
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(277, 226);
+            this.partynametxtbox.Location = new System.Drawing.Point(369, 278);
+            this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(167, 20);
+            this.partynametxtbox.Size = new System.Drawing.Size(223, 25);
             this.partynametxtbox.TabIndex = 175;
             // 
             // partyidtxtbox
             // 
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidtxtbox.Location = new System.Drawing.Point(130, 226);
+            this.partyidtxtbox.Location = new System.Drawing.Point(173, 278);
+            this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(103, 20);
+            this.partyidtxtbox.Size = new System.Drawing.Size(137, 25);
             this.partyidtxtbox.TabIndex = 176;
             // 
             // closebtn
@@ -277,9 +299,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(334, 387);
+            this.closebtn.Location = new System.Drawing.Point(445, 476);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 29);
+            this.closebtn.Size = new System.Drawing.Size(100, 36);
             this.closebtn.TabIndex = 178;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -290,9 +313,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(253, 387);
+            this.printbtn.Location = new System.Drawing.Point(337, 476);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(75, 29);
+            this.printbtn.Size = new System.Drawing.Size(100, 36);
             this.printbtn.TabIndex = 177;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -303,9 +327,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(172, 387);
+            this.previewbtn.Location = new System.Drawing.Point(229, 476);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(75, 29);
+            this.previewbtn.Size = new System.Drawing.Size(100, 36);
             this.previewbtn.TabIndex = 179;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -313,9 +338,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(562, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(749, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 180;
             this.pictureBox1.TabStop = false;
@@ -323,10 +349,10 @@
             // 
             // Party_Product_Sales_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(601, 434);
+            this.ClientSize = new System.Drawing.Size(801, 534);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
@@ -348,9 +374,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Party_Product_Sales_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Product_Sales_Ledger";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Party_Product_Sales_Ledger_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

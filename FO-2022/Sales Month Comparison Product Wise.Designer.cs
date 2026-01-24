@@ -56,7 +56,7 @@
             this.label15.Location = new System.Drawing.Point(98, 45);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(493, 32);
+            this.label15.Size = new System.Drawing.Size(636, 42);
             this.label15.TabIndex = 351;
             this.label15.Text = "Sales Month Comparison Product Wise";
             // 
@@ -66,7 +66,7 @@
             this.currentmonthdatepcker.Location = new System.Drawing.Point(344, 126);
             this.currentmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.currentmonthdatepcker.Name = "currentmonthdatepcker";
-            this.currentmonthdatepcker.Size = new System.Drawing.Size(111, 23);
+            this.currentmonthdatepcker.Size = new System.Drawing.Size(111, 27);
             this.currentmonthdatepcker.TabIndex = 350;
             // 
             // lastmonthdatepcker
@@ -75,7 +75,7 @@
             this.lastmonthdatepcker.Location = new System.Drawing.Point(176, 126);
             this.lastmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.lastmonthdatepcker.Name = "lastmonthdatepcker";
-            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 23);
+            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 27);
             this.lastmonthdatepcker.TabIndex = 349;
             // 
             // label2
@@ -85,7 +85,7 @@
             this.label2.Location = new System.Drawing.Point(343, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(157, 21);
             this.label2.TabIndex = 348;
             this.label2.Text = "Current Month Date";
             // 
@@ -96,7 +96,7 @@
             this.label1.Location = new System.Drawing.Point(176, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.Size = new System.Drawing.Size(133, 21);
             this.label1.TabIndex = 347;
             this.label1.Text = "Last Month Date";
             // 
@@ -121,6 +121,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 356;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // slctbtn
             // 
@@ -143,7 +144,7 @@
             this.label5.Location = new System.Drawing.Point(163, 183);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.Size = new System.Drawing.Size(134, 21);
             this.label5.TabIndex = 358;
             this.label5.Text = "Available Groups";
             // 
@@ -213,7 +214,7 @@
             // 
             // Sales_Month_Comparison_Product_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(696, 424);
@@ -232,10 +233,11 @@
             this.Controls.Add(this.datesearch);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sales_Month_Comparison_Product_Wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Month_Comparison_Product_Wise";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.datesearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

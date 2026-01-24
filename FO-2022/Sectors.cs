@@ -185,8 +185,8 @@ namespace FO_2022
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.Show();
+            //Mainform1 mainform1 = new Mainform1();
+            //mainform1.Show();
         }
 
         private void Sectors_Load(object sender, EventArgs e)
