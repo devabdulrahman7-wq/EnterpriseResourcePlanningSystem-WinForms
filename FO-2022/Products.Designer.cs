@@ -118,7 +118,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(643, 318);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(379, 23);
             this.textBox1.TabIndex = 315;
@@ -128,7 +128,7 @@
             // 
             this.dataGridViewavlblepkng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewavlblepkng.Location = new System.Drawing.Point(644, 350);
-            this.dataGridViewavlblepkng.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewavlblepkng.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewavlblepkng.Name = "dataGridViewavlblepkng";
             this.dataGridViewavlblepkng.RowHeadersWidth = 51;
             this.dataGridViewavlblepkng.Size = new System.Drawing.Size(377, 500);
@@ -139,7 +139,7 @@
             // 
             this.slctprdctgrpcomboBox1.FormattingEnabled = true;
             this.slctprdctgrpcomboBox1.Location = new System.Drawing.Point(797, 215);
-            this.slctprdctgrpcomboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.slctprdctgrpcomboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.slctprdctgrpcomboBox1.Name = "slctprdctgrpcomboBox1";
             this.slctprdctgrpcomboBox1.Size = new System.Drawing.Size(199, 24);
             this.slctprdctgrpcomboBox1.TabIndex = 334;
@@ -149,7 +149,7 @@
             // 
             this.slctcmpnycombobox.FormattingEnabled = true;
             this.slctcmpnycombobox.Location = new System.Drawing.Point(619, 215);
-            this.slctcmpnycombobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.slctcmpnycombobox.Margin = new System.Windows.Forms.Padding(4);
             this.slctcmpnycombobox.Name = "slctcmpnycombobox";
             this.slctcmpnycombobox.Size = new System.Drawing.Size(169, 24);
             this.slctcmpnycombobox.TabIndex = 333;
@@ -192,7 +192,7 @@
             // 
             this.srchprdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.srchprdctnametxtbox.Location = new System.Drawing.Point(619, 281);
-            this.srchprdctnametxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.srchprdctnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.srchprdctnametxtbox.Multiline = true;
             this.srchprdctnametxtbox.Name = "srchprdctnametxtbox";
             this.srchprdctnametxtbox.Size = new System.Drawing.Size(379, 25);
@@ -202,7 +202,7 @@
             // 
             this.grpnamecomboBox.FormattingEnabled = true;
             this.grpnamecomboBox.Location = new System.Drawing.Point(165, 240);
-            this.grpnamecomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpnamecomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.grpnamecomboBox.Name = "grpnamecomboBox";
             this.grpnamecomboBox.Size = new System.Drawing.Size(343, 24);
             this.grpnamecomboBox.TabIndex = 342;
@@ -212,7 +212,7 @@
             // 
             this.cmpnynamecombobox1.FormattingEnabled = true;
             this.cmpnynamecombobox1.Location = new System.Drawing.Point(11, 108);
-            this.cmpnynamecombobox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmpnynamecombobox1.Margin = new System.Windows.Forms.Padding(4);
             this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
             this.cmpnynamecombobox1.Size = new System.Drawing.Size(297, 24);
             this.cmpnynamecombobox1.TabIndex = 341;
@@ -222,7 +222,7 @@
             // 
             this.ptdcidttxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ptdcidttxtbox1.Location = new System.Drawing.Point(11, 170);
-            this.ptdcidttxtbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ptdcidttxtbox1.Margin = new System.Windows.Forms.Padding(5);
             this.ptdcidttxtbox1.Name = "ptdcidttxtbox1";
             this.ptdcidttxtbox1.Size = new System.Drawing.Size(152, 15);
             this.ptdcidttxtbox1.TabIndex = 340;
@@ -265,7 +265,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(211, 201);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(299, 15);
             this.textBox2.TabIndex = 343;
@@ -285,7 +285,7 @@
             // 
             this.subgrpnamecomboBox.FormattingEnabled = true;
             this.subgrpnamecomboBox.Location = new System.Drawing.Point(165, 281);
-            this.subgrpnamecomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subgrpnamecomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.subgrpnamecomboBox.Name = "subgrpnamecomboBox";
             this.subgrpnamecomboBox.Size = new System.Drawing.Size(343, 24);
             this.subgrpnamecomboBox.TabIndex = 346;
@@ -306,7 +306,7 @@
             // 
             this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctnametxtbox.Location = new System.Drawing.Point(211, 175);
-            this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.prdctnametxtbox.Name = "prdctnametxtbox";
             this.prdctnametxtbox.Size = new System.Drawing.Size(299, 15);
             this.prdctnametxtbox.TabIndex = 348;
@@ -327,7 +327,7 @@
             // 
             this.notxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.notxtbox.Location = new System.Drawing.Point(324, 112);
-            this.notxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.notxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.notxtbox.Name = "notxtbox";
             this.notxtbox.Size = new System.Drawing.Size(128, 15);
             this.notxtbox.TabIndex = 350;
@@ -337,7 +337,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(43, 314);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(467, 183);
@@ -348,7 +348,7 @@
             // 
             this.purchasepackcombobox.FormattingEnabled = true;
             this.purchasepackcombobox.Location = new System.Drawing.Point(43, 540);
-            this.purchasepackcombobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.purchasepackcombobox.Margin = new System.Windows.Forms.Padding(4);
             this.purchasepackcombobox.Name = "purchasepackcombobox";
             this.purchasepackcombobox.Size = new System.Drawing.Size(129, 24);
             this.purchasepackcombobox.TabIndex = 353;
@@ -369,7 +369,7 @@
             // 
             this.packinloseweighttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.packinloseweighttxtbox.Location = new System.Drawing.Point(324, 542);
-            this.packinloseweighttxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.packinloseweighttxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.packinloseweighttxtbox.Multiline = true;
             this.packinloseweighttxtbox.Name = "packinloseweighttxtbox";
             this.packinloseweighttxtbox.Size = new System.Drawing.Size(175, 25);
@@ -421,9 +421,9 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Location = new System.Drawing.Point(27, 601);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(356, 110);
             this.groupBox1.TabIndex = 361;
             this.groupBox1.TabStop = false;
@@ -432,7 +432,7 @@
             // 
             this.putchasediscvaltxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.putchasediscvaltxtbox2.Location = new System.Drawing.Point(223, 81);
-            this.putchasediscvaltxtbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.putchasediscvaltxtbox2.Margin = new System.Windows.Forms.Padding(5);
             this.putchasediscvaltxtbox2.Name = "putchasediscvaltxtbox2";
             this.putchasediscvaltxtbox2.Size = new System.Drawing.Size(128, 15);
             this.putchasediscvaltxtbox2.TabIndex = 367;
@@ -442,7 +442,7 @@
             // 
             this.saledisctxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saledisctxtbox2.Location = new System.Drawing.Point(223, 54);
-            this.saledisctxtbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.saledisctxtbox2.Margin = new System.Windows.Forms.Padding(5);
             this.saledisctxtbox2.Name = "saledisctxtbox2";
             this.saledisctxtbox2.Size = new System.Drawing.Size(128, 15);
             this.saledisctxtbox2.TabIndex = 366;
@@ -452,7 +452,7 @@
             // 
             this.salepricetxtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salepricetxtbox2.Location = new System.Drawing.Point(223, 20);
-            this.salepricetxtbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.salepricetxtbox2.Margin = new System.Windows.Forms.Padding(5);
             this.salepricetxtbox2.Name = "salepricetxtbox2";
             this.salepricetxtbox2.Size = new System.Drawing.Size(128, 15);
             this.salepricetxtbox2.TabIndex = 365;
@@ -462,7 +462,7 @@
             // 
             this.purchasediscvaltxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.purchasediscvaltxtbox1.Location = new System.Drawing.Point(84, 81);
-            this.purchasediscvaltxtbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.purchasediscvaltxtbox1.Margin = new System.Windows.Forms.Padding(5);
             this.purchasediscvaltxtbox1.Name = "purchasediscvaltxtbox1";
             this.purchasediscvaltxtbox1.Size = new System.Drawing.Size(128, 15);
             this.purchasediscvaltxtbox1.TabIndex = 364;
@@ -472,7 +472,7 @@
             // 
             this.purchasedisctxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.purchasedisctxtbox1.Location = new System.Drawing.Point(84, 54);
-            this.purchasedisctxtbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.purchasedisctxtbox1.Margin = new System.Windows.Forms.Padding(5);
             this.purchasedisctxtbox1.Name = "purchasedisctxtbox1";
             this.purchasedisctxtbox1.Size = new System.Drawing.Size(128, 15);
             this.purchasedisctxtbox1.TabIndex = 363;
@@ -482,7 +482,7 @@
             // 
             this.purchasepricetxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.purchasepricetxtbox1.Location = new System.Drawing.Point(84, 20);
-            this.purchasepricetxtbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.purchasepricetxtbox1.Margin = new System.Windows.Forms.Padding(5);
             this.purchasepricetxtbox1.Name = "purchasepricetxtbox1";
             this.purchasepricetxtbox1.Size = new System.Drawing.Size(128, 15);
             this.purchasepricetxtbox1.TabIndex = 362;
@@ -542,9 +542,9 @@
             this.groupBox2.Controls.Add(this.sttxtbox);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(391, 601);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(236, 110);
             this.groupBox2.TabIndex = 364;
             this.groupBox2.TabStop = false;
@@ -552,7 +552,7 @@
             // retailpricetxtbox
             // 
             this.retailpricetxtbox.Location = new System.Drawing.Point(104, 26);
-            this.retailpricetxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.retailpricetxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.retailpricetxtbox.Multiline = true;
             this.retailpricetxtbox.Name = "retailpricetxtbox";
             this.retailpricetxtbox.Size = new System.Drawing.Size(121, 24);
@@ -595,7 +595,7 @@
             // 
             this.stvaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stvaltxtbox.Location = new System.Drawing.Point(99, 86);
-            this.stvaltxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.stvaltxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.stvaltxtbox.Name = "stvaltxtbox";
             this.stvaltxtbox.Size = new System.Drawing.Size(128, 20);
             this.stvaltxtbox.TabIndex = 370;
@@ -605,7 +605,7 @@
             // 
             this.sttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sttxtbox.Location = new System.Drawing.Point(99, 59);
-            this.sttxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.sttxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.sttxtbox.Name = "sttxtbox";
             this.sttxtbox.Size = new System.Drawing.Size(128, 20);
             this.sttxtbox.TabIndex = 369;
@@ -616,7 +616,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(356, 753);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(240, 25);
             this.checkBox1.TabIndex = 365;
@@ -627,7 +627,7 @@
             // 
             this.stockalertleveltxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stockalertleveltxt.Location = new System.Drawing.Point(184, 753);
-            this.stockalertleveltxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.stockalertleveltxt.Margin = new System.Windows.Forms.Padding(5);
             this.stockalertleveltxt.Multiline = true;
             this.stockalertleveltxt.Name = "stockalertleveltxt";
             this.stockalertleveltxt.Size = new System.Drawing.Size(148, 25);
@@ -637,7 +637,7 @@
             // 
             this.orderstocktxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orderstocktxtbox.Location = new System.Drawing.Point(184, 788);
-            this.orderstocktxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.orderstocktxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.orderstocktxtbox.Multiline = true;
             this.orderstocktxtbox.Name = "orderstocktxtbox";
             this.orderstocktxtbox.Size = new System.Drawing.Size(148, 25);
@@ -648,7 +648,7 @@
             // 
             this.barcodetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.barcodetxtbox.Location = new System.Drawing.Point(184, 822);
-            this.barcodetxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barcodetxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.barcodetxtbox.Multiline = true;
             this.barcodetxtbox.Name = "barcodetxtbox";
             this.barcodetxtbox.Size = new System.Drawing.Size(148, 25);
@@ -706,7 +706,7 @@
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newbtn.Location = new System.Drawing.Point(152, 865);
-            this.newbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.newbtn.Margin = new System.Windows.Forms.Padding(5);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(100, 34);
             this.newbtn.TabIndex = 380;
@@ -721,7 +721,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(704, 865);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(100, 34);
             this.closebtn.TabIndex = 379;
@@ -736,7 +736,7 @@
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removebtn.Location = new System.Drawing.Point(373, 865);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(5);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(100, 34);
             this.removebtn.TabIndex = 378;
@@ -751,7 +751,7 @@
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editbtn.Location = new System.Drawing.Point(263, 865);
-            this.editbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(5);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(100, 34);
             this.editbtn.TabIndex = 377;
@@ -766,7 +766,7 @@
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearbtn.Location = new System.Drawing.Point(593, 865);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(5);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(100, 34);
             this.clearbtn.TabIndex = 376;
@@ -781,7 +781,7 @@
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savebtn.Location = new System.Drawing.Point(483, 865);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(5);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(100, 34);
             this.savebtn.TabIndex = 375;
@@ -793,7 +793,7 @@
             // 
             this.genbarcodetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.genbarcodetxtbox.Location = new System.Drawing.Point(499, 830);
-            this.genbarcodetxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.genbarcodetxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.genbarcodetxtbox.Multiline = true;
             this.genbarcodetxtbox.Name = "genbarcodetxtbox";
             this.genbarcodetxtbox.Size = new System.Drawing.Size(133, 20);
@@ -815,7 +815,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(991, -1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -827,7 +827,7 @@
             // 
             this.salepackcombobox.FormattingEnabled = true;
             this.salepackcombobox.Location = new System.Drawing.Point(184, 540);
-            this.salepackcombobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.salepackcombobox.Margin = new System.Windows.Forms.Padding(4);
             this.salepackcombobox.Name = "salepackcombobox";
             this.salepackcombobox.Size = new System.Drawing.Size(129, 24);
             this.salepackcombobox.TabIndex = 357;
@@ -890,7 +890,7 @@
             this.Controls.Add(this.dataGridViewavlblepkng);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "stockalertlvltxtbox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products";

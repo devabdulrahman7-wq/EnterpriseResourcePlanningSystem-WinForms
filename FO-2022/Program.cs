@@ -29,10 +29,6 @@ namespace FO_2022
                 Application.Run(new Mainform1());
             }
         }
-            
-        
-
-
     }
 
 }
