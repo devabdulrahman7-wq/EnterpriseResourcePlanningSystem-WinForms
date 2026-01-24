@@ -74,6 +74,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 529;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -82,7 +83,7 @@
             this.label2.Location = new System.Drawing.Point(212, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 32);
+            this.label2.Size = new System.Drawing.Size(480, 42);
             this.label2.TabIndex = 528;
             this.label2.Text = "Bank Cheques Reconciliation";
             // 
@@ -92,7 +93,7 @@
             this.label7.Location = new System.Drawing.Point(20, 106);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(104, 21);
             this.label7.TabIndex = 541;
             this.label7.Text = "Bank A/C No";
             // 
@@ -113,7 +114,7 @@
             this.label6.Location = new System.Drawing.Point(194, 106);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
+            this.label6.Size = new System.Drawing.Size(159, 21);
             this.label6.TabIndex = 539;
             this.label6.Text = "Bank Account Name";
             // 
@@ -157,7 +158,7 @@
             this.unreconciledradiobtn.AutoSize = true;
             this.unreconciledradiobtn.Location = new System.Drawing.Point(192, 19);
             this.unreconciledradiobtn.Name = "unreconciledradiobtn";
-            this.unreconciledradiobtn.Size = new System.Drawing.Size(108, 20);
+            this.unreconciledradiobtn.Size = new System.Drawing.Size(140, 25);
             this.unreconciledradiobtn.TabIndex = 3;
             this.unreconciledradiobtn.TabStop = true;
             this.unreconciledradiobtn.Text = "Un_Reconciled";
@@ -169,7 +170,7 @@
             this.lostradiobtn.AutoSize = true;
             this.lostradiobtn.Location = new System.Drawing.Point(315, 18);
             this.lostradiobtn.Name = "lostradiobtn";
-            this.lostradiobtn.Size = new System.Drawing.Size(48, 20);
+            this.lostradiobtn.Size = new System.Drawing.Size(62, 25);
             this.lostradiobtn.TabIndex = 2;
             this.lostradiobtn.TabStop = true;
             this.lostradiobtn.Text = "Lost";
@@ -181,7 +182,7 @@
             this.reconciledradiobtn.AutoSize = true;
             this.reconciledradiobtn.Location = new System.Drawing.Point(81, 19);
             this.reconciledradiobtn.Name = "reconciledradiobtn";
-            this.reconciledradiobtn.Size = new System.Drawing.Size(86, 20);
+            this.reconciledradiobtn.Size = new System.Drawing.Size(111, 25);
             this.reconciledradiobtn.TabIndex = 1;
             this.reconciledradiobtn.TabStop = true;
             this.reconciledradiobtn.Text = "Reconciled";
@@ -193,7 +194,7 @@
             this.allradiobtn.AutoSize = true;
             this.allradiobtn.Location = new System.Drawing.Point(12, 19);
             this.allradiobtn.Name = "allradiobtn";
-            this.allradiobtn.Size = new System.Drawing.Size(39, 20);
+            this.allradiobtn.Size = new System.Drawing.Size(50, 25);
             this.allradiobtn.TabIndex = 0;
             this.allradiobtn.TabStop = true;
             this.allradiobtn.Text = "All";
@@ -214,6 +215,7 @@
             this.Column8});
             this.availablechequegrid.Location = new System.Drawing.Point(23, 195);
             this.availablechequegrid.Name = "availablechequegrid";
+            this.availablechequegrid.RowHeadersWidth = 51;
             this.availablechequegrid.Size = new System.Drawing.Size(838, 270);
             this.availablechequegrid.TabIndex = 544;
             this.availablechequegrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablechequegrid_CellClick);
@@ -222,45 +224,56 @@
             // Column1
             // 
             this.Column1.HeaderText = "Voucher No";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Voucher Date";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cheque No";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Cheque Date";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 115;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 75;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Narration";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Reconcile Date";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 115;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Lost";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Width = 65;
             // 
@@ -284,7 +297,7 @@
             this.txtbox.Location = new System.Drawing.Point(604, 473);
             this.txtbox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.txtbox.Name = "txtbox";
-            this.txtbox.Size = new System.Drawing.Size(121, 16);
+            this.txtbox.Size = new System.Drawing.Size(159, 21);
             this.txtbox.TabIndex = 547;
             this.txtbox.Text = "Reconciled Balance:";
             // 
@@ -314,7 +327,7 @@
             this.label3.Location = new System.Drawing.Point(585, 506);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 16);
+            this.label3.Size = new System.Drawing.Size(188, 21);
             this.label3.TabIndex = 549;
             this.label3.Text = "Un_Reconciled Balance:";
             // 
@@ -365,7 +378,7 @@
             // 
             // Bank_Cheques_Reconciliation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(881, 593);
@@ -392,6 +405,7 @@
             this.Name = "Bank_Cheques_Reconciliation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Cheques_Reconciliation";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Bank_Cheques_Reconciliation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();

@@ -55,7 +55,7 @@
             this.label2.Location = new System.Drawing.Point(78, 170);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 299;
             this.label2.Text = "To Date";
             // 
@@ -65,7 +65,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(78, 139);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepcker.Size = new System.Drawing.Size(89, 21);
             this.fromdatepcker.TabIndex = 298;
             this.fromdatepcker.Text = "From Date";
             // 
@@ -75,7 +75,7 @@
             this.todatepcker.Location = new System.Drawing.Point(255, 165);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(218, 23);
+            this.todatepcker.Size = new System.Drawing.Size(218, 27);
             this.todatepcker.TabIndex = 297;
             // 
             // dateTimePicker1
@@ -84,7 +84,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(255, 134);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(218, 27);
             this.dateTimePicker1.TabIndex = 296;
             // 
             // groupBox1
@@ -102,7 +102,7 @@
             this.detailbtn.AutoSize = true;
             this.detailbtn.Location = new System.Drawing.Point(136, 22);
             this.detailbtn.Name = "detailbtn";
-            this.detailbtn.Size = new System.Drawing.Size(63, 20);
+            this.detailbtn.Size = new System.Drawing.Size(83, 25);
             this.detailbtn.TabIndex = 1;
             this.detailbtn.TabStop = true;
             this.detailbtn.Text = "Details";
@@ -113,7 +113,7 @@
             this.shortbtn.AutoSize = true;
             this.shortbtn.Location = new System.Drawing.Point(6, 22);
             this.shortbtn.Name = "shortbtn";
-            this.shortbtn.Size = new System.Drawing.Size(56, 20);
+            this.shortbtn.Size = new System.Drawing.Size(70, 25);
             this.shortbtn.TabIndex = 0;
             this.shortbtn.TabStop = true;
             this.shortbtn.Text = "Short";
@@ -135,7 +135,7 @@
             this.label3.Location = new System.Drawing.Point(78, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 16);
+            this.label3.Size = new System.Drawing.Size(219, 21);
             this.label3.TabIndex = 307;
             this.label3.Text = "Having balance greater than";
             // 
@@ -145,7 +145,7 @@
             this.label4.Location = new System.Drawing.Point(78, 250);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 308;
             this.label4.Text = "Category";
             // 
@@ -154,7 +154,7 @@
             this.ctgrycombobox.FormattingEnabled = true;
             this.ctgrycombobox.Location = new System.Drawing.Point(255, 241);
             this.ctgrycombobox.Name = "ctgrycombobox";
-            this.ctgrycombobox.Size = new System.Drawing.Size(219, 24);
+            this.ctgrycombobox.Size = new System.Drawing.Size(219, 27);
             this.ctgrycombobox.TabIndex = 309;
             // 
             // previewbtn
@@ -207,7 +207,7 @@
             this.label5.Location = new System.Drawing.Point(232, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(242, 33);
+            this.label5.Size = new System.Drawing.Size(309, 42);
             this.label5.TabIndex = 313;
             this.label5.Text = "Account Receivable";
             // 
@@ -225,7 +225,7 @@
             // 
             // Account_Receivable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(580, 466);
@@ -249,6 +249,7 @@
             this.Name = "Account_Receivable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account_Receivable";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

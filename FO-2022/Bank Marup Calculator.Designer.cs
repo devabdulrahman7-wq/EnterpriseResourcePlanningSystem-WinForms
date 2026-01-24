@@ -61,7 +61,7 @@
             this.todate.Location = new System.Drawing.Point(158, 158);
             this.todate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 330;
             this.todate.Text = "To Date";
             // 
@@ -71,7 +71,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(158, 116);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 329;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -81,7 +81,7 @@
             this.todatepcker.Location = new System.Drawing.Point(243, 158);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(245, 23);
+            this.todatepcker.Size = new System.Drawing.Size(245, 27);
             this.todatepcker.TabIndex = 328;
             // 
             // fromdatepcker
@@ -90,7 +90,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(243, 116);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(245, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(245, 27);
             this.fromdatepcker.TabIndex = 327;
             // 
             // banknametxtbox
@@ -130,7 +130,7 @@
             this.a.Location = new System.Drawing.Point(294, 203);
             this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(96, 16);
+            this.a.Size = new System.Drawing.Size(127, 21);
             this.a.TabIndex = 323;
             this.a.Text = "Bank A/C Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@
             this.label1.Location = new System.Drawing.Point(158, 203);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(104, 21);
             this.label1.TabIndex = 322;
             this.label1.Text = "Bank A/C No";
             // 
@@ -190,7 +190,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(157, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 336;
             this.label2.Text = "Rate ";
             // 
@@ -199,7 +199,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(158, 303);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 337;
             this.label3.Text = "Days";
             // 
@@ -208,7 +208,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(158, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 338;
             this.label4.Text = "Amount";
             // 
@@ -217,7 +217,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(158, 359);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.Size = new System.Drawing.Size(49, 21);
             this.label5.TabIndex = 339;
             this.label5.Text = "Ratio";
             // 
@@ -228,7 +228,7 @@
             this.label6.Location = new System.Drawing.Point(155, 39);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(324, 32);
+            this.label6.Size = new System.Drawing.Size(420, 42);
             this.label6.TabIndex = 340;
             this.label6.Text = "Bank Markup Calculator";
             // 
@@ -285,10 +285,11 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 344;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Bank_Marup_Calculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(673, 490);
@@ -321,6 +322,7 @@
             this.Name = "Bank_Marup_Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Marup_Calculator";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

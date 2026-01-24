@@ -134,7 +134,7 @@
             this.a.Location = new System.Drawing.Point(349, 154);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(81, 16);
+            this.a.Size = new System.Drawing.Size(105, 21);
             this.a.TabIndex = 479;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             this.label1.Location = new System.Drawing.Point(189, 154);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 478;
             this.label1.Text = "Sector ID";
             // 
@@ -159,6 +159,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 491;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -167,7 +168,7 @@
             this.label2.Location = new System.Drawing.Point(259, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 32);
+            this.label2.Size = new System.Drawing.Size(220, 42);
             this.label2.TabIndex = 490;
             this.label2.Text = "Dead Parties";
             // 
@@ -177,7 +178,7 @@
             this.todate.Location = new System.Drawing.Point(349, 105);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 489;
             this.todate.Text = "To Date";
             // 
@@ -187,7 +188,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(189, 105);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 488;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -197,7 +198,7 @@
             this.todatepcker.Location = new System.Drawing.Point(348, 126);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 487;
             // 
             // fromdatepcker
@@ -206,7 +207,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(185, 126);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 486;
             // 
             // listView1
@@ -231,7 +232,7 @@
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBox1.Location = new System.Drawing.Point(185, 372);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(214, 20);
+            this.checkBox1.Size = new System.Drawing.Size(275, 25);
             this.checkBox1.TabIndex = 493;
             this.checkBox1.Text = "Having balance greater than zero";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -243,7 +244,7 @@
             this.label3.Location = new System.Drawing.Point(182, 405);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 18);
+            this.label3.Size = new System.Drawing.Size(63, 23);
             this.label3.TabIndex = 494;
             this.label3.Text = "Note:";
             // 
@@ -254,7 +255,7 @@
             this.label4.Location = new System.Drawing.Point(182, 433);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(350, 64);
+            this.label4.Size = new System.Drawing.Size(458, 84);
             this.label4.TabIndex = 495;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -277,13 +278,13 @@
             this.label5.Location = new System.Drawing.Point(189, 224);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
+            this.label5.Size = new System.Drawing.Size(82, 21);
             this.label5.TabIndex = 497;
             this.label5.Text = "Town List";
             // 
             // Dead_Parties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(788, 591);
@@ -313,6 +314,7 @@
             this.Name = "Dead_Parties";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dead_Parties";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

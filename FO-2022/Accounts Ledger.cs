@@ -437,5 +437,10 @@ namespace FO_2022
         private void datebwbtn_CheckedChanged(object sender, EventArgs e) { }
         private void daybtn_CheckedChanged(object sender, EventArgs e) { }
         private void todaybtn_CheckedChanged(object sender, EventArgs e) { }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

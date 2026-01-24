@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Asad Umair Traders");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Happy");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Mux");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Nice");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Purchase");
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Smart Food");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Tastoo");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Asad Umair Traders");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Happy");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Mux");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Nice");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Purchase");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Smart Food");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Tastoo");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Current_Stock));
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -101,9 +101,9 @@
             // 
             this.cmpnylist.CheckBoxes = true;
             this.cmpnylist.HideSelection = false;
-            listViewItem8.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.cmpnylist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem8});
+            listViewItem1});
             this.cmpnylist.Location = new System.Drawing.Point(238, 121);
             this.cmpnylist.Name = "cmpnylist";
             this.cmpnylist.Size = new System.Drawing.Size(180, 213);
@@ -127,7 +127,7 @@
             this.salebtn.AutoSize = true;
             this.salebtn.Location = new System.Drawing.Point(6, 70);
             this.salebtn.Name = "salebtn";
-            this.salebtn.Size = new System.Drawing.Size(100, 20);
+            this.salebtn.Size = new System.Drawing.Size(126, 25);
             this.salebtn.TabIndex = 2;
             this.salebtn.TabStop = true;
             this.salebtn.Text = "View on Sale";
@@ -138,7 +138,7 @@
             this.purchasebtn.AutoSize = true;
             this.purchasebtn.Location = new System.Drawing.Point(6, 44);
             this.purchasebtn.Name = "purchasebtn";
-            this.purchasebtn.Size = new System.Drawing.Size(127, 20);
+            this.purchasebtn.Size = new System.Drawing.Size(162, 25);
             this.purchasebtn.TabIndex = 1;
             this.purchasebtn.TabStop = true;
             this.purchasebtn.Text = "View on Purchase";
@@ -149,7 +149,7 @@
             this.costbtn.AutoSize = true;
             this.costbtn.Location = new System.Drawing.Point(6, 18);
             this.costbtn.Name = "costbtn";
-            this.costbtn.Size = new System.Drawing.Size(100, 20);
+            this.costbtn.Size = new System.Drawing.Size(128, 25);
             this.costbtn.TabIndex = 0;
             this.costbtn.TabStop = true;
             this.costbtn.Text = "View on Cost";
@@ -162,7 +162,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(239, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 478;
             this.label2.Text = "Select Company";
             // 
@@ -173,7 +173,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(433, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.Size = new System.Drawing.Size(104, 21);
             this.label1.TabIndex = 479;
             this.label1.Text = "Select Group";
             // 
@@ -181,19 +181,19 @@
             // 
             this.grplist.CheckBoxes = true;
             this.grplist.HideSelection = false;
-            listViewItem9.StateImageIndex = 0;
-            listViewItem10.StateImageIndex = 0;
-            listViewItem11.StateImageIndex = 0;
-            listViewItem12.StateImageIndex = 0;
-            listViewItem13.StateImageIndex = 0;
-            listViewItem14.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
             this.grplist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14});
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
             this.grplist.Location = new System.Drawing.Point(436, 121);
             this.grplist.Name = "grplist";
             this.grplist.Size = new System.Drawing.Size(190, 213);
@@ -210,6 +210,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 482;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -217,7 +218,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(277, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 32);
+            this.label3.Size = new System.Drawing.Size(241, 42);
             this.label3.TabIndex = 481;
             this.label3.Text = "Current Stock";
             // 
@@ -254,7 +255,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(433, 337);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 16);
+            this.label4.Size = new System.Drawing.Size(121, 21);
             this.label4.TabIndex = 485;
             this.label4.Text = "No of Groups:6";
             // 
@@ -265,13 +266,13 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(239, 337);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 16);
+            this.label5.Size = new System.Drawing.Size(155, 21);
             this.label5.TabIndex = 486;
             this.label5.Text = "No of Companies: 1";
             // 
             // Current_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(726, 455);
@@ -295,6 +296,7 @@
             this.Name = "Current_Stock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Current_Stock";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Current_Stock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

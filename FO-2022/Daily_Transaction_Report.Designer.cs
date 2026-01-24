@@ -46,7 +46,7 @@
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(290, 171);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(96, 23);
+            this.todatepcker.Size = new System.Drawing.Size(96, 27);
             this.todatepcker.TabIndex = 281;
             // 
             // fromdatepcker
@@ -54,7 +54,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(150, 171);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(104, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(104, 27);
             this.fromdatepcker.TabIndex = 280;
             // 
             // label15
@@ -63,7 +63,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(115, 44);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(313, 31);
+            this.label15.Size = new System.Drawing.Size(384, 38);
             this.label15.TabIndex = 279;
             this.label15.Text = "Daily Transaction Report";
             // 
@@ -73,7 +73,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(291, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 278;
             this.label2.Text = "To Date";
             // 
@@ -83,7 +83,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(153, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 277;
             this.label1.Text = "From Date ";
             // 
@@ -96,6 +96,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 282;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // previewbtn
             // 
@@ -139,7 +140,7 @@
             // 
             // Daily_Transaction_Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(545, 414);
@@ -158,6 +159,7 @@
             this.Name = "Daily_Transaction_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily_Transaction_Report";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

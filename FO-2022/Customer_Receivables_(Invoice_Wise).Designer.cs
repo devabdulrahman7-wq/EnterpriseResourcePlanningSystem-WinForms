@@ -83,7 +83,7 @@
             this.label3.Location = new System.Drawing.Point(290, 131);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(99, 21);
             this.label3.TabIndex = 411;
             this.label3.Text = "Town Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +94,7 @@
             this.label4.Location = new System.Drawing.Point(131, 131);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 410;
             this.label4.Text = "Town ID";
             // 
@@ -107,6 +107,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 416;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label15
             // 
@@ -114,7 +115,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(152, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(274, 62);
+            this.label15.Size = new System.Drawing.Size(338, 76);
             this.label15.TabIndex = 415;
             this.label15.Text = "Customer Receivables\r\n(Invoice Sale)";
             // 
@@ -174,7 +175,7 @@
             this.label1.Location = new System.Drawing.Point(133, 216);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(57, 21);
             this.label1.TabIndex = 421;
             this.label1.Text = "Sector";
             // 
@@ -193,7 +194,7 @@
             // 
             // Customer_Receivables__Invoice_Wise_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(607, 502);
@@ -216,6 +217,7 @@
             this.Name = "Customer_Receivables__Invoice_Wise_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Receivables__Invoice_Wise_";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

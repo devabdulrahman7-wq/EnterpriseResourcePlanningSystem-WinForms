@@ -63,11 +63,11 @@
             // vouchernotxtbox
             // 
             this.vouchernotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vouchernotxtbox.Location = new System.Drawing.Point(7, 114);
-            this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.vouchernotxtbox.Location = new System.Drawing.Point(9, 140);
+            this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.vouchernotxtbox.Multiline = true;
             this.vouchernotxtbox.Name = "vouchernotxtbox";
-            this.vouchernotxtbox.Size = new System.Drawing.Size(104, 23);
+            this.vouchernotxtbox.Size = new System.Drawing.Size(139, 28);
             this.vouchernotxtbox.TabIndex = 558;
             this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
             // 
@@ -75,10 +75,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 93);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(15, 114);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 14);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 557;
             this.label3.Text = "Voucher No";
             // 
@@ -86,20 +86,20 @@
             // 
             this.todate.AutoSize = true;
             this.todate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate.Location = new System.Drawing.Point(158, 93);
-            this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.todate.Location = new System.Drawing.Point(211, 114);
+            this.todate.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(83, 14);
+            this.todate.Size = new System.Drawing.Size(97, 18);
             this.todate.TabIndex = 556;
             this.todate.Text = "Voucher Date";
             // 
             // voucherdatepcker
             // 
             this.voucherdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.voucherdatepcker.Location = new System.Drawing.Point(161, 114);
-            this.voucherdatepcker.Margin = new System.Windows.Forms.Padding(5);
+            this.voucherdatepcker.Location = new System.Drawing.Point(215, 140);
+            this.voucherdatepcker.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.voucherdatepcker.Name = "voucherdatepcker";
-            this.voucherdatepcker.Size = new System.Drawing.Size(132, 20);
+            this.voucherdatepcker.Size = new System.Drawing.Size(175, 22);
             this.voucherdatepcker.TabIndex = 555;
             this.voucherdatepcker.ValueChanged += new System.EventHandler(this.voucherdatepcker_ValueChanged);
             // 
@@ -109,10 +109,10 @@
             this.totaltxtbox.FlatAppearance.BorderSize = 0;
             this.totaltxtbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totaltxtbox.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totaltxtbox.Location = new System.Drawing.Point(785, 443);
-            this.totaltxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.totaltxtbox.Location = new System.Drawing.Point(1047, 545);
+            this.totaltxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.totaltxtbox.Name = "totaltxtbox";
-            this.totaltxtbox.Size = new System.Drawing.Size(75, 25);
+            this.totaltxtbox.Size = new System.Drawing.Size(100, 31);
             this.totaltxtbox.TabIndex = 554;
             this.totaltxtbox.UseVisualStyleBackColor = false;
             this.totaltxtbox.Click += new System.EventHandler(this.totaltxtbox_Click);
@@ -123,9 +123,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(521, 497);
+            this.printbtn.Location = new System.Drawing.Point(695, 612);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(68, 25);
+            this.printbtn.Size = new System.Drawing.Size(91, 31);
             this.printbtn.TabIndex = 553;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -137,10 +138,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(596, 497);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.closebtn.Location = new System.Drawing.Point(795, 612);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 25);
+            this.closebtn.Size = new System.Drawing.Size(100, 31);
             this.closebtn.TabIndex = 552;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -152,10 +153,10 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(439, 496);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.removebtn.Location = new System.Drawing.Point(585, 610);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(75, 25);
+            this.removebtn.Size = new System.Drawing.Size(100, 31);
             this.removebtn.TabIndex = 551;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
@@ -167,10 +168,10 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(358, 496);
-            this.openbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.openbtn.Location = new System.Drawing.Point(477, 610);
+            this.openbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.openbtn.Name = "openbtn";
-            this.openbtn.Size = new System.Drawing.Size(75, 25);
+            this.openbtn.Size = new System.Drawing.Size(100, 31);
             this.openbtn.TabIndex = 550;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
@@ -182,10 +183,10 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(275, 496);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.clearbtn.Location = new System.Drawing.Point(367, 610);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 25);
+            this.clearbtn.Size = new System.Drawing.Size(100, 31);
             this.clearbtn.TabIndex = 549;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
@@ -197,10 +198,10 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(192, 496);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.savebtn.Location = new System.Drawing.Point(256, 610);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(75, 25);
+            this.savebtn.Size = new System.Drawing.Size(100, 31);
             this.savebtn.TabIndex = 548;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
@@ -209,10 +210,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(687, 452);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Location = new System.Drawing.Point(916, 556);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.Size = new System.Drawing.Size(89, 16);
             this.label7.TabIndex = 547;
             this.label7.Text = "Total Amount:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +221,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 196);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 241);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(851, 244);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1135, 300);
             this.dataGridView1.TabIndex = 546;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -230,10 +233,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(599, 142);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Location = new System.Drawing.Point(799, 175);
+            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 14);
+            this.label6.Size = new System.Drawing.Size(67, 18);
             this.label6.TabIndex = 545;
             this.label6.Text = "Narration";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,10 +245,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(496, 142);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Location = new System.Drawing.Point(661, 175);
+            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 14);
+            this.label5.Size = new System.Drawing.Size(46, 18);
             this.label5.TabIndex = 544;
             this.label5.Text = "Bill No";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,10 +257,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(382, 142);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Location = new System.Drawing.Point(509, 175);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 14);
+            this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 543;
             this.label4.Text = "Amount";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,33 +268,33 @@
             // billnotxtbox
             // 
             this.billnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.billnotxtbox.Location = new System.Drawing.Point(500, 163);
-            this.billnotxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.billnotxtbox.Location = new System.Drawing.Point(667, 201);
+            this.billnotxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.billnotxtbox.Multiline = true;
             this.billnotxtbox.Name = "billnotxtbox";
-            this.billnotxtbox.Size = new System.Drawing.Size(100, 25);
+            this.billnotxtbox.Size = new System.Drawing.Size(133, 31);
             this.billnotxtbox.TabIndex = 542;
             this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // narrationtxtbox
             // 
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.narrationtxtbox.Location = new System.Drawing.Point(604, 163);
-            this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.narrationtxtbox.Location = new System.Drawing.Point(805, 201);
+            this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(254, 25);
+            this.narrationtxtbox.Size = new System.Drawing.Size(339, 31);
             this.narrationtxtbox.TabIndex = 541;
             this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // amounttxtbox
             // 
             this.amounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.amounttxtbox.Location = new System.Drawing.Point(384, 163);
-            this.amounttxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.amounttxtbox.Location = new System.Drawing.Point(512, 201);
+            this.amounttxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.amounttxtbox.Multiline = true;
             this.amounttxtbox.Name = "amounttxtbox";
-            this.amounttxtbox.Size = new System.Drawing.Size(113, 25);
+            this.amounttxtbox.Size = new System.Drawing.Size(151, 31);
             this.amounttxtbox.TabIndex = 540;
             this.amounttxtbox.TextChanged += new System.EventHandler(this.amounttxtbox_TextChanged);
             this.amounttxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.amounttxtbox_KeyDown);
@@ -300,32 +303,32 @@
             // accountnametxtbox
             // 
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnametxtbox.Location = new System.Drawing.Point(159, 163);
-            this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.accountnametxtbox.Location = new System.Drawing.Point(212, 201);
+            this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.accountnametxtbox.Size = new System.Drawing.Size(297, 31);
             this.accountnametxtbox.TabIndex = 539;
             this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountidtxtbox
             // 
             this.accountidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountidtxtbox.Location = new System.Drawing.Point(7, 163);
-            this.accountidtxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.accountidtxtbox.Location = new System.Drawing.Point(9, 201);
+            this.accountidtxtbox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accountidtxtbox.Multiline = true;
             this.accountidtxtbox.Name = "accountidtxtbox";
-            this.accountidtxtbox.Size = new System.Drawing.Size(104, 25);
+            this.accountidtxtbox.Size = new System.Drawing.Size(139, 31);
             this.accountidtxtbox.TabIndex = 538;
             this.accountidtxtbox.TextChanged += new System.EventHandler(this.accountidtxtbox_TextChanged);
             // 
             // accountidsearch
             // 
             this.accountidsearch.Image = ((System.Drawing.Image)(resources.GetObject("accountidsearch.Image")));
-            this.accountidsearch.Location = new System.Drawing.Point(115, 163);
-            this.accountidsearch.Margin = new System.Windows.Forms.Padding(5);
+            this.accountidsearch.Location = new System.Drawing.Point(153, 201);
+            this.accountidsearch.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accountidsearch.Name = "accountidsearch";
-            this.accountidsearch.Size = new System.Drawing.Size(40, 25);
+            this.accountidsearch.Size = new System.Drawing.Size(53, 31);
             this.accountidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.accountidsearch.TabIndex = 537;
             this.accountidsearch.TabStop = false;
@@ -335,10 +338,10 @@
             // 
             this.a.AutoSize = true;
             this.a.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.a.Location = new System.Drawing.Point(158, 142);
-            this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.a.Location = new System.Drawing.Point(211, 175);
+            this.a.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(88, 14);
+            this.a.Size = new System.Drawing.Size(104, 18);
             this.a.TabIndex = 536;
             this.a.Text = "Account Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,41 +350,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(5, 175);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 14);
+            this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 535;
             this.label1.Text = "Account No";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(822, 20);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(1096, 25);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(63, 46);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 534;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(352, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(469, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 32);
+            this.label2.Size = new System.Drawing.Size(244, 42);
             this.label2.TabIndex = 533;
             this.label2.Text = "Debit Voucher";
             // 
             // Debit_Voucher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(872, 542);
+            this.ClientSize = new System.Drawing.Size(1163, 667);
             this.Controls.Add(this.vouchernotxtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.todate);
@@ -409,8 +413,10 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Debit_Voucher";
             this.Text = "Debit_Voucher";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

@@ -1066,5 +1066,10 @@ namespace FO_2022
         {
             clearbtn_Click(sender, e);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

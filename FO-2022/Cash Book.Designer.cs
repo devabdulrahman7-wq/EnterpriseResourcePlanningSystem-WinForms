@@ -53,9 +53,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 21);
+            this.label1.Location = new System.Drawing.Point(161, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 32);
+            this.label1.Size = new System.Drawing.Size(188, 42);
             this.label1.TabIndex = 178;
             this.label1.Text = "Cash Book";
             // 
@@ -65,9 +66,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(107, 388);
+            this.previewbtn.Location = new System.Drawing.Point(143, 478);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(77, 25);
+            this.previewbtn.Size = new System.Drawing.Size(103, 31);
             this.previewbtn.TabIndex = 197;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -79,9 +81,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(273, 388);
+            this.closebtn.Location = new System.Drawing.Point(364, 478);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(77, 25);
+            this.closebtn.Size = new System.Drawing.Size(103, 31);
             this.closebtn.TabIndex = 196;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -93,9 +96,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(190, 388);
+            this.printbtn.Location = new System.Drawing.Point(253, 478);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(77, 25);
+            this.printbtn.Size = new System.Drawing.Size(103, 31);
             this.printbtn.TabIndex = 195;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -105,9 +109,10 @@
             // 
             this.alldatebtn.AutoSize = true;
             this.alldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alldatebtn.Location = new System.Drawing.Point(136, 105);
+            this.alldatebtn.Location = new System.Drawing.Point(181, 129);
+            this.alldatebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(69, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(91, 25);
             this.alldatebtn.TabIndex = 198;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Date";
@@ -117,9 +122,10 @@
             // 
             this.datebwbtn.AutoSize = true;
             this.datebwbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datebwbtn.Location = new System.Drawing.Point(136, 128);
+            this.datebwbtn.Location = new System.Drawing.Point(181, 158);
+            this.datebwbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
             this.datebwbtn.TabIndex = 199;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
@@ -129,9 +135,10 @@
             // 
             this.daybtn.AutoSize = true;
             this.daybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daybtn.Location = new System.Drawing.Point(136, 151);
+            this.daybtn.Location = new System.Drawing.Point(181, 186);
+            this.daybtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(58, 20);
+            this.daybtn.Size = new System.Drawing.Size(76, 25);
             this.daybtn.TabIndex = 200;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
@@ -141,9 +148,10 @@
             // 
             this.todaybtn.AutoSize = true;
             this.todaybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaybtn.Location = new System.Drawing.Point(136, 174);
+            this.todaybtn.Location = new System.Drawing.Point(181, 214);
+            this.todaybtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(60, 20);
+            this.todaybtn.Size = new System.Drawing.Size(76, 25);
             this.todaybtn.TabIndex = 201;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
@@ -153,9 +161,11 @@
             // 
             this.groupBox1.Controls.Add(this.viewlandscapebtn);
             this.groupBox1.Controls.Add(this.viewprntbtn);
-            this.groupBox1.Location = new System.Drawing.Point(123, 200);
+            this.groupBox1.Location = new System.Drawing.Point(164, 246);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(206, 65);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(275, 80);
             this.groupBox1.TabIndex = 202;
             this.groupBox1.TabStop = false;
             // 
@@ -163,9 +173,10 @@
             // 
             this.viewlandscapebtn.AutoSize = true;
             this.viewlandscapebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewlandscapebtn.Location = new System.Drawing.Point(13, 39);
+            this.viewlandscapebtn.Location = new System.Drawing.Point(17, 48);
+            this.viewlandscapebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewlandscapebtn.Name = "viewlandscapebtn";
-            this.viewlandscapebtn.Size = new System.Drawing.Size(117, 20);
+            this.viewlandscapebtn.Size = new System.Drawing.Size(150, 25);
             this.viewlandscapebtn.TabIndex = 1;
             this.viewlandscapebtn.TabStop = true;
             this.viewlandscapebtn.Text = "View Landscape";
@@ -175,9 +186,10 @@
             // 
             this.viewprntbtn.AutoSize = true;
             this.viewprntbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewprntbtn.Location = new System.Drawing.Point(13, 13);
+            this.viewprntbtn.Location = new System.Drawing.Point(17, 16);
+            this.viewprntbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewprntbtn.Name = "viewprntbtn";
-            this.viewprntbtn.Size = new System.Drawing.Size(83, 20);
+            this.viewprntbtn.Size = new System.Drawing.Size(106, 25);
             this.viewprntbtn.TabIndex = 0;
             this.viewprntbtn.TabStop = true;
             this.viewprntbtn.Text = "View Print";
@@ -189,9 +201,11 @@
             this.groupBox2.Controls.Add(this.viewprtrtbtn);
             this.groupBox2.Controls.Add(this.viewlndscpbtn);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(125, 271);
+            this.groupBox2.Location = new System.Drawing.Point(167, 334);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(206, 74);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(275, 91);
             this.groupBox2.TabIndex = 203;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Print Type";
@@ -200,9 +214,10 @@
             // 
             this.viewprtrtbtn.AutoSize = true;
             this.viewprtrtbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewprtrtbtn.Location = new System.Drawing.Point(13, 23);
+            this.viewprtrtbtn.Location = new System.Drawing.Point(17, 28);
+            this.viewprtrtbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewprtrtbtn.Name = "viewprtrtbtn";
-            this.viewprtrtbtn.Size = new System.Drawing.Size(99, 20);
+            this.viewprtrtbtn.Size = new System.Drawing.Size(127, 25);
             this.viewprtrtbtn.TabIndex = 3;
             this.viewprtrtbtn.TabStop = true;
             this.viewprtrtbtn.Text = "View Portrait";
@@ -212,9 +227,10 @@
             // 
             this.viewlndscpbtn.AutoSize = true;
             this.viewlndscpbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewlndscpbtn.Location = new System.Drawing.Point(13, 46);
+            this.viewlndscpbtn.Location = new System.Drawing.Point(17, 57);
+            this.viewlndscpbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewlndscpbtn.Name = "viewlndscpbtn";
-            this.viewlndscpbtn.Size = new System.Drawing.Size(117, 20);
+            this.viewlndscpbtn.Size = new System.Drawing.Size(150, 25);
             this.viewlndscpbtn.TabIndex = 2;
             this.viewlndscpbtn.TabStop = true;
             this.viewlndscpbtn.Text = "View Landscape";
@@ -223,9 +239,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(402, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(536, 1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(53, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 270;
             this.pictureBox2.TabStop = false;
@@ -233,10 +250,10 @@
             // 
             // Cash_Book
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(444, 450);
+            this.ClientSize = new System.Drawing.Size(592, 554);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -249,9 +266,11 @@
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cash_Book";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash_Book";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

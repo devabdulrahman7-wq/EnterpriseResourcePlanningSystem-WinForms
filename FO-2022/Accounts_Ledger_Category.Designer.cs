@@ -51,7 +51,7 @@
             this.todate.Location = new System.Drawing.Point(365, 106);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 390;
             this.todate.Text = "To Date";
             // 
@@ -61,7 +61,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(204, 106);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 389;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -71,7 +71,7 @@
             this.todatepcker.Location = new System.Drawing.Point(368, 130);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 23);
+            this.todatepcker.Size = new System.Drawing.Size(132, 27);
             this.todatepcker.TabIndex = 388;
             // 
             // fromdatepcker
@@ -80,7 +80,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(207, 130);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 387;
             // 
             // pictureBox2
@@ -93,6 +93,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 392;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -101,7 +102,7 @@
             this.label3.Location = new System.Drawing.Point(236, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 31);
+            this.label3.Size = new System.Drawing.Size(263, 38);
             this.label3.TabIndex = 391;
             this.label3.Text = "Accounts Ledger";
             // 
@@ -153,7 +154,7 @@
             this.categorycombobox.FormattingEnabled = true;
             this.categorycombobox.Location = new System.Drawing.Point(207, 185);
             this.categorycombobox.Name = "categorycombobox";
-            this.categorycombobox.Size = new System.Drawing.Size(293, 24);
+            this.categorycombobox.Size = new System.Drawing.Size(293, 27);
             this.categorycombobox.TabIndex = 415;
             // 
             // label1
@@ -162,7 +163,7 @@
             this.label1.Location = new System.Drawing.Point(214, 166);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 416;
             this.label1.Text = "Category";
             // 
@@ -173,7 +174,7 @@
             this.daybtn.Location = new System.Drawing.Point(368, 227);
             this.daybtn.Margin = new System.Windows.Forms.Padding(5);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(61, 20);
+            this.daybtn.Size = new System.Drawing.Size(81, 25);
             this.daybtn.TabIndex = 418;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "Day+1";
@@ -186,7 +187,7 @@
             this.samedaybtn.Location = new System.Drawing.Point(207, 227);
             this.samedaybtn.Margin = new System.Windows.Forms.Padding(5);
             this.samedaybtn.Name = "samedaybtn";
-            this.samedaybtn.Size = new System.Drawing.Size(83, 20);
+            this.samedaybtn.Size = new System.Drawing.Size(106, 25);
             this.samedaybtn.TabIndex = 417;
             this.samedaybtn.TabStop = true;
             this.samedaybtn.Text = "Same Day";
@@ -194,7 +195,7 @@
             // 
             // Accounts_Ledger_Category
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(631, 365);
@@ -217,6 +218,7 @@
             this.Name = "Accounts_Ledger_Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger_Category";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

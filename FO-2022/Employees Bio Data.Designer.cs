@@ -95,7 +95,7 @@
             this.cnicdatepckr.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cnicdatepckr.Location = new System.Drawing.Point(264, 18);
             this.cnicdatepckr.Name = "cnicdatepckr";
-            this.cnicdatepckr.Size = new System.Drawing.Size(261, 32);
+            this.cnicdatepckr.Size = new System.Drawing.Size(333, 42);
             this.cnicdatepckr.TabIndex = 561;
             this.cnicdatepckr.Text = "Employees Bio Data";
             // 
@@ -116,7 +116,7 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(393, 170);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 16);
+            this.label17.Size = new System.Drawing.Size(38, 21);
             this.label17.TabIndex = 583;
             this.label17.Text = "City";
             // 
@@ -136,7 +136,7 @@
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(492, 73);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 16);
+            this.label15.Size = new System.Drawing.Size(76, 21);
             this.label15.TabIndex = 581;
             this.label15.Text = "Address:";
             // 
@@ -166,7 +166,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(94, 73);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 16);
+            this.label6.Size = new System.Drawing.Size(59, 21);
             this.label6.TabIndex = 577;
             this.label6.Text = "Name:";
             // 
@@ -176,7 +176,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(287, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(112, 21);
             this.label5.TabIndex = 576;
             this.label5.Text = "Father Name:";
             // 
@@ -197,7 +197,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 170);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 16);
+            this.label1.Size = new System.Drawing.Size(47, 21);
             this.label1.TabIndex = 585;
             this.label1.Text = "CNIC";
             // 
@@ -218,7 +218,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(143, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.Size = new System.Drawing.Size(92, 21);
             this.label2.TabIndex = 587;
             this.label2.Text = "Eduacation";
             // 
@@ -228,7 +228,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(267, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 589;
             this.label3.Text = "Designation";
             // 
@@ -249,7 +249,7 @@
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(658, 170);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 16);
+            this.label20.Size = new System.Drawing.Size(80, 21);
             this.label20.TabIndex = 593;
             this.label20.Text = "Phone No";
             // 
@@ -270,7 +270,7 @@
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(512, 170);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(63, 16);
+            this.label21.Size = new System.Drawing.Size(83, 21);
             this.label21.TabIndex = 591;
             this.label21.Text = "Mobile No";
             // 
@@ -280,7 +280,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 16);
+            this.label7.Size = new System.Drawing.Size(105, 21);
             this.label7.TabIndex = 595;
             this.label7.Text = "Joining date:";
             // 
@@ -289,7 +289,7 @@
             this.joiningdatetimepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.joiningdatetimepcker.Location = new System.Drawing.Point(4, 90);
             this.joiningdatetimepcker.Name = "joiningdatetimepcker";
-            this.joiningdatetimepcker.Size = new System.Drawing.Size(86, 23);
+            this.joiningdatetimepcker.Size = new System.Drawing.Size(86, 27);
             this.joiningdatetimepcker.TabIndex = 596;
             // 
             // designationcombobox
@@ -297,7 +297,7 @@
             this.designationcombobox.FormattingEnabled = true;
             this.designationcombobox.Location = new System.Drawing.Point(259, 186);
             this.designationcombobox.Name = "designationcombobox";
-            this.designationcombobox.Size = new System.Drawing.Size(121, 24);
+            this.designationcombobox.Size = new System.Drawing.Size(121, 27);
             this.designationcombobox.TabIndex = 597;
             // 
             // employeeidtxtbox
@@ -327,7 +327,7 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 126);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
+            this.label8.Size = new System.Drawing.Size(105, 21);
             this.label8.TabIndex = 598;
             this.label8.Text = "Employee ID";
             // 
@@ -378,7 +378,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(8, 233);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 16);
+            this.label9.Size = new System.Drawing.Size(85, 21);
             this.label9.TabIndex = 605;
             this.label9.Text = "Reference";
             // 
@@ -387,7 +387,7 @@
             this.jobtypecpmbobox.FormattingEnabled = true;
             this.jobtypecpmbobox.Location = new System.Drawing.Point(127, 252);
             this.jobtypecpmbobox.Name = "jobtypecpmbobox";
-            this.jobtypecpmbobox.Size = new System.Drawing.Size(121, 24);
+            this.jobtypecpmbobox.Size = new System.Drawing.Size(121, 27);
             this.jobtypecpmbobox.TabIndex = 608;
             this.jobtypecpmbobox.SelectedIndexChanged += new System.EventHandler(this.jobtypecpmbobox_SelectedIndexChanged);
             // 
@@ -397,7 +397,7 @@
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(138, 233);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 16);
+            this.label10.Size = new System.Drawing.Size(76, 21);
             this.label10.TabIndex = 607;
             this.label10.Text = "Job Type";
             // 
@@ -418,7 +418,7 @@
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(378, 232);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 16);
+            this.label11.Size = new System.Drawing.Size(170, 21);
             this.label11.TabIndex = 609;
             this.label11.Text = "Yearly leaves allowed";
             // 
@@ -439,7 +439,7 @@
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(256, 232);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 16);
+            this.label12.Size = new System.Drawing.Size(55, 21);
             this.label12.TabIndex = 611;
             this.label12.Text = "Salary";
             // 
@@ -448,6 +448,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 316);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(544, 263);
             this.dataGridView1.TabIndex = 613;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -460,7 +461,7 @@
             this.textBox12.Location = new System.Drawing.Point(7, 292);
             this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(543, 19);
+            this.textBox12.Size = new System.Drawing.Size(543, 23);
             this.textBox12.TabIndex = 614;
             this.textBox12.Text = "                        Available Employees";
             // 
@@ -616,7 +617,7 @@
             this.label18.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(41, 80);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(116, 19);
+            this.label18.Size = new System.Drawing.Size(141, 24);
             this.label18.TabIndex = 627;
             this.label18.Text = "Party Status:";
             // 
@@ -626,7 +627,7 @@
             this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(124, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 16);
+            this.label16.Size = new System.Drawing.Size(100, 21);
             this.label16.TabIndex = 626;
             this.label16.Text = "Party Status";
             // 
@@ -636,7 +637,7 @@
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(6, 22);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 16);
+            this.label14.Size = new System.Drawing.Size(146, 21);
             this.label14.TabIndex = 624;
             this.label14.Text = "Termination Date:";
             // 
@@ -645,7 +646,7 @@
             this.terminationpckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.terminationpckr.Location = new System.Drawing.Point(14, 41);
             this.terminationpckr.Name = "terminationpckr";
-            this.terminationpckr.Size = new System.Drawing.Size(86, 23);
+            this.terminationpckr.Size = new System.Drawing.Size(86, 27);
             this.terminationpckr.TabIndex = 625;
             // 
             // label13
@@ -654,7 +655,7 @@
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(634, 237);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 16);
+            this.label13.Size = new System.Drawing.Size(138, 21);
             this.label13.TabIndex = 623;
             this.label13.Text = "Employee Picture";
             // 
@@ -663,7 +664,7 @@
             this.empchkbar.AutoSize = true;
             this.empchkbar.Location = new System.Drawing.Point(565, 559);
             this.empchkbar.Name = "empchkbar";
-            this.empchkbar.Size = new System.Drawing.Size(154, 20);
+            this.empchkbar.Size = new System.Drawing.Size(202, 25);
             this.empchkbar.TabIndex = 624;
             this.empchkbar.Text = "Employee Deactivation";
             this.empchkbar.UseVisualStyleBackColor = true;
@@ -681,7 +682,7 @@
             // 
             // Employees_Bio_Data
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(852, 749);
@@ -739,6 +740,7 @@
             this.Name = "Employees_Bio_Data";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees_Bio_Data";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeepictxtbox)).EndInit();
             this.groupBox1.ResumeLayout(false);

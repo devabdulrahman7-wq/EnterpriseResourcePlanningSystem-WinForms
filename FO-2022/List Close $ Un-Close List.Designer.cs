@@ -55,7 +55,7 @@
             this.orderdatelbl.Location = new System.Drawing.Point(43, 129);
             this.orderdatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderdatelbl.Name = "orderdatelbl";
-            this.orderdatelbl.Size = new System.Drawing.Size(92, 16);
+            this.orderdatelbl.Size = new System.Drawing.Size(120, 21);
             this.orderdatelbl.TabIndex = 391;
             this.orderdatelbl.Text = "Summary Date";
             // 
@@ -64,7 +64,7 @@
             this.summarydatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.summarydatepcker.Location = new System.Drawing.Point(37, 148);
             this.summarydatepcker.Name = "summarydatepcker";
-            this.summarydatepcker.Size = new System.Drawing.Size(163, 23);
+            this.summarydatepcker.Size = new System.Drawing.Size(163, 27);
             this.summarydatepcker.TabIndex = 390;
             // 
             // closebtn
@@ -114,7 +114,7 @@
             this.textBox2.Location = new System.Drawing.Point(223, 124);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 19);
+            this.textBox2.Size = new System.Drawing.Size(206, 23);
             this.textBox2.TabIndex = 646;
             this.textBox2.Text = "      List  of Un-Closed Dates";
             // 
@@ -126,7 +126,7 @@
             this.textBox1.Location = new System.Drawing.Point(574, 124);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 19);
+            this.textBox1.Size = new System.Drawing.Size(210, 23);
             this.textBox1.TabIndex = 647;
             this.textBox1.Text = "     List of Closed Dates";
             // 
@@ -137,12 +137,14 @@
             this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(223, 148);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(211, 368);
             this.dataGridView1.TabIndex = 648;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Date";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 165;
             // 
@@ -153,12 +155,14 @@
             this.dataGridViewTextBoxColumn1});
             this.dataGridView2.Location = new System.Drawing.Point(573, 148);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(211, 368);
             this.dataGridView2.TabIndex = 649;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 165;
             // 
@@ -182,7 +186,7 @@
             this.label1.Location = new System.Drawing.Point(293, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 32);
+            this.label1.Size = new System.Drawing.Size(531, 42);
             this.label1.TabIndex = 651;
             this.label1.Text = "List of Closed $ Un Closed Dates";
             // 
@@ -195,10 +199,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 652;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // List_Close___Un_Close_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(879, 593);
@@ -216,10 +221,11 @@
             this.Controls.Add(this.summarydatepcker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "List_Close___Un_Close_List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List_Close___Un_Close_List";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

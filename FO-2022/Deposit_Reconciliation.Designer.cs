@@ -101,7 +101,7 @@
             this.label3.Location = new System.Drawing.Point(590, 485);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 16);
+            this.label3.Size = new System.Drawing.Size(188, 21);
             this.label3.TabIndex = 661;
             this.label3.Text = "Un_Reconciled Balance:";
             // 
@@ -122,7 +122,7 @@
             this.txtbox.Location = new System.Drawing.Point(609, 452);
             this.txtbox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.txtbox.Name = "txtbox";
-            this.txtbox.Size = new System.Drawing.Size(121, 16);
+            this.txtbox.Size = new System.Drawing.Size(159, 21);
             this.txtbox.TabIndex = 659;
             this.txtbox.Text = "Reconciled Balance:";
             // 
@@ -171,7 +171,7 @@
             this.unreconciledradiobtn.AutoSize = true;
             this.unreconciledradiobtn.Location = new System.Drawing.Point(174, 18);
             this.unreconciledradiobtn.Name = "unreconciledradiobtn";
-            this.unreconciledradiobtn.Size = new System.Drawing.Size(108, 20);
+            this.unreconciledradiobtn.Size = new System.Drawing.Size(140, 25);
             this.unreconciledradiobtn.TabIndex = 3;
             this.unreconciledradiobtn.TabStop = true;
             this.unreconciledradiobtn.Text = "Un_Reconciled";
@@ -183,7 +183,7 @@
             this.bouncedradiobtn.AutoSize = true;
             this.bouncedradiobtn.Location = new System.Drawing.Point(297, 18);
             this.bouncedradiobtn.Name = "bouncedradiobtn";
-            this.bouncedradiobtn.Size = new System.Drawing.Size(77, 20);
+            this.bouncedradiobtn.Size = new System.Drawing.Size(99, 25);
             this.bouncedradiobtn.TabIndex = 2;
             this.bouncedradiobtn.TabStop = true;
             this.bouncedradiobtn.Text = "Boumced";
@@ -195,7 +195,7 @@
             this.reconciledradiobtn.AutoSize = true;
             this.reconciledradiobtn.Location = new System.Drawing.Point(71, 18);
             this.reconciledradiobtn.Name = "reconciledradiobtn";
-            this.reconciledradiobtn.Size = new System.Drawing.Size(86, 20);
+            this.reconciledradiobtn.Size = new System.Drawing.Size(111, 25);
             this.reconciledradiobtn.TabIndex = 1;
             this.reconciledradiobtn.TabStop = true;
             this.reconciledradiobtn.Text = "Reconciled";
@@ -207,7 +207,7 @@
             this.allradiobtn.AutoSize = true;
             this.allradiobtn.Location = new System.Drawing.Point(12, 19);
             this.allradiobtn.Name = "allradiobtn";
-            this.allradiobtn.Size = new System.Drawing.Size(39, 20);
+            this.allradiobtn.Size = new System.Drawing.Size(50, 25);
             this.allradiobtn.TabIndex = 0;
             this.allradiobtn.TabStop = true;
             this.allradiobtn.Text = "All";
@@ -232,7 +232,7 @@
             this.label7.Location = new System.Drawing.Point(3, 85);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(104, 21);
             this.label7.TabIndex = 654;
             this.label7.Text = "Bank A/C No";
             // 
@@ -253,7 +253,7 @@
             this.label6.Location = new System.Drawing.Point(177, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
+            this.label6.Size = new System.Drawing.Size(159, 21);
             this.label6.TabIndex = 652;
             this.label6.Text = "Bank Account Name";
             // 
@@ -299,7 +299,7 @@
             this.label2.Location = new System.Drawing.Point(297, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 32);
+            this.label2.Size = new System.Drawing.Size(369, 42);
             this.label2.TabIndex = 648;
             this.label2.Text = "Deposit Reconciliation";
             // 
@@ -318,6 +318,7 @@
             this.Column8});
             this.availablecheckgrid.Location = new System.Drawing.Point(6, 174);
             this.availablecheckgrid.Name = "availablecheckgrid";
+            this.availablecheckgrid.RowHeadersWidth = 51;
             this.availablecheckgrid.Size = new System.Drawing.Size(866, 269);
             this.availablecheckgrid.TabIndex = 656;
             this.availablecheckgrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablecheckgrid_CellClick);
@@ -326,60 +327,69 @@
             // Column1
             // 
             this.Column1.HeaderText = "V. No";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 75;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Voucher Date";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 120;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cheque No";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 105;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Slip No";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Width = 75;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Deposit Date";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 110;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 75;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Narration";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 75;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Reconcile Date";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 115;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Bounced";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Width = 65;
             // 
             // Deposit_Reconciliation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(879, 566);
@@ -406,6 +416,7 @@
             this.Name = "Deposit_Reconciliation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit_Reconciliation";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Deposit_Reconciliation_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

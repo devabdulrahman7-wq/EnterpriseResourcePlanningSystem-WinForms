@@ -1549,5 +1549,10 @@ namespace FO_2022
         private void banknotxtbox_TextChanged(object sender, EventArgs e) { }
         private void banknametxtbox_TextChanged(object sender, EventArgs e) { }
         private void availablechequegrid_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

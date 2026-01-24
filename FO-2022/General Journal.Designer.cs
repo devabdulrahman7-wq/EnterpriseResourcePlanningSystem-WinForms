@@ -52,7 +52,7 @@
             this.label3.Location = new System.Drawing.Point(185, 51);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 32);
+            this.label3.Size = new System.Drawing.Size(278, 42);
             this.label3.TabIndex = 296;
             this.label3.Text = "General Journal";
             // 
@@ -62,7 +62,7 @@
             this.label2.Location = new System.Drawing.Point(129, 199);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 295;
             this.label2.Text = "To Date";
             // 
@@ -72,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(129, 168);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(89, 21);
             this.label1.TabIndex = 294;
             this.label1.Text = "From Date";
             // 
@@ -82,7 +82,7 @@
             this.todatepcker.Location = new System.Drawing.Point(238, 192);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(112, 23);
+            this.todatepcker.Size = new System.Drawing.Size(112, 27);
             this.todatepcker.TabIndex = 293;
             this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
@@ -92,7 +92,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(238, 161);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(112, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(112, 27);
             this.fromdatepcker.TabIndex = 292;
             this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
@@ -106,6 +106,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 291;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // previewbtn
             // 
@@ -179,7 +180,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(128, 258);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 16);
+            this.label4.Size = new System.Drawing.Size(130, 21);
             this.label4.TabIndex = 307;
             this.label4.Text = "From Voucher #";
             // 
@@ -188,13 +189,13 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(128, 290);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(111, 21);
             this.label5.TabIndex = 308;
             this.label5.Text = "To Voucher #";
             // 
             // General_Journal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(520, 449);
@@ -217,6 +218,7 @@
             this.Name = "General_Journal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "General_Journal";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.General_Journal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

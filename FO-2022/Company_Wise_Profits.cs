@@ -34,7 +34,7 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void printbtn_Click(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace FO_2022
         private void previewbtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

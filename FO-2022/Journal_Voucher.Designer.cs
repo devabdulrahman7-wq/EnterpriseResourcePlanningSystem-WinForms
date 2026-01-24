@@ -110,6 +110,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 521;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -118,7 +119,7 @@
             this.label2.Location = new System.Drawing.Point(366, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 32);
+            this.label2.Size = new System.Drawing.Size(282, 42);
             this.label2.TabIndex = 520;
             this.label2.Text = "Journal Voucher";
             // 
@@ -132,7 +133,6 @@
             this.vouchernotxtbox.ReadOnly = true;
             this.vouchernotxtbox.Size = new System.Drawing.Size(95, 23);
             this.vouchernotxtbox.TabIndex = 532;
-            //this.vouchernotxtbox.TextChanged += new System.EventHandler(this.vouchernotxtbox_TextChanged);
             // 
             // label3
             // 
@@ -140,7 +140,7 @@
             this.label3.Location = new System.Drawing.Point(782, 75);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 531;
             this.label3.Text = "Voucher No";
             // 
@@ -150,7 +150,7 @@
             this.todate.Location = new System.Drawing.Point(880, 75);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(84, 16);
+            this.todate.Size = new System.Drawing.Size(111, 21);
             this.todate.TabIndex = 530;
             this.todate.Text = "Voucher Date";
             // 
@@ -160,9 +160,8 @@
             this.voucherdatepcker.Location = new System.Drawing.Point(883, 96);
             this.voucherdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.voucherdatepcker.Name = "voucherdatepcker";
-            this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
+            this.voucherdatepcker.Size = new System.Drawing.Size(132, 27);
             this.voucherdatepcker.TabIndex = 529;
-            //this.voucherdatepcker.ValueChanged += new System.EventHandler(this.voucherdatepcker_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -177,49 +176,56 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(12, 75);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(740, 259);
             this.dataGridView1.TabIndex = 533;
-            //this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 55;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Date";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 65;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Party Name";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Vendor Name";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 135;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 85;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Narration";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 95;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Payment Mode";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 135;
             // 
@@ -238,43 +244,39 @@
             this.groupBox1.Size = new System.Drawing.Size(284, 124);
             this.groupBox1.TabIndex = 534;
             this.groupBox1.TabStop = false;
-            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // chequebtn
             // 
             this.chequebtn.AutoSize = true;
             this.chequebtn.Location = new System.Drawing.Point(7, 98);
             this.chequebtn.Name = "chequebtn";
-            this.chequebtn.Size = new System.Drawing.Size(68, 20);
+            this.chequebtn.Size = new System.Drawing.Size(86, 25);
             this.chequebtn.TabIndex = 555;
             this.chequebtn.TabStop = true;
             this.chequebtn.Text = "Cheque";
             this.chequebtn.UseVisualStyleBackColor = true;
-            //this.chequebtn.CheckedChanged += new System.EventHandler(this.chequebtn_CheckedChanged);
             // 
             // onlinebtn
             // 
             this.onlinebtn.AutoSize = true;
             this.onlinebtn.Location = new System.Drawing.Point(142, 98);
             this.onlinebtn.Name = "onlinebtn";
-            this.onlinebtn.Size = new System.Drawing.Size(61, 20);
+            this.onlinebtn.Size = new System.Drawing.Size(78, 25);
             this.onlinebtn.TabIndex = 554;
             this.onlinebtn.TabStop = true;
             this.onlinebtn.Text = "Online";
             this.onlinebtn.UseVisualStyleBackColor = true;
-            //this.onlinebtn.CheckedChanged += new System.EventHandler(this.onlinebtn_CheckedChanged);
             // 
             // vbtn
             // 
             this.vbtn.AutoSize = true;
             this.vbtn.Location = new System.Drawing.Point(142, 79);
             this.vbtn.Name = "vbtn";
-            this.vbtn.Size = new System.Drawing.Size(87, 20);
+            this.vbtn.Size = new System.Drawing.Size(111, 25);
             this.vbtn.TabIndex = 553;
             this.vbtn.TabStop = true;
             this.vbtn.Text = "V-Payment";
             this.vbtn.UseVisualStyleBackColor = true;
-            //this.vbtn.CheckedChanged += new System.EventHandler(this.vbtn_CheckedChanged);
             // 
             // label1
             // 
@@ -282,7 +284,7 @@
             this.label1.Location = new System.Drawing.Point(8, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(125, 21);
             this.label1.TabIndex = 552;
             this.label1.Text = "Recovery Date:";
             // 
@@ -292,9 +294,8 @@
             this.recoverydatepcker.Location = new System.Drawing.Point(142, 48);
             this.recoverydatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.recoverydatepcker.Name = "recoverydatepcker";
-            this.recoverydatepcker.Size = new System.Drawing.Size(132, 23);
+            this.recoverydatepcker.Size = new System.Drawing.Size(132, 27);
             this.recoverydatepcker.TabIndex = 551;
-            //this.recoverydatepcker.ValueChanged += new System.EventHandler(this.recoverydatepcker_ValueChanged);
             // 
             // getentrybtn
             // 
@@ -331,12 +332,11 @@
             this.allbtn.AutoSize = true;
             this.allbtn.Location = new System.Drawing.Point(7, 79);
             this.allbtn.Name = "allbtn";
-            this.allbtn.Size = new System.Drawing.Size(39, 20);
+            this.allbtn.Size = new System.Drawing.Size(50, 25);
             this.allbtn.TabIndex = 0;
             this.allbtn.TabStop = true;
             this.allbtn.Text = "All";
             this.allbtn.UseVisualStyleBackColor = true;
-            //this.allbtn.CheckedChanged += new System.EventHandler(this.allbtn_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -354,24 +354,22 @@
             this.allsavebtn.AutoSize = true;
             this.allsavebtn.Location = new System.Drawing.Point(128, 20);
             this.allsavebtn.Name = "allsavebtn";
-            this.allsavebtn.Size = new System.Drawing.Size(137, 20);
+            this.allsavebtn.Size = new System.Drawing.Size(179, 25);
             this.allsavebtn.TabIndex = 1;
             this.allsavebtn.TabStop = true;
             this.allsavebtn.Text = "Get Entry All (Save)";
             this.allsavebtn.UseVisualStyleBackColor = true;
-            //this.allsavebtn.CheckedChanged += new System.EventHandler(this.allsavebtn_CheckedChanged);
             // 
             // singleentrybtn
             // 
             this.singleentrybtn.AutoSize = true;
             this.singleentrybtn.Location = new System.Drawing.Point(6, 20);
             this.singleentrybtn.Name = "singleentrybtn";
-            this.singleentrybtn.Size = new System.Drawing.Size(116, 20);
+            this.singleentrybtn.Size = new System.Drawing.Size(150, 25);
             this.singleentrybtn.TabIndex = 0;
             this.singleentrybtn.TabStop = true;
             this.singleentrybtn.Text = "Get Single Entry";
             this.singleentrybtn.UseVisualStyleBackColor = true;
-            //this.singleentrybtn.CheckedChanged += new System.EventHandler(this.singleentrybtn_CheckedChanged);
             // 
             // closebtn
             // 
@@ -460,7 +458,6 @@
             this.printbtn.TabIndex = 548;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
-            //this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // getentryalbtn
             // 
@@ -475,7 +472,6 @@
             this.getentryalbtn.TabIndex = 550;
             this.getentryalbtn.Text = "Get Entry All";
             this.getentryalbtn.UseVisualStyleBackColor = false;
-            //this.getentryalbtn.Click += new System.EventHandler(this.getentryalbtn_Click);
             // 
             // label7
             // 
@@ -483,7 +479,7 @@
             this.label7.Location = new System.Drawing.Point(537, 597);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.Size = new System.Drawing.Size(117, 21);
             this.label7.TabIndex = 552;
             this.label7.Text = "Total Amount:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -501,48 +497,56 @@
             this.Column9});
             this.AccountdataGridView.Location = new System.Drawing.Point(12, 395);
             this.AccountdataGridView.Name = "AccountdataGridView";
+            this.AccountdataGridView.RowHeadersWidth = 51;
             this.AccountdataGridView.Size = new System.Drawing.Size(771, 199);
             this.AccountdataGridView.TabIndex = 551;
-            //this.AccountdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountdataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Amount No";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 96;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 185;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Narration";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 145;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.HeaderText = "Reference";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Bill No";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 66;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Debit";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Width = 70;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Credit";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Width = 65;
             // 
@@ -552,7 +556,7 @@
             this.label6.Location = new System.Drawing.Point(285, 341);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.Size = new System.Drawing.Size(79, 21);
             this.label6.TabIndex = 564;
             this.label6.Text = "Narration";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -563,7 +567,7 @@
             this.label5.Location = new System.Drawing.Point(549, 341);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 563;
             this.label5.Text = "Bill No";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -574,7 +578,7 @@
             this.label4.Location = new System.Drawing.Point(636, 341);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(50, 21);
             this.label4.TabIndex = 562;
             this.label4.Text = "Debit";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -588,7 +592,6 @@
             this.billnotxtbox.Name = "billnotxtbox";
             this.billnotxtbox.Size = new System.Drawing.Size(84, 25);
             this.billnotxtbox.TabIndex = 561;
-            //this.billnotxtbox.TextChanged += new System.EventHandler(this.billnotxtbox_TextChanged);
             // 
             // narrationtxtbox
             // 
@@ -599,7 +602,6 @@
             this.narrationtxtbox.Name = "narrationtxtbox";
             this.narrationtxtbox.Size = new System.Drawing.Size(161, 25);
             this.narrationtxtbox.TabIndex = 560;
-            //this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
             // debittxtbox
             // 
@@ -622,7 +624,6 @@
             this.accountnametxtbox.ReadOnly = true;
             this.accountnametxtbox.Size = new System.Drawing.Size(120, 25);
             this.accountnametxtbox.TabIndex = 558;
-            //this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountidtxtbox
             // 
@@ -633,7 +634,6 @@
             this.accountidtxtbox.Name = "accountidtxtbox";
             this.accountidtxtbox.Size = new System.Drawing.Size(104, 25);
             this.accountidtxtbox.TabIndex = 557;
-            //this.accountidtxtbox.TextChanged += new System.EventHandler(this.accountidtxtbox_TextChanged);
             this.accountidtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.accountidtxtbox_KeyPress);
             // 
             // accountidsearch
@@ -654,7 +654,7 @@
             this.a.Location = new System.Drawing.Point(163, 341);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(89, 16);
+            this.a.Size = new System.Drawing.Size(118, 21);
             this.a.TabIndex = 555;
             this.a.Text = "Account Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -665,7 +665,7 @@
             this.label8.Location = new System.Drawing.Point(9, 341);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 16);
+            this.label8.Size = new System.Drawing.Size(95, 21);
             this.label8.TabIndex = 554;
             this.label8.Text = "Account No";
             // 
@@ -674,11 +674,10 @@
             this.ischeckbox.AutoSize = true;
             this.ischeckbox.Location = new System.Drawing.Point(12, 306);
             this.ischeckbox.Name = "ischeckbox";
-            this.ischeckbox.Size = new System.Drawing.Size(126, 20);
+            this.ischeckbox.Size = new System.Drawing.Size(162, 25);
             this.ischeckbox.TabIndex = 565;
             this.ischeckbox.Text = "Is From Recovery";
             this.ischeckbox.UseVisualStyleBackColor = true;
-            //this.ischeckbox.CheckedChanged += new System.EventHandler(this.ischeckbox_CheckedChanged);
             // 
             // label9
             // 
@@ -686,7 +685,7 @@
             this.label9.Location = new System.Drawing.Point(447, 341);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 16);
+            this.label9.Size = new System.Drawing.Size(85, 21);
             this.label9.TabIndex = 567;
             this.label9.Text = "Reference";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -700,7 +699,6 @@
             this.referencetxtbox.Name = "referencetxtbox";
             this.referencetxtbox.Size = new System.Drawing.Size(100, 25);
             this.referencetxtbox.TabIndex = 566;
-            //this.referencetxtbox.TextChanged += new System.EventHandler(this.referencetxtbox_TextChanged);
             // 
             // label10
             // 
@@ -708,7 +706,7 @@
             this.label10.Location = new System.Drawing.Point(709, 341);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 16);
+            this.label10.Size = new System.Drawing.Size(59, 21);
             this.label10.TabIndex = 569;
             this.label10.Text = "Credit ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -753,21 +751,19 @@
             // 
             this.debitfetchtxtbox.Location = new System.Drawing.Point(630, 595);
             this.debitfetchtxtbox.Name = "debitfetchtxtbox";
-            this.debitfetchtxtbox.Size = new System.Drawing.Size(79, 23);
+            this.debitfetchtxtbox.Size = new System.Drawing.Size(79, 27);
             this.debitfetchtxtbox.TabIndex = 572;
-            //this.debitfetchtxtbox.TextChanged += new System.EventHandler(this.debitfetchtxtbox_TextChanged);
             // 
             // creditfetchtxtbox
             // 
             this.creditfetchtxtbox.Location = new System.Drawing.Point(710, 595);
             this.creditfetchtxtbox.Name = "creditfetchtxtbox";
-            this.creditfetchtxtbox.Size = new System.Drawing.Size(73, 23);
+            this.creditfetchtxtbox.Size = new System.Drawing.Size(73, 27);
             this.creditfetchtxtbox.TabIndex = 572;
-            //this.creditfetchtxtbox.TextChanged += new System.EventHandler(this.creditfetchtxtbox_TextChanged);
             // 
             // Journal_Voucher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1054, 704);
@@ -815,6 +811,7 @@
             this.Name = "Journal_Voucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Journal_Voucher";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

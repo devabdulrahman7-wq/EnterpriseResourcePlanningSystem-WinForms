@@ -70,7 +70,7 @@
             this.label10.Location = new System.Drawing.Point(444, 109);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 16);
+            this.label10.Size = new System.Drawing.Size(104, 21);
             this.label10.TabIndex = 409;
             this.label10.Text = "Salesman ID";
             // 
@@ -81,7 +81,7 @@
             this.cstmrdatetxtbox.Location = new System.Drawing.Point(605, 109);
             this.cstmrdatetxtbox.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.cstmrdatetxtbox.Name = "cstmrdatetxtbox";
-            this.cstmrdatetxtbox.Size = new System.Drawing.Size(100, 16);
+            this.cstmrdatetxtbox.Size = new System.Drawing.Size(129, 21);
             this.cstmrdatetxtbox.TabIndex = 408;
             this.cstmrdatetxtbox.Text = "Salesman Name";
             // 
@@ -122,7 +122,7 @@
             this.actualsectorcombobox.FormattingEnabled = true;
             this.actualsectorcombobox.Location = new System.Drawing.Point(101, 99);
             this.actualsectorcombobox.Name = "actualsectorcombobox";
-            this.actualsectorcombobox.Size = new System.Drawing.Size(231, 24);
+            this.actualsectorcombobox.Size = new System.Drawing.Size(231, 27);
             this.actualsectorcombobox.TabIndex = 410;
             this.actualsectorcombobox.SelectedIndexChanged += new System.EventHandler(this.actualsectorcombobox_SelectedIndexChanged);
             // 
@@ -131,7 +131,7 @@
             this.actualtowncombobox.FormattingEnabled = true;
             this.actualtowncombobox.Location = new System.Drawing.Point(101, 129);
             this.actualtowncombobox.Name = "actualtowncombobox";
-            this.actualtowncombobox.Size = new System.Drawing.Size(231, 24);
+            this.actualtowncombobox.Size = new System.Drawing.Size(231, 27);
             this.actualtowncombobox.TabIndex = 411;
             this.actualtowncombobox.SelectedIndexChanged += new System.EventHandler(this.actualtowncombobox_SelectedIndexChanged);
             // 
@@ -140,7 +140,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(123, 21);
             this.label1.TabIndex = 412;
             this.label1.Text = "Actual Sectors:";
             // 
@@ -149,7 +149,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(109, 21);
             this.label2.TabIndex = 413;
             this.label2.Text = "Actual Town:";
             // 
@@ -219,7 +219,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(204, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(364, 33);
+            this.label3.Size = new System.Drawing.Size(468, 42);
             this.label3.TabIndex = 576;
             this.label3.Text = "Assign Customers to Salesman";
             // 
@@ -228,7 +228,7 @@
             this.multiplesalesmancheckbox.AutoSize = true;
             this.multiplesalesmancheckbox.Location = new System.Drawing.Point(101, 159);
             this.multiplesalesmancheckbox.Name = "multiplesalesmancheckbox";
-            this.multiplesalesmancheckbox.Size = new System.Drawing.Size(188, 20);
+            this.multiplesalesmancheckbox.Size = new System.Drawing.Size(243, 25);
             this.multiplesalesmancheckbox.TabIndex = 577;
             this.multiplesalesmancheckbox.Text = "Multiple Salesman Allotment";
             this.multiplesalesmancheckbox.UseVisualStyleBackColor = true;
@@ -242,18 +242,21 @@
             this.Column2});
             this.UnAssignedCustomersdataGridView.Location = new System.Drawing.Point(4, 216);
             this.UnAssignedCustomersdataGridView.Name = "UnAssignedCustomersdataGridView";
+            this.UnAssignedCustomersdataGridView.RowHeadersWidth = 51;
             this.UnAssignedCustomersdataGridView.Size = new System.Drawing.Size(337, 294);
             this.UnAssignedCustomersdataGridView.TabIndex = 578;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Customer Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 155;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Customer Town";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 135;
             // 
@@ -265,18 +268,21 @@
             this.Column4});
             this.AssignedCustomerdataGridView.Location = new System.Drawing.Point(438, 216);
             this.AssignedCustomerdataGridView.Name = "AssignedCustomerdataGridView";
+            this.AssignedCustomerdataGridView.RowHeadersWidth = 51;
             this.AssignedCustomerdataGridView.Size = new System.Drawing.Size(340, 294);
             this.AssignedCustomerdataGridView.TabIndex = 579;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Customer Name";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 155;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Customer Town";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 135;
             // 
@@ -288,7 +294,7 @@
             this.textBox1.Location = new System.Drawing.Point(4, 192);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(337, 19);
+            this.textBox1.Size = new System.Drawing.Size(337, 23);
             this.textBox1.TabIndex = 580;
             this.textBox1.Text = "                Available Un-Assigned Customers";
             // 
@@ -300,7 +306,7 @@
             this.textBox2.Location = new System.Drawing.Point(438, 192);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(340, 19);
+            this.textBox2.Size = new System.Drawing.Size(340, 23);
             this.textBox2.TabIndex = 581;
             this.textBox2.Text = "                Available Assigned Customers";
             // 
@@ -377,7 +383,7 @@
             // 
             // Assign_Customers_to_Salesman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(796, 592);
@@ -411,6 +417,7 @@
             this.Name = "Assign_Customers_to_Salesman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assign_Customers_to_Salesman";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Assign_Customers_to_Salesman_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.salesmanidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAssignedCustomersdataGridView)).EndInit();

@@ -87,7 +87,7 @@
             this.label5.Location = new System.Drawing.Point(312, 176);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.Size = new System.Drawing.Size(99, 21);
             this.label5.TabIndex = 384;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,7 +99,7 @@
             this.label6.Location = new System.Drawing.Point(125, 176);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 16);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 383;
             this.label6.Text = "Town ID";
             // 
@@ -141,7 +141,7 @@
             this.a.Location = new System.Drawing.Point(314, 235);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(81, 16);
+            this.a.Size = new System.Drawing.Size(105, 21);
             this.a.TabIndex = 379;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +153,7 @@
             this.label1.Location = new System.Drawing.Point(125, 235);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 378;
             this.label1.Text = "Sector ID";
             // 
@@ -167,6 +167,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 389;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label15
             // 
@@ -175,7 +176,7 @@
             this.label15.Location = new System.Drawing.Point(115, 59);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(386, 31);
+            this.label15.Size = new System.Drawing.Size(479, 38);
             this.label15.TabIndex = 388;
             this.label15.Text = "Customer Receivables By Aging";
             // 
@@ -224,7 +225,7 @@
             // 
             // Customer_Receivables_By_Aging
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(675, 457);
@@ -248,6 +249,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer_Receivables_By_Aging";
             this.Text = "Customer_Receivables_By_Aging";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

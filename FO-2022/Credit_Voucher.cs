@@ -1449,8 +1449,9 @@ namespace FO_2022
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.ShowDialog();
+            //Mainform1 mainform1 = new Mainform1();
+            //mainform1.ShowDialog();
+            this.Close();
         }
 
         // Add these methods to your form designer.cs or create the controls:

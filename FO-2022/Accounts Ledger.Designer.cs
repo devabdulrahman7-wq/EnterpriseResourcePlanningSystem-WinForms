@@ -112,6 +112,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 287;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -120,7 +121,7 @@
             this.label3.Location = new System.Drawing.Point(144, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 31);
+            this.label3.Size = new System.Drawing.Size(263, 38);
             this.label3.TabIndex = 286;
             this.label3.Text = "Accounts Ledger";
             // 
@@ -165,7 +166,7 @@
             this.label2.Location = new System.Drawing.Point(220, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 282;
             this.label2.Text = "Party Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +178,7 @@
             this.label1.Location = new System.Drawing.Point(85, 188);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 281;
             this.label1.Text = "Party ID ";
             // 
@@ -188,7 +189,7 @@
             this.ledgergrpbtn.Location = new System.Drawing.Point(144, 23);
             this.ledgergrpbtn.Margin = new System.Windows.Forms.Padding(5);
             this.ledgergrpbtn.Name = "ledgergrpbtn";
-            this.ledgergrpbtn.Size = new System.Drawing.Size(168, 20);
+            this.ledgergrpbtn.Size = new System.Drawing.Size(219, 25);
             this.ledgergrpbtn.TabIndex = 280;
             this.ledgergrpbtn.TabStop = true;
             this.ledgergrpbtn.Text = "Ledger Group (Datewise)";
@@ -202,7 +203,7 @@
             this.smallpaperbtn.Location = new System.Drawing.Point(144, 58);
             this.smallpaperbtn.Margin = new System.Windows.Forms.Padding(5);
             this.smallpaperbtn.Name = "smallpaperbtn";
-            this.smallpaperbtn.Size = new System.Drawing.Size(122, 20);
+            this.smallpaperbtn.Size = new System.Drawing.Size(153, 25);
             this.smallpaperbtn.TabIndex = 279;
             this.smallpaperbtn.TabStop = true;
             this.smallpaperbtn.Text = "Small Paper Size";
@@ -216,7 +217,7 @@
             this.normalpaperbtn.Location = new System.Drawing.Point(12, 58);
             this.normalpaperbtn.Margin = new System.Windows.Forms.Padding(5);
             this.normalpaperbtn.Name = "normalpaperbtn";
-            this.normalpaperbtn.Size = new System.Drawing.Size(131, 20);
+            this.normalpaperbtn.Size = new System.Drawing.Size(166, 25);
             this.normalpaperbtn.TabIndex = 278;
             this.normalpaperbtn.TabStop = true;
             this.normalpaperbtn.Text = "Normal Paper Size";
@@ -230,7 +231,7 @@
             this.normalledgerbtn.Location = new System.Drawing.Point(12, 23);
             this.normalledgerbtn.Margin = new System.Windows.Forms.Padding(5);
             this.normalledgerbtn.Name = "normalledgerbtn";
-            this.normalledgerbtn.Size = new System.Drawing.Size(109, 20);
+            this.normalledgerbtn.Size = new System.Drawing.Size(139, 25);
             this.normalledgerbtn.TabIndex = 277;
             this.normalledgerbtn.TabStop = true;
             this.normalledgerbtn.Text = "Ledger Normal";
@@ -244,7 +245,7 @@
             this.todaybtn.Location = new System.Drawing.Point(173, 136);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(5);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(60, 20);
+            this.todaybtn.Size = new System.Drawing.Size(76, 25);
             this.todaybtn.TabIndex = 276;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
@@ -258,7 +259,7 @@
             this.daybtn.Location = new System.Drawing.Point(101, 136);
             this.daybtn.Margin = new System.Windows.Forms.Padding(5);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(58, 20);
+            this.daybtn.Size = new System.Drawing.Size(76, 25);
             this.daybtn.TabIndex = 275;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
@@ -272,7 +273,7 @@
             this.datebwbtn.Location = new System.Drawing.Point(173, 95);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(5);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
             this.datebwbtn.TabIndex = 274;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
@@ -287,7 +288,7 @@
             this.alldatebtn.Location = new System.Drawing.Point(101, 95);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(5);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(62, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(82, 25);
             this.alldatebtn.TabIndex = 273;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Dte";
@@ -323,7 +324,7 @@
             this.urdubtn.Location = new System.Drawing.Point(12, 24);
             this.urdubtn.Margin = new System.Windows.Forms.Padding(5);
             this.urdubtn.Name = "urdubtn";
-            this.urdubtn.Size = new System.Drawing.Size(99, 20);
+            this.urdubtn.Size = new System.Drawing.Size(126, 25);
             this.urdubtn.TabIndex = 281;
             this.urdubtn.TabStop = true;
             this.urdubtn.Text = "Urdu Ledger ";
@@ -337,7 +338,7 @@
             this.engbtn.Location = new System.Drawing.Point(144, 24);
             this.engbtn.Margin = new System.Windows.Forms.Padding(5);
             this.engbtn.Name = "engbtn";
-            this.engbtn.Size = new System.Drawing.Size(108, 20);
+            this.engbtn.Size = new System.Drawing.Size(139, 25);
             this.engbtn.TabIndex = 282;
             this.engbtn.TabStop = true;
             this.engbtn.Text = "English Ledger";
@@ -346,7 +347,7 @@
             // 
             // Accounts_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(508, 498);
@@ -372,6 +373,7 @@
             this.Name = "Accounts_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Accounts_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchpartyid)).EndInit();

@@ -56,6 +56,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 525;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -64,7 +65,7 @@
             this.label2.Location = new System.Drawing.Point(79, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(465, 32);
+            this.label2.Size = new System.Drawing.Size(593, 42);
             this.label2.TabIndex = 524;
             this.label2.Text = "Daily Recovery $ Payment Summary";
             // 
@@ -74,7 +75,7 @@
             this.todate.Location = new System.Drawing.Point(305, 84);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(52, 16);
+            this.todate.Size = new System.Drawing.Size(70, 21);
             this.todate.TabIndex = 529;
             this.todate.Text = "To Date";
             // 
@@ -84,7 +85,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(145, 84);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
+            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
             this.fromdatepckr.TabIndex = 528;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -94,7 +95,7 @@
             this.todatepcker.Location = new System.Drawing.Point(308, 105);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(123, 23);
+            this.todatepcker.Size = new System.Drawing.Size(123, 27);
             this.todatepcker.TabIndex = 527;
             // 
             // fromdatepcker
@@ -103,7 +104,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(148, 105);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
             this.fromdatepcker.TabIndex = 526;
             // 
             // listView1
@@ -171,7 +172,7 @@
             this.label1.Location = new System.Drawing.Point(145, 158);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 16);
+            this.label1.Size = new System.Drawing.Size(112, 21);
             this.label1.TabIndex = 534;
             this.label1.Text = "Salesman List";
             // 
@@ -191,7 +192,7 @@
             // 
             // Daily_Recovery_and_Payment_Summary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(655, 420);
@@ -213,6 +214,7 @@
             this.Name = "Daily_Recovery_and_Payment_Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily_Recovery_and_Payment_Summary";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

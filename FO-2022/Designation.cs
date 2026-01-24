@@ -20,8 +20,8 @@ namespace FO_2022
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mf= new Mainform1();
-            mf.Show();
+            //Mainform1 mf= new Mainform1();
+            //mf.Show();
         }
 
         private void savebtn_Click(object sender, EventArgs e)

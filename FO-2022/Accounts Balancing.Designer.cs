@@ -46,7 +46,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 32);
+            this.label1.Size = new System.Drawing.Size(444, 42);
             this.label1.TabIndex = 689;
             this.label1.Text = "Accounts Opening Balance";
             // 
@@ -104,13 +104,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 685;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(156, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 684;
             this.label3.Text = "Account Type";
             // 
@@ -119,7 +120,7 @@
             this.accountcombobox.FormattingEnabled = true;
             this.accountcombobox.Location = new System.Drawing.Point(159, 140);
             this.accountcombobox.Name = "accountcombobox";
-            this.accountcombobox.Size = new System.Drawing.Size(244, 24);
+            this.accountcombobox.Size = new System.Drawing.Size(244, 27);
             this.accountcombobox.TabIndex = 683;
             this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
@@ -128,7 +129,7 @@
             this.excludeaccountshavingzerobalancecheckbox.AutoSize = true;
             this.excludeaccountshavingzerobalancecheckbox.Location = new System.Drawing.Point(159, 186);
             this.excludeaccountshavingzerobalancecheckbox.Name = "excludeaccountshavingzerobalancecheckbox";
-            this.excludeaccountshavingzerobalancecheckbox.Size = new System.Drawing.Size(244, 20);
+            this.excludeaccountshavingzerobalancecheckbox.Size = new System.Drawing.Size(319, 25);
             this.excludeaccountshavingzerobalancecheckbox.TabIndex = 690;
             this.excludeaccountshavingzerobalancecheckbox.Text = "Exclude Accounts Having Zero Balance";
             this.excludeaccountshavingzerobalancecheckbox.UseVisualStyleBackColor = true;
@@ -136,7 +137,7 @@
             // 
             // Accounts_Balancing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(580, 355);
@@ -154,6 +155,7 @@
             this.Name = "Accounts_Balancing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Balancing";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Accounts_Balancing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

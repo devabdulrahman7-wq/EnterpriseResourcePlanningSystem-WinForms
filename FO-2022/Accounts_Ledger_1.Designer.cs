@@ -57,6 +57,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 298;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -65,7 +66,7 @@
             this.label3.Location = new System.Drawing.Point(170, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 31);
+            this.label3.Size = new System.Drawing.Size(263, 38);
             this.label3.TabIndex = 297;
             this.label3.Text = "Accounts Ledger";
             // 
@@ -107,7 +108,7 @@
             this.label2.Location = new System.Drawing.Point(278, 218);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 293;
             this.label2.Text = "Account Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,7 +120,7 @@
             this.label1.Location = new System.Drawing.Point(145, 218);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(95, 21);
             this.label1.TabIndex = 292;
             this.label1.Text = "Account No";
             // 
@@ -130,7 +131,7 @@
             this.todaybtn.Location = new System.Drawing.Point(232, 167);
             this.todaybtn.Margin = new System.Windows.Forms.Padding(5);
             this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(60, 20);
+            this.todaybtn.Size = new System.Drawing.Size(76, 25);
             this.todaybtn.TabIndex = 291;
             this.todaybtn.TabStop = true;
             this.todaybtn.Text = "Today";
@@ -143,7 +144,7 @@
             this.daybtn.Location = new System.Drawing.Point(232, 137);
             this.daybtn.Margin = new System.Windows.Forms.Padding(5);
             this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(58, 20);
+            this.daybtn.Size = new System.Drawing.Size(76, 25);
             this.daybtn.TabIndex = 290;
             this.daybtn.TabStop = true;
             this.daybtn.Text = "A Day";
@@ -156,7 +157,7 @@
             this.datebwbtn.Location = new System.Drawing.Point(232, 107);
             this.datebwbtn.Margin = new System.Windows.Forms.Padding(5);
             this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
             this.datebwbtn.TabIndex = 289;
             this.datebwbtn.TabStop = true;
             this.datebwbtn.Text = "Date Between";
@@ -170,7 +171,7 @@
             this.alldatebtn.Location = new System.Drawing.Point(232, 77);
             this.alldatebtn.Margin = new System.Windows.Forms.Padding(5);
             this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(62, 20);
+            this.alldatebtn.Size = new System.Drawing.Size(82, 25);
             this.alldatebtn.TabIndex = 288;
             this.alldatebtn.TabStop = true;
             this.alldatebtn.Text = "All Dte";
@@ -221,7 +222,7 @@
             // 
             // Accounts_Ledger_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(591, 357);
@@ -245,6 +246,7 @@
             this.Name = "Accounts_Ledger_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger_1";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchaccountno)).EndInit();
             this.ResumeLayout(false);

@@ -106,6 +106,11 @@ namespace FO_2022
                 tovouchernotxtbox.Text = "";
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 //using System;

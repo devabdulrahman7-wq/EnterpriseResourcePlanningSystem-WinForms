@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(158, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 32);
+            this.label2.Size = new System.Drawing.Size(359, 42);
             this.label2.TabIndex = 388;
             this.label2.Text = "Cash Deposit in Bank";
             // 
@@ -104,7 +104,7 @@
             this.depositdatepcker.Location = new System.Drawing.Point(107, 161);
             this.depositdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.depositdatepcker.Name = "depositdatepcker";
-            this.depositdatepcker.Size = new System.Drawing.Size(132, 23);
+            this.depositdatepcker.Size = new System.Drawing.Size(132, 27);
             this.depositdatepcker.TabIndex = 391;
             this.depositdatepcker.ValueChanged += new System.EventHandler(this.depositdatepcker_ValueChanged);
             // 
@@ -114,7 +114,7 @@
             this.voucherdatepcker.Location = new System.Drawing.Point(251, 112);
             this.voucherdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.voucherdatepcker.Name = "voucherdatepcker";
-            this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
+            this.voucherdatepcker.Size = new System.Drawing.Size(132, 27);
             this.voucherdatepcker.TabIndex = 392;
             // 
             // vouchernotxtbox
@@ -135,7 +135,7 @@
             this.label8.Location = new System.Drawing.Point(106, 89);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 16);
+            this.label8.Size = new System.Drawing.Size(95, 21);
             this.label8.TabIndex = 394;
             this.label8.Text = "Voucher No";
             // 
@@ -156,7 +156,7 @@
             this.label3.Location = new System.Drawing.Point(106, 140);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 16);
+            this.label3.Size = new System.Drawing.Size(149, 21);
             this.label3.TabIndex = 398;
             this.label3.Text = "Bank Deposit Date";
             // 
@@ -166,7 +166,7 @@
             this.label4.Location = new System.Drawing.Point(390, 91);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(61, 21);
             this.label4.TabIndex = 399;
             this.label4.Text = "Slip No";
             // 
@@ -176,7 +176,7 @@
             this.label5.Location = new System.Drawing.Point(248, 91);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 16);
+            this.label5.Size = new System.Drawing.Size(111, 21);
             this.label5.TabIndex = 400;
             this.label5.Text = "Voucher Date";
             // 
@@ -187,7 +187,7 @@
             this.reconcilethisdepositchqbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.reconcilethisdepositchqbox.Location = new System.Drawing.Point(281, 165);
             this.reconcilethisdepositchqbox.Name = "reconcilethisdepositchqbox";
-            this.reconcilethisdepositchqbox.Size = new System.Drawing.Size(177, 20);
+            this.reconcilethisdepositchqbox.Size = new System.Drawing.Size(230, 25);
             this.reconcilethisdepositchqbox.TabIndex = 401;
             this.reconcilethisdepositchqbox.Text = "Reconcile this deposit now";
             this.reconcilethisdepositchqbox.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.label6.Location = new System.Drawing.Point(278, 198);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
+            this.label6.Size = new System.Drawing.Size(159, 21);
             this.label6.TabIndex = 403;
             this.label6.Text = "Bank Account Name";
             // 
@@ -221,7 +221,7 @@
             this.label7.Location = new System.Drawing.Point(104, 198);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(104, 21);
             this.label7.TabIndex = 405;
             this.label7.Text = "Bank A/C No";
             // 
@@ -242,7 +242,7 @@
             this.label9.Location = new System.Drawing.Point(104, 252);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.Size = new System.Drawing.Size(68, 21);
             this.label9.TabIndex = 410;
             this.label9.Text = "Amount";
             // 
@@ -264,7 +264,7 @@
             this.label10.Location = new System.Drawing.Point(278, 252);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 16);
+            this.label10.Size = new System.Drawing.Size(138, 21);
             this.label10.TabIndex = 408;
             this.label10.Text = "Amount in Words";
             // 
@@ -286,7 +286,7 @@
             this.label11.Location = new System.Drawing.Point(104, 310);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 16);
+            this.label11.Size = new System.Drawing.Size(84, 21);
             this.label11.TabIndex = 412;
             this.label11.Text = "Narration ";
             // 
@@ -307,7 +307,7 @@
             this.label12.Location = new System.Drawing.Point(106, 359);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 16);
+            this.label12.Size = new System.Drawing.Size(108, 21);
             this.label12.TabIndex = 414;
             this.label12.Text = "Deposited By";
             // 
@@ -415,7 +415,7 @@
             // 
             // Cash_Deposit_in_Bank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(609, 504);
@@ -455,6 +455,7 @@
             this.Name = "Cash_Deposit_in_Bank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash_Deposit_in_Bank";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Cash_Deposit_in_Bank_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();

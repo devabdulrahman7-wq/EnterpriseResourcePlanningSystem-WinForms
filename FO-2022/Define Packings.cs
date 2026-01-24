@@ -184,9 +184,10 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.Show();
-            this.Hide();
+            //Mainform1 mainform1 = new Mainform1();
+            //mainform1.Show();
+            //this.Hide();
+            this.Close();
         }
     }
 }

@@ -79,7 +79,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(137, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(367, 32);
+            this.label1.Size = new System.Drawing.Size(474, 42);
             this.label1.TabIndex = 404;
             this.label1.Text = "Data Backup On Hard Drive";
             // 
@@ -100,7 +100,7 @@
             this.label6.Location = new System.Drawing.Point(172, 220);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.Size = new System.Drawing.Size(139, 21);
             this.label6.TabIndex = 406;
             this.label6.Text = "Backup Password";
             // 
@@ -129,7 +129,7 @@
             this.label2.Location = new System.Drawing.Point(172, 167);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.Size = new System.Drawing.Size(132, 21);
             this.label2.TabIndex = 409;
             this.label2.Text = "Backup File Path";
             // 
@@ -140,7 +140,7 @@
             this.label3.Location = new System.Drawing.Point(302, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 16);
+            this.label3.Size = new System.Drawing.Size(105, 21);
             this.label3.TabIndex = 410;
             this.label3.Text = "Backup Time";
             // 
@@ -151,7 +151,7 @@
             this.label4.Location = new System.Drawing.Point(162, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 411;
             this.label4.Text = "Backup Date";
             // 
@@ -182,10 +182,11 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 414;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Data_Backup_On_Hard_Drive
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(615, 373);
@@ -208,6 +209,7 @@
             this.Name = "Data_Backup_On_Hard_Drive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data_Backup_On_Hard_Drive";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Data_Backup_On_Hard_Drive_Load);
             ((System.ComponentModel.ISupportInitialize)(this.filesearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
