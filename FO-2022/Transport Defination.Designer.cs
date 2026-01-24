@@ -52,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 32);
+            this.label1.Size = new System.Drawing.Size(177, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Transport";
             // 
@@ -161,7 +161,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(382, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 16);
+            this.label7.Size = new System.Drawing.Size(136, 21);
             this.label7.TabIndex = 425;
             this.label7.Text = "Transport Name:";
             // 
@@ -173,7 +173,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 78);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 19);
+            this.textBox1.Size = new System.Drawing.Size(288, 23);
             this.textBox1.TabIndex = 427;
             this.textBox1.Text = "                Available Transport";
             // 
@@ -182,6 +182,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 102);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(357, 264);
             this.dataGridView1.TabIndex = 428;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -199,7 +200,7 @@
             // 
             // Transport_Defination
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(631, 481);
@@ -221,6 +222,7 @@
             this.Name = "Transport_Defination";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport_Defination";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

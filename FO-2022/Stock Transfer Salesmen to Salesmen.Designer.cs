@@ -67,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(466, 32);
+            this.label1.Size = new System.Drawing.Size(597, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Stock Transfer Salesmen to Salesmen";
             // 
@@ -121,6 +121,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(77, 305);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(523, 177);
             this.dataGridView1.TabIndex = 394;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -131,7 +132,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(77, 114);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(133, 27);
             this.dateTimePicker1.TabIndex = 393;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -142,7 +143,7 @@
             this.label5.Location = new System.Drawing.Point(214, 204);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 16);
+            this.label5.Size = new System.Drawing.Size(153, 21);
             this.label5.TabIndex = 392;
             this.label5.Text = "To Salesman Name";
             // 
@@ -153,7 +154,7 @@
             this.label6.Location = new System.Drawing.Point(74, 204);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 16);
+            this.label6.Size = new System.Drawing.Size(128, 21);
             this.label6.TabIndex = 391;
             this.label6.Text = "To Salesman ID";
             // 
@@ -162,7 +163,7 @@
             this.tosalesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tosalesmennametxtbox.Location = new System.Drawing.Point(217, 223);
             this.tosalesmennametxtbox.Name = "tosalesmennametxtbox";
-            this.tosalesmennametxtbox.Size = new System.Drawing.Size(383, 16);
+            this.tosalesmennametxtbox.Size = new System.Drawing.Size(383, 20);
             this.tosalesmennametxtbox.TabIndex = 390;
             this.tosalesmennametxtbox.TextChanged += new System.EventHandler(this.tosalesmennametxtbox_TextChanged);
             // 
@@ -171,7 +172,7 @@
             this.tosalesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tosalesmenidtxtbox.Location = new System.Drawing.Point(77, 223);
             this.tosalesmenidtxtbox.Name = "tosalesmenidtxtbox";
-            this.tosalesmenidtxtbox.Size = new System.Drawing.Size(133, 16);
+            this.tosalesmenidtxtbox.Size = new System.Drawing.Size(133, 20);
             this.tosalesmenidtxtbox.TabIndex = 389;
             this.tosalesmenidtxtbox.TextChanged += new System.EventHandler(this.tosalesmenidtxtbox_TextChanged);
             this.tosalesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tosalesmenidtxtbox_KeyDown);
@@ -183,7 +184,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(74, 95);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(33, 16);
+            this.saledatelbl.Size = new System.Drawing.Size(46, 21);
             this.saledatelbl.TabIndex = 387;
             this.saledatelbl.Text = "Date";
             // 
@@ -194,7 +195,7 @@
             this.label2.Location = new System.Drawing.Point(214, 156);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 16);
+            this.label2.Size = new System.Drawing.Size(172, 21);
             this.label2.TabIndex = 403;
             this.label2.Text = "From Salesman Name";
             // 
@@ -205,7 +206,7 @@
             this.label3.Location = new System.Drawing.Point(79, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 16);
+            this.label3.Size = new System.Drawing.Size(147, 21);
             this.label3.TabIndex = 402;
             this.label3.Text = "From Salesman ID";
             // 
@@ -214,7 +215,7 @@
             this.fromsalesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fromsalesmennametxtbox.Location = new System.Drawing.Point(217, 175);
             this.fromsalesmennametxtbox.Name = "fromsalesmennametxtbox";
-            this.fromsalesmennametxtbox.Size = new System.Drawing.Size(383, 16);
+            this.fromsalesmennametxtbox.Size = new System.Drawing.Size(383, 20);
             this.fromsalesmennametxtbox.TabIndex = 401;
             this.fromsalesmennametxtbox.TextChanged += new System.EventHandler(this.fromsalesmennametxtbox_TextChanged);
             // 
@@ -223,7 +224,7 @@
             this.fromsalesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fromsalesmenidtxtbox.Location = new System.Drawing.Point(77, 175);
             this.fromsalesmenidtxtbox.Name = "fromsalesmenidtxtbox";
-            this.fromsalesmenidtxtbox.Size = new System.Drawing.Size(133, 16);
+            this.fromsalesmenidtxtbox.Size = new System.Drawing.Size(133, 20);
             this.fromsalesmenidtxtbox.TabIndex = 400;
             this.fromsalesmenidtxtbox.TextChanged += new System.EventHandler(this.fromsalesmenidtxtbox_TextChanged);
             this.fromsalesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fromsalesmenidtxtbox_KeyDown);
@@ -244,7 +245,7 @@
             this.packnamecombobox.FormattingEnabled = true;
             this.packnamecombobox.Location = new System.Drawing.Point(259, 278);
             this.packnamecombobox.Name = "packnamecombobox";
-            this.packnamecombobox.Size = new System.Drawing.Size(109, 24);
+            this.packnamecombobox.Size = new System.Drawing.Size(109, 27);
             this.packnamecombobox.TabIndex = 419;
             this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
@@ -267,7 +268,7 @@
             this.label8.Location = new System.Drawing.Point(544, 257);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 16);
+            this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 417;
             this.label8.Text = "Qty(L)";
             // 
@@ -325,7 +326,7 @@
             this.label28.Location = new System.Drawing.Point(470, 259);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(44, 16);
+            this.label28.Size = new System.Drawing.Size(58, 20);
             this.label28.TabIndex = 412;
             this.label28.Text = "Qty(P)";
             // 
@@ -336,7 +337,7 @@
             this.label29.Location = new System.Drawing.Point(373, 260);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(38, 16);
+            this.label29.Size = new System.Drawing.Size(46, 20);
             this.label29.TabIndex = 411;
             this.label29.Text = "Pack";
             // 
@@ -347,7 +348,7 @@
             this.label30.Location = new System.Drawing.Point(257, 259);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(78, 16);
+            this.label30.Size = new System.Drawing.Size(95, 20);
             this.label30.TabIndex = 410;
             this.label30.Text = "Pack Name";
             // 
@@ -358,7 +359,7 @@
             this.label31.Location = new System.Drawing.Point(153, 260);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 16);
+            this.label31.Size = new System.Drawing.Size(83, 20);
             this.label31.TabIndex = 409;
             this.label31.Text = "Pro.Name";
             // 
@@ -369,13 +370,13 @@
             this.label32.Location = new System.Drawing.Point(76, 261);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(44, 16);
+            this.label32.Size = new System.Drawing.Size(56, 20);
             this.label32.TabIndex = 408;
             this.label32.Text = "Pro.ID";
             // 
             // Stock_Transfer_Salesmen_to_Salesmen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(667, 559);
@@ -413,6 +414,7 @@
             this.Name = "Stock_Transfer_Salesmen_to_Salesmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Transfer_Salesmen_to_Salesmen";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Stock_Transfer_Salesmen_to_Salesmen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -229,5 +229,10 @@ namespace FO_2022
                 e.Handled = true;       
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

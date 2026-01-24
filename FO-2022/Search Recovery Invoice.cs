@@ -275,5 +275,10 @@ namespace FO_2022
                 dateTimePicker1.Value = DateTime.Now.AddDays(-30);
                 dateTimePicker2.Value = DateTime.Now;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

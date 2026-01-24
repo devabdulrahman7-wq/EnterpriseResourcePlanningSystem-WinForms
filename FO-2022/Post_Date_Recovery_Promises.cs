@@ -512,5 +512,10 @@ namespace FO_2022
             promisesdatepcker.Value = DateTime.Now.AddDays(1);
             promisesdatepcker.MinDate = entrydatepcker.Value.AddDays(1);
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

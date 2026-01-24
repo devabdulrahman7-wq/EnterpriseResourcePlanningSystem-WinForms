@@ -121,13 +121,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 335;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(146, 92);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(133, 27);
             this.dateTimePicker1.TabIndex = 330;
             // 
             // closebtn
@@ -218,7 +219,7 @@
             this.paidamounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.paidamounttxtbox.Location = new System.Drawing.Point(749, 523);
             this.paidamounttxtbox.Name = "paidamounttxtbox";
-            this.paidamounttxtbox.Size = new System.Drawing.Size(112, 16);
+            this.paidamounttxtbox.Size = new System.Drawing.Size(112, 20);
             this.paidamounttxtbox.TabIndex = 319;
             // 
             // remainingbalancextxtbox
@@ -226,7 +227,7 @@
             this.remainingbalancextxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.remainingbalancextxtbox.Location = new System.Drawing.Point(867, 523);
             this.remainingbalancextxtbox.Name = "remainingbalancextxtbox";
-            this.remainingbalancextxtbox.Size = new System.Drawing.Size(114, 16);
+            this.remainingbalancextxtbox.Size = new System.Drawing.Size(114, 20);
             this.remainingbalancextxtbox.TabIndex = 318;
             // 
             // prevbaltxtbox
@@ -234,7 +235,7 @@
             this.prevbaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prevbaltxtbox.Location = new System.Drawing.Point(506, 523);
             this.prevbaltxtbox.Name = "prevbaltxtbox";
-            this.prevbaltxtbox.Size = new System.Drawing.Size(105, 16);
+            this.prevbaltxtbox.Size = new System.Drawing.Size(105, 20);
             this.prevbaltxtbox.TabIndex = 317;
             // 
             // totalvaluetxtbox
@@ -242,7 +243,7 @@
             this.totalvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalvaluetxtbox.Location = new System.Drawing.Point(391, 523);
             this.totalvaluetxtbox.Name = "totalvaluetxtbox";
-            this.totalvaluetxtbox.Size = new System.Drawing.Size(107, 16);
+            this.totalvaluetxtbox.Size = new System.Drawing.Size(107, 20);
             this.totalvaluetxtbox.TabIndex = 316;
             // 
             // specialdisctxtbox
@@ -250,7 +251,7 @@
             this.specialdisctxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.specialdisctxtbox.Location = new System.Drawing.Point(616, 523);
             this.specialdisctxtbox.Name = "specialdisctxtbox";
-            this.specialdisctxtbox.Size = new System.Drawing.Size(123, 16);
+            this.specialdisctxtbox.Size = new System.Drawing.Size(123, 20);
             this.specialdisctxtbox.TabIndex = 314;
             // 
             // topsalestxtbox
@@ -258,7 +259,7 @@
             this.topsalestxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.topsalestxtbox.Location = new System.Drawing.Point(259, 523);
             this.topsalestxtbox.Name = "topsalestxtbox";
-            this.topsalestxtbox.Size = new System.Drawing.Size(120, 16);
+            this.topsalestxtbox.Size = new System.Drawing.Size(120, 20);
             this.topsalestxtbox.TabIndex = 312;
             // 
             // totaldiscounttxtbox
@@ -266,7 +267,7 @@
             this.totaldiscounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totaldiscounttxtbox.Location = new System.Drawing.Point(136, 523);
             this.totaldiscounttxtbox.Name = "totaldiscounttxtbox";
-            this.totaldiscounttxtbox.Size = new System.Drawing.Size(117, 16);
+            this.totaldiscounttxtbox.Size = new System.Drawing.Size(117, 20);
             this.totaldiscounttxtbox.TabIndex = 311;
             // 
             // grossvaluetxtbox
@@ -274,7 +275,7 @@
             this.grossvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grossvaluetxtbox.Location = new System.Drawing.Point(23, 523);
             this.grossvaluetxtbox.Name = "grossvaluetxtbox";
-            this.grossvaluetxtbox.Size = new System.Drawing.Size(107, 16);
+            this.grossvaluetxtbox.Size = new System.Drawing.Size(107, 20);
             this.grossvaluetxtbox.TabIndex = 310;
             // 
             // narrationtxtbox
@@ -291,7 +292,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(103, 557);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 16);
+            this.label21.Size = new System.Drawing.Size(79, 21);
             this.label21.TabIndex = 307;
             this.label21.Text = "Narration";
             // 
@@ -300,7 +301,7 @@
             this.baltxtbox.AutoSize = true;
             this.baltxtbox.Location = new System.Drawing.Point(864, 501);
             this.baltxtbox.Name = "baltxtbox";
-            this.baltxtbox.Size = new System.Drawing.Size(115, 16);
+            this.baltxtbox.Size = new System.Drawing.Size(150, 21);
             this.baltxtbox.TabIndex = 305;
             this.baltxtbox.Text = "Remaining balance";
             // 
@@ -309,7 +310,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(746, 504);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 16);
+            this.label18.Size = new System.Drawing.Size(104, 21);
             this.label18.TabIndex = 304;
             this.label18.Text = "Paid Amount";
             // 
@@ -318,7 +319,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(502, 501);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 16);
+            this.label17.Size = new System.Drawing.Size(100, 21);
             this.label17.TabIndex = 303;
             this.label17.Text = "Previous Bal";
             // 
@@ -327,7 +328,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(388, 501);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 16);
+            this.label16.Size = new System.Drawing.Size(94, 21);
             this.label16.TabIndex = 302;
             this.label16.Text = "Total Value";
             // 
@@ -336,7 +337,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(613, 504);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 16);
+            this.label14.Size = new System.Drawing.Size(99, 21);
             this.label14.TabIndex = 300;
             this.label14.Text = "Special Disc";
             // 
@@ -345,7 +346,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(268, 504);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 16);
+            this.label12.Size = new System.Drawing.Size(124, 21);
             this.label12.TabIndex = 298;
             this.label12.Text = "Total Sales Tax";
             // 
@@ -354,7 +355,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(139, 504);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 16);
+            this.label11.Size = new System.Drawing.Size(118, 21);
             this.label11.TabIndex = 297;
             this.label11.Text = "Total Discount";
             // 
@@ -363,7 +364,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(30, 504);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 16);
+            this.label10.Size = new System.Drawing.Size(98, 21);
             this.label10.TabIndex = 296;
             this.label10.Text = "Gross Value";
             // 
@@ -383,6 +384,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 285);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(960, 208);
             this.dataGridView1.TabIndex = 294;
             // 
@@ -391,7 +393,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(740, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
+            this.label9.Size = new System.Drawing.Size(0, 21);
             this.label9.TabIndex = 290;
             // 
             // label8
@@ -400,7 +402,7 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(864, 158);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 18);
+            this.label8.Size = new System.Drawing.Size(0, 23);
             this.label8.TabIndex = 289;
             // 
             // label7
@@ -409,7 +411,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(861, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 18);
+            this.label7.Size = new System.Drawing.Size(0, 23);
             this.label7.TabIndex = 288;
             // 
             // label5
@@ -419,7 +421,7 @@
             this.label5.Location = new System.Drawing.Point(166, 166);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 287;
             this.label5.Text = "Salesman Name";
             // 
@@ -430,7 +432,7 @@
             this.label6.Location = new System.Drawing.Point(32, 166);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(104, 21);
             this.label6.TabIndex = 286;
             this.label6.Text = "Salesman ID";
             // 
@@ -469,7 +471,7 @@
             this.label4.Location = new System.Drawing.Point(477, 120);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(108, 21);
             this.label4.TabIndex = 282;
             this.label4.Text = "Sector, Town";
             // 
@@ -480,7 +482,7 @@
             this.label3.Location = new System.Drawing.Point(176, 120);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
+            this.label3.Size = new System.Drawing.Size(129, 21);
             this.label3.TabIndex = 281;
             this.label3.Text = "Customer Name";
             // 
@@ -491,7 +493,7 @@
             this.label2.Location = new System.Drawing.Point(37, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(104, 21);
             this.label2.TabIndex = 280;
             this.label2.Text = "Customer ID";
             // 
@@ -528,7 +530,7 @@
             this.orderdatetxtbo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orderdatetxtbo.Location = new System.Drawing.Point(439, 97);
             this.orderdatetxtbo.Name = "orderdatetxtbo";
-            this.orderdatetxtbo.Size = new System.Drawing.Size(103, 16);
+            this.orderdatetxtbo.Size = new System.Drawing.Size(103, 20);
             this.orderdatetxtbo.TabIndex = 276;
             // 
             // billnootxtbox
@@ -556,7 +558,7 @@
             this.billlnolbl.Location = new System.Drawing.Point(553, 78);
             this.billlnolbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.billlnolbl.Name = "billlnolbl";
-            this.billlnolbl.Size = new System.Drawing.Size(42, 16);
+            this.billlnolbl.Size = new System.Drawing.Size(57, 21);
             this.billlnolbl.TabIndex = 273;
             this.billlnolbl.Text = "Bill No";
             // 
@@ -567,7 +569,7 @@
             this.orderdatelbl.Location = new System.Drawing.Point(436, 78);
             this.orderdatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderdatelbl.Name = "orderdatelbl";
-            this.orderdatelbl.Size = new System.Drawing.Size(62, 16);
+            this.orderdatelbl.Size = new System.Drawing.Size(82, 21);
             this.orderdatelbl.TabIndex = 272;
             this.orderdatelbl.Text = "Sale Date";
             // 
@@ -578,7 +580,7 @@
             this.orderidlbl.Location = new System.Drawing.Point(278, 73);
             this.orderidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderidlbl.Name = "orderidlbl";
-            this.orderidlbl.Size = new System.Drawing.Size(48, 16);
+            this.orderidlbl.Size = new System.Drawing.Size(64, 21);
             this.orderidlbl.TabIndex = 271;
             this.orderidlbl.Text = "Sale ID";
             // 
@@ -589,7 +591,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(166, 73);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(75, 16);
+            this.saledatelbl.Size = new System.Drawing.Size(101, 21);
             this.saledatelbl.TabIndex = 270;
             this.saledatelbl.Text = "Return Date";
             // 
@@ -600,7 +602,7 @@
             this.saleidlbl.Location = new System.Drawing.Point(43, 73);
             this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saleidlbl.Name = "saleidlbl";
-            this.saleidlbl.Size = new System.Drawing.Size(61, 16);
+            this.saleidlbl.Size = new System.Drawing.Size(83, 21);
             this.saleidlbl.TabIndex = 269;
             this.saleidlbl.Text = "Return ID";
             // 
@@ -612,7 +614,7 @@
             this.label1.Location = new System.Drawing.Point(268, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 37);
+            this.label1.Size = new System.Drawing.Size(249, 46);
             this.label1.TabIndex = 268;
             this.label1.Text = "Sale Invoice";
             // 
@@ -623,7 +625,7 @@
             this.label26.Location = new System.Drawing.Point(602, 241);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(46, 16);
+            this.label26.Size = new System.Drawing.Size(59, 20);
             this.label26.TabIndex = 362;
             this.label26.Text = "Disc%";
             // 
@@ -634,7 +636,7 @@
             this.label25.Location = new System.Drawing.Point(669, 241);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(64, 16);
+            this.label25.Size = new System.Drawing.Size(83, 20);
             this.label25.TabIndex = 361;
             this.label25.Text = "Disc Val-l";
             // 
@@ -709,7 +711,7 @@
             this.label24.Location = new System.Drawing.Point(814, 241);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 16);
+            this.label24.Size = new System.Drawing.Size(65, 20);
             this.label24.TabIndex = 354;
             this.label24.Text = "S-T Val";
             // 
@@ -720,7 +722,7 @@
             this.label23.Location = new System.Drawing.Point(907, 241);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 16);
+            this.label23.Size = new System.Drawing.Size(86, 20);
             this.label23.TabIndex = 353;
             this.label23.Text = "TTL Value";
             // 
@@ -731,7 +733,7 @@
             this.label20.Location = new System.Drawing.Point(532, 241);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 16);
+            this.label20.Size = new System.Drawing.Size(48, 20);
             this.label20.TabIndex = 352;
             this.label20.Text = "Price";
             // 
@@ -742,7 +744,7 @@
             this.label13.Location = new System.Drawing.Point(411, 241);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 16);
+            this.label13.Size = new System.Drawing.Size(57, 20);
             this.label13.TabIndex = 351;
             this.label13.Text = "Qty(L)";
             // 
@@ -763,7 +765,7 @@
             this.label15.Location = new System.Drawing.Point(470, 241);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 16);
+            this.label15.Size = new System.Drawing.Size(61, 20);
             this.label15.TabIndex = 349;
             this.label15.Text = "Bns(L)";
             // 
@@ -827,7 +829,7 @@
             this.label19.Location = new System.Drawing.Point(749, 241);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(57, 16);
+            this.label19.Size = new System.Drawing.Size(73, 20);
             this.label19.TabIndex = 342;
             this.label19.Text = "Disc Val";
             // 
@@ -838,7 +840,7 @@
             this.label22.Location = new System.Drawing.Point(362, 240);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(44, 16);
+            this.label22.Size = new System.Drawing.Size(58, 20);
             this.label22.TabIndex = 341;
             this.label22.Text = "Qty(P)";
             // 
@@ -849,7 +851,7 @@
             this.label27.Location = new System.Drawing.Point(292, 240);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 16);
+            this.label27.Size = new System.Drawing.Size(46, 20);
             this.label27.TabIndex = 340;
             this.label27.Text = "Pack";
             // 
@@ -860,7 +862,7 @@
             this.label28.Location = new System.Drawing.Point(191, 239);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(78, 16);
+            this.label28.Size = new System.Drawing.Size(95, 20);
             this.label28.TabIndex = 339;
             this.label28.Text = "Pack Name";
             // 
@@ -871,7 +873,7 @@
             this.label29.Location = new System.Drawing.Point(87, 240);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(68, 16);
+            this.label29.Size = new System.Drawing.Size(83, 20);
             this.label29.TabIndex = 338;
             this.label29.Text = "Pro.Name";
             // 
@@ -882,7 +884,7 @@
             this.label30.Location = new System.Drawing.Point(10, 241);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(44, 16);
+            this.label30.Size = new System.Drawing.Size(56, 20);
             this.label30.TabIndex = 337;
             this.label30.Text = "Pro.ID";
             // 
@@ -892,7 +894,7 @@
             this.label31.Location = new System.Drawing.Point(753, 236);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(0, 16);
+            this.label31.Size = new System.Drawing.Size(0, 21);
             this.label31.TabIndex = 336;
             // 
             // packnamecomboBox
@@ -900,12 +902,12 @@
             this.packnamecomboBox.FormattingEnabled = true;
             this.packnamecomboBox.Location = new System.Drawing.Point(192, 256);
             this.packnamecomboBox.Name = "packnamecomboBox";
-            this.packnamecomboBox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecomboBox.Size = new System.Drawing.Size(91, 27);
             this.packnamecomboBox.TabIndex = 363;
             // 
             // Sale_Return_Invoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(993, 654);
@@ -993,6 +995,7 @@
             this.Name = "Sale_Return_Invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale_Return_Invoice";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sale_Return_Invoice_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderidsearch)).EndInit();

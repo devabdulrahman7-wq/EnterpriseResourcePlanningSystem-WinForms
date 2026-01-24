@@ -72,9 +72,8 @@
             this.returndatedtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.returndatedtp.Location = new System.Drawing.Point(128, 101);
             this.returndatedtp.Name = "returndatedtp";
-            this.returndatedtp.Size = new System.Drawing.Size(133, 23);
+            this.returndatedtp.Size = new System.Drawing.Size(133, 27);
             this.returndatedtp.TabIndex = 338;
-            //this.returndatedtp.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label5
             // 
@@ -83,7 +82,7 @@
             this.label5.Location = new System.Drawing.Point(148, 135);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 337;
             this.label5.Text = "Salesman Name";
             // 
@@ -94,7 +93,7 @@
             this.label6.Location = new System.Drawing.Point(14, 135);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(104, 21);
             this.label6.TabIndex = 336;
             this.label6.Text = "Salesman ID";
             // 
@@ -103,7 +102,7 @@
             this.salesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmennametxtbox.Location = new System.Drawing.Point(128, 154);
             this.salesmennametxtbox.Name = "salesmennametxtbox";
-            this.salesmennametxtbox.Size = new System.Drawing.Size(322, 16);
+            this.salesmennametxtbox.Size = new System.Drawing.Size(322, 20);
             this.salesmennametxtbox.TabIndex = 335;
             this.salesmennametxtbox.TextChanged += new System.EventHandler(this.salesmennametxtbox_TextChanged);
             // 
@@ -112,7 +111,7 @@
             this.salesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmenidtxtbox.Location = new System.Drawing.Point(12, 154);
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
-            this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 16);
+            this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 20);
             this.salesmenidtxtbox.TabIndex = 334;
             this.salesmenidtxtbox.TextChanged += new System.EventHandler(this.salesmenidtxtbox_TextChanged);
             this.salesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmenidtxtbox_KeyDown);
@@ -134,7 +133,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(148, 82);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(75, 16);
+            this.saledatelbl.Size = new System.Drawing.Size(101, 21);
             this.saledatelbl.TabIndex = 332;
             this.saledatelbl.Text = "Return Date";
             // 
@@ -145,7 +144,7 @@
             this.saleidlbl.Location = new System.Drawing.Point(25, 82);
             this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saleidlbl.Name = "saleidlbl";
-            this.saleidlbl.Size = new System.Drawing.Size(61, 16);
+            this.saleidlbl.Size = new System.Drawing.Size(83, 21);
             this.saleidlbl.TabIndex = 331;
             this.saleidlbl.Text = "Return ID";
             // 
@@ -161,6 +160,7 @@
             this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(12, 245);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(531, 192);
             this.dataGridView1.TabIndex = 339;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -168,24 +168,28 @@
             // Column1
             // 
             this.Column1.HeaderText = "Pro ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 85;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Product Name";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 115;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Pack Name";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 90;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Pack ";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -194,12 +198,14 @@
             // Column5
             // 
             this.Column5.HeaderText = "Qty(Pack)";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 70;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Qty(Loose)";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 75;
             // 
@@ -285,7 +291,7 @@
             this.label1.Location = new System.Drawing.Point(103, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 32);
+            this.label1.Size = new System.Drawing.Size(426, 42);
             this.label1.TabIndex = 386;
             this.label1.Text = "Stock Receive to Salesmen";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -319,7 +325,7 @@
             this.label36.Location = new System.Drawing.Point(288, 201);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(38, 16);
+            this.label36.Size = new System.Drawing.Size(46, 20);
             this.label36.TabIndex = 471;
             this.label36.Text = "Pack";
             // 
@@ -328,7 +334,7 @@
             this.packnamecombobox.FormattingEnabled = true;
             this.packnamecombobox.Location = new System.Drawing.Point(193, 218);
             this.packnamecombobox.Name = "packnamecombobox";
-            this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
+            this.packnamecombobox.Size = new System.Drawing.Size(91, 27);
             this.packnamecombobox.TabIndex = 470;
             this.packnamecombobox.SelectedIndexChanged += new System.EventHandler(this.packnamecombobox_SelectedIndexChanged);
             // 
@@ -362,7 +368,7 @@
             this.label40.Location = new System.Drawing.Point(191, 201);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(78, 16);
+            this.label40.Size = new System.Drawing.Size(95, 20);
             this.label40.TabIndex = 467;
             this.label40.Text = "Pack Name";
             // 
@@ -373,7 +379,7 @@
             this.label41.Location = new System.Drawing.Point(87, 202);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(68, 16);
+            this.label41.Size = new System.Drawing.Size(83, 20);
             this.label41.TabIndex = 466;
             this.label41.Text = "Pro.Name";
             // 
@@ -384,7 +390,7 @@
             this.label42.Location = new System.Drawing.Point(13, 201);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(44, 16);
+            this.label42.Size = new System.Drawing.Size(56, 20);
             this.label42.TabIndex = 465;
             this.label42.Text = "Pro.ID";
             // 
@@ -395,7 +401,7 @@
             this.label2.Location = new System.Drawing.Point(340, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 471;
             this.label2.Text = "Qty(P)";
             // 
@@ -417,7 +423,7 @@
             this.label3.Location = new System.Drawing.Point(392, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 471;
             this.label3.Text = "Qty(L)";
             // 
@@ -435,7 +441,7 @@
             // 
             // Stock_Receive_to_Salesmen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(740, 488);
@@ -473,6 +479,7 @@
             this.Name = "Stock_Receive_to_Salesmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Receive_to_Salesmen";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stock_Receive_to_Salesmen_FormClosing);
             this.Load += new System.EventHandler(this.Stock_Receive_to_Salesmen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

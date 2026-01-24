@@ -85,7 +85,7 @@
             this.label5.Location = new System.Drawing.Point(340, 174);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 16);
+            this.label5.Size = new System.Drawing.Size(114, 21);
             this.label5.TabIndex = 473;
             this.label5.Text = "Product Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,7 +97,7 @@
             this.label6.Location = new System.Drawing.Point(178, 174);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.Size = new System.Drawing.Size(89, 21);
             this.label6.TabIndex = 472;
             this.label6.Text = "Product ID";
             // 
@@ -149,6 +149,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 468;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -156,7 +157,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(129, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 32);
+            this.label1.Size = new System.Drawing.Size(542, 42);
             this.label1.TabIndex = 467;
             this.label1.Text = "Product Purchase Return Ledger\r\n";
             // 
@@ -165,7 +166,7 @@
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(343, 129);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(114, 23);
+            this.todatepcker.Size = new System.Drawing.Size(114, 27);
             this.todatepcker.TabIndex = 466;
             // 
             // fromdatepcker
@@ -173,7 +174,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(182, 129);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(118, 27);
             this.fromdatepcker.TabIndex = 465;
             // 
             // label3
@@ -183,7 +184,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(340, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 464;
             this.label3.Text = "To Date";
             // 
@@ -194,13 +195,13 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(179, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(89, 21);
             this.label2.TabIndex = 463;
             this.label2.Text = "From Date";
             // 
             // Product_Purchase_Return_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(670, 374);
@@ -220,10 +221,11 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Purchase_Return_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Purchase_Return_Ledger";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.prdctidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

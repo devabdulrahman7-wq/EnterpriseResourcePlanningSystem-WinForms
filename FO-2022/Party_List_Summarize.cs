@@ -31,5 +31,10 @@ namespace FO_2022
         {
             // Nothing needed here
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

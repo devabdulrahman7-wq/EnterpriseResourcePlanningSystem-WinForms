@@ -69,6 +69,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 651;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -77,7 +78,7 @@
             this.label2.Location = new System.Drawing.Point(175, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 32);
+            this.label2.Size = new System.Drawing.Size(470, 42);
             this.label2.TabIndex = 650;
             this.label2.Text = "Post Date Recovery Promises\r\n";
             // 
@@ -87,7 +88,7 @@
             this.label5.Location = new System.Drawing.Point(322, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 660;
             this.label5.Text = "Entry Date";
             // 
@@ -108,7 +109,7 @@
             this.label8.Location = new System.Drawing.Point(148, 122);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 16);
+            this.label8.Size = new System.Drawing.Size(100, 21);
             this.label8.TabIndex = 658;
             this.label8.Text = "Promises ID";
             // 
@@ -118,7 +119,7 @@
             this.entrydatepcker.Location = new System.Drawing.Point(325, 145);
             this.entrydatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.entrydatepcker.Name = "entrydatepcker";
-            this.entrydatepcker.Size = new System.Drawing.Size(115, 23);
+            this.entrydatepcker.Size = new System.Drawing.Size(115, 27);
             this.entrydatepcker.TabIndex = 657;
             this.entrydatepcker.ValueChanged += new System.EventHandler(this.entrydatepcker_ValueChanged);
             // 
@@ -128,7 +129,7 @@
             this.label1.Location = new System.Drawing.Point(481, 124);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.Size = new System.Drawing.Size(118, 21);
             this.label1.TabIndex = 664;
             this.label1.Text = "Promises Date";
             // 
@@ -138,7 +139,7 @@
             this.promisesdatepcker.Location = new System.Drawing.Point(484, 145);
             this.promisesdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.promisesdatepcker.Name = "promisesdatepcker";
-            this.promisesdatepcker.Size = new System.Drawing.Size(115, 23);
+            this.promisesdatepcker.Size = new System.Drawing.Size(115, 27);
             this.promisesdatepcker.TabIndex = 661;
             this.promisesdatepcker.ValueChanged += new System.EventHandler(this.promisesdatepcker_ValueChanged);
             // 
@@ -148,7 +149,7 @@
             this.label7.Location = new System.Drawing.Point(146, 185);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 16);
+            this.label7.Size = new System.Drawing.Size(95, 21);
             this.label7.TabIndex = 669;
             this.label7.Text = "Account No";
             // 
@@ -169,7 +170,7 @@
             this.label6.Location = new System.Drawing.Point(320, 185);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 16);
+            this.label6.Size = new System.Drawing.Size(118, 21);
             this.label6.TabIndex = 667;
             this.label6.Text = "Account Name";
             // 
@@ -201,7 +202,7 @@
             this.label3.Location = new System.Drawing.Point(146, 240);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.Size = new System.Drawing.Size(68, 21);
             this.label3.TabIndex = 674;
             this.label3.Text = "Amount";
             // 
@@ -221,7 +222,7 @@
             this.label4.Location = new System.Drawing.Point(320, 240);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.Size = new System.Drawing.Size(77, 21);
             this.label4.TabIndex = 672;
             this.label4.Text = "In Words";
             // 
@@ -253,7 +254,7 @@
             this.label9.Location = new System.Drawing.Point(146, 317);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 16);
+            this.label9.Size = new System.Drawing.Size(79, 21);
             this.label9.TabIndex = 676;
             this.label9.Text = "Narration";
             // 
@@ -345,7 +346,7 @@
             // 
             // Post_Date_Recovery_Promises
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(714, 468);
@@ -380,6 +381,7 @@
             this.Name = "Post_Date_Recovery_Promises";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Post_Date_Recovery_Promises";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Post_Date_Recovery_Promises_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountnosearch)).EndInit();

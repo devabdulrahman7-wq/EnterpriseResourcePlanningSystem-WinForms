@@ -81,7 +81,7 @@
             this.label5.Location = new System.Drawing.Point(293, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
+            this.label5.Size = new System.Drawing.Size(126, 21);
             this.label5.TabIndex = 477;
             this.label5.Text = "Company Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,6 +95,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 482;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -102,7 +103,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(196, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 32);
+            this.label1.Size = new System.Drawing.Size(250, 42);
             this.label1.TabIndex = 481;
             this.label1.Text = "Opening Stock";
             // 
@@ -152,14 +153,14 @@
             this.label2.Location = new System.Drawing.Point(124, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 486;
             this.label2.Text = "Company ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Opening_Stock_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(613, 369);
@@ -178,6 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Opening_Stock_1";
             this.Text = "Opening_Stock_1";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

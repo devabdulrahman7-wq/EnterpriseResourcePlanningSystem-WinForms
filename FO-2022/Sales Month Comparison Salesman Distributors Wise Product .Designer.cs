@@ -51,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(447, 64);
+            this.label1.Size = new System.Drawing.Size(575, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sales Month Comparison Salesman\r\n Distributors Wise Product ";
             // 
@@ -104,7 +104,7 @@
             this.label3.Location = new System.Drawing.Point(262, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 16);
+            this.label3.Size = new System.Drawing.Size(157, 21);
             this.label3.TabIndex = 369;
             this.label3.Text = "Current Month Date";
             // 
@@ -115,7 +115,7 @@
             this.label4.Location = new System.Drawing.Point(94, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.Size = new System.Drawing.Size(133, 21);
             this.label4.TabIndex = 368;
             this.label4.Text = "Last Month Date";
             // 
@@ -136,7 +136,7 @@
             this.currentmonthdatepcker.Location = new System.Drawing.Point(265, 173);
             this.currentmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.currentmonthdatepcker.Name = "currentmonthdatepcker";
-            this.currentmonthdatepcker.Size = new System.Drawing.Size(124, 23);
+            this.currentmonthdatepcker.Size = new System.Drawing.Size(124, 27);
             this.currentmonthdatepcker.TabIndex = 376;
             // 
             // lastmonthdatepcker
@@ -145,7 +145,7 @@
             this.lastmonthdatepcker.Location = new System.Drawing.Point(97, 173);
             this.lastmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.lastmonthdatepcker.Name = "lastmonthdatepcker";
-            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 23);
+            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 27);
             this.lastmonthdatepcker.TabIndex = 375;
             // 
             // salesmancombobox
@@ -153,7 +153,7 @@
             this.salesmancombobox.FormattingEnabled = true;
             this.salesmancombobox.Location = new System.Drawing.Point(97, 251);
             this.salesmancombobox.Name = "salesmancombobox";
-            this.salesmancombobox.Size = new System.Drawing.Size(292, 24);
+            this.salesmancombobox.Size = new System.Drawing.Size(292, 27);
             this.salesmancombobox.TabIndex = 377;
             // 
             // label2
@@ -163,7 +163,7 @@
             this.label2.Location = new System.Drawing.Point(94, 232);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 378;
             this.label2.Text = "Select Salesman";
             // 
@@ -181,7 +181,7 @@
             // 
             // Sales_Month_Comparison_Salesman_Distributors_Wise_Product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(587, 394);
@@ -203,6 +203,7 @@
             this.Name = "Sales_Month_Comparison_Salesman_Distributors_Wise_Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Month_Comparison_Salesman_Distributors_Wise_Product";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.datesearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

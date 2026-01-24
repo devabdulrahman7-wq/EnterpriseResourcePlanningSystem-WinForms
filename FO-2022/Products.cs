@@ -800,9 +800,10 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Mainform1 mainForm = new Mainform1();
-            mainForm.Show();
-            this.Hide();
+            //Mainform1 mainForm = new Mainform1();
+            //mainForm.Show();
+            //this.Hide();
+            this.Close();
         }
 
         private void cmpnynamecombobox1_SelectedIndexChanged(object sender, EventArgs e)
