@@ -15,18 +15,22 @@ namespace FO_2022
         [STAThread]
         static void Main()
         {
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mainform1());
-
             if (!LicenseEngine.IsLicenseValid())
             {
                 new ActivationForm().ShowDialog();
                 if (!LicenseEngine.IsLicenseValid())
                     Application.Exit();
             }
+            else
+            {
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Mainform1());
+            }
         }
+            
+        
 
 
     }
