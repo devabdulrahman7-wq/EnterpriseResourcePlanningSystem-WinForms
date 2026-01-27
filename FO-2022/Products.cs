@@ -313,31 +313,7 @@ namespace FO_2022
         // Packings grid load karne ka method (dataGridView2 ke liye)
         private void LoadPackingsGrid()
         {
-            //try
-            //{
-            //    using (SqlConnection conn = new SqlConnection(connectionString))
-            //    {
-            //        string query = @"SELECT 
-            //                        p.PackingId,
-            //                        p.PackingName,
-            //                        p.Abbrevation,
-            //                        CAST(0 AS decimal(10,2)) AS Multiplier  -- Default 0 value
-            //                     FROM Packings p
-            //                     ORDER BY p.PackingName";
-
-            //        SqlDataAdapter da = new SqlDataAdapter(query, conn);
-            //        dtPackingsGrid = new DataTable();
-            //        da.Fill(dtPackingsGrid);
-
-            //        // Bind to DataGridView2
-            //        dataGridView2.DataSource = dtPackingsGrid;
-            //        FormatPackingsGrid();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error loading packings grid: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+           
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -368,27 +344,7 @@ namespace FO_2022
 
         private void FormatPackingsGrid()
         {
-            //if (dataGridView2.Columns.Count > 0)
-            //{
-            //    dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            //    // Column names set karein
-            //    dataGridView2.Columns["PackingId"].HeaderText = "Packing ID";
-            //    dataGridView2.Columns["PackingName"].HeaderText = "Packing Name";
-            //    dataGridView2.Columns["Multiplier"].HeaderText = "Multiplier";
-            //    dataGridView2.Columns["Abbrevation"].HeaderText = "Abbreviation";
-
-            //    // PackingId column hide karein
-            //    dataGridView2.Columns["PackingId"].Visible = false;
-
-            //    // Multiplier column ko editable banayein
-            //    dataGridView2.Columns["Multiplier"].ReadOnly = false;
-
-            //    // Column widths set karein
-            //    dataGridView2.Columns["PackingName"].Width = 150;
-            //    dataGridView2.Columns["Multiplier"].Width = 100;
-            //    dataGridView2.Columns["Abbrevation"].Width = 80;
-            //}
+            
             if (dataGridView2.Columns.Count > 0)
             {
                 dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -503,23 +459,7 @@ namespace FO_2022
 
         private void dataGridViewavlblepkng_SelectionChanged(object sender, EventArgs e)
         {
-            //// REQUIREMENT 3: Grid se select karne par textboxes mein data show ho
-            //if (dataGridViewavlblepkng.SelectedRows.Count > 0)
-            //{
-            //    DataGridViewRow row = dataGridViewavlblepkng.SelectedRows[0];
-
-            //    // ptdcidttxtbox1 mein ProductID show ho
-            //    if (row.Cells["ProductID"].Value != null)
-            //    {
-            //        ptdcidttxtbox1.Text = row.Cells["ProductID"].Value.ToString();
-            //    }
-
-            //    // prdctnametxtbox mein ProductName show ho
-            //    if (row.Cells["ProductName"].Value != null)
-            //    {
-            //        prdctnametxtbox.Text = row.Cells["ProductName"].Value.ToString();
-            //    }
-            //}
+           
             // REQUIREMENT 3: Grid se select karne par textboxes mein data show ho
             if (dataGridViewavlblepkng.SelectedRows.Count > 0)
             {
@@ -641,36 +581,7 @@ namespace FO_2022
         // DataGridView2 mein selection change hone par packing details show karein
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-            //if (dataGridView2.SelectedRows.Count > 0)
-            //{
-            //    DataGridViewRow row = dataGridView2.SelectedRows[0];
-
-            //    // Agar packing comboboxes mein select karna chahate hain
-            //    if (row.Cells["PackingId"].Value != null)
-            //    {
-            //        int packingId = Convert.ToInt32(row.Cells["PackingId"].Value);
-
-            //        // Purchase packing combobox mein select karein
-            //        foreach (DataRowView item in purchasepackcombobox.Items)
-            //        {
-            //            if (Convert.ToInt32(item["PackingId"]) == packingId)
-            //            {
-            //                purchasepackcombobox.SelectedItem = item;
-            //                break;
-            //            }
-            //        }
-
-            //        // Sale packing combobox mein select karein
-            //        foreach (DataRowView item in salepackcombobox.Items)
-            //        {
-            //            if (Convert.ToInt32(item["PackingId"]) == packingId)
-            //            {
-            //                salepackcombobox.SelectedItem = item;
-            //                break;
-            //            }
-            //        }
-            //    }
-            //}
+           
             if (dataGridView2.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridView2.SelectedRows[0];

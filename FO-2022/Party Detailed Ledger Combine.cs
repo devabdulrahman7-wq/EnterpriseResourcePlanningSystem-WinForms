@@ -129,7 +129,7 @@ namespace FO_2022
             };
 
             Report_viewer reportViewer = new Report_viewer();
-            reportViewer.ShowReport("Party_Detailed_Ledger_Combine.rdlc", dataSources, parameters);
+            reportViewer.ShowReport("Party_Detailed_Ledger_Combine.rdlc", dataSources);
         }
 
         private bool ValidateInputs()
@@ -180,9 +180,9 @@ namespace FO_2022
                         cmd.Parameters.AddWithValue("@FROMDATE", GetFromDate());
                         cmd.Parameters.AddWithValue("@TODATE", GetToDate());
                         cmd.Parameters.AddWithValue("@accountno", partyidtxtbox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@salesman", salesmancombobox.SelectedValue);
+                        //cmd.Parameters.AddWithValue("@salesman", salesmancombobox.SelectedValue);
 
-                        cmd.CommandTimeout = 180; // 3 minutes for large data
+                        cmd.CommandTimeout = 40; // 3 minutes for large data
 
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         da.Fill(dt);

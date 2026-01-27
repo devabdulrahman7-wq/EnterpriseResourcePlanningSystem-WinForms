@@ -8,19 +8,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.43125in</Width>
+                  <Width>1.475in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.43125in</Width>
+                  <Width>1.475in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.43125in</Width>
+                  <Width>1.475in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.43125in</Width>
+                  <Width>1.475in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.43125in</Width>
+                  <Width>1.475in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -37,10 +37,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Account No</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -67,10 +71,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Account Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -97,10 +105,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Narration</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -127,10 +139,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Credit</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -157,10 +173,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Debit</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -356,9 +376,9 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.46379in</Left>
+            <Left>0.24504in</Left>
             <Height>0.5in</Height>
-            <Width>7.15625in</Width>
+            <Width>7.375in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -405,7 +425,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.0243in</Top>
+          <Top>0in</Top>
           <Height>0.21875in</Height>
           <Width>7.97792in</Width>
           <Style>

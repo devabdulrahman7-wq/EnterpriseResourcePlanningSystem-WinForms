@@ -1640,6 +1640,7 @@
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">
       <DependentUpon>Balance_Sheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Cash_Book.rdlc" />
     <EmbeddedResource Include="Reports\Charts_of_Accounts_rv.resx">
       <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
     </EmbeddedResource>
