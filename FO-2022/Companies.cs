@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace FO_2022
 {
     public partial class Companies : Form
     {
-        private string connectionString; // Connection string ko store karein
+        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        //private string connectionString; // Connection string ko store karein
         private DataTable dataTable;
 
         public Companies()
         {
             InitializeComponent();
-            InitializeConnectionString();
+            //InitializeConnectionString();
             LoadCompanies();
         }
 
-        private void InitializeConnectionString()
-        {
-            //string connectionString = "Data Source=.;Initial Catalog=UltraBiz20232;Integrated Security=True";
-            connectionString = "Data Source=.;Initial Catalog=POS_1.2;Integrated Security=True; Connect Timeout=3";
-        }
+        //private void InitializeConnectionString()
+        //{
+        //    //string connectionString = "Data Source=.;Initial Catalog=UltraBiz20232;Integrated Security=True";
+        //    //connectionString = "Data Source=.;Initial Catalog=POS_1.2;Integrated Security=True; Connect Timeout=3";
+        //}
 
         private void LoadCompanies()
         {

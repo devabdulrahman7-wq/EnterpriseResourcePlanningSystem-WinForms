@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,8 @@ namespace FO_2022
     public partial class stockalertlvltxtbox : Form
     {
         // Connection string
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        //private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         // DataTables for storing data
         private DataTable dtCompanies;
