@@ -68,7 +68,7 @@
                   </TablixColumns>
                   <TablixRows>
                     <TablixRow>
-                      <Height>0.32812in</Height>
+                      <Height>0.2934in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -209,7 +209,7 @@
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.32812in</Height>
+                      <Height>0.2934in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -354,7 +354,7 @@
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>DataSet1</DataSetName>
-                <Height>0.65625in</Height>
+                <Height>0.58681in</Height>
                 <Width>6.75931in</Width>
                 <Style>
                   <Border>
@@ -364,8 +364,7 @@
               </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Left>0in</Left>
-            <Height>0.65625in</Height>
+            <Height>0.58681in</Height>
             <Width>6.75931in</Width>
             <Style>
               <Border>
@@ -374,8 +373,13 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>0.65625in</Height>
-        <Style />
+        <Height>0.59375in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
       </Body>
       <Width>6.75931in</Width>
       <Page>
@@ -403,7 +407,6 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Left>0in</Left>
               <Height>0.20625in</Height>
               <Width>6.75931in</Width>
               <Style>
@@ -705,11 +708,18 @@
             </Border>
           </Style>
         </PageFooter>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
-        <Style />
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.1in</LeftMargin>
+        <RightMargin>0.1in</RightMargin>
+        <TopMargin>0.1in</TopMargin>
+        <BottomMargin>0.1in</BottomMargin>
+        <Style>
+          <Border>
+            <Style>None</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
       </Page>
     </ReportSection>
   </ReportSections>

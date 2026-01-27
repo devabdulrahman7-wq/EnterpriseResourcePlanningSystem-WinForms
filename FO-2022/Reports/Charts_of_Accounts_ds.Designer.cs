@@ -4747,13 +4747,13 @@ namespace FO_2022.Reports {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AccountReceivableDataTable : global::System.Data.TypedTableBase<AccountReceivableRow> {
             
-            private global::System.Data.DataColumn columnACCOUNTNO;
+            private global::System.Data.DataColumn columnAccountNo;
             
-            private global::System.Data.DataColumn columnACCOUNTNAME;
+            private global::System.Data.DataColumn columnAccountName;
             
-            private global::System.Data.DataColumn columnCLOSINGBAL;
+            private global::System.Data.DataColumn columnClosingBal;
             
-            private global::System.Data.DataColumn columnCLOSINGBALTYPE;
+            private global::System.Data.DataColumn columnClosingBalType;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -4790,33 +4790,33 @@ namespace FO_2022.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ACCOUNTNOColumn {
+            public global::System.Data.DataColumn AccountNoColumn {
                 get {
-                    return this.columnACCOUNTNO;
+                    return this.columnAccountNo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ACCOUNTNAMEColumn {
+            public global::System.Data.DataColumn AccountNameColumn {
                 get {
-                    return this.columnACCOUNTNAME;
+                    return this.columnAccountName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CLOSINGBALColumn {
+            public global::System.Data.DataColumn ClosingBalColumn {
                 get {
-                    return this.columnCLOSINGBAL;
+                    return this.columnClosingBal;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CLOSINGBALTYPEColumn {
+            public global::System.Data.DataColumn ClosingBalTypeColumn {
                 get {
-                    return this.columnCLOSINGBALTYPE;
+                    return this.columnClosingBalType;
                 }
             }
             
@@ -4857,13 +4857,13 @@ namespace FO_2022.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AccountReceivableRow AddAccountReceivableRow(string ACCOUNTNO, string ACCOUNTNAME, string CLOSINGBAL, string CLOSINGBALTYPE) {
+            public AccountReceivableRow AddAccountReceivableRow(string AccountNo, string AccountName, string ClosingBal, string ClosingBalType) {
                 AccountReceivableRow rowAccountReceivableRow = ((AccountReceivableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ACCOUNTNO,
-                        ACCOUNTNAME,
-                        CLOSINGBAL,
-                        CLOSINGBALTYPE};
+                        AccountNo,
+                        AccountName,
+                        ClosingBal,
+                        ClosingBalType};
                 rowAccountReceivableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAccountReceivableRow);
                 return rowAccountReceivableRow;
@@ -4886,23 +4886,23 @@ namespace FO_2022.Reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnACCOUNTNO = base.Columns["ACCOUNTNO"];
-                this.columnACCOUNTNAME = base.Columns["ACCOUNTNAME"];
-                this.columnCLOSINGBAL = base.Columns["CLOSINGBAL"];
-                this.columnCLOSINGBALTYPE = base.Columns["CLOSINGBALTYPE"];
+                this.columnAccountNo = base.Columns["AccountNo"];
+                this.columnAccountName = base.Columns["AccountName"];
+                this.columnClosingBal = base.Columns["ClosingBal"];
+                this.columnClosingBalType = base.Columns["ClosingBalType"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnACCOUNTNO = new global::System.Data.DataColumn("ACCOUNTNO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnACCOUNTNO);
-                this.columnACCOUNTNAME = new global::System.Data.DataColumn("ACCOUNTNAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnACCOUNTNAME);
-                this.columnCLOSINGBAL = new global::System.Data.DataColumn("CLOSINGBAL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCLOSINGBAL);
-                this.columnCLOSINGBALTYPE = new global::System.Data.DataColumn("CLOSINGBALTYPE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCLOSINGBALTYPE);
+                this.columnAccountNo = new global::System.Data.DataColumn("AccountNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccountNo);
+                this.columnAccountName = new global::System.Data.DataColumn("AccountName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccountName);
+                this.columnClosingBal = new global::System.Data.DataColumn("ClosingBal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosingBal);
+                this.columnClosingBalType = new global::System.Data.DataColumn("ClosingBalType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosingBalType);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7717,114 +7717,114 @@ namespace FO_2022.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ACCOUNTNO {
+            public string AccountNo {
                 get {
                     try {
-                        return ((string)(this[this.tableAccountReceivable.ACCOUNTNOColumn]));
+                        return ((string)(this[this.tableAccountReceivable.AccountNoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ACCOUNTNO\' in table \'AccountReceivable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AccountNo\' in table \'AccountReceivable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAccountReceivable.ACCOUNTNOColumn] = value;
+                    this[this.tableAccountReceivable.AccountNoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ACCOUNTNAME {
+            public string AccountName {
                 get {
                     try {
-                        return ((string)(this[this.tableAccountReceivable.ACCOUNTNAMEColumn]));
+                        return ((string)(this[this.tableAccountReceivable.AccountNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ACCOUNTNAME\' in table \'AccountReceivable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AccountName\' in table \'AccountReceivable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAccountReceivable.ACCOUNTNAMEColumn] = value;
+                    this[this.tableAccountReceivable.AccountNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CLOSINGBAL {
+            public string ClosingBal {
                 get {
                     try {
-                        return ((string)(this[this.tableAccountReceivable.CLOSINGBALColumn]));
+                        return ((string)(this[this.tableAccountReceivable.ClosingBalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CLOSINGBAL\' in table \'AccountReceivable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosingBal\' in table \'AccountReceivable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAccountReceivable.CLOSINGBALColumn] = value;
+                    this[this.tableAccountReceivable.ClosingBalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CLOSINGBALTYPE {
+            public string ClosingBalType {
                 get {
                     try {
-                        return ((string)(this[this.tableAccountReceivable.CLOSINGBALTYPEColumn]));
+                        return ((string)(this[this.tableAccountReceivable.ClosingBalTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CLOSINGBALTYPE\' in table \'AccountReceivable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosingBalType\' in table \'AccountReceivable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAccountReceivable.CLOSINGBALTYPEColumn] = value;
+                    this[this.tableAccountReceivable.ClosingBalTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsACCOUNTNONull() {
-                return this.IsNull(this.tableAccountReceivable.ACCOUNTNOColumn);
+            public bool IsAccountNoNull() {
+                return this.IsNull(this.tableAccountReceivable.AccountNoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetACCOUNTNONull() {
-                this[this.tableAccountReceivable.ACCOUNTNOColumn] = global::System.Convert.DBNull;
+            public void SetAccountNoNull() {
+                this[this.tableAccountReceivable.AccountNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsACCOUNTNAMENull() {
-                return this.IsNull(this.tableAccountReceivable.ACCOUNTNAMEColumn);
+            public bool IsAccountNameNull() {
+                return this.IsNull(this.tableAccountReceivable.AccountNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetACCOUNTNAMENull() {
-                this[this.tableAccountReceivable.ACCOUNTNAMEColumn] = global::System.Convert.DBNull;
+            public void SetAccountNameNull() {
+                this[this.tableAccountReceivable.AccountNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCLOSINGBALNull() {
-                return this.IsNull(this.tableAccountReceivable.CLOSINGBALColumn);
+            public bool IsClosingBalNull() {
+                return this.IsNull(this.tableAccountReceivable.ClosingBalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCLOSINGBALNull() {
-                this[this.tableAccountReceivable.CLOSINGBALColumn] = global::System.Convert.DBNull;
+            public void SetClosingBalNull() {
+                this[this.tableAccountReceivable.ClosingBalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCLOSINGBALTYPENull() {
-                return this.IsNull(this.tableAccountReceivable.CLOSINGBALTYPEColumn);
+            public bool IsClosingBalTypeNull() {
+                return this.IsNull(this.tableAccountReceivable.ClosingBalTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCLOSINGBALTYPENull() {
-                this[this.tableAccountReceivable.CLOSINGBALTYPEColumn] = global::System.Convert.DBNull;
+            public void SetClosingBalTypeNull() {
+                this[this.tableAccountReceivable.ClosingBalTypeColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -45,11 +45,6 @@
             this.printbtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTestSP = new System.Windows.Forms.Button();
-            this.lblDateRange = new System.Windows.Forms.Label();
-            this.cancelbtn = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -190,7 +185,6 @@
             this.closebtn.TabIndex = 311;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click_1);
             // 
             // printbtn
             // 
@@ -227,62 +221,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 314;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // btnTestSP
-            // 
-            this.btnTestSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTestSP.FlatAppearance.BorderSize = 0;
-            this.btnTestSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTestSP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTestSP.Location = new System.Drawing.Point(146, 307);
-            this.btnTestSP.Margin = new System.Windows.Forms.Padding(5);
-            this.btnTestSP.Name = "btnTestSP";
-            this.btnTestSP.Size = new System.Drawing.Size(90, 27);
-            this.btnTestSP.TabIndex = 315;
-            this.btnTestSP.Text = "Close";
-            this.btnTestSP.UseVisualStyleBackColor = false;
-            // 
-            // lblDateRange
-            // 
-            this.lblDateRange.AutoSize = true;
-            this.lblDateRange.Location = new System.Drawing.Point(257, 225);
-            this.lblDateRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDateRange.Name = "lblDateRange";
-            this.lblDateRange.Size = new System.Drawing.Size(67, 16);
-            this.lblDateRange.TabIndex = 319;
-            this.lblDateRange.Text = "From Date";
-            // 
-            // cancelbtn
-            // 
-            this.cancelbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cancelbtn.FlatAppearance.BorderSize = 0;
-            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(444, 394);
-            this.cancelbtn.Margin = new System.Windows.Forms.Padding(5);
-            this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(90, 27);
-            this.cancelbtn.TabIndex = 316;
-            this.cancelbtn.Text = "Close";
-            this.cancelbtn.UseVisualStyleBackColor = false;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(450, 373);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(67, 16);
-            this.lblStatus.TabIndex = 317;
-            this.lblStatus.Text = "From Date";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(434, 417);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 318;
+            this.pictureBox2.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // Account_Receivable
             // 
@@ -290,11 +229,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(580, 466);
-            this.Controls.Add(this.lblDateRange);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.cancelbtn);
-            this.Controls.Add(this.btnTestSP);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.previewbtn);
@@ -342,10 +276,5 @@
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnTestSP;
-        private System.Windows.Forms.Label lblDateRange;
-        private System.Windows.Forms.Button cancelbtn;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

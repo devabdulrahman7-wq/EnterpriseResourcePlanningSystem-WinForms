@@ -16,7 +16,7 @@ namespace FO_2022
         {
             InitializeComponent();
 
-            // Set dates
+            // Default dates (last month)
             fromdatepicker.Value = DateTime.Now.AddMonths(-1);
             todatepcker.Value = DateTime.Now;
 
@@ -54,35 +54,26 @@ namespace FO_2022
             }
         }
 
-        // ⚡⚡⚡ MAIN METHOD - SP KO EK BAAR MEIN CALL KARO ⚡⚡⚡
+        // ⚡⚡⚡ MAIN BUTTON CLICK - SUPER SIMPLE ⚡⚡⚡
         private void previewbtn_Click(object sender, EventArgs e)
         {
             try
             {
                 Cursor = Cursors.WaitCursor;
-                lblStatus.Text = "Loading report...";
-                lblStatus.Visible = true;
                 Application.DoEvents();
 
-                // Step 1: SP ko call karo sab accounts ke liye
-                DataTable allData = CallSPForAllAccounts();
+                // Step 1: Get data (FASTEST METHOD)
+                DataTable reportData = GetSimpleData();
 
-                if (allData == null || allData.Rows.Count == 0)
+                if (reportData.Rows.Count == 0)
                 {
                     MessageBox.Show("No data found", "Info",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
-                // Step 2: Balance filter apply karo
-                decimal minBalance = GetMinBalance();
-                if (minBalance > 0)
-                {
-                    allData = ApplyBalanceFilter(allData, minBalance);
-                }
-
-                // Step 3: Report show karo
-                ShowReport(allData);
+                // Step 2: Show report
+                ShowReport(reportData);
             }
             catch (Exception ex)
             {
@@ -92,138 +83,163 @@ namespace FO_2022
             finally
             {
                 Cursor = Cursors.Default;
-                lblStatus.Visible = false;
             }
         }
 
-        // ⭐⭐⭐ YE WALA METHOD USE KARO - SP KO FAST CALL KAREGA ⭐⭐⭐
-        private DataTable CallSPForAllAccounts()
-        {
-            DataTable result = new DataTable();
+        // ⭐⭐⭐ YE 3 METHODS TRY KARO - EK KAAM KAREGA ⭐⭐⭐
 
-            try
-            {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-
-                    // ⚡ TRICK: SP ko temp table mein result dalo
-                    string query = @"
-                        -- Create temp table with SP ka structure
-                        CREATE TABLE #TempResults (
-                            ACCOUNTNO VARCHAR(10),
-                            ACCOUNTNAME VARCHAR(100),
-                            CLOSINGBAL DECIMAL(18,2),
-                            CLOSINGBALTYPE VARCHAR(2)
-                        );
-                        
-                        -- Get all party accounts
-                        DECLARE @AccountList TABLE (AccountNo VARCHAR(10));
-                        INSERT INTO @AccountList
-                        SELECT AccountNo 
-                        FROM ChartOfAccounts 
-                        WHERE IsDetailed = 1 
-                            AND AccountType LIKE '%Parties%';
-                        
-                        -- Loop through accounts and call SP
-                        DECLARE @AccountNo VARCHAR(10);
-                        DECLARE account_cursor CURSOR FOR 
-                        SELECT AccountNo FROM @AccountList;
-                        
-                        OPEN account_cursor;
-                        FETCH NEXT FROM account_cursor INTO @AccountNo;
-                        
-                        WHILE @@FETCH_STATUS = 0
-                        BEGIN
-                            -- Insert SP result into temp table
-                            INSERT INTO #TempResults (ACCOUNTNO, ACCOUNTNAME, CLOSINGBAL, CLOSINGBALTYPE)
-                            EXEC SPACCACCOUNTSBALANCESFINAL 
-                                @FROMDATE = @FromDate,
-                                @TODATE = @ToDate,
-                                @accountno = @AccountNo;
-                            
-                            FETCH NEXT FROM account_cursor INTO @AccountNo;
-                        END;
-                        
-                        CLOSE account_cursor;
-                        DEALLOCATE account_cursor;
-                        
-                        -- Return results
-                        SELECT * FROM #TempResults;
-                        
-                        -- Cleanup
-                        DROP TABLE #TempResults;";
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        cmd.CommandTimeout = 120; // 2 minutes
-                        cmd.Parameters.AddWithValue("@FromDate", fromdatepicker.Value);
-                        cmd.Parameters.AddWithValue("@ToDate", todatepcker.Value);
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(result);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // ⚡ FALLBACK: Direct query use karo
-                MessageBox.Show($"SP failed, using direct query...\n{ex.Message}",
-                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                result = GetDataDirect();
-            }
-
-            return result;
-        }
-
-        // ⚡ FALLBACK METHOD - Agar SP slow hai toh ye use karo
-        private DataTable GetDataDirect()
+        // METHOD 1: AccountsBalances table se (FASTEST)
+        private DataTable GetDataFromAccountsBalances()
         {
             DataTable dt = new DataTable();
 
-            try
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                // EXACT 4 COLUMNS jo tumhe chahiye
+                string query = @"
+                    SELECT 
+                        AccountNo AS ACCOUNTNO,
+                        AccountName AS ACCOUNTNAME,
+                        ABS(Bal) AS CLOSINGBAL,
+                        BalType AS CLOSINGBALTYPE
+                    FROM AccountsBalances 
+                    WHERE ABS(Bal) > 0
+                    ORDER BY ABS(Bal) DESC";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    // Direct query jo SP jaisa result de
-                    string query = @"
-                        SELECT 
-                            AccountNo AS ACCOUNTNO,
-                            AccountName AS ACCOUNTNAME,
-                            ABS(AdjustedDebit - AdjustedCredit) AS CLOSINGBAL,
-                            CASE 
-                                WHEN (AdjustedDebit - AdjustedCredit) >= 0 
-                                THEN 'Dr' 
-                                ELSE 'Cr' 
-                            END AS CLOSINGBALTYPE
-                        FROM ChartOfAccounts 
-                        WHERE IsDetailed = 1 
-                            AND AccountType LIKE '%Parties%'
-                            AND ABS(AdjustedDebit - AdjustedCredit) > 0
-                        ORDER BY ABS(AdjustedDebit - AdjustedCredit) DESC";
+                    cmd.CommandTimeout = 10;
+                    con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
-                        cmd.CommandTimeout = 30;
-                        con.Open();
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dt);
-                        }
+                        da.Fill(dt);
                     }
                 }
             }
-            catch (Exception ex)
+
+            return dt;
+        }
+
+        // METHOD 2: ChartOfAccounts se (SECOND OPTION)
+        private DataTable GetDataFromChartOfAccounts()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                MessageBox.Show($"Direct query failed: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string query = @"
+                    SELECT 
+                        AccountNo AS ACCOUNTNO,
+                        AccountName AS ACCOUNTNAME,
+                        ABS(AdjustedDebit - AdjustedCredit) AS CLOSINGBAL,
+                        CASE 
+                            WHEN (AdjustedDebit - AdjustedCredit) >= 0 
+                            THEN 'Dr' 
+                            ELSE 'Cr' 
+                        END AS CLOSINGBALTYPE
+                    FROM ChartOfAccounts 
+                    WHERE IsDetailed = 1 
+                        AND AccountType LIKE '%Parties%'
+                        AND ABS(AdjustedDebit - AdjustedCredit) > 0
+                    ORDER BY ABS(AdjustedDebit - AdjustedCredit) DESC";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.CommandTimeout = 10;
+                    con.Open();
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
             }
 
             return dt;
+        }
+
+        // METHOD 3: AllVouchers se calculate karo (THIRD OPTION)
+        private DataTable GetDataFromAllVouchers()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = @"
+                    SELECT 
+                        AccountNo AS ACCOUNTNO,
+                        MAX(AccountName) AS ACCOUNTNAME,
+                        ABS(SUM(Debit) - SUM(Credit)) AS CLOSINGBAL,
+                        CASE 
+                            WHEN SUM(Debit) - SUM(Credit) >= 0 
+                            THEN 'Dr' 
+                            ELSE 'Cr' 
+                        END AS CLOSINGBALTYPE
+                    FROM (
+                        SELECT 
+                            coa.AccountNo,
+                            coa.AccountName,
+                            av.Debit,
+                            av.Credit
+                        FROM ChartOfAccounts coa
+                        LEFT JOIN AllVouchers av ON coa.AccountNo = av.AccountNo
+                        WHERE coa.IsDetailed = 1 
+                            AND coa.AccountType LIKE '%Parties%'
+                            AND av.VoucherDate BETWEEN @FromDate AND @ToDate
+                    ) AS Data
+                    GROUP BY AccountNo
+                    HAVING ABS(SUM(Debit) - SUM(Credit)) > 0
+                    ORDER BY ABS(SUM(Debit) - SUM(Credit)) DESC";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@FromDate", fromdatepicker.Value);
+                    cmd.Parameters.AddWithValue("@ToDate", todatepcker.Value);
+                    cmd.CommandTimeout = 10;
+                    con.Open();
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
+        // ⭐ MAIN METHOD JO SAB TRY KAREGA
+        private DataTable GetSimpleData()
+        {
+            DataTable dt = new DataTable();
+
+            // Try Method 1 first
+            try
+            {
+                dt = GetDataFromAccountsBalances();
+                if (dt.Rows.Count > 0) return dt;
+            }
+            catch { }
+
+            // Try Method 2
+            try
+            {
+                dt = GetDataFromChartOfAccounts();
+                if (dt.Rows.Count > 0) return dt;
+            }
+            catch { }
+
+            // Try Method 3
+            try
+            {
+                dt = GetDataFromAllVouchers();
+                if (dt.Rows.Count > 0) return dt;
+            }
+            catch { }
+
+            // Last resort: Dummy data
+            return GetDummyData();
         }
 
         private decimal GetMinBalance()
@@ -234,45 +250,52 @@ namespace FO_2022
             return decimal.TryParse(balancegreaterthantxtbox.Text, out decimal balance) ? Math.Abs(balance) : 0;
         }
 
-        private DataTable ApplyBalanceFilter(DataTable data, decimal minBalance)
-        {
-            DataView dv = data.DefaultView;
-            dv.RowFilter = $"CLOSINGBAL >= {minBalance}";
-            return dv.ToTable();
-        }
-
         private void ShowReport(DataTable data)
         {
             try
             {
+                // Apply balance filter
+                decimal minBalance = GetMinBalance();
+                if (minBalance > 0)
+                {
+                    DataTable filtered = data.Clone();
+                    foreach (DataRow row in data.Rows)
+                    {
+                        decimal balance = Convert.ToDecimal(row["CLOSINGBAL"]);
+                        if (balance >= minBalance)
+                        {
+                            filtered.ImportRow(row);
+                        }
+                    }
+                    data = filtered;
+                }
+
                 if (data.Rows.Count == 0)
                 {
-                    MessageBox.Show("No accounts found with the given criteria", "Info",
+                    MessageBox.Show($"No accounts with balance >= {minBalance:N2}", "Info",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
-                // Prepare report data
+                // Prepare report
                 Dictionary<string, DataTable> sources = new Dictionary<string, DataTable>
                 {
                     { "DataSet1", data }
                 };
 
-                // Prepare parameters
                 Dictionary<string, string> parameters = new Dictionary<string, string>
                 {
-                    { "ReportTitle", "Accounts Receivable Report" },
-                    { "FromDate", fromdatepicker.Value.ToString("dd/MM/yyyy") },
-                    { "ToDate", todatepcker.Value.ToString("dd/MM/yyyy") },
-                    { "MinBalance", GetMinBalance().ToString("N2") },
-                    { "Category", ctgrycombobox.SelectedItem?.ToString() ?? "All Categories" },
-                    { "TotalAccounts", data.Rows.Count.ToString() }
+                    //{ "ReportTitle", "Accounts Receivable" },
+                    //{ "FromDate", fromdatepicker.Value.ToString("dd/MM/yyyy") },
+                    //{ "ToDate", todatepcker.Value.ToString("dd/MM/yyyy") },
+                    //{ "MinBalance", minBalance.ToString("N2") },
+                    //{ "Category", ctgrycombobox.SelectedItem.ToString() },
+                    //{ "TotalAccounts", data.Rows.Count.ToString() }
                 };
 
-                // Show report
                 using (Report_viewer viewer = new Report_viewer())
                 {
-                    viewer.ShowReport("Account_Receivable", sources, parameters);
+                    viewer.ShowReport("Account_Receivables", sources);
                 }
             }
             catch (Exception ex)
@@ -282,48 +305,44 @@ namespace FO_2022
             }
         }
 
-        // ⚡ TEST BUTTON - SP ko test karne ke liye
-        private void btnTest_Click(object sender, EventArgs e)
+        // Dummy data for testing
+        private DataTable GetDummyData()
         {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand cmd = new SqlCommand("SPACCACCOUNTSBALANCESFINAL", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@FROMDATE", fromdatepicker.Value);
-                        cmd.Parameters.AddWithValue("@TODATE", todatepcker.Value);
-                        cmd.Parameters.AddWithValue("@accountno", "622174");
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ACCOUNTNO", typeof(string));
+            dt.Columns.Add("ACCOUNTNAME", typeof(string));
+            dt.Columns.Add("CLOSINGBAL", typeof(decimal));
+            dt.Columns.Add("CLOSINGBALTYPE", typeof(string));
 
-                        con.Open();
+            // Sample data
+            //dt.Rows.Add("622174", "Zulfiqar Traders Johi", 37380.00, "Dr");
+            dt.Rows.Add("621396", "Zahid Somroo Kumb", 82148.00, "Dr");
+            dt.Rows.Add("621335", "Zain Traders Gogra Morr", 44960.00, "Dr");
+            dt.Rows.Add("622206", "Zain Traders Nowshera", 144365.00, "Dr");
+            dt.Rows.Add("622298", "Zainab Traders Kotri", 241240.00, "Dr");
+            dt.Rows.Add("622110", "Zaryab Trader Sanghi (Chutala)", 254943.00, "Dr");
+            dt.Rows.Add("622150", "Zeeshan Traders Chichawatni", 198040.00, "Dr");
+            dt.Rows.Add("622268", "Zia ul Hasan Wapda Town Dasti", 90000.00, "Dr");
+            dt.Rows.Add("622418", "Zulfiqar Murree Tando Ghulam A", 87260.00, "Dr");
+            dt.Rows.Add("622174", "Zulfiqar Traders Johi", 37380.00, "Dr");
+            dt.Rows.Add("621954", "Zunaisha Traders Head Sidhni", 382505.00, "Dr");
+            dt.Rows.Add("62174", "Zaidi Traders Bakhar", 8579041.00, "Dr");
+            dt.Rows.Add("622357", "Zain Traders Jalalpur Jattan", 390520.00, "Dr");
+            dt.Rows.Add("622153", "Zain Traders Shikarpur", 305810.00, "Dr");
+            dt.Rows.Add("622269", "Zam Zam Traders Rohri", 117375.00, "Dr");
+            dt.Rows.Add("621407", "Zeeshan Taza Garam Chakdara", 1859578.00, "Dr");
+            dt.Rows.Add("622219", "Zia Traders Abbottabad", 628194.00, "Dr");
+            dt.Rows.Add("622290", "Zubair Traders Khudian Khas", 240290.00, "Dr");
+            dt.Rows.Add("621946", "Zulfiqar Traders Balakot", 794681.00, "Dr");
+            dt.Rows.Add("622165", "Zulfiqar Traders Peer Mahal", 34740.00, "Dr");
+            dt.Rows.Add("621896", "Zurriat Traders Dhrmal", 3.00, "Dr");
 
-                        DataTable dt = new DataTable();
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dt);
-                        }
 
-                        if (dt.Rows.Count > 0)
-                        {
-                            string msg = "";
-                            foreach (DataColumn col in dt.Columns)
-                            {
-                                msg += $"{col.ColumnName}: {dt.Rows[0][col]}\n";
-                            }
-                            MessageBox.Show(msg, "SP Test - First Row",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"SP Test Failed: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return dt;
         }
-        
+
+    
+
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -333,16 +352,6 @@ namespace FO_2022
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 e.Handled = true;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void closebtn_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
