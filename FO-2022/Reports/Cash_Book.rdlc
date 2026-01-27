@@ -538,7 +538,7 @@
   <Width>7.8425in</Width>
   <Page>
     <PageHeader>
-      <Height>0.57361in</Height>
+      <Height>0.51042in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -591,7 +591,7 @@
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>0.27431in</Top>
           <Left>4.87896in</Left>
-          <Height>0.23611in</Height>
+          <Height>0.22361in</Height>
           <Width>1.8832in</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -866,11 +866,20 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
-    <Style />
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
+    <Style>
+      <Border>
+        <Style>None</Style>
+        <Width>0.5pt</Width>
+      </Border>
+    </Style>
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>

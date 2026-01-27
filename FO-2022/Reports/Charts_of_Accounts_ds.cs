@@ -4,5 +4,8 @@
 
     public partial class Charts_of_Accounts_ds
     {
+        partial class AccountReceivableDataTable
+        {
+        }
     }
 }

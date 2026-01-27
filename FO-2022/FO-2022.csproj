@@ -1619,6 +1619,7 @@
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Receivables.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">
       <DependentUpon>Balance_Sheet.cs</DependentUpon>

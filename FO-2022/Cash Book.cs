@@ -18,7 +18,8 @@ namespace FO_2022
         private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         private DateTime fromDate;
         private DateTime toDate;
-        private string reportType = "CashBook"; // Default to Cash Book
+        private string reportType = "CashBook";
+        private bool formLoaded = false;
 
         public Cash_Book()
         {
@@ -27,74 +28,53 @@ namespace FO_2022
 
         private void Cash_Book_Load(object sender, EventArgs e)
         {
+            formLoaded = true;
+
             // Set default radio buttons
             alldatebtn.Checked = true;
+            viewprntbtn.Checked = true;
+            viewprtrtbtn.Checked = true;
 
-            // Set default dates
+            // Set default dates for all dates option
             fromDate = new DateTime(1900, 1, 1);
             toDate = DateTime.Today;
-
-            // Set default report and view types
-            reportType = "CashBook";
-
-            // Set default print view
-            if (viewprtrtbtn != null)
-                viewprtrtbtn.Checked = true;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void closebtn_Click(object sender, EventArgs e)
-        {
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
         }
 
         // ========== DATE OPTION HANDLERS ==========
-
         private void alldatebtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (alldatebtn.Checked)
-            {
-                fromDate = new DateTime(1900, 1, 1);
-                toDate = DateTime.Today;
-            }
-        }
+            if (!formLoaded || !alldatebtn.Checked) return;
 
-        private void datebwbtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (datebwbtn.Checked)
-            {
-                ShowDateRangePopup(true); // true = Date Between mode
-            }
+            fromDate = new DateTime(1900, 1, 1);
+            toDate = DateTime.Today;
         }
 
         private void todaybtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (todaybtn.Checked)
-            {
-                fromDate = DateTime.Today;
-                toDate = DateTime.Today;
-            }
+            if (!formLoaded || !todaybtn.Checked) return;
+
+            fromDate = DateTime.Today;
+            toDate = DateTime.Today;
+        }
+
+        private void datebwbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!formLoaded || !datebwbtn.Checked) return;
+
+            ShowDateRangePopup(true);
         }
 
         private void daybtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (daybtn.Checked)
-            {
-                ShowDateRangePopup(false); // false = A Day mode
-            }
+            if (!formLoaded || !daybtn.Checked) return;
+
+            ShowDateRangePopup(false);
         }
 
-        // ========== VIEW TYPE HANDLERS (GroupBox1) ==========
-
+        // ========== VIEW TYPE HANDLERS ==========
         private void viewprntbtn_CheckedChanged(object sender, EventArgs e)
         {
-            // View Print selected - Set to Cash Book
+            if (!formLoaded) return;
             if (viewprntbtn.Checked)
             {
                 reportType = "CashBook";
@@ -103,63 +83,97 @@ namespace FO_2022
 
         private void viewlandscapebtn_CheckedChanged(object sender, EventArgs e)
         {
-            // View Landscape selected - Set to Cash Ledger
+            if (!formLoaded) return;
             if (viewlandscapebtn.Checked)
             {
-                reportType = "CashLedger";
+                reportType = "CashBookLandscape";
             }
         }
 
-        // ========== PRINT TYPE HANDLERS (GroupBox2) ==========
-
+        // ========== PRINT TYPE HANDLERS ==========
         private void viewprtrtbtn_CheckedChanged(object sender, EventArgs e)
         {
-            // Portrait view selected
+            // Portrait view - no action needed as it's default
         }
 
         private void viewlndscpbtn_CheckedChanged(object sender, EventArgs e)
         {
-            // Landscape view selected
+            // Landscape view - no action needed
         }
 
         // ========== BUTTON HANDLERS ==========
-
         private void previewbtn_Click(object sender, EventArgs e)
         {
+            AnimateButton(previewbtn);
             GenerateReport(false);
         }
 
         private void printbtn_Click(object sender, EventArgs e)
         {
+            AnimateButton(printbtn);
             GenerateReport(true);
         }
 
-        // ========== MAIN METHODS ==========
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        // ========== HELPER METHODS ==========
+        private void AnimateButton(Button button)
+        {
+            Color originalColor = button.BackColor;
+            button.BackColor = Color.LightBlue;
+
+            Timer timer = new Timer();
+            timer.Interval = 200;
+            timer.Tick += (s, ev) =>
+            {
+                button.BackColor = originalColor;
+                timer.Stop();
+                timer.Dispose();
+            };
+            timer.Start();
+        }
 
         private void ShowDateRangePopup(bool isDateBetween)
         {
-            using (CashBookDateRangePopup popup = new CashBookDateRangePopup(isDateBetween))
+            try
             {
-                if (popup.ShowDialog() == DialogResult.OK)
+                using (CashBookDateRangePopup popup = new CashBookDateRangePopup(isDateBetween))
                 {
-                    if (isDateBetween)
+                    popup.TopMost = true; // Make it topmost
+
+                    if (popup.ShowDialog(this) == DialogResult.OK)
                     {
-                        // Date Between mode
-                        fromDate = popup.SelectedFromDate;
-                        toDate = popup.SelectedToDate;
+                        if (isDateBetween)
+                        {
+                            fromDate = popup.SelectedFromDate;
+                            toDate = popup.SelectedToDate;
+                        }
+                        else
+                        {
+                            fromDate = popup.SelectedSingleDate;
+                            toDate = popup.SelectedSingleDate;
+                        }
                     }
                     else
                     {
-                        // A Day mode
-                        fromDate = popup.SelectedSingleDate;
-                        toDate = popup.SelectedSingleDate;
+                        // User cancelled - revert to All Date
+                        alldatebtn.Checked = true;
                     }
                 }
-                else
-                {
-                    // User cancelled, revert to All Date
-                    alldatebtn.Checked = true;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in date selection: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                alldatebtn.Checked = true;
             }
         }
 
@@ -167,7 +181,18 @@ namespace FO_2022
         {
             try
             {
-                // Get cash data using stored procedure
+                // Validate date range
+                if (fromDate > toDate)
+                {
+                    MessageBox.Show("From date cannot be after To date.",
+                        "Invalid Date Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Cursor.Current = Cursors.WaitCursor;
+                EnableButtons(false);
+
+                // Get data from database
                 DataTable cashData = GetCashBookData();
 
                 if (cashData == null || cashData.Rows.Count == 0)
@@ -178,70 +203,27 @@ namespace FO_2022
                 }
 
                 // Calculate running balance
-                cashData = CalculateRunningBalance(cashData);
-
-                // Prepare data sources
-                Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>
-                {
-                    { "DataSet1", cashData }
-                };
-
-                // Get report parameters
-                Dictionary<string, string> parameters = GetReportParameters();
+                CalculateRunningBalance(cashData);
 
                 // Show report
-                using (Report_viewer reportViewer = new Report_viewer())
-                {
-                    string reportName = (reportType == "CashBook") ? "Cash_Book.rdlc" : "Cash_Ledger.rdlc";
-
-                    reportViewer.ShowReport(reportName, dataSources);
-
-                    if (printImmediately)
-                    {
-                        MessageBox.Show("Report loaded. Click the PRINT button in the report toolbar.",
-                            "Ready to Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
+                ShowReport(cashData, printImmediately);
+            }
+            catch (SqlException sqlEx)
+            {
+                HandleSqlException(sqlEx);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error generating report: {ex.Message}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+                EnableButtons(true);
+            }
         }
 
-        //private DataTable GetCashBookData()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(connectionString))
-        //        {
-        //            con.Open();
-
-        //            using (SqlCommand cmd = new SqlCommand("SPCashBook", con))
-        //            {
-        //                cmd.CommandType = CommandType.StoredProcedure;
-        //                cmd.Parameters.AddWithValue("@FromDate", fromDate);
-        //                cmd.Parameters.AddWithValue("@ToDate", toDate);
-        //                cmd.Parameters.AddWithValue("@ProceedingZeros", 5);
-        //                cmd.CommandTimeout = 120;
-        //                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-        //                {
-        //                    da.Fill(dt);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error fetching cash data: {ex.Message}",
-        //            "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-
-        //    return dt;
-        //}
         private DataTable GetCashBookData()
         {
             DataTable dt = new DataTable();
@@ -255,7 +237,8 @@ namespace FO_2022
                     using (SqlCommand cmd = new SqlCommand("SPCashBook", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 300; // 5 minutes - SP is complex
+                        cmd.CommandTimeout = 120;
+
                         cmd.Parameters.AddWithValue("@FromDate", fromDate);
                         cmd.Parameters.AddWithValue("@ToDate", toDate);
                         cmd.Parameters.AddWithValue("@ProceedingZeros", 5);
@@ -266,72 +249,40 @@ namespace FO_2022
                         }
                     }
                 }
-
-                // Debug: Show what columns are returned
-                if (dt.Columns.Count > 0)
-                {
-                    string columnInfo = "Columns returned by SPCashBook:\n\n";
-                    foreach (DataColumn col in dt.Columns)
-                    {
-                        columnInfo += $"{col.ColumnName} ({col.DataType.Name})\n";
-                    }
-                    columnInfo += $"\nTotal rows: {dt.Rows.Count}";
-
-                    MessageBox.Show(columnInfo, "Debug - SP Result",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                // Check if we have required columns
-                if (dt.Columns.Contains("AccountName") && dt.Rows.Count > 0)
-                {
-                    // Test: Show first row AccountName
-                    string firstAccName = dt.Rows[0]["AccountName"] != DBNull.Value ?
-                        dt.Rows[0]["AccountName"].ToString() : "NULL";
-                    MessageBox.Show($"First row AccountName: {firstAccName}",
-                        "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error fetching cash data: {ex.Message}\n\n" +
-                               $"Make sure stored procedure SPCashBook exists and is working.",
-                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception($"Failed to get cash book data: {ex.Message}", ex);
             }
 
             return dt;
         }
 
-        private DataTable CalculateRunningBalance(DataTable dataTable)
+        private void CalculateRunningBalance(DataTable dataTable)
         {
-            // Check if dataTable is valid
-            if (dataTable == null || dataTable.Columns.Count == 0)
-                return dataTable;
+            if (dataTable == null || dataTable.Rows.Count == 0)
+                return;
 
-            // Add RunningBalance column if not exists
+            // Ensure required columns exist
             if (!dataTable.Columns.Contains("RunningBalance"))
-            {
                 dataTable.Columns.Add("RunningBalance", typeof(decimal));
-            }
+
+            if (!dataTable.Columns.Contains("Debit"))
+                dataTable.Columns.Add("Debit", typeof(decimal));
+
+            if (!dataTable.Columns.Contains("Credit"))
+                dataTable.Columns.Add("Credit", typeof(decimal));
 
             decimal runningBalance = 0;
 
             foreach (DataRow row in dataTable.Rows)
             {
-                // Check if required columns exist
-                string voucherType = "";
-                if (dataTable.Columns.Contains("VoucherType") && row["VoucherType"] != DBNull.Value)
-                    voucherType = row["VoucherType"].ToString();
+                // Handle DBNull values
+                string voucherType = row["VoucherType"] != DBNull.Value ? row["VoucherType"].ToString() : "";
+                decimal debit = row["Debit"] != DBNull.Value ? Convert.ToDecimal(row["Debit"]) : 0;
+                decimal credit = row["Credit"] != DBNull.Value ? Convert.ToDecimal(row["Credit"]) : 0;
 
-                decimal debit = 0;
-                if (dataTable.Columns.Contains("Debit") && row["Debit"] != DBNull.Value)
-                    debit = Convert.ToDecimal(row["Debit"]);
-
-                decimal credit = 0;
-                if (dataTable.Columns.Contains("Credit") && row["Credit"] != DBNull.Value)
-                    credit = Convert.ToDecimal(row["Credit"]);
-
-                // For opening balance row (VoucherType = '-')
-                if (voucherType == "-")
+                if (voucherType == "-") // Opening balance
                 {
                     runningBalance = debit - credit;
                 }
@@ -342,66 +293,101 @@ namespace FO_2022
 
                 row["RunningBalance"] = runningBalance;
             }
-
-            return dataTable;
         }
-        //private DataTable CalculateRunningBalance(DataTable dataTable)
-        //{
-        //    // Add RunningBalance column if not exists
-        //    if (!dataTable.Columns.Contains("RunningBalance"))
-        //    {
-        //        dataTable.Columns.Add("RunningBalance", typeof(decimal));
-        //    }
 
-        //    decimal runningBalance = 0;
-
-        //    foreach (DataRow row in dataTable.Rows)
-        //    {
-        //        decimal debit = row["Debit"] != DBNull.Value ? Convert.ToDecimal(row["Debit"]) : 0;
-        //        decimal credit = row["Credit"] != DBNull.Value ? Convert.ToDecimal(row["Credit"]) : 0;
-
-        //        // For opening balance row (VoucherType = '-')
-        //        if (row["VoucherType"].ToString() == "-")
-        //        {
-        //            runningBalance = debit - credit;
-        //        }
-        //        else
-        //        {
-        //            runningBalance = runningBalance + debit - credit;
-        //        }
-
-        //        row["RunningBalance"] = runningBalance;
-        //    }
-
-        //    return dataTable;
-        //}
-
-        private Dictionary<string, string> GetReportParameters()
+        private void ShowReport(DataTable cashData, bool printImmediately)
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            try
+            {
+                // Determine which report to show based on view type and print type
+                string reportName = "Cash_Book.rdlc";
 
-            // Add report parameters
-            //parameters.Add("ReportTitle", (reportType == "CashBook") ? "CASH BOOK" : "CASH LEDGER");
-            //parameters.Add("ReportType", (reportType == "CashBook") ? "Book" : "Ledger");
-            //parameters.Add("Orientation", viewprtrtbtn.Checked ? "Portrait" : "Landscape");
-            //parameters.Add("GeneratedOn", DateTime.Now.ToString("dd-MMM-yyyy hh:mm tt"));
+                if (viewlandscapebtn.Checked)
+                {
+                    reportName = "Cash_Book.rdlc"; // Or create a separate landscape version
+                }
+                else if (viewlndscpbtn.Checked && viewprntbtn.Checked)
+                {
+                    reportName = "Cash_Book.rdlc";
+                }
 
-            // Add date range text
-            string dateRangeText = "";
+                // Prepare parameters for the report
+                Dictionary<string, string> parameters = new Dictionary<string, string>
+                {
+                    //    { "CompanyName", "Your Company Name" },
+                    //    { "ReportTitle", "CASH BOOK" },
+                    //    { "DateRange", GetDateRangeText() },
+                    //    { "FromDate", fromDate.ToString("dd-MMM-yyyy") },
+                    //    { "ToDate", toDate.ToString("dd-MMM-yyyy") },
+                    //    { "GeneratedOn", DateTime.Now.ToString("dd-MMM-yyyy HH:mm") },
+                    //    { "TotalRecords", cashData.Rows.Count.ToString() }
+                };
+
+            // Prepare data source
+            Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>
+                {
+                    { "DataSet1", cashData }
+                };
+
+                // Show report viewer
+                using (Report_viewer reportViewer = new Report_viewer())
+                {
+                    reportViewer.ShowReport(reportName, dataSources);
+
+                    if (printImmediately)
+                    {
+                        //reportViewer.PrintReport();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error showing report: {ex.Message}",
+                    "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string GetDateRangeText()
+        {
             if (alldatebtn.Checked)
-                dateRangeText = "All Date";
-            else if (datebwbtn.Checked)
-                dateRangeText = $"{fromDate:dd-MMM-yyyy} to {toDate:dd-MMM-yyyy}";
+                return "All Dates";
             else if (todaybtn.Checked)
-                dateRangeText = "Today";
+                return $"Today: {DateTime.Today:dd-MMM-yyyy}";
             else if (daybtn.Checked)
-                dateRangeText = $"{fromDate:dd-MMM-yyyy}";
+                return $"{fromDate:dd-MMM-yyyy}";
+            else
+                return $"{fromDate:dd-MMM-yyyy} to {toDate:dd-MMM-yyyy}";
+        }
 
-            parameters.Add("DateRange", dateRangeText);
-            parameters.Add("FromDate", fromDate.ToString("dd-MMM-yyyy"));
-            parameters.Add("ToDate", toDate.ToString("dd-MMM-yyyy"));
+        private void EnableButtons(bool enable)
+        {
+            previewbtn.Enabled = enable;
+            printbtn.Enabled = enable;
+            alldatebtn.Enabled = enable;
+            todaybtn.Enabled = enable;
+            datebwbtn.Enabled = enable;
+            daybtn.Enabled = enable;
+            viewprntbtn.Enabled = enable;
+            viewlandscapebtn.Enabled = enable;
+            viewprtrtbtn.Enabled = enable;
+            viewlndscpbtn.Enabled = enable;
+        }
 
-            return parameters;
+        private void HandleSqlException(SqlException sqlEx)
+        {
+            if (sqlEx.Number == -2 || sqlEx.Message.Contains("timeout"))
+            {
+                MessageBox.Show("Database query timed out. Please try:\n" +
+                               "1. Selecting a smaller date range\n" +
+                               "2. Trying during off-peak hours\n" +
+                               "3. Contacting your system administrator",
+                               "Query Timeout", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show($"Database Error: {sqlEx.Message}\nError Code: {sqlEx.Number}",
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 
@@ -427,100 +413,91 @@ namespace FO_2022
 
         private void InitializeForm()
         {
-            // Form settings based on mode
-            if (_isDateBetweenMode)
-            {
-                this.Text = "Select Date Range";
-                this.Size = new Size(320, 200);
-            }
-            else
-            {
-                this.Text = "Select A Day";
-                this.Size = new Size(320, 160);
-            }
-
+            // Form settings
+            this.Text = _isDateBetweenMode ? "Select Date Range" : "Select A Day";
+            this.Size = _isDateBetweenMode ? new Size(350, 180) : new Size(350, 150);
             this.StartPosition = FormStartPosition.CenterParent;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.TopMost = true;
+            this.TopMost = true; // Make it topmost
+
+            int yPos = 20;
+
             if (_isDateBetweenMode)
             {
-                // DATE BETWEEN MODE
-                // From Date Label
+                // From Date
                 Label lblFrom = new Label
                 {
                     Text = "From Date:",
-                    Location = new Point(20, 25),
-                    Size = new Size(70, 20),
-                    Font = new Font("Arial", 9)
+                    Location = new Point(20, yPos),
+                    Size = new Size(80, 25),
+                    TextAlign = ContentAlignment.MiddleLeft
                 };
                 this.Controls.Add(lblFrom);
 
-                // From Date Picker
                 _dtpFrom = new DateTimePicker
                 {
-                    Location = new Point(100, 23),
-                    Size = new Size(180, 22),
+                    Location = new Point(120, yPos),
+                    Size = new Size(200, 25),
                     Value = DateTime.Today.AddMonths(-1),
-                    Format = DateTimePickerFormat.Short,
-                    Font = new Font("Arial", 9)
+                    Format = DateTimePickerFormat.Short
                 };
                 this.Controls.Add(_dtpFrom);
 
-                // To Date Label
+                yPos += 40;
+
+                // To Date
                 Label lblTo = new Label
                 {
                     Text = "To Date:",
-                    Location = new Point(20, 65),
-                    Size = new Size(70, 20),
-                    Font = new Font("Arial", 9)
+                    Location = new Point(20, yPos),
+                    Size = new Size(80, 25),
+                    TextAlign = ContentAlignment.MiddleLeft
                 };
                 this.Controls.Add(lblTo);
 
-                // To Date Picker
                 _dtpTo = new DateTimePicker
                 {
-                    Location = new Point(100, 63),
-                    Size = new Size(180, 22),
+                    Location = new Point(120, yPos),
+                    Size = new Size(200, 25),
                     Value = DateTime.Today,
-                    Format = DateTimePickerFormat.Short,
-                    Font = new Font("Arial", 9)
+                    Format = DateTimePickerFormat.Short
                 };
                 this.Controls.Add(_dtpTo);
+
+                yPos += 40;
             }
             else
             {
-                // A DAY MODE
-                // Single Date Label
+                // Single Date
                 Label lblDate = new Label
                 {
                     Text = "Select Date:",
-                    Location = new Point(20, 25),
-                    Size = new Size(70, 20),
-                    Font = new Font("Arial", 9)
+                    Location = new Point(20, yPos),
+                    Size = new Size(80, 25),
+                    TextAlign = ContentAlignment.MiddleLeft
                 };
                 this.Controls.Add(lblDate);
 
-                // Single Date Picker
                 _dtpSingle = new DateTimePicker
                 {
-                    Location = new Point(100, 23),
-                    Size = new Size(180, 22),
+                    Location = new Point(120, yPos),
+                    Size = new Size(200, 25),
                     Value = DateTime.Today,
-                    Format = DateTimePickerFormat.Short,
-                    Font = new Font("Arial", 9)
+                    Format = DateTimePickerFormat.Short
                 };
                 this.Controls.Add(_dtpSingle);
+
+                yPos += 50;
             }
 
             // OK Button
             _btnOK = new Button
             {
                 Text = "OK",
-                Location = new Point(100, _isDateBetweenMode ? 105 : 70),
+                Location = new Point(120, yPos),
                 Size = new Size(85, 30),
-                Font = new Font("Arial", 9),
                 DialogResult = DialogResult.OK
             };
             _btnOK.Click += BtnOK_Click;
@@ -530,14 +507,12 @@ namespace FO_2022
             _btnCancel = new Button
             {
                 Text = "Cancel",
-                Location = new Point(195, _isDateBetweenMode ? 105 : 70),
+                Location = new Point(215, yPos),
                 Size = new Size(85, 30),
-                Font = new Font("Arial", 9),
                 DialogResult = DialogResult.Cancel
             };
             this.Controls.Add(_btnCancel);
 
-            // Set default buttons
             this.AcceptButton = _btnOK;
             this.CancelButton = _btnCancel;
         }
@@ -548,19 +523,18 @@ namespace FO_2022
             {
                 if (_dtpFrom.Value > _dtpTo.Value)
                 {
-                    MessageBox.Show("From date cannot be after To date",
-                        "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("From date cannot be after To date.",
+                        "Invalid Date Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.DialogResult = DialogResult.None;
+                    return;
                 }
-                else
-                {
-                    SelectedFromDate = _dtpFrom.Value;
-                    SelectedToDate = _dtpTo.Value;
-                }
+
+                SelectedFromDate = _dtpFrom.Value.Date;
+                SelectedToDate = _dtpTo.Value.Date;
             }
             else
             {
-                SelectedSingleDate = _dtpSingle.Value;
+                SelectedSingleDate = _dtpSingle.Value.Date;
                 SelectedFromDate = SelectedSingleDate;
                 SelectedToDate = SelectedSingleDate;
             }
