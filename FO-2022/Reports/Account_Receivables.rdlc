@@ -79,7 +79,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>ACCOUNTNO</Value>
+                                      <Value>Account No</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
@@ -113,7 +113,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>ACCOUNTNAME</Value>
+                                      <Value>Account Name</Value>
                                       <Style>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>

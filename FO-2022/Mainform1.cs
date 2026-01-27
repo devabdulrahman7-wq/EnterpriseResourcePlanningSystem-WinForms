@@ -566,7 +566,8 @@ namespace FO_2022
         }
         private void accountsPayableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Account_Payable ap = new Account_Payable();
+            ap.Show();
         }
         private void monthlyExpenseChartToolStripMenuItem_Click(object sender, EventArgs e)
         {

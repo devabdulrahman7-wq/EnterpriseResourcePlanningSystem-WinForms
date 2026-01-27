@@ -128,6 +128,7 @@
             this.balancegreaterthantxtbox.Name = "balancegreaterthantxtbox";
             this.balancegreaterthantxtbox.Size = new System.Drawing.Size(219, 25);
             this.balancegreaterthantxtbox.TabIndex = 306;
+            this.balancegreaterthantxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.baltxt_KeyPress);
             // 
             // label3
             // 
