@@ -84,6 +84,7 @@
             this.printbtn.TabIndex = 278;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox2
             // 
