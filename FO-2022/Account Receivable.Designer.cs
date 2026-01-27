@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fromdatepcker = new System.Windows.Forms.Label();
             this.todatepcker = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fromdatepicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.detailbtn = new System.Windows.Forms.RadioButton();
             this.shortbtn = new System.Windows.Forms.RadioButton();
-            this.balancetxtbox = new System.Windows.Forms.TextBox();
+            this.balancegreaterthantxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ctgrycombobox = new System.Windows.Forms.ComboBox();
@@ -45,6 +45,11 @@
             this.printbtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnTestSP = new System.Windows.Forms.Button();
+            this.lblDateRange = new System.Windows.Forms.Label();
+            this.cancelbtn = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +60,7 @@
             this.label2.Location = new System.Drawing.Point(78, 170);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 21);
+            this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 299;
             this.label2.Text = "To Date";
             // 
@@ -65,7 +70,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(78, 139);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepcker.Size = new System.Drawing.Size(67, 16);
             this.fromdatepcker.TabIndex = 298;
             this.fromdatepcker.Text = "From Date";
             // 
@@ -75,17 +80,17 @@
             this.todatepcker.Location = new System.Drawing.Point(255, 165);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(218, 27);
+            this.todatepcker.Size = new System.Drawing.Size(218, 23);
             this.todatepcker.TabIndex = 297;
             // 
-            // dateTimePicker1
+            // fromdatepicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(255, 134);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 27);
-            this.dateTimePicker1.TabIndex = 296;
+            this.fromdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fromdatepicker.Location = new System.Drawing.Point(255, 134);
+            this.fromdatepicker.Margin = new System.Windows.Forms.Padding(4);
+            this.fromdatepicker.Name = "fromdatepicker";
+            this.fromdatepicker.Size = new System.Drawing.Size(218, 23);
+            this.fromdatepicker.TabIndex = 296;
             // 
             // groupBox1
             // 
@@ -102,7 +107,7 @@
             this.detailbtn.AutoSize = true;
             this.detailbtn.Location = new System.Drawing.Point(136, 22);
             this.detailbtn.Name = "detailbtn";
-            this.detailbtn.Size = new System.Drawing.Size(83, 25);
+            this.detailbtn.Size = new System.Drawing.Size(63, 20);
             this.detailbtn.TabIndex = 1;
             this.detailbtn.TabStop = true;
             this.detailbtn.Text = "Details";
@@ -113,21 +118,21 @@
             this.shortbtn.AutoSize = true;
             this.shortbtn.Location = new System.Drawing.Point(6, 22);
             this.shortbtn.Name = "shortbtn";
-            this.shortbtn.Size = new System.Drawing.Size(70, 25);
+            this.shortbtn.Size = new System.Drawing.Size(56, 20);
             this.shortbtn.TabIndex = 0;
             this.shortbtn.TabStop = true;
             this.shortbtn.Text = "Short";
             this.shortbtn.UseVisualStyleBackColor = true;
             // 
-            // balancetxtbox
+            // balancegreaterthantxtbox
             // 
-            this.balancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.balancetxtbox.Location = new System.Drawing.Point(255, 197);
-            this.balancetxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.balancetxtbox.Multiline = true;
-            this.balancetxtbox.Name = "balancetxtbox";
-            this.balancetxtbox.Size = new System.Drawing.Size(219, 25);
-            this.balancetxtbox.TabIndex = 306;
+            this.balancegreaterthantxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.balancegreaterthantxtbox.Location = new System.Drawing.Point(255, 197);
+            this.balancegreaterthantxtbox.Margin = new System.Windows.Forms.Padding(5);
+            this.balancegreaterthantxtbox.Multiline = true;
+            this.balancegreaterthantxtbox.Name = "balancegreaterthantxtbox";
+            this.balancegreaterthantxtbox.Size = new System.Drawing.Size(219, 25);
+            this.balancegreaterthantxtbox.TabIndex = 306;
             // 
             // label3
             // 
@@ -135,7 +140,7 @@
             this.label3.Location = new System.Drawing.Point(78, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 21);
+            this.label3.Size = new System.Drawing.Size(168, 16);
             this.label3.TabIndex = 307;
             this.label3.Text = "Having balance greater than";
             // 
@@ -145,7 +150,7 @@
             this.label4.Location = new System.Drawing.Point(78, 250);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 308;
             this.label4.Text = "Category";
             // 
@@ -154,7 +159,7 @@
             this.ctgrycombobox.FormattingEnabled = true;
             this.ctgrycombobox.Location = new System.Drawing.Point(255, 241);
             this.ctgrycombobox.Name = "ctgrycombobox";
-            this.ctgrycombobox.Size = new System.Drawing.Size(219, 27);
+            this.ctgrycombobox.Size = new System.Drawing.Size(219, 24);
             this.ctgrycombobox.TabIndex = 309;
             // 
             // previewbtn
@@ -170,6 +175,7 @@
             this.previewbtn.TabIndex = 312;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -184,7 +190,7 @@
             this.closebtn.TabIndex = 311;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click_1);
             // 
             // printbtn
             // 
@@ -207,7 +213,7 @@
             this.label5.Location = new System.Drawing.Point(232, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(309, 42);
+            this.label5.Size = new System.Drawing.Size(242, 33);
             this.label5.TabIndex = 313;
             this.label5.Text = "Account Receivable";
             // 
@@ -223,12 +229,72 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // btnTestSP
+            // 
+            this.btnTestSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnTestSP.FlatAppearance.BorderSize = 0;
+            this.btnTestSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTestSP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTestSP.Location = new System.Drawing.Point(146, 307);
+            this.btnTestSP.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTestSP.Name = "btnTestSP";
+            this.btnTestSP.Size = new System.Drawing.Size(90, 27);
+            this.btnTestSP.TabIndex = 315;
+            this.btnTestSP.Text = "Close";
+            this.btnTestSP.UseVisualStyleBackColor = false;
+            // 
+            // lblDateRange
+            // 
+            this.lblDateRange.AutoSize = true;
+            this.lblDateRange.Location = new System.Drawing.Point(257, 225);
+            this.lblDateRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateRange.Name = "lblDateRange";
+            this.lblDateRange.Size = new System.Drawing.Size(67, 16);
+            this.lblDateRange.TabIndex = 319;
+            this.lblDateRange.Text = "From Date";
+            // 
+            // cancelbtn
+            // 
+            this.cancelbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cancelbtn.FlatAppearance.BorderSize = 0;
+            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbtn.Location = new System.Drawing.Point(444, 394);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(90, 27);
+            this.cancelbtn.TabIndex = 316;
+            this.cancelbtn.Text = "Close";
+            this.cancelbtn.UseVisualStyleBackColor = false;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(450, 373);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(67, 16);
+            this.lblStatus.TabIndex = 317;
+            this.lblStatus.Text = "From Date";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(434, 417);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 318;
+            // 
             // Account_Receivable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(580, 466);
+            this.Controls.Add(this.lblDateRange);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.cancelbtn);
+            this.Controls.Add(this.btnTestSP);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.previewbtn);
@@ -237,12 +303,12 @@
             this.Controls.Add(this.ctgrycombobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.balancetxtbox);
+            this.Controls.Add(this.balancegreaterthantxtbox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.fromdatepcker);
             this.Controls.Add(this.todatepcker);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.fromdatepicker);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -263,9 +329,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label fromdatepcker;
         private System.Windows.Forms.DateTimePicker todatepcker;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fromdatepicker;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox balancetxtbox;
+        private System.Windows.Forms.TextBox balancegreaterthantxtbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox ctgrycombobox;
@@ -276,5 +342,10 @@
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnTestSP;
+        private System.Windows.Forms.Label lblDateRange;
+        private System.Windows.Forms.Button cancelbtn;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
