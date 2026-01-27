@@ -54,6 +54,7 @@
             this.previewbtn.TabIndex = 277;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // closebtn
             // 
@@ -65,7 +66,7 @@
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(77, 27);
-            this.closebtn.TabIndex = 276;
+            this.closebtn.TabIndex = 279;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
             this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
@@ -80,7 +81,7 @@
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(77, 27);
-            this.printbtn.TabIndex = 275;
+            this.printbtn.TabIndex = 278;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
             // 
@@ -102,7 +103,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(204, 148);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(135, 27);
-            this.dateTimePicker1.TabIndex = 283;
+            this.dateTimePicker1.TabIndex = 275;
             // 
             // dateTimePicker2
             // 
@@ -110,7 +111,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(204, 188);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(135, 27);
-            this.dateTimePicker2.TabIndex = 284;
+            this.dateTimePicker2.TabIndex = 276;
             // 
             // label1
             // 
@@ -160,6 +161,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Day_Book";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Day_Book";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
