@@ -107,7 +107,7 @@ namespace FO_2022
         }
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            Sales_Register sr = new Sales_Register();
+            Sale_Register sr = new Sale_Register();
             sr.Show();
             ////this.Hide();
         }
