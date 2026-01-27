@@ -234,6 +234,7 @@
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
             this.toolStripSplitButton1.Size = new System.Drawing.Size(98, 28);
             this.toolStripSplitButton1.Text = "Defination";
+            this.toolStripSplitButton1.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
             // 
             // toolStripMenuItem1
             // 
@@ -435,6 +436,7 @@
             this.toolStripSplitButton2.Name = "toolStripSplitButton2";
             this.toolStripSplitButton2.Size = new System.Drawing.Size(88, 28);
             this.toolStripSplitButton2.Text = "Invoicing";
+            this.toolStripSplitButton2.ButtonClick += new System.EventHandler(this.toolStripSplitButton2_ButtonClick);
             // 
             // saleOrderToolStripMenuItem
             // 
@@ -558,6 +560,7 @@
             this.toolStripSplitButton3.Name = "toolStripSplitButton3";
             this.toolStripSplitButton3.Size = new System.Drawing.Size(103, 28);
             this.toolStripSplitButton3.Text = "Transaction";
+            this.toolStripSplitButton3.ButtonClick += new System.EventHandler(this.toolStripSplitButton3_ButtonClick);
             // 
             // cashReceivingVoucherToolStripMenuItem
             // 
@@ -782,6 +785,7 @@
             this.toolStripSplitButton5.Name = "toolStripSplitButton5";
             this.toolStripSplitButton5.Size = new System.Drawing.Size(137, 28);
             this.toolStripSplitButton5.Text = "Account Reports";
+            this.toolStripSplitButton5.ButtonClick += new System.EventHandler(this.toolStripSplitButton5_ButtonClick_1);
             // 
             // accountsListToolStripMenuItem
             // 
@@ -971,6 +975,7 @@
             this.toolStripSplitButton7.Name = "toolStripSplitButton7";
             this.toolStripSplitButton7.Size = new System.Drawing.Size(75, 28);
             this.toolStripSplitButton7.Text = "System";
+            this.toolStripSplitButton7.ButtonClick += new System.EventHandler(this.toolStripSplitButton7_ButtonClick);
             // 
             // logOffFurqanToolStripMenuItem
             // 
@@ -1084,18 +1089,19 @@
             this.toolStripSplitButton8.Name = "toolStripSplitButton8";
             this.toolStripSplitButton8.Size = new System.Drawing.Size(60, 28);
             this.toolStripSplitButton8.Text = "Help";
+            this.toolStripSplitButton8.ButtonClick += new System.EventHandler(this.toolStripSplitButton8_ButtonClick);
             // 
             // helpTopicsToolStripMenuItem
             // 
             this.helpTopicsToolStripMenuItem.Name = "helpTopicsToolStripMenuItem";
-            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.helpTopicsToolStripMenuItem.Text = "Help Topics";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutToolStripMenuItem.Text = "About ";
             // 
             // toolStripButton1
