@@ -742,7 +742,37 @@ namespace FO_2022
 
         private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
         {
+            toolStripSplitButton4.ShowDropDown();
+        }
 
+        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton1.ShowDropDown();
+        }
+
+        private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton2.ShowDropDown();
+        }
+
+        private void toolStripSplitButton3_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton3.ShowDropDown();
+        }
+
+        private void toolStripSplitButton5_ButtonClick_1(object sender, EventArgs e)
+        {
+            toolStripSplitButton5.ShowDropDown();
+        }
+
+        private void toolStripSplitButton7_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton7.ShowDropDown();
+        }
+
+        private void toolStripSplitButton8_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton8.ShowDropDown();
         }
     }
 }
