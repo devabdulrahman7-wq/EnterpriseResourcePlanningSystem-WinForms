@@ -28,10 +28,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Town ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -58,10 +62,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Town Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -166,7 +174,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Top>0.01389in</Top>
             <Height>0.5in</Height>
-            <Width>8.125in</Width>
+            <Width>8.12501in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -175,9 +183,8 @@
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Left>0in</Left>
         <Height>0.52083in</Height>
-        <Width>8.125in</Width>
+        <Width>8.12501in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -188,7 +195,7 @@
     <Height>0.5625in</Height>
     <Style />
   </Body>
-  <Width>8.125in</Width>
+  <Width>8.12501in</Width>
   <Page>
     <PageHeader>
       <Height>0.49653in</Height>
@@ -264,7 +271,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.61111in</Height>
+      <Height>0.32166in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

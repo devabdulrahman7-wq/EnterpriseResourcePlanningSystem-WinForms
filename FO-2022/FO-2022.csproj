@@ -123,6 +123,12 @@
     <Compile Include="Account_Balance_ C_W.Designer.cs">
       <DependentUpon>Account_Balance_ C_W.cs</DependentUpon>
     </Compile>
+    <Compile Include="Account_Payable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account_Payable.Designer.cs">
+      <DependentUpon>Account_Payable.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActivationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1288,6 +1294,9 @@
     <EmbeddedResource Include="Account_Balance_ C_W.resx">
       <DependentUpon>Account_Balance_ C_W.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Account_Payable.resx">
+      <DependentUpon>Account_Payable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActivationForm.resx">
       <DependentUpon>ActivationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1636,6 +1645,7 @@
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Pay.rdlc" />
     <EmbeddedResource Include="Reports\Account_Receivables.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">

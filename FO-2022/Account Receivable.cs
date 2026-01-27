@@ -122,6 +122,42 @@ namespace FO_2022
         }
 
         // METHOD 2: ChartOfAccounts se (SECOND OPTION)
+        //private DataTable GetDataFromChartOfAccounts()
+        //{
+        //    DataTable dt = new DataTable();
+
+        //    using (SqlConnection con = new SqlConnection(connectionString))
+        //    {
+        //        string query = @"
+        //            SELECT 
+        //                AccountNo AS ACCOUNTNO,
+        //                AccountName AS ACCOUNTNAME,
+        //                ABS(AdjustedDebit - AdjustedCredit) AS CLOSINGBAL,
+        //                CASE 
+        //                    WHEN (AdjustedDebit - AdjustedCredit) >= 0 
+        //                    THEN 'Dr' 
+        //                    ELSE 'Cr' 
+        //                END AS CLOSINGBALTYPE
+        //            FROM ChartOfAccounts 
+        //            WHERE IsDetailed = 1 
+        //                AND AccountType LIKE '%Parties%'
+        //                AND ABS(AdjustedDebit - AdjustedCredit) > 0
+        //            ORDER BY ABS(AdjustedDebit - AdjustedCredit) DESC";
+
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            cmd.CommandTimeout = 10;
+        //            con.Open();
+
+        //            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+        //            {
+        //                da.Fill(dt);
+        //            }
+        //        }
+        //    }
+
+        //    return dt;
+        //}
         private DataTable GetDataFromChartOfAccounts()
         {
             DataTable dt = new DataTable();
@@ -129,33 +165,26 @@ namespace FO_2022
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"
-                    SELECT 
-                        AccountNo AS ACCOUNTNO,
-                        AccountName AS ACCOUNTNAME,
-                        ABS(AdjustedDebit - AdjustedCredit) AS CLOSINGBAL,
-                        CASE 
-                            WHEN (AdjustedDebit - AdjustedCredit) >= 0 
-                            THEN 'Dr' 
-                            ELSE 'Cr' 
-                        END AS CLOSINGBALTYPE
-                    FROM ChartOfAccounts 
-                    WHERE IsDetailed = 1 
-                        AND AccountType LIKE '%Parties%'
-                        AND ABS(AdjustedDebit - AdjustedCredit) > 0
-                    ORDER BY ABS(AdjustedDebit - AdjustedCredit) DESC";
+            SELECT 
+                AccountNo AS ACCOUNTNO,
+                AccountName AS ACCOUNTNAME,
+                (AdjustedDebit - AdjustedCredit) AS CLOSINGBAL,
+                'Dr' AS CLOSINGBALTYPE
+            FROM ChartOfAccounts 
+            WHERE IsDetailed = 1
+                AND (AdjustedDebit - AdjustedCredit) > 0   -- ⭐ RECEIVABLES ONLY
+            ORDER BY (AdjustedDebit - AdjustedCredit) DESC";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.CommandTimeout = 10;
                     con.Open();
-
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
                         da.Fill(dt);
                     }
                 }
             }
-
             return dt;
         }
 
@@ -313,9 +342,8 @@ namespace FO_2022
             dt.Columns.Add("ACCOUNTNAME", typeof(string));
             dt.Columns.Add("CLOSINGBAL", typeof(decimal));
             dt.Columns.Add("CLOSINGBALTYPE", typeof(string));
-
-            // Sample data
-            //dt.Rows.Add("622174", "Zulfiqar Traders Johi", 37380.00, "Dr");
+             //Sample data
+            dt.Rows.Add("622174", "Zulfiqar Traders Johi", 37380.00, "Dr");
             dt.Rows.Add("621396", "Zahid Somroo Kumb", 82148.00, "Dr");
             dt.Rows.Add("621335", "Zain Traders Gogra Morr", 44960.00, "Dr");
             dt.Rows.Add("622206", "Zain Traders Nowshera", 144365.00, "Dr");
@@ -336,18 +364,12 @@ namespace FO_2022
             dt.Rows.Add("621946", "Zulfiqar Traders Balakot", 794681.00, "Dr");
             dt.Rows.Add("622165", "Zulfiqar Traders Peer Mahal", 34740.00, "Dr");
             dt.Rows.Add("621896", "Zurriat Traders Dhrmal", 3.00, "Dr");
-
-
             return dt;
         }
-
-    
-
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void baltxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
