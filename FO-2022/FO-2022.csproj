@@ -393,6 +393,12 @@
     <Compile Include="Day Book.Designer.cs">
       <DependentUpon>Day Book.cs</DependentUpon>
     </Compile>
+    <Compile Include="Daybook_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daybook_report.Designer.cs">
+      <DependentUpon>Daybook_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dead Parties Due Balance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -824,6 +830,14 @@
     </Compile>
     <Compile Include="Reports\Company_Wise_Profits_rv.Designer.cs">
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DayBookDS.cs">
+      <DependentUpon>DayBookDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DayBookDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DayBookDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\Employee_Salary_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1409,6 +1423,9 @@
     <EmbeddedResource Include="Day Book.resx">
       <DependentUpon>Day Book.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Daybook_report.resx">
+      <DependentUpon>Daybook_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dead Parties Due Balance.resx">
       <DependentUpon>Dead Parties Due Balance.cs</DependentUpon>
     </EmbeddedResource>
@@ -1619,6 +1636,7 @@
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Receivables.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.rdlc" />
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">
       <DependentUpon>Balance_Sheet.cs</DependentUpon>
@@ -1635,6 +1653,7 @@
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
+    <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -1871,6 +1890,17 @@
     </None>
     <None Include="Reports\Company_Wise_Profits_ds.xss">
       <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DayBookDS.xsc">
+      <DependentUpon>DayBookDS.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DayBookDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DayBookDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DayBookDS.xss">
+      <DependentUpon>DayBookDS.xsd</DependentUpon>
     </None>
     <None Include="Reports\Employee_Salary_ds.xsc">
       <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>

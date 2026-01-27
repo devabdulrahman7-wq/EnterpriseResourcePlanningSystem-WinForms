@@ -148,13 +148,14 @@
 //        }
 //    }
 //}
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.Reporting.WinForms;
 
 namespace FO_2022.Reports
 {
@@ -374,7 +375,50 @@ namespace FO_2022.Reports
 
             this.Close();
         }
+        public void PrintReport()
+        {
+            try
+            {
+                if (reportViewer1.LocalReport != null)
+                {
+                    // Render the report
+                    Warning[] warnings;
+                    string[] streamIds;
+                    string mimeType = string.Empty;
+                    string encoding = string.Empty;
+                    string extension = string.Empty;
 
+                    byte[] bytes = reportViewer1.LocalReport.Render(
+                        "PDF",
+                        null,
+                        out mimeType,
+                        out encoding,
+                        out extension,
+                        out streamIds,
+                        out warnings);
+
+                    // Print the report
+                    using (PrintDialog printDialog = new PrintDialog())
+                    {
+                        if (printDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            using (PrintDocument printDoc = new PrintDocument())
+                            {
+                                printDoc.PrinterSettings = printDialog.PrinterSettings;
+
+                                // You might need to implement custom printing logic here
+                                // or use a PDF printing library
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error printing report: {ex.Message}", "Print Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         // 📌 CLOSE BUTTON
         //private void btnClose_Click(object sender, EventArgs e)
         //{
