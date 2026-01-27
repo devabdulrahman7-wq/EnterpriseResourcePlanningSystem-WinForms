@@ -818,12 +818,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
             <Top>1.32503cm</Top>
-            <Left>2.00237cm</Left>
+            <Left>1.83304cm</Left>
             <Height>0.51533cm</Height>
             <Width>4.42787cm</Width>
             <ZIndex>2</ZIndex>
@@ -851,14 +853,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
             <Top>1.32503cm</Top>
-            <Left>12.25634cm</Left>
+            <Left>11.60019cm</Left>
             <Height>0.51533cm</Height>
-            <Width>4.27567cm</Width>
+            <Width>4.95299cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -884,12 +888,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.32503cm</Top>
-            <Left>0.49953cm</Left>
+            <Left>0.3302cm</Left>
             <Height>0.51533cm</Height>
             <Width>1.32645cm</Width>
             <ZIndex>4</ZIndex>
@@ -917,12 +923,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.32503cm</Top>
-            <Left>11.07101cm</Left>
+            <Left>10.43601cm</Left>
             <Height>0.51533cm</Height>
             <Width>1.09362cm</Width>
             <ZIndex>5</ZIndex>
