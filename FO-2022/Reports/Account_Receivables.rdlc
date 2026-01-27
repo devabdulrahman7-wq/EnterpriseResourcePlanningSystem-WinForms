@@ -63,7 +63,10 @@
                       <Width>1.10562in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>1.88249in</Width>
+                      <Width>1.19916in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>0.25in</Width>
                     </TablixColumn>
                   </TablixColumns>
                   <TablixRows>
@@ -204,8 +207,10 @@
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <ColSpan>2</ColSpan>
                           </CellContents>
                         </TablixCell>
+                        <TablixCell />
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
@@ -323,6 +328,43 @@
                                   <Color>LightGrey</Color>
                                   <Style>Solid</Style>
                                 </Border>
+                                <RightBorder>
+                                  <Style>None</Style>
+                                </RightBorder>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <rd:Selected>true</rd:Selected>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="CLOSINGBALTYPE1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!CLOSINGBALTYPE.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>CLOSINGBALTYPE1</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <LeftBorder>
+                                  <Style>None</Style>
+                                </LeftBorder>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -341,6 +383,7 @@
                     <TablixMember />
                     <TablixMember />
                     <TablixMember />
+                    <TablixMember />
                   </TablixMembers>
                 </TablixColumnHierarchy>
                 <TablixRowHierarchy>
@@ -354,8 +397,8 @@
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>DataSet1</DataSetName>
-                <Height>0.58681in</Height>
-                <Width>6.75931in</Width>
+                <Height>0.5868in</Height>
+                <Width>6.32598in</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -365,7 +408,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Height>0.58681in</Height>
-            <Width>6.75931in</Width>
+            <Width>7.75931in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -381,7 +424,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>6.75931in</Width>
+      <Width>7.75931in</Width>
       <Page>
         <PageHeader>
           <Height>0.48403in</Height>
@@ -436,7 +479,7 @@
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.22014in</Top>
-              <Left>4.87611in</Left>
+              <Left>4.62611in</Left>
               <Height>0.23403in</Height>
               <Width>1.8832in</Width>
               <ZIndex>1</ZIndex>
