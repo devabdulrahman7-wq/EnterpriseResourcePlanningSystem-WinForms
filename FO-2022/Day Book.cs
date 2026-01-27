@@ -57,5 +57,24 @@ namespace FO_2022
             rpt.ShowDialog();
 
         }
+
+
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            DateTime fromDate = dateTimePicker1.Value.Date;
+            DateTime toDate = dateTimePicker2.Value.Date;
+
+            // Validation
+            if (fromDate > toDate)
+            {
+                MessageBox.Show("From Date cannot be greater than To Date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Open Report Form
+            Daybook_report rpt = new Daybook_report(fromDate, toDate);
+            rpt.ShowDialog();
+        }
     }
 }

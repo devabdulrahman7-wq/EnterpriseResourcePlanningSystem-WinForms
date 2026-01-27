@@ -757,11 +757,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
-            <FixedColumnHeaders>true</FixedColumnHeaders>
+            <FixedRowHeaders>true</FixedRowHeaders>
             <DataSetName>DayBookDataSet</DataSetName>
             <Top>2.34103cm</Top>
             <Left>0.3302cm</Left>
-            <Height>2.93679cm</Height>
+            <Height>2.9368cm</Height>
             <Width>16.22298cm</Width>
             <Style>
               <Border>
