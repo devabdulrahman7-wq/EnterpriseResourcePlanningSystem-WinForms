@@ -195,31 +195,55 @@ namespace FO_2022
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
+                //string query = @"
+                //    SELECT 
+                //        AccountNo AS ACCOUNTNO,
+                //        MAX(AccountName) AS ACCOUNTNAME,
+                //        ABS(SUM(Debit) - SUM(Credit)) AS CLOSINGBAL,
+                //        CASE 
+                //            WHEN SUM(Debit) - SUM(Credit) >= 0 
+                //            THEN 'Dr' 
+                //            ELSE 'Cr' 
+                //        END AS CLOSINGBALTYPE
+                //    FROM (
+                //        SELECT 
+                //            coa.AccountNo,
+                //            coa.AccountName,
+                //            av.Debit,
+                //            av.Credit
+                //        FROM ChartOfAccounts coa
+                //        LEFT JOIN AllVouchers av ON coa.AccountNo = av.AccountNo
+                //        WHERE coa.IsDetailed = 1 
+                //            AND coa.AccountType LIKE '%Parties%'
+                //            AND av.VoucherDate BETWEEN @FromDate AND @ToDate
+                //    ) AS Data
+                //    GROUP BY AccountNo
+                //    HAVING ABS(SUM(Debit) - SUM(Credit)) > 0
+                //    ORDER BY ABS(SUM(Debit) - SUM(Credit)) DESC";
+
                 string query = @"
-                    SELECT 
-                        AccountNo AS ACCOUNTNO,
-                        MAX(AccountName) AS ACCOUNTNAME,
-                        ABS(SUM(Debit) - SUM(Credit)) AS CLOSINGBAL,
-                        CASE 
-                            WHEN SUM(Debit) - SUM(Credit) >= 0 
-                            THEN 'Dr' 
-                            ELSE 'Cr' 
-                        END AS CLOSINGBALTYPE
-                    FROM (
-                        SELECT 
-                            coa.AccountNo,
-                            coa.AccountName,
-                            av.Debit,
-                            av.Credit
-                        FROM ChartOfAccounts coa
-                        LEFT JOIN AllVouchers av ON coa.AccountNo = av.AccountNo
-                        WHERE coa.IsDetailed = 1 
-                            AND coa.AccountType LIKE '%Parties%'
-                            AND av.VoucherDate BETWEEN @FromDate AND @ToDate
-                    ) AS Data
-                    GROUP BY AccountNo
-                    HAVING ABS(SUM(Debit) - SUM(Credit)) > 0
-                    ORDER BY ABS(SUM(Debit) - SUM(Credit)) DESC";
+    SELECT 
+    AccountNo AS ACCOUNTNO,
+    MAX(AccountName) AS ACCOUNTNAME,
+    SUM(Debit) - SUM(Credit) AS CLOSINGBAL,
+    'Dr' AS CLOSINGBALTYPE
+FROM (
+    SELECT 
+        coa.AccountNo,
+        coa.AccountName,
+        ISNULL(av.Debit, 0) AS Debit,
+        ISNULL(av.Credit, 0) AS Credit
+    FROM ChartOfAccounts coa
+    LEFT JOIN AllVouchers av 
+        ON coa.AccountNo = av.AccountNo
+        AND av.VoucherDate BETWEEN @FromDate AND @ToDate
+    WHERE coa.IsDetailed = 1 
+      AND coa.AccountType LIKE '%Parties%'
+) AS Data
+GROUP BY AccountNo
+HAVING (SUM(Debit) - SUM(Credit)) > 0
+ORDER BY (SUM(Debit) - SUM(Credit)) DESC;
+";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -244,20 +268,20 @@ namespace FO_2022
             DataTable dt = new DataTable();
 
             // Try Method 1 first
-            try
-            {
-                dt = GetDataFromAccountsBalances();
-                if (dt.Rows.Count > 0) return dt;
-            }
-            catch { }
+            //try
+            //{
+            //    dt = GetDataFromAccountsBalances();
+            //    if (dt.Rows.Count > 0) return dt;
+            //}
+            //catch { }
 
-            // Try Method 2
-            try
-            {
-                dt = GetDataFromChartOfAccounts();
-                if (dt.Rows.Count > 0) return dt;
-            }
-            catch { }
+            //// Try Method 2
+            //try
+            //{
+            //    dt = GetDataFromChartOfAccounts();
+            //    if (dt.Rows.Count > 0) return dt;
+            //}
+            //catch { }
 
             // Try Method 3
             try
@@ -268,7 +292,8 @@ namespace FO_2022
             catch { }
 
             // Last resort: Dummy data
-            return GetDummyData();
+            return GetDataFromAllVouchers();
+            //return GetDummyData();
         }
 
         private decimal GetMinBalance()
@@ -342,7 +367,7 @@ namespace FO_2022
             dt.Columns.Add("ACCOUNTNAME", typeof(string));
             dt.Columns.Add("CLOSINGBAL", typeof(decimal));
             dt.Columns.Add("CLOSINGBALTYPE", typeof(string));
-             //Sample data
+            //Sample data
             dt.Rows.Add("622174", "Zulfiqar Traders Johi", 37380.00, "Dr");
             dt.Rows.Add("621396", "Zahid Somroo Kumb", 82148.00, "Dr");
             dt.Rows.Add("621335", "Zain Traders Gogra Morr", 44960.00, "Dr");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,7 +8,9 @@ namespace FO_2022
 {
     public partial class Define_Packings : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!");
+        //string con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        //SqlConnection con = new SqlConnection(@"Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
         public Define_Packings()
         {

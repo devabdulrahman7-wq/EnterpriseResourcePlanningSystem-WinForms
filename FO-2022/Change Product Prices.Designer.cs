@@ -183,6 +183,7 @@
             this.textBox1.Location = new System.Drawing.Point(27, 157);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(844, 23);
             this.textBox1.TabIndex = 394;
             this.textBox1.Text = "                                                   Available Packings";
@@ -329,6 +330,7 @@
             this.prdctinfotxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.prdctinfotxtbox.Location = new System.Drawing.Point(27, 188);
             this.prdctinfotxtbox.Name = "prdctinfotxtbox";
+            this.prdctinfotxtbox.ReadOnly = true;
             this.prdctinfotxtbox.Size = new System.Drawing.Size(212, 27);
             this.prdctinfotxtbox.TabIndex = 399;
             this.prdctinfotxtbox.Text = "Products Information";
@@ -338,6 +340,7 @@
             this.purchasetxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.purchasetxtbox.Location = new System.Drawing.Point(245, 188);
             this.purchasetxtbox.Name = "purchasetxtbox";
+            this.purchasetxtbox.ReadOnly = true;
             this.purchasetxtbox.Size = new System.Drawing.Size(295, 27);
             this.purchasetxtbox.TabIndex = 400;
             this.purchasetxtbox.Text = "Purhcase";
@@ -347,6 +350,7 @@
             this.saletxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.saletxtbox.Location = new System.Drawing.Point(541, 188);
             this.saletxtbox.Name = "saletxtbox";
+            this.saletxtbox.ReadOnly = true;
             this.saletxtbox.Size = new System.Drawing.Size(330, 27);
             this.saletxtbox.TabIndex = 401;
             this.saletxtbox.Text = "       Sale ";
@@ -417,7 +421,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox prdctinfotxtbox;
         private System.Windows.Forms.TextBox purchasetxtbox;
         private System.Windows.Forms.TextBox saletxtbox;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -433,5 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.TextBox prdctinfotxtbox;
     }
 }

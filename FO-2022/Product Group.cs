@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,7 +8,8 @@ namespace FO_2022
 {
     public partial class Product_Group : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=POS_1.2;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=POS_1.2;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
         public Product_Group()
         {
