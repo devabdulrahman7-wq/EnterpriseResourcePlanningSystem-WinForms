@@ -837,6 +837,11 @@
     <Compile Include="Reports\Company_Wise_Profits_rv.Designer.cs">
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DayBookDS.cs">
       <DependentUpon>DayBookDS.xsd</DependentUpon>
     </Compile>
@@ -844,6 +849,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DayBookDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Employee_Salary_ds.cs">
+      <DependentUpon>Employee_Salary_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\Employee_Salary_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1681,10 +1689,15 @@
     </Content>
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
+    <EmbeddedResource Include="Reports\Party_Product_Purchase_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Part_List_rv.resx">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Product_Price_List.rdlc" />
+    <EmbeddedResource Include="Reports\Product_Purchase_Return_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_register_date_wise.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Register_Invoice_Wise.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Return_Register.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Return_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Summary.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1900,6 +1913,17 @@
     </None>
     <None Include="Reports\Company_Wise_Profits_ds.xss">
       <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Reports\DayBookDS.xsc">
       <DependentUpon>DayBookDS.xsd</DependentUpon>

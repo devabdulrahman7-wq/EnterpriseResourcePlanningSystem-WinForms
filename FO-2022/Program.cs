@@ -26,9 +26,9 @@ namespace FO_2022
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Mainform1());
+                Application.Run(new Party_Product_Purchase_Ledger());
             }
         }
     }
-
+    
 }

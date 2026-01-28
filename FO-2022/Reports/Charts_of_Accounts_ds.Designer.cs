@@ -50,6 +50,8 @@ namespace FO_2022.Reports {
         
         private AccountReceivableDataTable tableAccountReceivable;
         
+        private Prdct_Purchase_return_LedgerDataTable tablePrdct_Purchase_return_Ledger;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -116,6 +118,9 @@ namespace FO_2022.Reports {
                 }
                 if ((ds.Tables["AccountReceivable"] != null)) {
                     base.Tables.Add(new AccountReceivableDataTable(ds.Tables["AccountReceivable"]));
+                }
+                if ((ds.Tables["Prdct_Purchase_return_Ledger"] != null)) {
+                    base.Tables.Add(new Prdct_Purchase_return_LedgerDataTable(ds.Tables["Prdct_Purchase_return_Ledger"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -267,6 +272,16 @@ namespace FO_2022.Reports {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Prdct_Purchase_return_LedgerDataTable Prdct_Purchase_return_Ledger {
+            get {
+                return this.tablePrdct_Purchase_return_Ledger;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -370,6 +385,9 @@ namespace FO_2022.Reports {
                 }
                 if ((ds.Tables["AccountReceivable"] != null)) {
                     base.Tables.Add(new AccountReceivableDataTable(ds.Tables["AccountReceivable"]));
+                }
+                if ((ds.Tables["Prdct_Purchase_return_Ledger"] != null)) {
+                    base.Tables.Add(new Prdct_Purchase_return_LedgerDataTable(ds.Tables["Prdct_Purchase_return_Ledger"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -482,6 +500,12 @@ namespace FO_2022.Reports {
                     this.tableAccountReceivable.InitVars();
                 }
             }
+            this.tablePrdct_Purchase_return_Ledger = ((Prdct_Purchase_return_LedgerDataTable)(base.Tables["Prdct_Purchase_return_Ledger"]));
+            if ((initTable == true)) {
+                if ((this.tablePrdct_Purchase_return_Ledger != null)) {
+                    this.tablePrdct_Purchase_return_Ledger.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -518,6 +542,8 @@ namespace FO_2022.Reports {
             base.Tables.Add(this._tablecash_book);
             this.tableAccountReceivable = new AccountReceivableDataTable();
             base.Tables.Add(this.tableAccountReceivable);
+            this.tablePrdct_Purchase_return_Ledger = new Prdct_Purchase_return_LedgerDataTable();
+            base.Tables.Add(this.tablePrdct_Purchase_return_Ledger);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -595,6 +621,12 @@ namespace FO_2022.Reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeAccountReceivable() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializePrdct_Purchase_return_Ledger() {
             return false;
         }
         
@@ -691,6 +723,9 @@ namespace FO_2022.Reports {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void AccountReceivableRowChangeEventHandler(object sender, AccountReceivableRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Prdct_Purchase_return_LedgerRowChangeEventHandler(object sender, Prdct_Purchase_return_LedgerRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5030,6 +5065,421 @@ namespace FO_2022.Reports {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Prdct_Purchase_return_LedgerDataTable : global::System.Data.TypedTableBase<Prdct_Purchase_return_LedgerRow> {
+            
+            private global::System.Data.DataColumn columnProduct_Code;
+            
+            private global::System.Data.DataColumn columnProduct_Name;
+            
+            private global::System.Data.DataColumn columnPurchase_Date;
+            
+            private global::System.Data.DataColumn columnInvoice_No;
+            
+            private global::System.Data.DataColumn columnVendor_Name;
+            
+            private global::System.Data.DataColumn columnPurchased_Qty;
+            
+            private global::System.Data.DataColumn columnReturned_Qty;
+            
+            private global::System.Data.DataColumn columnNet_Qty;
+            
+            private global::System.Data.DataColumn columnPurchase_Rate;
+            
+            private global::System.Data.DataColumn columnReturn_Rate;
+            
+            private global::System.Data.DataColumn columnReturn_Value;
+            
+            private global::System.Data.DataColumn columnPurchase_Value;
+            
+            private global::System.Data.DataColumn columnNet_Value;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerDataTable() {
+                this.TableName = "Prdct_Purchase_return_Ledger";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Prdct_Purchase_return_LedgerDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Prdct_Purchase_return_LedgerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Product_CodeColumn {
+                get {
+                    return this.columnProduct_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Product_NameColumn {
+                get {
+                    return this.columnProduct_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Purchase_DateColumn {
+                get {
+                    return this.columnPurchase_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Invoice_NoColumn {
+                get {
+                    return this.columnInvoice_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Vendor_NameColumn {
+                get {
+                    return this.columnVendor_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Purchased_QtyColumn {
+                get {
+                    return this.columnPurchased_Qty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Returned_QtyColumn {
+                get {
+                    return this.columnReturned_Qty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Net_QtyColumn {
+                get {
+                    return this.columnNet_Qty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Purchase_RateColumn {
+                get {
+                    return this.columnPurchase_Rate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Return_RateColumn {
+                get {
+                    return this.columnReturn_Rate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Return_ValueColumn {
+                get {
+                    return this.columnReturn_Value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Purchase_ValueColumn {
+                get {
+                    return this.columnPurchase_Value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Net_ValueColumn {
+                get {
+                    return this.columnNet_Value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerRow this[int index] {
+                get {
+                    return ((Prdct_Purchase_return_LedgerRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Prdct_Purchase_return_LedgerRowChangeEventHandler Prdct_Purchase_return_LedgerRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Prdct_Purchase_return_LedgerRowChangeEventHandler Prdct_Purchase_return_LedgerRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Prdct_Purchase_return_LedgerRowChangeEventHandler Prdct_Purchase_return_LedgerRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Prdct_Purchase_return_LedgerRowChangeEventHandler Prdct_Purchase_return_LedgerRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddPrdct_Purchase_return_LedgerRow(Prdct_Purchase_return_LedgerRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerRow AddPrdct_Purchase_return_LedgerRow(string Product_Code, string Product_Name, string Purchase_Date, string Invoice_No, string Vendor_Name, string Purchased_Qty, string Returned_Qty, string Net_Qty, string Purchase_Rate, string Return_Rate, string Return_Value, string Purchase_Value, string Net_Value) {
+                Prdct_Purchase_return_LedgerRow rowPrdct_Purchase_return_LedgerRow = ((Prdct_Purchase_return_LedgerRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Product_Code,
+                        Product_Name,
+                        Purchase_Date,
+                        Invoice_No,
+                        Vendor_Name,
+                        Purchased_Qty,
+                        Returned_Qty,
+                        Net_Qty,
+                        Purchase_Rate,
+                        Return_Rate,
+                        Return_Value,
+                        Purchase_Value,
+                        Net_Value};
+                rowPrdct_Purchase_return_LedgerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPrdct_Purchase_return_LedgerRow);
+                return rowPrdct_Purchase_return_LedgerRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Prdct_Purchase_return_LedgerDataTable cln = ((Prdct_Purchase_return_LedgerDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Prdct_Purchase_return_LedgerDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnProduct_Code = base.Columns["Product_Code"];
+                this.columnProduct_Name = base.Columns["Product_Name"];
+                this.columnPurchase_Date = base.Columns["Purchase_Date"];
+                this.columnInvoice_No = base.Columns["Invoice_No"];
+                this.columnVendor_Name = base.Columns["Vendor_Name"];
+                this.columnPurchased_Qty = base.Columns["Purchased_Qty"];
+                this.columnReturned_Qty = base.Columns["Returned_Qty"];
+                this.columnNet_Qty = base.Columns["Net_Qty"];
+                this.columnPurchase_Rate = base.Columns["Purchase_Rate"];
+                this.columnReturn_Rate = base.Columns["Return_Rate"];
+                this.columnReturn_Value = base.Columns["Return_Value"];
+                this.columnPurchase_Value = base.Columns["Purchase_Value"];
+                this.columnNet_Value = base.Columns["Net_Value"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnProduct_Code = new global::System.Data.DataColumn("Product_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProduct_Code);
+                this.columnProduct_Name = new global::System.Data.DataColumn("Product_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProduct_Name);
+                this.columnPurchase_Date = new global::System.Data.DataColumn("Purchase_Date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchase_Date);
+                this.columnInvoice_No = new global::System.Data.DataColumn("Invoice_No", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoice_No);
+                this.columnVendor_Name = new global::System.Data.DataColumn("Vendor_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVendor_Name);
+                this.columnPurchased_Qty = new global::System.Data.DataColumn("Purchased_Qty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchased_Qty);
+                this.columnReturned_Qty = new global::System.Data.DataColumn("Returned_Qty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReturned_Qty);
+                this.columnNet_Qty = new global::System.Data.DataColumn("Net_Qty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNet_Qty);
+                this.columnPurchase_Rate = new global::System.Data.DataColumn("Purchase_Rate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchase_Rate);
+                this.columnReturn_Rate = new global::System.Data.DataColumn("Return_Rate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReturn_Rate);
+                this.columnReturn_Value = new global::System.Data.DataColumn("Return_Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReturn_Value);
+                this.columnPurchase_Value = new global::System.Data.DataColumn("Purchase_Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchase_Value);
+                this.columnNet_Value = new global::System.Data.DataColumn("Net_Value", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNet_Value);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerRow NewPrdct_Purchase_return_LedgerRow() {
+                return ((Prdct_Purchase_return_LedgerRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Prdct_Purchase_return_LedgerRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Prdct_Purchase_return_LedgerRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Prdct_Purchase_return_LedgerRowChanged != null)) {
+                    this.Prdct_Purchase_return_LedgerRowChanged(this, new Prdct_Purchase_return_LedgerRowChangeEvent(((Prdct_Purchase_return_LedgerRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Prdct_Purchase_return_LedgerRowChanging != null)) {
+                    this.Prdct_Purchase_return_LedgerRowChanging(this, new Prdct_Purchase_return_LedgerRowChangeEvent(((Prdct_Purchase_return_LedgerRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Prdct_Purchase_return_LedgerRowDeleted != null)) {
+                    this.Prdct_Purchase_return_LedgerRowDeleted(this, new Prdct_Purchase_return_LedgerRowChangeEvent(((Prdct_Purchase_return_LedgerRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Prdct_Purchase_return_LedgerRowDeleting != null)) {
+                    this.Prdct_Purchase_return_LedgerRowDeleting(this, new Prdct_Purchase_return_LedgerRowChangeEvent(((Prdct_Purchase_return_LedgerRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovePrdct_Purchase_return_LedgerRow(Prdct_Purchase_return_LedgerRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Charts_of_Accounts_ds ds = new Charts_of_Accounts_ds();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Prdct_Purchase_return_LedgerDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DataTable1Row : global::System.Data.DataRow {
@@ -7829,6 +8279,398 @@ namespace FO_2022.Reports {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Prdct_Purchase_return_LedgerRow : global::System.Data.DataRow {
+            
+            private Prdct_Purchase_return_LedgerDataTable tablePrdct_Purchase_return_Ledger;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Prdct_Purchase_return_LedgerRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePrdct_Purchase_return_Ledger = ((Prdct_Purchase_return_LedgerDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Product_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Product_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Product_Code\' in table \'Prdct_Purchase_return_Ledger\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Product_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Product_Name {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Product_NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Product_Name\' in table \'Prdct_Purchase_return_Ledger\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Product_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Purchase_Date {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Purchase_DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Purchase_Date\' in table \'Prdct_Purchase_return_Ledger\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Purchase_DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Invoice_No {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Invoice_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Invoice_No\' in table \'Prdct_Purchase_return_Ledger\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Invoice_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Vendor_Name {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Vendor_NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Vendor_Name\' in table \'Prdct_Purchase_return_Ledger\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Vendor_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Purchased_Qty {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Purchased_QtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Purchased_Qty\' in table \'Prdct_Purchase_return_Ledger\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Purchased_QtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Returned_Qty {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Returned_QtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Returned_Qty\' in table \'Prdct_Purchase_return_Ledger\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Returned_QtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Net_Qty {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Net_QtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Net_Qty\' in table \'Prdct_Purchase_return_Ledger\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Net_QtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Purchase_Rate {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Purchase_RateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Purchase_Rate\' in table \'Prdct_Purchase_return_Ledger\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Purchase_RateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Return_Rate {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Return_RateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Return_Rate\' in table \'Prdct_Purchase_return_Ledger\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Return_RateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Return_Value {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Return_ValueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Return_Value\' in table \'Prdct_Purchase_return_Ledger\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Return_ValueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Purchase_Value {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Purchase_ValueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Purchase_Value\' in table \'Prdct_Purchase_return_Ledger\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Purchase_ValueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Net_Value {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrdct_Purchase_return_Ledger.Net_ValueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Net_Value\' in table \'Prdct_Purchase_return_Ledger\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrdct_Purchase_return_Ledger.Net_ValueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProduct_CodeNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Product_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProduct_CodeNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Product_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProduct_NameNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Product_NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProduct_NameNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Product_NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPurchase_DateNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Purchase_DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPurchase_DateNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Purchase_DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsInvoice_NoNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Invoice_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetInvoice_NoNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Invoice_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsVendor_NameNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Vendor_NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetVendor_NameNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Vendor_NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPurchased_QtyNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Purchased_QtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPurchased_QtyNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Purchased_QtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsReturned_QtyNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Returned_QtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetReturned_QtyNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Returned_QtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNet_QtyNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Net_QtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNet_QtyNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Net_QtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPurchase_RateNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Purchase_RateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPurchase_RateNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Purchase_RateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsReturn_RateNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Return_RateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetReturn_RateNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Return_RateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsReturn_ValueNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Return_ValueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetReturn_ValueNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Return_ValueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPurchase_ValueNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Purchase_ValueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPurchase_ValueNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Purchase_ValueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNet_ValueNull() {
+                return this.IsNull(this.tablePrdct_Purchase_return_Ledger.Net_ValueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNet_ValueNull() {
+                this[this.tablePrdct_Purchase_return_Ledger.Net_ValueColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -8256,6 +9098,40 @@ namespace FO_2022.Reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AccountReceivableRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Prdct_Purchase_return_LedgerRowChangeEvent : global::System.EventArgs {
+            
+            private Prdct_Purchase_return_LedgerRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerRowChangeEvent(Prdct_Purchase_return_LedgerRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Prdct_Purchase_return_LedgerRow Row {
                 get {
                     return this.eventRow;
                 }

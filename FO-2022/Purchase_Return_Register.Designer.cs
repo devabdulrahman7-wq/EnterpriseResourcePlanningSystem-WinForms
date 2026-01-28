@@ -54,6 +54,7 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 189;
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -62,6 +63,7 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
             this.fromdatepcker.TabIndex = 188;
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // label3
             // 
@@ -118,6 +120,7 @@
             this.previewbtn.TabIndex = 274;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -145,6 +148,7 @@
             this.printbtn.TabIndex = 272;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // vendornametxtbox
             // 
@@ -155,6 +159,7 @@
             this.vendornametxtbox.Name = "vendornametxtbox";
             this.vendornametxtbox.Size = new System.Drawing.Size(224, 28);
             this.vendornametxtbox.TabIndex = 448;
+            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
@@ -165,6 +170,7 @@
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(118, 28);
             this.vendoridtxtbox.TabIndex = 447;
+            this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // vendoridsearch
             // 
@@ -176,6 +182,7 @@
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 446;
             this.vendoridsearch.TabStop = false;
+            this.vendoridsearch.Click += new System.EventHandler(this.vendoridsearch_Click);
             // 
             // label5
             // 
@@ -227,6 +234,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase_Return_Register";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Purchase_Return_Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendoridsearch)).EndInit();
             this.ResumeLayout(false);
