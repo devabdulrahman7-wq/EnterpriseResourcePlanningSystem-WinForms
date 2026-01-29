@@ -1672,6 +1672,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
+    <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -1695,6 +1696,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Product_Price_List.rdlc" />
     <EmbeddedResource Include="Reports\Product_Purchase_Return_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Product_Wise_Sale.rdlc" />
+    <EmbeddedResource Include="Reports\Product_Wise_Sale_.rdlc" />
+    <EmbeddedResource Include="Reports\Purchase_Month_Comparison_Product_Wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_register_date_wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Register_Invoice_Wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Return_Register.rdlc" />
@@ -1708,6 +1712,7 @@
     <EmbeddedResource Include="Reports\Report_viewer.resx">
       <DependentUpon>Report_viewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salesman_Monthly_Performance.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Sector.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -1716,6 +1721,7 @@
     <EmbeddedResource Include="Reports\Sector_rv.resx">
       <DependentUpon>Sector_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Current_Sheet.rdlc" />
     <EmbeddedResource Include="Reports\Town_report.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dead_Parties));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Multan");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Pakistan");
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
@@ -45,11 +43,11 @@
             this.fromdatepckr = new System.Windows.Forms.Label();
             this.todatepcker = new System.Windows.Forms.DateTimePicker();
             this.fromdatepcker = new System.Windows.Forms.DateTimePicker();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.townlistView = new System.Windows.Forms.ListView();
+            this.checkBoxHavingbalancegreaterthanzero = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.selectalltownfromlist = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -106,6 +104,7 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(223, 25);
             this.sectornametxtbox.TabIndex = 482;
+            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
@@ -116,6 +115,7 @@
             this.sectoridtxtbox.Name = "sectoridtxtbox";
             this.sectoridtxtbox.Size = new System.Drawing.Size(111, 25);
             this.sectoridtxtbox.TabIndex = 481;
+            this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
             // 
             // sectoridsearch
             // 
@@ -127,14 +127,15 @@
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 480;
             this.sectoridsearch.TabStop = false;
+            this.sectoridsearch.Click += new System.EventHandler(this.sectoridsearch_Click);
             // 
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(349, 154);
+            this.a.Location = new System.Drawing.Point(349, 156);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(105, 21);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 479;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,10 +143,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 154);
+            this.label1.Location = new System.Drawing.Point(184, 156);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 478;
             this.label1.Text = "Sector ID";
             // 
@@ -168,27 +169,27 @@
             this.label2.Location = new System.Drawing.Point(259, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 42);
+            this.label2.Size = new System.Drawing.Size(171, 32);
             this.label2.TabIndex = 490;
             this.label2.Text = "Dead Parties";
             // 
             // todate
             // 
             this.todate.AutoSize = true;
-            this.todate.Location = new System.Drawing.Point(349, 105);
+            this.todate.Location = new System.Drawing.Point(349, 109);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 489;
             this.todate.Text = "To Date";
             // 
             // fromdatepckr
             // 
             this.fromdatepckr.AutoSize = true;
-            this.fromdatepckr.Location = new System.Drawing.Point(189, 105);
+            this.fromdatepckr.Location = new System.Drawing.Point(189, 109);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 488;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -198,8 +199,9 @@
             this.todatepcker.Location = new System.Drawing.Point(348, 126);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 27);
+            this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 487;
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -207,35 +209,33 @@
             this.fromdatepcker.Location = new System.Drawing.Point(185, 126);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
             this.fromdatepcker.TabIndex = 486;
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
-            // listView1
+            // townlistView
             // 
-            this.listView1.CheckBoxes = true;
-            this.listView1.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.StateImageIndex = 0;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
-            this.listView1.Location = new System.Drawing.Point(185, 243);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(384, 123);
-            this.listView1.TabIndex = 492;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            this.townlistView.CheckBoxes = true;
+            this.townlistView.HideSelection = false;
+            this.townlistView.Location = new System.Drawing.Point(185, 243);
+            this.townlistView.Name = "townlistView";
+            this.townlistView.Size = new System.Drawing.Size(384, 123);
+            this.townlistView.TabIndex = 492;
+            this.townlistView.UseCompatibleStateImageBehavior = false;
+            this.townlistView.View = System.Windows.Forms.View.List;
+            //this.townlistView.SelectedIndexChanged += new System.EventHandler(this.townlistView_SelectedIndexChanged);
             // 
-            // checkBox1
+            // checkBoxHavingbalancegreaterthanzero
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox1.Location = new System.Drawing.Point(185, 372);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(275, 25);
-            this.checkBox1.TabIndex = 493;
-            this.checkBox1.Text = "Having balance greater than zero";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxHavingbalancegreaterthanzero.AutoSize = true;
+            this.checkBoxHavingbalancegreaterthanzero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxHavingbalancegreaterthanzero.Location = new System.Drawing.Point(185, 372);
+            this.checkBoxHavingbalancegreaterthanzero.Name = "checkBoxHavingbalancegreaterthanzero";
+            this.checkBoxHavingbalancegreaterthanzero.Size = new System.Drawing.Size(214, 20);
+            this.checkBoxHavingbalancegreaterthanzero.TabIndex = 493;
+            this.checkBoxHavingbalancegreaterthanzero.Text = "Having balance greater than zero";
+            this.checkBoxHavingbalancegreaterthanzero.UseVisualStyleBackColor = true;
+            //this.checkBoxHavingbalancegreaterthanzero.CheckedChanged += new System.EventHandler(this.checkBoxHavingbalancegreaterthanzero_CheckedChanged);
             // 
             // label3
             // 
@@ -244,7 +244,7 @@
             this.label3.Location = new System.Drawing.Point(182, 405);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 23);
+            this.label3.Size = new System.Drawing.Size(49, 18);
             this.label3.TabIndex = 494;
             this.label3.Text = "Note:";
             // 
@@ -255,22 +255,23 @@
             this.label4.Location = new System.Drawing.Point(182, 433);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(458, 84);
+            this.label4.Size = new System.Drawing.Size(350, 64);
             this.label4.TabIndex = 495;
             this.label4.Text = resources.GetString("label4.Text");
             // 
-            // button1
+            // selectalltownfromlist
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(492, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 29);
-            this.button1.TabIndex = 496;
-            this.button1.Text = "Select All";
-            this.button1.UseVisualStyleBackColor = false;
+            this.selectalltownfromlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.selectalltownfromlist.FlatAppearance.BorderSize = 0;
+            this.selectalltownfromlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectalltownfromlist.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectalltownfromlist.Location = new System.Drawing.Point(491, 213);
+            this.selectalltownfromlist.Name = "selectalltownfromlist";
+            this.selectalltownfromlist.Size = new System.Drawing.Size(77, 29);
+            this.selectalltownfromlist.TabIndex = 496;
+            this.selectalltownfromlist.Text = "Select All";
+            this.selectalltownfromlist.UseVisualStyleBackColor = false;
+            this.selectalltownfromlist.Click += new System.EventHandler(this.selectalltownfromlist_Click);
             // 
             // label5
             // 
@@ -278,22 +279,22 @@
             this.label5.Location = new System.Drawing.Point(189, 224);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 21);
+            this.label5.Size = new System.Drawing.Size(62, 16);
             this.label5.TabIndex = 497;
             this.label5.Text = "Town List";
             // 
             // Dead_Parties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(788, 591);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.selectalltownfromlist);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.checkBoxHavingbalancegreaterthanzero);
+            this.Controls.Add(this.townlistView);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.todate);
@@ -315,6 +316,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dead_Parties";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Dead_Parties_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -338,11 +340,11 @@
         private System.Windows.Forms.Label fromdatepckr;
         private System.Windows.Forms.DateTimePicker todatepcker;
         private System.Windows.Forms.DateTimePicker fromdatepcker;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListView townlistView;
+        private System.Windows.Forms.CheckBox checkBoxHavingbalancegreaterthanzero;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button selectalltownfromlist;
         private System.Windows.Forms.Label label5;
     }
 }

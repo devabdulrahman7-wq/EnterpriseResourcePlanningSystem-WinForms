@@ -35,7 +35,8 @@ namespace FO_2022
         //}
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();        }
+            Application.Exit();
+        }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             //this.WindowState = (this.WindowState == FormWindowState.Maximized)
@@ -66,7 +67,7 @@ namespace FO_2022
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            PurchaseInvoice pi=new PurchaseInvoice();
+            PurchaseInvoice pi = new PurchaseInvoice();
             pi.Show();
             ////this.Hide();
         }
@@ -87,21 +88,21 @@ namespace FO_2022
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Customer_Receivables_By_Aging cra=new Customer_Receivables_By_Aging();
+            Customer_Receivables_By_Aging cra = new Customer_Receivables_By_Aging();
             cra.Show();
             ////this.Hide();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Party_Product_Sales_Ledger ppsl=new Party_Product_Sales_Ledger();
+            Party_Product_Sales_Ledger ppsl = new Party_Product_Sales_Ledger();
             ppsl.Show();
             ////this.Hide();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Party_Product_Purchase_Ledger pppl=new Party_Product_Purchase_Ledger();
+            Party_Product_Purchase_Ledger pppl = new Party_Product_Purchase_Ledger();
             pppl.Show();
             ////this.Hide();
         }
@@ -113,65 +114,65 @@ namespace FO_2022
         }
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            Sales_Summary_Product_Wise sspw=new Sales_Summary_Product_Wise();
+            Sales_Summary_Product_Wise sspw = new Sales_Summary_Product_Wise();
             sspw.Show();
             ////this.Hide();
         }
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            Accounts_Ledger ac=new Accounts_Ledger();
+            Accounts_Ledger ac = new Accounts_Ledger();
             ac.Show();
             ////this.Hide();
         }
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-           Customer_Receivable_C_W cr=new Customer_Receivable_C_W();
+            Customer_Receivable_C_W cr = new Customer_Receivable_C_W();
             cr.Show();
             ////this.Hide();
         }
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            Current_Stock cs=new Current_Stock();
+            Current_Stock cs = new Current_Stock();
             cs.Show();
             //this.Hide();
         }
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            Sales_Recvery__Invoice_Voice_ sri=new Sales_Recvery__Invoice_Voice_();
+            Sales_Recvery__Invoice_Voice_ sri = new Sales_Recvery__Invoice_Voice_();
             sri.Show();
             ////this.Hide();
         }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Party_Product_Sales_Ledger ppsl=new Party_Product_Sales_Ledger();
+            Party_Product_Sales_Ledger ppsl = new Party_Product_Sales_Ledger();
             ppsl.Show();
             ////this.Hide();
         }
         private void saleOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sale_Order so=new Sale_Order();
+            Sale_Order so = new Sale_Order();
             so.Show();
             ////this.Hide();
         }
         private void saleOrderApprovalsProcessToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void retailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void saleInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaleInvoice ci=new SaleInvoice();
-            ci.Show();  
+            SaleInvoice ci = new SaleInvoice();
+            ci.Show();
             ////this.Hide();
         }
 
         private void purchaseInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Purchase_Invoice_01 pi=new Purchase_Invoice_01();
+            Purchase_Invoice_01 pi = new Purchase_Invoice_01();
             pi.Show();
             ////this.Hide();
         }
@@ -185,18 +186,18 @@ namespace FO_2022
 
         private void saleReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sale_Return_Invoice sri=new Sale_Return_Invoice();
+            Sale_Return_Invoice sri = new Sale_Return_Invoice();
             sri.Show();
             ////this.Hide();    
         }
 
         private void purchaseReturnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
-          //Purchase_Returns_Invoice prs=new Purchase_Returns_Invoice();
-          Purhcase_Return_Invoice prs = new Purhcase_Return_Invoice();
-           prs.Show();
-          ////this.Hide();
+            //Purchase_Returns_Summary prs=new Purchase_Returns_Summary();
+            //Purchase_Returns_Invoice prs=new Purchase_Returns_Invoice();
+            Purhcase_Return_Invoice prs = new Purhcase_Return_Invoice();
+            prs.Show();
+            ////this.Hide();
         }
 
         private void stockIssueToSalesmenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,7 +209,7 @@ namespace FO_2022
 
         private void stockTransferSalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Stock_Receive_to_Salesmen srs=new Stock_Receive_to_Salesmen();
+            Stock_Receive_to_Salesmen srs = new Stock_Receive_to_Salesmen();
             srs.Show();
             ////this.Hide();
         }
@@ -222,7 +223,7 @@ namespace FO_2022
 
         private void purchaseDirectToSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void postShortToolStripMenuItem_Click(object sender, EventArgs e)
@@ -234,7 +235,7 @@ namespace FO_2022
 
         private void postShortStockSalesOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Post_Short_Stock_Order_Invoices psso=new Post_Short_Stock_Order_Invoices();
+            Post_Short_Stock_Order_Invoices psso = new Post_Short_Stock_Order_Invoices();
             psso.Show();
             //this.Hide();
         }
@@ -248,28 +249,28 @@ namespace FO_2022
 
         private void packingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Define_Packings dp=new Define_Packings();
+            Define_Packings dp = new Define_Packings();
             dp.Show();
             //this.Hide();
         }
 
         private void proToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Group pg=new Product_Group();
+            Product_Group pg = new Product_Group();
             pg.Show();
             //this.Hide();
         }
 
         private void productSubGroupsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Sub_Groups psg=new Product_Sub_Groups();
+            Product_Sub_Groups psg = new Product_Sub_Groups();
             psg.Show();
             //this.Hide();
         }
 
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            stockalertlvltxtbox  stockalertlvltxtbox=new stockalertlvltxtbox ();
+            stockalertlvltxtbox stockalertlvltxtbox = new stockalertlvltxtbox();
             stockalertlvltxtbox.Show();
             //this.Hide();
         }
@@ -290,21 +291,21 @@ namespace FO_2022
 
         private void tradeOfferCustomerWiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Trade_Offer_Customer_Wise tocw=new Trade_Offer_Customer_Wise();
+            Trade_Offer_Customer_Wise tocw = new Trade_Offer_Customer_Wise();
             tocw.Show();
             //this.Hide();
         }
 
         private void transportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Transport_Defination td=new Transport_Defination();
+            Transport_Defination td = new Transport_Defination();
             td.Show();
             //this.Hide();
         }
 
         private void townsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Town_List t=new Town_List();
+            Town_List t = new Town_List();
             t.Show();
             //this.Hide();
         }
@@ -318,80 +319,80 @@ namespace FO_2022
 
         private void customerdCategrToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Define_Customer_Category dfc=new Define_Customer_Category();
+            Define_Customer_Category dfc = new Define_Customer_Category();
             dfc.Show();
             //this.Hide();
         }
 
         private void customersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customers cus=new Customers();
+            Customers cus = new Customers();
             cus.Show();
             //this.Hide();
         }
 
         private void distributorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Distributor_s_Parties_Management dpm=new Distributor_s_Parties_Management();
+            Distributor_s_Parties_Management dpm = new Distributor_s_Parties_Management();
             dpm.Show();
             //this.Hide();
         }
 
         private void vendorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vendors vendors=new Vendors();
+            Vendors vendors = new Vendors();
             vendors.Show();
             //this.Hide();
         }
 
         private void salesmanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Salesman salesman=new Salesman();
+            Salesman salesman = new Salesman();
             salesman.Show();
             //this.Hide();
         }
 
         private void employeesBioDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Employees_Bio_Data employees_Bio_Data= new Employees_Bio_Data();
+            Employees_Bio_Data employees_Bio_Data = new Employees_Bio_Data();
             employees_Bio_Data.Show();
             //this.Hide();
         }
 
         private void assignCustomersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Assign_Customers_to_Salesman assign_Customers_To_Salesman=new Assign_Customers_to_Salesman();
+            Assign_Customers_to_Salesman assign_Customers_To_Salesman = new Assign_Customers_to_Salesman();
             assign_Customers_To_Salesman.Show();
             //this.Hide();
         }
 
         private void weeklyPaymentScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Weekly_Payment_Schedule wps=new Weekly_Payment_Schedule();
+            Weekly_Payment_Schedule wps = new Weekly_Payment_Schedule();
             wps.Show();
             //this.Hide();
         }
         private void accountsCodeManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void advanceDefinationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void cashReceivingVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void cashPaymentVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Cash_Payment_Voucher cpv=new Cash_Payment_Voucher();
+            Cash_Payment_Voucher cpv = new Cash_Payment_Voucher();
             cpv.Show();
             //this.Hide();
         }
         private void journalVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Journal_Voucher jv=new Journal_Voucher();
+            Journal_Voucher jv = new Journal_Voucher();
             jv.Show();
             //this.Hide();
         }
@@ -403,17 +404,17 @@ namespace FO_2022
         }
         private void preToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void dailyRecoveryAndPaymentSummaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Daily_Recovery_and_Payment_Summary drps=new Daily_Recovery_and_Payment_Summary();
+            Daily_Recovery_and_Payment_Summary drps = new Daily_Recovery_and_Payment_Summary();
             drps.Show();
             //this.Hide();
         }
         private void issueCheckBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void bankChequeIssuingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -423,7 +424,7 @@ namespace FO_2022
         }
         private void bankChequeReconcilationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bank_Cheques_Reconciliation bcr=new Bank_Cheques_Reconciliation();
+            Bank_Cheques_Reconciliation bcr = new Bank_Cheques_Reconciliation();
             bcr.Show();
             //this.Hide();
         }
@@ -454,7 +455,7 @@ namespace FO_2022
 
         private void postDatesPaymentPromisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
         private void promisesProcessingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -464,19 +465,19 @@ namespace FO_2022
         }
         private void salesReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void saleReturnReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void profitReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void salesmenRepToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void activityReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -488,7 +489,7 @@ namespace FO_2022
         }
         private void purchaseReturnReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void stockReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -506,7 +507,7 @@ namespace FO_2022
         }
         private void openingBalancesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Accounts_Balancing apb= new Accounts_Balancing();
+            Accounts_Balancing apb = new Accounts_Balancing();
             apb.Show();
             ////this.Hide();
         }
@@ -518,31 +519,31 @@ namespace FO_2022
         }
         private void salesmenPartyDetailLedgerCombineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Party_Detailed_Ledger_Combine   pdlc=new Party_Detailed_Ledger_Combine();
+            Party_Detailed_Ledger_Combine pdlc = new Party_Detailed_Ledger_Combine();
             pdlc.Show();
             //this.Hide();
         }
         private void partyDetailedLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Party_Deatail_Ledger pdl = new Party_Deatail_Ledger();
-           pdl.Show();
+            pdl.Show();
             //this.Hide();
         }
         private void partyLedgerForDailyActivePartiesExportPDFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Daily_activity_Done_Parties_Ledger padpl=new Daily_activity_Done_Parties_Ledger();
+            Daily_activity_Done_Parties_Ledger padpl = new Daily_activity_Done_Parties_Ledger();
             padpl.Show();
             //this.Hide();
         }
         private void cashBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cash_Book cb=new Cash_Book();
+            Cash_Book cb = new Cash_Book();
             cb.Show();
             //this.Hide();
         }
         private void dayBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Day_Book db=new Day_Book();
+            Day_Book db = new Day_Book();
             db.Show();
             //this.Hide();
         }
@@ -577,7 +578,7 @@ namespace FO_2022
         }
         private void bankStatementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bank_Statement bs=new Bank_Statement();
+            Bank_Statement bs = new Bank_Statement();
             bs.Show();
             //this.Hide();
         }
@@ -590,11 +591,11 @@ namespace FO_2022
 
         private void bouncedChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void lostChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void unclearedChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -618,7 +619,7 @@ namespace FO_2022
         }
         private void trialBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Trial_Balances tb=new Trial_Balances();
+            Trial_Balances tb = new Trial_Balances();
             tb.Show();
             //this.Hide();
         }
@@ -637,12 +638,12 @@ namespace FO_2022
 
         private void dailyClosingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void systemSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void backupOnHardDriveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -653,12 +654,12 @@ namespace FO_2022
         private void backupOnDriveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Data_Backup_On_USB_Drive bud = new Data_Backup_On_USB_Drive();
-            bud.Show(); 
+            bud.Show();
             //this.Hide();
         }
         private void userSecurityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void openingBalancesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -674,7 +675,7 @@ namespace FO_2022
         }
         private void openingStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          Opening_stock os = new Opening_stock();
+            Opening_stock os = new Opening_stock();
             os.Show();
             //this.Hide();
         }
@@ -698,31 +699,31 @@ namespace FO_2022
         }
         private void updateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-       private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
         private void companyNSMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer_Wise_Profits nsm =new Customer_Wise_Profits();
+            Customer_Wise_Profits nsm = new Customer_Wise_Profits();
             nsm.Show();
             //this.Hide();
         }
         private void companyASMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           ASM_Form asm=new ASM_Form();
+            ASM_Form asm = new ASM_Form();
             asm.Show();
             //this.Hide();
         }
         private void companySOsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Company_Wise_Profits so=new Company_Wise_Profits();  
+            Company_Wise_Profits so = new Company_Wise_Profits();
             so.Show();
             //this.Hide();
         }
@@ -774,6 +775,447 @@ namespace FO_2022
         private void toolStripSplitButton8_ButtonClick(object sender, EventArgs e)
         {
             toolStripSplitButton8.ShowDropDown();
+        }
+
+        private void partySalesActivityAgringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_Sale_Aging sg = new Party_Sale_Aging();
+            sg.Show();
+        }
+
+        private void dailyPendingSalesOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //not found
+        }
+
+        private void builtyRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //not found
+        }
+
+        private void salesRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Register sr = new Sales_Register();
+            sr.Show();
+        }
+
+        private void salesRegisterCompanyWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Register_Company_Wise srcw = new Sales_Register_Company_Wise();
+            srcw.Show();
+
+        }
+
+        private void salesSummaryInvoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Sales_Register_Invoice_Wise sr=new Sales_Register_Invoice_Wise();
+            //sr.Show();
+            // not found
+        }
+
+        private void salesSummaryProductWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Summary_Product_Wise asr = new Sales_Summary_Product_Wise();
+            asr.Show();
+        }
+
+        private void partyProductWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not found
+
+        }
+
+        private void partyProductSaleLedgerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_Product_Sales_Ledger pps = new Party_Product_Sales_Ledger();
+            pps.Show();
+        }
+
+        private void partySalesRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not found
+        }
+
+        private void salesVsRecoveriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_VS_Recoveries sr = new Sales_VS_Recoveries();
+            sr.Show();
+        }
+
+        private void salesVsRecoveries2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not found
+            //Sales
+        }
+
+        private void salesComparisonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Month_Comparison_Product_Wise sm = new Sales_Month_Comparison_Product_Wise();
+            sm.Show();
+        }
+
+        private void salesComparisonDistributorWiseProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Month_Comparison_Distributors_Wise_Products smr = new Sales_Month_Comparison_Distributors_Wise_Products();
+            smr.Show();
+        }
+
+        private void quarterlySalesPartyWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quaterely_Sales_Party_Wise qspw = new Quaterely_Sales_Party_Wise();
+            qspw.Show();
+        }
+
+        private void companyWiseSalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Company_Wise_Sales cws = new Company_Wise_Sales();
+            cws.Show();
+        }
+
+        private void discountClaimSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not found
+
+        }
+
+        private void companyDiscountClaimSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Company_Discount_Claim_Summary sw = new Company_Discount_Claim_Summary();
+            sw.Show();
+        }
+
+        private void categoryWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not found
+            
+
+        }
+
+        private void productSalesLedgerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Sale_Ledger sp = new Product_Sale_Ledger();
+            sp.Show();
+        }
+
+        private void customerTownSectorWiseSalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Town_and_Sector_Wise_Sales sr = new Customer_Town_and_Sector_Wise_Sales();
+            sr.Show();
+        }
+
+        private void salesAndStockStatementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_and_Stock_Statement ss = new Sales_and_Stock_Statement();
+            ss.Show();
+        }
+
+        private void saleReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Sales Return Register sr=new Sales Return Register();
+            //sr.Show();
+            //not found
+        }
+
+        private void saleReturnSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sale_Return_Summary ss = new Sale_Return_Summary();
+            ss.Show();
+        }
+
+        private void productSaleReturnLedgerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Peoduct_Sale_Return_Ledger srn = new Peoduct_Sale_Return_Ledger();
+            srn.Show();
+        }
+
+        private void salesmanSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Summary ss = new Salesman_Summary();
+            ss.Show();
+        }
+
+        private void salesmanProductsWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Wise_Sales_1 ss = new Product_Wise_Sales_1();
+            ss.Show();
+        }
+
+        private void salesmanMonthlyPerformanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Monthly_Performance pm = new Salesman_Monthly_Performance();
+            pm.Show();
+        }
+
+        private void salesmanCommissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Commision sm = new Salesman_Commision();
+            sm.Show();
+        }
+
+        private void salesmanStockStatementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Stock_Statement ss = new Salesman_Stock_Statement();
+            ss.Show();
+        }
+
+        private void dailySaleStatementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Daily_Sales_Statement_Salesman_Wise_ ss = new Daily_Sales_Statement_Salesman_Wise_();
+            ss.Show();
+        }
+
+        private void salesmanCompanyWiseProductsSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Product_Wise_Sales_1 s=new Product_Wise_Sales_1();
+            //s.Show();
+            Product_Wise_Sales_1 sq = new Product_Wise_Sales_1();
+            sq.Show();
+
+        }
+
+        private void salesmanSalesAndCashActivityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Stock_Statement ww = new Salesman_Stock_Statement();
+            ww.Show();
+        }
+
+        private void dailyTramactionReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Daily_Transaction_Report dt = new Daily_Transaction_Report();
+            dt.Show();
+        }
+
+        private void dailyBusinessActivityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Daily_Business_Activity db = new Daily_Business_Activity();
+            db.Show();
+        }
+
+        private void customerReceivablesinvoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Receivables__Invoice_Wise_ crs = new Customer_Receivables__Invoice_Wise_();
+            crs.Show();
+        }
+
+        private void customerReceivablesCategoryWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //Customer_Receivables__Invoice_Wise_ crs = new Customer_Receivables__Invoice_Wise_();
+            //crs.Show();
+        }
+
+        private void custornerReceivablesByAgeingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Receivables_By_Aging ag = new Customer_Receivables_By_Aging();
+            ag.Show();
+        }
+
+        private void customerPayableByAgeingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //not fpund
+        }
+
+        private void dueAgeingReceivablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Due_Recovery_by_Credit_Day ss = new Due_Recovery_by_Credit_Day();
+            ss.Show();
+        }
+
+        private void deadPartiesDueBalancesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dead_Parties_Due_Balance dp = new Dead_Parties_Due_Balance();
+            dp.Show();
+        }
+
+        private void accountBalanceCompanyWieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Account_Balance__C_W cw = new Account_Balance__C_W();
+            cw.Show();
+        }
+
+        private void customerReceivablesCompanyWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Receivables__Invoice_Wise_ cw = new Customer_Receivables__Invoice_Wise_();
+            cw.Show();
+        }
+
+        private void productActivityReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Activity_Report ac = new Product_Activity_Report();
+            ac.Show();
+        }
+
+        private void companyProductActivityReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //not fpund
+        }
+
+        private void salesRecoveryRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Recovery_Register str = new Sales_Recovery_Register();
+            str.Show();
+        }
+
+        private void continuesInvoicePrintingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Accounts_Ledger al = new Accounts_Ledger();
+            al.Show();
+        }
+
+        private void accountLedgerDateWoeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Accounts_Ledger_1 AC = new Accounts_Ledger_1();
+            AC.Show();
+        }
+
+        private void purchaseDateWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Registerr_Date_Wise dw = new Purchase_Registerr_Date_Wise();
+            dw.Show();
+        }
+
+        private void purchaseInvoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Register_Invoice_Wise inh = new Purchase_Register_Invoice_Wise();
+            inh.Show();
+        }
+
+        private void purchaseSummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Summary ss = new Purchase_Summary();
+            ss.Show();
+        }
+
+        private void productWisePurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Wise_Purchase an = new Product_Wise_Purchase();
+            an.Show();
+        }
+
+        private void purchaseReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Return_Register prr = new Purchase_Return_Register();
+            prr.Show();
+        }
+
+        private void purchaseReturnSumaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Returns_Summary purchase_Returns_Summary = new Purchase_Returns_Summary();
+            purchase_Returns_Summary.Show();
+        }
+
+        private void productPurchaseReturnLedgerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Purchase_Return_Ledger ppl = new Product_Purchase_Return_Ledger();
+            ppl.Show();
+        }
+
+        private void currentStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Current_Stock cs = new Current_Stock();
+            cs.Show();
+        }
+
+        private void openingStockToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Opening_stock os = new Opening_stock();
+            os.Show();
+        }
+
+        private void stockGoingToShortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stock_Going_to_Short sg = new Stock_Going_to_Short();
+            sg.Show();
+
+        }
+
+        private void salesmanCurrentStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salesman_Stock_Statement ss = new Salesman_Stock_Statement();
+            ss.Show();
+        }
+
+        private void productPurchaseLedgerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_Product_Purchase_Ledger lp = new Party_Product_Purchase_Ledger();
+            lp.Show();
+        }
+        private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_Month_Comparison_Product_Wise mp = new Purchase_Month_Comparison_Product_Wise();
+            mp.Show();
+        }
+
+        private void stockIssueRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stock_Issue_Register si = new Stock_Issue_Register();
+            si.Show();
+        }
+
+        private void stockReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stock_Return_Register sr = new Stock_Return_Register();
+            sr.Show();
+        }
+
+        private void employeesSalarySheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employees_Salary_Sheet ess = new Employees_Salary_Sheet();
+            ess.Show();
+        }
+
+        private void salesmanPartiesListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_List_Detailed pi = new Party_List_Detailed();
+            pi.Show();
+        }
+
+        private void townsListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Town_List tt = new Town_List();
+            tt.Show();
+        }
+
+        private void sectorsListAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sectors sec = new Sectors();
+            sec.Show();
+        }
+
+        private void sectorsListSalesmanWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sectors_List_A11 sl = new Sectors_List_A11();
+            sl.Show();
+        }
+
+        private void partyListSummarizedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_List_Summarize pls = new Party_List_Summarize();
+            pls.Show();
+        }
+
+        private void partyListDetailedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Party_List_Detailed_1 mn = new Party_List_Detailed_1();
+        mn.Show();
+        }
+
+        private void stockCountSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stock_Current_Sheet scs = new Stock_Current_Sheet();
+            scs.Show();
+        }
+
+        private void productPriceListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Price_List ppl = new Product_Price_List();
+            ppl.Show();
+        }
+
+        private void deadPartyListReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dead_Parties dp=new Dead_Parties();
+            dp.Show();
         }
     }
 }

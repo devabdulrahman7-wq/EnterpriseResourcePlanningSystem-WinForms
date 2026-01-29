@@ -40,7 +40,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Salesman ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -70,7 +72,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Salesman Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -100,7 +104,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Mobile </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -130,7 +136,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Sector</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -160,7 +168,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>PartyID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -190,7 +200,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Party Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -431,7 +443,6 @@
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Left>0in</Left>
         <Height>0.5in</Height>
         <Width>7.09426in</Width>
         <Style>
