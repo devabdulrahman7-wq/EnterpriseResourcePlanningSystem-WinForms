@@ -33,7 +33,7 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.ctgrycombobox = new System.Windows.Forms.ComboBox();
+            this.selectyearquartercombobox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.todate = new System.Windows.Forms.Label();
             this.fromdatepckr = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.label5.Location = new System.Drawing.Point(157, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(367, 42);
+            this.label5.Size = new System.Drawing.Size(285, 33);
             this.label5.TabIndex = 323;
             this.label5.Text = "Monthly Expense Chart";
             // 
@@ -60,13 +60,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(194, 325);
+            this.previewbtn.Location = new System.Drawing.Point(221, 306);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(76, 31);
+            this.previewbtn.Size = new System.Drawing.Size(76, 25);
             this.previewbtn.TabIndex = 322;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -74,13 +75,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(366, 325);
+            this.closebtn.Location = new System.Drawing.Point(378, 306);
             this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(76, 31);
+            this.closebtn.Size = new System.Drawing.Size(73, 25);
             this.closebtn.TabIndex = 321;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -88,21 +90,23 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(280, 325);
+            this.printbtn.Location = new System.Drawing.Point(299, 306);
             this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(76, 31);
+            this.printbtn.Size = new System.Drawing.Size(76, 25);
             this.printbtn.TabIndex = 320;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
-            // ctgrycombobox
+            // selectyearquartercombobox
             // 
-            this.ctgrycombobox.FormattingEnabled = true;
-            this.ctgrycombobox.Location = new System.Drawing.Point(268, 218);
-            this.ctgrycombobox.Name = "ctgrycombobox";
-            this.ctgrycombobox.Size = new System.Drawing.Size(219, 27);
-            this.ctgrycombobox.TabIndex = 319;
+            this.selectyearquartercombobox.FormattingEnabled = true;
+            this.selectyearquartercombobox.Location = new System.Drawing.Point(268, 218);
+            this.selectyearquartercombobox.Name = "selectyearquartercombobox";
+            this.selectyearquartercombobox.Size = new System.Drawing.Size(219, 24);
+            this.selectyearquartercombobox.TabIndex = 319;
+            this.selectyearquartercombobox.SelectedIndexChanged += new System.EventHandler(this.selectyearquartercombobox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -110,7 +114,7 @@
             this.label4.Location = new System.Drawing.Point(89, 226);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 21);
+            this.label4.Size = new System.Drawing.Size(120, 16);
             this.label4.TabIndex = 318;
             this.label4.Text = "Select Year Quarter";
             // 
@@ -120,7 +124,7 @@
             this.todate.Location = new System.Drawing.Point(89, 185);
             this.todate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 317;
             this.todate.Text = "To Date";
             // 
@@ -130,7 +134,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(89, 154);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 316;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -140,8 +144,9 @@
             this.todatepcker.Location = new System.Drawing.Point(269, 178);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(218, 27);
+            this.todatepcker.Size = new System.Drawing.Size(218, 23);
             this.todatepcker.TabIndex = 315;
+            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -149,8 +154,9 @@
             this.fromdatepcker.Location = new System.Drawing.Point(269, 147);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(218, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(218, 23);
             this.fromdatepcker.TabIndex = 314;
+            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // pictureBox2
             // 
@@ -166,7 +172,7 @@
             // 
             // Monthly_Expense_Chart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(606, 370);
@@ -175,7 +181,7 @@
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
-            this.Controls.Add(this.ctgrycombobox);
+            this.Controls.Add(this.selectyearquartercombobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.todate);
             this.Controls.Add(this.fromdatepckr);
@@ -188,6 +194,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monthly_Expense_Chart";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Monthly_Expense_Chart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,7 +207,7 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button printbtn;
-        private System.Windows.Forms.ComboBox ctgrycombobox;
+        private System.Windows.Forms.ComboBox selectyearquartercombobox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label todate;
         private System.Windows.Forms.Label fromdatepckr;

@@ -1659,6 +1659,8 @@
     <EmbeddedResource Include="Reports\Balance_Sheet.resx">
       <DependentUpon>Balance_Sheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bank.rdlc" />
+    <EmbeddedResource Include="Reports\Bank_Statement.rdlc" />
     <EmbeddedResource Include="Reports\Cash_Book.rdlc" />
     <EmbeddedResource Include="Reports\Charts_of_Accounts_rv.resx">
       <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
@@ -1670,7 +1672,9 @@
     <EmbeddedResource Include="Reports\Company_Wise_Profits_rv.resx">
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Daily_Business_Activity.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
@@ -1688,6 +1692,7 @@
     <Content Include="Reports\Party_List.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Reports\Monthly_Expense.rdlc" />
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Party_Product_Purchase_Ledger.rdlc" />
@@ -1716,6 +1721,7 @@
     <EmbeddedResource Include="Reports\Salesman_Sector.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salesman_Stock_Statement.rdlc" />
     <EmbeddedResource Include="Reports\Sale_Return_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Sector.rdlc" />
     <EmbeddedResource Include="Reports\Sector_rv.resx">
