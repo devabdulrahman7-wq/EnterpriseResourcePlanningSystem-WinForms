@@ -1652,6 +1652,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Balances.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
     <EmbeddedResource Include="Reports\Account_Pay.rdlc" />
     <EmbeddedResource Include="Reports\Account_Receivables.rdlc" />
@@ -1672,6 +1673,7 @@
     <EmbeddedResource Include="Reports\Company_Wise_Profits_rv.resx">
       <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Current_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Business_Activity.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
@@ -1693,6 +1695,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Reports\Monthly_Expense.rdlc" />
+    <EmbeddedResource Include="Reports\Opening_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Party_Product_Purchase_Ledger.rdlc" />
@@ -1703,6 +1706,7 @@
     <EmbeddedResource Include="Reports\Product_Purchase_Return_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale_.rdlc" />
+    <EmbeddedResource Include="Reports\Profit_and_Loss_Statement.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Month_Comparison_Product_Wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_register_date_wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Register_Invoice_Wise.rdlc" />
@@ -1734,6 +1738,8 @@
     <EmbeddedResource Include="Reports\Town_rv.resx">
       <DependentUpon>Town_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Trial_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Uncleared_Cheques.rdlc" />
     <EmbeddedResource Include="Sale Order.resx">
       <DependentUpon>Sale Order.cs</DependentUpon>
     </EmbeddedResource>

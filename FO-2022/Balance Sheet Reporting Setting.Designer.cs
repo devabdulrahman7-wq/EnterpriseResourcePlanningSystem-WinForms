@@ -51,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(158, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 42);
+            this.label1.Size = new System.Drawing.Size(375, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Balance Sheet Report Setting";
             // 
@@ -60,7 +60,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(40, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 654;
             this.label3.Text = "Account Type";
             // 
@@ -69,7 +69,7 @@
             this.accountcombobox.FormattingEnabled = true;
             this.accountcombobox.Location = new System.Drawing.Point(43, 86);
             this.accountcombobox.Name = "accountcombobox";
-            this.accountcombobox.Size = new System.Drawing.Size(227, 27);
+            this.accountcombobox.Size = new System.Drawing.Size(227, 24);
             this.accountcombobox.TabIndex = 653;
             this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
@@ -81,7 +81,7 @@
             this.textBox2.Location = new System.Drawing.Point(43, 129);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(529, 23);
+            this.textBox2.Size = new System.Drawing.Size(529, 19);
             this.textBox2.TabIndex = 655;
             this.textBox2.Text = "                Available Accounts";
             // 
@@ -179,7 +179,7 @@
             // 
             // Balance_Sheet_Reporting_Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(626, 535);
@@ -198,6 +198,7 @@
             this.Name = "Balance_Sheet_Reporting_Setting";
             this.Text = "Balance_Sheet_Reporting_Setting";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Balance_Sheet_Reporting_Setting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

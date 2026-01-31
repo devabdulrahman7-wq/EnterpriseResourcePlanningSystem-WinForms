@@ -330,6 +330,11 @@ namespace FO_2022
                 dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
+
+        private void Balance_Sheet_Reporting_Setting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

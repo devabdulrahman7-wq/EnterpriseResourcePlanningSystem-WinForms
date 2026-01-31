@@ -591,11 +591,13 @@ namespace FO_2022
 
         private void bouncedChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Uncleared_Cheques cq=new Uncleared_Cheques();
+            cq.Show();
         }
         private void lostChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Uncleared_Cheques cd=new Uncleared_Cheques();
+            cd.Show();
         }
         private void unclearedChequesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1118,7 +1120,7 @@ namespace FO_2022
 
         private void openingStockToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Opening_stock os = new Opening_stock();
+            Opening_Stock_1 os = new Opening_Stock_1();
             os.Show();
         }
 

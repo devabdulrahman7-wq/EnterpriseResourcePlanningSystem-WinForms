@@ -50,6 +50,7 @@
             this.previewbtn.TabIndex = 346;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -64,6 +65,7 @@
             this.closebtn.TabIndex = 345;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -78,6 +80,7 @@
             this.printbtn.TabIndex = 344;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // label6
             // 
@@ -86,7 +89,7 @@
             this.label6.Location = new System.Drawing.Point(162, 61);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(324, 42);
+            this.label6.Size = new System.Drawing.Size(252, 32);
             this.label6.TabIndex = 347;
             this.label6.Text = "Uncleared Cheques";
             // 
@@ -103,7 +106,7 @@
             // 
             // Uncleared_Cheques
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(616, 303);
@@ -119,6 +122,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uncleared_Cheques";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Uncleared_Cheques_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

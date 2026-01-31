@@ -37,7 +37,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Account No</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -67,7 +69,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Account Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -97,7 +101,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Party Type</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -127,7 +133,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Opening Credit</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -157,7 +165,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Opening Debit</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -358,7 +368,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.11235in</Left>
             <Height>0.5in</Height>
-            <Width>6.64696in</Width>
+            <Width>6.64695in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -462,7 +472,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.5243in</Height>
+      <Height>0.49305in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

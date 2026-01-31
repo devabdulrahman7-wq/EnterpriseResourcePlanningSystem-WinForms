@@ -16,7 +16,7 @@ namespace FO_2022.Reports
         {
             InitializeComponent();
             // Set default dates
-            fromdatepicker.Value = DateTime.Now.AddDays(-30);
+            fromdatepicker.Value = DateTime.Now.AddYears(-3);
             todatepicker.Value = DateTime.Now;
         }
 
@@ -44,7 +44,7 @@ namespace FO_2022.Reports
                     {
                         { "DataSet1", data }
                     };
-                    viewer.ShowReport("Balance_Sheet.rdlc", dataSources, parameters);
+                    viewer.ShowReport("Balance_Sheet.rdlc", dataSources);
                 }
             }
             catch (Exception ex)

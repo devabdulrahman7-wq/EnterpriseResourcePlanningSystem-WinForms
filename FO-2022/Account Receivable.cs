@@ -400,5 +400,10 @@ ORDER BY (SUM(Debit) - SUM(Credit)) DESC;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 e.Handled = true;
         }
+
+        private void Account_Receivable_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

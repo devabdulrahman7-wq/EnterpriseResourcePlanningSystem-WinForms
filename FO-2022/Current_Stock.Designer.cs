@@ -28,29 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Asad Umair Traders");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Happy");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Mux");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Nice");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Purchase");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Smart Food");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Tastoo");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Current_Stock));
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.cmpnylist = new System.Windows.Forms.ListView();
+            this.cmpnyviewlist = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.salebtn = new System.Windows.Forms.RadioButton();
-            this.purchasebtn = new System.Windows.Forms.RadioButton();
-            this.costbtn = new System.Windows.Forms.RadioButton();
+            this.viewonsaleradiobtn = new System.Windows.Forms.RadioButton();
+            this.viewonpurchaseradiobtn = new System.Windows.Forms.RadioButton();
+            this.viewoncostradiobtn = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grplist = new System.Windows.Forms.ListView();
+            this.grpviewlist = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.slctallbtn = new System.Windows.Forms.Button();
-            this.slctbtn = new System.Windows.Forms.Button();
+            this.slctallgrpbtnfromlist = new System.Windows.Forms.Button();
+            this.slctallcmpniesbtnfromlist = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -69,6 +62,7 @@
             this.previewbtn.TabIndex = 474;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -96,64 +90,66 @@
             this.printbtn.TabIndex = 472;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
-            // cmpnylist
+            // cmpnyviewlist
             // 
-            this.cmpnylist.CheckBoxes = true;
-            this.cmpnylist.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
-            this.cmpnylist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.cmpnylist.Location = new System.Drawing.Point(238, 121);
-            this.cmpnylist.Name = "cmpnylist";
-            this.cmpnylist.Size = new System.Drawing.Size(180, 213);
-            this.cmpnylist.TabIndex = 476;
-            this.cmpnylist.UseCompatibleStateImageBehavior = false;
-            this.cmpnylist.View = System.Windows.Forms.View.SmallIcon;
+            this.cmpnyviewlist.CheckBoxes = true;
+            this.cmpnyviewlist.HideSelection = false;
+            this.cmpnyviewlist.Location = new System.Drawing.Point(238, 121);
+            this.cmpnyviewlist.Name = "cmpnyviewlist";
+            this.cmpnyviewlist.Size = new System.Drawing.Size(180, 213);
+            this.cmpnyviewlist.TabIndex = 476;
+            this.cmpnyviewlist.UseCompatibleStateImageBehavior = false;
+            this.cmpnyviewlist.View = System.Windows.Forms.View.SmallIcon;
+            //this.cmpnyviewlist.SelectedIndexChanged += new System.EventHandler(this.cmpnyviewlist_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.salebtn);
-            this.groupBox1.Controls.Add(this.purchasebtn);
-            this.groupBox1.Controls.Add(this.costbtn);
-            this.groupBox1.Location = new System.Drawing.Point(75, 232);
+            this.groupBox1.Controls.Add(this.viewonsaleradiobtn);
+            this.groupBox1.Controls.Add(this.viewonpurchaseradiobtn);
+            this.groupBox1.Controls.Add(this.viewoncostradiobtn);
+            this.groupBox1.Location = new System.Drawing.Point(69, 190);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(157, 102);
             this.groupBox1.TabIndex = 477;
             this.groupBox1.TabStop = false;
             // 
-            // salebtn
+            // viewonsaleradiobtn
             // 
-            this.salebtn.AutoSize = true;
-            this.salebtn.Location = new System.Drawing.Point(6, 70);
-            this.salebtn.Name = "salebtn";
-            this.salebtn.Size = new System.Drawing.Size(126, 25);
-            this.salebtn.TabIndex = 2;
-            this.salebtn.TabStop = true;
-            this.salebtn.Text = "View on Sale";
-            this.salebtn.UseVisualStyleBackColor = true;
+            this.viewonsaleradiobtn.AutoSize = true;
+            this.viewonsaleradiobtn.Location = new System.Drawing.Point(6, 70);
+            this.viewonsaleradiobtn.Name = "viewonsaleradiobtn";
+            this.viewonsaleradiobtn.Size = new System.Drawing.Size(100, 20);
+            this.viewonsaleradiobtn.TabIndex = 2;
+            this.viewonsaleradiobtn.TabStop = true;
+            this.viewonsaleradiobtn.Text = "View on Sale";
+            this.viewonsaleradiobtn.UseVisualStyleBackColor = true;
+            //this.viewonsaleradiobtn.CheckedChanged += new System.EventHandler(this.viewonsaleradiobtn_CheckedChanged);
             // 
-            // purchasebtn
+            // viewonpurchaseradiobtn
             // 
-            this.purchasebtn.AutoSize = true;
-            this.purchasebtn.Location = new System.Drawing.Point(6, 44);
-            this.purchasebtn.Name = "purchasebtn";
-            this.purchasebtn.Size = new System.Drawing.Size(162, 25);
-            this.purchasebtn.TabIndex = 1;
-            this.purchasebtn.TabStop = true;
-            this.purchasebtn.Text = "View on Purchase";
-            this.purchasebtn.UseVisualStyleBackColor = true;
+            this.viewonpurchaseradiobtn.AutoSize = true;
+            this.viewonpurchaseradiobtn.Location = new System.Drawing.Point(6, 44);
+            this.viewonpurchaseradiobtn.Name = "viewonpurchaseradiobtn";
+            this.viewonpurchaseradiobtn.Size = new System.Drawing.Size(127, 20);
+            this.viewonpurchaseradiobtn.TabIndex = 1;
+            this.viewonpurchaseradiobtn.TabStop = true;
+            this.viewonpurchaseradiobtn.Text = "View on Purchase";
+            this.viewonpurchaseradiobtn.UseVisualStyleBackColor = true;
+            //this.viewonpurchaseradiobtn.CheckedChanged += new System.EventHandler(this.viewonpurchaseradiobtn_CheckedChanged);
             // 
-            // costbtn
+            // viewoncostradiobtn
             // 
-            this.costbtn.AutoSize = true;
-            this.costbtn.Location = new System.Drawing.Point(6, 18);
-            this.costbtn.Name = "costbtn";
-            this.costbtn.Size = new System.Drawing.Size(128, 25);
-            this.costbtn.TabIndex = 0;
-            this.costbtn.TabStop = true;
-            this.costbtn.Text = "View on Cost";
-            this.costbtn.UseVisualStyleBackColor = true;
+            this.viewoncostradiobtn.AutoSize = true;
+            this.viewoncostradiobtn.Location = new System.Drawing.Point(6, 18);
+            this.viewoncostradiobtn.Name = "viewoncostradiobtn";
+            this.viewoncostradiobtn.Size = new System.Drawing.Size(100, 20);
+            this.viewoncostradiobtn.TabIndex = 0;
+            this.viewoncostradiobtn.TabStop = true;
+            this.viewoncostradiobtn.Text = "View on Cost";
+            this.viewoncostradiobtn.UseVisualStyleBackColor = true;
+            //this.viewoncostradiobtn.CheckedChanged += new System.EventHandler(this.viewoncostradiobtn_CheckedChanged);
             // 
             // label2
             // 
@@ -162,7 +158,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(239, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 21);
+            this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 478;
             this.label2.Text = "Select Company";
             // 
@@ -173,33 +169,21 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(433, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 21);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 479;
             this.label1.Text = "Select Group";
             // 
-            // grplist
+            // grpviewlist
             // 
-            this.grplist.CheckBoxes = true;
-            this.grplist.HideSelection = false;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem7.StateImageIndex = 0;
-            this.grplist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
-            this.grplist.Location = new System.Drawing.Point(436, 121);
-            this.grplist.Name = "grplist";
-            this.grplist.Size = new System.Drawing.Size(190, 213);
-            this.grplist.TabIndex = 480;
-            this.grplist.UseCompatibleStateImageBehavior = false;
-            this.grplist.View = System.Windows.Forms.View.SmallIcon;
+            this.grpviewlist.CheckBoxes = true;
+            this.grpviewlist.HideSelection = false;
+            this.grpviewlist.Location = new System.Drawing.Point(436, 121);
+            this.grpviewlist.Name = "grpviewlist";
+            this.grpviewlist.Size = new System.Drawing.Size(190, 213);
+            this.grpviewlist.TabIndex = 480;
+            this.grpviewlist.UseCompatibleStateImageBehavior = false;
+            this.grpviewlist.View = System.Windows.Forms.View.SmallIcon;
+            //this.grpviewlist.SelectedIndexChanged += new System.EventHandler(this.grpviewlist_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -218,35 +202,37 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(277, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 42);
+            this.label3.Size = new System.Drawing.Size(188, 32);
             this.label3.TabIndex = 481;
             this.label3.Text = "Current Stock";
             // 
-            // slctallbtn
+            // slctallgrpbtnfromlist
             // 
-            this.slctallbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.slctallbtn.FlatAppearance.BorderSize = 0;
-            this.slctallbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.slctallbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slctallbtn.Location = new System.Drawing.Point(551, 93);
-            this.slctallbtn.Name = "slctallbtn";
-            this.slctallbtn.Size = new System.Drawing.Size(75, 25);
-            this.slctallbtn.TabIndex = 483;
-            this.slctallbtn.Text = "Select All";
-            this.slctallbtn.UseVisualStyleBackColor = false;
+            this.slctallgrpbtnfromlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.slctallgrpbtnfromlist.FlatAppearance.BorderSize = 0;
+            this.slctallgrpbtnfromlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.slctallgrpbtnfromlist.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slctallgrpbtnfromlist.Location = new System.Drawing.Point(551, 93);
+            this.slctallgrpbtnfromlist.Name = "slctallgrpbtnfromlist";
+            this.slctallgrpbtnfromlist.Size = new System.Drawing.Size(75, 25);
+            this.slctallgrpbtnfromlist.TabIndex = 483;
+            this.slctallgrpbtnfromlist.Text = "Select All";
+            this.slctallgrpbtnfromlist.UseVisualStyleBackColor = false;
+            this.slctallgrpbtnfromlist.Click += new System.EventHandler(this.slctallgrpbtnfromlist_Click);
             // 
-            // slctbtn
+            // slctallcmpniesbtnfromlist
             // 
-            this.slctbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.slctbtn.FlatAppearance.BorderSize = 0;
-            this.slctbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.slctbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slctbtn.Location = new System.Drawing.Point(343, 93);
-            this.slctbtn.Name = "slctbtn";
-            this.slctbtn.Size = new System.Drawing.Size(75, 25);
-            this.slctbtn.TabIndex = 484;
-            this.slctbtn.Text = "Select All";
-            this.slctbtn.UseVisualStyleBackColor = false;
+            this.slctallcmpniesbtnfromlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.slctallcmpniesbtnfromlist.FlatAppearance.BorderSize = 0;
+            this.slctallcmpniesbtnfromlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.slctallcmpniesbtnfromlist.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slctallcmpniesbtnfromlist.Location = new System.Drawing.Point(343, 93);
+            this.slctallcmpniesbtnfromlist.Name = "slctallcmpniesbtnfromlist";
+            this.slctallcmpniesbtnfromlist.Size = new System.Drawing.Size(75, 25);
+            this.slctallcmpniesbtnfromlist.TabIndex = 484;
+            this.slctallcmpniesbtnfromlist.Text = "Select All";
+            this.slctallcmpniesbtnfromlist.UseVisualStyleBackColor = false;
+            this.slctallcmpniesbtnfromlist.Click += new System.EventHandler(this.slctallcmpniesbtnfromlist_Click);
             // 
             // label4
             // 
@@ -255,7 +241,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(433, 337);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 21);
+            this.label4.Size = new System.Drawing.Size(93, 16);
             this.label4.TabIndex = 485;
             this.label4.Text = "No of Groups:6";
             // 
@@ -266,27 +252,27 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(239, 337);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 21);
+            this.label5.Size = new System.Drawing.Size(120, 16);
             this.label5.TabIndex = 486;
             this.label5.Text = "No of Companies: 1";
             // 
             // Current_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(726, 455);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.slctbtn);
-            this.Controls.Add(this.slctallbtn);
+            this.Controls.Add(this.slctallcmpniesbtnfromlist);
+            this.Controls.Add(this.slctallgrpbtnfromlist);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.grplist);
+            this.Controls.Add(this.grpviewlist);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cmpnylist);
+            this.Controls.Add(this.cmpnyviewlist);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
@@ -311,18 +297,18 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button printbtn;
-        private System.Windows.Forms.ListView cmpnylist;
+        private System.Windows.Forms.ListView cmpnyviewlist;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView grplist;
+        private System.Windows.Forms.ListView grpviewlist;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton salebtn;
-        private System.Windows.Forms.RadioButton purchasebtn;
-        private System.Windows.Forms.RadioButton costbtn;
-        private System.Windows.Forms.Button slctallbtn;
-        private System.Windows.Forms.Button slctbtn;
+        private System.Windows.Forms.RadioButton viewonsaleradiobtn;
+        private System.Windows.Forms.RadioButton viewonpurchaseradiobtn;
+        private System.Windows.Forms.RadioButton viewoncostradiobtn;
+        private System.Windows.Forms.Button slctallgrpbtnfromlist;
+        private System.Windows.Forms.Button slctallcmpniesbtnfromlist;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
     }
