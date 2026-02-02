@@ -39,8 +39,8 @@
             this.cmpnyidtxtbox = new System.Windows.Forms.TextBox();
             this.cmpnyidsearch = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2showonlyorderlevelproducts = new System.Windows.Forms.CheckBox();
+            this.checkBoxincludecurrentstock = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.label2.Location = new System.Drawing.Point(122, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 21);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 496;
             this.label2.Text = "Company ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -69,6 +69,7 @@
             this.previewbtn.TabIndex = 495;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -82,6 +83,7 @@
             this.closebtn.TabIndex = 494;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -95,6 +97,7 @@
             this.printbtn.TabIndex = 493;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox1
             // 
@@ -113,7 +116,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(157, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 42);
+            this.label1.Size = new System.Drawing.Size(270, 32);
             this.label1.TabIndex = 491;
             this.label1.Text = "Stock Going to Short\r\n";
             // 
@@ -126,6 +129,7 @@
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 28);
             this.cmpnynametxtbox.TabIndex = 490;
+            //this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
@@ -136,6 +140,7 @@
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
             this.cmpnyidtxtbox.Size = new System.Drawing.Size(127, 28);
             this.cmpnyidtxtbox.TabIndex = 489;
+            //this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
             // cmpnyidsearch
             // 
@@ -147,6 +152,7 @@
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch.TabIndex = 488;
             this.cmpnyidsearch.TabStop = false;
+            this.cmpnyidsearch.Click += new System.EventHandler(this.cmpnyidsearch_Click);
             // 
             // label5
             // 
@@ -155,39 +161,41 @@
             this.label5.Location = new System.Drawing.Point(291, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 21);
+            this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 487;
             this.label5.Text = "Company Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // checkBox1
+            // checkBox2showonlyorderlevelproducts
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(125, 205);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(218, 25);
-            this.checkBox1.TabIndex = 497;
-            this.checkBox1.Text = "Include SM Current Stock";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox2showonlyorderlevelproducts.AutoSize = true;
+            this.checkBox2showonlyorderlevelproducts.Location = new System.Drawing.Point(125, 231);
+            this.checkBox2showonlyorderlevelproducts.Name = "checkBox2showonlyorderlevelproducts";
+            this.checkBox2showonlyorderlevelproducts.Size = new System.Drawing.Size(203, 20);
+            this.checkBox2showonlyorderlevelproducts.TabIndex = 498;
+            this.checkBox2showonlyorderlevelproducts.Text = "Show only order level products";
+            this.checkBox2showonlyorderlevelproducts.UseVisualStyleBackColor = true;
+            //this.checkBox2showonlyorderlevelproducts.CheckedChanged += new System.EventHandler(this.checkBox2showonlyorderlevelproducts_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxincludecurrentstock
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(125, 231);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(259, 25);
-            this.checkBox2.TabIndex = 498;
-            this.checkBox2.Text = "Show only order level products";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxincludecurrentstock.AutoSize = true;
+            this.checkBoxincludecurrentstock.Location = new System.Drawing.Point(125, 205);
+            this.checkBoxincludecurrentstock.Name = "checkBoxincludecurrentstock";
+            this.checkBoxincludecurrentstock.Size = new System.Drawing.Size(171, 20);
+            this.checkBoxincludecurrentstock.TabIndex = 497;
+            this.checkBoxincludecurrentstock.Text = "Include SM Current Stock";
+            this.checkBoxincludecurrentstock.UseVisualStyleBackColor = true;
+            //this.checkBoxincludecurrentstock.CheckedChanged += new System.EventHandler(this.checkBoxincludecurrentstock_CheckedChanged);
             // 
             // Stock_Going_to_Short
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(618, 373);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBox2showonlyorderlevelproducts);
+            this.Controls.Add(this.checkBoxincludecurrentstock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
@@ -205,6 +213,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock_Going_to_Short";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Stock_Going_to_Short_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmpnyidsearch)).EndInit();
             this.ResumeLayout(false);
@@ -224,7 +233,7 @@
         private System.Windows.Forms.TextBox cmpnyidtxtbox;
         private System.Windows.Forms.PictureBox cmpnyidsearch;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox2showonlyorderlevelproducts;
+        private System.Windows.Forms.CheckBox checkBoxincludecurrentstock;
     }
 }

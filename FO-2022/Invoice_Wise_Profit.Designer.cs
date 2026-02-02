@@ -68,6 +68,7 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(243, 24);
             this.cstmrnametxtbox.TabIndex = 454;
+            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -78,6 +79,7 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(130, 24);
             this.cstmridtxtbox.TabIndex = 453;
+            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -89,6 +91,7 @@
             this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cstmridsearch.TabIndex = 452;
             this.cstmridsearch.TabStop = false;
+            this.cstmridsearch.Click += new System.EventHandler(this.cstmridsearch_Click);
             // 
             // label7
             // 
@@ -96,7 +99,7 @@
             this.label7.Location = new System.Drawing.Point(310, 193);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 451;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,7 +110,7 @@
             this.label8.Location = new System.Drawing.Point(124, 193);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 21);
+            this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 450;
             this.label8.Text = "Customer ID";
             // 
@@ -118,7 +121,7 @@
             this.label2.Location = new System.Drawing.Point(156, 44);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 42);
+            this.label2.Size = new System.Drawing.Size(255, 32);
             this.label2.TabIndex = 449;
             this.label2.Text = "Invoice Wise Profits";
             // 
@@ -128,7 +131,7 @@
             this.todate.Location = new System.Drawing.Point(310, 131);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 448;
             this.todate.Text = "To Date";
             // 
@@ -138,7 +141,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(122, 131);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 447;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -148,8 +151,9 @@
             this.todatepcker.Location = new System.Drawing.Point(312, 153);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(125, 27);
+            this.todatepcker.Size = new System.Drawing.Size(125, 23);
             this.todatepcker.TabIndex = 446;
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -157,8 +161,9 @@
             this.fromdatepcker.Location = new System.Drawing.Point(124, 153);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(113, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(113, 23);
             this.fromdatepcker.TabIndex = 445;
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // previewbtn
             // 
@@ -173,6 +178,7 @@
             this.previewbtn.TabIndex = 464;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // printbtn
             // 
@@ -187,6 +193,7 @@
             this.printbtn.TabIndex = 462;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // closebtn
             // 
@@ -201,10 +208,11 @@
             this.closebtn.TabIndex = 463;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // Invoice_Wise_Profit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(645, 429);
@@ -229,6 +237,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice_Wise_Profit";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Invoice_Wise_Profit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             this.ResumeLayout(false);

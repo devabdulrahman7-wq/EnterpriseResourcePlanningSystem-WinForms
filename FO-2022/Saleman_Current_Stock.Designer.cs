@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saleman_Current_Stock));
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxshowcost = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -48,24 +48,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesmansearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // checkBoxshowcost
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(504, 241);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(110, 25);
-            this.checkBox1.TabIndex = 508;
-            this.checkBox1.Text = "Show Cost";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxshowcost.AutoSize = true;
+            this.checkBoxshowcost.Location = new System.Drawing.Point(387, 237);
+            this.checkBoxshowcost.Name = "checkBoxshowcost";
+            this.checkBoxshowcost.Size = new System.Drawing.Size(87, 20);
+            this.checkBoxshowcost.TabIndex = 508;
+            this.checkBoxshowcost.Text = "Show Cost";
+            this.checkBoxshowcost.UseVisualStyleBackColor = true;
+            //this.checkBoxshowcost.CheckedChanged += new System.EventHandler(this.checkBoxshowcost_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(195, 126);
+            this.label2.Location = new System.Drawing.Point(78, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 21);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 507;
             this.label2.Text = "Company ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -76,12 +77,13 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(249, 339);
+            this.previewbtn.Location = new System.Drawing.Point(133, 315);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 506;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -89,12 +91,13 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(404, 339);
+            this.closebtn.Location = new System.Drawing.Point(288, 315);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 505;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -102,19 +105,20 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(330, 339);
+            this.printbtn.Location = new System.Drawing.Point(214, 315);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 504;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(651, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(508, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 503;
             this.pictureBox1.TabStop = false;
@@ -124,52 +128,55 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(210, 43);
+            this.label1.Location = new System.Drawing.Point(108, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 42);
+            this.label1.Size = new System.Drawing.Size(311, 32);
             this.label1.TabIndex = 502;
             this.label1.Text = "Salesman Current Stock";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmpnynametxtbox
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cmpnynametxtbox.Location = new System.Drawing.Point(367, 148);
+            this.cmpnynametxtbox.Location = new System.Drawing.Point(250, 144);
             this.cmpnynametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(215, 28);
             this.cmpnynametxtbox.TabIndex = 501;
+            //this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cmpnyidtxtbox.Location = new System.Drawing.Point(198, 148);
+            this.cmpnyidtxtbox.Location = new System.Drawing.Point(81, 144);
             this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(127, 28);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(118, 28);
             this.cmpnyidtxtbox.TabIndex = 500;
+            //this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
             // cmpnyidsearch
             // 
             this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(328, 148);
+            this.cmpnyidsearch.Location = new System.Drawing.Point(206, 144);
             this.cmpnyidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.cmpnyidsearch.Name = "cmpnyidsearch";
-            this.cmpnyidsearch.Size = new System.Drawing.Size(33, 28);
+            this.cmpnyidsearch.Size = new System.Drawing.Size(39, 28);
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch.TabIndex = 499;
             this.cmpnyidsearch.TabStop = false;
+            this.cmpnyidsearch.Click += new System.EventHandler(this.cmpnyidsearch_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 182);
+            this.label3.Location = new System.Drawing.Point(78, 178);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 21);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 513;
             this.label3.Text = "Salesman";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,45 +184,48 @@
             // salesmannametxtbox
             // 
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmannametxtbox.Location = new System.Drawing.Point(367, 204);
+            this.salesmannametxtbox.Location = new System.Drawing.Point(250, 200);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(215, 28);
             this.salesmannametxtbox.TabIndex = 512;
+            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmanidtxtbox.Location = new System.Drawing.Point(198, 204);
+            this.salesmanidtxtbox.Location = new System.Drawing.Point(81, 200);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(127, 28);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(118, 28);
             this.salesmanidtxtbox.TabIndex = 511;
+            //this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmansearch
             // 
             this.salesmansearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmansearch.Image")));
-            this.salesmansearch.Location = new System.Drawing.Point(328, 204);
+            this.salesmansearch.Location = new System.Drawing.Point(206, 200);
             this.salesmansearch.Margin = new System.Windows.Forms.Padding(6);
             this.salesmansearch.Name = "salesmansearch";
-            this.salesmansearch.Size = new System.Drawing.Size(33, 28);
+            this.salesmansearch.Size = new System.Drawing.Size(39, 28);
             this.salesmansearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmansearch.TabIndex = 510;
             this.salesmansearch.TabStop = false;
+            this.salesmansearch.Click += new System.EventHandler(this.salesmansearch_Click);
             // 
             // Saleman_Current_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(689, 400);
+            this.ClientSize = new System.Drawing.Size(543, 400);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.salesmannametxtbox);
             this.Controls.Add(this.salesmanidtxtbox);
             this.Controls.Add(this.salesmansearch);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxshowcost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
@@ -243,7 +253,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxshowcost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button closebtn;

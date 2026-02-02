@@ -139,7 +139,7 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(142, 27);
             this.todatepcker.TabIndex = 475;
-            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -149,7 +149,7 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(128, 27);
             this.fromdatepcker.TabIndex = 474;
-            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // Customer_Wise_Profits
             // 

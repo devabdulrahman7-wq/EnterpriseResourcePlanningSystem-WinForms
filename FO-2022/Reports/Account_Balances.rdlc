@@ -514,7 +514,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.025in</Left>
             <Height>0.5in</Height>
-            <Width>7.94792in</Width>
+            <Width>7.94791in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -591,7 +591,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.26459in</Top>
+          <Top>0.23959in</Top>
           <Left>3.13417in</Left>
           <Height>0.20833in</Height>
           <Width>1.42708in</Width>
@@ -667,7 +667,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Left>4.74156in</Left>
-          <Height>0.20486in</Height>
+          <Height>0.22986in</Height>
           <Width>0.75125in</Width>
           <Style>
             <Border>
@@ -695,7 +695,7 @@
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
           <Left>3.43776in</Left>
-          <Height>0.20486in</Height>
+          <Height>0.22986in</Height>
           <Width>0.5625in</Width>
           <ZIndex>1</ZIndex>
           <Style>

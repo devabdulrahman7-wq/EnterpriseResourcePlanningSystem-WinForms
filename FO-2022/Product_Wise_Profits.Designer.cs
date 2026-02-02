@@ -53,13 +53,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(126, 358);
+            this.previewbtn.Location = new System.Drawing.Point(99, 313);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 32);
+            this.previewbtn.Size = new System.Drawing.Size(90, 29);
             this.previewbtn.TabIndex = 478;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // printbtn
             // 
@@ -67,13 +68,14 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(223, 358);
+            this.printbtn.Location = new System.Drawing.Point(196, 313);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 32);
+            this.printbtn.Size = new System.Drawing.Size(90, 29);
             this.printbtn.TabIndex = 476;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // closebtn
             // 
@@ -81,13 +83,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(319, 358);
+            this.closebtn.Location = new System.Drawing.Point(292, 313);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 32);
+            this.closebtn.Size = new System.Drawing.Size(90, 29);
             this.closebtn.TabIndex = 477;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // pictureBox4
             // 
@@ -110,6 +113,7 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(231, 24);
             this.cstmrnametxtbox.TabIndex = 474;
+            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -120,6 +124,7 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(113, 24);
             this.cstmridtxtbox.TabIndex = 473;
+            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -131,6 +136,7 @@
             this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cstmridsearch.TabIndex = 472;
             this.cstmridsearch.TabStop = false;
+            this.cstmridsearch.Click += new System.EventHandler(this.cstmridsearch_Click);
             // 
             // label7
             // 
@@ -138,7 +144,7 @@
             this.label7.Location = new System.Drawing.Point(259, 195);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 471;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,7 +155,7 @@
             this.label8.Location = new System.Drawing.Point(88, 193);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 21);
+            this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 470;
             this.label8.Text = "Customer ID";
             // 
@@ -160,7 +166,7 @@
             this.label2.Location = new System.Drawing.Point(135, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 42);
+            this.label2.Size = new System.Drawing.Size(265, 32);
             this.label2.TabIndex = 469;
             this.label2.Text = "Product Wise Profits";
             // 
@@ -170,7 +176,7 @@
             this.todate.Location = new System.Drawing.Point(259, 133);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 468;
             this.todate.Text = "To Date";
             // 
@@ -180,7 +186,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(86, 131);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 467;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -190,8 +196,9 @@
             this.todatepcker.Location = new System.Drawing.Point(261, 155);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(125, 27);
+            this.todatepcker.Size = new System.Drawing.Size(125, 23);
             this.todatepcker.TabIndex = 466;
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -199,12 +206,13 @@
             this.fromdatepcker.Location = new System.Drawing.Point(88, 153);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(113, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(113, 23);
             this.fromdatepcker.TabIndex = 465;
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // Product_Wise_Profits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(613, 442);
@@ -229,6 +237,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Product_Wise_Profits";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Product_Wise_Profits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             this.ResumeLayout(false);

@@ -92,7 +92,7 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(188, 22);
             this.todatepcker.TabIndex = 457;
-            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -102,7 +102,7 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(169, 22);
             this.fromdatepcker.TabIndex = 456;
-            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // previewbtn
             // 

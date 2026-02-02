@@ -831,12 +831,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Company_Wise_Profits_rv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\Company_Wise_Profits_rv.Designer.cs">
-      <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1670,12 +1664,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Company_Wise_Profits_report.rdlc" />
-    <EmbeddedResource Include="Reports\Company_Wise_Profits_rv.resx">
-      <DependentUpon>Company_Wise_Profits_rv.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Current_Stock.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Wise_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Business_Activity.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Daily_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />
@@ -1694,6 +1687,8 @@
     <Content Include="Reports\Party_List.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Reports\Invoice_Detailed_Profit.rdlc" />
+    <EmbeddedResource Include="Reports\Invoice_Wise_Profit.rdlc" />
     <EmbeddedResource Include="Reports\Monthly_Expense.rdlc" />
     <EmbeddedResource Include="Reports\Opening_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
@@ -1704,6 +1699,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Product_Price_List.rdlc" />
     <EmbeddedResource Include="Reports\Product_Purchase_Return_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Product_Wise_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale_.rdlc" />
     <EmbeddedResource Include="Reports\Profit_and_Loss_Statement.rdlc" />
@@ -1721,6 +1717,7 @@
     <EmbeddedResource Include="Reports\Report_viewer.resx">
       <DependentUpon>Report_viewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Saleman_Current_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Monthly_Performance.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Sector.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1732,6 +1729,9 @@
       <DependentUpon>Sector_rv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Current_Sheet.rdlc" />
+    <EmbeddedResource Include="Reports\Stock_Going_to_Short.rdlc" />
+    <EmbeddedResource Include="Reports\Stock_Issue_Register.rdlc" />
+    <EmbeddedResource Include="Reports\Stock_Return_Register.rdlc" />
     <EmbeddedResource Include="Reports\Town_report.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

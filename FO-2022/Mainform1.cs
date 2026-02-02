@@ -1219,5 +1219,41 @@ namespace FO_2022
             Dead_Parties dp=new Dead_Parties();
             dp.Show();
         }
+
+        private void companyWiseProfitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Company_Wise_Profits sd=new Company_Wise_Profits();
+            sd.Show();
+        }
+
+        private void customerWiseProfitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Wise_Profits customer_Wise_Profits = new Customer_Wise_Profits();
+            customer_Wise_Profits.Show();
+        }
+
+        private void dailyProfitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Daily_Profits dp = new Daily_Profits();
+            dp.Show();
+        }
+
+        private void invoiceDetailedProfitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Invoice_Detailed_Profit sd = new Invoice_Detailed_Profit();
+            sd.Show();
+        }
+
+        private void invoiceWIseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Invoice_Wise_Profit invoice_Wise_Profit = new Invoice_Wise_Profit();
+            invoice_Wise_Profit.Show();
+        }
+
+        private void productWiseProfitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_Wise_Profits product_Wise_Profits = new Product_Wise_Profits();
+            product_Wise_Profits.Show();
+        }
     }
 }

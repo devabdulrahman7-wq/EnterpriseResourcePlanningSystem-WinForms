@@ -42,7 +42,7 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
-            this.todatepcker = new System.Windows.Forms.DateTimePicker();
+            this.saledatetxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleidsearch)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(269, 24);
             this.cstmrnametxtbox.TabIndex = 447;
+            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // label7
             // 
@@ -63,7 +64,7 @@
             this.label7.Location = new System.Drawing.Point(152, 184);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 446;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -77,6 +78,7 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(269, 24);
             this.sectornametxtbox.TabIndex = 445;
+            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // a
             // 
@@ -84,7 +86,7 @@
             this.a.Location = new System.Drawing.Point(153, 240);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(105, 21);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 444;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,6 +112,7 @@
             this.saleidtxtbox.Name = "saleidtxtbox";
             this.saleidtxtbox.Size = new System.Drawing.Size(96, 21);
             this.saleidtxtbox.TabIndex = 452;
+            //this.saleidtxtbox.TextChanged += new System.EventHandler(this.saleidtxtbox_TextChanged);
             // 
             // saleidsearch
             // 
@@ -121,6 +124,7 @@
             this.saleidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.saleidsearch.TabIndex = 451;
             this.saleidsearch.TabStop = false;
+            this.saleidsearch.Click += new System.EventHandler(this.saleidsearch_Click);
             // 
             // label1
             // 
@@ -128,7 +132,7 @@
             this.label1.Location = new System.Drawing.Point(296, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 21);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 450;
             this.label1.Text = "Sale Date";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,7 +143,7 @@
             this.label8.Location = new System.Drawing.Point(153, 130);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 21);
+            this.label8.Size = new System.Drawing.Size(48, 16);
             this.label8.TabIndex = 449;
             this.label8.Text = "Sale ID";
             // 
@@ -150,7 +154,7 @@
             this.label2.Location = new System.Drawing.Point(140, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(384, 42);
+            this.label2.Size = new System.Drawing.Size(301, 32);
             this.label2.TabIndex = 448;
             this.label2.Text = "Invoice Detailed Profits\r\n";
             // 
@@ -160,13 +164,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(154, 375);
+            this.previewbtn.Location = new System.Drawing.Point(161, 323);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(90, 25);
             this.previewbtn.TabIndex = 461;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // printbtn
             // 
@@ -174,13 +179,14 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(251, 375);
+            this.printbtn.Location = new System.Drawing.Point(258, 323);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(65, 25);
             this.printbtn.TabIndex = 459;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // closebtn
             // 
@@ -188,7 +194,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(324, 375);
+            this.closebtn.Location = new System.Drawing.Point(331, 323);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(63, 25);
@@ -197,22 +203,24 @@
             this.closebtn.UseVisualStyleBackColor = false;
             this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
-            // todatepcker
+            // saledatetxtbox
             // 
-            this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.todatepcker.Location = new System.Drawing.Point(299, 155);
-            this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
-            this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(126, 27);
-            this.todatepcker.TabIndex = 462;
+            this.saledatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saledatetxtbox.Location = new System.Drawing.Point(299, 155);
+            this.saledatetxtbox.Margin = new System.Windows.Forms.Padding(6);
+            this.saledatetxtbox.Multiline = true;
+            this.saledatetxtbox.Name = "saledatetxtbox";
+            this.saledatetxtbox.Size = new System.Drawing.Size(126, 21);
+            this.saledatetxtbox.TabIndex = 462;
+            //this.saledatetxtbox.TextChanged += new System.EventHandler(this.saledatetxtbox_TextChanged);
             // 
             // Invoice_Detailed_Profit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(592, 434);
-            this.Controls.Add(this.todatepcker);
+            this.ClientSize = new System.Drawing.Size(584, 385);
+            this.Controls.Add(this.saledatetxtbox);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
@@ -256,6 +264,6 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.DateTimePicker todatepcker;
+        private System.Windows.Forms.TextBox saledatetxtbox;
     }
 }
