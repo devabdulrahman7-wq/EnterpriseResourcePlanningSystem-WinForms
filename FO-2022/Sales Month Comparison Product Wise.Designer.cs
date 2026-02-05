@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales_Month_Comparison_Product_Wise));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label15 = new System.Windows.Forms.Label();
             this.currentmonthdatepcker = new System.Windows.Forms.DateTimePicker();
             this.lastmonthdatepcker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.datesearch = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.slctbtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +43,6 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.datesearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +53,7 @@
             this.label15.Location = new System.Drawing.Point(98, 45);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(636, 42);
+            this.label15.Size = new System.Drawing.Size(493, 32);
             this.label15.TabIndex = 351;
             this.label15.Text = "Sales Month Comparison Product Wise";
             // 
@@ -66,8 +63,9 @@
             this.currentmonthdatepcker.Location = new System.Drawing.Point(344, 126);
             this.currentmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.currentmonthdatepcker.Name = "currentmonthdatepcker";
-            this.currentmonthdatepcker.Size = new System.Drawing.Size(111, 27);
+            this.currentmonthdatepcker.Size = new System.Drawing.Size(111, 23);
             this.currentmonthdatepcker.TabIndex = 350;
+            this.currentmonthdatepcker.ValueChanged += new System.EventHandler(this.currentmonthdatepcker_ValueChanged);
             // 
             // lastmonthdatepcker
             // 
@@ -75,8 +73,9 @@
             this.lastmonthdatepcker.Location = new System.Drawing.Point(176, 126);
             this.lastmonthdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.lastmonthdatepcker.Name = "lastmonthdatepcker";
-            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 27);
+            this.lastmonthdatepcker.Size = new System.Drawing.Size(121, 23);
             this.lastmonthdatepcker.TabIndex = 349;
+            this.lastmonthdatepcker.ValueChanged += new System.EventHandler(this.lastmonthdatepcker_ValueChanged);
             // 
             // label2
             // 
@@ -85,7 +84,7 @@
             this.label2.Location = new System.Drawing.Point(343, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 21);
+            this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 348;
             this.label2.Text = "Current Month Date";
             // 
@@ -96,25 +95,14 @@
             this.label1.Location = new System.Drawing.Point(176, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 21);
+            this.label1.Size = new System.Drawing.Size(99, 16);
             this.label1.TabIndex = 347;
             this.label1.Text = "Last Month Date";
-            // 
-            // datesearch
-            // 
-            this.datesearch.Image = ((System.Drawing.Image)(resources.GetObject("datesearch.Image")));
-            this.datesearch.Location = new System.Drawing.Point(301, 122);
-            this.datesearch.Margin = new System.Windows.Forms.Padding(4);
-            this.datesearch.Name = "datesearch";
-            this.datesearch.Size = new System.Drawing.Size(35, 28);
-            this.datesearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.datesearch.TabIndex = 346;
-            this.datesearch.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(644, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(653, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 38);
@@ -129,13 +117,14 @@
             this.slctbtn.FlatAppearance.BorderSize = 0;
             this.slctbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.slctbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slctbtn.Location = new System.Drawing.Point(464, 175);
+            this.slctbtn.Location = new System.Drawing.Point(462, 175);
             this.slctbtn.Margin = new System.Windows.Forms.Padding(4);
             this.slctbtn.Name = "slctbtn";
             this.slctbtn.Size = new System.Drawing.Size(90, 24);
             this.slctbtn.TabIndex = 359;
             this.slctbtn.Text = "Select All";
             this.slctbtn.UseVisualStyleBackColor = false;
+            this.slctbtn.Click += new System.EventHandler(this.slctbtn_Click);
             // 
             // label5
             // 
@@ -144,7 +133,7 @@
             this.label5.Location = new System.Drawing.Point(163, 183);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 21);
+            this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 358;
             this.label5.Text = "Available Groups";
             // 
@@ -156,15 +145,13 @@
             this.columnHeader2});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(161, 203);
+            this.listView1.Location = new System.Drawing.Point(161, 205);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(391, 118);
             this.listView1.TabIndex = 357;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader2
             // 
@@ -176,13 +163,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(217, 378);
+            this.previewbtn.Location = new System.Drawing.Point(213, 368);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 33);
+            this.previewbtn.Size = new System.Drawing.Size(90, 28);
             this.previewbtn.TabIndex = 362;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -190,13 +178,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(408, 378);
+            this.closebtn.Location = new System.Drawing.Point(404, 368);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 33);
+            this.closebtn.Size = new System.Drawing.Size(90, 28);
             this.closebtn.TabIndex = 361;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -204,17 +193,18 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(314, 378);
+            this.printbtn.Location = new System.Drawing.Point(310, 368);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 33);
+            this.printbtn.Size = new System.Drawing.Size(90, 28);
             this.printbtn.TabIndex = 360;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // Sales_Month_Comparison_Product_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(696, 424);
@@ -230,7 +220,6 @@
             this.Controls.Add(this.lastmonthdatepcker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.datesearch);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -238,7 +227,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Month_Comparison_Product_Wise";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.datesearch)).EndInit();
+            this.Load += new System.EventHandler(this.Sales_Month_Comparison_Product_Wise_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,7 +241,6 @@
         private System.Windows.Forms.DateTimePicker lastmonthdatepcker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox datesearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button slctbtn;
         private System.Windows.Forms.Label label5;

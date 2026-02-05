@@ -831,6 +831,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Company_Wise_Profits_ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -857,6 +860,9 @@
     </Compile>
     <Compile Include="Reports\Employee_Salary_report.Designer.cs">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\General_Journal_ds.cs">
+      <DependentUpon>General_Journal_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\General_Journal_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -958,18 +964,6 @@
     <Compile Include="Sale Register%281%29.Designer.cs">
       <DependentUpon>Sale Register%281%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sale Register%282%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale Register%282%29.Designer.cs">
-      <DependentUpon>Sale Register%282%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sale Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale Register.Designer.cs">
-      <DependentUpon>Sale Register.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sale Return Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1035,12 +1029,6 @@
     </Compile>
     <Compile Include="Sales Register Company Wise.Designer.cs">
       <DependentUpon>Sales Register Company Wise.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales Register.Designer.cs">
-      <DependentUpon>Sales Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales Summary Product Wise.cs">
       <SubType>Form</SubType>
@@ -1647,6 +1635,7 @@
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
     <EmbeddedResource Include="Reports\Account_Balances.rdlc" />
+    <EmbeddedResource Include="Reports\Account_Balance__C_W.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
     <EmbeddedResource Include="Reports\Account_Pay.rdlc" />
     <EmbeddedResource Include="Reports\Account_Receivables.rdlc" />
@@ -1663,8 +1652,15 @@
     <EmbeddedResource Include="Reports\Chats_of_Accounts_report.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Company_Discount_Claim_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Company_Wise_Profits_report.rdlc" />
+    <EmbeddedResource Include="Reports\Company_Wise_Sales.rdlc" />
     <EmbeddedResource Include="Reports\Current_Stock.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Invoice_Wise_Sales.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Receivables_By_Aging.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Receivables__Invoice_Wise.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Receivable_C_W.rdlc" />
+    <EmbeddedResource Include="Reports\Customer_Town_and_Sector_Wise_Sales.rdlc" />
     <EmbeddedResource Include="Reports\Customer_Wise_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Business_Activity.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
@@ -1672,6 +1668,8 @@
     <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />
+    <EmbeddedResource Include="Reports\Dead_Parties_Due_Balance.rdlc" />
+    <EmbeddedResource Include="Reports\Due_Recovery_By_Credit_Days.rdlc" />
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -1694,11 +1692,15 @@
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
     <EmbeddedResource Include="Reports\Party_Product_Purchase_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Party_Product_Sales_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Party_Sale_Aging.rdlc" />
     <EmbeddedResource Include="Reports\Part_List_rv.resx">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Product_Activity_Report.rdlc" />
     <EmbeddedResource Include="Reports\Product_Price_List.rdlc" />
     <EmbeddedResource Include="Reports\Product_Purchase_Return_Ledger.rdlc" />
+    <EmbeddedResource Include="Reports\Product_Sale_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale.rdlc" />
     <EmbeddedResource Include="Reports\Product_Wise_Sale_.rdlc" />
@@ -1714,6 +1716,7 @@
     <EmbeddedResource Include="Reports\Purchase_Summary_rv.resx">
       <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Quaterely_Sales_Party_Wise.rdlc" />
     <EmbeddedResource Include="Reports\Report_viewer.resx">
       <DependentUpon>Report_viewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -1723,6 +1726,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Salesman_Stock_Statement.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Month_Comparison_Distributors_Wise_Products.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Month_Comparison_Product_Wise.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Month_Comparison_Salesman_Distributors_Wise_Product.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Recovery_Register.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Register_Company_Wise.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Stock.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_Summary_Product_Wise.rdlc" />
+    <EmbeddedResource Include="Reports\Sales_VS_Recoveries.rdlc" />
+    <EmbeddedResource Include="Reports\Sale_Register.rdlc" />
     <EmbeddedResource Include="Reports\Sale_Return_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Sector.rdlc" />
     <EmbeddedResource Include="Reports\Sector_rv.resx">
@@ -1745,12 +1757,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sale Register%281%29.resx">
       <DependentUpon>Sale Register%281%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sale Register%282%29.resx">
-      <DependentUpon>Sale Register%282%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sale Register.resx">
-      <DependentUpon>Sale Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale Return Invoice.resx">
       <DependentUpon>Sale Return Invoice.cs</DependentUpon>
@@ -1784,9 +1790,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales Register Company Wise.resx">
       <DependentUpon>Sales Register Company Wise.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sales Register.resx">
-      <DependentUpon>Sales Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales Summary Product Wise.resx">
       <DependentUpon>Sales Summary Product Wise.cs</DependentUpon>

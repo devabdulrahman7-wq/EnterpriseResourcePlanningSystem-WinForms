@@ -110,6 +110,7 @@
             this.productSalesLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerTownSectorWiseSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesAndStockStatementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesMonthComparisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -243,6 +244,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.customerInvoiceWiseSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -795,7 +797,9 @@
             this.categoryWiseSaleToolStripMenuItem,
             this.productSalesLedgerToolStripMenuItem,
             this.customerTownSectorWiseSalesToolStripMenuItem,
-            this.salesAndStockStatementToolStripMenuItem});
+            this.salesAndStockStatementToolStripMenuItem,
+            this.salesMonthComparisonToolStripMenuItem,
+            this.customerInvoiceWiseSaleToolStripMenuItem});
             this.salesReportToolStripMenuItem.Name = "salesReportToolStripMenuItem";
             this.salesReportToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.salesReportToolStripMenuItem.Text = " Sales Report";
@@ -804,149 +808,157 @@
             // dailyPendingSalesOrdersToolStripMenuItem
             // 
             this.dailyPendingSalesOrdersToolStripMenuItem.Name = "dailyPendingSalesOrdersToolStripMenuItem";
-            this.dailyPendingSalesOrdersToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.dailyPendingSalesOrdersToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.dailyPendingSalesOrdersToolStripMenuItem.Text = "Daily Pending Sales Orders";
             this.dailyPendingSalesOrdersToolStripMenuItem.Click += new System.EventHandler(this.dailyPendingSalesOrdersToolStripMenuItem_Click);
             // 
             // builtyRegisterToolStripMenuItem
             // 
             this.builtyRegisterToolStripMenuItem.Name = "builtyRegisterToolStripMenuItem";
-            this.builtyRegisterToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.builtyRegisterToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.builtyRegisterToolStripMenuItem.Text = "Builty Register";
             this.builtyRegisterToolStripMenuItem.Click += new System.EventHandler(this.builtyRegisterToolStripMenuItem_Click);
             // 
             // salesRegisterToolStripMenuItem
             // 
             this.salesRegisterToolStripMenuItem.Name = "salesRegisterToolStripMenuItem";
-            this.salesRegisterToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesRegisterToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesRegisterToolStripMenuItem.Text = "Sales Register";
             this.salesRegisterToolStripMenuItem.Click += new System.EventHandler(this.salesRegisterToolStripMenuItem_Click);
             // 
             // salesRegisterCompanyWiseToolStripMenuItem
             // 
             this.salesRegisterCompanyWiseToolStripMenuItem.Name = "salesRegisterCompanyWiseToolStripMenuItem";
-            this.salesRegisterCompanyWiseToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesRegisterCompanyWiseToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesRegisterCompanyWiseToolStripMenuItem.Text = "Sales Register Company Wise";
             this.salesRegisterCompanyWiseToolStripMenuItem.Click += new System.EventHandler(this.salesRegisterCompanyWiseToolStripMenuItem_Click);
             // 
             // salesSummaryInvoiceWiseToolStripMenuItem
             // 
             this.salesSummaryInvoiceWiseToolStripMenuItem.Name = "salesSummaryInvoiceWiseToolStripMenuItem";
-            this.salesSummaryInvoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesSummaryInvoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesSummaryInvoiceWiseToolStripMenuItem.Text = "Sales Summary Invoice Wise";
             this.salesSummaryInvoiceWiseToolStripMenuItem.Click += new System.EventHandler(this.salesSummaryInvoiceWiseToolStripMenuItem_Click);
             // 
             // salesSummaryProductWiseToolStripMenuItem
             // 
             this.salesSummaryProductWiseToolStripMenuItem.Name = "salesSummaryProductWiseToolStripMenuItem";
-            this.salesSummaryProductWiseToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesSummaryProductWiseToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesSummaryProductWiseToolStripMenuItem.Text = "Sales Summary Product Wise";
             this.salesSummaryProductWiseToolStripMenuItem.Click += new System.EventHandler(this.salesSummaryProductWiseToolStripMenuItem_Click);
             // 
             // partyProductWiseSaleToolStripMenuItem
             // 
             this.partyProductWiseSaleToolStripMenuItem.Name = "partyProductWiseSaleToolStripMenuItem";
-            this.partyProductWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.partyProductWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.partyProductWiseSaleToolStripMenuItem.Text = "Party Product Wise Sale";
             this.partyProductWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.partyProductWiseSaleToolStripMenuItem_Click);
             // 
             // partyProductSaleLedgerToolStripMenuItem
             // 
             this.partyProductSaleLedgerToolStripMenuItem.Name = "partyProductSaleLedgerToolStripMenuItem";
-            this.partyProductSaleLedgerToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.partyProductSaleLedgerToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.partyProductSaleLedgerToolStripMenuItem.Text = "Party Product Sale Ledger";
             this.partyProductSaleLedgerToolStripMenuItem.Click += new System.EventHandler(this.partyProductSaleLedgerToolStripMenuItem_Click);
             // 
             // partySalesRegisterToolStripMenuItem
             // 
             this.partySalesRegisterToolStripMenuItem.Name = "partySalesRegisterToolStripMenuItem";
-            this.partySalesRegisterToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.partySalesRegisterToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.partySalesRegisterToolStripMenuItem.Text = "Party Sales Register";
             this.partySalesRegisterToolStripMenuItem.Click += new System.EventHandler(this.partySalesRegisterToolStripMenuItem_Click);
             // 
             // salesVsRecoveriesToolStripMenuItem
             // 
             this.salesVsRecoveriesToolStripMenuItem.Name = "salesVsRecoveriesToolStripMenuItem";
-            this.salesVsRecoveriesToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesVsRecoveriesToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesVsRecoveriesToolStripMenuItem.Text = "Sales Vs Recoveries";
             this.salesVsRecoveriesToolStripMenuItem.Click += new System.EventHandler(this.salesVsRecoveriesToolStripMenuItem_Click);
             // 
             // salesVsRecoveries2ToolStripMenuItem
             // 
             this.salesVsRecoveries2ToolStripMenuItem.Name = "salesVsRecoveries2ToolStripMenuItem";
-            this.salesVsRecoveries2ToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.salesVsRecoveries2ToolStripMenuItem.Text = "Sales Vs Recoveries-2";
+            this.salesVsRecoveries2ToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
+            this.salesVsRecoveries2ToolStripMenuItem.Text = "Sales Vs Recovery";
             this.salesVsRecoveries2ToolStripMenuItem.Click += new System.EventHandler(this.salesVsRecoveries2ToolStripMenuItem_Click);
             // 
             // salesComparisonToolStripMenuItem
             // 
             this.salesComparisonToolStripMenuItem.Name = "salesComparisonToolStripMenuItem";
-            this.salesComparisonToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesComparisonToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesComparisonToolStripMenuItem.Text = "Sales Comparison Month Vs Month";
             this.salesComparisonToolStripMenuItem.Click += new System.EventHandler(this.salesComparisonToolStripMenuItem_Click);
             // 
             // salesComparisonDistributorWiseProductsToolStripMenuItem
             // 
             this.salesComparisonDistributorWiseProductsToolStripMenuItem.Name = "salesComparisonDistributorWiseProductsToolStripMenuItem";
-            this.salesComparisonDistributorWiseProductsToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesComparisonDistributorWiseProductsToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesComparisonDistributorWiseProductsToolStripMenuItem.Text = "Sales Comparison Distributor Wise Products";
             this.salesComparisonDistributorWiseProductsToolStripMenuItem.Click += new System.EventHandler(this.salesComparisonDistributorWiseProductsToolStripMenuItem_Click);
             // 
             // quarterlySalesPartyWiseToolStripMenuItem
             // 
             this.quarterlySalesPartyWiseToolStripMenuItem.Name = "quarterlySalesPartyWiseToolStripMenuItem";
-            this.quarterlySalesPartyWiseToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.quarterlySalesPartyWiseToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.quarterlySalesPartyWiseToolStripMenuItem.Text = "Quarterly Sales Party Wise";
             this.quarterlySalesPartyWiseToolStripMenuItem.Click += new System.EventHandler(this.quarterlySalesPartyWiseToolStripMenuItem_Click);
             // 
             // companyWiseSalesToolStripMenuItem
             // 
             this.companyWiseSalesToolStripMenuItem.Name = "companyWiseSalesToolStripMenuItem";
-            this.companyWiseSalesToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.companyWiseSalesToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.companyWiseSalesToolStripMenuItem.Text = "Company Wise Sales";
             this.companyWiseSalesToolStripMenuItem.Click += new System.EventHandler(this.companyWiseSalesToolStripMenuItem_Click);
             // 
             // discountClaimSummaryToolStripMenuItem
             // 
             this.discountClaimSummaryToolStripMenuItem.Name = "discountClaimSummaryToolStripMenuItem";
-            this.discountClaimSummaryToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.discountClaimSummaryToolStripMenuItem.ShowShortcutKeys = false;
+            this.discountClaimSummaryToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.discountClaimSummaryToolStripMenuItem.Text = "Discount Claim Summary ";
             this.discountClaimSummaryToolStripMenuItem.Click += new System.EventHandler(this.discountClaimSummaryToolStripMenuItem_Click);
             // 
             // companyDiscountClaimSummaryToolStripMenuItem
             // 
             this.companyDiscountClaimSummaryToolStripMenuItem.Name = "companyDiscountClaimSummaryToolStripMenuItem";
-            this.companyDiscountClaimSummaryToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.companyDiscountClaimSummaryToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.companyDiscountClaimSummaryToolStripMenuItem.Text = "Company Discount Claim Summary ";
             this.companyDiscountClaimSummaryToolStripMenuItem.Click += new System.EventHandler(this.companyDiscountClaimSummaryToolStripMenuItem_Click);
             // 
             // categoryWiseSaleToolStripMenuItem
             // 
             this.categoryWiseSaleToolStripMenuItem.Name = "categoryWiseSaleToolStripMenuItem";
-            this.categoryWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.categoryWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.categoryWiseSaleToolStripMenuItem.Text = "Category Wise Sale ";
             this.categoryWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.categoryWiseSaleToolStripMenuItem_Click);
             // 
             // productSalesLedgerToolStripMenuItem
             // 
             this.productSalesLedgerToolStripMenuItem.Name = "productSalesLedgerToolStripMenuItem";
-            this.productSalesLedgerToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.productSalesLedgerToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.productSalesLedgerToolStripMenuItem.Text = "Product Sales Ledger";
             this.productSalesLedgerToolStripMenuItem.Click += new System.EventHandler(this.productSalesLedgerToolStripMenuItem_Click);
             // 
             // customerTownSectorWiseSalesToolStripMenuItem
             // 
             this.customerTownSectorWiseSalesToolStripMenuItem.Name = "customerTownSectorWiseSalesToolStripMenuItem";
-            this.customerTownSectorWiseSalesToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.customerTownSectorWiseSalesToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.customerTownSectorWiseSalesToolStripMenuItem.Text = "Customer/Town/Sector Wise Sales";
             this.customerTownSectorWiseSalesToolStripMenuItem.Click += new System.EventHandler(this.customerTownSectorWiseSalesToolStripMenuItem_Click);
             // 
             // salesAndStockStatementToolStripMenuItem
             // 
             this.salesAndStockStatementToolStripMenuItem.Name = "salesAndStockStatementToolStripMenuItem";
-            this.salesAndStockStatementToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.salesAndStockStatementToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesAndStockStatementToolStripMenuItem.Text = "Sales and Stock Statement";
             this.salesAndStockStatementToolStripMenuItem.Click += new System.EventHandler(this.salesAndStockStatementToolStripMenuItem_Click);
+            // 
+            // salesMonthComparisonToolStripMenuItem
+            // 
+            this.salesMonthComparisonToolStripMenuItem.Name = "salesMonthComparisonToolStripMenuItem";
+            this.salesMonthComparisonToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
+            this.salesMonthComparisonToolStripMenuItem.Text = "Sales Month Comparison Salesman Distributor Wise Product";
+            this.salesMonthComparisonToolStripMenuItem.Click += new System.EventHandler(this.salesMonthComparisonToolStripMenuItem_Click);
             // 
             // saleReturnReportsToolStripMenuItem
             // 
@@ -2169,6 +2181,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // customerInvoiceWiseSaleToolStripMenuItem
+            // 
+            this.customerInvoiceWiseSaleToolStripMenuItem.Name = "customerInvoiceWiseSaleToolStripMenuItem";
+            this.customerInvoiceWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
+            this.customerInvoiceWiseSaleToolStripMenuItem.Text = "Customer Invoice Wise Sale";
+            this.customerInvoiceWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.customerInvoiceWiseSaleToolStripMenuItem_Click);
+            // 
             // Mainform1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2430,5 +2449,7 @@
         private System.Windows.Forms.ToolStripMenuItem productWisePurchaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productPurchaseLedgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salesMonthComparisonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerInvoiceWiseSaleToolStripMenuItem;
     }
 }

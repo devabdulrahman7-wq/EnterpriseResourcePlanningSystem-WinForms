@@ -36,10 +36,10 @@
             this.searchaccountno = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.todaybtn = new System.Windows.Forms.RadioButton();
-            this.daybtn = new System.Windows.Forms.RadioButton();
-            this.datebwbtn = new System.Windows.Forms.RadioButton();
-            this.alldatebtn = new System.Windows.Forms.RadioButton();
+            this.todayradiobtn = new System.Windows.Forms.RadioButton();
+            this.dayradiobtn = new System.Windows.Forms.RadioButton();
+            this.datebwradiobtn = new System.Windows.Forms.RadioButton();
+            this.alldateradiobtn = new System.Windows.Forms.RadioButton();
             this.previewbtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
@@ -63,52 +63,55 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(170, 22);
+            this.label3.Location = new System.Drawing.Point(160, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 38);
+            this.label3.Size = new System.Drawing.Size(210, 31);
             this.label3.TabIndex = 297;
             this.label3.Text = "Accounts Ledger";
             // 
             // accountnametxtbox
             // 
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnametxtbox.Location = new System.Drawing.Point(281, 239);
+            this.accountnametxtbox.Location = new System.Drawing.Point(271, 261);
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(171, 25);
+            this.accountnametxtbox.Size = new System.Drawing.Size(181, 25);
             this.accountnametxtbox.TabIndex = 296;
+            //this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountnotxtbox
             // 
             this.accountnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnotxtbox.Location = new System.Drawing.Point(148, 239);
+            this.accountnotxtbox.Location = new System.Drawing.Point(138, 261);
             this.accountnotxtbox.Margin = new System.Windows.Forms.Padding(5);
             this.accountnotxtbox.Multiline = true;
             this.accountnotxtbox.Name = "accountnotxtbox";
             this.accountnotxtbox.Size = new System.Drawing.Size(93, 25);
             this.accountnotxtbox.TabIndex = 295;
+            this.accountnotxtbox.TextChanged += new System.EventHandler(this.accountnotxtbox_TextChanged);
             // 
             // searchaccountno
             // 
             this.searchaccountno.Image = ((System.Drawing.Image)(resources.GetObject("searchaccountno.Image")));
-            this.searchaccountno.Location = new System.Drawing.Point(243, 239);
+            this.searchaccountno.Location = new System.Drawing.Point(233, 261);
             this.searchaccountno.Margin = new System.Windows.Forms.Padding(5);
             this.searchaccountno.Name = "searchaccountno";
-            this.searchaccountno.Size = new System.Drawing.Size(38, 25);
+            this.searchaccountno.Size = new System.Drawing.Size(35, 25);
             this.searchaccountno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchaccountno.TabIndex = 294;
             this.searchaccountno.TabStop = false;
+            this.searchaccountno.Click += new System.EventHandler(this.searchaccountno_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 218);
+            this.label2.Location = new System.Drawing.Point(268, 240);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 21);
+            this.label2.Size = new System.Drawing.Size(89, 16);
             this.label2.TabIndex = 293;
             this.label2.Text = "Account Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,65 +120,69 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 218);
+            this.label1.Location = new System.Drawing.Point(135, 240);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 21);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 292;
             this.label1.Text = "Account No";
             // 
-            // todaybtn
+            // todayradiobtn
             // 
-            this.todaybtn.AutoSize = true;
-            this.todaybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaybtn.Location = new System.Drawing.Point(232, 167);
-            this.todaybtn.Margin = new System.Windows.Forms.Padding(5);
-            this.todaybtn.Name = "todaybtn";
-            this.todaybtn.Size = new System.Drawing.Size(76, 25);
-            this.todaybtn.TabIndex = 291;
-            this.todaybtn.TabStop = true;
-            this.todaybtn.Text = "Today";
-            this.todaybtn.UseVisualStyleBackColor = true;
+            this.todayradiobtn.AutoSize = true;
+            this.todayradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todayradiobtn.Location = new System.Drawing.Point(222, 189);
+            this.todayradiobtn.Margin = new System.Windows.Forms.Padding(5);
+            this.todayradiobtn.Name = "todayradiobtn";
+            this.todayradiobtn.Size = new System.Drawing.Size(60, 20);
+            this.todayradiobtn.TabIndex = 291;
+            this.todayradiobtn.TabStop = true;
+            this.todayradiobtn.Text = "Today";
+            this.todayradiobtn.UseVisualStyleBackColor = true;
+            this.todayradiobtn.CheckedChanged += new System.EventHandler(this.todayradiobtn_CheckedChanged);
             // 
-            // daybtn
+            // dayradiobtn
             // 
-            this.daybtn.AutoSize = true;
-            this.daybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daybtn.Location = new System.Drawing.Point(232, 137);
-            this.daybtn.Margin = new System.Windows.Forms.Padding(5);
-            this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(76, 25);
-            this.daybtn.TabIndex = 290;
-            this.daybtn.TabStop = true;
-            this.daybtn.Text = "A Day";
-            this.daybtn.UseVisualStyleBackColor = true;
+            this.dayradiobtn.AutoSize = true;
+            this.dayradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayradiobtn.Location = new System.Drawing.Point(222, 159);
+            this.dayradiobtn.Margin = new System.Windows.Forms.Padding(5);
+            this.dayradiobtn.Name = "dayradiobtn";
+            this.dayradiobtn.Size = new System.Drawing.Size(58, 20);
+            this.dayradiobtn.TabIndex = 290;
+            this.dayradiobtn.TabStop = true;
+            this.dayradiobtn.Text = "A Day";
+            this.dayradiobtn.UseVisualStyleBackColor = true;
+            this.dayradiobtn.CheckedChanged += new System.EventHandler(this.dayradiobtn_CheckedChanged);
             // 
-            // datebwbtn
+            // datebwradiobtn
             // 
-            this.datebwbtn.AutoSize = true;
-            this.datebwbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datebwbtn.Location = new System.Drawing.Point(232, 107);
-            this.datebwbtn.Margin = new System.Windows.Forms.Padding(5);
-            this.datebwbtn.Name = "datebwbtn";
-            this.datebwbtn.Size = new System.Drawing.Size(137, 25);
-            this.datebwbtn.TabIndex = 289;
-            this.datebwbtn.TabStop = true;
-            this.datebwbtn.Text = "Date Between";
-            this.datebwbtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.datebwbtn.UseVisualStyleBackColor = true;
+            this.datebwradiobtn.AutoSize = true;
+            this.datebwradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datebwradiobtn.Location = new System.Drawing.Point(222, 129);
+            this.datebwradiobtn.Margin = new System.Windows.Forms.Padding(5);
+            this.datebwradiobtn.Name = "datebwradiobtn";
+            this.datebwradiobtn.Size = new System.Drawing.Size(104, 20);
+            this.datebwradiobtn.TabIndex = 289;
+            this.datebwradiobtn.TabStop = true;
+            this.datebwradiobtn.Text = "Date Between";
+            this.datebwradiobtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.datebwradiobtn.UseVisualStyleBackColor = true;
+            this.datebwradiobtn.CheckedChanged += new System.EventHandler(this.datebwradiobtn_CheckedChanged);
             // 
-            // alldatebtn
+            // alldateradiobtn
             // 
-            this.alldatebtn.AutoSize = true;
-            this.alldatebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alldatebtn.Location = new System.Drawing.Point(232, 77);
-            this.alldatebtn.Margin = new System.Windows.Forms.Padding(5);
-            this.alldatebtn.Name = "alldatebtn";
-            this.alldatebtn.Size = new System.Drawing.Size(82, 25);
-            this.alldatebtn.TabIndex = 288;
-            this.alldatebtn.TabStop = true;
-            this.alldatebtn.Text = "All Dte";
-            this.alldatebtn.UseVisualStyleBackColor = true;
+            this.alldateradiobtn.AutoSize = true;
+            this.alldateradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alldateradiobtn.Location = new System.Drawing.Point(222, 99);
+            this.alldateradiobtn.Margin = new System.Windows.Forms.Padding(5);
+            this.alldateradiobtn.Name = "alldateradiobtn";
+            this.alldateradiobtn.Size = new System.Drawing.Size(69, 20);
+            this.alldateradiobtn.TabIndex = 288;
+            this.alldateradiobtn.TabStop = true;
+            this.alldateradiobtn.Text = "All Date";
+            this.alldateradiobtn.UseVisualStyleBackColor = true;
+            this.alldateradiobtn.CheckedChanged += new System.EventHandler(this.alldateradiobtn_CheckedChanged);
             // 
             // previewbtn
             // 
@@ -183,13 +190,14 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(157, 300);
+            this.previewbtn.Location = new System.Drawing.Point(163, 338);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(90, 25);
             this.previewbtn.TabIndex = 411;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // printbtn
             // 
@@ -197,13 +205,14 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(254, 300);
+            this.printbtn.Location = new System.Drawing.Point(260, 338);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(70, 25);
             this.printbtn.TabIndex = 409;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // closebtn
             // 
@@ -211,7 +220,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(327, 300);
+            this.closebtn.Location = new System.Drawing.Point(333, 338);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(69, 25);
@@ -222,10 +231,10 @@
             // 
             // Accounts_Ledger_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(591, 357);
+            this.ClientSize = new System.Drawing.Size(584, 397);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
@@ -236,10 +245,10 @@
             this.Controls.Add(this.searchaccountno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.todaybtn);
-            this.Controls.Add(this.daybtn);
-            this.Controls.Add(this.datebwbtn);
-            this.Controls.Add(this.alldatebtn);
+            this.Controls.Add(this.todayradiobtn);
+            this.Controls.Add(this.dayradiobtn);
+            this.Controls.Add(this.datebwradiobtn);
+            this.Controls.Add(this.alldateradiobtn);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -247,6 +256,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger_1";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Accounts_Ledger_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchaccountno)).EndInit();
             this.ResumeLayout(false);
@@ -263,10 +273,10 @@
         private System.Windows.Forms.PictureBox searchaccountno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton todaybtn;
-        private System.Windows.Forms.RadioButton daybtn;
-        private System.Windows.Forms.RadioButton datebwbtn;
-        private System.Windows.Forms.RadioButton alldatebtn;
+        private System.Windows.Forms.RadioButton todayradiobtn;
+        private System.Windows.Forms.RadioButton dayradiobtn;
+        private System.Windows.Forms.RadioButton datebwradiobtn;
+        private System.Windows.Forms.RadioButton alldateradiobtn;
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Button closebtn;

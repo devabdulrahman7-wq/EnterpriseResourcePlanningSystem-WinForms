@@ -39,9 +39,9 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewforsector = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
-            this.slctbtn = new System.Windows.Forms.Button();
+            this.slctallsectorbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.townnametxtbox.Name = "townnametxtbox";
             this.townnametxtbox.Size = new System.Drawing.Size(197, 25);
             this.townnametxtbox.TabIndex = 414;
+            this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
@@ -65,6 +66,7 @@
             this.townidtxtbox.Name = "townidtxtbox";
             this.townidtxtbox.Size = new System.Drawing.Size(111, 25);
             this.townidtxtbox.TabIndex = 413;
+            this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 
             // townidsearch
             // 
@@ -76,6 +78,7 @@
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 412;
             this.townidsearch.TabStop = false;
+            this.townidsearch.Click += new System.EventHandler(this.townidsearch_Click);
             // 
             // label3
             // 
@@ -83,7 +86,7 @@
             this.label3.Location = new System.Drawing.Point(290, 131);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 21);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 411;
             this.label3.Text = "Town Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +97,7 @@
             this.label4.Location = new System.Drawing.Point(131, 131);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 21);
+            this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 410;
             this.label4.Text = "Town ID";
             // 
@@ -115,7 +118,7 @@
             this.label15.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(152, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(338, 76);
+            this.label15.Size = new System.Drawing.Size(274, 62);
             this.label15.TabIndex = 415;
             this.label15.Text = "Customer Receivables\r\n(Invoice Sale)";
             // 
@@ -131,6 +134,7 @@
             this.previewbtn.TabIndex = 419;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -158,16 +162,18 @@
             this.printbtn.TabIndex = 417;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
-            // listView1
+            // listViewforsector
             // 
-            this.listView1.CheckBoxes = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(134, 235);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(358, 97);
-            this.listView1.TabIndex = 420;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewforsector.CheckBoxes = true;
+            this.listViewforsector.HideSelection = false;
+            this.listViewforsector.Location = new System.Drawing.Point(134, 235);
+            this.listViewforsector.Name = "listViewforsector";
+            this.listViewforsector.Size = new System.Drawing.Size(358, 97);
+            this.listViewforsector.TabIndex = 420;
+            this.listViewforsector.UseCompatibleStateImageBehavior = false;
+            this.listViewforsector.SelectedIndexChanged += new System.EventHandler(this.listViewforsector_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -175,32 +181,33 @@
             this.label1.Location = new System.Drawing.Point(133, 216);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 421;
             this.label1.Text = "Sector";
             // 
-            // slctbtn
+            // slctallsectorbtn
             // 
-            this.slctbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.slctbtn.FlatAppearance.BorderSize = 0;
-            this.slctbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.slctbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slctbtn.Location = new System.Drawing.Point(404, 201);
-            this.slctbtn.Name = "slctbtn";
-            this.slctbtn.Size = new System.Drawing.Size(86, 28);
-            this.slctbtn.TabIndex = 422;
-            this.slctbtn.Text = "Select All";
-            this.slctbtn.UseVisualStyleBackColor = false;
+            this.slctallsectorbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.slctallsectorbtn.FlatAppearance.BorderSize = 0;
+            this.slctallsectorbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.slctallsectorbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slctallsectorbtn.Location = new System.Drawing.Point(404, 201);
+            this.slctallsectorbtn.Name = "slctallsectorbtn";
+            this.slctallsectorbtn.Size = new System.Drawing.Size(86, 28);
+            this.slctallsectorbtn.TabIndex = 422;
+            this.slctallsectorbtn.Text = "Select All";
+            this.slctallsectorbtn.UseVisualStyleBackColor = false;
+            this.slctallsectorbtn.Click += new System.EventHandler(this.slctallsectorbtn_Click);
             // 
             // Customer_Receivables__Invoice_Wise_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(607, 502);
-            this.Controls.Add(this.slctbtn);
+            this.Controls.Add(this.slctallsectorbtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewforsector);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);
@@ -218,6 +225,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Receivables__Invoice_Wise_";
             this.TopMost = true;
+            //this.Load += new System.EventHandler(this.Customer_Receivables__Invoice_Wise__Load);
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -237,8 +245,8 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button printbtn;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewforsector;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button slctbtn;
+        private System.Windows.Forms.Button slctallsectorbtn;
     }
 }

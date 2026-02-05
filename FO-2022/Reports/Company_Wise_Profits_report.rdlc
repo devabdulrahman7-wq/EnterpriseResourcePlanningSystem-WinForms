@@ -711,16 +711,18 @@
               <TextRuns>
                 <TextRun>
                   <Value>Total pages:</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>2.54302in</Left>
+          <Left>2.41802in</Left>
           <Height>0.25in</Height>
-          <Width>0.83333in</Width>
+          <Width>0.95833in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

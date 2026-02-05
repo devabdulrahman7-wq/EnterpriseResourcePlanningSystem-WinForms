@@ -33,8 +33,8 @@
             this.productidtxtbox = new System.Windows.Forms.TextBox();
             this.productnametxtbox = new System.Windows.Forms.TextBox();
             this.searchproductid = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.todatepicker = new System.Windows.Forms.DateTimePicker();
+            this.fromdatepicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.productidtxtbox.Name = "productidtxtbox";
             this.productidtxtbox.Size = new System.Drawing.Size(105, 20);
             this.productidtxtbox.TabIndex = 190;
+            this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
             // productnametxtbox
             // 
@@ -75,32 +76,36 @@
             this.productnametxtbox.Name = "productnametxtbox";
             this.productnametxtbox.Size = new System.Drawing.Size(167, 20);
             this.productnametxtbox.TabIndex = 189;
+            this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // searchproductid
             // 
             this.searchproductid.Image = ((System.Drawing.Image)(resources.GetObject("searchproductid.Image")));
             this.searchproductid.Location = new System.Drawing.Point(277, 195);
             this.searchproductid.Name = "searchproductid";
-            this.searchproductid.Size = new System.Drawing.Size(22, 18);
+            this.searchproductid.Size = new System.Drawing.Size(30, 18);
             this.searchproductid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchproductid.TabIndex = 188;
             this.searchproductid.TabStop = false;
+            this.searchproductid.Click += new System.EventHandler(this.searchproductid_Click);
             // 
-            // dateTimePicker2
+            // todatepicker
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(316, 142);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(81, 27);
-            this.dateTimePicker2.TabIndex = 187;
+            this.todatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.todatepicker.Location = new System.Drawing.Point(316, 135);
+            this.todatepicker.Name = "todatepicker";
+            this.todatepicker.Size = new System.Drawing.Size(120, 23);
+            this.todatepicker.TabIndex = 187;
+            this.todatepicker.ValueChanged += new System.EventHandler(this.todatepicker_ValueChanged);
             // 
-            // dateTimePicker1
+            // fromdatepicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(166, 142);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(85, 27);
-            this.dateTimePicker1.TabIndex = 186;
+            this.fromdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fromdatepicker.Location = new System.Drawing.Point(166, 135);
+            this.fromdatepicker.Name = "fromdatepicker";
+            this.fromdatepicker.Size = new System.Drawing.Size(105, 23);
+            this.fromdatepicker.TabIndex = 186;
+            this.fromdatepicker.ValueChanged += new System.EventHandler(this.fromdatepicker_ValueChanged);
             // 
             // label6
             // 
@@ -109,7 +114,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(310, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 21);
+            this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 185;
             this.label6.Text = "Product Name";
             // 
@@ -120,7 +125,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(163, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 21);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 184;
             this.label4.Text = "Product ID";
             // 
@@ -129,9 +134,9 @@
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(322, 123);
+            this.label3.Location = new System.Drawing.Point(322, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 21);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 183;
             this.label3.Text = "To Date";
             // 
@@ -140,9 +145,9 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(163, 123);
+            this.label2.Location = new System.Drawing.Point(163, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 21);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 182;
             this.label2.Text = "From Date";
             // 
@@ -152,7 +157,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(160, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 84);
+            this.label1.Size = new System.Drawing.Size(276, 64);
             this.label1.TabIndex = 181;
             this.label1.Text = "\r\nProduct Sales Ledger";
             // 
@@ -169,6 +174,7 @@
             this.previewbtn.TabIndex = 395;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
+            this.previewbtn.Click += new System.EventHandler(this.previewbtn_Click);
             // 
             // closebtn
             // 
@@ -183,6 +189,7 @@
             this.closebtn.TabIndex = 394;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -197,10 +204,11 @@
             this.printbtn.TabIndex = 393;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // Product_Sale_Ledger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(652, 368);
@@ -211,8 +219,8 @@
             this.Controls.Add(this.productidtxtbox);
             this.Controls.Add(this.productnametxtbox);
             this.Controls.Add(this.searchproductid);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.todatepicker);
+            this.Controls.Add(this.fromdatepicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -225,6 +233,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Sale_Ledger";
             this.TopMost = true;
+            //this.Load += new System.EventHandler(this.Product_Sale_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchproductid)).EndInit();
             this.ResumeLayout(false);
@@ -238,8 +247,8 @@
         private System.Windows.Forms.TextBox productidtxtbox;
         private System.Windows.Forms.TextBox productnametxtbox;
         private System.Windows.Forms.PictureBox searchproductid;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker todatepicker;
+        private System.Windows.Forms.DateTimePicker fromdatepicker;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

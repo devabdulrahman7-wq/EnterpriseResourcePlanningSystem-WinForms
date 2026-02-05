@@ -75,10 +75,10 @@
             this.todate.Location = new System.Drawing.Point(341, 104);
             this.todate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 330;
             this.todate.Text = "To Date";
-            this.todate.Click += new System.EventHandler(this.todate_Click);
+            //this.todate.Click += new System.EventHandler(this.todate_Click);
             // 
             // fromdatepckr
             // 
@@ -86,10 +86,10 @@
             this.fromdatepckr.Location = new System.Drawing.Point(203, 104);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 329;
             this.fromdatepckr.Text = "From Date";
-            this.fromdatepckr.Click += new System.EventHandler(this.fromdatepckr_Click);
+            //this.fromdatepckr.Click += new System.EventHandler(this.fromdatepckr_Click);
             // 
             // todatepcker
             // 
@@ -97,9 +97,9 @@
             this.todatepcker.Location = new System.Drawing.Point(344, 124);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(114, 27);
+            this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 328;
-            this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -107,10 +107,10 @@
             this.fromdatepcker.Location = new System.Drawing.Point(206, 124);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(119, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(119, 23);
             this.fromdatepcker.TabIndex = 327;
-            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
-            // 
+            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
+
             // sectornametxtbox
             // 
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -120,7 +120,7 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(191, 20);
             this.sectornametxtbox.TabIndex = 326;
-            this.sectornametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
+            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
@@ -131,7 +131,7 @@
             this.sectoridtxtbox.Name = "sectoridtxtbox";
             this.sectoridtxtbox.Size = new System.Drawing.Size(95, 20);
             this.sectoridtxtbox.TabIndex = 325;
-            this.sectoridtxtbox.TextChanged += new System.EventHandler(this.accountnotxtbox_TextChanged);
+            //this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
             // 
             // sectoridsearch
             // 
@@ -143,7 +143,7 @@
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 324;
             this.sectoridsearch.TabStop = false;
-            this.sectoridsearch.Click += new System.EventHandler(this.searchpartyid_Click);
+            this.sectoridsearch.Click += new System.EventHandler(this.sectoridsearch_Click);
             // 
             // a
             // 
@@ -151,11 +151,10 @@
             this.a.Location = new System.Drawing.Point(346, 329);
             this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(105, 21);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 323;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.a.Click += new System.EventHandler(this.a_Click);
             // 
             // label1
             // 
@@ -163,10 +162,10 @@
             this.label1.Location = new System.Drawing.Point(205, 329);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 322;
             this.label1.Text = "Sector ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // previewbtn
             // 
@@ -174,7 +173,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(215, 462);
+            this.previewbtn.Location = new System.Drawing.Point(221, 470);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 26);
             this.previewbtn.TabIndex = 333;
@@ -188,7 +187,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(298, 462);
+            this.printbtn.Location = new System.Drawing.Point(304, 470);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(77, 26);
             this.printbtn.TabIndex = 331;
@@ -202,7 +201,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(381, 462);
+            this.closebtn.Location = new System.Drawing.Point(387, 470);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(77, 26);
             this.closebtn.TabIndex = 332;
@@ -217,7 +216,7 @@
             this.label2.Location = new System.Drawing.Point(163, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(479, 42);
+            this.label2.Size = new System.Drawing.Size(372, 32);
             this.label2.TabIndex = 334;
             this.label2.Text = "Sales Summary Product Wise";
             // 
@@ -230,7 +229,7 @@
             this.salesmannametxtbox.Name = "salesmannametxtbox";
             this.salesmannametxtbox.Size = new System.Drawing.Size(191, 20);
             this.salesmannametxtbox.TabIndex = 339;
-            this.salesmannametxtbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
@@ -241,7 +240,7 @@
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
             this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 20);
             this.salesmanidtxtbox.TabIndex = 338;
-            this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
@@ -253,7 +252,7 @@
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 337;
             this.salesmanidsearch.TabStop = false;
-            this.salesmanidsearch.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.salesmanidsearch.Click += new System.EventHandler(this.salesmanidsearch_Click);
             // 
             // label3
             // 
@@ -261,11 +260,10 @@
             this.label3.Location = new System.Drawing.Point(341, 218);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 21);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 336;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -273,10 +271,9 @@
             this.label4.Location = new System.Drawing.Point(205, 218);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 21);
+            this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 335;
             this.label4.Text = "Salesman ID";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // townnametxtbox
             // 
@@ -287,7 +284,7 @@
             this.townnametxtbox.Name = "townnametxtbox";
             this.townnametxtbox.Size = new System.Drawing.Size(191, 20);
             this.townnametxtbox.TabIndex = 344;
-            this.townnametxtbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            //this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
@@ -298,7 +295,7 @@
             this.townidtxtbox.Name = "townidtxtbox";
             this.townidtxtbox.Size = new System.Drawing.Size(95, 20);
             this.townidtxtbox.TabIndex = 343;
-            this.townidtxtbox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            //this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 
             // townidsearch
             // 
@@ -310,7 +307,7 @@
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 342;
             this.townidsearch.TabStop = false;
-            this.townidsearch.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.townidsearch.Click += new System.EventHandler(this.townidsearch_Click);
             // 
             // label5
             // 
@@ -318,11 +315,10 @@
             this.label5.Location = new System.Drawing.Point(341, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 21);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 341;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -330,10 +326,9 @@
             this.label6.Location = new System.Drawing.Point(205, 274);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 21);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 340;
             this.label6.Text = "Town ID";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cstmrnametxtbox
             // 
@@ -344,7 +339,7 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(191, 20);
             this.cstmrnametxtbox.TabIndex = 349;
-            this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -355,7 +350,7 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(95, 20);
             this.cstmridtxtbox.TabIndex = 348;
-            this.cstmridtxtbox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -367,7 +362,7 @@
             this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cstmridsearch.TabIndex = 347;
             this.cstmridsearch.TabStop = false;
-            this.cstmridsearch.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.cstmridsearch.Click += new System.EventHandler(this.cstmridsearch_Click);
             // 
             // label7
             // 
@@ -375,11 +370,10 @@
             this.label7.Location = new System.Drawing.Point(341, 167);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 346;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -387,10 +381,9 @@
             this.label8.Location = new System.Drawing.Point(205, 167);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 21);
+            this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 345;
             this.label8.Text = "Customer ID";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // fromsaletxtbox
             // 
@@ -399,9 +392,9 @@
             this.fromsaletxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.fromsaletxtbox.Multiline = true;
             this.fromsaletxtbox.Name = "fromsaletxtbox";
-            this.fromsaletxtbox.Size = new System.Drawing.Size(106, 20);
+            this.fromsaletxtbox.Size = new System.Drawing.Size(95, 20);
             this.fromsaletxtbox.TabIndex = 350;
-            this.fromsaletxtbox.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            //this.fromsaletxtbox.TextChanged += new System.EventHandler(this.fromsaletxtbox_TextChanged);
             // 
             // tosaletxtbox
             // 
@@ -412,7 +405,7 @@
             this.tosaletxtbox.Name = "tosaletxtbox";
             this.tosaletxtbox.Size = new System.Drawing.Size(111, 20);
             this.tosaletxtbox.TabIndex = 351;
-            this.tosaletxtbox.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            //this.tosaletxtbox.TextChanged += new System.EventHandler(this.tosaletxtbox_TextChanged);
             // 
             // label9
             // 
@@ -420,10 +413,9 @@
             this.label9.Location = new System.Drawing.Point(205, 381);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 21);
+            this.label9.Size = new System.Drawing.Size(82, 16);
             this.label9.TabIndex = 352;
             this.label9.Text = "From Sale ID";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -431,10 +423,9 @@
             this.label10.Location = new System.Drawing.Point(346, 381);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 21);
+            this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 353;
             this.label10.Text = "To Sale ID";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox4
             // 
@@ -449,7 +440,7 @@
             // 
             // Sales_Summary_Product_Wise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(663, 521);

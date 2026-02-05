@@ -74,9 +74,9 @@ namespace FO_2022
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Sale_Register ins = new Sale_Register();
-            ins.Show();
-            ////this.Hide();
+           
+              Sale_Register_1_ srr=new Sale_Register_1_();
+            srr.Show();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -108,9 +108,8 @@ namespace FO_2022
         }
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            Sale_Register sr = new Sale_Register();
-            sr.Show();
-            ////this.Hide();
+            Sale_Register_1_ srr=new Sale_Register_1_();
+            srr.Show();
         }
         private void pictureBox10_Click(object sender, EventArgs e)
         {
@@ -797,8 +796,8 @@ namespace FO_2022
 
         private void salesRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sales_Register sr = new Sales_Register();
-            sr.Show();
+            Sale_Register_1_ srr = new Sale_Register_1_();
+            srr.Show();
         }
 
         private void salesRegisterCompanyWiseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -824,7 +823,8 @@ namespace FO_2022
         private void partyProductWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // not found
-
+            Product_Wise_Sale swp = new Product_Wise_Sale();
+            swp.Show();
         }
 
         private void partyProductSaleLedgerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -846,6 +846,8 @@ namespace FO_2022
 
         private void salesVsRecoveries2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Sale_vs_Recovery sdd=new Sale_vs_Recovery();
+               sdd.Show();
             // not found
             //Sales
         }
@@ -869,7 +871,7 @@ namespace FO_2022
         }
 
         private void companyWiseSalesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { 
             Company_Wise_Sales cws = new Company_Wise_Sales();
             cws.Show();
         }
@@ -1254,6 +1256,18 @@ namespace FO_2022
         {
             Product_Wise_Profits product_Wise_Profits = new Product_Wise_Profits();
             product_Wise_Profits.Show();
+        }
+
+        private void salesMonthComparisonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales_Month_Comparison_Salesman_Distributors_Wise_Product ss=new Sales_Month_Comparison_Salesman_Distributors_Wise_Product();
+            ss.Show();
+        }
+
+        private void customerInvoiceWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Invoice_Wise_Sales s = new Customer_Invoice_Wise_Sales();
+            s.Show();
         }
     }
 }
