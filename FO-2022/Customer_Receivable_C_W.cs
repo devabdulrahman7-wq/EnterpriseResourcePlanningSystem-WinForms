@@ -96,8 +96,8 @@ namespace FO_2022
                 if (companyInfo.Rows.Count > 0)
                 {
                     cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
-                    MessageBox.Show("Company found.", "Success",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Company found.", "Success",
+                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -144,8 +144,8 @@ namespace FO_2022
                 {
                     townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
                     LoadSectors(townId); // Load sectors for this town
-                    MessageBox.Show("Town found.", "Success",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Town found.", "Success",
+                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

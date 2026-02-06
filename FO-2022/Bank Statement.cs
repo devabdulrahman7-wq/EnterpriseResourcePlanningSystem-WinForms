@@ -98,8 +98,8 @@ namespace FO_2022
                         currentAccountName = reader["AccountName"].ToString();
                         accountnametxtbox.Text = currentAccountName;
 
-                        MessageBox.Show($"Bank account found: {currentAccountName}", "Success",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show($"Bank account found: {currentAccountName}", "Success",
+                            //MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

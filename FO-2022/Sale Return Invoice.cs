@@ -317,8 +317,8 @@ WHERE S.SaleId = @SaleId;";
                             salesmenidtxtbox.Text = reader["SalesmanId"].ToString();
                             salesmennametxtbox.Text = reader["SalesmanName"].ToString();
 
-                            MessageBox.Show("Sale found! Loading product details...", "Success",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Sale found! Loading product details...", "Success",
+                            //    MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {

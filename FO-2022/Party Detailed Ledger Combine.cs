@@ -323,5 +323,10 @@ namespace FO_2022
         private void portrtbtn_CheckedChanged(object sender, EventArgs e) { }
         private void partyidtxtbox_TextChanged(object sender, EventArgs e) { }
         private void partynametxtbox_TextChanged(object sender, EventArgs e) { }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

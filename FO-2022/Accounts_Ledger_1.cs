@@ -21,7 +21,6 @@ namespace FO_2022
         {
             InitializeComponent();
         }
-
         private void Accounts_Ledger_1_Load(object sender, EventArgs e)
         {
             try

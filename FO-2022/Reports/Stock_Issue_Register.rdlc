@@ -8,31 +8,31 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90365in</Width>
+                  <Width>0.78907in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.88542in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -661,7 +661,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>8.22917in</Width>
+            <Width>7.19795in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -672,7 +672,7 @@
         <KeepTogether>true</KeepTogether>
         <Left>0.025in</Left>
         <Height>0.5in</Height>
-        <Width>8.22917in</Width>
+        <Width>7.19795in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -688,7 +688,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>8.25417in</Width>
+  <Width>7.23337in</Width>
   <Page>
     <PageHeader>
       <Height>0.47292in</Height>
@@ -774,7 +774,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.21875in</Height>
-          <Width>8.25417in</Width>
+          <Width>7.22295in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -814,6 +814,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0in</Top>
           <Left>4.73572in</Left>
           <Height>0.22986in</Height>
           <Width>0.75125in</Width>
@@ -842,6 +843,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
+          <Top>0in</Top>
           <Left>3.43192in</Left>
           <Height>0.22986in</Height>
           <Width>0.5625in</Width>
@@ -871,6 +873,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0in</Top>
           <Left>2.54302in</Left>
           <Height>0.25in</Height>
           <Width>0.83333in</Width>
@@ -900,6 +903,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0in</Top>
           <Left>4.03434in</Left>
           <Height>0.22791in</Height>
           <Width>0.6875in</Width>
@@ -921,12 +925,14 @@
         </Border>
       </Style>
     </PageFooter>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
     <InteractiveHeight>11.69in</InteractiveHeight>
     <InteractiveWidth>8.27in</InteractiveWidth>
-    <LeftMargin>0.1in</LeftMargin>
-    <RightMargin>0.1in</RightMargin>
-    <TopMargin>0.1in</TopMargin>
-    <BottomMargin>0.1in</BottomMargin>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>

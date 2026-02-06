@@ -1373,7 +1373,7 @@ namespace FO_2022
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Cheque marked as found!");
+                        //MessageBox.Show("Cheque marked as found!");
 
                         // Refresh data and calculate balances
                         LoadBankCheques();

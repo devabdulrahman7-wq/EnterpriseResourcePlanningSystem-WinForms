@@ -113,7 +113,6 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(231, 24);
             this.cstmrnametxtbox.TabIndex = 474;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -124,7 +123,6 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(113, 24);
             this.cstmridtxtbox.TabIndex = 473;
-            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -198,7 +196,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(125, 23);
             this.todatepcker.TabIndex = 466;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -208,7 +205,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(113, 23);
             this.fromdatepcker.TabIndex = 465;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // Product_Wise_Profits
             // 
@@ -234,7 +230,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Wise_Profits";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Wise_Profits";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Product_Wise_Profits_Load);

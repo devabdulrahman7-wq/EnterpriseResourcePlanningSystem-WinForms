@@ -1634,6 +1634,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Accounts_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Accounts_Ledger_1.rdlc" />
+    <EmbeddedResource Include="Reports\Accounts_Ledger_Category.rdlc" />
     <EmbeddedResource Include="Reports\Account_Balances.rdlc" />
     <EmbeddedResource Include="Reports\Account_Balance__C_W.rdlc" />
     <EmbeddedResource Include="Reports\Account_Opening_Balance.rdlc" />
@@ -1736,6 +1737,8 @@
     <EmbeddedResource Include="Reports\Sales_VS_Recoveries.rdlc" />
     <EmbeddedResource Include="Reports\Sale_Register.rdlc" />
     <EmbeddedResource Include="Reports\Sale_Return_Summary.rdlc" />
+    <EmbeddedResource Include="Reports\Sale_vs_Recovery.rdlc" />
+    <EmbeddedResource Include="Reports\Season_Recovery.rdlc" />
     <EmbeddedResource Include="Reports\Sector.rdlc" />
     <EmbeddedResource Include="Reports\Sector_rv.resx">
       <DependentUpon>Sector_rv.cs</DependentUpon>

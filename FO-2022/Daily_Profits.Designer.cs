@@ -48,7 +48,7 @@
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewbtn.Location = new System.Drawing.Point(148, 257);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(90, 26);
             this.previewbtn.TabIndex = 473;
@@ -63,7 +63,7 @@
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Location = new System.Drawing.Point(245, 257);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(75, 26);
             this.printbtn.TabIndex = 471;
@@ -78,7 +78,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(328, 257);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(64, 26);
             this.closebtn.TabIndex = 472;
@@ -90,7 +90,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(500, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(51, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +113,7 @@
             // 
             this.todate.AutoSize = true;
             this.todate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate.Location = new System.Drawing.Point(286, 134);
+            this.todate.Location = new System.Drawing.Point(286, 146);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
             this.todate.Size = new System.Drawing.Size(52, 16);
@@ -124,7 +124,7 @@
             // 
             this.fromdatepckr.AutoSize = true;
             this.fromdatepckr.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromdatepckr.Location = new System.Drawing.Point(135, 134);
+            this.fromdatepckr.Location = new System.Drawing.Point(135, 146);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
             this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
@@ -133,22 +133,23 @@
             // 
             // todatepcker
             // 
+            this.todatepcker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.todatepcker.Location = new System.Drawing.Point(280, 156);
-            this.todatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.todatepcker.Location = new System.Drawing.Point(289, 168);
+            this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(142, 20);
+            this.todatepcker.Size = new System.Drawing.Size(142, 22);
             this.todatepcker.TabIndex = 466;
             // 
             // fromdatepcker
             // 
+            this.fromdatepcker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromdatepcker.Location = new System.Drawing.Point(140, 156);
-            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fromdatepcker.Location = new System.Drawing.Point(138, 168);
+            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(128, 20);
+            this.fromdatepcker.Size = new System.Drawing.Size(128, 22);
             this.fromdatepcker.TabIndex = 465;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // Daily_Profits
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.fromdatepcker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Daily_Profits";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daily_Profits";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Daily_Profits_Load);

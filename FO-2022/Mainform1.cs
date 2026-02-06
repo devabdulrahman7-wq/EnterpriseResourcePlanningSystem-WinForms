@@ -809,8 +809,7 @@ namespace FO_2022
 
         private void salesSummaryInvoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Sales_Register_Invoice_Wise sr=new Sales_Register_Invoice_Wise();
-            //sr.Show();
+            
             // not found
         }
 
@@ -835,6 +834,8 @@ namespace FO_2022
 
         private void partySalesRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Sale_Register_1_ sale_Register_1_ = new Sale_Register_1_();
+            sale_Register_1_.Show();
             // not found
         }
 
@@ -879,7 +880,8 @@ namespace FO_2022
         private void discountClaimSummaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // not found
-
+            Company_Discount_Claim_Summary cdcs = new Company_Discount_Claim_Summary();
+            cdcs.Show();
         }
 
         private void companyDiscountClaimSummaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -890,7 +892,6 @@ namespace FO_2022
 
         private void categoryWiseSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // not found
             
 
         }
@@ -915,9 +916,8 @@ namespace FO_2022
 
         private void saleReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Sales Return Register sr=new Sales Return Register();
-            //sr.Show();
-            //not found
+          Sale_Reutrn_Register srr = new Sale_Reutrn_Register();
+            srr.Show();
         }
 
         private void saleReturnSummaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1003,9 +1003,9 @@ namespace FO_2022
 
         private void customerReceivablesCategoryWiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            //Customer_Receivables__Invoice_Wise_ crs = new Customer_Receivables__Invoice_Wise_();
-            //crs.Show();
+            Customer_Receivable_C_W ccc = new Customer_Receivable_C_W();
+            ccc.Show();
+            
         }
 
         private void custornerReceivablesByAgeingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1017,11 +1017,13 @@ namespace FO_2022
         private void customerPayableByAgeingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //not fpund
+            Due_Recovery_By_Credit_Days ss = new Due_Recovery_By_Credit_Days();
+            ss.Show();
         }
 
         private void dueAgeingReceivablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Due_Recovery_by_Credit_Day ss = new Due_Recovery_by_Credit_Day();
+            Due_Recovery_By_Credit_Days ss = new Due_Recovery_By_Credit_Days ();
             ss.Show();
         }
 
@@ -1182,13 +1184,13 @@ namespace FO_2022
 
         private void sectorsListAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sectors sec = new Sectors();
+            Sectors_List_A11 sec = new Sectors_List_A11 ();
             sec.Show();
         }
 
         private void sectorsListSalesmanWiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sectors_List_A11 sl = new Sectors_List_A11();
+            Salesman_Sector_List sl = new Salesman_Sector_List();
             sl.Show();
         }
 
@@ -1268,6 +1270,18 @@ namespace FO_2022
         {
             Customer_Invoice_Wise_Sales s = new Customer_Invoice_Wise_Sales();
             s.Show();
+        }
+
+        private void customerRecoveryAverageInDAysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Season_Recovery ssr = new Season_Recovery();
+            ssr.Show();
+        }
+
+        private void partyTransactionWeekDaysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Accounts_Ledger_1 accounts_Ledger_1 = new Accounts_Ledger_1();
+            accounts_Ledger_1.Show();
         }
     }
 }

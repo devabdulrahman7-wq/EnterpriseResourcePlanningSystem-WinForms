@@ -58,7 +58,7 @@
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(199, 187);
-            this.todatepcker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(129, 21);
             this.todatepcker.TabIndex = 344;
@@ -68,7 +68,7 @@
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(199, 140);
-            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(129, 21);
             this.fromdatepcker.TabIndex = 343;
@@ -103,7 +103,7 @@
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewbtn.Location = new System.Drawing.Point(138, 330);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(88, 26);
             this.previewbtn.TabIndex = 352;
@@ -118,7 +118,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(332, 331);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(82, 26);
             this.closebtn.TabIndex = 351;
@@ -133,7 +133,7 @@
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Location = new System.Drawing.Point(234, 330);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(91, 26);
             this.printbtn.TabIndex = 350;
@@ -172,6 +172,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 356;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Sale_vs_Recovery
             // 

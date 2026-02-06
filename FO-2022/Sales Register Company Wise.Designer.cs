@@ -74,7 +74,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(96, 20);
             this.todatepcker.TabIndex = 333;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -83,7 +82,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(104, 20);
             this.fromdatepcker.TabIndex = 332;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // townnametxtbox
             // 
@@ -94,7 +92,6 @@
             this.townnametxtbox.Name = "townnametxtbox";
             this.townnametxtbox.Size = new System.Drawing.Size(250, 20);
             this.townnametxtbox.TabIndex = 327;
-            //this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
@@ -105,7 +102,6 @@
             this.townidtxtbox.Name = "townidtxtbox";
             this.townidtxtbox.Size = new System.Drawing.Size(105, 18);
             this.townidtxtbox.TabIndex = 326;
-            //this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 
             // cstmrnametxtbox
             // 
@@ -116,7 +112,6 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(250, 20);
             this.cstmrnametxtbox.TabIndex = 325;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // sectornametxtbox
             // 
@@ -127,7 +122,6 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(250, 20);
             this.sectornametxtbox.TabIndex = 324;
-            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -138,7 +132,6 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(105, 18);
             this.cstmridtxtbox.TabIndex = 323;
-            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
@@ -149,8 +142,7 @@
             this.sectoridtxtbox.Name = "sectoridtxtbox";
             this.sectoridtxtbox.Size = new System.Drawing.Size(105, 18);
             this.sectoridtxtbox.TabIndex = 322;
-            //this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
-
+            // 
             // cmpnynametxtbox
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -160,7 +152,6 @@
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(250, 20);
             this.cmpnynametxtbox.TabIndex = 321;
-            //this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
@@ -171,7 +162,6 @@
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
             this.cmpnyidtxtbox.Size = new System.Drawing.Size(105, 18);
             this.cmpnyidtxtbox.TabIndex = 320;
-            //this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
             // label15
             // 
@@ -439,6 +429,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sales_Register_Company_Wise";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Register_Company_Wise";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Sales_Register_Company_Wise_Load);

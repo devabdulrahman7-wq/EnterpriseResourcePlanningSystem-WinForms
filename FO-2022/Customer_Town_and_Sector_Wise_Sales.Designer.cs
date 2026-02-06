@@ -435,9 +435,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer_Town_and_Sector_Wise_Sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Town_and_Sector_Wise_Sales";
             this.TopMost = true;
-            //this.Load += new System.EventHandler(this.Customer_Town_and_Sector_Wise_Sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cstmridsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectoridsearch)).EndInit();

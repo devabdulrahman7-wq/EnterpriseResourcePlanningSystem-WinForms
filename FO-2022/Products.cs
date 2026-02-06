@@ -437,8 +437,8 @@ namespace FO_2022
                         }
 
                         // Show message kitne products milay
-                        MessageBox.Show($"{dt.Rows.Count} product(s) found", "Search Results",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show($"{dt.Rows.Count} product(s) found", "Search Results",
+                        //              MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

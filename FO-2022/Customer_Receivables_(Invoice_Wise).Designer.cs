@@ -120,7 +120,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(274, 62);
             this.label15.TabIndex = 415;
-            this.label15.Text = "Customer Receivables\r\n(Invoice Sale)";
+            this.label15.Text = "Customer Receivables\r\n(Invoice Wise)";
             // 
             // previewbtn
             // 
@@ -128,9 +128,9 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(189, 413);
+            this.previewbtn.Location = new System.Drawing.Point(189, 417);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(77, 31);
+            this.previewbtn.Size = new System.Drawing.Size(77, 27);
             this.previewbtn.TabIndex = 419;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -142,9 +142,9 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(341, 413);
+            this.closebtn.Location = new System.Drawing.Point(341, 417);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(65, 31);
+            this.closebtn.Size = new System.Drawing.Size(65, 27);
             this.closebtn.TabIndex = 418;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -156,9 +156,9 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(270, 413);
+            this.printbtn.Location = new System.Drawing.Point(270, 417);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(65, 31);
+            this.printbtn.Size = new System.Drawing.Size(65, 27);
             this.printbtn.TabIndex = 417;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -170,7 +170,7 @@
             this.listViewforsector.HideSelection = false;
             this.listViewforsector.Location = new System.Drawing.Point(134, 235);
             this.listViewforsector.Name = "listViewforsector";
-            this.listViewforsector.Size = new System.Drawing.Size(358, 97);
+            this.listViewforsector.Size = new System.Drawing.Size(358, 129);
             this.listViewforsector.TabIndex = 420;
             this.listViewforsector.UseCompatibleStateImageBehavior = false;
             this.listViewforsector.SelectedIndexChanged += new System.EventHandler(this.listViewforsector_SelectedIndexChanged);
@@ -225,7 +225,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Receivables__Invoice_Wise_";
             this.TopMost = true;
-            //this.Load += new System.EventHandler(this.Customer_Receivables__Invoice_Wise__Load);
             ((System.ComponentModel.ISupportInitialize)(this.townidsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

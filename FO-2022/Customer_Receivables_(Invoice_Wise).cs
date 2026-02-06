@@ -21,11 +21,6 @@ namespace FO_2022
 
         private void InitializeForm()
         {
-            // Set default dates if you have date pickers (add them if needed)
-            // fromdatepicker.Value = DateTime.Today.AddDays(-30);
-            // todatepicker.Value = DateTime.Today;
-
-            // Load sectors into listview
             LoadSectors();
         }
 
@@ -48,9 +43,7 @@ namespace FO_2022
                 if (townInfo.Rows.Count > 0)
                 {
                     townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    LoadSectorsByTown(townIdNum); // Load sectors for this town
-                    //MessageBox.Show("Town found.", "Success",
-                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadSectorsByTown(townIdNum);
                 }
                 else
                 {
@@ -177,7 +170,6 @@ namespace FO_2022
 
                 if (!ValidateInput()) return;
 
-                // Get selected sectors
                 List<int> selectedSectorIds = new List<int>();
                 foreach (ListViewItem item in listViewforsector.Items)
                 {
@@ -188,7 +180,6 @@ namespace FO_2022
                     }
                 }
 
-                // Get report data
                 DataTable reportData = GetCustomerReceivablesData(selectedSectorIds);
 
                 if (reportData.Rows.Count == 0)
@@ -198,25 +189,25 @@ namespace FO_2022
                     return;
                 }
 
-                // Prepare report parameters
                 Dictionary<string, string> parameters = new Dictionary<string, string>
                 {
                     //{ "ReportTitle", "Customer Receivables (Invoice Wise)" },
-                    //{ "TownInfo", string.IsNullOrEmpty(townnametxtbox.Text) ?
-                    //    "All Towns" : $"{townidtxtbox.Text} - {townnametxtbox.Text}" },
                     //{ "GeneratedOn", DateTime.Now.ToString("dd-MMM-yyyy hh:mm tt") }
                 };
 
-                // Prepare data sources
+                if (!string.IsNullOrEmpty(townnametxtbox.Text))
+                {
+                    //parameters.Add("TownInfo", $"{townidtxtbox.Text} - {townnametxtbox.Text}");
+                }
+
                 Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>
                 {
                     { "DataSet1", reportData }
                 };
 
-                // Show report viewer
                 using (Report_viewer reportViewer = new Report_viewer())
                 {
-                    reportViewer.ShowReport("Customer_Receivables__Invoice_Wise", dataSources);
+                    reportViewer.ShowReport("Customer_Receivables__Invoice_Wise", dataSources, parameters);
                 }
             }
             catch (Exception ex)
@@ -235,7 +226,6 @@ namespace FO_2022
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                // Simple query for customer receivables
                 string query = @"
                     SELECT 
                         P.PartyID as CustomerID,
@@ -258,30 +248,23 @@ namespace FO_2022
                     INNER JOIN Parties P ON S.CustomerId = P.PartyID
                     LEFT JOIN Sectors SC ON P.SectorID = SC.SectorID
                     WHERE S.IsPosted = 1
-                    AND SB.IsDeleted = 0
-                    AND (SUM(SB.TTLValue) - S.ReceivedAmount) > 0"; // Only show unpaid balances
+                    AND SB.IsDeleted = 0";
 
-                // Add filters if town is selected
                 if (!string.IsNullOrEmpty(townnametxtbox.Text))
                 {
-                    query = query.Replace("WHERE S.IsPosted = 1",
-                        "WHERE P.City = @TownName AND S.IsPosted = 1");
+                    query += " AND P.City = @TownName";
                 }
 
-                // Add sector filter if sectors are selected
                 if (selectedSectorIds.Count > 0)
                 {
                     string sectorIds = string.Join(",", selectedSectorIds);
-                    if (query.Contains("WHERE"))
-                        query += $" AND SC.SectorID IN ({sectorIds})";
-                    else
-                        query += $" WHERE SC.SectorID IN ({sectorIds})";
+                    query += $" AND SC.SectorID IN ({sectorIds})";
                 }
 
-                // Complete the GROUP BY clause
                 query += @"
                     GROUP BY P.PartyID, P.PartyName, P.City, SC.SectorName, 
                              S.SaleId, S.SaleDate, S.DueDate, S.ReceivedAmount
+                    HAVING (SUM(SB.TTLValue) - S.ReceivedAmount) > 0
                     ORDER BY P.PartyName, S.SaleDate DESC";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -299,7 +282,6 @@ namespace FO_2022
 
         private bool ValidateInput()
         {
-            // Check if at least one sector is selected
             bool hasSelectedSector = false;
             foreach (ListViewItem item in listViewforsector.Items)
             {
@@ -317,7 +299,6 @@ namespace FO_2022
                 return false;
             }
 
-            // If town ID is entered, name must be fetched
             if (!string.IsNullOrEmpty(townidtxtbox.Text.Trim()) &&
                 string.IsNullOrEmpty(townnametxtbox.Text.Trim()))
             {
@@ -329,7 +310,6 @@ namespace FO_2022
             return true;
         }
 
-        // Empty event handlers
         private void townidtxtbox_TextChanged(object sender, EventArgs e) { }
         private void townnametxtbox_TextChanged(object sender, EventArgs e) { }
         private void listViewforsector_SelectedIndexChanged(object sender, EventArgs e) { }

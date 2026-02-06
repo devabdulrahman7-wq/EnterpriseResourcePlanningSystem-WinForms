@@ -1033,8 +1033,8 @@ namespace FO_2022
                     // Optionally fill amount
                     amounttxtbox.Text = Convert.ToDecimal(reader["ReceivedAmount"]).ToString("N2");
 
-                    MessageBox.Show($"Bill found!\nDate: {reader["SaleDate"]:dd/MM/yyyy}\nAmount: {reader["ReceivedAmount"]:N2}",
-                                  "Bill Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show($"Bill found!\nDate: {reader["SaleDate"]:dd/MM/yyyy}\nAmount: {reader["ReceivedAmount"]:N2}",
+                    //              "Bill Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

@@ -59,8 +59,8 @@ namespace FO_2022
                 DataTable customerInfo = GetCustomerInfo(customerId);
                 if (customerInfo.Rows.Count > 0)
                 {
-                    cstmrnametxtbox.Text = customerInfo.Rows[0]["PartyName"].ToString();
-                    MessageBox.Show("Customer found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //cstmrnametxtbox.Text = customerInfo.Rows[0]["PartyName"].ToString();
+                    //MessageBox.Show("Customer found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -102,8 +102,8 @@ namespace FO_2022
                 DataTable companyInfo = GetCompanyInfo(companyId);
                 if (companyInfo.Rows.Count > 0)
                 {
-                    cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
-                    MessageBox.Show("Company found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
+                    //MessageBox.Show("Company found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -145,8 +145,8 @@ namespace FO_2022
                 DataTable townInfo = GetTownInfo(townIdNum);
                 if (townInfo.Rows.Count > 0)
                 {
-                    townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    MessageBox.Show("Town found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
+                    //MessageBox.Show("Town found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -188,8 +188,8 @@ namespace FO_2022
                 DataTable sectorInfo = GetSectorInfo(sectorIdNum);
                 if (sectorInfo.Rows.Count > 0)
                 {
-                    sectornametxtbox.Text = sectorInfo.Rows[0]["SectorName"].ToString();
-                    MessageBox.Show("Sector found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //sectornametxtbox.Text = sectorInfo.Rows[0]["SectorName"].ToString();
+                    //MessageBox.Show("Sector found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

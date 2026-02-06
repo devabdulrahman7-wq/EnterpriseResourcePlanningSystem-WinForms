@@ -40,8 +40,8 @@
             this.closebtn = new System.Windows.Forms.Button();
             this.categorycombobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.daybtn = new System.Windows.Forms.RadioButton();
-            this.samedaybtn = new System.Windows.Forms.RadioButton();
+            this.dayousradionbtn = new System.Windows.Forms.RadioButton();
+            this.samedayradiobtn = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.todate.Location = new System.Drawing.Point(365, 106);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 390;
             this.todate.Text = "To Date";
             // 
@@ -61,7 +61,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(204, 106);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 389;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -71,8 +71,9 @@
             this.todatepcker.Location = new System.Drawing.Point(368, 130);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 27);
+            this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 388;
+            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -80,8 +81,9 @@
             this.fromdatepcker.Location = new System.Drawing.Point(207, 130);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(138, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
             this.fromdatepcker.TabIndex = 387;
+            this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // pictureBox2
             // 
@@ -102,7 +104,7 @@
             this.label3.Location = new System.Drawing.Point(236, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 38);
+            this.label3.Size = new System.Drawing.Size(210, 31);
             this.label3.TabIndex = 391;
             this.label3.Text = "Accounts Ledger";
             // 
@@ -154,8 +156,9 @@
             this.categorycombobox.FormattingEnabled = true;
             this.categorycombobox.Location = new System.Drawing.Point(207, 185);
             this.categorycombobox.Name = "categorycombobox";
-            this.categorycombobox.Size = new System.Drawing.Size(293, 27);
+            this.categorycombobox.Size = new System.Drawing.Size(293, 24);
             this.categorycombobox.TabIndex = 415;
+            this.categorycombobox.SelectedIndexChanged += new System.EventHandler(this.categorycombobox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -163,44 +166,45 @@
             this.label1.Location = new System.Drawing.Point(214, 166);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 21);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 416;
             this.label1.Text = "Category";
             // 
-            // daybtn
+            // dayousradionbtn
             // 
-            this.daybtn.AutoSize = true;
-            this.daybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daybtn.Location = new System.Drawing.Point(368, 227);
-            this.daybtn.Margin = new System.Windows.Forms.Padding(5);
-            this.daybtn.Name = "daybtn";
-            this.daybtn.Size = new System.Drawing.Size(81, 25);
-            this.daybtn.TabIndex = 418;
-            this.daybtn.TabStop = true;
-            this.daybtn.Text = "Day+1";
-            this.daybtn.UseVisualStyleBackColor = true;
+            this.dayousradionbtn.AutoSize = true;
+            this.dayousradionbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayousradionbtn.Location = new System.Drawing.Point(368, 227);
+            this.dayousradionbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.dayousradionbtn.Name = "dayousradionbtn";
+            this.dayousradionbtn.Size = new System.Drawing.Size(61, 20);
+            this.dayousradionbtn.TabIndex = 418;
+            this.dayousradionbtn.TabStop = true;
+            this.dayousradionbtn.Text = "Day+1";
+            this.dayousradionbtn.UseVisualStyleBackColor = true;
             // 
-            // samedaybtn
+            // samedayradiobtn
             // 
-            this.samedaybtn.AutoSize = true;
-            this.samedaybtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.samedaybtn.Location = new System.Drawing.Point(207, 227);
-            this.samedaybtn.Margin = new System.Windows.Forms.Padding(5);
-            this.samedaybtn.Name = "samedaybtn";
-            this.samedaybtn.Size = new System.Drawing.Size(106, 25);
-            this.samedaybtn.TabIndex = 417;
-            this.samedaybtn.TabStop = true;
-            this.samedaybtn.Text = "Same Day";
-            this.samedaybtn.UseVisualStyleBackColor = true;
+            this.samedayradiobtn.AutoSize = true;
+            this.samedayradiobtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.samedayradiobtn.Location = new System.Drawing.Point(207, 227);
+            this.samedayradiobtn.Margin = new System.Windows.Forms.Padding(5);
+            this.samedayradiobtn.Name = "samedayradiobtn";
+            this.samedayradiobtn.Size = new System.Drawing.Size(83, 20);
+            this.samedayradiobtn.TabIndex = 417;
+            this.samedayradiobtn.TabStop = true;
+            this.samedayradiobtn.Text = "Same Day";
+            this.samedayradiobtn.UseVisualStyleBackColor = true;
+            this.samedayradiobtn.CheckedChanged += new System.EventHandler(this.samedayradiobtn_CheckedChanged);
             // 
             // Accounts_Ledger_Category
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(631, 365);
-            this.Controls.Add(this.daybtn);
-            this.Controls.Add(this.samedaybtn);
+            this.Controls.Add(this.dayousradionbtn);
+            this.Controls.Add(this.samedayradiobtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.categorycombobox);
             this.Controls.Add(this.previewbtn);
@@ -219,6 +223,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts_Ledger_Category";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Accounts_Ledger_Category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,7 +243,7 @@
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.ComboBox categorycombobox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton daybtn;
-        private System.Windows.Forms.RadioButton samedaybtn;
+        private System.Windows.Forms.RadioButton dayousradionbtn;
+        private System.Windows.Forms.RadioButton samedayradiobtn;
     }
 }

@@ -808,7 +808,6 @@
     <Style>
       <Border>
         <Style>None</Style>
-        <Width>0.5pt</Width>
       </Border>
     </Style>
   </Body>

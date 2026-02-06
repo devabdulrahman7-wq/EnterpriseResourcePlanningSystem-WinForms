@@ -121,7 +121,6 @@
             this.townnametxtbox.Name = "townnametxtbox";
             this.townnametxtbox.Size = new System.Drawing.Size(230, 20);
             this.townnametxtbox.TabIndex = 365;
-            //this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
@@ -143,7 +142,6 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(230, 20);
             this.cstmrnametxtbox.TabIndex = 363;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // sectornametxtbox
             // 
@@ -154,7 +152,6 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(230, 20);
             this.sectornametxtbox.TabIndex = 362;
-            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -380,6 +377,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Company_Wise_Sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Company_Wise_Sales";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Company_Wise_Sales_Load);

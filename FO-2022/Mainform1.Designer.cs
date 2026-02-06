@@ -111,6 +111,7 @@
             this.customerTownSectorWiseSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesAndStockStatementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesMonthComparisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerInvoiceWiseSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleReturnSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -244,7 +245,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customerInvoiceWiseSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -810,6 +810,7 @@
             this.dailyPendingSalesOrdersToolStripMenuItem.Name = "dailyPendingSalesOrdersToolStripMenuItem";
             this.dailyPendingSalesOrdersToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.dailyPendingSalesOrdersToolStripMenuItem.Text = "Daily Pending Sales Orders";
+            this.dailyPendingSalesOrdersToolStripMenuItem.Visible = false;
             this.dailyPendingSalesOrdersToolStripMenuItem.Click += new System.EventHandler(this.dailyPendingSalesOrdersToolStripMenuItem_Click);
             // 
             // builtyRegisterToolStripMenuItem
@@ -817,6 +818,7 @@
             this.builtyRegisterToolStripMenuItem.Name = "builtyRegisterToolStripMenuItem";
             this.builtyRegisterToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.builtyRegisterToolStripMenuItem.Text = "Builty Register";
+            this.builtyRegisterToolStripMenuItem.Visible = false;
             this.builtyRegisterToolStripMenuItem.Click += new System.EventHandler(this.builtyRegisterToolStripMenuItem_Click);
             // 
             // salesRegisterToolStripMenuItem
@@ -838,6 +840,7 @@
             this.salesSummaryInvoiceWiseToolStripMenuItem.Name = "salesSummaryInvoiceWiseToolStripMenuItem";
             this.salesSummaryInvoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesSummaryInvoiceWiseToolStripMenuItem.Text = "Sales Summary Invoice Wise";
+            this.salesSummaryInvoiceWiseToolStripMenuItem.Visible = false;
             this.salesSummaryInvoiceWiseToolStripMenuItem.Click += new System.EventHandler(this.salesSummaryInvoiceWiseToolStripMenuItem_Click);
             // 
             // salesSummaryProductWiseToolStripMenuItem
@@ -930,6 +933,7 @@
             this.categoryWiseSaleToolStripMenuItem.Name = "categoryWiseSaleToolStripMenuItem";
             this.categoryWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.categoryWiseSaleToolStripMenuItem.Text = "Category Wise Sale ";
+            this.categoryWiseSaleToolStripMenuItem.Visible = false;
             this.categoryWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.categoryWiseSaleToolStripMenuItem_Click);
             // 
             // productSalesLedgerToolStripMenuItem
@@ -959,6 +963,13 @@
             this.salesMonthComparisonToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
             this.salesMonthComparisonToolStripMenuItem.Text = "Sales Month Comparison Salesman Distributor Wise Product";
             this.salesMonthComparisonToolStripMenuItem.Click += new System.EventHandler(this.salesMonthComparisonToolStripMenuItem_Click);
+            // 
+            // customerInvoiceWiseSaleToolStripMenuItem
+            // 
+            this.customerInvoiceWiseSaleToolStripMenuItem.Name = "customerInvoiceWiseSaleToolStripMenuItem";
+            this.customerInvoiceWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
+            this.customerInvoiceWiseSaleToolStripMenuItem.Text = "Customer Invoice Wise Sale";
+            this.customerInvoiceWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.customerInvoiceWiseSaleToolStripMenuItem_Click);
             // 
             // saleReturnReportsToolStripMenuItem
             // 
@@ -1186,6 +1197,7 @@
             this.customerPayableByAgeingToolStripMenuItem.Name = "customerPayableByAgeingToolStripMenuItem";
             this.customerPayableByAgeingToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
             this.customerPayableByAgeingToolStripMenuItem.Text = "Customer Payable By Aging";
+            this.customerPayableByAgeingToolStripMenuItem.Visible = false;
             this.customerPayableByAgeingToolStripMenuItem.Click += new System.EventHandler(this.customerPayableByAgeingToolStripMenuItem_Click);
             // 
             // partySalesActivityAgringToolStripMenuItem
@@ -1263,12 +1275,14 @@
             this.partyTransactionWeekDaysToolStripMenuItem.Name = "partyTransactionWeekDaysToolStripMenuItem";
             this.partyTransactionWeekDaysToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
             this.partyTransactionWeekDaysToolStripMenuItem.Text = "Party Transaction (WeekDays)";
+            this.partyTransactionWeekDaysToolStripMenuItem.Click += new System.EventHandler(this.partyTransactionWeekDaysToolStripMenuItem_Click);
             // 
             // customerRecoveryAverageInDAysToolStripMenuItem
             // 
             this.customerRecoveryAverageInDAysToolStripMenuItem.Name = "customerRecoveryAverageInDAysToolStripMenuItem";
             this.customerRecoveryAverageInDAysToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
-            this.customerRecoveryAverageInDAysToolStripMenuItem.Text = "Customer Recovery Average In DAys";
+            this.customerRecoveryAverageInDAysToolStripMenuItem.Text = "Customer Recovery Average In Days";
+            this.customerRecoveryAverageInDAysToolStripMenuItem.Click += new System.EventHandler(this.customerRecoveryAverageInDAysToolStripMenuItem_Click);
             // 
             // purchaseReportsToolStripMenuItem
             // 
@@ -1597,6 +1611,7 @@
             this.bankJournalToolStripMenuItem.Name = "bankJournalToolStripMenuItem";
             this.bankJournalToolStripMenuItem.Size = new System.Drawing.Size(326, 22);
             this.bankJournalToolStripMenuItem.Text = "Bank Journal";
+            this.bankJournalToolStripMenuItem.Visible = false;
             this.bankJournalToolStripMenuItem.Click += new System.EventHandler(this.bankJournalToolStripMenuItem_Click);
             // 
             // gLJournalToolStripMenuItem
@@ -2180,13 +2195,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // customerInvoiceWiseSaleToolStripMenuItem
-            // 
-            this.customerInvoiceWiseSaleToolStripMenuItem.Name = "customerInvoiceWiseSaleToolStripMenuItem";
-            this.customerInvoiceWiseSaleToolStripMenuItem.Size = new System.Drawing.Size(392, 22);
-            this.customerInvoiceWiseSaleToolStripMenuItem.Text = "Customer Invoice Wise Sale";
-            this.customerInvoiceWiseSaleToolStripMenuItem.Click += new System.EventHandler(this.customerInvoiceWiseSaleToolStripMenuItem_Click);
             // 
             // Mainform1
             // 

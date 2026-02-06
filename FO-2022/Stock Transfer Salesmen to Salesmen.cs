@@ -144,7 +144,7 @@ namespace FO_2022
                     {
                         nameBox.Text = result.ToString();
                         storeId = salesmanId;
-                        MessageBox.Show($"Salesman found: {result}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show($"Salesman found: {result}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Move focus
                         if (nameBox == fromsalesmennametxtbox)
@@ -226,7 +226,7 @@ namespace FO_2022
                             packtxtbox.Text = reader["Multiplier"].ToString();
                             packnamecombobox.Text = reader["PackingName"].ToString();
 
-                            MessageBox.Show("Product found in salesman stock", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Product found in salesman stock", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             qtyptxtbox.Focus();
                         }
                         else
