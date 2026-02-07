@@ -99,7 +99,7 @@ namespace FO_2022
                     // Sare products load karein
                     string query = @"SELECT ProductID, ProductName 
                            FROM Products 
-                           ORDER BY ProductName";
+                           ORDER BY ProductID ASC";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
@@ -1423,7 +1423,10 @@ namespace FO_2022
 
             // Also clear search textbox and grid
             srchprdctnametxtbox.Clear();
-            dataGridViewavlblepkng.DataSource = null;
+            //dataGridViewavlblepkng.DataSource = null;
+
+            LoadAllProducts(); // SARE PRODUCTS REFRESH KAREIN
+
 
             // Reset selected packing ID
             selectedPackingId = -1;

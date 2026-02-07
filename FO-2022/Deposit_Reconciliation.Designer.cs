@@ -83,6 +83,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,18 +102,17 @@
             this.label3.Location = new System.Drawing.Point(590, 485);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 21);
+            this.label3.Size = new System.Drawing.Size(143, 16);
             this.label3.TabIndex = 661;
             this.label3.Text = "Un_Reconciled Balance:";
             // 
             // unreconciledbalancetxtbox
             // 
             this.unreconciledbalancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.unreconciledbalancetxtbox.Location = new System.Drawing.Point(743, 478);
+            this.unreconciledbalancetxtbox.Location = new System.Drawing.Point(743, 485);
             this.unreconciledbalancetxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.unreconciledbalancetxtbox.Multiline = true;
             this.unreconciledbalancetxtbox.Name = "unreconciledbalancetxtbox";
-            this.unreconciledbalancetxtbox.Size = new System.Drawing.Size(129, 22);
+            this.unreconciledbalancetxtbox.Size = new System.Drawing.Size(129, 16);
             this.unreconciledbalancetxtbox.TabIndex = 660;
             this.unreconciledbalancetxtbox.TextChanged += new System.EventHandler(this.unreconciledbalancetxtbox_TextChanged);
             // 
@@ -122,18 +122,17 @@
             this.txtbox.Location = new System.Drawing.Point(609, 452);
             this.txtbox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.txtbox.Name = "txtbox";
-            this.txtbox.Size = new System.Drawing.Size(159, 21);
+            this.txtbox.Size = new System.Drawing.Size(121, 16);
             this.txtbox.TabIndex = 659;
             this.txtbox.Text = "Reconciled Balance:";
             // 
             // reconciledbalancetxtbox
             // 
             this.reconciledbalancetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reconciledbalancetxtbox.Location = new System.Drawing.Point(743, 445);
+            this.reconciledbalancetxtbox.Location = new System.Drawing.Point(743, 452);
             this.reconciledbalancetxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.reconciledbalancetxtbox.Multiline = true;
             this.reconciledbalancetxtbox.Name = "reconciledbalancetxtbox";
-            this.reconciledbalancetxtbox.Size = new System.Drawing.Size(129, 22);
+            this.reconciledbalancetxtbox.Size = new System.Drawing.Size(129, 16);
             this.reconciledbalancetxtbox.TabIndex = 658;
             this.reconciledbalancetxtbox.TextChanged += new System.EventHandler(this.reconciledbalancetxtbox_TextChanged);
             // 
@@ -171,7 +170,7 @@
             this.unreconciledradiobtn.AutoSize = true;
             this.unreconciledradiobtn.Location = new System.Drawing.Point(174, 18);
             this.unreconciledradiobtn.Name = "unreconciledradiobtn";
-            this.unreconciledradiobtn.Size = new System.Drawing.Size(140, 25);
+            this.unreconciledradiobtn.Size = new System.Drawing.Size(108, 20);
             this.unreconciledradiobtn.TabIndex = 3;
             this.unreconciledradiobtn.TabStop = true;
             this.unreconciledradiobtn.Text = "Un_Reconciled";
@@ -183,7 +182,7 @@
             this.bouncedradiobtn.AutoSize = true;
             this.bouncedradiobtn.Location = new System.Drawing.Point(297, 18);
             this.bouncedradiobtn.Name = "bouncedradiobtn";
-            this.bouncedradiobtn.Size = new System.Drawing.Size(99, 25);
+            this.bouncedradiobtn.Size = new System.Drawing.Size(77, 20);
             this.bouncedradiobtn.TabIndex = 2;
             this.bouncedradiobtn.TabStop = true;
             this.bouncedradiobtn.Text = "Boumced";
@@ -195,7 +194,7 @@
             this.reconciledradiobtn.AutoSize = true;
             this.reconciledradiobtn.Location = new System.Drawing.Point(71, 18);
             this.reconciledradiobtn.Name = "reconciledradiobtn";
-            this.reconciledradiobtn.Size = new System.Drawing.Size(111, 25);
+            this.reconciledradiobtn.Size = new System.Drawing.Size(86, 20);
             this.reconciledradiobtn.TabIndex = 1;
             this.reconciledradiobtn.TabStop = true;
             this.reconciledradiobtn.Text = "Reconciled";
@@ -207,7 +206,7 @@
             this.allradiobtn.AutoSize = true;
             this.allradiobtn.Location = new System.Drawing.Point(12, 19);
             this.allradiobtn.Name = "allradiobtn";
-            this.allradiobtn.Size = new System.Drawing.Size(50, 25);
+            this.allradiobtn.Size = new System.Drawing.Size(39, 20);
             this.allradiobtn.TabIndex = 0;
             this.allradiobtn.TabStop = true;
             this.allradiobtn.Text = "All";
@@ -232,7 +231,7 @@
             this.label7.Location = new System.Drawing.Point(3, 85);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 21);
+            this.label7.Size = new System.Drawing.Size(78, 16);
             this.label7.TabIndex = 654;
             this.label7.Text = "Bank A/C No";
             // 
@@ -241,9 +240,8 @@
             this.banknotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.banknotxtbox.Location = new System.Drawing.Point(6, 106);
             this.banknotxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.banknotxtbox.Multiline = true;
             this.banknotxtbox.Name = "banknotxtbox";
-            this.banknotxtbox.Size = new System.Drawing.Size(132, 23);
+            this.banknotxtbox.Size = new System.Drawing.Size(132, 16);
             this.banknotxtbox.TabIndex = 653;
             this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
             // 
@@ -253,7 +251,7 @@
             this.label6.Location = new System.Drawing.Point(177, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 21);
+            this.label6.Size = new System.Drawing.Size(120, 16);
             this.label6.TabIndex = 652;
             this.label6.Text = "Bank Account Name";
             // 
@@ -262,9 +260,8 @@
             this.banknametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.banknametxtbox.Location = new System.Drawing.Point(180, 106);
             this.banknametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.banknametxtbox.Multiline = true;
             this.banknametxtbox.Name = "banknametxtbox";
-            this.banknametxtbox.Size = new System.Drawing.Size(276, 23);
+            this.banknametxtbox.Size = new System.Drawing.Size(276, 16);
             this.banknametxtbox.TabIndex = 651;
             this.banknametxtbox.TextChanged += new System.EventHandler(this.banknametxtbox_TextChanged);
             // 
@@ -299,7 +296,7 @@
             this.label2.Location = new System.Drawing.Point(297, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(369, 42);
+            this.label2.Size = new System.Drawing.Size(290, 32);
             this.label2.TabIndex = 648;
             this.label2.Text = "Deposit Reconciliation";
             // 
@@ -389,7 +386,7 @@
             // 
             // Deposit_Reconciliation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(879, 566);

@@ -76,9 +76,8 @@
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmrnametxtbox.Location = new System.Drawing.Point(369, 194);
             this.cstmrnametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
-            this.cstmrnametxtbox.Size = new System.Drawing.Size(243, 24);
+            this.cstmrnametxtbox.Size = new System.Drawing.Size(243, 16);
             this.cstmrnametxtbox.TabIndex = 407;
             // 
             // cstmridtxtbox
@@ -86,18 +85,17 @@
             this.cstmridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmridtxtbox.Location = new System.Drawing.Point(180, 194);
             this.cstmridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cstmridtxtbox.Multiline = true;
             this.cstmridtxtbox.Name = "cstmridtxtbox";
-            this.cstmridtxtbox.Size = new System.Drawing.Size(130, 24);
+            this.cstmridtxtbox.Size = new System.Drawing.Size(130, 16);
             this.cstmridtxtbox.TabIndex = 406;
             // 
             // cstmridsearch
             // 
             this.cstmridsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmridsearch.Image")));
-            this.cstmridsearch.Location = new System.Drawing.Point(315, 196);
+            this.cstmridsearch.Location = new System.Drawing.Point(315, 192);
             this.cstmridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.cstmridsearch.Name = "cstmridsearch";
-            this.cstmridsearch.Size = new System.Drawing.Size(47, 22);
+            this.cstmridsearch.Size = new System.Drawing.Size(47, 20);
             this.cstmridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cstmridsearch.TabIndex = 405;
             this.cstmridsearch.TabStop = false;
@@ -128,9 +126,8 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(370, 245);
             this.townnametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(243, 24);
+            this.townnametxtbox.Size = new System.Drawing.Size(243, 16);
             this.townnametxtbox.TabIndex = 402;
             // 
             // townidtxtbox
@@ -138,18 +135,17 @@
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townidtxtbox.Location = new System.Drawing.Point(180, 245);
             this.townidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
-            this.townidtxtbox.Size = new System.Drawing.Size(130, 24);
+            this.townidtxtbox.Size = new System.Drawing.Size(130, 16);
             this.townidtxtbox.TabIndex = 401;
             // 
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(315, 247);
+            this.townidsearch.Location = new System.Drawing.Point(315, 243);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.townidsearch.Name = "townidsearch";
-            this.townidsearch.Size = new System.Drawing.Size(47, 22);
+            this.townidsearch.Size = new System.Drawing.Size(47, 20);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 400;
             this.townidsearch.TabStop = false;
@@ -229,9 +225,8 @@
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectornametxtbox.Location = new System.Drawing.Point(368, 296);
             this.sectornametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.sectornametxtbox.Multiline = true;
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(243, 24);
+            this.sectornametxtbox.Size = new System.Drawing.Size(243, 16);
             this.sectornametxtbox.TabIndex = 392;
             // 
             // sectoridtxtbox
@@ -239,18 +234,17 @@
             this.sectoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectoridtxtbox.Location = new System.Drawing.Point(180, 296);
             this.sectoridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.sectoridtxtbox.Multiline = true;
             this.sectoridtxtbox.Name = "sectoridtxtbox";
-            this.sectoridtxtbox.Size = new System.Drawing.Size(130, 24);
+            this.sectoridtxtbox.Size = new System.Drawing.Size(130, 16);
             this.sectoridtxtbox.TabIndex = 391;
             // 
             // sectoridsearch
             // 
             this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(315, 298);
+            this.sectoridsearch.Location = new System.Drawing.Point(315, 294);
             this.sectoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.sectoridsearch.Name = "sectoridsearch";
-            this.sectoridsearch.Size = new System.Drawing.Size(47, 22);
+            this.sectoridsearch.Size = new System.Drawing.Size(47, 20);
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 390;
             this.sectoridsearch.TabStop = false;

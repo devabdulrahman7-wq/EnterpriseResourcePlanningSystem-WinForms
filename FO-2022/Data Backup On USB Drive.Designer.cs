@@ -61,25 +61,23 @@
             // 
             this.date.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.date.Location = new System.Drawing.Point(148, 132);
-            this.date.Multiline = true;
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(123, 20);
+            this.date.Size = new System.Drawing.Size(123, 16);
             this.date.TabIndex = 426;
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(288, 132);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
+            this.textBox2.Size = new System.Drawing.Size(120, 16);
             this.textBox2.TabIndex = 425;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 113);
+            this.label4.Location = new System.Drawing.Point(148, 113);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
@@ -90,7 +88,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(295, 113);
+            this.label3.Location = new System.Drawing.Point(288, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
@@ -101,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 166);
+            this.label2.Location = new System.Drawing.Point(148, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 16);
@@ -112,9 +110,8 @@
             // 
             this.backupfiletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.backupfiletxtbox.Location = new System.Drawing.Point(148, 185);
-            this.backupfiletxtbox.Multiline = true;
             this.backupfiletxtbox.Name = "backupfiletxtbox";
-            this.backupfiletxtbox.Size = new System.Drawing.Size(307, 20);
+            this.backupfiletxtbox.Size = new System.Drawing.Size(307, 16);
             this.backupfiletxtbox.TabIndex = 421;
             // 
             // filesearch
@@ -131,7 +128,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(155, 219);
+            this.label6.Location = new System.Drawing.Point(148, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 16);
@@ -142,9 +139,8 @@
             // 
             this.backuppasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.backuppasswordtxtbox.Location = new System.Drawing.Point(148, 238);
-            this.backuppasswordtxtbox.Multiline = true;
             this.backuppasswordtxtbox.Name = "backuppasswordtxtbox";
-            this.backuppasswordtxtbox.Size = new System.Drawing.Size(307, 20);
+            this.backuppasswordtxtbox.Size = new System.Drawing.Size(307, 16);
             this.backuppasswordtxtbox.TabIndex = 418;
             // 
             // label1
@@ -174,6 +170,7 @@
             // backupbtn
             // 
             this.backupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.backupbtn.Enabled = false;
             this.backupbtn.FlatAppearance.BorderSize = 0;
             this.backupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backupbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

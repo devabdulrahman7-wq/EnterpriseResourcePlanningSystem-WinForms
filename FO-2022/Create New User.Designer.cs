@@ -143,6 +143,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +157,7 @@
             // printbtn
             // 
             this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.printbtn.Enabled = false;
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,6 +171,7 @@
             // openbtn
             // 
             this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.Enabled = false;
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +198,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,7 +213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(447, 178);
+            this.label6.Location = new System.Drawing.Point(437, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 16);
@@ -220,16 +224,15 @@
             // 
             this.usernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernametxtbox.Location = new System.Drawing.Point(435, 197);
-            this.usernametxtbox.Multiline = true;
             this.usernametxtbox.Name = "usernametxtbox";
-            this.usernametxtbox.Size = new System.Drawing.Size(238, 20);
+            this.usernametxtbox.Size = new System.Drawing.Size(238, 15);
             this.usernametxtbox.TabIndex = 656;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(447, 225);
+            this.label1.Location = new System.Drawing.Point(437, 225);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
@@ -240,16 +243,15 @@
             // 
             this.passwordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordtxtbox.Location = new System.Drawing.Point(435, 244);
-            this.passwordtxtbox.Multiline = true;
             this.passwordtxtbox.Name = "passwordtxtbox";
-            this.passwordtxtbox.Size = new System.Drawing.Size(238, 20);
+            this.passwordtxtbox.Size = new System.Drawing.Size(238, 15);
             this.passwordtxtbox.TabIndex = 658;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(447, 272);
+            this.label2.Location = new System.Drawing.Point(437, 272);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 16);
@@ -260,9 +262,8 @@
             // 
             this.retypepasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.retypepasswordtxtbox.Location = new System.Drawing.Point(435, 291);
-            this.retypepasswordtxtbox.Multiline = true;
             this.retypepasswordtxtbox.Name = "retypepasswordtxtbox";
-            this.retypepasswordtxtbox.Size = new System.Drawing.Size(238, 20);
+            this.retypepasswordtxtbox.Size = new System.Drawing.Size(238, 15);
             this.retypepasswordtxtbox.TabIndex = 660;
             // 
             // label3
@@ -317,6 +318,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create_New_User";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.CreateUserForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

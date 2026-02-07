@@ -100,20 +100,17 @@
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectornametxtbox.Location = new System.Drawing.Point(346, 175);
             this.sectornametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.sectornametxtbox.Multiline = true;
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.sectornametxtbox.Size = new System.Drawing.Size(223, 16);
             this.sectornametxtbox.TabIndex = 482;
-            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
             this.sectoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectoridtxtbox.Location = new System.Drawing.Point(185, 175);
             this.sectoridtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.sectoridtxtbox.Multiline = true;
             this.sectoridtxtbox.Name = "sectoridtxtbox";
-            this.sectoridtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.sectoridtxtbox.Size = new System.Drawing.Size(111, 16);
             this.sectoridtxtbox.TabIndex = 481;
             this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
             // 
@@ -201,7 +198,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 487;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -211,7 +207,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
             this.fromdatepcker.TabIndex = 486;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // townlistView
             // 
@@ -223,7 +218,6 @@
             this.townlistView.TabIndex = 492;
             this.townlistView.UseCompatibleStateImageBehavior = false;
             this.townlistView.View = System.Windows.Forms.View.List;
-            //this.townlistView.SelectedIndexChanged += new System.EventHandler(this.townlistView_SelectedIndexChanged);
             // 
             // checkBoxHavingbalancegreaterthanzero
             // 
@@ -235,7 +229,6 @@
             this.checkBoxHavingbalancegreaterthanzero.TabIndex = 493;
             this.checkBoxHavingbalancegreaterthanzero.Text = "Having balance greater than zero";
             this.checkBoxHavingbalancegreaterthanzero.UseVisualStyleBackColor = true;
-            //this.checkBoxHavingbalancegreaterthanzero.CheckedChanged += new System.EventHandler(this.checkBoxHavingbalancegreaterthanzero_CheckedChanged);
             // 
             // label3
             // 

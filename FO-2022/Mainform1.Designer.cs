@@ -462,6 +462,7 @@
             this.accountsCodeManagementToolStripMenuItem.Name = "accountsCodeManagementToolStripMenuItem";
             this.accountsCodeManagementToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.accountsCodeManagementToolStripMenuItem.Text = "Accounts Code Management";
+            this.accountsCodeManagementToolStripMenuItem.Visible = false;
             this.accountsCodeManagementToolStripMenuItem.Click += new System.EventHandler(this.accountsCodeManagementToolStripMenuItem_Click);
             // 
             // advanceDefinationToolStripMenuItem
@@ -524,98 +525,100 @@
             // saleOrderToolStripMenuItem
             // 
             this.saleOrderToolStripMenuItem.Name = "saleOrderToolStripMenuItem";
-            this.saleOrderToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.saleOrderToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.saleOrderToolStripMenuItem.Text = "Sale Order";
             this.saleOrderToolStripMenuItem.Click += new System.EventHandler(this.saleOrderToolStripMenuItem_Click);
             // 
             // saleOrderApprovalsProcessToolStripMenuItem
             // 
             this.saleOrderApprovalsProcessToolStripMenuItem.Name = "saleOrderApprovalsProcessToolStripMenuItem";
-            this.saleOrderApprovalsProcessToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.saleOrderApprovalsProcessToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.saleOrderApprovalsProcessToolStripMenuItem.Text = "Sale Order Approval\'s Process";
+            this.saleOrderApprovalsProcessToolStripMenuItem.Visible = false;
             this.saleOrderApprovalsProcessToolStripMenuItem.Click += new System.EventHandler(this.saleOrderApprovalsProcessToolStripMenuItem_Click);
             // 
             // retailToolStripMenuItem
             // 
             this.retailToolStripMenuItem.Name = "retailToolStripMenuItem";
-            this.retailToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
-            this.retailToolStripMenuItem.Text = "Retail Sale Invoice                                    F3  ";
+            this.retailToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.retailToolStripMenuItem.Text = "Retail Sale Invoice                                    ";
+            this.retailToolStripMenuItem.Visible = false;
             this.retailToolStripMenuItem.Click += new System.EventHandler(this.retailToolStripMenuItem_Click);
             // 
             // saleInvoiceToolStripMenuItem
             // 
             this.saleInvoiceToolStripMenuItem.Name = "saleInvoiceToolStripMenuItem";
-            this.saleInvoiceToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
-            this.saleInvoiceToolStripMenuItem.Text = "Sale Invoice                                         ‏ ‎Ctrl+l";
+            this.saleInvoiceToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.saleInvoiceToolStripMenuItem.Text = "Sale Invoice                                         ‏ ‎";
             this.saleInvoiceToolStripMenuItem.Click += new System.EventHandler(this.saleInvoiceToolStripMenuItem_Click);
             // 
             // purchaseInvoiceToolStripMenuItem
             // 
             this.purchaseInvoiceToolStripMenuItem.Name = "purchaseInvoiceToolStripMenuItem";
-            this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
-            this.purchaseInvoiceToolStripMenuItem.Text = "Purchase Invoice                              Ctrl+P                             " +
-    "             ‏";
+            this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.purchaseInvoiceToolStripMenuItem.Text = "Purchase Invoice                           ";
             this.purchaseInvoiceToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceToolStripMenuItem_Click);
             // 
             // purchaseInvoiceShortToolStripMenuItem
             // 
             this.purchaseInvoiceShortToolStripMenuItem.Name = "purchaseInvoiceShortToolStripMenuItem";
-            this.purchaseInvoiceShortToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.purchaseInvoiceShortToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.purchaseInvoiceShortToolStripMenuItem.Text = "Purchase Invoice Short";
+            this.purchaseInvoiceShortToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceShortToolStripMenuItem_Click_1);
             // 
             // saleReturnToolStripMenuItem
             // 
             this.saleReturnToolStripMenuItem.Name = "saleReturnToolStripMenuItem";
-            this.saleReturnToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.saleReturnToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.saleReturnToolStripMenuItem.Text = "Sale Return";
             this.saleReturnToolStripMenuItem.Click += new System.EventHandler(this.saleReturnToolStripMenuItem_Click);
             // 
             // purchaseReturnToolStripMenuItem
             // 
             this.purchaseReturnToolStripMenuItem.Name = "purchaseReturnToolStripMenuItem";
-            this.purchaseReturnToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.purchaseReturnToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.purchaseReturnToolStripMenuItem.Text = "Purchase Return";
             this.purchaseReturnToolStripMenuItem.Click += new System.EventHandler(this.purchaseReturnToolStripMenuItem_Click);
             // 
             // stockIssueToSalesmenToolStripMenuItem
             // 
             this.stockIssueToSalesmenToolStripMenuItem.Name = "stockIssueToSalesmenToolStripMenuItem";
-            this.stockIssueToSalesmenToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.stockIssueToSalesmenToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.stockIssueToSalesmenToolStripMenuItem.Text = "Stock Issue to Salesmen";
             this.stockIssueToSalesmenToolStripMenuItem.Click += new System.EventHandler(this.stockIssueToSalesmenToolStripMenuItem_Click);
             // 
             // stockTransferSalesToolStripMenuItem
             // 
             this.stockTransferSalesToolStripMenuItem.Name = "stockTransferSalesToolStripMenuItem";
-            this.stockTransferSalesToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.stockTransferSalesToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.stockTransferSalesToolStripMenuItem.Text = "Stock Receive from Salesmen";
             this.stockTransferSalesToolStripMenuItem.Click += new System.EventHandler(this.stockTransferSalesToolStripMenuItem_Click);
             // 
             // productReplacementToolStripMenuItem
             // 
             this.productReplacementToolStripMenuItem.Name = "productReplacementToolStripMenuItem";
-            this.productReplacementToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.productReplacementToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.productReplacementToolStripMenuItem.Text = "Stock Transfer Salesmen to Salesmen";
             this.productReplacementToolStripMenuItem.Click += new System.EventHandler(this.productReplacementToolStripMenuItem_Click);
             // 
             // purchaseDirectToSaleToolStripMenuItem
             // 
             this.purchaseDirectToSaleToolStripMenuItem.Name = "purchaseDirectToSaleToolStripMenuItem";
-            this.purchaseDirectToSaleToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
-            this.purchaseDirectToSaleToolStripMenuItem.Text = "Product Replacement";
+            this.purchaseDirectToSaleToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.purchaseDirectToSaleToolStripMenuItem.Text = "Product Replacement Price";
             this.purchaseDirectToSaleToolStripMenuItem.Click += new System.EventHandler(this.purchaseDirectToSaleToolStripMenuItem_Click);
             // 
             // postShortToolStripMenuItem
             // 
             this.postShortToolStripMenuItem.Name = "postShortToolStripMenuItem";
-            this.postShortToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.postShortToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.postShortToolStripMenuItem.Text = "Purchase direct to Sale";
             this.postShortToolStripMenuItem.Click += new System.EventHandler(this.postShortToolStripMenuItem_Click);
             // 
             // postShortStockSalesOrderToolStripMenuItem
             // 
             this.postShortStockSalesOrderToolStripMenuItem.Name = "postShortStockSalesOrderToolStripMenuItem";
-            this.postShortStockSalesOrderToolStripMenuItem.Size = new System.Drawing.Size(413, 22);
+            this.postShortStockSalesOrderToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.postShortStockSalesOrderToolStripMenuItem.Text = "Post Short Stock Sales Order";
             this.postShortStockSalesOrderToolStripMenuItem.Click += new System.EventHandler(this.postShortStockSalesOrderToolStripMenuItem_Click);
             // 
@@ -649,6 +652,7 @@
             // 
             this.cashReceivingVoucherToolStripMenuItem.Name = "cashReceivingVoucherToolStripMenuItem";
             this.cashReceivingVoucherToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.cashReceivingVoucherToolStripMenuItem.ShowShortcutKeys = false;
             this.cashReceivingVoucherToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.cashReceivingVoucherToolStripMenuItem.Text = "Cash Receiving Voucher";
             this.cashReceivingVoucherToolStripMenuItem.Click += new System.EventHandler(this.cashReceivingVoucherToolStripMenuItem_Click);
@@ -682,6 +686,7 @@
             this.preToolStripMenuItem.Name = "preToolStripMenuItem";
             this.preToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.preToolStripMenuItem.Text = "Pre-Recovery to Actaul Recovery Posting";
+            this.preToolStripMenuItem.Visible = false;
             this.preToolStripMenuItem.Click += new System.EventHandler(this.preToolStripMenuItem_Click);
             // 
             // dailyRecoveryAndPaymentSummaryToolStripMenuItem
@@ -1324,6 +1329,7 @@
             this.productWisePurchaseToolStripMenuItem.Name = "productWisePurchaseToolStripMenuItem";
             this.productWisePurchaseToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.productWisePurchaseToolStripMenuItem.Text = "Product Wise Purchase";
+            this.productWisePurchaseToolStripMenuItem.Visible = false;
             this.productWisePurchaseToolStripMenuItem.Click += new System.EventHandler(this.productWisePurchaseToolStripMenuItem_Click);
             // 
             // productPurchaseLedgerToolStripMenuItem

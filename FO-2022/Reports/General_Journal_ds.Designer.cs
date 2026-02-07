@@ -66,6 +66,8 @@ namespace FO_2022.Reports {
         
         private Customer_Town_and_Sector_Wise_SalesDataTable tableCustomer_Town_and_Sector_Wise_Sales;
         
+        private dailypayandrecoveryDataTable tabledailypayandrecovery;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -156,6 +158,9 @@ namespace FO_2022.Reports {
                 }
                 if ((ds.Tables["Customer_Town_and_Sector_Wise_Sales"] != null)) {
                     base.Tables.Add(new Customer_Town_and_Sector_Wise_SalesDataTable(ds.Tables["Customer_Town_and_Sector_Wise_Sales"]));
+                }
+                if ((ds.Tables["dailypayandrecovery"] != null)) {
+                    base.Tables.Add(new dailypayandrecoveryDataTable(ds.Tables["dailypayandrecovery"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -387,6 +392,16 @@ namespace FO_2022.Reports {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public dailypayandrecoveryDataTable dailypayandrecovery {
+            get {
+                return this.tabledailypayandrecovery;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -514,6 +529,9 @@ namespace FO_2022.Reports {
                 }
                 if ((ds.Tables["Customer_Town_and_Sector_Wise_Sales"] != null)) {
                     base.Tables.Add(new Customer_Town_and_Sector_Wise_SalesDataTable(ds.Tables["Customer_Town_and_Sector_Wise_Sales"]));
+                }
+                if ((ds.Tables["dailypayandrecovery"] != null)) {
+                    base.Tables.Add(new dailypayandrecoveryDataTable(ds.Tables["dailypayandrecovery"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -674,6 +692,12 @@ namespace FO_2022.Reports {
                     this.tableCustomer_Town_and_Sector_Wise_Sales.InitVars();
                 }
             }
+            this.tabledailypayandrecovery = ((dailypayandrecoveryDataTable)(base.Tables["dailypayandrecovery"]));
+            if ((initTable == true)) {
+                if ((this.tabledailypayandrecovery != null)) {
+                    this.tabledailypayandrecovery.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -726,6 +750,8 @@ namespace FO_2022.Reports {
             base.Tables.Add(this.tableprdctsaleledger);
             this.tableCustomer_Town_and_Sector_Wise_Sales = new Customer_Town_and_Sector_Wise_SalesDataTable();
             base.Tables.Add(this.tableCustomer_Town_and_Sector_Wise_Sales);
+            this.tabledailypayandrecovery = new dailypayandrecoveryDataTable();
+            base.Tables.Add(this.tabledailypayandrecovery);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -856,6 +882,12 @@ namespace FO_2022.Reports {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializedailypayandrecovery() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -971,6 +1003,9 @@ namespace FO_2022.Reports {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Customer_Town_and_Sector_Wise_SalesRowChangeEventHandler(object sender, Customer_Town_and_Sector_Wise_SalesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void dailypayandrecoveryRowChangeEventHandler(object sender, dailypayandrecoveryRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -9362,6 +9397,337 @@ namespace FO_2022.Reports {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class dailypayandrecoveryDataTable : global::System.Data.TypedTableBase<dailypayandrecoveryRow> {
+            
+            private global::System.Data.DataColumn columnSalesmanName;
+            
+            private global::System.Data.DataColumn columnRecoveryDate;
+            
+            private global::System.Data.DataColumn columnTransactionCount;
+            
+            private global::System.Data.DataColumn columnTotalRecovery;
+            
+            private global::System.Data.DataColumn columnTotalDiscount;
+            
+            private global::System.Data.DataColumn columnNetAmount;
+            
+            private global::System.Data.DataColumn columnLastRecoveryDate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryDataTable() {
+                this.TableName = "dailypayandrecovery";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal dailypayandrecoveryDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected dailypayandrecoveryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SalesmanNameColumn {
+                get {
+                    return this.columnSalesmanName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RecoveryDateColumn {
+                get {
+                    return this.columnRecoveryDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TransactionCountColumn {
+                get {
+                    return this.columnTransactionCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TotalRecoveryColumn {
+                get {
+                    return this.columnTotalRecovery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TotalDiscountColumn {
+                get {
+                    return this.columnTotalDiscount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NetAmountColumn {
+                get {
+                    return this.columnNetAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LastRecoveryDateColumn {
+                get {
+                    return this.columnLastRecoveryDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryRow this[int index] {
+                get {
+                    return ((dailypayandrecoveryRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event dailypayandrecoveryRowChangeEventHandler dailypayandrecoveryRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event dailypayandrecoveryRowChangeEventHandler dailypayandrecoveryRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event dailypayandrecoveryRowChangeEventHandler dailypayandrecoveryRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event dailypayandrecoveryRowChangeEventHandler dailypayandrecoveryRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AdddailypayandrecoveryRow(dailypayandrecoveryRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryRow AdddailypayandrecoveryRow(string SalesmanName, string RecoveryDate, string TransactionCount, string TotalRecovery, string TotalDiscount, string NetAmount, string LastRecoveryDate) {
+                dailypayandrecoveryRow rowdailypayandrecoveryRow = ((dailypayandrecoveryRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        SalesmanName,
+                        RecoveryDate,
+                        TransactionCount,
+                        TotalRecovery,
+                        TotalDiscount,
+                        NetAmount,
+                        LastRecoveryDate};
+                rowdailypayandrecoveryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdailypayandrecoveryRow);
+                return rowdailypayandrecoveryRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                dailypayandrecoveryDataTable cln = ((dailypayandrecoveryDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new dailypayandrecoveryDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnSalesmanName = base.Columns["SalesmanName"];
+                this.columnRecoveryDate = base.Columns["RecoveryDate"];
+                this.columnTransactionCount = base.Columns["TransactionCount"];
+                this.columnTotalRecovery = base.Columns["TotalRecovery"];
+                this.columnTotalDiscount = base.Columns["TotalDiscount"];
+                this.columnNetAmount = base.Columns["NetAmount"];
+                this.columnLastRecoveryDate = base.Columns["LastRecoveryDate"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnSalesmanName = new global::System.Data.DataColumn("SalesmanName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalesmanName);
+                this.columnRecoveryDate = new global::System.Data.DataColumn("RecoveryDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRecoveryDate);
+                this.columnTransactionCount = new global::System.Data.DataColumn("TransactionCount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionCount);
+                this.columnTotalRecovery = new global::System.Data.DataColumn("TotalRecovery", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalRecovery);
+                this.columnTotalDiscount = new global::System.Data.DataColumn("TotalDiscount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalDiscount);
+                this.columnNetAmount = new global::System.Data.DataColumn("NetAmount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNetAmount);
+                this.columnLastRecoveryDate = new global::System.Data.DataColumn("LastRecoveryDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastRecoveryDate);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryRow NewdailypayandrecoveryRow() {
+                return ((dailypayandrecoveryRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new dailypayandrecoveryRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(dailypayandrecoveryRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.dailypayandrecoveryRowChanged != null)) {
+                    this.dailypayandrecoveryRowChanged(this, new dailypayandrecoveryRowChangeEvent(((dailypayandrecoveryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.dailypayandrecoveryRowChanging != null)) {
+                    this.dailypayandrecoveryRowChanging(this, new dailypayandrecoveryRowChangeEvent(((dailypayandrecoveryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.dailypayandrecoveryRowDeleted != null)) {
+                    this.dailypayandrecoveryRowDeleted(this, new dailypayandrecoveryRowChangeEvent(((dailypayandrecoveryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.dailypayandrecoveryRowDeleting != null)) {
+                    this.dailypayandrecoveryRowDeleting(this, new dailypayandrecoveryRowChangeEvent(((dailypayandrecoveryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovedailypayandrecoveryRow(dailypayandrecoveryRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                General_Journal_ds ds = new General_Journal_ds();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "dailypayandrecoveryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DataTable1Row : global::System.Data.DataRow {
@@ -16683,6 +17049,219 @@ namespace FO_2022.Reports {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class dailypayandrecoveryRow : global::System.Data.DataRow {
+            
+            private dailypayandrecoveryDataTable tabledailypayandrecovery;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal dailypayandrecoveryRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabledailypayandrecovery = ((dailypayandrecoveryDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SalesmanName {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.SalesmanNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SalesmanName\' in table \'dailypayandrecovery\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.SalesmanNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RecoveryDate {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.RecoveryDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RecoveryDate\' in table \'dailypayandrecovery\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.RecoveryDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TransactionCount {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.TransactionCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TransactionCount\' in table \'dailypayandrecovery\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.TransactionCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TotalRecovery {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.TotalRecoveryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalRecovery\' in table \'dailypayandrecovery\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.TotalRecoveryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TotalDiscount {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.TotalDiscountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDiscount\' in table \'dailypayandrecovery\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.TotalDiscountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NetAmount {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.NetAmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetAmount\' in table \'dailypayandrecovery\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.NetAmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LastRecoveryDate {
+                get {
+                    try {
+                        return ((string)(this[this.tabledailypayandrecovery.LastRecoveryDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastRecoveryDate\' in table \'dailypayandrecovery\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tabledailypayandrecovery.LastRecoveryDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSalesmanNameNull() {
+                return this.IsNull(this.tabledailypayandrecovery.SalesmanNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSalesmanNameNull() {
+                this[this.tabledailypayandrecovery.SalesmanNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRecoveryDateNull() {
+                return this.IsNull(this.tabledailypayandrecovery.RecoveryDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRecoveryDateNull() {
+                this[this.tabledailypayandrecovery.RecoveryDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTransactionCountNull() {
+                return this.IsNull(this.tabledailypayandrecovery.TransactionCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTransactionCountNull() {
+                this[this.tabledailypayandrecovery.TransactionCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotalRecoveryNull() {
+                return this.IsNull(this.tabledailypayandrecovery.TotalRecoveryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotalRecoveryNull() {
+                this[this.tabledailypayandrecovery.TotalRecoveryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotalDiscountNull() {
+                return this.IsNull(this.tabledailypayandrecovery.TotalDiscountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotalDiscountNull() {
+                this[this.tabledailypayandrecovery.TotalDiscountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNetAmountNull() {
+                return this.IsNull(this.tabledailypayandrecovery.NetAmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNetAmountNull() {
+                this[this.tabledailypayandrecovery.NetAmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLastRecoveryDateNull() {
+                return this.IsNull(this.tabledailypayandrecovery.LastRecoveryDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLastRecoveryDateNull() {
+                this[this.tabledailypayandrecovery.LastRecoveryDateColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -17382,6 +17961,40 @@ namespace FO_2022.Reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Customer_Town_and_Sector_Wise_SalesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class dailypayandrecoveryRowChangeEvent : global::System.EventArgs {
+            
+            private dailypayandrecoveryRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryRowChangeEvent(dailypayandrecoveryRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public dailypayandrecoveryRow Row {
                 get {
                     return this.eventRow;
                 }

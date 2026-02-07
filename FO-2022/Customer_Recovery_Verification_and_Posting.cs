@@ -27,5 +27,20 @@ namespace FO_2022
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

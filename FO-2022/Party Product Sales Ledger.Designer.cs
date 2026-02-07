@@ -186,21 +186,19 @@
             // partynameskiptxtbox
             // 
             this.partynameskiptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynameskiptxtbox.Location = new System.Drawing.Point(164, 46);
+            this.partynameskiptxtbox.Location = new System.Drawing.Point(164, 51);
             this.partynameskiptxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.partynameskiptxtbox.Multiline = true;
             this.partynameskiptxtbox.Name = "partynameskiptxtbox";
-            this.partynameskiptxtbox.Size = new System.Drawing.Size(201, 18);
+            this.partynameskiptxtbox.Size = new System.Drawing.Size(201, 16);
             this.partynameskiptxtbox.TabIndex = 171;
             // 
             // partyidforskiptxtbox
             // 
             this.partyidforskiptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidforskiptxtbox.Location = new System.Drawing.Point(7, 48);
+            this.partyidforskiptxtbox.Location = new System.Drawing.Point(0, 51);
             this.partyidforskiptxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.partyidforskiptxtbox.Multiline = true;
             this.partyidforskiptxtbox.Name = "partyidforskiptxtbox";
-            this.partyidforskiptxtbox.Size = new System.Drawing.Size(128, 18);
+            this.partyidforskiptxtbox.Size = new System.Drawing.Size(124, 16);
             this.partyidforskiptxtbox.TabIndex = 172;
             // 
             // label8
@@ -260,42 +258,38 @@
             // productnametxtbox
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productnametxtbox.Location = new System.Drawing.Point(311, 204);
+            this.productnametxtbox.Location = new System.Drawing.Point(310, 213);
             this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(195, 23);
+            this.productnametxtbox.Size = new System.Drawing.Size(195, 14);
             this.productnametxtbox.TabIndex = 173;
             // 
             // productidtxtbox
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productidtxtbox.Location = new System.Drawing.Point(140, 204);
+            this.productidtxtbox.Location = new System.Drawing.Point(139, 213);
             this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(122, 23);
+            this.productidtxtbox.Size = new System.Drawing.Size(122, 14);
             this.productidtxtbox.TabIndex = 174;
             this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(310, 255);
+            this.partynametxtbox.Location = new System.Drawing.Point(309, 264);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(195, 23);
+            this.partynametxtbox.Size = new System.Drawing.Size(195, 14);
             this.partynametxtbox.TabIndex = 175;
             // 
             // partyidtxtbox
             // 
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partyidtxtbox.Location = new System.Drawing.Point(139, 253);
+            this.partyidtxtbox.Location = new System.Drawing.Point(138, 262);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(120, 23);
+            this.partyidtxtbox.Size = new System.Drawing.Size(120, 14);
             this.partyidtxtbox.TabIndex = 176;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 

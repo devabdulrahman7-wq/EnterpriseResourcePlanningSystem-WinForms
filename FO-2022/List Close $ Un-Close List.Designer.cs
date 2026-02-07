@@ -84,6 +84,7 @@
             // clearbtn
             // 
             this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.Enabled = false;
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,6 +98,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,6 +117,7 @@
             this.textBox2.Location = new System.Drawing.Point(223, 124);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(206, 19);
             this.textBox2.TabIndex = 646;
             this.textBox2.Text = "      List  of Un-Closed Dates";
@@ -127,6 +130,7 @@
             this.textBox1.Location = new System.Drawing.Point(574, 124);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(210, 19);
             this.textBox1.TabIndex = 647;
             this.textBox1.Text = "     List of Closed Dates";
@@ -173,7 +177,7 @@
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(459, 148);
+            this.refreshbtn.Location = new System.Drawing.Point(461, 321);
             this.refreshbtn.Name = "refreshbtn";
             this.refreshbtn.Size = new System.Drawing.Size(81, 31);
             this.refreshbtn.TabIndex = 650;

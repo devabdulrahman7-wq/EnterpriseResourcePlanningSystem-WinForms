@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Company_Wise_Profits));
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.todate = new System.Windows.Forms.Label();
             this.fromdatepckr = new System.Windows.Forms.Label();
@@ -38,19 +37,9 @@
             this.previewbtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(565, -3);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox4.TabIndex = 461;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -89,7 +78,7 @@
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(332, 157);
-            this.todatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(142, 20);
             this.todatepcker.TabIndex = 457;
@@ -98,7 +87,7 @@
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(144, 157);
-            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(128, 20);
             this.fromdatepcker.TabIndex = 456;
@@ -110,7 +99,7 @@
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewbtn.Location = new System.Drawing.Point(200, 248);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(72, 26);
             this.previewbtn.TabIndex = 464;
@@ -125,7 +114,7 @@
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Location = new System.Drawing.Point(279, 248);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(56, 26);
             this.printbtn.TabIndex = 462;
@@ -140,7 +129,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(343, 248);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(56, 26);
             this.closebtn.TabIndex = 463;
@@ -148,16 +137,27 @@
             this.closebtn.UseVisualStyleBackColor = false;
             this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(556, 1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 465;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
             // Company_Wise_Profits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(594, 326);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.todate);
             this.Controls.Add(this.fromdatepckr);
@@ -169,15 +169,13 @@
             this.Text = "Company_Wise_Profits";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Company_Wise_Profits_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label todate;
         private System.Windows.Forms.Label fromdatepckr;
@@ -186,5 +184,6 @@
         private System.Windows.Forms.Button previewbtn;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Button closebtn;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

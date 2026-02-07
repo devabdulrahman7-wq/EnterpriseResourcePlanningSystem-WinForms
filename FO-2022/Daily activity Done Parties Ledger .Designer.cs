@@ -115,9 +115,8 @@
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partynametxtbox.Location = new System.Drawing.Point(243, 226);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(188, 20);
+            this.partynametxtbox.Size = new System.Drawing.Size(188, 16);
             this.partynametxtbox.TabIndex = 305;
             // 
             // partyidtxtbox
@@ -125,9 +124,8 @@
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox.Location = new System.Drawing.Point(107, 226);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(93, 20);
+            this.partyidtxtbox.Size = new System.Drawing.Size(93, 16);
             this.partyidtxtbox.TabIndex = 304;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 

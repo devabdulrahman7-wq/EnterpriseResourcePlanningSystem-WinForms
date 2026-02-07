@@ -57,10 +57,9 @@
             // 
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox.Location = new System.Drawing.Point(174, 230);
-            this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.partyidtxtbox.Multiline = true;
+            this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(120, 23);
+            this.partyidtxtbox.Size = new System.Drawing.Size(120, 14);
             this.partyidtxtbox.TabIndex = 191;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
@@ -68,21 +67,18 @@
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partynametxtbox.Location = new System.Drawing.Point(345, 230);
-            this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.partynametxtbox.Multiline = true;
+            this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(182, 23);
+            this.partynametxtbox.Size = new System.Drawing.Size(182, 14);
             this.partynametxtbox.TabIndex = 190;
-            //this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
             // 
             // productidtxtbox
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productidtxtbox.Location = new System.Drawing.Point(174, 173);
-            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.productidtxtbox.Multiline = true;
+            this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(122, 23);
+            this.productidtxtbox.Size = new System.Drawing.Size(122, 14);
             this.productidtxtbox.TabIndex = 189;
             this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
@@ -90,18 +86,16 @@
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productnametxtbox.Location = new System.Drawing.Point(345, 173);
-            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.productnametxtbox.Multiline = true;
+            this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(182, 23);
+            this.productnametxtbox.Size = new System.Drawing.Size(182, 14);
             this.productnametxtbox.TabIndex = 188;
-            //this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // searchproductid
             // 
             this.searchproductid.Image = ((System.Drawing.Image)(resources.GetObject("searchproductid.Image")));
-            this.searchproductid.Location = new System.Drawing.Point(303, 173);
-            this.searchproductid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchproductid.Location = new System.Drawing.Point(302, 164);
+            this.searchproductid.Margin = new System.Windows.Forms.Padding(4);
             this.searchproductid.Name = "searchproductid";
             this.searchproductid.Size = new System.Drawing.Size(35, 23);
             this.searchproductid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,8 +106,8 @@
             // searchpartyid
             // 
             this.searchpartyid.Image = ((System.Drawing.Image)(resources.GetObject("searchpartyid.Image")));
-            this.searchpartyid.Location = new System.Drawing.Point(303, 230);
-            this.searchpartyid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchpartyid.Location = new System.Drawing.Point(302, 221);
+            this.searchpartyid.Margin = new System.Windows.Forms.Padding(4);
             this.searchpartyid.Name = "searchpartyid";
             this.searchpartyid.Size = new System.Drawing.Size(35, 23);
             this.searchpartyid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,22 +120,20 @@
             this.todatepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepicker.Location = new System.Drawing.Point(345, 123);
-            this.todatepicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.todatepicker.Margin = new System.Windows.Forms.Padding(4);
             this.todatepicker.Name = "todatepicker";
             this.todatepicker.Size = new System.Drawing.Size(94, 22);
             this.todatepicker.TabIndex = 185;
-            //this.todatepicker.ValueChanged += new System.EventHandler(this.todatepicker_ValueChanged);
             // 
             // fromdatepicker
             // 
             this.fromdatepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepicker.Location = new System.Drawing.Point(174, 123);
-            this.fromdatepicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromdatepicker.Margin = new System.Windows.Forms.Padding(4);
             this.fromdatepicker.Name = "fromdatepicker";
             this.fromdatepicker.Size = new System.Drawing.Size(98, 22);
             this.fromdatepicker.TabIndex = 184;
-            //this.fromdatepicker.ValueChanged += new System.EventHandler(this.fromdatepicker_ValueChanged);
             // 
             // label7
             // 
@@ -233,7 +225,7 @@
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewbtn.Location = new System.Drawing.Point(217, 318);
-            this.previewbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(90, 24);
             this.previewbtn.TabIndex = 194;
@@ -248,7 +240,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(391, 318);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(71, 24);
             this.closebtn.TabIndex = 193;
@@ -263,7 +255,7 @@
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Location = new System.Drawing.Point(312, 318);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(71, 24);
             this.printbtn.TabIndex = 192;
@@ -275,7 +267,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(609, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,7 +302,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Party_Product_Purchase_Ledger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_Product_Purchase_Ledger";

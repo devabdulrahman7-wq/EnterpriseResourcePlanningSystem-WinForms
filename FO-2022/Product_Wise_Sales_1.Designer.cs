@@ -73,7 +73,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(96, 23);
             this.todatepcker.TabIndex = 276;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -82,12 +81,11 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(104, 23);
             this.fromdatepcker.TabIndex = 275;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // cmpnyidsearch
             // 
             this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(241, 240);
+            this.cmpnyidsearch.Location = new System.Drawing.Point(241, 235);
             this.cmpnyidsearch.Name = "cmpnyidsearch";
             this.cmpnyidsearch.Size = new System.Drawing.Size(29, 22);
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,20 +98,17 @@
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnynametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnynametxtbox.Location = new System.Drawing.Point(271, 240);
-            this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(280, 20);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(280, 16);
             this.cmpnynametxtbox.TabIndex = 273;
-            //this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(124, 242);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(118, 20);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(108, 16);
             this.cmpnyidtxtbox.TabIndex = 272;
             this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
@@ -180,7 +175,7 @@
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(238, 189);
+            this.salesmanidsearch.Location = new System.Drawing.Point(238, 184);
             this.salesmanidsearch.Name = "salesmanidsearch";
             this.salesmanidsearch.Size = new System.Drawing.Size(32, 22);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,20 +188,17 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesmannametxtbox.Location = new System.Drawing.Point(266, 189);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(285, 20);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(285, 16);
             this.salesmannametxtbox.TabIndex = 280;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesmanidtxtbox.Location = new System.Drawing.Point(124, 191);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(114, 20);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(104, 16);
             this.salesmanidtxtbox.TabIndex = 279;
             this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
@@ -271,7 +263,6 @@
             this.listView1.Size = new System.Drawing.Size(427, 97);
             this.listView1.TabIndex = 286;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            //this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // selctallfromlistviewbtn
             // 

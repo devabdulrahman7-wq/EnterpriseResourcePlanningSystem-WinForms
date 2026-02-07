@@ -51,7 +51,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(399, 538);
+            this.closebtn.Location = new System.Drawing.Point(394, 554);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(67, 32);
@@ -63,10 +63,11 @@
             // resetbtn
             // 
             this.resetbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.resetbtn.Enabled = false;
             this.resetbtn.FlatAppearance.BorderSize = 0;
             this.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetbtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetbtn.Location = new System.Drawing.Point(324, 538);
+            this.resetbtn.Location = new System.Drawing.Point(319, 554);
             this.resetbtn.Margin = new System.Windows.Forms.Padding(4);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(67, 32);
@@ -77,10 +78,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(249, 538);
+            this.savebtn.Location = new System.Drawing.Point(244, 554);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(67, 32);
@@ -128,7 +130,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(159, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(493, 42);
+            this.label1.Size = new System.Drawing.Size(382, 32);
             this.label1.TabIndex = 91;
             this.label1.Text = "Assign Security Tasks to Users";
             // 
@@ -138,7 +140,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 23);
+            this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 92;
             this.label2.Text = "User Name";
             // 
@@ -147,7 +149,7 @@
             this.usernamecombox.FormattingEnabled = true;
             this.usernamecombox.Location = new System.Drawing.Point(33, 117);
             this.usernamecombox.Name = "usernamecombox";
-            this.usernamecombox.Size = new System.Drawing.Size(222, 27);
+            this.usernamecombox.Size = new System.Drawing.Size(222, 24);
             this.usernamecombox.TabIndex = 93;
             // 
             // textBox2
@@ -158,7 +160,7 @@
             this.textBox2.Location = new System.Drawing.Point(33, 146);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(611, 23);
+            this.textBox2.Size = new System.Drawing.Size(611, 19);
             this.textBox2.TabIndex = 648;
             this.textBox2.Text = "                                                                 Available Tasks";
             // 
@@ -175,7 +177,7 @@
             // 
             // Assign_Security_Tasks_to_User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(691, 621);
@@ -188,6 +190,7 @@
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.savebtn);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

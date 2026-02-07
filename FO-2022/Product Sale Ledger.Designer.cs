@@ -62,9 +62,8 @@
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productidtxtbox.Location = new System.Drawing.Point(166, 193);
-            this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(105, 20);
+            this.productidtxtbox.Size = new System.Drawing.Size(105, 16);
             this.productidtxtbox.TabIndex = 190;
             this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             // 
@@ -72,16 +71,15 @@
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productnametxtbox.Location = new System.Drawing.Point(313, 193);
-            this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(167, 20);
+            this.productnametxtbox.Size = new System.Drawing.Size(167, 16);
             this.productnametxtbox.TabIndex = 189;
             this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // searchproductid
             // 
             this.searchproductid.Image = ((System.Drawing.Image)(resources.GetObject("searchproductid.Image")));
-            this.searchproductid.Location = new System.Drawing.Point(277, 195);
+            this.searchproductid.Location = new System.Drawing.Point(277, 192);
             this.searchproductid.Name = "searchproductid";
             this.searchproductid.Size = new System.Drawing.Size(30, 18);
             this.searchproductid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,7 +231,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Sale_Ledger";
             this.TopMost = true;
-            //this.Load += new System.EventHandler(this.Product_Sale_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchproductid)).EndInit();
             this.ResumeLayout(false);

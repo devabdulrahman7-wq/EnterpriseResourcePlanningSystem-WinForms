@@ -116,9 +116,8 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(290, 223);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 16);
             this.salesmannametxtbox.TabIndex = 419;
             // 
             // salesmanidtxtbox
@@ -126,19 +125,18 @@
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(129, 223);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 16);
             this.salesmanidtxtbox.TabIndex = 418;
             this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(244, 223);
+            this.salesmanidsearch.Location = new System.Drawing.Point(244, 220);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.salesmanidsearch.Name = "salesmanidsearch";
-            this.salesmanidsearch.Size = new System.Drawing.Size(40, 25);
+            this.salesmanidsearch.Size = new System.Drawing.Size(40, 19);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 417;
             this.salesmanidsearch.TabStop = false;
@@ -174,7 +172,7 @@
             this.previewbtn.Location = new System.Drawing.Point(147, 354);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 32);
+            this.previewbtn.Size = new System.Drawing.Size(90, 27);
             this.previewbtn.TabIndex = 426;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -189,7 +187,7 @@
             this.printbtn.Location = new System.Drawing.Point(244, 354);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 32);
+            this.printbtn.Size = new System.Drawing.Size(90, 27);
             this.printbtn.TabIndex = 424;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -204,7 +202,7 @@
             this.closebtn.Location = new System.Drawing.Point(340, 354);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 32);
+            this.closebtn.Size = new System.Drawing.Size(90, 27);
             this.closebtn.TabIndex = 425;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;

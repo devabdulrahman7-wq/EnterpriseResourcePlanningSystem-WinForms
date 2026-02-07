@@ -103,9 +103,8 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesmannametxtbox.Location = new System.Drawing.Point(242, 284);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(298, 20);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(298, 16);
             this.salesmannametxtbox.TabIndex = 248;
             // 
             // salesmanidtxtbox
@@ -113,9 +112,8 @@
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesmanidtxtbox.Location = new System.Drawing.Point(97, 286);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(117, 20);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(117, 16);
             this.salesmanidtxtbox.TabIndex = 246;
             this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
@@ -124,9 +122,8 @@
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnynametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnynametxtbox.Location = new System.Drawing.Point(242, 182);
-            this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(302, 20);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(302, 16);
             this.cmpnynametxtbox.TabIndex = 245;
             // 
             // cmpnyidtxtbox
@@ -134,9 +131,8 @@
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(100, 184);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 20);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 16);
             this.cmpnyidtxtbox.TabIndex = 244;
             this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
@@ -286,9 +282,8 @@
             this.tosaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tosaletxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tosaletxtbox.Location = new System.Drawing.Point(242, 340);
-            this.tosaletxtbox.Multiline = true;
             this.tosaletxtbox.Name = "tosaletxtbox";
-            this.tosaletxtbox.Size = new System.Drawing.Size(298, 20);
+            this.tosaletxtbox.Size = new System.Drawing.Size(298, 16);
             this.tosaletxtbox.TabIndex = 262;
             // 
             // fromsaletxtbox
@@ -296,9 +291,8 @@
             this.fromsaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fromsaletxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromsaletxtbox.Location = new System.Drawing.Point(97, 340);
-            this.fromsaletxtbox.Multiline = true;
             this.fromsaletxtbox.Name = "fromsaletxtbox";
-            this.fromsaletxtbox.Size = new System.Drawing.Size(117, 20);
+            this.fromsaletxtbox.Size = new System.Drawing.Size(117, 16);
             this.fromsaletxtbox.TabIndex = 261;
             // 
             // label10

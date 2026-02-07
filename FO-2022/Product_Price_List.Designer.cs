@@ -66,7 +66,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(212, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 42);
+            this.label3.Size = new System.Drawing.Size(238, 32);
             this.label3.TabIndex = 485;
             this.label3.Text = "Product Price List";
             // 
@@ -128,7 +128,7 @@
             this.purchasepricewiseradiobtn.AutoSize = true;
             this.purchasepricewiseradiobtn.Location = new System.Drawing.Point(27, 94);
             this.purchasepricewiseradiobtn.Name = "purchasepricewiseradiobtn";
-            this.purchasepricewiseradiobtn.Size = new System.Drawing.Size(180, 25);
+            this.purchasepricewiseradiobtn.Size = new System.Drawing.Size(141, 20);
             this.purchasepricewiseradiobtn.TabIndex = 2;
             this.purchasepricewiseradiobtn.TabStop = true;
             this.purchasepricewiseradiobtn.Text = "Purchase Price Wise";
@@ -140,7 +140,7 @@
             this.retailpricewiseradiobtn.AutoSize = true;
             this.retailpricewiseradiobtn.Location = new System.Drawing.Point(27, 59);
             this.retailpricewiseradiobtn.Name = "retailpricewiseradiobtn";
-            this.retailpricewiseradiobtn.Size = new System.Drawing.Size(156, 25);
+            this.retailpricewiseradiobtn.Size = new System.Drawing.Size(121, 20);
             this.retailpricewiseradiobtn.TabIndex = 1;
             this.retailpricewiseradiobtn.TabStop = true;
             this.retailpricewiseradiobtn.Text = "Retail Price Wise";
@@ -153,7 +153,7 @@
             this.salepricewiseradiobtn.AutoSize = true;
             this.salepricewiseradiobtn.Location = new System.Drawing.Point(27, 21);
             this.salepricewiseradiobtn.Name = "salepricewiseradiobtn";
-            this.salepricewiseradiobtn.Size = new System.Drawing.Size(144, 25);
+            this.salepricewiseradiobtn.Size = new System.Drawing.Size(114, 20);
             this.salepricewiseradiobtn.TabIndex = 0;
             this.salepricewiseradiobtn.TabStop = true;
             this.salepricewiseradiobtn.Text = "Sale Price Wise";
@@ -165,9 +165,8 @@
             this.companynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.companynametxtbox.Location = new System.Drawing.Point(302, 144);
             this.companynametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.companynametxtbox.Multiline = true;
             this.companynametxtbox.Name = "companynametxtbox";
-            this.companynametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.companynametxtbox.Size = new System.Drawing.Size(223, 16);
             this.companynametxtbox.TabIndex = 495;
             // 
             // cmpnyidtxtbox
@@ -175,9 +174,8 @@
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(141, 144);
             this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(111, 16);
             this.cmpnyidtxtbox.TabIndex = 494;
             this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             this.cmpnyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmpnyidtxtbox_KeyDown);
@@ -185,10 +183,10 @@
             // searchcompany
             // 
             this.searchcompany.Image = ((System.Drawing.Image)(resources.GetObject("searchcompany.Image")));
-            this.searchcompany.Location = new System.Drawing.Point(256, 144);
+            this.searchcompany.Location = new System.Drawing.Point(256, 142);
             this.searchcompany.Margin = new System.Windows.Forms.Padding(5);
             this.searchcompany.Name = "searchcompany";
-            this.searchcompany.Size = new System.Drawing.Size(40, 25);
+            this.searchcompany.Size = new System.Drawing.Size(40, 18);
             this.searchcompany.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchcompany.TabIndex = 493;
             this.searchcompany.TabStop = false;
@@ -200,7 +198,7 @@
             this.a.Location = new System.Drawing.Point(306, 123);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(0, 21);
+            this.a.Size = new System.Drawing.Size(0, 16);
             this.a.TabIndex = 492;
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -210,7 +208,7 @@
             this.label1.Location = new System.Drawing.Point(139, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 491;
             this.label1.Text = "Company";
             // 
@@ -220,13 +218,13 @@
             this.label2.Location = new System.Drawing.Point(299, 123);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 496;
             this.label2.Text = "Company Name";
             // 
             // Product_Price_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(647, 411);

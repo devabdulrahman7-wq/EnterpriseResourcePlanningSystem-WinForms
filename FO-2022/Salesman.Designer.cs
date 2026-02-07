@@ -79,9 +79,8 @@
             this.nicnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nicnotxtbox.Location = new System.Drawing.Point(369, 445);
             this.nicnotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nicnotxtbox.Multiline = true;
             this.nicnotxtbox.Name = "nicnotxtbox";
-            this.nicnotxtbox.Size = new System.Drawing.Size(339, 20);
+            this.nicnotxtbox.Size = new System.Drawing.Size(339, 16);
             this.nicnotxtbox.TabIndex = 587;
             this.nicnotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nicnotxtbox_KeyDown);
             // 
@@ -91,7 +90,7 @@
             this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(369, 425);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(62, 21);
+            this.label23.Size = new System.Drawing.Size(46, 16);
             this.label23.TabIndex = 586;
             this.label23.Text = "NIC No";
             // 
@@ -100,9 +99,8 @@
             this.phonenotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phonenotxtbox.Location = new System.Drawing.Point(530, 388);
             this.phonenotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.phonenotxtbox.Multiline = true;
             this.phonenotxtbox.Name = "phonenotxtbox";
-            this.phonenotxtbox.Size = new System.Drawing.Size(179, 20);
+            this.phonenotxtbox.Size = new System.Drawing.Size(179, 16);
             this.phonenotxtbox.TabIndex = 583;
             this.phonenotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonenotxtbox_KeyDown);
             // 
@@ -112,7 +110,7 @@
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(536, 368);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 21);
+            this.label20.Size = new System.Drawing.Size(61, 16);
             this.label20.TabIndex = 582;
             this.label20.Text = "Phone No";
             // 
@@ -121,9 +119,8 @@
             this.mblnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mblnotxtbox.Location = new System.Drawing.Point(367, 388);
             this.mblnotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.mblnotxtbox.Multiline = true;
             this.mblnotxtbox.Name = "mblnotxtbox";
-            this.mblnotxtbox.Size = new System.Drawing.Size(155, 20);
+            this.mblnotxtbox.Size = new System.Drawing.Size(155, 16);
             this.mblnotxtbox.TabIndex = 581;
             this.mblnotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mblnotxtbox_KeyDown);
             // 
@@ -133,7 +130,7 @@
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(364, 368);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 21);
+            this.label21.Size = new System.Drawing.Size(63, 16);
             this.label21.TabIndex = 580;
             this.label21.Text = "Mobile No";
             // 
@@ -142,9 +139,8 @@
             this.citytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.citytxtbox.Location = new System.Drawing.Point(369, 334);
             this.citytxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.citytxtbox.Multiline = true;
             this.citytxtbox.Name = "citytxtbox";
-            this.citytxtbox.Size = new System.Drawing.Size(342, 20);
+            this.citytxtbox.Size = new System.Drawing.Size(342, 16);
             this.citytxtbox.TabIndex = 575;
             this.citytxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.citytxtbox_KeyDown);
             // 
@@ -154,7 +150,7 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(369, 314);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 21);
+            this.label17.Size = new System.Drawing.Size(28, 16);
             this.label17.TabIndex = 574;
             this.label17.Text = "City";
             // 
@@ -163,9 +159,8 @@
             this.addresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addresstxtbox.Location = new System.Drawing.Point(369, 266);
             this.addresstxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.addresstxtbox.Multiline = true;
             this.addresstxtbox.Name = "addresstxtbox";
-            this.addresstxtbox.Size = new System.Drawing.Size(337, 36);
+            this.addresstxtbox.Size = new System.Drawing.Size(337, 16);
             this.addresstxtbox.TabIndex = 573;
             this.addresstxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addresstxtbox_KeyDown);
             // 
@@ -175,13 +170,14 @@
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(366, 246);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 21);
+            this.label15.Size = new System.Drawing.Size(58, 16);
             this.label15.TabIndex = 572;
             this.label15.Text = "Address:";
             // 
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,6 +208,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,6 +254,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,9 +272,8 @@
             this.partyidtxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox1.Location = new System.Drawing.Point(441, 168);
             this.partyidtxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.partyidtxtbox1.Multiline = true;
             this.partyidtxtbox1.Name = "partyidtxtbox1";
-            this.partyidtxtbox1.Size = new System.Drawing.Size(38, 20);
+            this.partyidtxtbox1.Size = new System.Drawing.Size(38, 16);
             this.partyidtxtbox1.TabIndex = 565;
             // 
             // partyidtxtbox
@@ -284,9 +281,8 @@
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox.Location = new System.Drawing.Point(365, 168);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(68, 20);
+            this.partyidtxtbox.Size = new System.Drawing.Size(68, 16);
             this.partyidtxtbox.TabIndex = 564;
             this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
@@ -295,9 +291,8 @@
             this.nametxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nametxtbox1.Location = new System.Drawing.Point(365, 212);
             this.nametxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox1.Multiline = true;
             this.nametxtbox1.Name = "nametxtbox1";
-            this.nametxtbox1.Size = new System.Drawing.Size(341, 20);
+            this.nametxtbox1.Size = new System.Drawing.Size(341, 16);
             this.nametxtbox1.TabIndex = 563;
             this.nametxtbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox1_KeyDown);
             // 
@@ -307,7 +302,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(369, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 21);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 562;
             this.label6.Text = "Name:";
             // 
@@ -317,7 +312,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(362, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 561;
             this.label5.Text = "Party ID";
             // 
@@ -327,7 +322,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(285, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 42);
+            this.label4.Size = new System.Drawing.Size(130, 32);
             this.label4.TabIndex = 560;
             this.label4.Text = "Salesman";
             // 
@@ -348,7 +343,8 @@
             this.textBox1.Location = new System.Drawing.Point(21, 103);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 23);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(319, 19);
             this.textBox1.TabIndex = 558;
             this.textBox1.Text = "                Available Towns";
             // 
@@ -357,9 +353,8 @@
             this.nametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nametxtbox.Location = new System.Drawing.Point(81, 77);
             this.nametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox.Multiline = true;
             this.nametxtbox.Name = "nametxtbox";
-            this.nametxtbox.Size = new System.Drawing.Size(259, 20);
+            this.nametxtbox.Size = new System.Drawing.Size(259, 16);
             this.nametxtbox.TabIndex = 557;
             this.nametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox_KeyDown);
             // 
@@ -369,7 +364,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 21);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 556;
             this.label1.Text = "Name:";
             // 
@@ -378,9 +373,8 @@
             this.commisiontxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.commisiontxtbox.Location = new System.Drawing.Point(369, 503);
             this.commisiontxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.commisiontxtbox.Multiline = true;
             this.commisiontxtbox.Name = "commisiontxtbox";
-            this.commisiontxtbox.Size = new System.Drawing.Size(133, 18);
+            this.commisiontxtbox.Size = new System.Drawing.Size(133, 16);
             this.commisiontxtbox.TabIndex = 592;
             this.commisiontxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.commisiontxtbox_KeyDown);
             // 
@@ -390,7 +384,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(369, 483);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 21);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 591;
             this.label2.Text = "Comission(%)";
             // 
@@ -399,17 +393,17 @@
             this.isstockholderchkbox.AutoSize = true;
             this.isstockholderchkbox.Location = new System.Drawing.Point(530, 501);
             this.isstockholderchkbox.Name = "isstockholderchkbox";
-            this.isstockholderchkbox.Size = new System.Drawing.Size(144, 25);
+            this.isstockholderchkbox.Size = new System.Drawing.Size(112, 20);
             this.isstockholderchkbox.TabIndex = 593;
             this.isstockholderchkbox.Text = "Is Stock Holder";
             this.isstockholderchkbox.UseVisualStyleBackColor = true;
             // 
             // Salesman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(721, 606);
+            this.ClientSize = new System.Drawing.Size(729, 615);
             this.Controls.Add(this.isstockholderchkbox);
             this.Controls.Add(this.commisiontxtbox);
             this.Controls.Add(this.label2);

@@ -51,9 +51,8 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(293, 152);
             this.townnametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(197, 25);
+            this.townnametxtbox.Size = new System.Drawing.Size(197, 16);
             this.townnametxtbox.TabIndex = 414;
             this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
@@ -62,9 +61,8 @@
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townidtxtbox.Location = new System.Drawing.Point(132, 152);
             this.townidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
-            this.townidtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.townidtxtbox.Size = new System.Drawing.Size(111, 16);
             this.townidtxtbox.TabIndex = 413;
             this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 

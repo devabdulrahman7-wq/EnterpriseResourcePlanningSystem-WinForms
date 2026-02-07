@@ -68,7 +68,6 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(243, 24);
             this.cstmrnametxtbox.TabIndex = 454;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
@@ -79,7 +78,6 @@
             this.cstmridtxtbox.Name = "cstmridtxtbox";
             this.cstmridtxtbox.Size = new System.Drawing.Size(130, 24);
             this.cstmridtxtbox.TabIndex = 453;
-            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -153,7 +151,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(125, 23);
             this.todatepcker.TabIndex = 446;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -163,7 +160,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(113, 23);
             this.fromdatepcker.TabIndex = 445;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // previewbtn
             // 
@@ -171,10 +167,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(162, 358);
+            this.previewbtn.Location = new System.Drawing.Point(162, 338);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 32);
+            this.previewbtn.Size = new System.Drawing.Size(90, 29);
             this.previewbtn.TabIndex = 464;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -186,10 +182,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(259, 358);
+            this.printbtn.Location = new System.Drawing.Point(259, 338);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 32);
+            this.printbtn.Size = new System.Drawing.Size(90, 29);
             this.printbtn.TabIndex = 462;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -201,10 +197,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(355, 358);
+            this.closebtn.Location = new System.Drawing.Point(355, 338);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 32);
+            this.closebtn.Size = new System.Drawing.Size(90, 29);
             this.closebtn.TabIndex = 463;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -215,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(645, 429);
+            this.ClientSize = new System.Drawing.Size(645, 419);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);

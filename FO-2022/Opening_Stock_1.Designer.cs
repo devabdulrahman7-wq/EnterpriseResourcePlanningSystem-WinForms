@@ -46,30 +46,28 @@
             // cmpnynametxtbox
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cmpnynametxtbox.Location = new System.Drawing.Point(296, 139);
+            this.cmpnynametxtbox.Location = new System.Drawing.Point(296, 151);
             this.cmpnynametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 16);
             this.cmpnynametxtbox.TabIndex = 480;
             // 
             // cmpnyidtxtbox
             // 
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cmpnyidtxtbox.Location = new System.Drawing.Point(127, 139);
+            this.cmpnyidtxtbox.Location = new System.Drawing.Point(127, 151);
             this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(127, 28);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(127, 16);
             this.cmpnyidtxtbox.TabIndex = 479;
             // 
             // cmpnyidsearch
             // 
             this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(257, 139);
+            this.cmpnyidsearch.Location = new System.Drawing.Point(257, 146);
             this.cmpnyidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.cmpnyidsearch.Name = "cmpnyidsearch";
-            this.cmpnyidsearch.Size = new System.Drawing.Size(33, 28);
+            this.cmpnyidsearch.Size = new System.Drawing.Size(33, 21);
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch.TabIndex = 478;
             this.cmpnyidsearch.TabStop = false;
@@ -79,7 +77,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(293, 117);
+            this.label5.Location = new System.Drawing.Point(295, 129);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
@@ -154,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(124, 117);
+            this.label2.Location = new System.Drawing.Point(126, 129);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);

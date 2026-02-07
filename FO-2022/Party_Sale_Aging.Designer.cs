@@ -43,11 +43,10 @@
             // txtboxwithcombobox
             // 
             this.txtboxwithcombobox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxwithcombobox.Location = new System.Drawing.Point(251, 188);
+            this.txtboxwithcombobox.Location = new System.Drawing.Point(255, 196);
             this.txtboxwithcombobox.Margin = new System.Windows.Forms.Padding(6);
-            this.txtboxwithcombobox.Multiline = true;
             this.txtboxwithcombobox.Name = "txtboxwithcombobox";
-            this.txtboxwithcombobox.Size = new System.Drawing.Size(78, 24);
+            this.txtboxwithcombobox.Size = new System.Drawing.Size(78, 16);
             this.txtboxwithcombobox.TabIndex = 382;
             this.txtboxwithcombobox.TextChanged += new System.EventHandler(this.txtboxwithcombobox_TextChanged);
             // 

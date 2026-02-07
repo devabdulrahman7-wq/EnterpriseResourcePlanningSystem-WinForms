@@ -43,7 +43,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(128, 218);
+            this.previewbtn.Location = new System.Drawing.Point(125, 196);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 468;
@@ -57,7 +57,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(283, 218);
+            this.closebtn.Location = new System.Drawing.Point(280, 196);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 467;
@@ -71,7 +71,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(209, 218);
+            this.printbtn.Location = new System.Drawing.Point(206, 196);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 466;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 71);
+            this.label2.Location = new System.Drawing.Point(99, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(269, 32);
             this.label2.TabIndex = 464;

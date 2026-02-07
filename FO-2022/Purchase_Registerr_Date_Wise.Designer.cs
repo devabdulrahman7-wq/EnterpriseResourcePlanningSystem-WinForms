@@ -99,7 +99,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(153, 23);
             this.todatepcker.TabIndex = 394;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -109,7 +108,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(160, 23);
             this.fromdatepcker.TabIndex = 393;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // ShowOnlyPendingRatePurchasechkbox
             // 
@@ -128,20 +126,17 @@
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendornametxtbox.Location = new System.Drawing.Point(301, 173);
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(243, 27);
+            this.vendornametxtbox.Size = new System.Drawing.Size(239, 16);
             this.vendornametxtbox.TabIndex = 404;
-            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendoridtxtbox.Location = new System.Drawing.Point(113, 173);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(142, 27);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(138, 16);
             this.vendoridtxtbox.TabIndex = 403;
             this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 

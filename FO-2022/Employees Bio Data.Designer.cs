@@ -104,9 +104,8 @@
             this.citytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.citytxtbox.Location = new System.Drawing.Point(391, 190);
             this.citytxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.citytxtbox.Multiline = true;
             this.citytxtbox.Name = "citytxtbox";
-            this.citytxtbox.Size = new System.Drawing.Size(111, 20);
+            this.citytxtbox.Size = new System.Drawing.Size(111, 16);
             this.citytxtbox.TabIndex = 584;
             this.citytxtbox.TextChanged += new System.EventHandler(this.citytxtbox_TextChanged);
             // 
@@ -125,9 +124,8 @@
             this.addresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addresstxtbox.Location = new System.Drawing.Point(483, 93);
             this.addresstxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.addresstxtbox.Multiline = true;
             this.addresstxtbox.Name = "addresstxtbox";
-            this.addresstxtbox.Size = new System.Drawing.Size(338, 20);
+            this.addresstxtbox.Size = new System.Drawing.Size(338, 16);
             this.addresstxtbox.TabIndex = 582;
             // 
             // label15
@@ -145,9 +143,8 @@
             this.fathernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fathernametxtbox.Location = new System.Drawing.Point(290, 93);
             this.fathernametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.fathernametxtbox.Multiline = true;
             this.fathernametxtbox.Name = "fathernametxtbox";
-            this.fathernametxtbox.Size = new System.Drawing.Size(185, 20);
+            this.fathernametxtbox.Size = new System.Drawing.Size(185, 16);
             this.fathernametxtbox.TabIndex = 579;
             // 
             // nametxtbox
@@ -155,9 +152,8 @@
             this.nametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nametxtbox.Location = new System.Drawing.Point(97, 93);
             this.nametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox.Multiline = true;
             this.nametxtbox.Name = "nametxtbox";
-            this.nametxtbox.Size = new System.Drawing.Size(190, 20);
+            this.nametxtbox.Size = new System.Drawing.Size(190, 16);
             this.nametxtbox.TabIndex = 578;
             // 
             // label6
@@ -185,9 +181,8 @@
             this.cnictxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cnictxtbox.Location = new System.Drawing.Point(4, 190);
             this.cnictxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.cnictxtbox.Multiline = true;
             this.cnictxtbox.Name = "cnictxtbox";
-            this.cnictxtbox.Size = new System.Drawing.Size(129, 20);
+            this.cnictxtbox.Size = new System.Drawing.Size(129, 16);
             this.cnictxtbox.TabIndex = 586;
             this.cnictxtbox.TextChanged += new System.EventHandler(this.cnictxtbox_TextChanged);
             // 
@@ -206,9 +201,8 @@
             this.eduacationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.eduacationtxtbox.Location = new System.Drawing.Point(141, 190);
             this.eduacationtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.eduacationtxtbox.Multiline = true;
             this.eduacationtxtbox.Name = "eduacationtxtbox";
-            this.eduacationtxtbox.Size = new System.Drawing.Size(111, 20);
+            this.eduacationtxtbox.Size = new System.Drawing.Size(111, 16);
             this.eduacationtxtbox.TabIndex = 588;
             this.eduacationtxtbox.TextChanged += new System.EventHandler(this.eduacationtxtbox_TextChanged);
             // 
@@ -226,7 +220,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(267, 170);
+            this.label3.Location = new System.Drawing.Point(267, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 589;
@@ -237,9 +231,8 @@
             this.phonenotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phonenotxtbox.Location = new System.Drawing.Point(652, 190);
             this.phonenotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.phonenotxtbox.Multiline = true;
             this.phonenotxtbox.Name = "phonenotxtbox";
-            this.phonenotxtbox.Size = new System.Drawing.Size(169, 20);
+            this.phonenotxtbox.Size = new System.Drawing.Size(169, 16);
             this.phonenotxtbox.TabIndex = 594;
             this.phonenotxtbox.TextChanged += new System.EventHandler(this.phonenotxtbox_TextChanged);
             // 
@@ -258,9 +251,8 @@
             this.mblnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mblnotxtbox.Location = new System.Drawing.Point(510, 190);
             this.mblnotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.mblnotxtbox.Multiline = true;
             this.mblnotxtbox.Name = "mblnotxtbox";
-            this.mblnotxtbox.Size = new System.Drawing.Size(134, 20);
+            this.mblnotxtbox.Size = new System.Drawing.Size(134, 16);
             this.mblnotxtbox.TabIndex = 592;
             this.mblnotxtbox.TextChanged += new System.EventHandler(this.mblnotxtbox_TextChanged);
             // 
@@ -278,7 +270,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 73);
+            this.label7.Location = new System.Drawing.Point(6, 69);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 16);
             this.label7.TabIndex = 595;
@@ -287,7 +279,7 @@
             // joiningdatetimepcker
             // 
             this.joiningdatetimepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.joiningdatetimepcker.Location = new System.Drawing.Point(4, 90);
+            this.joiningdatetimepcker.Location = new System.Drawing.Point(4, 86);
             this.joiningdatetimepcker.Name = "joiningdatetimepcker";
             this.joiningdatetimepcker.Size = new System.Drawing.Size(86, 23);
             this.joiningdatetimepcker.TabIndex = 596;
@@ -295,7 +287,7 @@
             // designationcombobox
             // 
             this.designationcombobox.FormattingEnabled = true;
-            this.designationcombobox.Location = new System.Drawing.Point(259, 186);
+            this.designationcombobox.Location = new System.Drawing.Point(259, 183);
             this.designationcombobox.Name = "designationcombobox";
             this.designationcombobox.Size = new System.Drawing.Size(121, 24);
             this.designationcombobox.TabIndex = 597;
@@ -305,9 +297,8 @@
             this.employeeidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.employeeidtxtbox.Location = new System.Drawing.Point(4, 146);
             this.employeeidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.employeeidtxtbox.Multiline = true;
             this.employeeidtxtbox.Name = "employeeidtxtbox";
-            this.employeeidtxtbox.Size = new System.Drawing.Size(66, 20);
+            this.employeeidtxtbox.Size = new System.Drawing.Size(66, 16);
             this.employeeidtxtbox.TabIndex = 600;
             this.employeeidtxtbox.TextChanged += new System.EventHandler(this.employeeidtxtbox_TextChanged);
             // 
@@ -316,9 +307,8 @@
             this.employeeidtxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.employeeidtxtbox1.Location = new System.Drawing.Point(71, 146);
             this.employeeidtxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.employeeidtxtbox1.Multiline = true;
             this.employeeidtxtbox1.Name = "employeeidtxtbox1";
-            this.employeeidtxtbox1.Size = new System.Drawing.Size(68, 20);
+            this.employeeidtxtbox1.Size = new System.Drawing.Size(68, 16);
             this.employeeidtxtbox1.TabIndex = 599;
             // 
             // label8
@@ -336,9 +326,8 @@
             this.urdunametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urdunametxtbox.Location = new System.Drawing.Point(144, 146);
             this.urdunametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.urdunametxtbox.Multiline = true;
             this.urdunametxtbox.Name = "urdunametxtbox";
-            this.urdunametxtbox.Size = new System.Drawing.Size(210, 20);
+            this.urdunametxtbox.Size = new System.Drawing.Size(210, 16);
             this.urdunametxtbox.TabIndex = 601;
             // 
             // fatherurdunametxtbox
@@ -346,9 +335,8 @@
             this.fatherurdunametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fatherurdunametxtbox.Location = new System.Drawing.Point(362, 146);
             this.fatherurdunametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.fatherurdunametxtbox.Multiline = true;
             this.fatherurdunametxtbox.Name = "fatherurdunametxtbox";
-            this.fatherurdunametxtbox.Size = new System.Drawing.Size(224, 20);
+            this.fatherurdunametxtbox.Size = new System.Drawing.Size(224, 16);
             this.fatherurdunametxtbox.TabIndex = 603;
             // 
             // urduaddresstxtbox
@@ -356,19 +344,17 @@
             this.urduaddresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urduaddresstxtbox.Location = new System.Drawing.Point(594, 146);
             this.urduaddresstxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.urduaddresstxtbox.Multiline = true;
             this.urduaddresstxtbox.Name = "urduaddresstxtbox";
-            this.urduaddresstxtbox.Size = new System.Drawing.Size(227, 20);
+            this.urduaddresstxtbox.Size = new System.Drawing.Size(227, 16);
             this.urduaddresstxtbox.TabIndex = 604;
             // 
             // referencetxtbox
             // 
             this.referencetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.referencetxtbox.Location = new System.Drawing.Point(11, 256);
+            this.referencetxtbox.Location = new System.Drawing.Point(11, 260);
             this.referencetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.referencetxtbox.Multiline = true;
             this.referencetxtbox.Name = "referencetxtbox";
-            this.referencetxtbox.Size = new System.Drawing.Size(111, 20);
+            this.referencetxtbox.Size = new System.Drawing.Size(111, 16);
             this.referencetxtbox.TabIndex = 606;
             this.referencetxtbox.TextChanged += new System.EventHandler(this.referencetxtbox_TextChanged);
             // 
@@ -376,7 +362,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 233);
+            this.label9.Location = new System.Drawing.Point(16, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 605;
@@ -404,11 +390,10 @@
             // yearlyleavesallowedtxtbox
             // 
             this.yearlyleavesallowedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.yearlyleavesallowedtxtbox.Location = new System.Drawing.Point(381, 256);
+            this.yearlyleavesallowedtxtbox.Location = new System.Drawing.Point(381, 260);
             this.yearlyleavesallowedtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.yearlyleavesallowedtxtbox.Multiline = true;
             this.yearlyleavesallowedtxtbox.Name = "yearlyleavesallowedtxtbox";
-            this.yearlyleavesallowedtxtbox.Size = new System.Drawing.Size(121, 20);
+            this.yearlyleavesallowedtxtbox.Size = new System.Drawing.Size(121, 16);
             this.yearlyleavesallowedtxtbox.TabIndex = 610;
             this.yearlyleavesallowedtxtbox.TextChanged += new System.EventHandler(this.yearlyleavesallowedtxtbox_TextChanged);
             // 
@@ -416,7 +401,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(378, 232);
+            this.label11.Location = new System.Drawing.Point(378, 237);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 16);
             this.label11.TabIndex = 609;
@@ -425,11 +410,10 @@
             // salarytxtbox
             // 
             this.salarytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salarytxtbox.Location = new System.Drawing.Point(255, 256);
+            this.salarytxtbox.Location = new System.Drawing.Point(255, 260);
             this.salarytxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.salarytxtbox.Multiline = true;
             this.salarytxtbox.Name = "salarytxtbox";
-            this.salarytxtbox.Size = new System.Drawing.Size(118, 20);
+            this.salarytxtbox.Size = new System.Drawing.Size(118, 16);
             this.salarytxtbox.TabIndex = 612;
             this.salarytxtbox.TextChanged += new System.EventHandler(this.salarytxtbox_TextChanged);
             // 
@@ -437,7 +421,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(256, 232);
+            this.label12.Location = new System.Drawing.Point(256, 240);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 16);
             this.label12.TabIndex = 611;
@@ -468,10 +452,11 @@
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(346, 622);
+            this.newbtn.Location = new System.Drawing.Point(346, 662);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
@@ -486,7 +471,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(583, 622);
+            this.closebtn.Location = new System.Drawing.Point(583, 662);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -498,10 +483,11 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(504, 622);
+            this.removebtn.Location = new System.Drawing.Point(504, 662);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -513,10 +499,11 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(425, 622);
+            this.editbtn.Location = new System.Drawing.Point(425, 662);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
@@ -531,7 +518,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(267, 622);
+            this.clearbtn.Location = new System.Drawing.Point(267, 662);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -543,10 +530,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(188, 622);
+            this.savebtn.Location = new System.Drawing.Point(188, 662);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -584,6 +572,7 @@
             // deactivebtn
             // 
             this.deactivebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.deactivebtn.Enabled = false;
             this.deactivebtn.FlatAppearance.BorderSize = 0;
             this.deactivebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deactivebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -599,6 +588,7 @@
             // activebtn
             // 
             this.activebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.activebtn.Enabled = false;
             this.activebtn.FlatAppearance.BorderSize = 0;
             this.activebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,7 +675,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(852, 749);
+            this.ClientSize = new System.Drawing.Size(852, 730);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.empchkbar);
             this.Controls.Add(this.label13);
@@ -734,6 +724,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cnicdatepckr);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

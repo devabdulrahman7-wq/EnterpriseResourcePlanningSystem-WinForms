@@ -57,7 +57,6 @@
             this.checkBoxshowcost.TabIndex = 508;
             this.checkBoxshowcost.Text = "Show Cost";
             this.checkBoxshowcost.UseVisualStyleBackColor = true;
-            //this.checkBoxshowcost.CheckedChanged += new System.EventHandler(this.checkBoxshowcost_CheckedChanged);
             // 
             // label2
             // 
@@ -133,37 +132,32 @@
             this.label1.Size = new System.Drawing.Size(311, 32);
             this.label1.TabIndex = 502;
             this.label1.Text = "Salesman Current Stock";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmpnynametxtbox
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnynametxtbox.Location = new System.Drawing.Point(250, 144);
             this.cmpnynametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(215, 28);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(215, 16);
             this.cmpnynametxtbox.TabIndex = 501;
-            //this.cmpnynametxtbox.TextChanged += new System.EventHandler(this.cmpnynametxtbox_TextChanged);
             // 
             // cmpnyidtxtbox
             // 
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(81, 144);
             this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(118, 28);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(118, 16);
             this.cmpnyidtxtbox.TabIndex = 500;
-            //this.cmpnyidtxtbox.TextChanged += new System.EventHandler(this.cmpnyidtxtbox_TextChanged);
             // 
             // cmpnyidsearch
             // 
             this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(206, 144);
+            this.cmpnyidsearch.Location = new System.Drawing.Point(206, 138);
             this.cmpnyidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.cmpnyidsearch.Name = "cmpnyidsearch";
-            this.cmpnyidsearch.Size = new System.Drawing.Size(39, 28);
+            this.cmpnyidsearch.Size = new System.Drawing.Size(39, 24);
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch.TabIndex = 499;
             this.cmpnyidsearch.TabStop = false;
@@ -186,30 +180,26 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(250, 200);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(215, 28);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(215, 16);
             this.salesmannametxtbox.TabIndex = 512;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(81, 200);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(118, 28);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(118, 16);
             this.salesmanidtxtbox.TabIndex = 511;
-            //this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmansearch
             // 
             this.salesmansearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmansearch.Image")));
-            this.salesmansearch.Location = new System.Drawing.Point(206, 200);
+            this.salesmansearch.Location = new System.Drawing.Point(206, 194);
             this.salesmansearch.Margin = new System.Windows.Forms.Padding(6);
             this.salesmansearch.Name = "salesmansearch";
-            this.salesmansearch.Size = new System.Drawing.Size(39, 28);
+            this.salesmansearch.Size = new System.Drawing.Size(39, 24);
             this.salesmansearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmansearch.TabIndex = 510;
             this.salesmansearch.TabStop = false;

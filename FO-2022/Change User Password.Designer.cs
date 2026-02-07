@@ -53,7 +53,7 @@
             this.label6.Location = new System.Drawing.Point(178, 89);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 21);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 659;
             this.label6.Text = "Username";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -62,9 +62,8 @@
             // 
             this.usernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernametxtbox.Location = new System.Drawing.Point(166, 108);
-            this.usernametxtbox.Multiline = true;
             this.usernametxtbox.Name = "usernametxtbox";
-            this.usernametxtbox.Size = new System.Drawing.Size(274, 20);
+            this.usernametxtbox.Size = new System.Drawing.Size(274, 19);
             this.usernametxtbox.TabIndex = 658;
             this.usernametxtbox.TextChanged += new System.EventHandler(this.usernametxtbox_TextChanged);
             // 
@@ -90,7 +89,7 @@
             this.label3.Location = new System.Drawing.Point(55, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 667;
             this.label3.Text = "Old Password";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -99,9 +98,8 @@
             // 
             this.oldpasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.oldpasswordtxtbox.Location = new System.Drawing.Point(43, 42);
-            this.oldpasswordtxtbox.Multiline = true;
             this.oldpasswordtxtbox.Name = "oldpasswordtxtbox";
-            this.oldpasswordtxtbox.Size = new System.Drawing.Size(274, 20);
+            this.oldpasswordtxtbox.Size = new System.Drawing.Size(274, 19);
             this.oldpasswordtxtbox.TabIndex = 666;
             this.oldpasswordtxtbox.TextChanged += new System.EventHandler(this.oldpasswordtxtbox_TextChanged);
             // 
@@ -112,7 +110,7 @@
             this.label2.Location = new System.Drawing.Point(55, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 21);
+            this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 665;
             this.label2.Text = "Re-Type Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -121,9 +119,8 @@
             // 
             this.retypepasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.retypepasswordtxtbox.Location = new System.Drawing.Point(43, 149);
-            this.retypepasswordtxtbox.Multiline = true;
             this.retypepasswordtxtbox.Name = "retypepasswordtxtbox";
-            this.retypepasswordtxtbox.Size = new System.Drawing.Size(274, 20);
+            this.retypepasswordtxtbox.Size = new System.Drawing.Size(274, 19);
             this.retypepasswordtxtbox.TabIndex = 664;
             this.retypepasswordtxtbox.TextChanged += new System.EventHandler(this.retypepasswordtxtbox_TextChanged);
             // 
@@ -134,7 +131,7 @@
             this.label1.Location = new System.Drawing.Point(55, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 663;
             this.label1.Text = "New Password";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -143,9 +140,8 @@
             // 
             this.newpasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newpasswordtxtbox.Location = new System.Drawing.Point(43, 97);
-            this.newpasswordtxtbox.Multiline = true;
             this.newpasswordtxtbox.Name = "newpasswordtxtbox";
-            this.newpasswordtxtbox.Size = new System.Drawing.Size(274, 20);
+            this.newpasswordtxtbox.Size = new System.Drawing.Size(274, 19);
             this.newpasswordtxtbox.TabIndex = 662;
             this.newpasswordtxtbox.TextChanged += new System.EventHandler(this.passwordtxtbox_TextChanged);
             // 
@@ -166,6 +162,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,14 +192,14 @@
             this.label4.Location = new System.Drawing.Point(145, 27);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(382, 42);
+            this.label4.Size = new System.Drawing.Size(295, 32);
             this.label4.TabIndex = 665;
             this.label4.Text = "Change User Password";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Change_User_Password
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(547, 420);
@@ -213,6 +210,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.usernametxtbox);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);

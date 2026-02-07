@@ -95,18 +95,16 @@
             // 
             this.salesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmennametxtbox.Location = new System.Drawing.Point(194, 184);
-            this.salesmennametxtbox.Multiline = true;
             this.salesmennametxtbox.Name = "salesmennametxtbox";
-            this.salesmennametxtbox.Size = new System.Drawing.Size(322, 18);
+            this.salesmennametxtbox.Size = new System.Drawing.Size(322, 16);
             this.salesmennametxtbox.TabIndex = 343;
             // 
             // salesmenidtxtbox
             // 
             this.salesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmenidtxtbox.Location = new System.Drawing.Point(78, 184);
-            this.salesmenidtxtbox.Multiline = true;
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
-            this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 18);
+            this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.salesmenidtxtbox.TabIndex = 342;
             this.salesmenidtxtbox.TextChanged += new System.EventHandler(this.salesmenidtxtbox_TextChanged);
             this.salesmenidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmenidtxtbox_KeyDown);
@@ -115,10 +113,9 @@
             // 
             this.issueidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.issueidtxtbox.Location = new System.Drawing.Point(78, 131);
-            this.issueidtxtbox.Multiline = true;
             this.issueidtxtbox.Name = "issueidtxtbox";
             this.issueidtxtbox.ReadOnly = true;
-            this.issueidtxtbox.Size = new System.Drawing.Size(110, 23);
+            this.issueidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.issueidtxtbox.TabIndex = 341;
             this.issueidtxtbox.TextChanged += new System.EventHandler(this.issueidtxtbox_TextChanged);
             // 
@@ -150,9 +147,9 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(493, 505);
+            this.closebtn.Location = new System.Drawing.Point(493, 513);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(77, 31);
+            this.closebtn.Size = new System.Drawing.Size(77, 28);
             this.closebtn.TabIndex = 389;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -161,12 +158,13 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(410, 505);
+            this.removebtn.Location = new System.Drawing.Point(410, 513);
             this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(77, 31);
+            this.removebtn.Size = new System.Drawing.Size(77, 28);
             this.removebtn.TabIndex = 388;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
@@ -175,12 +173,13 @@
             // openbtn
             // 
             this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.Enabled = false;
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(322, 505);
+            this.openbtn.Location = new System.Drawing.Point(322, 513);
             this.openbtn.Name = "openbtn";
-            this.openbtn.Size = new System.Drawing.Size(77, 31);
+            this.openbtn.Size = new System.Drawing.Size(77, 28);
             this.openbtn.TabIndex = 387;
             this.openbtn.Text = "Open";
             this.openbtn.UseVisualStyleBackColor = false;
@@ -192,9 +191,9 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(238, 505);
+            this.clearbtn.Location = new System.Drawing.Point(238, 513);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(77, 31);
+            this.clearbtn.Size = new System.Drawing.Size(77, 28);
             this.clearbtn.TabIndex = 386;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
@@ -203,12 +202,13 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(157, 505);
+            this.savebtn.Location = new System.Drawing.Point(157, 513);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(77, 31);
+            this.savebtn.Size = new System.Drawing.Size(77, 28);
             this.savebtn.TabIndex = 385;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
@@ -250,7 +250,7 @@
             // packnamecombobox
             // 
             this.packnamecombobox.FormattingEnabled = true;
-            this.packnamecombobox.Location = new System.Drawing.Point(260, 237);
+            this.packnamecombobox.Location = new System.Drawing.Point(260, 232);
             this.packnamecombobox.Name = "packnamecombobox";
             this.packnamecombobox.Size = new System.Drawing.Size(109, 24);
             this.packnamecombobox.TabIndex = 407;
@@ -261,9 +261,8 @@
             this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.qtyptxtbox.Location = new System.Drawing.Point(474, 240);
             this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyptxtbox.Multiline = true;
             this.qtyptxtbox.Name = "qtyptxtbox";
-            this.qtyptxtbox.Size = new System.Drawing.Size(82, 19);
+            this.qtyptxtbox.Size = new System.Drawing.Size(82, 16);
             this.qtyptxtbox.TabIndex = 405;
             this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
             this.qtyptxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyptxtbox_KeyDown);
@@ -284,9 +283,8 @@
             this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.qtyltxtbox.Location = new System.Drawing.Point(564, 238);
             this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyltxtbox.Multiline = true;
             this.qtyltxtbox.Name = "qtyltxtbox";
-            this.qtyltxtbox.Size = new System.Drawing.Size(81, 21);
+            this.qtyltxtbox.Size = new System.Drawing.Size(81, 16);
             this.qtyltxtbox.TabIndex = 400;
             this.qtyltxtbox.TextChanged += new System.EventHandler(this.qtyltxtbox_TextChanged);
             this.qtyltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyltxtbox_KeyDown);
@@ -296,9 +294,8 @@
             this.packtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.packtxtbox.Location = new System.Drawing.Point(376, 240);
             this.packtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.packtxtbox.Multiline = true;
             this.packtxtbox.Name = "packtxtbox";
-            this.packtxtbox.Size = new System.Drawing.Size(90, 19);
+            this.packtxtbox.Size = new System.Drawing.Size(90, 16);
             this.packtxtbox.TabIndex = 399;
             this.packtxtbox.TextChanged += new System.EventHandler(this.packtxtbox_TextChanged);
             // 
@@ -307,9 +304,8 @@
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productnametxtbox.Location = new System.Drawing.Point(157, 237);
             this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 16);
             this.productnametxtbox.TabIndex = 398;
             // 
             // productidtxtbox
@@ -317,9 +313,8 @@
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productidtxtbox.Location = new System.Drawing.Point(78, 238);
             this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(71, 19);
+            this.productidtxtbox.Size = new System.Drawing.Size(71, 16);
             this.productidtxtbox.TabIndex = 397;
             this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
             // 
@@ -349,7 +344,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(258, 218);
+            this.label30.Location = new System.Drawing.Point(258, 212);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(78, 16);
@@ -412,6 +407,7 @@
             this.Controls.Add(this.issueidtxtbox);
             this.Controls.Add(this.saledatelbl);
             this.Controls.Add(this.saleidlbl);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

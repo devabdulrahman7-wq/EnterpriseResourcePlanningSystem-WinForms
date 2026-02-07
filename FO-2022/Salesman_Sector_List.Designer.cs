@@ -47,21 +47,19 @@
             // salesmannametxtbox
             // 
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmannametxtbox.Location = new System.Drawing.Point(310, 136);
+            this.salesmannametxtbox.Location = new System.Drawing.Point(310, 145);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 16);
             this.salesmannametxtbox.TabIndex = 377;
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmanidtxtbox.Location = new System.Drawing.Point(149, 136);
+            this.salesmanidtxtbox.Location = new System.Drawing.Point(149, 145);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 16);
             this.salesmanidtxtbox.TabIndex = 376;
             this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             this.salesmanidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmanidtxtbox_KeyDown);
@@ -69,10 +67,10 @@
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(264, 136);
+            this.salesmanidsearch.Location = new System.Drawing.Point(264, 140);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.salesmanidsearch.Name = "salesmanidsearch";
-            this.salesmanidsearch.Size = new System.Drawing.Size(40, 25);
+            this.salesmanidsearch.Size = new System.Drawing.Size(40, 21);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 375;
             this.salesmanidsearch.TabStop = false;

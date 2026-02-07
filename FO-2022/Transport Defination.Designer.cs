@@ -59,10 +59,11 @@
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(65, 380);
+            this.newbtn.Location = new System.Drawing.Point(65, 415);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
@@ -77,7 +78,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(460, 380);
+            this.closebtn.Location = new System.Drawing.Point(460, 415);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -89,10 +90,11 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(302, 380);
+            this.removebtn.Location = new System.Drawing.Point(302, 415);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -104,10 +106,11 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(144, 380);
+            this.editbtn.Location = new System.Drawing.Point(144, 415);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
@@ -122,7 +125,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(381, 380);
+            this.clearbtn.Location = new System.Drawing.Point(381, 415);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -134,10 +137,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(223, 380);
+            this.savebtn.Location = new System.Drawing.Point(223, 415);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -151,9 +155,8 @@
             this.trnsprtnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trnsprtnametxtbox.Location = new System.Drawing.Point(385, 208);
             this.trnsprtnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.trnsprtnametxtbox.Multiline = true;
             this.trnsprtnametxtbox.Name = "trnsprtnametxtbox";
-            this.trnsprtnametxtbox.Size = new System.Drawing.Size(233, 20);
+            this.trnsprtnametxtbox.Size = new System.Drawing.Size(233, 16);
             this.trnsprtnametxtbox.TabIndex = 426;
             // 
             // label7
@@ -173,7 +176,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 78);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 19);
+            this.textBox1.Size = new System.Drawing.Size(357, 19);
             this.textBox1.TabIndex = 427;
             this.textBox1.Text = "                Available Transport";
             // 
@@ -224,6 +227,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport_Defination";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Transport_Defination_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

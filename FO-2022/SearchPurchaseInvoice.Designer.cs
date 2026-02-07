@@ -144,10 +144,11 @@
             // refreshbtn
             // 
             this.refreshbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.refreshbtn.Enabled = false;
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(139, 479);
+            this.refreshbtn.Location = new System.Drawing.Point(139, 493);
             this.refreshbtn.Name = "refreshbtn";
             this.refreshbtn.Size = new System.Drawing.Size(75, 26);
             this.refreshbtn.TabIndex = 9;
@@ -158,10 +159,11 @@
             // selectbtn
             // 
             this.selectbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.selectbtn.Enabled = false;
             this.selectbtn.FlatAppearance.BorderSize = 0;
             this.selectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectbtn.Location = new System.Drawing.Point(224, 479);
+            this.selectbtn.Location = new System.Drawing.Point(224, 493);
             this.selectbtn.Name = "selectbtn";
             this.selectbtn.Size = new System.Drawing.Size(75, 26);
             this.selectbtn.TabIndex = 10;
@@ -175,7 +177,7 @@
             this.cancelbtn.FlatAppearance.BorderSize = 0;
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(305, 479);
+            this.cancelbtn.Location = new System.Drawing.Point(305, 493);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 26);
             this.cancelbtn.TabIndex = 11;
@@ -191,7 +193,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(56, 140);
+            this.dataGridView1.Location = new System.Drawing.Point(56, 154);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(428, 311);
             this.dataGridView1.TabIndex = 12;

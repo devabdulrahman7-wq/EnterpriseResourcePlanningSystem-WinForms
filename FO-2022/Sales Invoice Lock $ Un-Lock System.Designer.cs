@@ -65,7 +65,7 @@
             // saleidsearch
             // 
             this.saleidsearch.Image = ((System.Drawing.Image)(resources.GetObject("saleidsearch.Image")));
-            this.saleidsearch.Location = new System.Drawing.Point(625, 98);
+            this.saleidsearch.Location = new System.Drawing.Point(633, 98);
             this.saleidsearch.Name = "saleidsearch";
             this.saleidsearch.Size = new System.Drawing.Size(22, 18);
             this.saleidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,6 +86,7 @@
             // searchidtxtbox
             // 
             this.searchidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchidtxtbox.Enabled = false;
             this.searchidtxtbox.Location = new System.Drawing.Point(505, 98);
             this.searchidtxtbox.Multiline = true;
             this.searchidtxtbox.Name = "searchidtxtbox";
@@ -176,6 +177,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,6 +239,7 @@
             this.textBox1.Location = new System.Drawing.Point(31, 121);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(391, 19);
             this.textBox1.TabIndex = 643;
             this.textBox1.Text = "                Available Un-Locked Entries";
@@ -249,6 +252,7 @@
             this.textBox2.Location = new System.Drawing.Point(505, 121);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(391, 19);
             this.textBox2.TabIndex = 645;
             this.textBox2.Text = "                Available Lock Entries";

@@ -1226,12 +1226,12 @@ namespace FO_2022
                     newpromisedatetxtbox.Text = newDate.ToString("dd/MM/yyyy");
 
                     // Validate new date is not before today for postpone
-                    if (postponeprocessradiobtn.Checked && newDate < DateTime.Now.Date)
-                    {
-                        MessageBox.Show("New promise date cannot be in the past!",
-                            "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        newpromisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-                    }
+                    //if (postponeprocessradiobtn.Checked && newDate < DateTime.Now.Date)
+                    //{
+                    //    MessageBox.Show("New promise date cannot be in the past!",
+                    //        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    newpromisedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                    //}
                 }
             }
         }

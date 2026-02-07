@@ -552,7 +552,7 @@ namespace FO_2022
                 inputForm.MaximizeBox = false;
                 inputForm.MinimizeBox = false;
                 inputForm.StartPosition = FormStartPosition.CenterParent;
-
+                inputForm.TopMost= true;
                 Label label = new Label();
                 label.Text = "Enter Voucher No to open:";
                 label.SetBounds(10, 20, 280, 20);

@@ -52,9 +52,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(140, 29);
+            this.label2.Location = new System.Drawing.Point(147, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 42);
+            this.label2.Size = new System.Drawing.Size(283, 32);
             this.label2.TabIndex = 471;
             this.label2.Text = "Party List Summarize\r\n";
             // 
@@ -64,7 +64,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(184, 241);
+            this.previewbtn.Location = new System.Drawing.Point(166, 211);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 30);
             this.previewbtn.TabIndex = 476;
@@ -78,7 +78,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(339, 241);
+            this.closebtn.Location = new System.Drawing.Point(321, 211);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(71, 30);
             this.closebtn.TabIndex = 475;
@@ -92,7 +92,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(265, 241);
+            this.printbtn.Location = new System.Drawing.Point(247, 211);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 30);
             this.printbtn.TabIndex = 474;
@@ -102,7 +102,7 @@
             // 
             // Party_List_Summarize
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(588, 318);

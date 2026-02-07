@@ -62,7 +62,7 @@
             this.textBox1.Location = new System.Drawing.Point(295, 101);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(357, 23);
+            this.textBox1.Size = new System.Drawing.Size(357, 19);
             this.textBox1.TabIndex = 438;
             this.textBox1.Text = "                Available Towns";
             // 
@@ -71,9 +71,8 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(32, 234);
             this.townnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(215, 20);
+            this.townnametxtbox.Size = new System.Drawing.Size(215, 16);
             this.townnametxtbox.TabIndex = 437;
             this.townnametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.townnametxtbox_KeyDown);
             // 
@@ -82,13 +81,14 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(29, 214);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 21);
+            this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 436;
             this.label7.Text = "Town Name:\r\n";
             // 
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +119,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +135,7 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,6 +166,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,7 +186,7 @@
             this.label1.Location = new System.Drawing.Point(247, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 42);
+            this.label1.Size = new System.Drawing.Size(90, 32);
             this.label1.TabIndex = 429;
             this.label1.Text = "Towns";
             // 
@@ -200,7 +203,7 @@
             // 
             // Towns
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(675, 570);

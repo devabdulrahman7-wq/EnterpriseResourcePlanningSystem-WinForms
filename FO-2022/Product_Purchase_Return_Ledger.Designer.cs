@@ -50,31 +50,29 @@
             // prdctnametxtbox
             // 
             this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctnametxtbox.Location = new System.Drawing.Point(326, 209);
+            this.prdctnametxtbox.Location = new System.Drawing.Point(326, 210);
             this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.prdctnametxtbox.Multiline = true;
             this.prdctnametxtbox.Name = "prdctnametxtbox";
-            this.prdctnametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.prdctnametxtbox.Size = new System.Drawing.Size(224, 16);
             this.prdctnametxtbox.TabIndex = 476;
             // 
             // prdctidtxtbox
             // 
             this.prdctidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctidtxtbox.Location = new System.Drawing.Point(165, 209);
+            this.prdctidtxtbox.Location = new System.Drawing.Point(165, 210);
             this.prdctidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.prdctidtxtbox.Multiline = true;
             this.prdctidtxtbox.Name = "prdctidtxtbox";
-            this.prdctidtxtbox.Size = new System.Drawing.Size(118, 28);
+            this.prdctidtxtbox.Size = new System.Drawing.Size(118, 16);
             this.prdctidtxtbox.TabIndex = 475;
             this.prdctidtxtbox.TextChanged += new System.EventHandler(this.prdctidtxtbox_TextChanged);
             // 
             // prdctidsearch
             // 
             this.prdctidsearch.Image = ((System.Drawing.Image)(resources.GetObject("prdctidsearch.Image")));
-            this.prdctidsearch.Location = new System.Drawing.Point(287, 209);
+            this.prdctidsearch.Location = new System.Drawing.Point(287, 207);
             this.prdctidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.prdctidsearch.Name = "prdctidsearch";
-            this.prdctidsearch.Size = new System.Drawing.Size(33, 28);
+            this.prdctidsearch.Size = new System.Drawing.Size(33, 19);
             this.prdctidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.prdctidsearch.TabIndex = 474;
             this.prdctidsearch.TabStop = false;

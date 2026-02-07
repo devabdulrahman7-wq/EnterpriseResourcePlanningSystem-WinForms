@@ -67,10 +67,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(444, 109);
+            this.label10.Location = new System.Drawing.Point(470, 103);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 21);
+            this.label10.Size = new System.Drawing.Size(79, 16);
             this.label10.TabIndex = 409;
             this.label10.Text = "Salesman ID";
             // 
@@ -78,17 +78,17 @@
             // 
             this.cstmrdatetxtbox.AutoSize = true;
             this.cstmrdatetxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cstmrdatetxtbox.Location = new System.Drawing.Point(605, 109);
+            this.cstmrdatetxtbox.Location = new System.Drawing.Point(631, 103);
             this.cstmrdatetxtbox.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.cstmrdatetxtbox.Name = "cstmrdatetxtbox";
-            this.cstmrdatetxtbox.Size = new System.Drawing.Size(129, 21);
+            this.cstmrdatetxtbox.Size = new System.Drawing.Size(100, 16);
             this.cstmrdatetxtbox.TabIndex = 408;
             this.cstmrdatetxtbox.Text = "Salesman Name";
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmanidtxtbox.Location = new System.Drawing.Point(438, 129);
+            this.salesmanidtxtbox.Location = new System.Drawing.Point(464, 123);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
@@ -98,7 +98,7 @@
             // salesmannametxtbox
             // 
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmannametxtbox.Location = new System.Drawing.Point(595, 129);
+            this.salesmannametxtbox.Location = new System.Drawing.Point(621, 123);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
@@ -108,7 +108,7 @@
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(568, 127);
+            this.salesmanidsearch.Location = new System.Drawing.Point(594, 121);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(4);
             this.salesmanidsearch.Name = "salesmanidsearch";
             this.salesmanidsearch.Size = new System.Drawing.Size(26, 22);
@@ -120,36 +120,36 @@
             // actualsectorcombobox
             // 
             this.actualsectorcombobox.FormattingEnabled = true;
-            this.actualsectorcombobox.Location = new System.Drawing.Point(101, 99);
+            this.actualsectorcombobox.Location = new System.Drawing.Point(127, 93);
             this.actualsectorcombobox.Name = "actualsectorcombobox";
-            this.actualsectorcombobox.Size = new System.Drawing.Size(231, 27);
+            this.actualsectorcombobox.Size = new System.Drawing.Size(231, 24);
             this.actualsectorcombobox.TabIndex = 410;
             this.actualsectorcombobox.SelectedIndexChanged += new System.EventHandler(this.actualsectorcombobox_SelectedIndexChanged);
             // 
             // actualtowncombobox
             // 
             this.actualtowncombobox.FormattingEnabled = true;
-            this.actualtowncombobox.Location = new System.Drawing.Point(101, 129);
+            this.actualtowncombobox.Location = new System.Drawing.Point(127, 123);
             this.actualtowncombobox.Name = "actualtowncombobox";
-            this.actualtowncombobox.Size = new System.Drawing.Size(231, 27);
+            this.actualtowncombobox.Size = new System.Drawing.Size(231, 24);
             this.actualtowncombobox.TabIndex = 411;
             this.actualtowncombobox.SelectedIndexChanged += new System.EventHandler(this.actualtowncombobox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 102);
+            this.label1.Location = new System.Drawing.Point(27, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 21);
+            this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 412;
             this.label1.Text = "Actual Sectors:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 133);
+            this.label2.Location = new System.Drawing.Point(38, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 21);
+            this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 413;
             this.label2.Text = "Actual Town:";
             // 
@@ -159,7 +159,7 @@
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(346, 122);
+            this.refreshbtn.Location = new System.Drawing.Point(372, 116);
             this.refreshbtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshbtn.Name = "refreshbtn";
             this.refreshbtn.Size = new System.Drawing.Size(86, 28);
@@ -174,7 +174,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(474, 530);
+            this.closebtn.Location = new System.Drawing.Point(494, 541);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -186,10 +186,11 @@
             // clearbtn
             // 
             this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.Enabled = false;
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(395, 530);
+            this.clearbtn.Location = new System.Drawing.Point(415, 541);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -201,10 +202,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(316, 530);
+            this.savebtn.Location = new System.Drawing.Point(336, 541);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -217,18 +219,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(204, 30);
+            this.label3.Location = new System.Drawing.Point(230, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(468, 42);
+            this.label3.Size = new System.Drawing.Size(364, 33);
             this.label3.TabIndex = 576;
             this.label3.Text = "Assign Customers to Salesman";
             // 
             // multiplesalesmancheckbox
             // 
             this.multiplesalesmancheckbox.AutoSize = true;
-            this.multiplesalesmancheckbox.Location = new System.Drawing.Point(101, 159);
+            this.multiplesalesmancheckbox.Location = new System.Drawing.Point(127, 153);
             this.multiplesalesmancheckbox.Name = "multiplesalesmancheckbox";
-            this.multiplesalesmancheckbox.Size = new System.Drawing.Size(243, 25);
+            this.multiplesalesmancheckbox.Size = new System.Drawing.Size(188, 20);
             this.multiplesalesmancheckbox.TabIndex = 577;
             this.multiplesalesmancheckbox.Text = "Multiple Salesman Allotment";
             this.multiplesalesmancheckbox.UseVisualStyleBackColor = true;
@@ -240,7 +242,7 @@
             this.UnAssignedCustomersdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.UnAssignedCustomersdataGridView.Location = new System.Drawing.Point(4, 216);
+            this.UnAssignedCustomersdataGridView.Location = new System.Drawing.Point(30, 210);
             this.UnAssignedCustomersdataGridView.Name = "UnAssignedCustomersdataGridView";
             this.UnAssignedCustomersdataGridView.RowHeadersWidth = 51;
             this.UnAssignedCustomersdataGridView.Size = new System.Drawing.Size(337, 294);
@@ -266,7 +268,7 @@
             this.AssignedCustomerdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            this.AssignedCustomerdataGridView.Location = new System.Drawing.Point(438, 216);
+            this.AssignedCustomerdataGridView.Location = new System.Drawing.Point(464, 210);
             this.AssignedCustomerdataGridView.Name = "AssignedCustomerdataGridView";
             this.AssignedCustomerdataGridView.RowHeadersWidth = 51;
             this.AssignedCustomerdataGridView.Size = new System.Drawing.Size(340, 294);
@@ -291,10 +293,10 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(4, 192);
+            this.textBox1.Location = new System.Drawing.Point(30, 186);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(337, 23);
+            this.textBox1.Size = new System.Drawing.Size(337, 19);
             this.textBox1.TabIndex = 580;
             this.textBox1.Text = "                Available Un-Assigned Customers";
             // 
@@ -303,10 +305,10 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(438, 192);
+            this.textBox2.Location = new System.Drawing.Point(464, 186);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(340, 23);
+            this.textBox2.Size = new System.Drawing.Size(340, 19);
             this.textBox2.TabIndex = 581;
             this.textBox2.Text = "                Available Assigned Customers";
             // 
@@ -316,7 +318,7 @@
             this.nextbtn.FlatAppearance.BorderSize = 0;
             this.nextbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextbtn.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextbtn.Location = new System.Drawing.Point(357, 279);
+            this.nextbtn.Location = new System.Drawing.Point(383, 273);
             this.nextbtn.Margin = new System.Windows.Forms.Padding(2);
             this.nextbtn.Name = "nextbtn";
             this.nextbtn.Size = new System.Drawing.Size(61, 36);
@@ -331,7 +333,7 @@
             this.backbtn.FlatAppearance.BorderSize = 0;
             this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backbtn.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtn.Location = new System.Drawing.Point(357, 322);
+            this.backbtn.Location = new System.Drawing.Point(383, 316);
             this.backbtn.Margin = new System.Windows.Forms.Padding(2);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(61, 36);
@@ -346,7 +348,7 @@
             this.dblnextbtn.FlatAppearance.BorderSize = 0;
             this.dblnextbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dblnextbtn.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dblnextbtn.Location = new System.Drawing.Point(357, 366);
+            this.dblnextbtn.Location = new System.Drawing.Point(383, 360);
             this.dblnextbtn.Margin = new System.Windows.Forms.Padding(2);
             this.dblnextbtn.Name = "dblnextbtn";
             this.dblnextbtn.Size = new System.Drawing.Size(61, 36);
@@ -361,7 +363,7 @@
             this.bdlbackbtn.FlatAppearance.BorderSize = 0;
             this.bdlbackbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bdlbackbtn.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdlbackbtn.Location = new System.Drawing.Point(357, 410);
+            this.bdlbackbtn.Location = new System.Drawing.Point(383, 404);
             this.bdlbackbtn.Margin = new System.Windows.Forms.Padding(2);
             this.bdlbackbtn.Name = "bdlbackbtn";
             this.bdlbackbtn.Size = new System.Drawing.Size(61, 36);
@@ -373,7 +375,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(761, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(831, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -383,10 +385,10 @@
             // 
             // Assign_Customers_to_Salesman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(796, 592);
+            this.ClientSize = new System.Drawing.Size(871, 592);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.bdlbackbtn);
             this.Controls.Add(this.dblnextbtn);
@@ -411,6 +413,7 @@
             this.Controls.Add(this.salesmanidtxtbox);
             this.Controls.Add(this.salesmannametxtbox);
             this.Controls.Add(this.salesmanidsearch);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -27,5 +27,10 @@ namespace FO_2022
             this.Close();
 
         }
+
+        private void fromsaletxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

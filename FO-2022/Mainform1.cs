@@ -159,7 +159,9 @@ namespace FO_2022
         }
         private void retailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           SaleInvoice si = new SaleInvoice();
+            si.Show();
+            ////this.Hide();
         }
 
         private void saleInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,7 +173,7 @@ namespace FO_2022
 
         private void purchaseInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Purchase_Invoice_01 pi = new Purchase_Invoice_01();
+            PurchaseInvoice pi = new PurchaseInvoice();
             pi.Show();
             ////this.Hide();
         }
@@ -222,7 +224,8 @@ namespace FO_2022
 
         private void purchaseDirectToSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Change_Product_Prices cpp=new Change_Product_Prices();
+            cpp.Show();
         }
 
         private void postShortToolStripMenuItem_Click(object sender, EventArgs e)
@@ -381,7 +384,8 @@ namespace FO_2022
         }
         private void cashReceivingVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Debit_Voucher db = new Debit_Voucher();
+            db.Show();
         }
         private void cashPaymentVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -712,7 +716,7 @@ namespace FO_2022
         }
         private void companyNSMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer_Wise_Profits nsm = new Customer_Wise_Profits();
+            Define_Company_NSM nsm= new Define_Company_NSM();
             nsm.Show();
             //this.Hide();
         }
@@ -724,7 +728,7 @@ namespace FO_2022
         }
         private void companySOsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Company_Wise_Profits so = new Company_Wise_Profits();
+            SO_s_ASM_Wise so = new SO_s_ASM_Wise();
             so.Show();
             //this.Hide();
         }
@@ -1094,8 +1098,8 @@ namespace FO_2022
 
         private void productWisePurchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Wise_Purchase an = new Product_Wise_Purchase();
-            an.Show();
+            //Product_Wise_Purchase an = new Product_Wise_Purchase();
+            //an.Show();
         }
 
         private void purchaseReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1282,6 +1286,13 @@ namespace FO_2022
         {
             Accounts_Ledger_1 accounts_Ledger_1 = new Accounts_Ledger_1();
             accounts_Ledger_1.Show();
+        }
+
+        private void purchaseInvoiceShortToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Purchase_Invoice_01 pp = new Purchase_Invoice_01();
+            pp.Show();
+
         }
     }
 }

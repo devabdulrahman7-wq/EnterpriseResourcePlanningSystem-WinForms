@@ -29,7 +29,7 @@ namespace FO_2022
         {
             InitializeComponent();
             InitializeConnection();
-            InitializeDataGrid();
+            //InitializeDataGrid();
             SetupForm();
         }
 
@@ -81,7 +81,7 @@ namespace FO_2022
                     DataTable productsTable = new DataTable();
                     adapter.Fill(productsTable);
 
-                    DisplayProductsInGrid(productsTable);
+                    //DisplayProductsInGrid(productsTable);
                 }
             }
             catch (Exception ex)
@@ -160,15 +160,15 @@ namespace FO_2022
         private void SetupForm()
         {
             purchasedatetxtbox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            LoadAllProductsData();
+            //LoadAllProductsData();
             LoadPackingData();
 
-            productidtxtbox.KeyDown += (sender, e) =>
-            {
-                if (e.KeyCode == Keys.Enter) LoadProductData();
-            };
+            //productidtxtbox.KeyDown += (sender, e) =>
+            //{
+            //    if (e.KeyCode == Keys.Enter) LoadProductData();
+            //};
 
-            dataGridView1.CellClick += DataGridView1_CellClick;
+            //dataGridView1.CellClick += DataGridView1_CellClick;
             packnamecombobox.SelectedIndexChanged += Packnamecombobox_SelectedIndexChanged;
         }
 
@@ -504,7 +504,7 @@ namespace FO_2022
             narrationtxtbox.Clear();
 
             dataTable.Clear();
-            LoadAllProductsData();
+            //LoadAllProductsData();
 
             grossValue = totalDiscount = netValue = totalSalesTax = totalValue = 0;
             returnidtxtbox.Text = GetNextReturnId().ToString();

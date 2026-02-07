@@ -71,7 +71,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(648, -1);
+            this.pictureBox2.Location = new System.Drawing.Point(671, -1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,7 +84,7 @@
             this.vendorctgrycombobox.FormattingEnabled = true;
             this.vendorctgrycombobox.Location = new System.Drawing.Point(334, 488);
             this.vendorctgrycombobox.Name = "vendorctgrycombobox";
-            this.vendorctgrycombobox.Size = new System.Drawing.Size(160, 27);
+            this.vendorctgrycombobox.Size = new System.Drawing.Size(160, 24);
             this.vendorctgrycombobox.TabIndex = 551;
             // 
             // label9
@@ -93,7 +93,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(331, 469);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 21);
+            this.label9.Size = new System.Drawing.Size(103, 16);
             this.label9.TabIndex = 550;
             this.label9.Text = "Vendor Category";
             // 
@@ -102,9 +102,8 @@
             this.emailtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailtxtbox.Location = new System.Drawing.Point(334, 382);
             this.emailtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.emailtxtbox.Multiline = true;
             this.emailtxtbox.Name = "emailtxtbox";
-            this.emailtxtbox.Size = new System.Drawing.Size(339, 20);
+            this.emailtxtbox.Size = new System.Drawing.Size(339, 16);
             this.emailtxtbox.TabIndex = 545;
             this.emailtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.emailtxtbox_KeyDown);
             // 
@@ -114,7 +113,7 @@
             this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(334, 362);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(57, 21);
+            this.label23.Size = new System.Drawing.Size(43, 16);
             this.label23.TabIndex = 544;
             this.label23.Text = "E-mail";
             // 
@@ -123,9 +122,8 @@
             this.conatactpersontxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conatactpersontxtbox.Location = new System.Drawing.Point(334, 435);
             this.conatactpersontxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.conatactpersontxtbox.Multiline = true;
             this.conatactpersontxtbox.Name = "conatactpersontxtbox";
-            this.conatactpersontxtbox.Size = new System.Drawing.Size(339, 20);
+            this.conatactpersontxtbox.Size = new System.Drawing.Size(339, 16);
             this.conatactpersontxtbox.TabIndex = 543;
             this.conatactpersontxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conatactpersontxtbox_KeyDown);
             // 
@@ -135,7 +133,7 @@
             this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(331, 415);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(122, 21);
+            this.label22.Size = new System.Drawing.Size(93, 16);
             this.label22.TabIndex = 542;
             this.label22.Text = "Contact Person";
             // 
@@ -144,9 +142,8 @@
             this.faxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.faxtxtbox.Location = new System.Drawing.Point(495, 325);
             this.faxtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.faxtxtbox.Multiline = true;
             this.faxtxtbox.Name = "faxtxtbox";
-            this.faxtxtbox.Size = new System.Drawing.Size(179, 20);
+            this.faxtxtbox.Size = new System.Drawing.Size(179, 16);
             this.faxtxtbox.TabIndex = 541;
             this.faxtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.faxtxtbox_KeyDown);
             // 
@@ -156,7 +153,7 @@
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(501, 305);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(36, 21);
+            this.label20.Size = new System.Drawing.Size(27, 16);
             this.label20.TabIndex = 540;
             this.label20.Text = "Fax";
             // 
@@ -165,9 +162,8 @@
             this.mblnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mblnotxtbox.Location = new System.Drawing.Point(334, 325);
             this.mblnotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.mblnotxtbox.Multiline = true;
             this.mblnotxtbox.Name = "mblnotxtbox";
-            this.mblnotxtbox.Size = new System.Drawing.Size(153, 20);
+            this.mblnotxtbox.Size = new System.Drawing.Size(153, 16);
             this.mblnotxtbox.TabIndex = 539;
             this.mblnotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mblnotxtbox_KeyDown);
             // 
@@ -177,7 +173,7 @@
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(331, 305);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 21);
+            this.label21.Size = new System.Drawing.Size(63, 16);
             this.label21.TabIndex = 538;
             this.label21.Text = "Mobile No";
             // 
@@ -186,9 +182,8 @@
             this.phone2txtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phone2txtbox.Location = new System.Drawing.Point(550, 271);
             this.phone2txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.phone2txtbox.Multiline = true;
             this.phone2txtbox.Name = "phone2txtbox";
-            this.phone2txtbox.Size = new System.Drawing.Size(123, 20);
+            this.phone2txtbox.Size = new System.Drawing.Size(123, 16);
             this.phone2txtbox.TabIndex = 537;
             this.phone2txtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phone2txtbox_KeyDown);
             // 
@@ -198,7 +193,7 @@
             this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(547, 251);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 21);
+            this.label19.Size = new System.Drawing.Size(53, 16);
             this.label19.TabIndex = 536;
             this.label19.Text = "Phone 2";
             // 
@@ -207,9 +202,8 @@
             this.phonetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phonetxtbox.Location = new System.Drawing.Point(426, 271);
             this.phonetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.phonetxtbox.Multiline = true;
             this.phonetxtbox.Name = "phonetxtbox";
-            this.phonetxtbox.Size = new System.Drawing.Size(117, 20);
+            this.phonetxtbox.Size = new System.Drawing.Size(117, 16);
             this.phonetxtbox.TabIndex = 535;
             this.phonetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.phonetxtbox_KeyDown);
             // 
@@ -219,7 +213,7 @@
             this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(427, 251);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 21);
+            this.label18.Size = new System.Drawing.Size(61, 16);
             this.label18.TabIndex = 534;
             this.label18.Text = "Phone No";
             // 
@@ -228,9 +222,8 @@
             this.citytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.citytxtbox.Location = new System.Drawing.Point(332, 271);
             this.citytxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.citytxtbox.Multiline = true;
             this.citytxtbox.Name = "citytxtbox";
-            this.citytxtbox.Size = new System.Drawing.Size(86, 20);
+            this.citytxtbox.Size = new System.Drawing.Size(86, 16);
             this.citytxtbox.TabIndex = 533;
             this.citytxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.citytxtbox_KeyDown);
             // 
@@ -240,7 +233,7 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(334, 251);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 21);
+            this.label17.Size = new System.Drawing.Size(28, 16);
             this.label17.TabIndex = 532;
             this.label17.Text = "City";
             // 
@@ -249,9 +242,8 @@
             this.addresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addresstxtbox.Location = new System.Drawing.Point(334, 218);
             this.addresstxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.addresstxtbox.Multiline = true;
             this.addresstxtbox.Name = "addresstxtbox";
-            this.addresstxtbox.Size = new System.Drawing.Size(335, 20);
+            this.addresstxtbox.Size = new System.Drawing.Size(335, 16);
             this.addresstxtbox.TabIndex = 528;
             this.addresstxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addresstxtbox_KeyDown);
             // 
@@ -261,17 +253,18 @@
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(331, 198);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 21);
+            this.label15.Size = new System.Drawing.Size(58, 16);
             this.label15.TabIndex = 527;
             this.label15.Text = "Address:";
             // 
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(344, 538);
+            this.newbtn.Location = new System.Drawing.Point(350, 549);
             this.newbtn.Margin = new System.Windows.Forms.Padding(2);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
@@ -286,7 +279,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(264, 538);
+            this.closebtn.Location = new System.Drawing.Point(270, 549);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -298,10 +291,11 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(502, 538);
+            this.removebtn.Location = new System.Drawing.Point(508, 549);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -313,10 +307,11 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(423, 538);
+            this.editbtn.Location = new System.Drawing.Point(429, 549);
             this.editbtn.Margin = new System.Windows.Forms.Padding(2);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
@@ -331,7 +326,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(185, 538);
+            this.clearbtn.Location = new System.Drawing.Point(191, 549);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -343,10 +338,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(106, 538);
+            this.savebtn.Location = new System.Drawing.Point(112, 549);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -360,9 +356,8 @@
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox.Location = new System.Drawing.Point(328, 104);
             this.partyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(38, 20);
+            this.partyidtxtbox.Size = new System.Drawing.Size(38, 16);
             this.partyidtxtbox.TabIndex = 518;
             this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
@@ -371,9 +366,8 @@
             this.partyid1txtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyid1txtbox.Location = new System.Drawing.Point(367, 104);
             this.partyid1txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.partyid1txtbox.Multiline = true;
             this.partyid1txtbox.Name = "partyid1txtbox";
-            this.partyid1txtbox.Size = new System.Drawing.Size(68, 20);
+            this.partyid1txtbox.Size = new System.Drawing.Size(68, 16);
             this.partyid1txtbox.TabIndex = 517;
             this.partyid1txtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyid1txtbox_KeyDown);
             // 
@@ -382,9 +376,8 @@
             this.nametxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nametxtbox1.Location = new System.Drawing.Point(330, 164);
             this.nametxtbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox1.Multiline = true;
             this.nametxtbox1.Name = "nametxtbox1";
-            this.nametxtbox1.Size = new System.Drawing.Size(341, 20);
+            this.nametxtbox1.Size = new System.Drawing.Size(341, 16);
             this.nametxtbox1.TabIndex = 515;
             this.nametxtbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox1_KeyDown);
             // 
@@ -394,7 +387,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(327, 145);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 21);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 512;
             this.label6.Text = "Name:";
             // 
@@ -404,7 +397,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(325, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 511;
             this.label5.Text = "Party ID";
             // 
@@ -414,7 +407,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(264, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 42);
+            this.label4.Size = new System.Drawing.Size(113, 32);
             this.label4.TabIndex = 510;
             this.label4.Text = "Vendors";
             // 
@@ -435,7 +428,7 @@
             this.textBox1.Location = new System.Drawing.Point(1, 112);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 23);
+            this.textBox1.Size = new System.Drawing.Size(307, 19);
             this.textBox1.TabIndex = 508;
             this.textBox1.Text = "                Available Towns";
             // 
@@ -444,9 +437,8 @@
             this.nametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nametxtbox.Location = new System.Drawing.Point(65, 83);
             this.nametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox.Multiline = true;
             this.nametxtbox.Name = "nametxtbox";
-            this.nametxtbox.Size = new System.Drawing.Size(180, 20);
+            this.nametxtbox.Size = new System.Drawing.Size(180, 16);
             this.nametxtbox.TabIndex = 504;
             this.nametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nametxtbox_KeyDown);
             // 
@@ -456,16 +448,16 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 21);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 502;
             this.label1.Text = "Name:";
             // 
             // Vendors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(681, 599);
+            this.ClientSize = new System.Drawing.Size(706, 599);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.vendorctgrycombobox);
             this.Controls.Add(this.label9);
@@ -501,6 +493,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nametxtbox);
             this.Controls.Add(this.label1);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

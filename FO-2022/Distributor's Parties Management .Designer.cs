@@ -70,7 +70,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(530, 42);
+            this.label1.Size = new System.Drawing.Size(414, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Distributor Parties Management";
             // 
@@ -79,7 +79,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 21);
+            this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Search Party";
             // 
@@ -101,7 +101,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(557, 111);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 21);
+            this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 172;
             this.label6.Text = "Product Name";
             // 
@@ -112,7 +112,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(433, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
+            this.label4.Size = new System.Drawing.Size(82, 16);
             this.label4.TabIndex = 171;
             this.label4.Text = "Distributor ID";
             // 
@@ -121,7 +121,7 @@
             this.partynamegrptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partynamegrptxtbox.Location = new System.Drawing.Point(126, 135);
             this.partynamegrptxtbox.Name = "partynamegrptxtbox";
-            this.partynamegrptxtbox.Size = new System.Drawing.Size(283, 20);
+            this.partynamegrptxtbox.Size = new System.Drawing.Size(283, 16);
             this.partynamegrptxtbox.TabIndex = 174;
             this.partynamegrptxtbox.TextChanged += new System.EventHandler(this.partynamegrptxtbox_TextChanged);
             // 
@@ -133,7 +133,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 173);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(397, 23);
+            this.textBox1.Size = new System.Drawing.Size(397, 19);
             this.textBox1.TabIndex = 425;
             this.textBox1.Text = "                      Distributor\'List";
             // 
@@ -141,9 +141,8 @@
             // 
             this.distributorNametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.distributorNametxtbox.Location = new System.Drawing.Point(557, 134);
-            this.distributorNametxtbox.Multiline = true;
             this.distributorNametxtbox.Name = "distributorNametxtbox";
-            this.distributorNametxtbox.Size = new System.Drawing.Size(209, 17);
+            this.distributorNametxtbox.Size = new System.Drawing.Size(209, 16);
             this.distributorNametxtbox.TabIndex = 427;
             this.distributorNametxtbox.TextChanged += new System.EventHandler(this.distributorNametxtbox_TextChanged);
             // 
@@ -151,9 +150,8 @@
             // 
             this.distributorIdtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.distributorIdtxtbox.Location = new System.Drawing.Point(426, 132);
-            this.distributorIdtxtbox.Multiline = true;
             this.distributorIdtxtbox.Name = "distributorIdtxtbox";
-            this.distributorIdtxtbox.Size = new System.Drawing.Size(96, 19);
+            this.distributorIdtxtbox.Size = new System.Drawing.Size(96, 16);
             this.distributorIdtxtbox.TabIndex = 428;
             this.distributorIdtxtbox.TextChanged += new System.EventHandler(this.distributorIdtxtbox_TextChanged);
             this.distributorIdtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.distributorIdtxtbox_KeyPress);
@@ -163,7 +161,7 @@
             this.partyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partyidtxtbox.Location = new System.Drawing.Point(426, 173);
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(96, 20);
+            this.partyidtxtbox.Size = new System.Drawing.Size(96, 16);
             this.partyidtxtbox.TabIndex = 433;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
@@ -172,7 +170,7 @@
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.partynametxtbox.Location = new System.Drawing.Point(557, 173);
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(99, 20);
+            this.partynametxtbox.Size = new System.Drawing.Size(99, 16);
             this.partynametxtbox.TabIndex = 432;
             this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
             this.partynametxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partynamegrptxtbox_KeyPress);
@@ -184,7 +182,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(563, 154);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 21);
+            this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 430;
             this.label7.Text = "Party Name";
             // 
@@ -195,7 +193,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(429, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 429;
             this.label5.Text = "Party ID";
             // 
@@ -215,7 +213,7 @@
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectornametxtbox.Location = new System.Drawing.Point(662, 173);
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(104, 20);
+            this.sectornametxtbox.Size = new System.Drawing.Size(104, 16);
             this.sectornametxtbox.TabIndex = 436;
             this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
@@ -226,7 +224,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(659, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 435;
             this.label2.Text = "Sector Name";
             // 
@@ -292,6 +290,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -307,6 +306,7 @@
             // switchbtn
             // 
             this.switchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.switchbtn.Enabled = false;
             this.switchbtn.FlatAppearance.BorderSize = 0;
             this.switchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.switchbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,6 +322,7 @@
             // addmodbtn
             // 
             this.addmodbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addmodbtn.Enabled = false;
             this.addmodbtn.FlatAppearance.BorderSize = 0;
             this.addmodbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addmodbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +338,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,7 +369,7 @@
             this.label.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(769, 154);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(99, 21);
+            this.label.Size = new System.Drawing.Size(76, 16);
             this.label.TabIndex = 435;
             this.label.Text = "Town Name";
             // 
@@ -376,13 +378,13 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(772, 173);
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(104, 20);
+            this.townnametxtbox.Size = new System.Drawing.Size(104, 16);
             this.townnametxtbox.TabIndex = 436;
             this.townnametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // Distributor_s_Parties_Management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(926, 540);
@@ -411,6 +413,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

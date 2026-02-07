@@ -152,5 +152,10 @@ namespace FO_2022
 
             return dt;
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
