@@ -995,8 +995,8 @@
           <DataField>NetAmount</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TotalQty ">
-          <DataField>TotalQty </DataField>
+        <Field Name="TotalQty">
+          <DataField>TotalQty</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

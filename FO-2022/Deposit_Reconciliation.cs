@@ -552,6 +552,11 @@ namespace FO_2022
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //private void bouncedradiobtn_CheckedChanged(object sender, EventArgs e)
         //{
         //    if (selectedVoucherNo == 0)

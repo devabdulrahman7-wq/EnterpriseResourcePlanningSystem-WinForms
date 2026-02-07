@@ -63,9 +63,9 @@
             this.label2.Location = new System.Drawing.Point(79, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(465, 32);
+            this.label2.Size = new System.Drawing.Size(496, 32);
             this.label2.TabIndex = 524;
-            this.label2.Text = "Daily Recovery $ Payment Summary";
+            this.label2.Text = "Daily Recovery and Payment Summary";
             // 
             // todate
             // 
@@ -95,7 +95,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(123, 23);
             this.todatepcker.TabIndex = 527;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -105,7 +104,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
             this.fromdatepcker.TabIndex = 526;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // listViewsalesman
             // 
@@ -117,7 +115,6 @@
             this.listViewsalesman.TabIndex = 530;
             this.listViewsalesman.UseCompatibleStateImageBehavior = false;
             this.listViewsalesman.View = System.Windows.Forms.View.SmallIcon;
-            //this.listViewsalesman.SelectedIndexChanged += new System.EventHandler(this.listViewsalesman_SelectedIndexChanged);
             // 
             // previewbtn
             // 

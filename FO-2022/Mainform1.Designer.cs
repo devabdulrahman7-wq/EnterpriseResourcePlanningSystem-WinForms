@@ -750,6 +750,7 @@
             this.postDatesPaymentPromisesToolStripMenuItem.Name = "postDatesPaymentPromisesToolStripMenuItem";
             this.postDatesPaymentPromisesToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.postDatesPaymentPromisesToolStripMenuItem.Text = "Post Dates Payment Promises";
+            this.postDatesPaymentPromisesToolStripMenuItem.Visible = false;
             this.postDatesPaymentPromisesToolStripMenuItem.Click += new System.EventHandler(this.postDatesPaymentPromisesToolStripMenuItem_Click);
             // 
             // promisesProcessingToolStripMenuItem
@@ -1749,7 +1750,7 @@
             // 
             this.logOffFurqanToolStripMenuItem.Name = "logOffFurqanToolStripMenuItem";
             this.logOffFurqanToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.logOffFurqanToolStripMenuItem.Text = "Log Off Furqan__";
+            this.logOffFurqanToolStripMenuItem.Text = "Log Off ";
             this.logOffFurqanToolStripMenuItem.Click += new System.EventHandler(this.logOffFurqanToolStripMenuItem_Click);
             // 
             // dailyClosingToolStripMenuItem

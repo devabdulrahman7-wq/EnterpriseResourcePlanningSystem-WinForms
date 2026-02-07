@@ -389,7 +389,7 @@ namespace FO_2022
         }
         private void cashPaymentVoucherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cash_Payment_Voucher cpv = new Cash_Payment_Voucher();
+            Credit_Voucher cpv = new Credit_Voucher();
             cpv.Show();
             //this.Hide();
         }
@@ -417,7 +417,8 @@ namespace FO_2022
         }
         private void issueCheckBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Bank_Cheques_Issue bb=new Bank_Cheques_Issue();
+            bb.Show();
         }
         private void bankChequeIssuingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -458,7 +459,8 @@ namespace FO_2022
 
         private void postDatesPaymentPromisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Post_Date_Recovery_Promises pdpp = new Post_Date_Recovery_Promises();
+            pdpp.Show();
         }
         private void promisesProcessingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -638,17 +640,18 @@ namespace FO_2022
 
         private void logOffFurqanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void dailyClosingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void systemSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            System_Settings ss = new System_Settings();
+            ss.Show();
         }
         private void backupOnHardDriveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -664,7 +667,8 @@ namespace FO_2022
         }
         private void userSecurityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Create_New_Users cup = new Create_New_Users();
+            cup.Show();
         }
         private void openingBalancesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -692,7 +696,7 @@ namespace FO_2022
         }
         private void profitAndLossSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Profit_and_Loss_Statement pls = new Profit_and_Loss_Statement();
+            Profit_and_Loss_Report_Setting pls = new Profit_and_Loss_Report_Setting();
             pls.Show();
             //this.Hide();
         }
@@ -708,8 +712,7 @@ namespace FO_2022
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            Application.Exit();        }
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 

@@ -619,16 +619,16 @@ namespace FO_2022
 
         private void InitializeConnection()
         {
-            try
-            {
+            //try/
+            //{
                 connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading connection string: {ex.Message}\nUsing default connection.",
-                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                connectionString = "Data Source=.;Initial Catalog=db_ac0035_pos;Integrated Security=True";
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error loading connection string: {ex.Message}\nUsing default connection.",
+            //        "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    connectionString = "Data Source=.;Initial Catalog=db_ac0035_pos;Integrated Security=True";
+            //}
         }
 
         private void InitializeDataGridView()

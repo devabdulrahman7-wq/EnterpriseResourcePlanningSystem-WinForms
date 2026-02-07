@@ -110,8 +110,8 @@ namespace FO_2022
 
             // Show report
             Report_viewer viewer = new Report_viewer();
-            viewer.ShowReport("Party_Product_Sales_Ledger", dataSources, parameters, null);
-        }
+            viewer.ShowReport("Party_Product_Sales_Ledger", dataSources);
+        }                       
 
         // 📌 GET SALES LEDGER DATA FROM DATABASE
         private DataTable GetSalesLedgerData(DateTime fromDate, DateTime toDate,

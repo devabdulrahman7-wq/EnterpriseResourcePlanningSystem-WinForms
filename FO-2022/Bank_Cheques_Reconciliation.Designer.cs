@@ -42,14 +42,6 @@
             this.reconciledradiobtn = new System.Windows.Forms.RadioButton();
             this.allradiobtn = new System.Windows.Forms.RadioButton();
             this.availablechequegrid = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtbox = new System.Windows.Forms.Label();
             this.reconciledbalancetxtbox = new System.Windows.Forms.TextBox();
@@ -202,15 +194,6 @@
             // availablechequegrid
             // 
             this.availablechequegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.availablechequegrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
             this.availablechequegrid.Location = new System.Drawing.Point(23, 195);
             this.availablechequegrid.Name = "availablechequegrid";
             this.availablechequegrid.RowHeadersWidth = 51;
@@ -218,62 +201,6 @@
             this.availablechequegrid.TabIndex = 544;
             this.availablechequegrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablechequegrid_CellClick);
             this.availablechequegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availablechequegrid_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Voucher No";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Voucher Date";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Cheque No";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cheque Date";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 115;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Amount";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 75;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Narration";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Reconcile Date";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 115;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Lost";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 65;
             // 
             // textBox1
             // 
@@ -284,6 +211,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(838, 26);
             this.textBox1.TabIndex = 545;
             this.textBox1.Text = "                                                                             Avai" +
@@ -429,14 +357,6 @@
         private System.Windows.Forms.RadioButton reconciledradiobtn;
         private System.Windows.Forms.RadioButton allradiobtn;
         private System.Windows.Forms.DataGridView availablechequegrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtbox;
         private System.Windows.Forms.TextBox reconciledbalancetxtbox;

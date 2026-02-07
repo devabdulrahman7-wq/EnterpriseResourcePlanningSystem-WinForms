@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Deposit_Reconciliation));
-            this.closebtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.unreconciledbalancetxtbox = new System.Windows.Forms.TextBox();
@@ -59,26 +58,12 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbankno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.availablecheckgrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // closebtn
-            // 
-            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.closebtn.FlatAppearance.BorderSize = 0;
-            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(488, 522);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 24);
-            this.closebtn.TabIndex = 664;
-            this.closebtn.Text = "Close";
-            this.closebtn.UseVisualStyleBackColor = false;
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // savebtn
             // 
@@ -384,13 +369,28 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 65;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(488, 522);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 24);
+            this.button1.TabIndex = 664;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Deposit_Reconciliation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(879, 566);
-            this.Controls.Add(this.closebtn);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.unreconciledbalancetxtbox);
@@ -426,8 +426,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox unreconciledbalancetxtbox;
@@ -457,5 +455,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button button1;
     }
 }
