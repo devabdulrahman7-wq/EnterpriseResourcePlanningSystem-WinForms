@@ -238,9 +238,8 @@
             // 
             this.customeridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.customeridtxtbox.Location = new System.Drawing.Point(11, 138);
-            this.customeridtxtbox.Multiline = true;
             this.customeridtxtbox.Name = "customeridtxtbox";
-            this.customeridtxtbox.Size = new System.Drawing.Size(110, 17);
+            this.customeridtxtbox.Size = new System.Drawing.Size(110, 20);
             this.customeridtxtbox.TabIndex = 34;
             // 
             // customernametxtbox

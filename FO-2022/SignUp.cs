@@ -61,7 +61,7 @@ namespace FO_2022
                     if (rows > 0)
                     {
                         MessageBox.Show("Signup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Mainfrom mf = new Mainfrom();
+                        Mainform1 mf = new Mainform1();
                         mf.Show();
                         this.Hide();
                     }
