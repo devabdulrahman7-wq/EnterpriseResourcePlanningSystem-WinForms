@@ -513,7 +513,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>8.07389in</Width>
+            <Width>8.0739in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -523,7 +523,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>8.07389in</Width>
+        <Width>8.0739in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -534,7 +534,7 @@
     <Height>0.5in</Height>
     <Style />
   </Body>
-  <Width>8.12389in</Width>
+  <Width>8.0739in</Width>
   <Page>
     <PageHeader>
       <Height>0.46875in</Height>
@@ -561,7 +561,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.20625in</Height>
-          <Width>8.12389in</Width>
+          <Width>8.0739in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -588,7 +588,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.23472in</Top>
+          <Top>0.22222in</Top>
           <Left>2.94896in</Left>
           <Height>0.23403in</Height>
           <Width>1.8832in</Width>
@@ -740,6 +740,8 @@
         </Border>
       </Style>
     </PageFooter>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
     <InteractiveHeight>11.69in</InteractiveHeight>
     <InteractiveWidth>8.27in</InteractiveWidth>
     <LeftMargin>0.1in</LeftMargin>

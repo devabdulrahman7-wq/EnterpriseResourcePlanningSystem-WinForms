@@ -62,7 +62,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(655, -1);
+            this.pictureBox4.Location = new System.Drawing.Point(676, -1);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(55, 34);
@@ -108,7 +108,7 @@
             this.label7.Location = new System.Drawing.Point(365, 172);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 404;
             this.label7.Text = "Customer Name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,7 +119,7 @@
             this.label8.Location = new System.Drawing.Point(180, 172);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 21);
+            this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 403;
             this.label8.Text = "Customer ID";
             // 
@@ -160,7 +160,7 @@
             this.label5.Location = new System.Drawing.Point(368, 223);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 21);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 399;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,7 +171,7 @@
             this.label6.Location = new System.Drawing.Point(180, 224);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 21);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 398;
             this.label6.Text = "Town ID";
             // 
@@ -182,7 +182,7 @@
             this.label2.Location = new System.Drawing.Point(216, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 42);
+            this.label2.Size = new System.Drawing.Size(270, 32);
             this.label2.TabIndex = 397;
             this.label2.Text = "Sale Return Register\r\n";
             // 
@@ -192,7 +192,7 @@
             this.todate.Location = new System.Drawing.Point(366, 101);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 396;
             this.todate.Text = "To Date";
             // 
@@ -202,7 +202,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(178, 101);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 395;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -212,7 +212,7 @@
             this.todatepcker.Location = new System.Drawing.Point(370, 130);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(153, 27);
+            this.todatepcker.Size = new System.Drawing.Size(153, 23);
             this.todatepcker.TabIndex = 394;
             // 
             // fromdatepcker
@@ -221,7 +221,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(182, 130);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(160, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(160, 23);
             this.fromdatepcker.TabIndex = 393;
             // 
             // sectornametxtbox
@@ -261,7 +261,7 @@
             this.a.Location = new System.Drawing.Point(365, 274);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(105, 21);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 389;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,7 +272,7 @@
             this.label1.Location = new System.Drawing.Point(178, 274);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 388;
             this.label1.Text = "Sector ID";
             // 
@@ -317,10 +317,11 @@
             this.closebtn.TabIndex = 422;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // Sale_Reutrn_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(721, 490);

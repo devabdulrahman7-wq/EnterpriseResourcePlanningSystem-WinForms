@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace FO_2022
 {
     public partial class Charts_of_Accounts : Form
     {
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         public Charts_of_Accounts()
         {
@@ -498,6 +499,11 @@ namespace FO_2022
                 MessageBox.Show("Error filtering accounts: " + ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

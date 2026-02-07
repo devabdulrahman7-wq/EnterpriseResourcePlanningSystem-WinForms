@@ -10,7 +10,6 @@ namespace FO_2022
     {
         //private string connectionString = "Data Source=.;Initial Catalog=POS_1.2;Integrated Security=True; Connect Timeout=3";
         private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        //private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
         private SqlConnection connection;
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;

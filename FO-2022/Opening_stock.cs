@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace FO_2022
 {
     public partial class Opening_stock : Form
     {
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         private SqlConnection con;
         private DataTable stockDataTable = new DataTable();
         private int selectedSerialNo = 0;
@@ -506,8 +507,7 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mf = new Mainform1();
-            mf.Show();
+          
         }
 
         private void prodidtxtbox_KeyPress(object sender, KeyPressEventArgs e)

@@ -95,10 +95,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(557, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(531, -1);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(46, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 475;
             this.pictureBox4.TabStop = false;
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(613, 442);
+            this.ClientSize = new System.Drawing.Size(577, 383);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);

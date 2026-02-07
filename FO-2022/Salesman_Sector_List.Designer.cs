@@ -84,7 +84,7 @@
             this.label3.Location = new System.Drawing.Point(307, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 21);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 374;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             this.label4.Location = new System.Drawing.Point(148, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 21);
+            this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 373;
             this.label4.Text = "Salesman ";
             // 
@@ -125,6 +125,7 @@
             this.closebtn.TabIndex = 472;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // printbtn
             // 
@@ -157,7 +158,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(161, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 42);
+            this.label2.Size = new System.Drawing.Size(281, 32);
             this.label2.TabIndex = 469;
             this.label2.Text = "Salesman Sectors List";
             // 
@@ -166,7 +167,7 @@
             this.includepartiesforthereasoncheckbox.AutoSize = true;
             this.includepartiesforthereasoncheckbox.Location = new System.Drawing.Point(149, 181);
             this.includepartiesforthereasoncheckbox.Name = "includepartiesforthereasoncheckbox";
-            this.includepartiesforthereasoncheckbox.Size = new System.Drawing.Size(251, 25);
+            this.includepartiesforthereasoncheckbox.Size = new System.Drawing.Size(195, 20);
             this.includepartiesforthereasoncheckbox.TabIndex = 474;
             this.includepartiesforthereasoncheckbox.Text = "Include Parties for the reason";
             this.includepartiesforthereasoncheckbox.UseVisualStyleBackColor = true;
@@ -174,7 +175,7 @@
             // 
             // Salesman_Sector_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(613, 362);

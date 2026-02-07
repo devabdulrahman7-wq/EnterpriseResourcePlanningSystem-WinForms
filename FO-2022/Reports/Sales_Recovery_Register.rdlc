@@ -8,34 +8,34 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.71875in</Width>
+                  <Width>0.68229in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.91667in</Width>
+                  <Width>0.88021in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.96354in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.73226in</Width>
+                  <Width>0.6958in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.82108in</Width>
+                  <Width>0.78462in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.91667in</Width>
+                  <Width>0.88021in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.83333in</Width>
+                  <Width>0.79687in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.84375in</Width>
+                  <Width>0.80729in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.79167in</Width>
+                  <Width>0.75521in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.85417in</Width>
+                  <Width>0.81771in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -678,7 +678,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.0125in</Left>
             <Height>0.5in</Height>
-            <Width>8.42835in</Width>
+            <Width>8.06377in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -688,7 +688,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>8.45833in</Width>
+        <Width>8.07627in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -699,7 +699,7 @@
     <Height>0.5in</Height>
     <Style />
   </Body>
-  <Width>8.46875in</Width>
+  <Width>8.10752in</Width>
   <Page>
     <PageHeader>
       <Height>0.47292in</Height>
@@ -785,7 +785,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.21875in</Height>
-          <Width>8.45833in</Width>
+          <Width>8.07627in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -825,6 +825,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0in</Top>
           <Left>5.36656in</Left>
           <Height>0.22986in</Height>
           <Width>0.75125in</Width>
@@ -853,6 +854,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
+          <Top>0in</Top>
           <Left>3.93775in</Left>
           <Height>0.22986in</Height>
           <Width>0.5625in</Width>
@@ -884,6 +886,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0in</Top>
           <Left>2.91344in</Left>
           <Height>0.22986in</Height>
           <Width>1.00125in</Width>
@@ -913,6 +916,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0in</Top>
           <Left>4.52976in</Left>
           <Height>0.22986in</Height>
           <Width>0.75125in</Width>
@@ -934,10 +938,14 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

@@ -189,5 +189,11 @@ namespace FO_2022
                 e.Handled = true;
             }
         }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

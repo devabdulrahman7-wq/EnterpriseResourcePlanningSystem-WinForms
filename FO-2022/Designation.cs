@@ -31,6 +31,12 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
+            this.Close();
+
+        }
+
+        private void Designation_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -180,9 +180,8 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

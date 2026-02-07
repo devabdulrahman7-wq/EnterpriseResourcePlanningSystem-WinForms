@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,7 @@ namespace FO_2022
     public partial class Stock_Transfer_Salesmen_to_Salesmen : Form
     {
         // Connection string directly
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         private List<ProductItem> productItems = new List<ProductItem>();
         private string fromSalesmanId = "";

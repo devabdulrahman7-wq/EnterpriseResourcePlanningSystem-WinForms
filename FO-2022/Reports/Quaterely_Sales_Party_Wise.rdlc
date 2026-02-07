@@ -8,37 +8,37 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.91288in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.88542in</Width>
+                  <Width>0.7983in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.91288in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.85534in</Width>
+                  <Width>0.76822in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.875in</Width>
+                  <Width>0.78788in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.79341in</Width>
+                  <Width>0.70629in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.71875in</Width>
+                  <Width>0.63163in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.625in</Width>
+                  <Width>0.53788in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.67708in</Width>
+                  <Width>0.58996in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.71008in</Width>
+                  <Width>0.62296in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.80208in</Width>
+                  <Width>0.71496in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -785,7 +785,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>8.94216in</Width>
+            <Width>7.98383in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -796,7 +796,7 @@
         <KeepTogether>true</KeepTogether>
         <Left>0.06312in</Left>
         <Height>0.5in</Height>
-        <Width>8.94216in</Width>
+        <Width>7.98383in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -811,7 +811,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>9.00528in</Width>
+  <Width>8.06778in</Width>
   <Page>
     <PageHeader>
       <Height>0.49792in</Height>
@@ -838,7 +838,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.21875in</Height>
-          <Width>9.00528in</Width>
+          <Width>8.04695in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1018,6 +1018,8 @@
         </Border>
       </Style>
     </PageFooter>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
     <InteractiveHeight>11.69in</InteractiveHeight>
     <InteractiveWidth>8.27in</InteractiveWidth>
     <LeftMargin>0.1in</LeftMargin>

@@ -8,19 +8,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.475in</Width>
+                  <Width>1.59558in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.475in</Width>
+                  <Width>1.59558in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.475in</Width>
+                  <Width>1.59558in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.475in</Width>
+                  <Width>1.59558in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.475in</Width>
+                  <Width>1.59558in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -376,9 +376,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.24504in</Left>
             <Height>0.5in</Height>
-            <Width>7.375in</Width>
+            <Width>7.97792in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -388,7 +387,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>7.89458in</Width>
+        <Width>7.97792in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -425,7 +424,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0in</Top>
           <Height>0.21875in</Height>
           <Width>7.97792in</Width>
           <Style>
@@ -524,7 +522,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Left>1.47768in</Left>
+          <Left>3.60268in</Left>
           <Height>0.20486in</Height>
           <Width>0.5625in</Width>
           <ZIndex>1</ZIndex>
@@ -553,7 +551,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>0.58879in</Left>
+          <Left>2.71379in</Left>
           <Height>0.25in</Height>
           <Width>0.83333in</Width>
           <ZIndex>2</ZIndex>
@@ -603,10 +601,14 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

@@ -63,7 +63,7 @@
             this.textBox2.Location = new System.Drawing.Point(51, 119);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 23);
+            this.textBox2.Size = new System.Drawing.Size(281, 19);
             this.textBox2.TabIndex = 647;
             this.textBox2.Text = "      List  of Un-Closed Dates";
             // 
@@ -109,7 +109,7 @@
             this.administratorbtn.AutoSize = true;
             this.administratorbtn.Location = new System.Drawing.Point(28, 56);
             this.administratorbtn.Name = "administratorbtn";
-            this.administratorbtn.Size = new System.Drawing.Size(119, 22);
+            this.administratorbtn.Size = new System.Drawing.Size(101, 18);
             this.administratorbtn.TabIndex = 1;
             this.administratorbtn.TabStop = true;
             this.administratorbtn.Text = "Administrator ";
@@ -120,7 +120,7 @@
             this.standarduserbtn.AutoSize = true;
             this.standarduserbtn.Location = new System.Drawing.Point(27, 22);
             this.standarduserbtn.Name = "standarduserbtn";
-            this.standarduserbtn.Size = new System.Drawing.Size(122, 22);
+            this.standarduserbtn.Size = new System.Drawing.Size(102, 18);
             this.standarduserbtn.TabIndex = 0;
             this.standarduserbtn.TabStop = true;
             this.standarduserbtn.Text = "Standard User";
@@ -138,6 +138,7 @@
             this.closebtn.TabIndex = 655;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click_1);
             // 
             // removebtn
             // 
@@ -211,7 +212,7 @@
             this.label6.Location = new System.Drawing.Point(447, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 21);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 657;
             this.label6.Text = "Username";
             // 
@@ -231,7 +232,7 @@
             this.label1.Location = new System.Drawing.Point(447, 225);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 21);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 659;
             this.label1.Text = "Password";
             // 
@@ -251,7 +252,7 @@
             this.label2.Location = new System.Drawing.Point(447, 272);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 21);
+            this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 661;
             this.label2.Text = "Re-Type Password";
             // 
@@ -271,14 +272,14 @@
             this.label3.Location = new System.Drawing.Point(226, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(283, 42);
+            this.label3.Size = new System.Drawing.Size(221, 32);
             this.label3.TabIndex = 662;
             this.label3.Text = "Create New User";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(678, -1);
+            this.pictureBox2.Location = new System.Drawing.Point(692, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +289,7 @@
             // 
             // CreateUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(735, 522);

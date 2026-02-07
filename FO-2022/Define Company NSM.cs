@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,7 @@ namespace FO_2022
 {
     public partial class Define_Company_NSM : Form
     {
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         private SqlConnection connection;
         private DataTable dataTable;
         private string currentNSMid = "";
@@ -210,14 +211,13 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            if (connection != null && connection.State == ConnectionState.Open)
-            {
-                connection.Close();
-            }
+            //if (connection != null && connection.State == ConnectionState.Open)
+            //{
+            //    connection.Close();
+            //}
 
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         private void ClearFields()

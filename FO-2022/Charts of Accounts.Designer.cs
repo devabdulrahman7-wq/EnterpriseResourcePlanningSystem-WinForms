@@ -42,6 +42,7 @@
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Revnue");
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Expense");
             System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Parties");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Charts_of_Accounts));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -87,7 +90,7 @@
             this.textBox1.Location = new System.Drawing.Point(447, 91);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 23);
+            this.textBox1.Size = new System.Drawing.Size(346, 19);
             this.textBox1.TabIndex = 628;
             this.textBox1.Text = "                Available Accounts";
             // 
@@ -97,7 +100,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(311, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 42);
+            this.label1.Size = new System.Drawing.Size(236, 32);
             this.label1.TabIndex = 630;
             this.label1.Text = "Chart of Accounts";
             // 
@@ -152,12 +155,25 @@
             this.treeView1.TabIndex = 640;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(807, -4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 648;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // Charts_of_Accounts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(846, 586);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.label1);
@@ -172,6 +188,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Charts_of_Accounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +203,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

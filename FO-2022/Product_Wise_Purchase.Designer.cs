@@ -53,7 +53,7 @@
             this.todate.Location = new System.Drawing.Point(309, 117);
             this.todate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 456;
             this.todate.Text = "To Date";
             // 
@@ -63,7 +63,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(117, 117);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 455;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -73,7 +73,7 @@
             this.todatepcker.Location = new System.Drawing.Point(312, 139);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(153, 27);
+            this.todatepcker.Size = new System.Drawing.Size(153, 23);
             this.todatepcker.TabIndex = 454;
             // 
             // fromdatepcker
@@ -82,7 +82,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(120, 139);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(144, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(144, 23);
             this.fromdatepcker.TabIndex = 453;
             // 
             // pictureBox2
@@ -104,7 +104,7 @@
             this.label3.Location = new System.Drawing.Point(168, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(363, 38);
+            this.label3.Size = new System.Drawing.Size(296, 31);
             this.label3.TabIndex = 451;
             this.label3.Text = "Product Wise Purhcase ";
             // 
@@ -149,6 +149,7 @@
             this.closebtn.TabIndex = 458;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // cmpnynametxtbox
             // 
@@ -187,7 +188,7 @@
             this.label1.Location = new System.Drawing.Point(309, 177);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 21);
+            this.label1.Size = new System.Drawing.Size(97, 16);
             this.label1.TabIndex = 461;
             this.label1.Text = "Company Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,13 +199,13 @@
             this.label4.Location = new System.Drawing.Point(119, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 21);
+            this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 460;
             this.label4.Text = "Company ID";
             // 
             // Product_Wise_Purchase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(620, 380);

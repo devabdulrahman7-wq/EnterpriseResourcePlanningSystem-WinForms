@@ -8,8 +8,7 @@ namespace FO_2022
 {
     public partial class Define_Packings : Form
     {
-        //string con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        //SqlConnection con = new SqlConnection(@"Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!");
+       
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
         public Define_Packings()
@@ -21,9 +20,8 @@ namespace FO_2022
         // ========== CLOSE BUTTON ==========
         private void closebtn_Click(object sender, EventArgs e)
         {
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         // ========== LOAD DATA INTO GRID ==========

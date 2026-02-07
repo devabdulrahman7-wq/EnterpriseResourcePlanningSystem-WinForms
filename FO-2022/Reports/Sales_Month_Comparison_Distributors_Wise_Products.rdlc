@@ -8,28 +8,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96615in</Width>
+                  <Width>1.02513in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.92448in</Width>
+                  <Width>0.98346in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -46,10 +46,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Product Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -76,10 +80,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Group Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -106,10 +114,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Last Month Sales Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -136,10 +148,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Last Month Sales Qty</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -166,10 +182,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Current Month Sales Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -196,10 +216,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Current Month Sales Qty</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -226,10 +250,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Value Difference</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox24</rd:DefaultName>
@@ -256,10 +284,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Percentage Change</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -549,7 +581,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>7.6875in</Width>
+            <Width>8.15934in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -559,7 +591,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>8in</Width>
+        <Width>8.15934in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -777,10 +809,14 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

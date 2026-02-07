@@ -162,5 +162,11 @@ namespace FO_2022
         {
             this.Close();
         }
+
+        private void closebtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

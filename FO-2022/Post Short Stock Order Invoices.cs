@@ -241,9 +241,8 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.ShowDialog();
+            this.Close();
+
         }
 
         private void postsalebtn_Click(object sender, EventArgs e)

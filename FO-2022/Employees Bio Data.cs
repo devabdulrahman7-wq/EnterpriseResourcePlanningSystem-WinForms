@@ -18,7 +18,7 @@
 //        private SqlConnection connection;
 //        private DataTable employeesData;
 
-//        //private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+//        
 //        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 //        private bool isEditMode = false;
 //        private string currentEmployeeId = "";
@@ -922,9 +922,8 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         private void activebtn_Click(object sender, EventArgs e)

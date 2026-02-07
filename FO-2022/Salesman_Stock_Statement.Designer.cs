@@ -56,7 +56,6 @@
             this.salesmannametxtbox.Name = "salesmannametxtbox";
             this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
             this.salesmannametxtbox.TabIndex = 409;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
@@ -153,7 +152,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 400;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -163,7 +161,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
             this.fromdatepcker.TabIndex = 399;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // previewbtn
             // 
@@ -215,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(685, 476);
+            this.ClientSize = new System.Drawing.Size(685, 426);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);

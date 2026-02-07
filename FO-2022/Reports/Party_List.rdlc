@@ -8,28 +8,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.04637in</Width>
+                  <Width>1.18309in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.9444in</Width>
+                  <Width>1.08112in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.84846in</Width>
+                  <Width>0.98518in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.83873in</Width>
+                  <Width>0.97545in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.66096in</Width>
+                  <Width>0.79768in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.80679in</Width>
+                  <Width>0.94351in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.67137in</Width>
+                  <Width>0.80809in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.99191in</Width>
+                  <Width>1.12863in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -46,10 +46,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Party ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -76,10 +80,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Party Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -106,10 +114,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>City</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -136,10 +148,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Mobile</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -166,10 +182,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Party Type</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -196,10 +216,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Category ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -226,10 +250,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Credit Days</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -256,10 +284,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Sector Name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox21</rd:DefaultName>
@@ -555,7 +587,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>6.80902in</Width>
+            <Width>7.90277in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -566,7 +598,7 @@
         <KeepTogether>true</KeepTogether>
         <Left>0.10417in</Left>
         <Height>0.51785in</Height>
-        <Width>6.80902in</Width>
+        <Width>7.90277in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -582,7 +614,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>6.91319in</Width>
+  <Width>8.00694in</Width>
   <Page>
     <PageHeader>
       <Height>0.49132in</Height>
@@ -610,7 +642,7 @@
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.00868in</Top>
           <Height>0.21875in</Height>
-          <Width>6.91319in</Width>
+          <Width>8.00694in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -793,10 +825,10 @@
     </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
-    <LeftMargin>0.5in</LeftMargin>
-    <RightMargin>0.5in</RightMargin>
-    <TopMargin>0.5in</TopMargin>
-    <BottomMargin>0.5in</BottomMargin>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>

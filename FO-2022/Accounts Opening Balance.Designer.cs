@@ -89,7 +89,7 @@
             this.accountcombobox.FormattingEnabled = true;
             this.accountcombobox.Location = new System.Drawing.Point(52, 101);
             this.accountcombobox.Name = "accountcombobox";
-            this.accountcombobox.Size = new System.Drawing.Size(221, 27);
+            this.accountcombobox.Size = new System.Drawing.Size(221, 24);
             this.accountcombobox.TabIndex = 666;
             this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
@@ -99,7 +99,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(199, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 42);
+            this.label1.Size = new System.Drawing.Size(346, 32);
             this.label1.TabIndex = 667;
             this.label1.Text = "Accounts Opening Balance";
             // 
@@ -108,7 +108,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 21);
+            this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 668;
             this.label2.Text = "Accounts Type";
             // 
@@ -120,7 +120,7 @@
             this.textBox1.Location = new System.Drawing.Point(52, 130);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(610, 23);
+            this.textBox1.Size = new System.Drawing.Size(610, 19);
             this.textBox1.TabIndex = 669;
             this.textBox1.Text = "                                              Available Towns";
             // 
@@ -137,7 +137,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(660, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(660, -2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +147,7 @@
             // 
             // Accounts_Opening_Balance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(703, 520);

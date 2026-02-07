@@ -654,9 +654,8 @@ namespace FO_2022
         // Close Button
         private void closebtn_Click(object sender, EventArgs e)
         {
-            Mainform1 mf = new Mainform1();
-            mf.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         // Block Button

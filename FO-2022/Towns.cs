@@ -14,7 +14,6 @@
 //    public partial class Towns : Form
 //    {
 //        // Database connection string - replace with your actual connection string
-//        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
 
 //        private SqlConnection connection;
 //        private DataTable townsDataTable;
@@ -379,6 +378,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -391,7 +391,7 @@ namespace FO_2022
 {
     public partial class Towns : Form
     {
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         private SqlConnection connection;
         private DataTable townsDataTable;
@@ -516,8 +516,8 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.Show();
+            //Mainform1 mainform1 = new Mainform1();
+            //mainform1.Show();
         }
 
         private void clearbtn_Click(object sender, EventArgs e)

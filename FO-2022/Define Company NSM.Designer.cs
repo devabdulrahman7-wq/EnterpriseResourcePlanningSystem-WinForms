@@ -53,7 +53,7 @@
             this.textBox1.Location = new System.Drawing.Point(11, 90);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 23);
+            this.textBox1.Size = new System.Drawing.Size(346, 19);
             this.textBox1.TabIndex = 509;
             this.textBox1.Text = "                Available NSM\'s";
             // 
@@ -63,7 +63,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(329, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 42);
+            this.label1.Size = new System.Drawing.Size(193, 33);
             this.label1.TabIndex = 510;
             this.label1.Text = "Company NSM";
             // 
@@ -173,16 +173,16 @@
             this.label3.Location = new System.Drawing.Point(385, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 21);
+            this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 606;
             this.label3.Text = "NSM Name:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(627, -2);
+            this.pictureBox2.Location = new System.Drawing.Point(675, -2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(42, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 608;
             this.pictureBox2.TabStop = false;
@@ -199,7 +199,7 @@
             // 
             // Define_Company_NSM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(717, 568);

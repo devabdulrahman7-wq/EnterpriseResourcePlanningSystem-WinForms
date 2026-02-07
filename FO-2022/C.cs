@@ -1641,8 +1641,8 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
+            //this.Close();
             this.Close();
-            Mainform1 mf = new Mainform1();
         }
 
         private void openpendingbtn_Click(object sender, EventArgs e)

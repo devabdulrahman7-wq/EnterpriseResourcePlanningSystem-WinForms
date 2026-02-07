@@ -79,7 +79,7 @@
             this.label6.Location = new System.Drawing.Point(517, 81);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 21);
+            this.label6.Size = new System.Drawing.Size(63, 16);
             this.label6.TabIndex = 188;
             this.label6.Text = "Search ID";
             // 
@@ -97,7 +97,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(31, 93);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(112, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(112, 23);
             this.fromdatepcker.TabIndex = 191;
             // 
             // saledatelbl
@@ -107,7 +107,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(38, 74);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(89, 21);
+            this.saledatelbl.Size = new System.Drawing.Size(67, 16);
             this.saledatelbl.TabIndex = 190;
             this.saledatelbl.Text = "From Date";
             // 
@@ -116,7 +116,7 @@
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(149, 93);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(107, 27);
+            this.todatepcker.Size = new System.Drawing.Size(107, 23);
             this.todatepcker.TabIndex = 193;
             // 
             // label1
@@ -126,7 +126,7 @@
             this.label1.Location = new System.Drawing.Point(156, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 21);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 192;
             this.label1.Text = "To Date";
             // 
@@ -143,6 +143,7 @@
             this.closebtn.TabIndex = 642;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // refreshbtn
             // 
@@ -236,7 +237,7 @@
             this.textBox1.Location = new System.Drawing.Point(31, 121);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(391, 23);
+            this.textBox1.Size = new System.Drawing.Size(391, 19);
             this.textBox1.TabIndex = 643;
             this.textBox1.Text = "                Available Un-Locked Entries";
             // 
@@ -248,7 +249,7 @@
             this.textBox2.Location = new System.Drawing.Point(505, 121);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(391, 23);
+            this.textBox2.Size = new System.Drawing.Size(391, 19);
             this.textBox2.TabIndex = 645;
             this.textBox2.Text = "                Available Lock Entries";
             // 
@@ -301,7 +302,7 @@
             this.label2.Location = new System.Drawing.Point(289, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(468, 42);
+            this.label2.Size = new System.Drawing.Size(366, 32);
             this.label2.TabIndex = 647;
             this.label2.Text = "Locked $ Un-Locked Entries";
             // 
@@ -347,7 +348,7 @@
             // 
             // Sales_Invoice_Lock___Un_Lock_System
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(913, 504);

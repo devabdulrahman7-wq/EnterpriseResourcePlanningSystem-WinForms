@@ -50,18 +50,17 @@
             // prdctnametxtbox
             // 
             this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctnametxtbox.Location = new System.Drawing.Point(343, 196);
+            this.prdctnametxtbox.Location = new System.Drawing.Point(326, 209);
             this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.prdctnametxtbox.Multiline = true;
             this.prdctnametxtbox.Name = "prdctnametxtbox";
             this.prdctnametxtbox.Size = new System.Drawing.Size(224, 28);
             this.prdctnametxtbox.TabIndex = 476;
-            //this.prdctnametxtbox.TextChanged += new System.EventHandler(this.prdctnametxtbox_TextChanged);
             // 
             // prdctidtxtbox
             // 
             this.prdctidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prdctidtxtbox.Location = new System.Drawing.Point(182, 196);
+            this.prdctidtxtbox.Location = new System.Drawing.Point(165, 209);
             this.prdctidtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.prdctidtxtbox.Multiline = true;
             this.prdctidtxtbox.Name = "prdctidtxtbox";
@@ -72,7 +71,7 @@
             // prdctidsearch
             // 
             this.prdctidsearch.Image = ((System.Drawing.Image)(resources.GetObject("prdctidsearch.Image")));
-            this.prdctidsearch.Location = new System.Drawing.Point(304, 196);
+            this.prdctidsearch.Location = new System.Drawing.Point(287, 209);
             this.prdctidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.prdctidsearch.Name = "prdctidsearch";
             this.prdctidsearch.Size = new System.Drawing.Size(33, 28);
@@ -85,7 +84,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(340, 174);
+            this.label5.Location = new System.Drawing.Point(323, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 16);
@@ -97,7 +96,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(178, 174);
+            this.label6.Location = new System.Drawing.Point(161, 187);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 16);
@@ -110,7 +109,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(223, 297);
+            this.previewbtn.Location = new System.Drawing.Point(200, 304);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 471;
@@ -124,7 +123,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(378, 297);
+            this.closebtn.Location = new System.Drawing.Point(355, 304);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 470;
@@ -138,7 +137,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(304, 297);
+            this.printbtn.Location = new System.Drawing.Point(281, 304);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 469;
@@ -170,27 +169,25 @@
             // todatepcker
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.todatepcker.Location = new System.Drawing.Point(343, 129);
+            this.todatepcker.Location = new System.Drawing.Point(326, 142);
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 466;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromdatepcker.Location = new System.Drawing.Point(182, 129);
+            this.fromdatepcker.Location = new System.Drawing.Point(165, 142);
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
             this.fromdatepcker.TabIndex = 465;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(340, 110);
+            this.label3.Location = new System.Drawing.Point(323, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 464;
@@ -201,7 +198,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(179, 110);
+            this.label2.Location = new System.Drawing.Point(162, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 463;

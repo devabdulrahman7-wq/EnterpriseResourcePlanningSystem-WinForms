@@ -54,7 +54,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(184, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 42);
+            this.label2.Size = new System.Drawing.Size(134, 32);
             this.label2.TabIndex = 457;
             this.label2.Text = "Town List";
             // 
@@ -102,10 +102,10 @@
             // 
             // Town_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(532, 287);
+            this.ClientSize = new System.Drawing.Size(532, 261);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);

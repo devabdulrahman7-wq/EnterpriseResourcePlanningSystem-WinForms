@@ -68,7 +68,7 @@
             this.label2.Location = new System.Drawing.Point(171, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(366, 42);
+            this.label2.Size = new System.Drawing.Size(288, 32);
             this.label2.TabIndex = 392;
             this.label2.Text = "Salesman Commission";
             // 
@@ -78,7 +78,7 @@
             this.todate.Location = new System.Drawing.Point(332, 146);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(70, 21);
+            this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 391;
             this.todate.Text = "To Date";
             // 
@@ -88,7 +88,7 @@
             this.fromdatepckr.Location = new System.Drawing.Point(171, 146);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
-            this.fromdatepckr.Size = new System.Drawing.Size(89, 21);
+            this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 390;
             this.fromdatepckr.Text = "From Date";
             // 
@@ -98,7 +98,7 @@
             this.todatepcker.Location = new System.Drawing.Point(337, 166);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(132, 27);
+            this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 389;
             // 
             // fromdatepcker
@@ -107,7 +107,7 @@
             this.fromdatepcker.Location = new System.Drawing.Point(176, 166);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(111, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(111, 23);
             this.fromdatepcker.TabIndex = 388;
             // 
             // salesmannametxtbox
@@ -147,7 +147,7 @@
             this.label3.Location = new System.Drawing.Point(334, 211);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 21);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 395;
             this.label3.Text = "Salesman Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,7 +158,7 @@
             this.label4.Location = new System.Drawing.Point(175, 211);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 21);
+            this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 394;
             this.label4.Text = "Salesman ID";
             // 
@@ -168,10 +168,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(176, 387);
+            this.previewbtn.Location = new System.Drawing.Point(176, 371);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 32);
+            this.previewbtn.Size = new System.Drawing.Size(90, 27);
             this.previewbtn.TabIndex = 401;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -182,10 +182,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(273, 387);
+            this.printbtn.Location = new System.Drawing.Point(273, 371);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 32);
+            this.printbtn.Size = new System.Drawing.Size(90, 27);
             this.printbtn.TabIndex = 399;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -196,13 +196,14 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(369, 387);
+            this.closebtn.Location = new System.Drawing.Point(369, 371);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 32);
+            this.closebtn.Size = new System.Drawing.Size(90, 27);
             this.closebtn.TabIndex = 400;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // commissiontxtbox
             // 
@@ -220,17 +221,17 @@
             this.label1.Location = new System.Drawing.Point(171, 283);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 21);
+            this.label1.Size = new System.Drawing.Size(109, 16);
             this.label1.TabIndex = 402;
             this.label1.Text = "Commission Ratio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Salesman_Commision
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(651, 495);
+            this.ClientSize = new System.Drawing.Size(651, 445);
             this.Controls.Add(this.commissiontxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.previewbtn);

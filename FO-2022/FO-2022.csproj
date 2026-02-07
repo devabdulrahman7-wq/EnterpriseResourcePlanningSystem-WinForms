@@ -489,12 +489,6 @@
     <Compile Include="Expense Report Setting.Designer.cs">
       <DependentUpon>Expense Report Setting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="General Journal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,12 +536,6 @@
     </Compile>
     <Compile Include="Mainform1.Designer.cs">
       <DependentUpon>Mainform1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mainfrom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mainfrom.Designer.cs">
-      <DependentUpon>Mainfrom.cs</DependentUpon>
     </Compile>
     <Compile Include="Monthly Expense Chart.cs">
       <SubType>Form</SubType>
@@ -1467,9 +1455,6 @@
     <EmbeddedResource Include="Expense Report Setting.resx">
       <DependentUpon>Expense Report Setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="General Journal.resx">
       <DependentUpon>General Journal.cs</DependentUpon>
     </EmbeddedResource>
@@ -1493,9 +1478,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mainform1.resx">
       <DependentUpon>Mainform1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mainfrom.resx">
-      <DependentUpon>Mainfrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Monthly Expense Chart.resx">
       <DependentUpon>Monthly Expense Chart.cs</DependentUpon>

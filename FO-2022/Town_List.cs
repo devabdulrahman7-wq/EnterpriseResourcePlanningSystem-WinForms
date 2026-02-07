@@ -54,8 +54,8 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mf = new Mainform1();
-            mf.Show();
+            //Mainform1 mf = new Mainform1();
+            //mf.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -58,7 +58,7 @@
             this.partycombobox.FormattingEnabled = true;
             this.partycombobox.Location = new System.Drawing.Point(113, 123);
             this.partycombobox.Name = "partycombobox";
-            this.partycombobox.Size = new System.Drawing.Size(245, 27);
+            this.partycombobox.Size = new System.Drawing.Size(245, 24);
             this.partycombobox.TabIndex = 479;
             this.partycombobox.SelectedIndexChanged += new System.EventHandler(this.partycombobox_SelectedIndexChanged);
             // 
@@ -68,7 +68,7 @@
             this.label3.Location = new System.Drawing.Point(114, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 478;
             this.label3.Text = "Party Type";
             // 
@@ -78,7 +78,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(147, 350);
+            this.previewbtn.Location = new System.Drawing.Point(150, 385);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 477;
@@ -92,7 +92,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(302, 350);
+            this.closebtn.Location = new System.Drawing.Point(305, 385);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 476;
@@ -106,7 +106,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(228, 350);
+            this.printbtn.Location = new System.Drawing.Point(231, 385);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 475;
@@ -131,7 +131,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(145, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 42);
+            this.label2.Size = new System.Drawing.Size(247, 32);
             this.label2.TabIndex = 473;
             this.label2.Text = "Party List Detailed";
             // 
@@ -175,7 +175,7 @@
             this.label5.Location = new System.Drawing.Point(277, 203);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 21);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 469;
             this.label5.Text = "Town Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +186,7 @@
             this.label6.Location = new System.Drawing.Point(117, 203);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 21);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 468;
             this.label6.Text = "Town ID";
             // 
@@ -230,7 +230,7 @@
             this.a.Location = new System.Drawing.Point(277, 255);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(105, 21);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 464;
             this.a.Text = "Sector Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,7 +241,7 @@
             this.label1.Location = new System.Drawing.Point(117, 255);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 463;
             this.label1.Text = "Sector ID";
             // 
@@ -250,7 +250,7 @@
             this.categorycombobox.FormattingEnabled = true;
             this.categorycombobox.Location = new System.Drawing.Point(113, 172);
             this.categorycombobox.Name = "categorycombobox";
-            this.categorycombobox.Size = new System.Drawing.Size(245, 27);
+            this.categorycombobox.Size = new System.Drawing.Size(245, 24);
             this.categorycombobox.TabIndex = 481;
             this.categorycombobox.SelectedIndexChanged += new System.EventHandler(this.categorycombobox_SelectedIndexChanged);
             // 
@@ -260,13 +260,13 @@
             this.label4.Location = new System.Drawing.Point(117, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 480;
             this.label4.Text = "Category";
             // 
             // Party_List_Detailed_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(554, 466);

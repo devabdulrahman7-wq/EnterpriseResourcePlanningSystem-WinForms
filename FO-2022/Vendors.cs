@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,7 @@ namespace FO_2022
     public partial class Vendors : Form
     {
         // Database connection string
-        private string connectionString = "Data Source=SQL5110.site4now.net;Initial Catalog=db_ac0035_pos;User Id=db_ac0035_pos_admin;Password=PTCL0614581188!";
+        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         // Variables to track current state
         private bool isEditMode = false;
@@ -484,8 +485,7 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Mainform1 mainform1 = new Mainform1();
-            mainform1.Show();
+
         }
 
         // Validate form input

@@ -670,7 +670,7 @@
       <Width>7.00917in</Width>
       <Page>
         <PageHeader>
-          <Height>0.56472in</Height>
+          <Height>0.48264in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -721,7 +721,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.24653in</Top>
+              <Top>0.23403in</Top>
               <Left>4.87015in</Left>
               <Height>0.23611in</Height>
               <Width>1.76862in</Width>
@@ -751,7 +751,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox31</rd:DefaultName>
-              <Top>0.33208in</Top>
+              <Top>0.23208in</Top>
               <Left>1in</Left>
               <Height>0.2125in</Height>
               <Width>1in</Width>
@@ -781,7 +781,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox31</rd:DefaultName>
-              <Top>0.33208in</Top>
+              <Top>0.23208in</Top>
               <Left>2.82229in</Left>
               <Height>0.2in</Height>
               <Width>0.78125in</Width>
@@ -811,7 +811,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox34</rd:DefaultName>
-              <Top>0.34319in</Top>
+              <Top>0.24319in</Top>
               <Left>0.125in</Left>
               <Height>0.20139in</Height>
               <Width>0.80556in</Width>
@@ -841,7 +841,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox34</rd:DefaultName>
-              <Top>0.33069in</Top>
+              <Top>0.23069in</Top>
               <Left>2.12264in</Left>
               <Height>0.20139in</Height>
               <Width>0.63021in</Width>
@@ -933,16 +933,18 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Total pages:</Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Left>3.44406in</Left>
+              <Left>3.35096in</Left>
               <Height>0.25in</Height>
-              <Width>0.83333in</Width>
+              <Width>0.92643in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -994,8 +996,8 @@
         <PageWidth>8.27in</PageWidth>
         <LeftMargin>0.1in</LeftMargin>
         <RightMargin>0.1in</RightMargin>
-        <TopMargin>0.3in</TopMargin>
-        <BottomMargin>0.3in</BottomMargin>
+        <TopMargin>0.1in</TopMargin>
+        <BottomMargin>0.1in</BottomMargin>
         <Style>
           <Border>
             <Style>None</Style>

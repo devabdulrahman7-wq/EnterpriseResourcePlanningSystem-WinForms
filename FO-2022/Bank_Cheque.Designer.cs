@@ -149,7 +149,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 84);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 21);
+            this.label7.Size = new System.Drawing.Size(19, 16);
             this.label7.TabIndex = 438;
             this.label7.Text = "ID";
             // 
@@ -159,7 +159,7 @@
             this.todate.Location = new System.Drawing.Point(143, 84);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(46, 21);
+            this.todate.Size = new System.Drawing.Size(33, 16);
             this.todate.TabIndex = 441;
             this.todate.Text = "Date";
             // 
@@ -169,14 +169,14 @@
             this.datepcker.Location = new System.Drawing.Point(146, 104);
             this.datepcker.Margin = new System.Windows.Forms.Padding(5);
             this.datepcker.Name = "datepcker";
-            this.datepcker.Size = new System.Drawing.Size(132, 27);
+            this.datepcker.Size = new System.Drawing.Size(132, 23);
             this.datepcker.TabIndex = 440;
             this.datepcker.ValueChanged += new System.EventHandler(this.datepcker_ValueChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(708, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(717, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(300, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 38);
+            this.label1.Size = new System.Drawing.Size(178, 31);
             this.label1.TabIndex = 442;
             this.label1.Text = "Bank Account";
             // 
@@ -225,7 +225,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 21);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 445;
             this.label2.Text = "Bank A/C No";
             // 
@@ -246,7 +246,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(201, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 21);
+            this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 447;
             this.label3.Text = "Bank Account Name";
             // 
@@ -268,7 +268,7 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(608, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 21);
+            this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 449;
             this.label4.Text = "Last Cheque No";
             // 
@@ -289,7 +289,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(483, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.Size = new System.Drawing.Size(98, 16);
             this.label5.TabIndex = 451;
             this.label5.Text = "First Cheque No";
             // 
@@ -315,7 +315,7 @@
             // 
             // Bank_Cheque
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(762, 554);

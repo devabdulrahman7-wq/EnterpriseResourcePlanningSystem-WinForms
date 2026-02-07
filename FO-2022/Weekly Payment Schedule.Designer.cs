@@ -72,7 +72,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(294, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 42);
+            this.label1.Size = new System.Drawing.Size(317, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Weekly Payment Schedule";
             // 
@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(106, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 21);
+            this.label2.Size = new System.Drawing.Size(101, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Week Start Date";
             // 
@@ -98,6 +98,7 @@
             this.closebtn.TabIndex = 577;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // clearbtn
             // 
@@ -132,7 +133,7 @@
             this.startdatepckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startdatepckr.Location = new System.Drawing.Point(109, 105);
             this.startdatepckr.Name = "startdatepckr";
-            this.startdatepckr.Size = new System.Drawing.Size(112, 27);
+            this.startdatepckr.Size = new System.Drawing.Size(112, 23);
             this.startdatepckr.TabIndex = 578;
             // 
             // enddatepckr
@@ -140,7 +141,7 @@
             this.enddatepckr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.enddatepckr.Location = new System.Drawing.Point(227, 105);
             this.enddatepckr.Name = "enddatepckr";
-            this.enddatepckr.Size = new System.Drawing.Size(106, 27);
+            this.enddatepckr.Size = new System.Drawing.Size(106, 23);
             this.enddatepckr.TabIndex = 579;
             // 
             // idtxtbox
@@ -159,7 +160,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 21);
+            this.label5.Size = new System.Drawing.Size(23, 16);
             this.label5.TabIndex = 580;
             this.label5.Text = " ID";
             // 
@@ -182,7 +183,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(430, 112);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(189, 25);
+            this.checkBox1.Size = new System.Drawing.Size(148, 20);
             this.checkBox1.TabIndex = 583;
             this.checkBox1.Text = "Show Having Payable";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -192,7 +193,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(224, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 21);
+            this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 585;
             this.label4.Text = "Week End Date";
             // 
@@ -203,7 +204,7 @@
             this.label10.Location = new System.Drawing.Point(591, 90);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 21);
+            this.label10.Size = new System.Drawing.Size(73, 16);
             this.label10.TabIndex = 587;
             this.label10.Text = "Party Name";
             // 
@@ -339,7 +340,7 @@
             this.textBox1.Location = new System.Drawing.Point(4, 155);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(978, 23);
+            this.textBox1.Size = new System.Drawing.Size(978, 19);
             this.textBox1.TabIndex = 589;
             this.textBox1.Text = "                                                                                 " +
     "        Available Schedule";
@@ -377,7 +378,7 @@
             this.textBox2.Location = new System.Drawing.Point(4, 177);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(528, 23);
+            this.textBox2.Size = new System.Drawing.Size(528, 19);
             this.textBox2.TabIndex = 592;
             this.textBox2.Text = "                                  Party Information";
             // 
@@ -389,13 +390,13 @@
             this.textBox3.Location = new System.Drawing.Point(543, 177);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(439, 23);
+            this.textBox3.Size = new System.Drawing.Size(439, 19);
             this.textBox3.TabIndex = 593;
             this.textBox3.Text = "                                        Payment Schedule";
             // 
             // Weekly_Payment_Schedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(985, 554);

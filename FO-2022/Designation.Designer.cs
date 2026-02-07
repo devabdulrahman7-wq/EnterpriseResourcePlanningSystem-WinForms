@@ -40,10 +40,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(693, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(520, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 37);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 626;
             this.pictureBox2.TabStop = false;
@@ -52,21 +51,20 @@
             // designationtxtboxtxtbox
             // 
             this.designationtxtboxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.designationtxtboxtxtbox.Location = new System.Drawing.Point(151, 127);
-            this.designationtxtboxtxtbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.designationtxtboxtxtbox.Location = new System.Drawing.Point(113, 103);
+            this.designationtxtboxtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.designationtxtboxtxtbox.Multiline = true;
             this.designationtxtboxtxtbox.Name = "designationtxtboxtxtbox";
-            this.designationtxtboxtxtbox.Size = new System.Drawing.Size(257, 25);
+            this.designationtxtboxtxtbox.Size = new System.Drawing.Size(193, 20);
             this.designationtxtboxtxtbox.TabIndex = 629;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(153, 102);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(115, 83);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(146, 21);
+            this.label17.Size = new System.Drawing.Size(110, 16);
             this.label17.TabIndex = 628;
             this.label17.Text = "Designation Name";
             // 
@@ -76,10 +74,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(276, 258);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closebtn.Location = new System.Drawing.Point(207, 210);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(100, 34);
+            this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 631;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -91,10 +89,10 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(151, 258);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.savebtn.Location = new System.Drawing.Point(113, 210);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(100, 34);
+            this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 630;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
@@ -102,20 +100,20 @@
             // 
             // Designation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(747, 494);
+            this.ClientSize = new System.Drawing.Size(560, 401);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.designationtxtboxtxtbox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Designation";
             this.Text = "Designation";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Designation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

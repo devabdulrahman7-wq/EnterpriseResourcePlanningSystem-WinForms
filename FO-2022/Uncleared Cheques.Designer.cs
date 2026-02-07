@@ -43,7 +43,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(170, 202);
+            this.previewbtn.Location = new System.Drawing.Point(141, 202);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(5);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(70, 25);
@@ -58,7 +58,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(306, 202);
+            this.closebtn.Location = new System.Drawing.Point(277, 202);
             this.closebtn.Margin = new System.Windows.Forms.Padding(5);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(72, 25);
@@ -73,7 +73,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(242, 202);
+            this.printbtn.Location = new System.Drawing.Point(213, 202);
             this.printbtn.Margin = new System.Windows.Forms.Padding(5);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(61, 25);
@@ -86,7 +86,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(162, 61);
+            this.label6.Location = new System.Drawing.Point(133, 61);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(252, 32);
@@ -96,7 +96,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(578, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(511, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(616, 303);
+            this.ClientSize = new System.Drawing.Size(548, 303);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.previewbtn);

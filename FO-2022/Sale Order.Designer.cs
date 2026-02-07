@@ -456,7 +456,7 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(231, 577);
+            this.openbtn.Location = new System.Drawing.Point(231, 587);
             this.openbtn.Margin = new System.Windows.Forms.Padding(2);
             this.openbtn.Name = "openbtn";
             this.openbtn.Size = new System.Drawing.Size(79, 28);
@@ -471,7 +471,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(633, 577);
+            this.closebtn.Location = new System.Drawing.Point(633, 587);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -486,7 +486,7 @@
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(393, 577);
+            this.removebtn.Location = new System.Drawing.Point(393, 587);
             this.removebtn.Margin = new System.Windows.Forms.Padding(2);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -502,7 +502,7 @@
             this.prntbtn.FlatAppearance.BorderSize = 0;
             this.prntbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prntbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prntbtn.Location = new System.Drawing.Point(314, 577);
+            this.prntbtn.Location = new System.Drawing.Point(314, 587);
             this.prntbtn.Margin = new System.Windows.Forms.Padding(2);
             this.prntbtn.Name = "prntbtn";
             this.prntbtn.Size = new System.Drawing.Size(75, 28);
@@ -516,7 +516,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(554, 577);
+            this.clearbtn.Location = new System.Drawing.Point(554, 587);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -531,7 +531,7 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(475, 577);
+            this.savebtn.Location = new System.Drawing.Point(475, 587);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -545,7 +545,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(950, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 640;
             this.pictureBox2.TabStop = false;

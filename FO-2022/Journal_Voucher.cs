@@ -897,24 +897,10 @@ namespace FO_2022
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Close database connection
-                if (con != null && con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
+            this.Close();
 
-                // Return to MainForm1
-                Mainform1 mainform1 = new Mainform1();
-                mainform1.ShowDialog();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error closing form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
+            
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {

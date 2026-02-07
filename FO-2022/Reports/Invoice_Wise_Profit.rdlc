@@ -729,7 +729,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0in</Top>
           <Left>4.73572in</Left>
           <Height>0.22986in</Height>
           <Width>0.75125in</Width>
@@ -758,7 +757,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0in</Top>
           <Left>3.43192in</Left>
           <Height>0.22986in</Height>
           <Width>0.5625in</Width>
@@ -788,7 +786,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
           <Left>2.54302in</Left>
           <Height>0.25in</Height>
           <Width>0.83333in</Width>
@@ -818,7 +815,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
           <Left>4.03434in</Left>
           <Height>0.22791in</Height>
           <Width>0.6875in</Width>
@@ -840,10 +836,14 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

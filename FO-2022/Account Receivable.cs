@@ -405,5 +405,11 @@ ORDER BY (SUM(Debit) - SUM(Credit)) DESC;
         {
 
         }
+
+        private void closebtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

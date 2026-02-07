@@ -307,7 +307,7 @@
       <Width>6.65499in</Width>
       <Page>
         <PageHeader>
-          <Height>0.55556in</Height>
+          <Height>0.49514in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -358,7 +358,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.25903in</Top>
+              <Top>0.23403in</Top>
               <Left>3.99515in</Left>
               <Height>0.23611in</Height>
               <Width>1.76862in</Width>
@@ -388,7 +388,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox31</rd:DefaultName>
-              <Top>0.28208in</Top>
+              <Top>0.25708in</Top>
               <Left>1in</Left>
               <Height>0.23806in</Height>
               <Width>1in</Width>
@@ -418,7 +418,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox31</rd:DefaultName>
-              <Top>0.28208in</Top>
+              <Top>0.25708in</Top>
               <Left>2.82229in</Left>
               <Height>0.22556in</Height>
               <Width>0.78125in</Width>
@@ -448,7 +448,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox34</rd:DefaultName>
-              <Top>0.28208in</Top>
+              <Top>0.25708in</Top>
               <Left>0.125in</Left>
               <Height>0.23806in</Height>
               <Width>0.80556in</Width>
@@ -478,7 +478,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox34</rd:DefaultName>
-              <Top>0.28069in</Top>
+              <Top>0.25569in</Top>
               <Left>2.12264in</Left>
               <Height>0.22695in</Height>
               <Width>0.63021in</Width>
@@ -501,7 +501,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.33333in</Height>
+          <Height>0.28125in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -639,10 +639,12 @@
             </Border>
           </Style>
         </PageFooter>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.1in</LeftMargin>
+        <RightMargin>0.1in</RightMargin>
+        <TopMargin>0.1in</TopMargin>
+        <BottomMargin>0.1in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
