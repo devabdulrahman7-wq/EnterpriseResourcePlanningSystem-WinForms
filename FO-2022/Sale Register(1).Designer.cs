@@ -150,9 +150,8 @@
             this.fromsaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fromsaletxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromsaletxtbox.Location = new System.Drawing.Point(173, 471);
-            this.fromsaletxtbox.Multiline = true;
             this.fromsaletxtbox.Name = "fromsaletxtbox";
-            this.fromsaletxtbox.Size = new System.Drawing.Size(117, 18);
+            this.fromsaletxtbox.Size = new System.Drawing.Size(117, 16);
             this.fromsaletxtbox.TabIndex = 299;
             // 
             // frombilltxtbox
@@ -160,9 +159,8 @@
             this.frombilltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.frombilltxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frombilltxtbox.Location = new System.Drawing.Point(172, 413);
-            this.frombilltxtbox.Multiline = true;
             this.frombilltxtbox.Name = "frombilltxtbox";
-            this.frombilltxtbox.Size = new System.Drawing.Size(117, 18);
+            this.frombilltxtbox.Size = new System.Drawing.Size(117, 16);
             this.frombilltxtbox.TabIndex = 298;
             // 
             // townnametxtbox
@@ -170,9 +168,8 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.townnametxtbox.Location = new System.Drawing.Point(318, 360);
-            this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(250, 20);
+            this.townnametxtbox.Size = new System.Drawing.Size(250, 16);
             this.townnametxtbox.TabIndex = 297;
             // 
             // tobilltxtbox
@@ -180,9 +177,8 @@
             this.tobilltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tobilltxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tobilltxtbox.Location = new System.Drawing.Point(318, 411);
-            this.tobilltxtbox.Multiline = true;
             this.tobilltxtbox.Name = "tobilltxtbox";
-            this.tobilltxtbox.Size = new System.Drawing.Size(250, 20);
+            this.tobilltxtbox.Size = new System.Drawing.Size(250, 16);
             this.tobilltxtbox.TabIndex = 296;
             // 
             // townidtxtbox
@@ -190,9 +186,8 @@
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.townidtxtbox.Location = new System.Drawing.Point(172, 362);
-            this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
-            this.townidtxtbox.Size = new System.Drawing.Size(117, 18);
+            this.townidtxtbox.Size = new System.Drawing.Size(117, 16);
             this.townidtxtbox.TabIndex = 295;
             // 
             // cstmrnametxtbox
@@ -200,9 +195,8 @@
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmrnametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cstmrnametxtbox.Location = new System.Drawing.Point(318, 265);
-            this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
-            this.cstmrnametxtbox.Size = new System.Drawing.Size(250, 20);
+            this.cstmrnametxtbox.Size = new System.Drawing.Size(250, 16);
             this.cstmrnametxtbox.TabIndex = 294;
             // 
             // sectornametxtbox
@@ -210,9 +204,8 @@
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectornametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectornametxtbox.Location = new System.Drawing.Point(318, 312);
-            this.sectornametxtbox.Multiline = true;
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(250, 20);
+            this.sectornametxtbox.Size = new System.Drawing.Size(250, 16);
             this.sectornametxtbox.TabIndex = 293;
             // 
             // cstmridtxtbox
@@ -220,9 +213,8 @@
             this.cstmridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmridtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cstmridtxtbox.Location = new System.Drawing.Point(172, 265);
-            this.cstmridtxtbox.Multiline = true;
             this.cstmridtxtbox.Name = "cstmridtxtbox";
-            this.cstmridtxtbox.Size = new System.Drawing.Size(117, 18);
+            this.cstmridtxtbox.Size = new System.Drawing.Size(117, 16);
             this.cstmridtxtbox.TabIndex = 292;
             // 
             // sectoridtxtbox
@@ -230,9 +222,8 @@
             this.sectoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectoridtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectoridtxtbox.Location = new System.Drawing.Point(172, 314);
-            this.sectoridtxtbox.Multiline = true;
             this.sectoridtxtbox.Name = "sectoridtxtbox";
-            this.sectoridtxtbox.Size = new System.Drawing.Size(117, 18);
+            this.sectoridtxtbox.Size = new System.Drawing.Size(117, 16);
             this.sectoridtxtbox.TabIndex = 291;
             // 
             // cmpnynametxtbox
@@ -240,9 +231,8 @@
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnynametxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnynametxtbox.Location = new System.Drawing.Point(318, 208);
-            this.cmpnynametxtbox.Multiline = true;
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
-            this.cmpnynametxtbox.Size = new System.Drawing.Size(250, 20);
+            this.cmpnynametxtbox.Size = new System.Drawing.Size(250, 16);
             this.cmpnynametxtbox.TabIndex = 290;
             // 
             // cmpnyidtxtbox
@@ -250,9 +240,8 @@
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(172, 210);
-            this.cmpnyidtxtbox.Multiline = true;
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
-            this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 18);
+            this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 16);
             this.cmpnyidtxtbox.TabIndex = 289;
             // 
             // label15
@@ -452,9 +441,8 @@
             this.tosaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tosaletxtbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tosaletxtbox.Location = new System.Drawing.Point(318, 469);
-            this.tosaletxtbox.Multiline = true;
             this.tosaletxtbox.Name = "tosaletxtbox";
-            this.tosaletxtbox.Size = new System.Drawing.Size(250, 20);
+            this.tosaletxtbox.Size = new System.Drawing.Size(250, 16);
             this.tosaletxtbox.TabIndex = 269;
             // 
             // checkBoxshowonlypendingrates
@@ -473,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(708, 625);
+            this.ClientSize = new System.Drawing.Size(708, 629);
             this.Controls.Add(this.checkBoxshowonlypendingrates);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.todatepcker);

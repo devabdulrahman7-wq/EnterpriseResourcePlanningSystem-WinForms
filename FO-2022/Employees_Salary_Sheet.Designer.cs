@@ -100,7 +100,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(109, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 42);
+            this.label1.Size = new System.Drawing.Size(306, 32);
             this.label1.TabIndex = 544;
             this.label1.Text = "Employees Salary Sheet";
             // 
@@ -109,7 +109,7 @@
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.todatepcker.Location = new System.Drawing.Point(258, 143);
             this.todatepcker.Name = "todatepcker";
-            this.todatepcker.Size = new System.Drawing.Size(99, 27);
+            this.todatepcker.Size = new System.Drawing.Size(99, 23);
             this.todatepcker.TabIndex = 543;
             this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
@@ -118,7 +118,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(115, 143);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(97, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(97, 23);
             this.fromdatepcker.TabIndex = 542;
             this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
@@ -129,7 +129,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(255, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 21);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 541;
             this.label3.Text = "To Date";
             // 
@@ -140,16 +140,16 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(112, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 21);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 540;
             this.label2.Text = "From Date";
             // 
             // Employees_Salary_Sheet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(524, 370);
+            this.ClientSize = new System.Drawing.Size(524, 349);
             this.Controls.Add(this.previewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.printbtn);

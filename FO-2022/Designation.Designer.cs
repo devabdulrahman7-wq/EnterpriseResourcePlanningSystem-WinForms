@@ -52,7 +52,7 @@
             // 
             this.designationtxtboxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.designationtxtboxtxtbox.Location = new System.Drawing.Point(113, 103);
-            this.designationtxtboxtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.designationtxtboxtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.designationtxtboxtxtbox.Multiline = true;
             this.designationtxtboxtxtbox.Name = "designationtxtboxtxtbox";
             this.designationtxtboxtxtbox.Size = new System.Drawing.Size(193, 20);
@@ -75,7 +75,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(207, 210);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 631;
@@ -86,11 +86,12 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savebtn.Location = new System.Drawing.Point(113, 210);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 630;

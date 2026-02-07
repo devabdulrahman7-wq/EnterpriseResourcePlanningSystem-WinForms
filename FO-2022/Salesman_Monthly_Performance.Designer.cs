@@ -67,7 +67,7 @@
             // todate
             // 
             this.todate.AutoSize = true;
-            this.todate.Location = new System.Drawing.Point(298, 128);
+            this.todate.Location = new System.Drawing.Point(298, 150);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
             this.todate.Size = new System.Drawing.Size(52, 16);
@@ -77,7 +77,7 @@
             // fromdatepckr
             // 
             this.fromdatepckr.AutoSize = true;
-            this.fromdatepckr.Location = new System.Drawing.Point(137, 128);
+            this.fromdatepckr.Location = new System.Drawing.Point(137, 150);
             this.fromdatepckr.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fromdatepckr.Name = "fromdatepckr";
             this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
@@ -87,22 +87,20 @@
             // todatepcker
             // 
             this.todatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.todatepcker.Location = new System.Drawing.Point(301, 152);
+            this.todatepcker.Location = new System.Drawing.Point(301, 174);
             this.todatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(132, 23);
             this.todatepcker.TabIndex = 389;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromdatepcker.Location = new System.Drawing.Point(140, 152);
+            this.fromdatepcker.Location = new System.Drawing.Point(140, 174);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(138, 23);
             this.fromdatepcker.TabIndex = 388;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // previewbtn
             // 

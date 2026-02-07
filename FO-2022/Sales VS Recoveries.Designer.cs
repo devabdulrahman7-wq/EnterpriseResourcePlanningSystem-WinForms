@@ -318,14 +318,13 @@
             this.dailyrprtradiobtn.TabStop = true;
             this.dailyrprtradiobtn.Text = "Recovery Without Bilty(Daily Report)";
             this.dailyrprtradiobtn.UseVisualStyleBackColor = true;
-            //this.dailyrprtradiobtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Sales_VS_Recoveries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(762, 727);
+            this.ClientSize = new System.Drawing.Size(762, 701);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.slctallfromlistviewbtn);
             this.Controls.Add(this.previewbtn);

@@ -100,7 +100,8 @@
             this.textBox2.Location = new System.Drawing.Point(27, 166);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(529, 23);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(529, 19);
             this.textBox2.TabIndex = 672;
             this.textBox2.Text = "                Available Accounts";
             // 
@@ -109,7 +110,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 671;
             this.label3.Text = "Account Type";
             // 
@@ -118,7 +119,7 @@
             this.accountcombobox.FormattingEnabled = true;
             this.accountcombobox.Location = new System.Drawing.Point(27, 137);
             this.accountcombobox.Name = "accountcombobox";
-            this.accountcombobox.Size = new System.Drawing.Size(227, 27);
+            this.accountcombobox.Size = new System.Drawing.Size(227, 24);
             this.accountcombobox.TabIndex = 670;
             this.accountcombobox.SelectedIndexChanged += new System.EventHandler(this.accountcombobox_SelectedIndexChanged);
             // 
@@ -128,7 +129,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(142, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 42);
+            this.label1.Size = new System.Drawing.Size(315, 32);
             this.label1.TabIndex = 669;
             this.label1.Text = "Expsense Report Setting";
             // 
@@ -165,6 +166,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,7 +181,7 @@
             // 
             // Expense_Report_Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(646, 570);

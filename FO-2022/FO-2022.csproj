@@ -621,12 +621,6 @@
     <Compile Include="Post_Date_Recovery_Promises.Designer.cs">
       <DependentUpon>Post_Date_Recovery_Promises.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preview_of_Stock_Current_Sheet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preview_of_Stock_Current_Sheet.Designer.cs">
-      <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product Group.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -686,18 +680,6 @@
     </Compile>
     <Compile Include="Product_Wise_Profits.Designer.cs">
       <DependentUpon>Product_Wise_Profits.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Product_Wise_Purchase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product_Wise_Purchase.Designer.cs">
-      <DependentUpon>Product_Wise_Purchase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Product_Wise_Sales%281%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product_Wise_Sales%281%29.Designer.cs">
-      <DependentUpon>Product_Wise_Sales%281%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Product_Wise_Sales_1.cs">
       <SubType>Form</SubType>
@@ -1521,9 +1503,6 @@
     <EmbeddedResource Include="Post_Date_Recovery_Promises.resx">
       <DependentUpon>Post_Date_Recovery_Promises.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preview_of_Stock_Current_Sheet.resx">
-      <DependentUpon>Preview_of_Stock_Current_Sheet.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Product Group.resx">
       <DependentUpon>Product Group.cs</DependentUpon>
     </EmbeddedResource>
@@ -1553,12 +1532,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product_Wise_Profits.resx">
       <DependentUpon>Product_Wise_Profits.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Product_Wise_Purchase.resx">
-      <DependentUpon>Product_Wise_Purchase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Product_Wise_Sales%281%29.resx">
-      <DependentUpon>Product_Wise_Sales%281%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product_Wise_Sales_1.resx">
       <DependentUpon>Product_Wise_Sales_1.cs</DependentUpon>
@@ -1648,6 +1621,7 @@
     <EmbeddedResource Include="Reports\Daily_Business_Activity.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Parties_ledger.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Profits.rdlc" />
+    <EmbeddedResource Include="Reports\Daily_Recovery_and_Payment_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />

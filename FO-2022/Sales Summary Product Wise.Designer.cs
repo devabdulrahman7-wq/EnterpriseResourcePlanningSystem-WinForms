@@ -78,7 +78,6 @@
             this.todate.Size = new System.Drawing.Size(52, 16);
             this.todate.TabIndex = 330;
             this.todate.Text = "To Date";
-            //this.todate.Click += new System.EventHandler(this.todate_Click);
             // 
             // fromdatepckr
             // 
@@ -89,7 +88,6 @@
             this.fromdatepckr.Size = new System.Drawing.Size(67, 16);
             this.fromdatepckr.TabIndex = 329;
             this.fromdatepckr.Text = "From Date";
-            //this.fromdatepckr.Click += new System.EventHandler(this.fromdatepckr_Click);
             // 
             // todatepcker
             // 
@@ -99,7 +97,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 328;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -109,29 +106,24 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(119, 23);
             this.fromdatepcker.TabIndex = 327;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
-
+            // 
             // sectornametxtbox
             // 
             this.sectornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectornametxtbox.Location = new System.Drawing.Point(344, 349);
             this.sectornametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.sectornametxtbox.Multiline = true;
             this.sectornametxtbox.Name = "sectornametxtbox";
-            this.sectornametxtbox.Size = new System.Drawing.Size(191, 20);
+            this.sectornametxtbox.Size = new System.Drawing.Size(191, 16);
             this.sectornametxtbox.TabIndex = 326;
-            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
             this.sectoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectoridtxtbox.Location = new System.Drawing.Point(206, 349);
             this.sectoridtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.sectoridtxtbox.Multiline = true;
             this.sectoridtxtbox.Name = "sectoridtxtbox";
-            this.sectoridtxtbox.Size = new System.Drawing.Size(95, 20);
+            this.sectoridtxtbox.Size = new System.Drawing.Size(95, 16);
             this.sectoridtxtbox.TabIndex = 325;
-            //this.sectoridtxtbox.TextChanged += new System.EventHandler(this.sectoridtxtbox_TextChanged);
             // 
             // sectoridsearch
             // 
@@ -165,7 +157,6 @@
             this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 322;
             this.label1.Text = "Sector ID";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // previewbtn
             // 
@@ -225,22 +216,18 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(344, 238);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(191, 20);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(191, 16);
             this.salesmannametxtbox.TabIndex = 339;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(206, 238);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 20);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 16);
             this.salesmanidtxtbox.TabIndex = 338;
-            //this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
@@ -280,22 +267,18 @@
             this.townnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townnametxtbox.Location = new System.Drawing.Point(344, 294);
             this.townnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.townnametxtbox.Multiline = true;
             this.townnametxtbox.Name = "townnametxtbox";
-            this.townnametxtbox.Size = new System.Drawing.Size(191, 20);
+            this.townnametxtbox.Size = new System.Drawing.Size(191, 16);
             this.townnametxtbox.TabIndex = 344;
-            //this.townnametxtbox.TextChanged += new System.EventHandler(this.townnametxtbox_TextChanged);
             // 
             // townidtxtbox
             // 
             this.townidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.townidtxtbox.Location = new System.Drawing.Point(206, 294);
             this.townidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.townidtxtbox.Multiline = true;
             this.townidtxtbox.Name = "townidtxtbox";
-            this.townidtxtbox.Size = new System.Drawing.Size(95, 20);
+            this.townidtxtbox.Size = new System.Drawing.Size(95, 16);
             this.townidtxtbox.TabIndex = 343;
-            //this.townidtxtbox.TextChanged += new System.EventHandler(this.townidtxtbox_TextChanged);
             // 
             // townidsearch
             // 
@@ -335,22 +318,18 @@
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmrnametxtbox.Location = new System.Drawing.Point(344, 187);
             this.cstmrnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
-            this.cstmrnametxtbox.Size = new System.Drawing.Size(191, 20);
+            this.cstmrnametxtbox.Size = new System.Drawing.Size(191, 16);
             this.cstmrnametxtbox.TabIndex = 349;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // cstmridtxtbox
             // 
             this.cstmridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmridtxtbox.Location = new System.Drawing.Point(206, 187);
             this.cstmridtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.cstmridtxtbox.Multiline = true;
             this.cstmridtxtbox.Name = "cstmridtxtbox";
-            this.cstmridtxtbox.Size = new System.Drawing.Size(95, 20);
+            this.cstmridtxtbox.Size = new System.Drawing.Size(95, 16);
             this.cstmridtxtbox.TabIndex = 348;
-            //this.cstmridtxtbox.TextChanged += new System.EventHandler(this.cstmridtxtbox_TextChanged);
             // 
             // cstmridsearch
             // 
@@ -390,22 +369,18 @@
             this.fromsaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fromsaletxtbox.Location = new System.Drawing.Point(206, 401);
             this.fromsaletxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.fromsaletxtbox.Multiline = true;
             this.fromsaletxtbox.Name = "fromsaletxtbox";
-            this.fromsaletxtbox.Size = new System.Drawing.Size(95, 20);
+            this.fromsaletxtbox.Size = new System.Drawing.Size(95, 16);
             this.fromsaletxtbox.TabIndex = 350;
-            //this.fromsaletxtbox.TextChanged += new System.EventHandler(this.fromsaletxtbox_TextChanged);
             // 
             // tosaletxtbox
             // 
             this.tosaletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tosaletxtbox.Location = new System.Drawing.Point(344, 401);
             this.tosaletxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.tosaletxtbox.Multiline = true;
             this.tosaletxtbox.Name = "tosaletxtbox";
-            this.tosaletxtbox.Size = new System.Drawing.Size(111, 20);
+            this.tosaletxtbox.Size = new System.Drawing.Size(111, 16);
             this.tosaletxtbox.TabIndex = 351;
-            //this.tosaletxtbox.TextChanged += new System.EventHandler(this.tosaletxtbox_TextChanged);
             // 
             // label9
             // 

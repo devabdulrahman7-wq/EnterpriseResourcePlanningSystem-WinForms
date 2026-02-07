@@ -70,7 +70,7 @@
             // returndatedtp
             // 
             this.returndatedtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.returndatedtp.Location = new System.Drawing.Point(128, 101);
+            this.returndatedtp.Location = new System.Drawing.Point(151, 120);
             this.returndatedtp.Name = "returndatedtp";
             this.returndatedtp.Size = new System.Drawing.Size(133, 23);
             this.returndatedtp.TabIndex = 338;
@@ -79,7 +79,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(148, 135);
+            this.label5.Location = new System.Drawing.Point(152, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 16);
@@ -90,7 +90,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 135);
+            this.label6.Location = new System.Drawing.Point(37, 165);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
@@ -100,7 +100,7 @@
             // salesmennametxtbox
             // 
             this.salesmennametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmennametxtbox.Location = new System.Drawing.Point(128, 154);
+            this.salesmennametxtbox.Location = new System.Drawing.Point(151, 184);
             this.salesmennametxtbox.Name = "salesmennametxtbox";
             this.salesmennametxtbox.Size = new System.Drawing.Size(322, 16);
             this.salesmennametxtbox.TabIndex = 335;
@@ -109,7 +109,7 @@
             // salesmenidtxtbox
             // 
             this.salesmenidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salesmenidtxtbox.Location = new System.Drawing.Point(12, 154);
+            this.salesmenidtxtbox.Location = new System.Drawing.Point(35, 184);
             this.salesmenidtxtbox.Name = "salesmenidtxtbox";
             this.salesmenidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.salesmenidtxtbox.TabIndex = 334;
@@ -119,8 +119,7 @@
             // saleidtxtbox
             // 
             this.saleidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.saleidtxtbox.Location = new System.Drawing.Point(12, 108);
-            this.saleidtxtbox.Multiline = true;
+            this.saleidtxtbox.Location = new System.Drawing.Point(35, 127);
             this.saleidtxtbox.Name = "saleidtxtbox";
             this.saleidtxtbox.Size = new System.Drawing.Size(110, 16);
             this.saleidtxtbox.TabIndex = 333;
@@ -130,7 +129,7 @@
             // 
             this.saledatelbl.AutoSize = true;
             this.saledatelbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saledatelbl.Location = new System.Drawing.Point(148, 82);
+            this.saledatelbl.Location = new System.Drawing.Point(171, 101);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
             this.saledatelbl.Size = new System.Drawing.Size(75, 16);
@@ -141,7 +140,7 @@
             // 
             this.saleidlbl.AutoSize = true;
             this.saleidlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saleidlbl.Location = new System.Drawing.Point(25, 82);
+            this.saleidlbl.Location = new System.Drawing.Point(48, 101);
             this.saleidlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saleidlbl.Name = "saleidlbl";
             this.saleidlbl.Size = new System.Drawing.Size(61, 16);
@@ -158,7 +157,7 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 245);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 264);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(531, 192);
@@ -215,7 +214,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(421, 449);
+            this.closebtn.Location = new System.Drawing.Point(426, 486);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -227,10 +226,11 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(338, 449);
+            this.removebtn.Location = new System.Drawing.Point(343, 486);
             this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
@@ -242,10 +242,11 @@
             // openbtn
             // 
             this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.Enabled = false;
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(255, 449);
+            this.openbtn.Location = new System.Drawing.Point(260, 486);
             this.openbtn.Margin = new System.Windows.Forms.Padding(4);
             this.openbtn.Name = "openbtn";
             this.openbtn.Size = new System.Drawing.Size(75, 28);
@@ -260,7 +261,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(89, 449);
+            this.clearbtn.Location = new System.Drawing.Point(94, 486);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -272,10 +273,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(172, 449);
+            this.savebtn.Location = new System.Drawing.Point(177, 486);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -299,7 +301,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(697, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(563, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,11 +312,10 @@
             // Multipliertxtbox
             // 
             this.Multipliertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Multipliertxtbox.Location = new System.Drawing.Point(291, 221);
+            this.Multipliertxtbox.Location = new System.Drawing.Point(314, 240);
             this.Multipliertxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.Multipliertxtbox.Multiline = true;
             this.Multipliertxtbox.Name = "Multipliertxtbox";
-            this.Multipliertxtbox.Size = new System.Drawing.Size(44, 19);
+            this.Multipliertxtbox.Size = new System.Drawing.Size(44, 16);
             this.Multipliertxtbox.TabIndex = 472;
             this.Multipliertxtbox.TextChanged += new System.EventHandler(this.Multipliertxtbox_TextChanged);
             // 
@@ -322,7 +323,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(288, 201);
+            this.label36.Location = new System.Drawing.Point(311, 220);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(38, 16);
@@ -332,7 +333,7 @@
             // packnamecombobox
             // 
             this.packnamecombobox.FormattingEnabled = true;
-            this.packnamecombobox.Location = new System.Drawing.Point(193, 218);
+            this.packnamecombobox.Location = new System.Drawing.Point(216, 237);
             this.packnamecombobox.Name = "packnamecombobox";
             this.packnamecombobox.Size = new System.Drawing.Size(91, 24);
             this.packnamecombobox.TabIndex = 470;
@@ -341,22 +342,20 @@
             // productnametxtbox
             // 
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productnametxtbox.Location = new System.Drawing.Point(90, 220);
+            this.productnametxtbox.Location = new System.Drawing.Point(113, 239);
             this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 16);
             this.productnametxtbox.TabIndex = 469;
             this.productnametxtbox.TextChanged += new System.EventHandler(this.productnametxtbox_TextChanged);
             // 
             // productidtxtbox
             // 
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productidtxtbox.Location = new System.Drawing.Point(13, 221);
+            this.productidtxtbox.Location = new System.Drawing.Point(36, 240);
             this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 16);
             this.productidtxtbox.TabIndex = 468;
             this.productidtxtbox.TextChanged += new System.EventHandler(this.productidtxtbox_TextChanged);
             this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
@@ -365,7 +364,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(191, 201);
+            this.label40.Location = new System.Drawing.Point(214, 220);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(78, 16);
@@ -376,7 +375,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(87, 202);
+            this.label41.Location = new System.Drawing.Point(110, 221);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(68, 16);
@@ -387,7 +386,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(13, 201);
+            this.label42.Location = new System.Drawing.Point(36, 220);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(44, 16);
@@ -398,7 +397,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(340, 201);
+            this.label2.Location = new System.Drawing.Point(363, 220);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
@@ -408,11 +407,10 @@
             // qtyptxtbox
             // 
             this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.qtyptxtbox.Location = new System.Drawing.Point(343, 221);
+            this.qtyptxtbox.Location = new System.Drawing.Point(366, 240);
             this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyptxtbox.Multiline = true;
             this.qtyptxtbox.Name = "qtyptxtbox";
-            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 16);
             this.qtyptxtbox.TabIndex = 472;
             this.qtyptxtbox.TextChanged += new System.EventHandler(this.qtyptxtbox_TextChanged);
             // 
@@ -420,7 +418,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(392, 202);
+            this.label3.Location = new System.Drawing.Point(415, 221);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 16);
@@ -430,11 +428,10 @@
             // qtyloosetxtbox
             // 
             this.qtyloosetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.qtyloosetxtbox.Location = new System.Drawing.Point(395, 222);
+            this.qtyloosetxtbox.Location = new System.Drawing.Point(418, 241);
             this.qtyloosetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyloosetxtbox.Multiline = true;
             this.qtyloosetxtbox.Name = "qtyloosetxtbox";
-            this.qtyloosetxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyloosetxtbox.Size = new System.Drawing.Size(44, 16);
             this.qtyloosetxtbox.TabIndex = 472;
             this.qtyloosetxtbox.TextChanged += new System.EventHandler(this.qtyloosetxtbox_TextChanged);
             this.qtyloosetxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyloosetxtbox_KeyDown);
@@ -444,7 +441,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(740, 488);
+            this.ClientSize = new System.Drawing.Size(611, 549);
             this.Controls.Add(this.qtyloosetxtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.qtyptxtbox);

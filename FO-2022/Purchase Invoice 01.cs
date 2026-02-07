@@ -837,5 +837,16 @@ namespace FO_2022
             //Mainform1 mf=new Mainform1();
             //mf.Show();
         }
+
+        private void openbtn_Click_1(object sender, EventArgs e)
+        {
+            SearchPurchaseInvoice ss =new SearchPurchaseInvoice();  
+            ss.Show();
+        }
+
+        private void purchaseidtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

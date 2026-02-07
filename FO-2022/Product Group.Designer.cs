@@ -66,7 +66,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(224, 148);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(367, 19);
             this.textBox1.TabIndex = 298;
@@ -86,11 +86,12 @@
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(74, 573);
-            this.newbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newbtn.Location = new System.Drawing.Point(74, 579);
+            this.newbtn.Margin = new System.Windows.Forms.Padding(4);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(76, 28);
             this.newbtn.TabIndex = 296;
@@ -104,8 +105,8 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(488, 573);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Location = new System.Drawing.Point(488, 579);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(76, 28);
             this.closebtn.TabIndex = 295;
@@ -116,11 +117,12 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(240, 573);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removebtn.Location = new System.Drawing.Point(240, 579);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(76, 28);
             this.removebtn.TabIndex = 294;
@@ -131,11 +133,12 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(157, 573);
-            this.editbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editbtn.Location = new System.Drawing.Point(157, 579);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(76, 28);
             this.editbtn.TabIndex = 293;
@@ -149,8 +152,8 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(405, 573);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearbtn.Location = new System.Drawing.Point(405, 579);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(76, 28);
             this.clearbtn.TabIndex = 292;
@@ -161,11 +164,12 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(322, 573);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.savebtn.Location = new System.Drawing.Point(322, 579);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(76, 28);
             this.savebtn.TabIndex = 291;
@@ -187,7 +191,7 @@
             // 
             this.cmpnyidsearch1.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch1.Image")));
             this.cmpnyidsearch1.Location = new System.Drawing.Point(349, 73);
-            this.cmpnyidsearch1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmpnyidsearch1.Margin = new System.Windows.Forms.Padding(4);
             this.cmpnyidsearch1.Name = "cmpnyidsearch1";
             this.cmpnyidsearch1.Size = new System.Drawing.Size(26, 22);
             this.cmpnyidsearch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +203,7 @@
             // 
             this.prdctnametxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctnametxtbox1.Location = new System.Drawing.Point(224, 118);
-            this.prdctnametxtbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prdctnametxtbox1.Margin = new System.Windows.Forms.Padding(4);
             this.prdctnametxtbox1.Name = "prdctnametxtbox1";
             this.prdctnametxtbox1.Size = new System.Drawing.Size(224, 13);
             this.prdctnametxtbox1.TabIndex = 1;
@@ -241,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(646, 614);
+            this.ClientSize = new System.Drawing.Size(646, 622);
             this.Controls.Add(this.cmpnynamecombobox1);
             this.Controls.Add(this.cmpnyidsearch1);
             this.Controls.Add(this.prdctnametxtbox1);

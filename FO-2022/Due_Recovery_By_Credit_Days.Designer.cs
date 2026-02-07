@@ -144,9 +144,8 @@
             this.duebalancegreaterthantxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.duebalancegreaterthantxtbox.Location = new System.Drawing.Point(167, 129);
             this.duebalancegreaterthantxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.duebalancegreaterthantxtbox.Multiline = true;
             this.duebalancegreaterthantxtbox.Name = "duebalancegreaterthantxtbox";
-            this.duebalancegreaterthantxtbox.Size = new System.Drawing.Size(185, 24);
+            this.duebalancegreaterthantxtbox.Size = new System.Drawing.Size(185, 16);
             this.duebalancegreaterthantxtbox.TabIndex = 396;
             // 
             // groupBox1
@@ -219,11 +218,10 @@
             // textBoxforrecoverycombobox
             // 
             this.textBoxforrecoverycombobox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxforrecoverycombobox.Location = new System.Drawing.Point(379, 177);
+            this.textBoxforrecoverycombobox.Location = new System.Drawing.Point(379, 185);
             this.textBoxforrecoverycombobox.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxforrecoverycombobox.Multiline = true;
             this.textBoxforrecoverycombobox.Name = "textBoxforrecoverycombobox";
-            this.textBoxforrecoverycombobox.Size = new System.Drawing.Size(88, 24);
+            this.textBoxforrecoverycombobox.Size = new System.Drawing.Size(88, 16);
             this.textBoxforrecoverycombobox.TabIndex = 408;
             this.textBoxforrecoverycombobox.TextChanged += new System.EventHandler(this.textBoxforrecoverycombobox_TextChanged);
             // 
@@ -244,9 +242,8 @@
             this.acprefixtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.acprefixtxtbox.Location = new System.Drawing.Point(167, 347);
             this.acprefixtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.acprefixtxtbox.Multiline = true;
             this.acprefixtxtbox.Name = "acprefixtxtbox";
-            this.acprefixtxtbox.Size = new System.Drawing.Size(143, 24);
+            this.acprefixtxtbox.Size = new System.Drawing.Size(143, 16);
             this.acprefixtxtbox.TabIndex = 410;
             this.acprefixtxtbox.TextChanged += new System.EventHandler(this.acprefixtxtbox_TextChanged);
             // 

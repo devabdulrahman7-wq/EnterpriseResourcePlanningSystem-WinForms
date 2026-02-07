@@ -57,37 +57,32 @@
             this.checkBox1.TabIndex = 509;
             this.checkBox1.Text = "Show Cost";
             this.checkBox1.UseVisualStyleBackColor = true;
-            //this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // salesmannametxtbox
             // 
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(325, 214);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(224, 16);
             this.salesmannametxtbox.TabIndex = 523;
-            //this.salesmannametxtbox.TextChanged += new System.EventHandler(this.salesmannametxtbox_TextChanged);
-
+            // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(164, 214);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(118, 28);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(118, 16);
             this.salesmanidtxtbox.TabIndex = 522;
-            //this.salesmanidtxtbox.TextChanged += new System.EventHandler(this.salesmanidtxtbox_TextChanged);
             // 
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(286, 214);
+            this.salesmanidsearch.Location = new System.Drawing.Point(286, 211);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.salesmanidsearch.Name = "salesmanidsearch";
-            this.salesmanidsearch.Size = new System.Drawing.Size(33, 28);
+            this.salesmanidsearch.Size = new System.Drawing.Size(33, 21);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 521;
             this.salesmanidsearch.TabStop = false;
@@ -186,7 +181,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 513;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -195,7 +189,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
             this.fromdatepcker.TabIndex = 512;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // label3
             // 

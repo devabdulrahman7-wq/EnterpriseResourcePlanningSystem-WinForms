@@ -232,7 +232,7 @@
             this.groupBox1.Controls.Add(this.purchasedatepcker);
             this.groupBox1.Controls.Add(this.billlnolbl);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(12, 74);
+            this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1032, 328);
             this.groupBox1.TabIndex = 391;
@@ -275,9 +275,8 @@
             this.salepricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salepricetxtbox.Location = new System.Drawing.Point(740, 129);
             this.salepricetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.salepricetxtbox.Multiline = true;
             this.salepricetxtbox.Name = "salepricetxtbox";
-            this.salepricetxtbox.Size = new System.Drawing.Size(65, 19);
+            this.salepricetxtbox.Size = new System.Drawing.Size(65, 16);
             this.salepricetxtbox.TabIndex = 453;
             // 
             // discvalltxtbox
@@ -285,9 +284,8 @@
             this.discvalltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.discvalltxtbox.Location = new System.Drawing.Point(666, 129);
             this.discvalltxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.discvalltxtbox.Multiline = true;
             this.discvalltxtbox.Name = "discvalltxtbox";
-            this.discvalltxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discvalltxtbox.Size = new System.Drawing.Size(66, 16);
             this.discvalltxtbox.TabIndex = 452;
             // 
             // salestaxtxtbox
@@ -295,9 +293,8 @@
             this.salestaxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salestaxtxtbox.Location = new System.Drawing.Point(808, 129);
             this.salestaxtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.salestaxtxtbox.Multiline = true;
             this.salestaxtxtbox.Name = "salestaxtxtbox";
-            this.salestaxtxtbox.Size = new System.Drawing.Size(93, 19);
+            this.salestaxtxtbox.Size = new System.Drawing.Size(93, 16);
             this.salestaxtxtbox.TabIndex = 451;
             // 
             // bnsltxtbox
@@ -305,9 +302,8 @@
             this.bnsltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bnsltxtbox.Location = new System.Drawing.Point(467, 129);
             this.bnsltxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.bnsltxtbox.Multiline = true;
             this.bnsltxtbox.Name = "bnsltxtbox";
-            this.bnsltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.bnsltxtbox.Size = new System.Drawing.Size(51, 16);
             this.bnsltxtbox.TabIndex = 450;
             // 
             // qtyptxtbox
@@ -315,9 +311,8 @@
             this.qtyptxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.qtyptxtbox.Location = new System.Drawing.Point(359, 130);
             this.qtyptxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyptxtbox.Multiline = true;
             this.qtyptxtbox.Name = "qtyptxtbox";
-            this.qtyptxtbox.Size = new System.Drawing.Size(44, 19);
+            this.qtyptxtbox.Size = new System.Drawing.Size(44, 16);
             this.qtyptxtbox.TabIndex = 449;
             // 
             // discpercenttxtbox
@@ -325,9 +320,8 @@
             this.discpercenttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.discpercenttxtbox.Location = new System.Drawing.Point(596, 129);
             this.discpercenttxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.discpercenttxtbox.Multiline = true;
             this.discpercenttxtbox.Name = "discpercenttxtbox";
-            this.discpercenttxtbox.Size = new System.Drawing.Size(66, 19);
+            this.discpercenttxtbox.Size = new System.Drawing.Size(66, 16);
             this.discpercenttxtbox.TabIndex = 448;
             // 
             // label24
@@ -379,9 +373,8 @@
             this.purpricetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.purpricetxtbox.Location = new System.Drawing.Point(526, 129);
             this.purpricetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.purpricetxtbox.Multiline = true;
             this.purpricetxtbox.Name = "purpricetxtbox";
-            this.purpricetxtbox.Size = new System.Drawing.Size(62, 19);
+            this.purpricetxtbox.Size = new System.Drawing.Size(62, 16);
             this.purpricetxtbox.TabIndex = 443;
             // 
             // label27
@@ -400,9 +393,8 @@
             this.ratedifftxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ratedifftxtbox.Location = new System.Drawing.Point(909, 129);
             this.ratedifftxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.ratedifftxtbox.Multiline = true;
             this.ratedifftxtbox.Name = "ratedifftxtbox";
-            this.ratedifftxtbox.Size = new System.Drawing.Size(82, 19);
+            this.ratedifftxtbox.Size = new System.Drawing.Size(82, 16);
             this.ratedifftxtbox.TabIndex = 441;
             // 
             // qtyltxtbox
@@ -410,9 +402,8 @@
             this.qtyltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.qtyltxtbox.Location = new System.Drawing.Point(408, 129);
             this.qtyltxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.qtyltxtbox.Multiline = true;
             this.qtyltxtbox.Name = "qtyltxtbox";
-            this.qtyltxtbox.Size = new System.Drawing.Size(51, 19);
+            this.qtyltxtbox.Size = new System.Drawing.Size(51, 16);
             this.qtyltxtbox.TabIndex = 440;
             this.qtyltxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.qtyltxtbox_KeyDown);
             // 
@@ -421,9 +412,8 @@
             this.multipliertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.multipliertxtbox.Location = new System.Drawing.Point(285, 129);
             this.multipliertxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.multipliertxtbox.Multiline = true;
             this.multipliertxtbox.Name = "multipliertxtbox";
-            this.multipliertxtbox.Size = new System.Drawing.Size(69, 20);
+            this.multipliertxtbox.Size = new System.Drawing.Size(69, 16);
             this.multipliertxtbox.TabIndex = 439;
             this.multipliertxtbox.TextChanged += new System.EventHandler(this.multipliertxtbox_TextChanged);
             // 
@@ -432,9 +422,8 @@
             this.productnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productnametxtbox.Location = new System.Drawing.Point(84, 128);
             this.productnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productnametxtbox.Multiline = true;
             this.productnametxtbox.Name = "productnametxtbox";
-            this.productnametxtbox.Size = new System.Drawing.Size(96, 20);
+            this.productnametxtbox.Size = new System.Drawing.Size(96, 16);
             this.productnametxtbox.TabIndex = 438;
             // 
             // productidtxtbox
@@ -442,9 +431,8 @@
             this.productidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productidtxtbox.Location = new System.Drawing.Point(7, 129);
             this.productidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.productidtxtbox.Multiline = true;
             this.productidtxtbox.Name = "productidtxtbox";
-            this.productidtxtbox.Size = new System.Drawing.Size(69, 19);
+            this.productidtxtbox.Size = new System.Drawing.Size(69, 16);
             this.productidtxtbox.TabIndex = 437;
             this.productidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productidtxtbox_KeyDown);
             this.productidtxtbox.Leave += new System.EventHandler(this.productidtxtbox_Leave);
@@ -536,15 +524,14 @@
             // 
             this.totalratedifftxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalratedifftxtbox.Location = new System.Drawing.Point(711, 289);
-            this.totalratedifftxtbox.Multiline = true;
             this.totalratedifftxtbox.Name = "totalratedifftxtbox";
-            this.totalratedifftxtbox.Size = new System.Drawing.Size(110, 22);
+            this.totalratedifftxtbox.Size = new System.Drawing.Size(110, 16);
             this.totalratedifftxtbox.TabIndex = 425;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(616, 291);
+            this.label15.Location = new System.Drawing.Point(616, 287);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 16);
             this.label15.TabIndex = 424;
@@ -554,15 +541,14 @@
             // 
             this.totalsalevaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalsalevaluetxtbox.Location = new System.Drawing.Point(932, 285);
-            this.totalsalevaluetxtbox.Multiline = true;
             this.totalsalevaluetxtbox.Name = "totalsalevaluetxtbox";
-            this.totalsalevaluetxtbox.Size = new System.Drawing.Size(94, 22);
+            this.totalsalevaluetxtbox.Size = new System.Drawing.Size(94, 16);
             this.totalsalevaluetxtbox.TabIndex = 423;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(827, 295);
+            this.label14.Location = new System.Drawing.Point(827, 288);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 16);
             this.label14.TabIndex = 422;
@@ -572,51 +558,46 @@
             // 
             this.totaldiscounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totaldiscounttxtbox.Location = new System.Drawing.Point(494, 261);
-            this.totaldiscounttxtbox.Multiline = true;
             this.totaldiscounttxtbox.Name = "totaldiscounttxtbox";
-            this.totaldiscounttxtbox.Size = new System.Drawing.Size(122, 22);
+            this.totaldiscounttxtbox.Size = new System.Drawing.Size(122, 16);
             this.totaldiscounttxtbox.TabIndex = 421;
             // 
             // topsalestaxtxtbox
             // 
             this.topsalestaxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.topsalestaxtxtbox.Location = new System.Drawing.Point(291, 289);
-            this.topsalestaxtxtbox.Multiline = true;
             this.topsalestaxtxtbox.Name = "topsalestaxtxtbox";
-            this.topsalestaxtxtbox.Size = new System.Drawing.Size(107, 22);
+            this.topsalestaxtxtbox.Size = new System.Drawing.Size(107, 16);
             this.topsalestaxtxtbox.TabIndex = 420;
             // 
             // netvaluetxtbox
             // 
             this.netvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.netvaluetxtbox.Location = new System.Drawing.Point(709, 257);
-            this.netvaluetxtbox.Multiline = true;
             this.netvaluetxtbox.Name = "netvaluetxtbox";
-            this.netvaluetxtbox.Size = new System.Drawing.Size(114, 22);
+            this.netvaluetxtbox.Size = new System.Drawing.Size(114, 16);
             this.netvaluetxtbox.TabIndex = 419;
             // 
             // paidamounttxtbox
             // 
             this.paidamounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.paidamounttxtbox.Location = new System.Drawing.Point(496, 289);
-            this.paidamounttxtbox.Multiline = true;
             this.paidamounttxtbox.Name = "paidamounttxtbox";
-            this.paidamounttxtbox.Size = new System.Drawing.Size(120, 22);
+            this.paidamounttxtbox.Size = new System.Drawing.Size(120, 16);
             this.paidamounttxtbox.TabIndex = 418;
             // 
             // totalpurvaluetxtbox
             // 
             this.totalpurvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalpurvaluetxtbox.Location = new System.Drawing.Point(932, 261);
-            this.totalpurvaluetxtbox.Multiline = true;
             this.totalpurvaluetxtbox.Name = "totalpurvaluetxtbox";
-            this.totalpurvaluetxtbox.Size = new System.Drawing.Size(94, 22);
+            this.totalpurvaluetxtbox.Size = new System.Drawing.Size(94, 16);
             this.totalpurvaluetxtbox.TabIndex = 417;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(411, 295);
+            this.label9.Location = new System.Drawing.Point(411, 291);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 16);
             this.label9.TabIndex = 416;
@@ -625,7 +606,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(825, 267);
+            this.label10.Location = new System.Drawing.Point(833, 261);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 16);
             this.label10.TabIndex = 415;
@@ -635,15 +616,14 @@
             // 
             this.totalgrosstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalgrosstxtbox.Location = new System.Drawing.Point(289, 261);
-            this.totalgrosstxtbox.Multiline = true;
             this.totalgrosstxtbox.Name = "totalgrosstxtbox";
-            this.totalgrosstxtbox.Size = new System.Drawing.Size(109, 22);
+            this.totalgrosstxtbox.Size = new System.Drawing.Size(109, 16);
             this.totalgrosstxtbox.TabIndex = 414;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(190, 295);
+            this.label11.Location = new System.Drawing.Point(190, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 16);
             this.label11.TabIndex = 413;
@@ -652,7 +632,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(400, 265);
+            this.label12.Location = new System.Drawing.Point(400, 261);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 16);
             this.label12.TabIndex = 412;
@@ -661,7 +641,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(207, 265);
+            this.label13.Location = new System.Drawing.Point(207, 261);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 16);
             this.label13.TabIndex = 411;
@@ -671,9 +651,8 @@
             // 
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.narrationtxtbox.Location = new System.Drawing.Point(10, 274);
-            this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(170, 37);
+            this.narrationtxtbox.Size = new System.Drawing.Size(170, 16);
             this.narrationtxtbox.TabIndex = 410;
             // 
             // label21
@@ -688,7 +667,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(641, 265);
+            this.label16.Location = new System.Drawing.Point(641, 261);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(62, 16);
             this.label16.TabIndex = 408;
@@ -698,9 +677,8 @@
             // 
             this.currentstocltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.currentstocltxtbox.Location = new System.Drawing.Point(561, 74);
-            this.currentstocltxtbox.Multiline = true;
             this.currentstocltxtbox.Name = "currentstocltxtbox";
-            this.currentstocltxtbox.Size = new System.Drawing.Size(127, 18);
+            this.currentstocltxtbox.Size = new System.Drawing.Size(127, 16);
             this.currentstocltxtbox.TabIndex = 407;
             // 
             // label8
@@ -820,9 +798,8 @@
             // 
             this.netsalevaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.netsalevaluetxtbox.Location = new System.Drawing.Point(793, 75);
-            this.netsalevaluetxtbox.Multiline = true;
             this.netsalevaluetxtbox.Name = "netsalevaluetxtbox";
-            this.netsalevaluetxtbox.Size = new System.Drawing.Size(155, 18);
+            this.netsalevaluetxtbox.Size = new System.Drawing.Size(155, 16);
             this.netsalevaluetxtbox.TabIndex = 405;
             // 
             // label7
@@ -840,27 +817,24 @@
             // 
             this.citytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.citytxtbox.Location = new System.Drawing.Point(602, 45);
-            this.citytxtbox.Multiline = true;
             this.citytxtbox.Name = "citytxtbox";
-            this.citytxtbox.Size = new System.Drawing.Size(86, 23);
+            this.citytxtbox.Size = new System.Drawing.Size(86, 16);
             this.citytxtbox.TabIndex = 403;
             // 
             // netpurvaluetxt
             // 
             this.netpurvaluetxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.netpurvaluetxt.Location = new System.Drawing.Point(834, 45);
-            this.netpurvaluetxt.Multiline = true;
             this.netpurvaluetxt.Name = "netpurvaluetxt";
-            this.netpurvaluetxt.Size = new System.Drawing.Size(86, 23);
+            this.netpurvaluetxt.Size = new System.Drawing.Size(86, 16);
             this.netpurvaluetxt.TabIndex = 402;
             // 
             // vehiclenotxt
             // 
             this.vehiclenotxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vehiclenotxt.Location = new System.Drawing.Point(714, 45);
-            this.vehiclenotxt.Multiline = true;
             this.vehiclenotxt.Name = "vehiclenotxt";
-            this.vehiclenotxt.Size = new System.Drawing.Size(86, 23);
+            this.vehiclenotxt.Size = new System.Drawing.Size(86, 16);
             this.vehiclenotxt.TabIndex = 401;
             // 
             // label5
@@ -900,9 +874,8 @@
             // 
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendoridtxtbox.Location = new System.Drawing.Point(400, 45);
-            this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(86, 23);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(86, 16);
             this.vendoridtxtbox.TabIndex = 397;
             this.vendoridtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.vendoridtxtbox_KeyDown);
             this.vendoridtxtbox.Leave += new System.EventHandler(this.vendoridtxtbox_Leave);
@@ -911,9 +884,8 @@
             // 
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendornametxtbox.Location = new System.Drawing.Point(492, 45);
-            this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(86, 23);
+            this.vendornametxtbox.Size = new System.Drawing.Size(86, 16);
             this.vendornametxtbox.TabIndex = 396;
             // 
             // dateTimePicker1
@@ -928,18 +900,16 @@
             // 
             this.billpurchasetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.billpurchasetxtbox.Location = new System.Drawing.Point(206, 45);
-            this.billpurchasetxtbox.Multiline = true;
             this.billpurchasetxtbox.Name = "billpurchasetxtbox";
-            this.billpurchasetxtbox.Size = new System.Drawing.Size(86, 23);
+            this.billpurchasetxtbox.Size = new System.Drawing.Size(86, 16);
             this.billpurchasetxtbox.TabIndex = 394;
             // 
             // purchasedtxtbox
             // 
             this.purchasedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.purchasedtxtbox.Location = new System.Drawing.Point(6, 45);
-            this.purchasedtxtbox.Multiline = true;
             this.purchasedtxtbox.Name = "purchasedtxtbox";
-            this.purchasedtxtbox.Size = new System.Drawing.Size(92, 23);
+            this.purchasedtxtbox.Size = new System.Drawing.Size(92, 16);
             this.purchasedtxtbox.TabIndex = 393;
             // 
             // label2
@@ -1068,9 +1038,8 @@
             // 
             this.specialdistxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.specialdistxtbox.Location = new System.Drawing.Point(588, 138);
-            this.specialdistxtbox.Multiline = true;
             this.specialdistxtbox.Name = "specialdistxtbox";
-            this.specialdistxtbox.Size = new System.Drawing.Size(131, 22);
+            this.specialdistxtbox.Size = new System.Drawing.Size(131, 16);
             this.specialdistxtbox.TabIndex = 457;
             // 
             // label37
@@ -1088,27 +1057,24 @@
             // 
             this.receivedtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.receivedtxtbox.Location = new System.Drawing.Point(725, 138);
-            this.receivedtxtbox.Multiline = true;
             this.receivedtxtbox.Name = "receivedtxtbox";
-            this.receivedtxtbox.Size = new System.Drawing.Size(139, 22);
+            this.receivedtxtbox.Size = new System.Drawing.Size(139, 16);
             this.receivedtxtbox.TabIndex = 455;
             // 
             // finalbaltxtbox
             // 
             this.finalbaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.finalbaltxtbox.Location = new System.Drawing.Point(870, 138);
-            this.finalbaltxtbox.Multiline = true;
             this.finalbaltxtbox.Name = "finalbaltxtbox";
-            this.finalbaltxtbox.Size = new System.Drawing.Size(144, 22);
+            this.finalbaltxtbox.Size = new System.Drawing.Size(144, 16);
             this.finalbaltxtbox.TabIndex = 453;
             // 
             // salesmanidtxtbox
             // 
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(20, 138);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 22);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(95, 16);
             this.salesmanidtxtbox.TabIndex = 452;
             this.salesmanidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.salesmanidtxtbox_KeyDown);
             this.salesmanidtxtbox.Leave += new System.EventHandler(this.salesmanidtxtbox_Leave);
@@ -1139,7 +1105,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(132, 119);
+            this.label34.Location = new System.Drawing.Point(118, 119);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(100, 16);
@@ -1150,18 +1116,16 @@
             // 
             this.prevbaltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prevbaltxtbox.Location = new System.Drawing.Point(453, 138);
-            this.prevbaltxtbox.Multiline = true;
             this.prevbaltxtbox.Name = "prevbaltxtbox";
-            this.prevbaltxtbox.Size = new System.Drawing.Size(129, 22);
+            this.prevbaltxtbox.Size = new System.Drawing.Size(129, 16);
             this.prevbaltxtbox.TabIndex = 448;
             // 
             // salesmannametxtbox
             // 
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(121, 138);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(196, 22);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(196, 16);
             this.salesmannametxtbox.TabIndex = 447;
             // 
             // label35
@@ -1179,18 +1143,16 @@
             // 
             this.alenetvaluetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alenetvaluetxtbox.Location = new System.Drawing.Point(323, 138);
-            this.alenetvaluetxtbox.Multiline = true;
             this.alenetvaluetxtbox.Name = "alenetvaluetxtbox";
-            this.alenetvaluetxtbox.Size = new System.Drawing.Size(124, 22);
+            this.alenetvaluetxtbox.Size = new System.Drawing.Size(124, 16);
             this.alenetvaluetxtbox.TabIndex = 445;
             // 
             // customeridtxtbox
             // 
             this.customeridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.customeridtxtbox.Location = new System.Drawing.Point(20, 91);
-            this.customeridtxtbox.Multiline = true;
             this.customeridtxtbox.Name = "customeridtxtbox";
-            this.customeridtxtbox.Size = new System.Drawing.Size(95, 22);
+            this.customeridtxtbox.Size = new System.Drawing.Size(95, 16);
             this.customeridtxtbox.TabIndex = 444;
             this.customeridtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.customeridtxtbox_KeyDown);
             this.customeridtxtbox.Leave += new System.EventHandler(this.customeridtxtbox_Leave);
@@ -1221,7 +1183,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(137, 72);
+            this.label28.Location = new System.Drawing.Point(126, 72);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(99, 16);
@@ -1232,18 +1194,16 @@
             // 
             this.sectortxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sectortxtbox.Location = new System.Drawing.Point(614, 91);
-            this.sectortxtbox.Multiline = true;
             this.sectortxtbox.Name = "sectortxtbox";
-            this.sectortxtbox.Size = new System.Drawing.Size(203, 22);
+            this.sectortxtbox.Size = new System.Drawing.Size(203, 16);
             this.sectortxtbox.TabIndex = 436;
             // 
             // customernametxtbox
             // 
             this.customernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.customernametxtbox.Location = new System.Drawing.Point(121, 91);
-            this.customernametxtbox.Multiline = true;
             this.customernametxtbox.Name = "customernametxtbox";
-            this.customernametxtbox.Size = new System.Drawing.Size(298, 22);
+            this.customernametxtbox.Size = new System.Drawing.Size(298, 16);
             this.customernametxtbox.TabIndex = 434;
             // 
             // label26
@@ -1261,27 +1221,24 @@
             // 
             this.towntxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.towntxtbox.Location = new System.Drawing.Point(425, 91);
-            this.towntxtbox.Multiline = true;
             this.towntxtbox.Name = "towntxtbox";
-            this.towntxtbox.Size = new System.Drawing.Size(183, 22);
+            this.towntxtbox.Size = new System.Drawing.Size(183, 16);
             this.towntxtbox.TabIndex = 432;
             // 
             // saleidtxtbox
             // 
             this.saleidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saleidtxtbox.Location = new System.Drawing.Point(20, 44);
-            this.saleidtxtbox.Multiline = true;
             this.saleidtxtbox.Name = "saleidtxtbox";
-            this.saleidtxtbox.Size = new System.Drawing.Size(95, 22);
+            this.saleidtxtbox.Size = new System.Drawing.Size(95, 16);
             this.saleidtxtbox.TabIndex = 422;
             // 
             // salebilltxtbox
             // 
             this.salebilltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salebilltxtbox.Location = new System.Drawing.Point(242, 42);
-            this.salebilltxtbox.Multiline = true;
             this.salebilltxtbox.Name = "salebilltxtbox";
-            this.salebilltxtbox.Size = new System.Drawing.Size(107, 22);
+            this.salebilltxtbox.Size = new System.Drawing.Size(107, 16);
             this.salebilltxtbox.TabIndex = 421;
             // 
             // label17
@@ -1356,6 +1313,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -54,7 +54,6 @@
             this.todatepcker.Name = "todatepcker";
             this.todatepcker.Size = new System.Drawing.Size(114, 23);
             this.todatepcker.TabIndex = 189;
-            //this.todatepcker.ValueChanged += new System.EventHandler(this.todatepcker_ValueChanged);
             // 
             // fromdatepcker
             // 
@@ -63,7 +62,6 @@
             this.fromdatepcker.Name = "fromdatepcker";
             this.fromdatepcker.Size = new System.Drawing.Size(118, 23);
             this.fromdatepcker.TabIndex = 188;
-            //this.fromdatepcker.ValueChanged += new System.EventHandler(this.fromdatepcker_ValueChanged);
             // 
             // label3
             // 
@@ -153,32 +151,29 @@
             // vendornametxtbox
             // 
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendornametxtbox.Location = new System.Drawing.Point(325, 197);
+            this.vendornametxtbox.Location = new System.Drawing.Point(325, 209);
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(224, 28);
+            this.vendornametxtbox.Size = new System.Drawing.Size(224, 16);
             this.vendornametxtbox.TabIndex = 448;
-            //this.vendornametxtbox.TextChanged += new System.EventHandler(this.vendornametxtbox_TextChanged);
             // 
             // vendoridtxtbox
             // 
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendoridtxtbox.Location = new System.Drawing.Point(164, 197);
+            this.vendoridtxtbox.Location = new System.Drawing.Point(164, 209);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(118, 28);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(118, 16);
             this.vendoridtxtbox.TabIndex = 447;
             this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(286, 197);
+            this.vendoridsearch.Location = new System.Drawing.Point(286, 203);
             this.vendoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(33, 28);
+            this.vendoridsearch.Size = new System.Drawing.Size(33, 22);
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 446;
             this.vendoridsearch.TabStop = false;

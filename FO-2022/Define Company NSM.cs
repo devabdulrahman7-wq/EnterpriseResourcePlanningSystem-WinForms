@@ -250,6 +250,17 @@ namespace FO_2022
             }
         }
 
-       
+        private void Define_Company_NSM_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT NSMid, NSMName FROM NSM";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
     }
 }

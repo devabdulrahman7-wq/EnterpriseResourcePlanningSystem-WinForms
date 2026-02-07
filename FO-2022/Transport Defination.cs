@@ -241,13 +241,13 @@ namespace FO_2022
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                //SelectedName = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                //trnsprtnametxtbox.Text = SelectedName;
-                SelectedID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["TransportID"].Value);
-                trnsprtnametxtbox.Text = dataGridView1.Rows[e.RowIndex].Cells["TransportName"].Value.ToString();
-            }
+            //if (e.RowIndex >= 0)
+            //{
+            //    //SelectedName = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //    //trnsprtnametxtbox.Text = SelectedName;
+            //    SelectedID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["TransportID"].Value);
+            //    trnsprtnametxtbox.Text = dataGridView1.Rows[e.RowIndex].Cells["TransportName"].Value.ToString();
+            //}
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -261,6 +261,19 @@ namespace FO_2022
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Transport_Defination_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT TransportID, TransportName FROM Transport";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
     }
     }

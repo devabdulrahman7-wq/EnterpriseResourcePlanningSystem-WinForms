@@ -64,9 +64,8 @@
             this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctnametxtbox.Location = new System.Drawing.Point(311, 218);
             this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.prdctnametxtbox.Multiline = true;
             this.prdctnametxtbox.Name = "prdctnametxtbox";
-            this.prdctnametxtbox.Size = new System.Drawing.Size(227, 24);
+            this.prdctnametxtbox.Size = new System.Drawing.Size(227, 16);
             this.prdctnametxtbox.TabIndex = 454;
             // 
             // prdctidtxtbox
@@ -74,15 +73,14 @@
             this.prdctidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctidtxtbox.Location = new System.Drawing.Point(122, 218);
             this.prdctidtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.prdctidtxtbox.Multiline = true;
             this.prdctidtxtbox.Name = "prdctidtxtbox";
-            this.prdctidtxtbox.Size = new System.Drawing.Size(130, 24);
+            this.prdctidtxtbox.Size = new System.Drawing.Size(130, 16);
             this.prdctidtxtbox.TabIndex = 453;
             // 
             // prdctidsearch
             // 
             this.prdctidsearch.Image = ((System.Drawing.Image)(resources.GetObject("prdctidsearch.Image")));
-            this.prdctidsearch.Location = new System.Drawing.Point(257, 220);
+            this.prdctidsearch.Location = new System.Drawing.Point(254, 213);
             this.prdctidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.prdctidsearch.Name = "prdctidsearch";
             this.prdctidsearch.Size = new System.Drawing.Size(47, 22);

@@ -69,7 +69,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(239, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 38);
+            this.label1.Size = new System.Drawing.Size(283, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Change Product Prices";
             // 
@@ -79,7 +79,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(471, 583);
+            this.closebtn.Location = new System.Drawing.Point(465, 588);
             this.closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
@@ -94,7 +94,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(392, 583);
+            this.clearbtn.Location = new System.Drawing.Point(386, 588);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
@@ -109,7 +109,7 @@
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(313, 583);
+            this.savebtn.Location = new System.Drawing.Point(307, 588);
             this.savebtn.Margin = new System.Windows.Forms.Padding(2);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
@@ -123,7 +123,7 @@
             this.cmpnynamecombobox2.FormattingEnabled = true;
             this.cmpnynamecombobox2.Location = new System.Drawing.Point(255, 128);
             this.cmpnynamecombobox2.Name = "cmpnynamecombobox2";
-            this.cmpnynamecombobox2.Size = new System.Drawing.Size(224, 27);
+            this.cmpnynamecombobox2.Size = new System.Drawing.Size(224, 24);
             this.cmpnynamecombobox2.TabIndex = 390;
             this.cmpnynamecombobox2.SelectedIndexChanged += new System.EventHandler(this.cmpnynamecombobox2_SelectedIndexChanged);
             // 
@@ -134,7 +134,7 @@
             this.label4.Location = new System.Drawing.Point(37, 109);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 21);
+            this.label4.Size = new System.Drawing.Size(97, 16);
             this.label4.TabIndex = 389;
             this.label4.Text = "Company Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -144,7 +144,7 @@
             this.cmpnynamecombobox1.FormattingEnabled = true;
             this.cmpnynamecombobox1.Location = new System.Drawing.Point(27, 128);
             this.cmpnynamecombobox1.Name = "cmpnynamecombobox1";
-            this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 27);
+            this.cmpnynamecombobox1.Size = new System.Drawing.Size(224, 24);
             this.cmpnynamecombobox1.TabIndex = 392;
             this.cmpnynamecombobox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -155,7 +155,7 @@
             this.label3.Location = new System.Drawing.Point(270, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 21);
+            this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 391;
             this.label3.Text = "Company Name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -166,7 +166,7 @@
             this.refreshbtn.FlatAppearance.BorderSize = 0;
             this.refreshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshbtn.Location = new System.Drawing.Point(550, 583);
+            this.refreshbtn.Location = new System.Drawing.Point(544, 588);
             this.refreshbtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshbtn.Name = "refreshbtn";
             this.refreshbtn.Size = new System.Drawing.Size(75, 28);
@@ -184,7 +184,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(844, 23);
+            this.textBox1.Size = new System.Drawing.Size(844, 19);
             this.textBox1.TabIndex = 394;
             this.textBox1.Text = "                                                   Available Packings";
             // 
@@ -306,7 +306,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(78, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 396;
             // 
             // label5
@@ -314,7 +314,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(414, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 21);
+            this.label5.Size = new System.Drawing.Size(0, 16);
             this.label5.TabIndex = 397;
             // 
             // label6
@@ -322,7 +322,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(731, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 21);
+            this.label6.Size = new System.Drawing.Size(0, 16);
             this.label6.TabIndex = 398;
             // 
             // prdctinfotxtbox
@@ -331,7 +331,7 @@
             this.prdctinfotxtbox.Location = new System.Drawing.Point(27, 188);
             this.prdctinfotxtbox.Name = "prdctinfotxtbox";
             this.prdctinfotxtbox.ReadOnly = true;
-            this.prdctinfotxtbox.Size = new System.Drawing.Size(212, 27);
+            this.prdctinfotxtbox.Size = new System.Drawing.Size(212, 23);
             this.prdctinfotxtbox.TabIndex = 399;
             this.prdctinfotxtbox.Text = "Products Information";
             // 
@@ -341,7 +341,7 @@
             this.purchasetxtbox.Location = new System.Drawing.Point(245, 188);
             this.purchasetxtbox.Name = "purchasetxtbox";
             this.purchasetxtbox.ReadOnly = true;
-            this.purchasetxtbox.Size = new System.Drawing.Size(295, 27);
+            this.purchasetxtbox.Size = new System.Drawing.Size(295, 23);
             this.purchasetxtbox.TabIndex = 400;
             this.purchasetxtbox.Text = "Purhcase";
             // 
@@ -351,7 +351,7 @@
             this.saletxtbox.Location = new System.Drawing.Point(541, 188);
             this.saletxtbox.Name = "saletxtbox";
             this.saletxtbox.ReadOnly = true;
-            this.saletxtbox.Size = new System.Drawing.Size(330, 27);
+            this.saletxtbox.Size = new System.Drawing.Size(330, 23);
             this.saletxtbox.TabIndex = 401;
             this.saletxtbox.Text = "       Sale ";
             // 
@@ -368,10 +368,10 @@
             // 
             // Change_Product_Prices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(883, 622);
+            this.ClientSize = new System.Drawing.Size(883, 637);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.saletxtbox);
             this.Controls.Add(this.purchasetxtbox);

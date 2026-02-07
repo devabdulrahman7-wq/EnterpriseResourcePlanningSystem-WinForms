@@ -51,22 +51,20 @@
             // accountnametxtbox
             // 
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnametxtbox.Location = new System.Drawing.Point(329, 224);
+            this.accountnametxtbox.Location = new System.Drawing.Point(329, 228);
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(191, 20);
+            this.accountnametxtbox.Size = new System.Drawing.Size(191, 16);
             this.accountnametxtbox.TabIndex = 310;
             this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountnotxtbox
             // 
             this.accountnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountnotxtbox.Location = new System.Drawing.Point(191, 224);
+            this.accountnotxtbox.Location = new System.Drawing.Point(193, 228);
             this.accountnotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.accountnotxtbox.Multiline = true;
             this.accountnotxtbox.Name = "accountnotxtbox";
-            this.accountnotxtbox.Size = new System.Drawing.Size(95, 20);
+            this.accountnotxtbox.Size = new System.Drawing.Size(95, 16);
             this.accountnotxtbox.TabIndex = 309;
             this.accountnotxtbox.TextChanged += new System.EventHandler(this.accountnotxtbox_TextChanged);
             // 
@@ -249,7 +247,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank_Statement";
             this.TopMost = true;
-            //this.Load += new System.EventHandler(this.Bank_Statement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.searchaccountno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

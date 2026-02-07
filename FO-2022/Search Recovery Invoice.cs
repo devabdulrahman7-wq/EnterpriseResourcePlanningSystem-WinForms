@@ -259,14 +259,14 @@ namespace FO_2022
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                if (row.Cells["RecoveryID"].Value != null)
-                {
-                    SelectedRecoveryID = Convert.ToInt32(row.Cells["RecoveryID"].Value);
-                }
-            }
+            //if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+            //{
+            //    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            //    if (row.Cells["RecoveryID"].Value != null)
+            //    {
+            //        SelectedRecoveryID = Convert.ToInt32(row.Cells["RecoveryID"].Value);
+            //    }
+            //}
         }
 
         private void Search_Recovery_Invoice_Load(object sender, EventArgs e)

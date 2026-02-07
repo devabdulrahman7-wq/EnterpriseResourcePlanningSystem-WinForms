@@ -84,7 +84,7 @@
             this.label2.Location = new System.Drawing.Point(209, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 42);
+            this.label2.Size = new System.Drawing.Size(261, 32);
             this.label2.TabIndex = 652;
             this.label2.Text = "Promises Processing";
             // 
@@ -121,6 +121,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,7 +139,7 @@
             this.radioButtonprocesspayment.AutoSize = true;
             this.radioButtonprocesspayment.Location = new System.Drawing.Point(153, 77);
             this.radioButtonprocesspayment.Name = "radioButtonprocesspayment";
-            this.radioButtonprocesspayment.Size = new System.Drawing.Size(165, 25);
+            this.radioButtonprocesspayment.Size = new System.Drawing.Size(128, 20);
             this.radioButtonprocesspayment.TabIndex = 684;
             this.radioButtonprocesspayment.TabStop = true;
             this.radioButtonprocesspayment.Text = "Process Payments";
@@ -150,7 +151,7 @@
             this.radioButtonprocessrecovery.AutoSize = true;
             this.radioButtonprocessrecovery.Location = new System.Drawing.Point(359, 77);
             this.radioButtonprocessrecovery.Name = "radioButtonprocessrecovery";
-            this.radioButtonprocessrecovery.Size = new System.Drawing.Size(161, 25);
+            this.radioButtonprocessrecovery.Size = new System.Drawing.Size(125, 20);
             this.radioButtonprocessrecovery.TabIndex = 685;
             this.radioButtonprocessrecovery.TabStop = true;
             this.radioButtonprocessrecovery.Text = "Process Recovery";
@@ -174,7 +175,7 @@
             this.fullprocessradiobtn.AutoSize = true;
             this.fullprocessradiobtn.Location = new System.Drawing.Point(111, 27);
             this.fullprocessradiobtn.Name = "fullprocessradiobtn";
-            this.fullprocessradiobtn.Size = new System.Drawing.Size(62, 25);
+            this.fullprocessradiobtn.Size = new System.Drawing.Size(49, 20);
             this.fullprocessradiobtn.TabIndex = 688;
             this.fullprocessradiobtn.TabStop = true;
             this.fullprocessradiobtn.Text = "Full ";
@@ -186,7 +187,7 @@
             this.partialprocessradiobtn.AutoSize = true;
             this.partialprocessradiobtn.Location = new System.Drawing.Point(215, 22);
             this.partialprocessradiobtn.Name = "partialprocessradiobtn";
-            this.partialprocessradiobtn.Size = new System.Drawing.Size(78, 25);
+            this.partialprocessradiobtn.Size = new System.Drawing.Size(61, 20);
             this.partialprocessradiobtn.TabIndex = 687;
             this.partialprocessradiobtn.TabStop = true;
             this.partialprocessradiobtn.Text = "Partial";
@@ -198,7 +199,7 @@
             this.postponeprocessradiobtn.AutoSize = true;
             this.postponeprocessradiobtn.Location = new System.Drawing.Point(330, 22);
             this.postponeprocessradiobtn.Name = "postponeprocessradiobtn";
-            this.postponeprocessradiobtn.Size = new System.Drawing.Size(104, 25);
+            this.postponeprocessradiobtn.Size = new System.Drawing.Size(81, 20);
             this.postponeprocessradiobtn.TabIndex = 686;
             this.postponeprocessradiobtn.TabStop = true;
             this.postponeprocessradiobtn.Text = "Post Pone";
@@ -248,7 +249,7 @@
             this.label9.Location = new System.Drawing.Point(121, 471);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 689;
             this.label9.Text = "Narration";
             // 
@@ -257,9 +258,8 @@
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.narrationtxtbox.Location = new System.Drawing.Point(124, 492);
             this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(463, 23);
+            this.narrationtxtbox.Size = new System.Drawing.Size(463, 16);
             this.narrationtxtbox.TabIndex = 688;
             this.narrationtxtbox.TextChanged += new System.EventHandler(this.narrationtxtbox_TextChanged);
             // 
@@ -269,7 +269,7 @@
             this.label7.Location = new System.Drawing.Point(236, 423);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 21);
+            this.label7.Size = new System.Drawing.Size(71, 16);
             this.label7.TabIndex = 693;
             this.label7.Text = "Account No";
             // 
@@ -278,9 +278,8 @@
             this.accountnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.accountnotxtbox.Location = new System.Drawing.Point(239, 444);
             this.accountnotxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.accountnotxtbox.Multiline = true;
             this.accountnotxtbox.Name = "accountnotxtbox";
-            this.accountnotxtbox.Size = new System.Drawing.Size(132, 23);
+            this.accountnotxtbox.Size = new System.Drawing.Size(132, 16);
             this.accountnotxtbox.TabIndex = 692;
             this.accountnotxtbox.TextChanged += new System.EventHandler(this.accountnotxtbox_TextChanged);
             // 
@@ -290,7 +289,7 @@
             this.label6.Location = new System.Drawing.Point(369, 423);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 21);
+            this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 691;
             this.label6.Text = "Account Name";
             // 
@@ -299,9 +298,8 @@
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.accountnametxtbox.Location = new System.Drawing.Point(372, 444);
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(215, 23);
+            this.accountnametxtbox.Size = new System.Drawing.Size(215, 16);
             this.accountnametxtbox.TabIndex = 690;
             this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
@@ -310,9 +308,8 @@
             this.promisesidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.promisesidtxtbox.Location = new System.Drawing.Point(124, 444);
             this.promisesidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.promisesidtxtbox.Multiline = true;
             this.promisesidtxtbox.Name = "promisesidtxtbox";
-            this.promisesidtxtbox.Size = new System.Drawing.Size(114, 23);
+            this.promisesidtxtbox.Size = new System.Drawing.Size(114, 16);
             this.promisesidtxtbox.TabIndex = 695;
             this.promisesidtxtbox.TextChanged += new System.EventHandler(this.promisesidtxtbox_TextChanged);
             // 
@@ -322,7 +319,7 @@
             this.label8.Location = new System.Drawing.Point(121, 423);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 21);
+            this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 694;
             this.label8.Text = "Promises ID";
             // 
@@ -332,7 +329,7 @@
             this.label3.Location = new System.Drawing.Point(278, 315);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 697;
             this.label3.Text = "Amount";
             // 
@@ -341,9 +338,8 @@
             this.amounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.amounttxtbox.Location = new System.Drawing.Point(281, 336);
             this.amounttxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.amounttxtbox.Multiline = true;
             this.amounttxtbox.Name = "amounttxtbox";
-            this.amounttxtbox.Size = new System.Drawing.Size(132, 23);
+            this.amounttxtbox.Size = new System.Drawing.Size(132, 16);
             this.amounttxtbox.TabIndex = 696;
             this.amounttxtbox.TextChanged += new System.EventHandler(this.amounttxtbox_TextChanged);
             // 
@@ -353,7 +349,7 @@
             this.label1.Location = new System.Drawing.Point(121, 315);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 21);
+            this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 699;
             this.label1.Text = "Promises Date";
             // 
@@ -363,7 +359,7 @@
             this.label4.Location = new System.Drawing.Point(121, 364);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 21);
+            this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 703;
             this.label4.Text = "New Promises Date";
             // 
@@ -373,7 +369,7 @@
             this.label5.Location = new System.Drawing.Point(278, 364);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 21);
+            this.label5.Size = new System.Drawing.Size(79, 16);
             this.label5.TabIndex = 701;
             this.label5.Text = "Paid Amount";
             // 
@@ -382,9 +378,8 @@
             this.paidamounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.paidamounttxtbox.Location = new System.Drawing.Point(281, 385);
             this.paidamounttxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.paidamounttxtbox.Multiline = true;
             this.paidamounttxtbox.Name = "paidamounttxtbox";
-            this.paidamounttxtbox.Size = new System.Drawing.Size(132, 23);
+            this.paidamounttxtbox.Size = new System.Drawing.Size(132, 16);
             this.paidamounttxtbox.TabIndex = 700;
             this.paidamounttxtbox.TextChanged += new System.EventHandler(this.paidamounttxtbox_TextChanged);
             // 
@@ -393,9 +388,8 @@
             this.newpromisedatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newpromisedatetxtbox.Location = new System.Drawing.Point(124, 385);
             this.newpromisedatetxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.newpromisedatetxtbox.Multiline = true;
             this.newpromisedatetxtbox.Name = "newpromisedatetxtbox";
-            this.newpromisedatetxtbox.Size = new System.Drawing.Size(132, 23);
+            this.newpromisedatetxtbox.Size = new System.Drawing.Size(132, 16);
             this.newpromisedatetxtbox.TabIndex = 704;
             this.newpromisedatetxtbox.TextChanged += new System.EventHandler(this.newpromisedatetxtbox_TextChanged);
             // 
@@ -404,15 +398,14 @@
             this.promisedatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.promisedatetxtbox.Location = new System.Drawing.Point(124, 336);
             this.promisedatetxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.promisedatetxtbox.Multiline = true;
             this.promisedatetxtbox.Name = "promisedatetxtbox";
-            this.promisedatetxtbox.Size = new System.Drawing.Size(131, 23);
+            this.promisedatetxtbox.Size = new System.Drawing.Size(131, 16);
             this.promisedatetxtbox.TabIndex = 705;
             this.promisedatetxtbox.TextChanged += new System.EventHandler(this.promisedatetxtbox_TextChanged);
             // 
             // Promises_Processing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(707, 601);

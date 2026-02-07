@@ -57,7 +57,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(273, 175);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(346, 292);
@@ -79,7 +79,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(273, 176);
+            this.textBox1.Location = new System.Drawing.Point(273, 151);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(346, 19);
@@ -90,7 +90,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(45, 179);
+            this.label10.Location = new System.Drawing.Point(45, 154);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 16);
@@ -100,6 +100,7 @@
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,6 +131,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +147,7 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,6 +178,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,7 +194,7 @@
             // isactivechkbox
             // 
             this.isactivechkbox.AutoSize = true;
-            this.isactivechkbox.Location = new System.Drawing.Point(43, 330);
+            this.isactivechkbox.Location = new System.Drawing.Point(43, 305);
             this.isactivechkbox.Name = "isactivechkbox";
             this.isactivechkbox.Size = new System.Drawing.Size(74, 20);
             this.isactivechkbox.TabIndex = 623;
@@ -201,7 +205,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(270, 130);
+            this.label6.Location = new System.Drawing.Point(270, 105);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 16);
@@ -211,7 +215,7 @@
             // nsmcombobox
             // 
             this.nsmcombobox.FormattingEnabled = true;
-            this.nsmcombobox.Location = new System.Drawing.Point(273, 149);
+            this.nsmcombobox.Location = new System.Drawing.Point(273, 124);
             this.nsmcombobox.Name = "nsmcombobox";
             this.nsmcombobox.Size = new System.Drawing.Size(153, 24);
             this.nsmcombobox.TabIndex = 621;
@@ -220,7 +224,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(441, 130);
+            this.label5.Location = new System.Drawing.Point(441, 105);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 16);
@@ -230,7 +234,7 @@
             // asmnametxtbox
             // 
             this.asmnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.asmnametxtbox.Location = new System.Drawing.Point(433, 150);
+            this.asmnametxtbox.Location = new System.Drawing.Point(433, 125);
             this.asmnametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.asmnametxtbox.Multiline = true;
             this.asmnametxtbox.Name = "asmnametxtbox";
@@ -241,7 +245,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 271);
+            this.label2.Location = new System.Drawing.Point(43, 246);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 16);
@@ -251,7 +255,7 @@
             // mbltxtbox
             // 
             this.mbltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mbltxtbox.Location = new System.Drawing.Point(43, 291);
+            this.mbltxtbox.Location = new System.Drawing.Point(43, 266);
             this.mbltxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.mbltxtbox.Multiline = true;
             this.mbltxtbox.Name = "mbltxtbox";
@@ -262,7 +266,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 227);
+            this.label3.Location = new System.Drawing.Point(42, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
@@ -272,7 +276,7 @@
             // nsmcombobox1
             // 
             this.nsmcombobox1.FormattingEnabled = true;
-            this.nsmcombobox1.Location = new System.Drawing.Point(39, 196);
+            this.nsmcombobox1.Location = new System.Drawing.Point(39, 171);
             this.nsmcombobox1.Name = "nsmcombobox1";
             this.nsmcombobox1.Size = new System.Drawing.Size(216, 24);
             this.nsmcombobox1.TabIndex = 624;
@@ -290,7 +294,7 @@
             // 
             // asmnametxtbox1
             // 
-            this.asmnametxtbox1.Location = new System.Drawing.Point(39, 245);
+            this.asmnametxtbox1.Location = new System.Drawing.Point(39, 220);
             this.asmnametxtbox1.Multiline = true;
             this.asmnametxtbox1.Name = "asmnametxtbox1";
             this.asmnametxtbox1.Size = new System.Drawing.Size(215, 23);
@@ -301,7 +305,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(666, 565);
+            this.ClientSize = new System.Drawing.Size(666, 581);
             this.Controls.Add(this.asmnametxtbox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.nsmcombobox1);
@@ -323,6 +327,7 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

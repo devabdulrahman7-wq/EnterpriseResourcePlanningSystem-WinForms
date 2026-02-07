@@ -168,5 +168,10 @@ namespace FO_2022
             this.Close();
 
         }
+
+        private void CreateUserForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

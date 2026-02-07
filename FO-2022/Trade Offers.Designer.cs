@@ -96,13 +96,14 @@
             this.label1.Location = new System.Drawing.Point(353, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 42);
+            this.label1.Size = new System.Drawing.Size(171, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Trade Offers";
             // 
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,6 +134,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +150,7 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,6 +181,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +201,7 @@
             this.label2.Location = new System.Drawing.Point(19, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 21);
+            this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 387;
             this.label2.Text = "Offer ID";
             // 
@@ -208,7 +212,7 @@
             this.label3.Location = new System.Drawing.Point(125, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 21);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 388;
             this.label3.Text = "Search Offer Name";
             // 
@@ -220,7 +224,7 @@
             this.textBox1.Location = new System.Drawing.Point(10, 140);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 23);
+            this.textBox1.Size = new System.Drawing.Size(284, 19);
             this.textBox1.TabIndex = 390;
             this.textBox1.Text = "           Available Packings";
             // 
@@ -241,7 +245,7 @@
             this.searchoffertxtbox.Location = new System.Drawing.Point(107, 118);
             this.searchoffertxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchoffertxtbox.Name = "searchoffertxtbox";
-            this.searchoffertxtbox.Size = new System.Drawing.Size(187, 20);
+            this.searchoffertxtbox.Size = new System.Drawing.Size(187, 16);
             this.searchoffertxtbox.TabIndex = 392;
             this.searchoffertxtbox.TextChanged += new System.EventHandler(this.searchoffertxtbox_TextChanged);
             // 
@@ -251,7 +255,7 @@
             this.offeridsearchtxtbox.Location = new System.Drawing.Point(10, 118);
             this.offeridsearchtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.offeridsearchtxtbox.Name = "offeridsearchtxtbox";
-            this.offeridsearchtxtbox.Size = new System.Drawing.Size(96, 20);
+            this.offeridsearchtxtbox.Size = new System.Drawing.Size(96, 16);
             this.offeridsearchtxtbox.TabIndex = 393;
             this.offeridsearchtxtbox.TextChanged += new System.EventHandler(this.offeridsearchtxtbox_TextChanged);
             this.offeridsearchtxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OfferIdSearchTextBox_KeyPress);
@@ -263,7 +267,7 @@
             this.label4.Location = new System.Drawing.Point(327, 86);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 21);
+            this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 394;
             this.label4.Text = "Offer ID";
             // 
@@ -272,9 +276,8 @@
             this.offerid1txtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.offerid1txtbox.Location = new System.Drawing.Point(314, 110);
             this.offerid1txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.offerid1txtbox.Multiline = true;
             this.offerid1txtbox.Name = "offerid1txtbox";
-            this.offerid1txtbox.Size = new System.Drawing.Size(114, 23);
+            this.offerid1txtbox.Size = new System.Drawing.Size(114, 16);
             this.offerid1txtbox.TabIndex = 395;
             this.offerid1txtbox.TextChanged += new System.EventHandler(this.offerid1txtbox_TextChanged);
             // 
@@ -285,7 +288,7 @@
             this.label5.Location = new System.Drawing.Point(432, 86);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
+            this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 399;
             this.label5.Text = "Offer Date";
             // 
@@ -296,7 +299,7 @@
             this.label6.Location = new System.Drawing.Point(533, 86);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 21);
+            this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 400;
             this.label6.Text = "Effective Form";
             // 
@@ -307,7 +310,7 @@
             this.label7.Location = new System.Drawing.Point(634, 86);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 21);
+            this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 401;
             this.label7.Text = "Effective To";
             // 
@@ -316,7 +319,7 @@
             this.offerdateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.offerdateTimePicker1.Location = new System.Drawing.Point(435, 110);
             this.offerdateTimePicker1.Name = "offerdateTimePicker1";
-            this.offerdateTimePicker1.Size = new System.Drawing.Size(95, 27);
+            this.offerdateTimePicker1.Size = new System.Drawing.Size(95, 23);
             this.offerdateTimePicker1.TabIndex = 402;
             this.offerdateTimePicker1.ValueChanged += new System.EventHandler(this.offerdateTimePicker1_ValueChanged);
             // 
@@ -325,7 +328,7 @@
             this.effectivetodateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.effectivetodateTimePicker2.Location = new System.Drawing.Point(637, 110);
             this.effectivetodateTimePicker2.Name = "effectivetodateTimePicker2";
-            this.effectivetodateTimePicker2.Size = new System.Drawing.Size(95, 27);
+            this.effectivetodateTimePicker2.Size = new System.Drawing.Size(95, 23);
             this.effectivetodateTimePicker2.TabIndex = 403;
             this.effectivetodateTimePicker2.ValueChanged += new System.EventHandler(this.effectivetodateTimePicker2_ValueChanged);
             // 
@@ -334,7 +337,7 @@
             this.effectivefromTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.effectivefromTimePicker3.Location = new System.Drawing.Point(536, 110);
             this.effectivefromTimePicker3.Name = "effectivefromTimePicker3";
-            this.effectivefromTimePicker3.Size = new System.Drawing.Size(95, 27);
+            this.effectivefromTimePicker3.Size = new System.Drawing.Size(95, 23);
             this.effectivefromTimePicker3.TabIndex = 404;
             this.effectivefromTimePicker3.ValueChanged += new System.EventHandler(this.effectivefromTimePicker3_ValueChanged);
             // 
@@ -345,7 +348,7 @@
             this.label8.Location = new System.Drawing.Point(327, 143);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 21);
+            this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 405;
             this.label8.Text = "Offer Name";
             // 
@@ -354,9 +357,8 @@
             this.offernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.offernametxtbox.Location = new System.Drawing.Point(314, 162);
             this.offernametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.offernametxtbox.Multiline = true;
             this.offernametxtbox.Name = "offernametxtbox";
-            this.offernametxtbox.Size = new System.Drawing.Size(418, 22);
+            this.offernametxtbox.Size = new System.Drawing.Size(418, 16);
             this.offernametxtbox.TabIndex = 406;
             this.offernametxtbox.TextChanged += new System.EventHandler(this.offernametxtbox_TextChanged);
             // 
@@ -380,7 +382,7 @@
             this.label10.Location = new System.Drawing.Point(13, 19);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 21);
+            this.label10.Size = new System.Drawing.Size(66, 16);
             this.label10.TabIndex = 399;
             this.label10.Text = "Product ID";
             // 
@@ -391,7 +393,7 @@
             this.label9.Location = new System.Drawing.Point(174, 19);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 21);
+            this.label9.Size = new System.Drawing.Size(87, 16);
             this.label9.TabIndex = 398;
             this.label9.Text = "Product Name";
             // 
@@ -400,9 +402,8 @@
             this.prdctidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctidtxtbox.Location = new System.Drawing.Point(7, 39);
             this.prdctidtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.prdctidtxtbox.Multiline = true;
             this.prdctidtxtbox.Name = "prdctidtxtbox";
-            this.prdctidtxtbox.Size = new System.Drawing.Size(130, 22);
+            this.prdctidtxtbox.Size = new System.Drawing.Size(130, 16);
             this.prdctidtxtbox.TabIndex = 397;
             this.prdctidtxtbox.TextChanged += new System.EventHandler(this.prdctidtxtbox_TextChanged);
             // 
@@ -411,9 +412,8 @@
             this.prdctnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prdctnametxtbox.Location = new System.Drawing.Point(171, 39);
             this.prdctnametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.prdctnametxtbox.Multiline = true;
             this.prdctnametxtbox.Name = "prdctnametxtbox";
-            this.prdctnametxtbox.Size = new System.Drawing.Size(240, 22);
+            this.prdctnametxtbox.Size = new System.Drawing.Size(240, 16);
             this.prdctnametxtbox.TabIndex = 396;
             this.prdctnametxtbox.TextChanged += new System.EventHandler(this.prdctnametxtbox_TextChanged);
             // 
@@ -433,7 +433,7 @@
             // 
             this.qtytxtbox.Location = new System.Drawing.Point(320, 283);
             this.qtytxtbox.Name = "qtytxtbox";
-            this.qtytxtbox.Size = new System.Drawing.Size(84, 27);
+            this.qtytxtbox.Size = new System.Drawing.Size(80, 23);
             this.qtytxtbox.TabIndex = 408;
             this.qtytxtbox.TextChanged += new System.EventHandler(this.qtytxtbox_TextChanged);
             // 
@@ -441,7 +441,7 @@
             // 
             this.discvaltxtbox.Location = new System.Drawing.Point(669, 283);
             this.discvaltxtbox.Name = "discvaltxtbox";
-            this.discvaltxtbox.Size = new System.Drawing.Size(70, 27);
+            this.discvaltxtbox.Size = new System.Drawing.Size(70, 23);
             this.discvaltxtbox.TabIndex = 409;
             this.discvaltxtbox.TextChanged += new System.EventHandler(this.discvaltxtbox_TextChanged);
             // 
@@ -449,7 +449,7 @@
             // 
             this.disctxtbox.Location = new System.Drawing.Point(583, 283);
             this.disctxtbox.Name = "disctxtbox";
-            this.disctxtbox.Size = new System.Drawing.Size(86, 27);
+            this.disctxtbox.Size = new System.Drawing.Size(86, 23);
             this.disctxtbox.TabIndex = 410;
             this.disctxtbox.TextChanged += new System.EventHandler(this.disctxtbox_TextChanged);
             // 
@@ -457,7 +457,7 @@
             // 
             this.pricetxtbox.Location = new System.Drawing.Point(489, 283);
             this.pricetxtbox.Name = "pricetxtbox";
-            this.pricetxtbox.Size = new System.Drawing.Size(94, 27);
+            this.pricetxtbox.Size = new System.Drawing.Size(94, 23);
             this.pricetxtbox.TabIndex = 411;
             this.pricetxtbox.TextChanged += new System.EventHandler(this.pricetxtbox_TextChanged);
             // 
@@ -465,7 +465,7 @@
             // 
             this.bonustxtbox.Location = new System.Drawing.Point(404, 283);
             this.bonustxtbox.Name = "bonustxtbox";
-            this.bonustxtbox.Size = new System.Drawing.Size(85, 27);
+            this.bonustxtbox.Size = new System.Drawing.Size(85, 23);
             this.bonustxtbox.TabIndex = 412;
             this.bonustxtbox.TextChanged += new System.EventHandler(this.bonustxtbox_TextChanged);
             // 
@@ -476,7 +476,7 @@
             this.label11.Location = new System.Drawing.Point(327, 266);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 21);
+            this.label11.Size = new System.Drawing.Size(26, 16);
             this.label11.TabIndex = 413;
             this.label11.Text = "Qty";
             // 
@@ -487,7 +487,7 @@
             this.label12.Location = new System.Drawing.Point(405, 266);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 21);
+            this.label12.Size = new System.Drawing.Size(41, 16);
             this.label12.TabIndex = 414;
             this.label12.Text = "Bonus";
             // 
@@ -498,7 +498,7 @@
             this.label13.Location = new System.Drawing.Point(493, 264);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 21);
+            this.label13.Size = new System.Drawing.Size(35, 16);
             this.label13.TabIndex = 415;
             this.label13.Text = "Price";
             // 
@@ -509,7 +509,7 @@
             this.label14.Location = new System.Drawing.Point(589, 266);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 21);
+            this.label14.Size = new System.Drawing.Size(42, 16);
             this.label14.TabIndex = 416;
             this.label14.Text = "Disc%";
             // 
@@ -520,7 +520,7 @@
             this.label15.Location = new System.Drawing.Point(679, 266);
             this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 21);
+            this.label15.Size = new System.Drawing.Size(50, 16);
             this.label15.TabIndex = 417;
             this.label15.Text = "Disc val";
             // 
@@ -529,7 +529,7 @@
             this.towncomobobox.FormattingEnabled = true;
             this.towncomobobox.Location = new System.Drawing.Point(320, 341);
             this.towncomobobox.Name = "towncomobobox";
-            this.towncomobobox.Size = new System.Drawing.Size(169, 27);
+            this.towncomobobox.Size = new System.Drawing.Size(169, 24);
             this.towncomobobox.TabIndex = 418;
             this.towncomobobox.SelectedIndexChanged += new System.EventHandler(this.towncomobobox_SelectedIndexChanged);
             // 
@@ -538,7 +538,7 @@
             this.sectorcombobox.FormattingEnabled = true;
             this.sectorcombobox.Location = new System.Drawing.Point(496, 341);
             this.sectorcombobox.Name = "sectorcombobox";
-            this.sectorcombobox.Size = new System.Drawing.Size(166, 27);
+            this.sectorcombobox.Size = new System.Drawing.Size(166, 24);
             this.sectorcombobox.TabIndex = 419;
             this.sectorcombobox.SelectedIndexChanged += new System.EventHandler(this.sectorcombobox_SelectedIndexChanged);
             // 
@@ -549,7 +549,7 @@
             this.label16.Location = new System.Drawing.Point(533, 322);
             this.label16.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 21);
+            this.label16.Size = new System.Drawing.Size(44, 16);
             this.label16.TabIndex = 420;
             this.label16.Text = "Sector";
             // 
@@ -560,7 +560,7 @@
             this.label17.Location = new System.Drawing.Point(327, 322);
             this.label17.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 21);
+            this.label17.Size = new System.Drawing.Size(39, 16);
             this.label17.TabIndex = 421;
             this.label17.Text = "Town";
             // 
@@ -568,7 +568,7 @@
             // 
             this.partyidtxtbox.Location = new System.Drawing.Point(321, 389);
             this.partyidtxtbox.Name = "partyidtxtbox";
-            this.partyidtxtbox.Size = new System.Drawing.Size(100, 27);
+            this.partyidtxtbox.Size = new System.Drawing.Size(100, 23);
             this.partyidtxtbox.TabIndex = 423;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             // 
@@ -576,7 +576,7 @@
             // 
             this.searchpartynametxtbox.Location = new System.Drawing.Point(419, 389);
             this.searchpartynametxtbox.Name = "searchpartynametxtbox";
-            this.searchpartynametxtbox.Size = new System.Drawing.Size(243, 27);
+            this.searchpartynametxtbox.Size = new System.Drawing.Size(243, 23);
             this.searchpartynametxtbox.TabIndex = 422;
             this.searchpartynametxtbox.TextChanged += new System.EventHandler(this.searchpartynametxtbox_TextChanged);
             // 
@@ -587,7 +587,7 @@
             this.label18.Location = new System.Drawing.Point(432, 370);
             this.label18.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(151, 21);
+            this.label18.Size = new System.Drawing.Size(117, 16);
             this.label18.TabIndex = 424;
             this.label18.Text = "Search Party Name";
             // 
@@ -598,13 +598,14 @@
             this.label19.Location = new System.Drawing.Point(331, 370);
             this.label19.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 21);
+            this.label19.Size = new System.Drawing.Size(52, 16);
             this.label19.TabIndex = 425;
             this.label19.Text = "Party ID";
             // 
             // enterbtn
             // 
             this.enterbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.enterbtn.Enabled = false;
             this.enterbtn.FlatAppearance.BorderSize = 0;
             this.enterbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enterbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -634,7 +635,7 @@
             this.effecticeprdctchkbox.AutoSize = true;
             this.effecticeprdctchkbox.Location = new System.Drawing.Point(314, 537);
             this.effecticeprdctchkbox.Name = "effecticeprdctchkbox";
-            this.effecticeprdctchkbox.Size = new System.Drawing.Size(231, 25);
+            this.effecticeprdctchkbox.Size = new System.Drawing.Size(180, 20);
             this.effecticeprdctchkbox.TabIndex = 428;
             this.effecticeprdctchkbox.Text = "Effect Product Price in Sale";
             this.effecticeprdctchkbox.UseVisualStyleBackColor = true;
@@ -645,7 +646,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(533, 534);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(178, 21);
+            this.label20.Size = new System.Drawing.Size(137, 16);
             this.label20.TabIndex = 429;
             this.label20.Text = "Total Selected Parties:";
             // 
@@ -665,12 +666,12 @@
             this.totalpartiestxtbox.BackColor = System.Drawing.Color.White;
             this.totalpartiestxtbox.Location = new System.Drawing.Point(677, 532);
             this.totalpartiestxtbox.Name = "totalpartiestxtbox";
-            this.totalpartiestxtbox.Size = new System.Drawing.Size(64, 27);
+            this.totalpartiestxtbox.Size = new System.Drawing.Size(64, 23);
             this.totalpartiestxtbox.TabIndex = 432;
             // 
             // Trade_Offers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(752, 621);

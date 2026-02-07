@@ -74,6 +74,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,6 +90,7 @@
             // openbtn
             // 
             this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.Enabled = false;
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +121,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,10 +139,9 @@
             this.idtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idtxtbox.Location = new System.Drawing.Point(13, 104);
             this.idtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.idtxtbox.Multiline = true;
             this.idtxtbox.Name = "idtxtbox";
             this.idtxtbox.ReadOnly = true;
-            this.idtxtbox.Size = new System.Drawing.Size(114, 23);
+            this.idtxtbox.Size = new System.Drawing.Size(114, 16);
             this.idtxtbox.TabIndex = 439;
             this.idtxtbox.TextChanged += new System.EventHandler(this.idtxtbox_TextChanged);
             // 
@@ -197,7 +199,7 @@
             // banknosearch
             // 
             this.banknosearch.Image = ((System.Drawing.Image)(resources.GetObject("banknosearch.Image")));
-            this.banknosearch.Location = new System.Drawing.Point(146, 149);
+            this.banknosearch.Location = new System.Drawing.Point(146, 145);
             this.banknosearch.Margin = new System.Windows.Forms.Padding(5);
             this.banknosearch.Name = "banknosearch";
             this.banknosearch.Size = new System.Drawing.Size(40, 25);
@@ -211,9 +213,8 @@
             this.banknotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.banknotxtbox.Location = new System.Drawing.Point(13, 151);
             this.banknotxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.banknotxtbox.Multiline = true;
             this.banknotxtbox.Name = "banknotxtbox";
-            this.banknotxtbox.Size = new System.Drawing.Size(133, 23);
+            this.banknotxtbox.Size = new System.Drawing.Size(133, 16);
             this.banknotxtbox.TabIndex = 446;
             this.banknotxtbox.TextChanged += new System.EventHandler(this.banknotxtbox_TextChanged);
             this.banknotxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.banknotxtbox_KeyDown);
@@ -234,9 +235,8 @@
             this.bankaccounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bankaccounttxtbox.Location = new System.Drawing.Point(186, 151);
             this.bankaccounttxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.bankaccounttxtbox.Multiline = true;
             this.bankaccounttxtbox.Name = "bankaccounttxtbox";
-            this.bankaccounttxtbox.Size = new System.Drawing.Size(292, 23);
+            this.bankaccounttxtbox.Size = new System.Drawing.Size(292, 16);
             this.bankaccounttxtbox.TabIndex = 448;
             this.bankaccounttxtbox.TextChanged += new System.EventHandler(this.bankaccounttxtbox_TextChanged);
             // 
@@ -255,9 +255,8 @@
             this.lastchqtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastchqtxtbox.Location = new System.Drawing.Point(611, 151);
             this.lastchqtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.lastchqtxtbox.Multiline = true;
             this.lastchqtxtbox.Name = "lastchqtxtbox";
-            this.lastchqtxtbox.Size = new System.Drawing.Size(135, 23);
+            this.lastchqtxtbox.Size = new System.Drawing.Size(135, 16);
             this.lastchqtxtbox.TabIndex = 450;
             this.lastchqtxtbox.TextChanged += new System.EventHandler(this.lastchqtxtbox_TextChanged);
             this.lastchqtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lastchqtxtbox_KeyDown);
@@ -277,9 +276,8 @@
             this.firstchqtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstchqtxtbox.Location = new System.Drawing.Point(486, 151);
             this.firstchqtxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.firstchqtxtbox.Multiline = true;
             this.firstchqtxtbox.Name = "firstchqtxtbox";
-            this.firstchqtxtbox.Size = new System.Drawing.Size(122, 23);
+            this.firstchqtxtbox.Size = new System.Drawing.Size(122, 16);
             this.firstchqtxtbox.TabIndex = 452;
             this.firstchqtxtbox.TextChanged += new System.EventHandler(this.firstchqtxtbox_TextChanged);
             // 
@@ -308,9 +306,8 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(12, 484);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 21);
+            this.textBox1.Size = new System.Drawing.Size(114, 16);
             this.textBox1.TabIndex = 454;
             // 
             // Bank_Cheque

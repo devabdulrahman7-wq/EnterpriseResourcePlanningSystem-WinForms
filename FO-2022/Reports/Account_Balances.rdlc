@@ -514,7 +514,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.025in</Left>
             <Height>0.5in</Height>
-            <Width>8.00499in</Width>
+            <Width>8.00496in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -647,7 +647,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.26041in</Height>
+      <Height>0.27083in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

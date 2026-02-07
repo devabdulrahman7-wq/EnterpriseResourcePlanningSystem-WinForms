@@ -54,9 +54,8 @@
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendornametxtbox.Location = new System.Drawing.Point(321, 192);
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendornametxtbox.Multiline = true;
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(180, 27);
+            this.vendornametxtbox.Size = new System.Drawing.Size(180, 13);
             this.vendornametxtbox.TabIndex = 415;
             // 
             // vendoridtxtbox
@@ -64,19 +63,18 @@
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vendoridtxtbox.Location = new System.Drawing.Point(133, 192);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.vendoridtxtbox.Multiline = true;
             this.vendoridtxtbox.Name = "vendoridtxtbox";
-            this.vendoridtxtbox.Size = new System.Drawing.Size(142, 27);
+            this.vendoridtxtbox.Size = new System.Drawing.Size(142, 13);
             this.vendoridtxtbox.TabIndex = 414;
             this.vendoridtxtbox.TextChanged += new System.EventHandler(this.vendoridtxtbox_TextChanged);
             // 
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(275, 192);
+            this.vendoridsearch.Location = new System.Drawing.Point(279, 188);
             this.vendoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(43, 27);
+            this.vendoridsearch.Size = new System.Drawing.Size(39, 17);
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 413;
             this.vendoridsearch.TabStop = false;
@@ -198,10 +196,10 @@
             // frominvoicesearch
             // 
             this.frominvoicesearch.Image = ((System.Drawing.Image)(resources.GetObject("frominvoicesearch.Image")));
-            this.frominvoicesearch.Location = new System.Drawing.Point(275, 137);
+            this.frominvoicesearch.Location = new System.Drawing.Point(279, 133);
             this.frominvoicesearch.Margin = new System.Windows.Forms.Padding(6);
             this.frominvoicesearch.Name = "frominvoicesearch";
-            this.frominvoicesearch.Size = new System.Drawing.Size(43, 27);
+            this.frominvoicesearch.Size = new System.Drawing.Size(39, 17);
             this.frominvoicesearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.frominvoicesearch.TabIndex = 431;
             this.frominvoicesearch.TabStop = false;
@@ -212,9 +210,8 @@
             this.toinvoicetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.toinvoicetxtbox.Location = new System.Drawing.Point(322, 137);
             this.toinvoicetxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.toinvoicetxtbox.Multiline = true;
             this.toinvoicetxtbox.Name = "toinvoicetxtbox";
-            this.toinvoicetxtbox.Size = new System.Drawing.Size(179, 27);
+            this.toinvoicetxtbox.Size = new System.Drawing.Size(179, 13);
             this.toinvoicetxtbox.TabIndex = 433;
             this.toinvoicetxtbox.TextChanged += new System.EventHandler(this.toinvoicetxtbox_TextChanged);
             // 
@@ -223,9 +220,8 @@
             this.frominvoicetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.frominvoicetxtbox.Location = new System.Drawing.Point(133, 137);
             this.frominvoicetxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.frominvoicetxtbox.Multiline = true;
             this.frominvoicetxtbox.Name = "frominvoicetxtbox";
-            this.frominvoicetxtbox.Size = new System.Drawing.Size(142, 27);
+            this.frominvoicetxtbox.Size = new System.Drawing.Size(142, 13);
             this.frominvoicetxtbox.TabIndex = 434;
             this.frominvoicetxtbox.TextChanged += new System.EventHandler(this.frominvoicetxtbox_TextChanged);
             // 

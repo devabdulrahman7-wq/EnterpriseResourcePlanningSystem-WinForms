@@ -53,10 +53,10 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(99, 313);
+            this.previewbtn.Location = new System.Drawing.Point(103, 300);
             this.previewbtn.Margin = new System.Windows.Forms.Padding(4);
             this.previewbtn.Name = "previewbtn";
-            this.previewbtn.Size = new System.Drawing.Size(90, 29);
+            this.previewbtn.Size = new System.Drawing.Size(90, 25);
             this.previewbtn.TabIndex = 478;
             this.previewbtn.Text = "Preview";
             this.previewbtn.UseVisualStyleBackColor = false;
@@ -68,10 +68,10 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(196, 313);
+            this.printbtn.Location = new System.Drawing.Point(200, 300);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(90, 29);
+            this.printbtn.Size = new System.Drawing.Size(90, 25);
             this.printbtn.TabIndex = 476;
             this.printbtn.Text = "Print";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -83,10 +83,10 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(292, 313);
+            this.closebtn.Location = new System.Drawing.Point(296, 300);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(90, 29);
+            this.closebtn.Size = new System.Drawing.Size(90, 25);
             this.closebtn.TabIndex = 477;
             this.closebtn.Text = "Close";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -109,9 +109,8 @@
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmrnametxtbox.Location = new System.Drawing.Point(262, 217);
             this.cstmrnametxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
-            this.cstmrnametxtbox.Size = new System.Drawing.Size(231, 24);
+            this.cstmrnametxtbox.Size = new System.Drawing.Size(231, 16);
             this.cstmrnametxtbox.TabIndex = 474;
             // 
             // cstmridtxtbox
@@ -119,15 +118,14 @@
             this.cstmridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cstmridtxtbox.Location = new System.Drawing.Point(89, 219);
             this.cstmridtxtbox.Margin = new System.Windows.Forms.Padding(6);
-            this.cstmridtxtbox.Multiline = true;
             this.cstmridtxtbox.Name = "cstmridtxtbox";
-            this.cstmridtxtbox.Size = new System.Drawing.Size(113, 24);
+            this.cstmridtxtbox.Size = new System.Drawing.Size(113, 16);
             this.cstmridtxtbox.TabIndex = 473;
             // 
             // cstmridsearch
             // 
             this.cstmridsearch.Image = ((System.Drawing.Image)(resources.GetObject("cstmridsearch.Image")));
-            this.cstmridsearch.Location = new System.Drawing.Point(213, 219);
+            this.cstmridsearch.Location = new System.Drawing.Point(212, 213);
             this.cstmridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.cstmridsearch.Name = "cstmridsearch";
             this.cstmridsearch.Size = new System.Drawing.Size(47, 22);

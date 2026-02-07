@@ -589,11 +589,7 @@ namespace FO_2022
             // Not needed
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Not needed
-        }
-
+      
         private void slctcstmrtxtbox_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(slctcstmrtxtbox.Text))
@@ -642,75 +638,9 @@ namespace FO_2022
                 MessageBox.Show("Error searching CustomerTO data: " + ex.Message);
             }
         }
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView2.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView2.Rows[e.RowIndex];
+      
 
-                // Main form ke controls ko fill karna
-                if (row.Cells["SlabID"].Value != null)
-                {
-                    slabidtxtbox.Text = row.Cells["SlabID"].Value.ToString();
-
-                    // CurrentSlabID update karna
-                    if (int.TryParse(row.Cells["SlabID"].Value.ToString(), out int slabId))
-                    {
-                        currentSlabID = slabId;
-                    }
-                }
-
-                if (row.Cells["EntryDate"].Value != null)
-                    datepckr.Value = Convert.ToDateTime(row.Cells["EntryDate"].Value);
-
-                if (row.Cells["PartyID"].Value != null)
-                {
-                    cstmridtxtbox.Text = row.Cells["PartyID"].Value.ToString();
-                    // Automatically customer details load karna
-                    LoadCustomerDetails(cstmridtxtbox.Text.Trim());
-                }
-
-                if (row.Cells["StartDate"].Value != null)
-                    startdatetimepicker.Value = Convert.ToDateTime(row.Cells["StartDate"].Value);
-
-                if (row.Cells["EndDate"].Value != null)
-                    enddatetimepicker.Value = Convert.ToDateTime(row.Cells["EndDate"].Value);
-
-                // Saved items ko load karna
-                LoadSavedItems(currentSlabID);
-
-                // Temp table clear karna
-                tempDataTable.Clear();
-            }
-        }
-
-        private void LoadCustomerDetails(string partyID)
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@PartyID", partyID);
-
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                    {
-                        cstmrnametxtbox.Text = result.ToString();
-                    }
-                    else
-                    {
-                        cstmrnametxtbox.Clear();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading customer details: " + ex.Message);
-            }
-        }
+      
 
         private void LoadSavedItems(int slabID)
         {
@@ -778,41 +708,7 @@ namespace FO_2022
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Load selected row into form for editing
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView2.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView2.Rows[e.RowIndex];
-
-                // Fill customer fields if available
-                if (!string.IsNullOrEmpty(cstmridtxtbox.Text))
-                {
-                    cstmridtxtbox.Text = row.Cells["CustomerID"]?.Value?.ToString() ?? cstmridtxtbox.Text;
-                }
-
-                // Fill product fields
-                productidtxtbox.Text = row.Cells["ProductID"].Value?.ToString() ?? "";
-                productnametxtbox.Text = row.Cells["ProductName"].Value?.ToString() ?? "";
-
-                // Set packing combo box
-                if (row.Cells["PackingID"].Value != null)
-                {
-                    int packingId = Convert.ToInt32(row.Cells["PackingID"].Value);
-                    foreach (DataRowView item in packnamecombobox.Items)
-                    {
-                        if (Convert.ToInt32(item["PackingId"]) == packingId)
-                        {
-                            packnamecombobox.SelectedItem = item;
-                            break;
-                        }
-                    }
-                }
-
-                // Fill other fields
-                qtyptxtbox.Text = row.Cells["Qty"].Value?.ToString() ?? "0";
-                ratetxt.Text = row.Cells["Rate"].Value?.ToString() ?? "0.00";
-                disctxtbox.Text = row.Cells["Disc"].Value?.ToString() ?? "0.00";
-                disctwotxt.Text = row.Cells["Disc2"].Value?.ToString() ?? "0.00";
-            }
+            
         }
 
         private void newbtn_Click(object sender, EventArgs e)
@@ -1287,14 +1183,60 @@ namespace FO_2022
             }
         }
 
-        private void dataGridView2_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void LoadGrid1Data()
         {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT ProductID, ProductName, CompanyID, SalePrice FROM Products";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
+                // Manual column headers
+                dt.Columns["ProductID"].ColumnName = "Product ID";
+                dt.Columns["ProductName"].ColumnName = "Product Name";
+                dt.Columns["CompanyID"].ColumnName = "Company ID";
+                dt.Columns["SalePrice"].ColumnName = "Sale Price";
+
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void LoadGrid2Data()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT TOP 80000 SlabID, PartyID, StartDate, EndDate, EntryDate FROM CustomerTO";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Manual column headers
+                dt.Columns["SlabID"].ColumnName = "Slab ID";
+                dt.Columns["PartyID"].ColumnName = "Party ID";
+                dt.Columns["StartDate"].ColumnName = "Start Date";
+                dt.Columns["EndDate"].ColumnName = "End Date";
+                dt.Columns["EntryDate"].ColumnName = "Entry Date";
+
+                dataGridView2.DataSource = dt;
+            }
         }
 
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView2_CellClick(sender, e);
+        }
+
+        private void Trade_Offer_Customer_Wise_Load(object sender, EventArgs e)
+        {
+            LoadGrid1Data();
+            LoadGrid2Data();
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

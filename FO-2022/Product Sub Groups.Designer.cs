@@ -76,11 +76,12 @@
             // newbtn
             // 
             this.newbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newbtn.Enabled = false;
             this.newbtn.FlatAppearance.BorderSize = 0;
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbtn.Location = new System.Drawing.Point(65, 600);
-            this.newbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newbtn.Location = new System.Drawing.Point(77, 584);
+            this.newbtn.Margin = new System.Windows.Forms.Padding(4);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 28);
             this.newbtn.TabIndex = 311;
@@ -94,8 +95,8 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(479, 600);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Location = new System.Drawing.Point(491, 584);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 28);
             this.closebtn.TabIndex = 310;
@@ -106,11 +107,12 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(231, 600);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removebtn.Location = new System.Drawing.Point(243, 584);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 28);
             this.removebtn.TabIndex = 309;
@@ -121,11 +123,12 @@
             // editbtn
             // 
             this.editbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.editbtn.Enabled = false;
             this.editbtn.FlatAppearance.BorderSize = 0;
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editbtn.Location = new System.Drawing.Point(148, 600);
-            this.editbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editbtn.Location = new System.Drawing.Point(160, 584);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 28);
             this.editbtn.TabIndex = 308;
@@ -139,8 +142,8 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(396, 600);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearbtn.Location = new System.Drawing.Point(408, 584);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 28);
             this.clearbtn.TabIndex = 307;
@@ -151,11 +154,12 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(313, 600);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.savebtn.Location = new System.Drawing.Point(325, 584);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 28);
             this.savebtn.TabIndex = 306;
@@ -166,7 +170,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(279, 165);
+            this.dataGridView1.Location = new System.Drawing.Point(279, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(367, 415);
@@ -195,7 +199,7 @@
             // 
             this.sbgrptxtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbgrptxtbox1.Location = new System.Drawing.Point(12, 309);
-            this.sbgrptxtbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbgrptxtbox1.Margin = new System.Windows.Forms.Padding(4);
             this.sbgrptxtbox1.Name = "sbgrptxtbox1";
             this.sbgrptxtbox1.Size = new System.Drawing.Size(224, 13);
             this.sbgrptxtbox1.TabIndex = 328;
@@ -215,7 +219,7 @@
             // 
             this.prdctididsearch.Image = ((System.Drawing.Image)(resources.GetObject("prdctididsearch.Image")));
             this.prdctididsearch.Location = new System.Drawing.Point(238, 208);
-            this.prdctididsearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prdctididsearch.Margin = new System.Windows.Forms.Padding(4);
             this.prdctididsearch.Name = "prdctididsearch";
             this.prdctididsearch.Size = new System.Drawing.Size(26, 22);
             this.prdctididsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,7 +231,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 187);
+            this.label10.Location = new System.Drawing.Point(13, 190);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 16);
@@ -238,7 +242,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 238);
+            this.label9.Location = new System.Drawing.Point(13, 233);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 16);
@@ -248,10 +252,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(284, 139);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(284, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 23);
+            this.label3.Size = new System.Drawing.Size(153, 23);
             this.label3.TabIndex = 331;
             this.label3.Text = "Available Packing";
             // 

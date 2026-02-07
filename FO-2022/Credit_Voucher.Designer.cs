@@ -79,7 +79,7 @@
             this.label2.Location = new System.Drawing.Point(357, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 42);
+            this.label2.Size = new System.Drawing.Size(200, 32);
             this.label2.TabIndex = 492;
             this.label2.Text = "Credit Voucher";
             // 
@@ -88,9 +88,8 @@
             this.accountnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.accountnametxtbox.Location = new System.Drawing.Point(164, 144);
             this.accountnametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.accountnametxtbox.Multiline = true;
             this.accountnametxtbox.Name = "accountnametxtbox";
-            this.accountnametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.accountnametxtbox.Size = new System.Drawing.Size(223, 16);
             this.accountnametxtbox.TabIndex = 500;
             // 
             // accountidtxtbox
@@ -98,18 +97,17 @@
             this.accountidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.accountidtxtbox.Location = new System.Drawing.Point(12, 144);
             this.accountidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.accountidtxtbox.Multiline = true;
             this.accountidtxtbox.Name = "accountidtxtbox";
-            this.accountidtxtbox.Size = new System.Drawing.Size(104, 25);
+            this.accountidtxtbox.Size = new System.Drawing.Size(104, 16);
             this.accountidtxtbox.TabIndex = 499;
             // 
             // accountidsearch
             // 
             this.accountidsearch.Image = ((System.Drawing.Image)(resources.GetObject("accountidsearch.Image")));
-            this.accountidsearch.Location = new System.Drawing.Point(120, 144);
+            this.accountidsearch.Location = new System.Drawing.Point(117, 137);
             this.accountidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.accountidsearch.Name = "accountidsearch";
-            this.accountidsearch.Size = new System.Drawing.Size(40, 25);
+            this.accountidsearch.Size = new System.Drawing.Size(40, 23);
             this.accountidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.accountidsearch.TabIndex = 498;
             this.accountidsearch.TabStop = false;
@@ -121,7 +119,7 @@
             this.a.Location = new System.Drawing.Point(163, 123);
             this.a.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(118, 21);
+            this.a.Size = new System.Drawing.Size(89, 16);
             this.a.TabIndex = 497;
             this.a.Text = "Account Name";
             this.a.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +130,7 @@
             this.label1.Location = new System.Drawing.Point(9, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 21);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 496;
             this.label1.Text = "Account No";
             // 
@@ -141,9 +139,8 @@
             this.amounttxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.amounttxtbox.Location = new System.Drawing.Point(389, 144);
             this.amounttxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.amounttxtbox.Multiline = true;
             this.amounttxtbox.Name = "amounttxtbox";
-            this.amounttxtbox.Size = new System.Drawing.Size(113, 25);
+            this.amounttxtbox.Size = new System.Drawing.Size(113, 16);
             this.amounttxtbox.TabIndex = 503;
             this.amounttxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amounttxtbox_KeyPress);
             // 
@@ -152,9 +149,8 @@
             this.narrationtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.narrationtxtbox.Location = new System.Drawing.Point(606, 144);
             this.narrationtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.narrationtxtbox.Multiline = true;
             this.narrationtxtbox.Name = "narrationtxtbox";
-            this.narrationtxtbox.Size = new System.Drawing.Size(257, 25);
+            this.narrationtxtbox.Size = new System.Drawing.Size(257, 16);
             this.narrationtxtbox.TabIndex = 504;
             // 
             // billnotxtbox
@@ -162,9 +158,8 @@
             this.billnotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.billnotxtbox.Location = new System.Drawing.Point(504, 144);
             this.billnotxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.billnotxtbox.Multiline = true;
             this.billnotxtbox.Name = "billnotxtbox";
-            this.billnotxtbox.Size = new System.Drawing.Size(100, 25);
+            this.billnotxtbox.Size = new System.Drawing.Size(100, 16);
             this.billnotxtbox.TabIndex = 505;
             this.billnotxtbox.Click += new System.EventHandler(this.showBillsbtn_Click);
             // 
@@ -174,7 +169,7 @@
             this.label4.Location = new System.Drawing.Point(387, 123);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 506;
             this.label4.Text = "Amount";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +180,7 @@
             this.label5.Location = new System.Drawing.Point(501, 123);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
+            this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 507;
             this.label5.Text = "Bill No";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +191,7 @@
             this.label6.Location = new System.Drawing.Point(603, 123);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 21);
+            this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 508;
             this.label6.Text = "Narration";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,7 +211,7 @@
             this.label7.Location = new System.Drawing.Point(692, 433);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 21);
+            this.label7.Size = new System.Drawing.Size(89, 16);
             this.label7.TabIndex = 510;
             this.label7.Text = "Total Amount:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,6 +234,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,7 +253,7 @@
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openbtn.Location = new System.Drawing.Point(363, 477);
+            this.openbtn.Location = new System.Drawing.Point(200, 477);
             this.openbtn.Margin = new System.Windows.Forms.Padding(4);
             this.openbtn.Name = "openbtn";
             this.openbtn.Size = new System.Drawing.Size(75, 25);
@@ -272,7 +268,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(280, 477);
+            this.clearbtn.Location = new System.Drawing.Point(363, 477);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 25);
@@ -284,10 +280,11 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(197, 477);
+            this.savebtn.Location = new System.Drawing.Point(280, 477);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 25);
@@ -299,6 +296,7 @@
             // printbtn
             // 
             this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.printbtn.Enabled = false;
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,9 +326,8 @@
             this.vouchernotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vouchernotxtbox.Location = new System.Drawing.Point(12, 95);
             this.vouchernotxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.vouchernotxtbox.Multiline = true;
             this.vouchernotxtbox.Name = "vouchernotxtbox";
-            this.vouchernotxtbox.Size = new System.Drawing.Size(104, 23);
+            this.vouchernotxtbox.Size = new System.Drawing.Size(104, 16);
             this.vouchernotxtbox.TabIndex = 532;
             // 
             // label3
@@ -339,7 +336,7 @@
             this.label3.Location = new System.Drawing.Point(16, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 21);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 531;
             this.label3.Text = "Voucher No";
             // 
@@ -349,7 +346,7 @@
             this.todate.Location = new System.Drawing.Point(163, 74);
             this.todate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.todate.Name = "todate";
-            this.todate.Size = new System.Drawing.Size(111, 21);
+            this.todate.Size = new System.Drawing.Size(84, 16);
             this.todate.TabIndex = 530;
             this.todate.Text = "Voucher Date";
             // 
@@ -359,12 +356,12 @@
             this.voucherdatepcker.Location = new System.Drawing.Point(166, 95);
             this.voucherdatepcker.Margin = new System.Windows.Forms.Padding(5);
             this.voucherdatepcker.Name = "voucherdatepcker";
-            this.voucherdatepcker.Size = new System.Drawing.Size(132, 27);
+            this.voucherdatepcker.Size = new System.Drawing.Size(132, 23);
             this.voucherdatepcker.TabIndex = 529;
             // 
             // Credit_Voucher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(872, 542);

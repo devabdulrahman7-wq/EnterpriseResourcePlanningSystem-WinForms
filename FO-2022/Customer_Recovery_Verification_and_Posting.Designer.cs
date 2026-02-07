@@ -85,7 +85,7 @@
             this.label2.Location = new System.Drawing.Point(336, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 42);
+            this.label2.Size = new System.Drawing.Size(283, 32);
             this.label2.TabIndex = 522;
             this.label2.Text = "Customer Verification";
             // 
@@ -138,7 +138,7 @@
             this.Column1.HeaderText = "Rec ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 67;
+            this.Column1.Width = 53;
             // 
             // Column2
             // 
@@ -146,7 +146,7 @@
             this.Column2.HeaderText = "Party ID";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 92;
+            this.Column2.Width = 61;
             // 
             // Column3
             // 
@@ -154,7 +154,7 @@
             this.Column3.HeaderText = "Customer Name";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 145;
+            this.Column3.Width = 114;
             // 
             // Column5
             // 
@@ -162,7 +162,7 @@
             this.Column5.HeaderText = "Vendor Name";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 128;
+            this.Column5.Width = 101;
             // 
             // Column4
             // 
@@ -170,7 +170,7 @@
             this.Column4.HeaderText = "Amount";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 97;
+            this.Column4.Width = 76;
             // 
             // textBox1
             // 
@@ -180,7 +180,8 @@
             this.textBox1.Location = new System.Drawing.Point(12, 105);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 23);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(456, 19);
             this.textBox1.TabIndex = 650;
             this.textBox1.Text = "                Available Un-Posted Recoveries";
             // 
@@ -192,7 +193,8 @@
             this.textBox2.Location = new System.Drawing.Point(516, 105);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(448, 23);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(448, 19);
             this.textBox2.TabIndex = 654;
             this.textBox2.Text = "                Available Posted Recoveries";
             // 
@@ -201,7 +203,7 @@
             this.fromdatepcker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromdatepcker.Location = new System.Drawing.Point(12, 77);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(128, 27);
+            this.fromdatepcker.Size = new System.Drawing.Size(128, 23);
             this.fromdatepcker.TabIndex = 657;
             // 
             // saledatelbl
@@ -211,7 +213,7 @@
             this.saledatelbl.Location = new System.Drawing.Point(9, 58);
             this.saledatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saledatelbl.Name = "saledatelbl";
-            this.saledatelbl.Size = new System.Drawing.Size(89, 21);
+            this.saledatelbl.Size = new System.Drawing.Size(67, 16);
             this.saledatelbl.TabIndex = 656;
             this.saledatelbl.Text = "From Date";
             // 
@@ -233,6 +235,7 @@
             // clearbtn
             // 
             this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.Enabled = false;
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,10 +246,12 @@
             this.clearbtn.TabIndex = 659;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,10 +262,12 @@
             this.savebtn.TabIndex = 658;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,7 +300,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Rec ID";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 67;
+            this.dataGridViewTextBoxColumn1.Width = 53;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -301,7 +308,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Party ID";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 92;
+            this.dataGridViewTextBoxColumn2.Width = 61;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -309,7 +316,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Customer Name";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 145;
+            this.dataGridViewTextBoxColumn3.Width = 114;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -317,7 +324,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Vendor Name";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 128;
+            this.dataGridViewTextBoxColumn4.Width = 101;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -325,11 +332,12 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 97;
+            this.dataGridViewTextBoxColumn5.Width = 76;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,6 +348,7 @@
             this.button2.TabIndex = 663;
             this.button2.Text = "Report Preview";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -348,7 +357,7 @@
             this.label1.Location = new System.Drawing.Point(195, 434);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 21);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 664;
             this.label1.Text = "Pre_Recovery Value:";
             // 
@@ -359,7 +368,7 @@
             this.label3.Location = new System.Drawing.Point(672, 434);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 21);
+            this.label3.Size = new System.Drawing.Size(139, 16);
             this.label3.TabIndex = 665;
             this.label3.Text = "Actual Recovery Value:";
             // 
@@ -386,6 +395,7 @@
             // savepostedbtn
             // 
             this.savepostedbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savepostedbtn.Enabled = false;
             this.savepostedbtn.FlatAppearance.BorderSize = 0;
             this.savepostedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savepostedbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -419,7 +429,7 @@
             // 
             // Customer_Recovery_Verification_and_Posting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(975, 583);

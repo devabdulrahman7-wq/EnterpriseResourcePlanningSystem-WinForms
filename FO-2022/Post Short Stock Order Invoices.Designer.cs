@@ -48,6 +48,7 @@
             this.totalnetsalestxtbox = new System.Windows.Forms.TextBox();
             this.noofsalestxtbox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.searchdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,9 +72,9 @@
             this.orderdatelbl.Location = new System.Drawing.Point(48, 99);
             this.orderdatelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderdatelbl.Name = "orderdatelbl";
-            this.orderdatelbl.Size = new System.Drawing.Size(144, 16);
+            this.orderdatelbl.Size = new System.Drawing.Size(33, 16);
             this.orderdatelbl.TabIndex = 389;
-            this.orderdatelbl.Text = "Date (Year/Month/Date)";
+            this.orderdatelbl.Text = "Date";
             // 
             // datepcker
             // 
@@ -101,6 +102,7 @@
             // postsalebtn
             // 
             this.postsalebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.postsalebtn.Enabled = false;
             this.postsalebtn.FlatAppearance.BorderSize = 0;
             this.postsalebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.postsalebtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,6 +117,7 @@
             // slctbtn
             // 
             this.slctbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.slctbtn.Enabled = false;
             this.slctbtn.FlatAppearance.BorderSize = 0;
             this.slctbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.slctbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,9 +132,9 @@
             // searchdate
             // 
             this.searchdate.Image = ((System.Drawing.Image)(resources.GetObject("searchdate.Image")));
-            this.searchdate.Location = new System.Drawing.Point(211, 110);
+            this.searchdate.Location = new System.Drawing.Point(211, 118);
             this.searchdate.Name = "searchdate";
-            this.searchdate.Size = new System.Drawing.Size(43, 31);
+            this.searchdate.Size = new System.Drawing.Size(46, 23);
             this.searchdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchdate.TabIndex = 399;
             this.searchdate.TabStop = false;
@@ -221,6 +224,7 @@
             // totalnetsalestxtbox
             // 
             this.totalnetsalestxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalnetsalestxtbox.Enabled = false;
             this.totalnetsalestxtbox.Location = new System.Drawing.Point(686, 532);
             this.totalnetsalestxtbox.Multiline = true;
             this.totalnetsalestxtbox.Name = "totalnetsalestxtbox";
@@ -231,6 +235,7 @@
             // noofsalestxtbox
             // 
             this.noofsalestxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.noofsalestxtbox.Enabled = false;
             this.noofsalestxtbox.Location = new System.Drawing.Point(133, 532);
             this.noofsalestxtbox.Multiline = true;
             this.noofsalestxtbox.Name = "noofsalestxtbox";
@@ -249,12 +254,25 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(569, 79);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(204, 16);
+            this.label4.TabIndex = 557;
+            this.label4.Text = "Note: This action can not be undo.";
+            // 
             // Post_Short_Stock_Order_Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(814, 653);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.noofsalestxtbox);
             this.Controls.Add(this.totalnetsalestxtbox);
@@ -304,5 +322,6 @@
         private System.Windows.Forms.TextBox totalnetsalestxtbox;
         private System.Windows.Forms.TextBox noofsalestxtbox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
     }
 }

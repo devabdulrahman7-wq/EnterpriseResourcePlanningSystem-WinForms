@@ -115,9 +115,8 @@
             this.salesmannametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmannametxtbox.Location = new System.Drawing.Point(337, 232);
             this.salesmannametxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmannametxtbox.Multiline = true;
             this.salesmannametxtbox.Name = "salesmannametxtbox";
-            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 25);
+            this.salesmannametxtbox.Size = new System.Drawing.Size(223, 16);
             this.salesmannametxtbox.TabIndex = 398;
             // 
             // salesmanidtxtbox
@@ -125,18 +124,17 @@
             this.salesmanidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesmanidtxtbox.Location = new System.Drawing.Point(176, 232);
             this.salesmanidtxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.salesmanidtxtbox.Multiline = true;
             this.salesmanidtxtbox.Name = "salesmanidtxtbox";
-            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 25);
+            this.salesmanidtxtbox.Size = new System.Drawing.Size(111, 16);
             this.salesmanidtxtbox.TabIndex = 397;
             // 
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(291, 232);
+            this.salesmanidsearch.Location = new System.Drawing.Point(293, 223);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.salesmanidsearch.Name = "salesmanidsearch";
-            this.salesmanidsearch.Size = new System.Drawing.Size(40, 25);
+            this.salesmanidsearch.Size = new System.Drawing.Size(37, 25);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 396;
             this.salesmanidsearch.TabStop = false;
@@ -210,9 +208,8 @@
             this.commissiontxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.commissiontxtbox.Location = new System.Drawing.Point(174, 304);
             this.commissiontxtbox.Margin = new System.Windows.Forms.Padding(5);
-            this.commissiontxtbox.Multiline = true;
             this.commissiontxtbox.Name = "commissiontxtbox";
-            this.commissiontxtbox.Size = new System.Drawing.Size(223, 25);
+            this.commissiontxtbox.Size = new System.Drawing.Size(223, 16);
             this.commissiontxtbox.TabIndex = 403;
             // 
             // label1
