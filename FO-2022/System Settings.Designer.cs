@@ -153,6 +153,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(597, 218);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 149);
@@ -192,6 +193,7 @@
             // cmpnynametxtbox
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cmpnynametxtbox.Enabled = false;
             this.cmpnynametxtbox.Location = new System.Drawing.Point(191, 167);
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(360, 16);
@@ -202,6 +204,7 @@
             // phonenotxtbox
             // 
             this.phonenotxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.phonenotxtbox.Enabled = false;
             this.phonenotxtbox.Location = new System.Drawing.Point(413, 255);
             this.phonenotxtbox.Name = "phonenotxtbox";
             this.phonenotxtbox.Size = new System.Drawing.Size(138, 16);
@@ -212,6 +215,7 @@
             // phonetxtbox
             // 
             this.phonetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.phonetxtbox.Enabled = false;
             this.phonetxtbox.Location = new System.Drawing.Point(191, 255);
             this.phonetxtbox.Name = "phonetxtbox";
             this.phonetxtbox.Size = new System.Drawing.Size(153, 16);
@@ -222,6 +226,7 @@
             // addresstxtbox
             // 
             this.addresstxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addresstxtbox.Enabled = false;
             this.addresstxtbox.Location = new System.Drawing.Point(191, 210);
             this.addresstxtbox.Name = "addresstxtbox";
             this.addresstxtbox.Size = new System.Drawing.Size(360, 16);
@@ -232,6 +237,7 @@
             // faxtxtbox
             // 
             this.faxtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.faxtxtbox.Enabled = false;
             this.faxtxtbox.Location = new System.Drawing.Point(413, 297);
             this.faxtxtbox.Name = "faxtxtbox";
             this.faxtxtbox.Size = new System.Drawing.Size(138, 16);
@@ -242,6 +248,7 @@
             // wwwtxtbox
             // 
             this.wwwtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wwwtxtbox.Enabled = false;
             this.wwwtxtbox.Location = new System.Drawing.Point(191, 384);
             this.wwwtxtbox.Name = "wwwtxtbox";
             this.wwwtxtbox.Size = new System.Drawing.Size(360, 16);
@@ -252,6 +259,7 @@
             // emailtxtbox
             // 
             this.emailtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailtxtbox.Enabled = false;
             this.emailtxtbox.Location = new System.Drawing.Point(191, 342);
             this.emailtxtbox.Name = "emailtxtbox";
             this.emailtxtbox.Size = new System.Drawing.Size(360, 16);
@@ -262,6 +270,7 @@
             // mbltxtbox
             // 
             this.mbltxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mbltxtbox.Enabled = false;
             this.mbltxtbox.Location = new System.Drawing.Point(191, 297);
             this.mbltxtbox.Name = "mbltxtbox";
             this.mbltxtbox.Size = new System.Drawing.Size(153, 16);
@@ -315,6 +324,7 @@
             this.configurationbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.configurationbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.configurationbtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.configurationbtn.Enabled = false;
             this.configurationbtn.FlatAppearance.BorderSize = 0;
             this.configurationbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.configurationbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -330,6 +340,7 @@
             this.dellosoftsetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dellosoftsetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dellosoftsetting.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dellosoftsetting.Enabled = false;
             this.dellosoftsetting.FlatAppearance.BorderSize = 0;
             this.dellosoftsetting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dellosoftsetting.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,6 +357,7 @@
             this.cmpnyinformationbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.cmpnyinformationbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cmpnyinformationbtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmpnyinformationbtn.Enabled = false;
             this.cmpnyinformationbtn.FlatAppearance.BorderSize = 0;
             this.cmpnyinformationbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmpnyinformationbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

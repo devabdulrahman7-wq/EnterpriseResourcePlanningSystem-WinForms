@@ -89,6 +89,7 @@
             // retypepasswordtxtbox
             // 
             this.retypepasswordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.retypepasswordtxtbox.Enabled = false;
             this.retypepasswordtxtbox.Location = new System.Drawing.Point(399, 270);
             this.retypepasswordtxtbox.Name = "retypepasswordtxtbox";
             this.retypepasswordtxtbox.Size = new System.Drawing.Size(238, 16);
@@ -108,6 +109,7 @@
             // passwordtxtbox
             // 
             this.passwordtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordtxtbox.Enabled = false;
             this.passwordtxtbox.Location = new System.Drawing.Point(399, 223);
             this.passwordtxtbox.Name = "passwordtxtbox";
             this.passwordtxtbox.Size = new System.Drawing.Size(238, 16);
@@ -127,6 +129,7 @@
             // usernametxtbox
             // 
             this.usernametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usernametxtbox.Enabled = false;
             this.usernametxtbox.Location = new System.Drawing.Point(399, 176);
             this.usernametxtbox.Name = "usernametxtbox";
             this.usernametxtbox.Size = new System.Drawing.Size(238, 16);
@@ -209,6 +212,7 @@
             // administratorbtn
             // 
             this.administratorbtn.AutoSize = true;
+            this.administratorbtn.Enabled = false;
             this.administratorbtn.Location = new System.Drawing.Point(28, 56);
             this.administratorbtn.Name = "administratorbtn";
             this.administratorbtn.Size = new System.Drawing.Size(106, 20);
@@ -220,6 +224,7 @@
             // standarduserbtn
             // 
             this.standarduserbtn.AutoSize = true;
+            this.standarduserbtn.Enabled = false;
             this.standarduserbtn.Location = new System.Drawing.Point(27, 22);
             this.standarduserbtn.Name = "standarduserbtn";
             this.standarduserbtn.Size = new System.Drawing.Size(107, 20);
@@ -271,9 +276,10 @@
             this.textBox2.Location = new System.Drawing.Point(13, 87);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(344, 19);
             this.textBox2.TabIndex = 664;
-            this.textBox2.Text = "      List  of Un-Closed Dates";
+            this.textBox2.Text = "                         Users";
             // 
             // Create_New_Users
             // 

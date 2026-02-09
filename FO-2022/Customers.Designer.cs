@@ -169,7 +169,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(307, 19);
             this.textBox1.TabIndex = 442;
-            this.textBox1.Text = "                Available Towns";
+            this.textBox1.Text = "                         Available ";
             // 
             // label4
             // 

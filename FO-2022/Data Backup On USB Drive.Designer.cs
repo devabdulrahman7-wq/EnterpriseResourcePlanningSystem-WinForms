@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Backup_On_USB_Drive));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.date = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.backupdatetxtbox = new System.Windows.Forms.TextBox();
+            this.backuptimetxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.backupfiletxtbox = new System.Windows.Forms.TextBox();
+            this.usbbackupfiletxtbox = new System.Windows.Forms.TextBox();
             this.filesearch = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.backuppasswordtxtbox = new System.Windows.Forms.TextBox();
@@ -57,21 +57,23 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // date
+            // backupdatetxtbox
             // 
-            this.date.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.date.Location = new System.Drawing.Point(148, 132);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(123, 16);
-            this.date.TabIndex = 426;
+            this.backupdatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backupdatetxtbox.Location = new System.Drawing.Point(148, 132);
+            this.backupdatetxtbox.Name = "backupdatetxtbox";
+            this.backupdatetxtbox.ReadOnly = true;
+            this.backupdatetxtbox.Size = new System.Drawing.Size(123, 16);
+            this.backupdatetxtbox.TabIndex = 426;
             // 
-            // textBox2
+            // backuptimetxtbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(288, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 16);
-            this.textBox2.TabIndex = 425;
+            this.backuptimetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backuptimetxtbox.Location = new System.Drawing.Point(288, 132);
+            this.backuptimetxtbox.Name = "backuptimetxtbox";
+            this.backuptimetxtbox.ReadOnly = true;
+            this.backuptimetxtbox.Size = new System.Drawing.Size(120, 16);
+            this.backuptimetxtbox.TabIndex = 425;
             // 
             // label4
             // 
@@ -106,13 +108,14 @@
             this.label2.TabIndex = 422;
             this.label2.Text = "USB Backup File Path";
             // 
-            // backupfiletxtbox
+            // usbbackupfiletxtbox
             // 
-            this.backupfiletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.backupfiletxtbox.Location = new System.Drawing.Point(148, 185);
-            this.backupfiletxtbox.Name = "backupfiletxtbox";
-            this.backupfiletxtbox.Size = new System.Drawing.Size(307, 16);
-            this.backupfiletxtbox.TabIndex = 421;
+            this.usbbackupfiletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usbbackupfiletxtbox.Location = new System.Drawing.Point(148, 185);
+            this.usbbackupfiletxtbox.Name = "usbbackupfiletxtbox";
+            this.usbbackupfiletxtbox.Size = new System.Drawing.Size(307, 16);
+            this.usbbackupfiletxtbox.TabIndex = 421;
+            this.usbbackupfiletxtbox.TextChanged += new System.EventHandler(this.usbbackupfiletxtbox_TextChanged);
             // 
             // filesearch
             // 
@@ -123,6 +126,7 @@
             this.filesearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.filesearch.TabIndex = 420;
             this.filesearch.TabStop = false;
+            this.filesearch.Click += new System.EventHandler(this.filesearch_Click);
             // 
             // label6
             // 
@@ -134,6 +138,7 @@
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 419;
             this.label6.Text = "Backup Password";
+            this.label6.Visible = false;
             // 
             // backuppasswordtxtbox
             // 
@@ -142,6 +147,8 @@
             this.backuppasswordtxtbox.Name = "backuppasswordtxtbox";
             this.backuppasswordtxtbox.Size = new System.Drawing.Size(307, 16);
             this.backuppasswordtxtbox.TabIndex = 418;
+            this.backuppasswordtxtbox.Visible = false;
+            this.backuppasswordtxtbox.TextChanged += new System.EventHandler(this.backuppasswordtxtbox_TextChanged);
             // 
             // label1
             // 
@@ -170,7 +177,6 @@
             // backupbtn
             // 
             this.backupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.backupbtn.Enabled = false;
             this.backupbtn.FlatAppearance.BorderSize = 0;
             this.backupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backupbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +186,7 @@
             this.backupbtn.TabIndex = 415;
             this.backupbtn.Text = "Backup";
             this.backupbtn.UseVisualStyleBackColor = false;
+            this.backupbtn.Click += new System.EventHandler(this.backupbtn_Click);
             // 
             // Data_Backup_On_USB_Drive
             // 
@@ -188,12 +195,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(604, 377);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.backupdatetxtbox);
+            this.Controls.Add(this.backuptimetxtbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.backupfiletxtbox);
+            this.Controls.Add(this.usbbackupfiletxtbox);
             this.Controls.Add(this.filesearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.backuppasswordtxtbox);
@@ -207,6 +214,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data_Backup_On_USB_Drive";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Data_Backup_On_USB_Drive_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filesearch)).EndInit();
             this.ResumeLayout(false);
@@ -217,12 +225,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox date;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox backupdatetxtbox;
+        private System.Windows.Forms.TextBox backuptimetxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox backupfiletxtbox;
+        private System.Windows.Forms.TextBox usbbackupfiletxtbox;
         private System.Windows.Forms.PictureBox filesearch;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox backuppasswordtxtbox;

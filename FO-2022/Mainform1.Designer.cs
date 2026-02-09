@@ -1715,6 +1715,7 @@
             // toolStripSplitButton6
             // 
             this.toolStripSplitButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton6.Enabled = false;
             this.toolStripSplitButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton6.Image")));
             this.toolStripSplitButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton6.Name = "toolStripSplitButton6";
@@ -1837,6 +1838,7 @@
             this.updateDatabaseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.updateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.updateDatabaseToolStripMenuItem.Text = "Update Database";
+            this.updateDatabaseToolStripMenuItem.Visible = false;
             this.updateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.updateDatabaseToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem

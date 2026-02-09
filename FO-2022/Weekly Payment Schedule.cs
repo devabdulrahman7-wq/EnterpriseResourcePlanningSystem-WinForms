@@ -44,6 +44,7 @@ namespace FO_2022
 
         private void LoadGridData()
         {
+            
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM WeeklyPaymentSchedule";

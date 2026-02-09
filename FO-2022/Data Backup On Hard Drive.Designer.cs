@@ -35,12 +35,12 @@
             this.filesearch = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.backuppasswordtxtbox = new System.Windows.Forms.TextBox();
-            this.backupfiletxtbox = new System.Windows.Forms.TextBox();
+            this.harddrivebackupfiletxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.date = new System.Windows.Forms.TextBox();
+            this.backuptimetxtbox = new System.Windows.Forms.TextBox();
+            this.backupdatetxtbox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.filesearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,7 +63,6 @@
             // backupbtn
             // 
             this.backupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.backupbtn.Enabled = false;
             this.backupbtn.FlatAppearance.BorderSize = 0;
             this.backupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backupbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +72,7 @@
             this.backupbtn.TabIndex = 402;
             this.backupbtn.Text = "Backup";
             this.backupbtn.UseVisualStyleBackColor = false;
+            this.backupbtn.Click += new System.EventHandler(this.backupbtn_Click);
             // 
             // label1
             // 
@@ -93,6 +93,7 @@
             this.filesearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.filesearch.TabIndex = 407;
             this.filesearch.TabStop = false;
+            this.filesearch.Click += new System.EventHandler(this.filesearch_Click);
             // 
             // label6
             // 
@@ -104,6 +105,7 @@
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 406;
             this.label6.Text = "Backup Password";
+            this.label6.Visible = false;
             // 
             // backuppasswordtxtbox
             // 
@@ -112,14 +114,17 @@
             this.backuppasswordtxtbox.Name = "backuppasswordtxtbox";
             this.backuppasswordtxtbox.Size = new System.Drawing.Size(307, 16);
             this.backuppasswordtxtbox.TabIndex = 405;
+            this.backuppasswordtxtbox.Visible = false;
+            this.backuppasswordtxtbox.TextChanged += new System.EventHandler(this.backuppasswordtxtbox_TextChanged);
             // 
-            // backupfiletxtbox
+            // harddrivebackupfiletxtbox
             // 
-            this.backupfiletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.backupfiletxtbox.Location = new System.Drawing.Point(165, 186);
-            this.backupfiletxtbox.Name = "backupfiletxtbox";
-            this.backupfiletxtbox.Size = new System.Drawing.Size(307, 16);
-            this.backupfiletxtbox.TabIndex = 408;
+            this.harddrivebackupfiletxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.harddrivebackupfiletxtbox.Location = new System.Drawing.Point(165, 186);
+            this.harddrivebackupfiletxtbox.Name = "harddrivebackupfiletxtbox";
+            this.harddrivebackupfiletxtbox.Size = new System.Drawing.Size(307, 16);
+            this.harddrivebackupfiletxtbox.TabIndex = 408;
+            this.harddrivebackupfiletxtbox.TextChanged += new System.EventHandler(this.harddrivebackupfiletxtbox_TextChanged);
             // 
             // label2
             // 
@@ -154,21 +159,25 @@
             this.label4.TabIndex = 411;
             this.label4.Text = "Backup Date";
             // 
-            // textBox2
+            // backuptimetxtbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(305, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 16);
-            this.textBox2.TabIndex = 412;
+            this.backuptimetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backuptimetxtbox.Location = new System.Drawing.Point(305, 133);
+            this.backuptimetxtbox.Name = "backuptimetxtbox";
+            this.backuptimetxtbox.ReadOnly = true;
+            this.backuptimetxtbox.Size = new System.Drawing.Size(120, 16);
+            this.backuptimetxtbox.TabIndex = 412;
+            this.backuptimetxtbox.TextChanged += new System.EventHandler(this.backuptimetxtbox_TextChanged);
             // 
-            // date
+            // backupdatetxtbox
             // 
-            this.date.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.date.Location = new System.Drawing.Point(165, 133);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(123, 16);
-            this.date.TabIndex = 413;
+            this.backupdatetxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backupdatetxtbox.Location = new System.Drawing.Point(165, 133);
+            this.backupdatetxtbox.Name = "backupdatetxtbox";
+            this.backupdatetxtbox.ReadOnly = true;
+            this.backupdatetxtbox.Size = new System.Drawing.Size(123, 16);
+            this.backupdatetxtbox.TabIndex = 413;
+            this.backupdatetxtbox.TextChanged += new System.EventHandler(this.backupdatetxtbox_TextChanged);
             // 
             // pictureBox2
             // 
@@ -188,19 +197,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(615, 373);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.backupdatetxtbox);
+            this.Controls.Add(this.backuptimetxtbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.backupfiletxtbox);
+            this.Controls.Add(this.harddrivebackupfiletxtbox);
             this.Controls.Add(this.filesearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.backuppasswordtxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.backupbtn);
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -224,12 +232,12 @@
         private System.Windows.Forms.PictureBox filesearch;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox backuppasswordtxtbox;
-        private System.Windows.Forms.TextBox backupfiletxtbox;
+        private System.Windows.Forms.TextBox harddrivebackupfiletxtbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox date;
+        private System.Windows.Forms.TextBox backuptimetxtbox;
+        private System.Windows.Forms.TextBox backupdatetxtbox;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

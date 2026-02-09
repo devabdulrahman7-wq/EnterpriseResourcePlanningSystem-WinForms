@@ -74,6 +74,7 @@
             // clearbtn
             // 
             this.clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.clearbtn.Enabled = false;
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,9 +122,10 @@
             this.textBox1.Location = new System.Drawing.Point(52, 130);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(610, 19);
             this.textBox1.TabIndex = 669;
-            this.textBox1.Text = "                                              Available Towns";
+            this.textBox1.Text = "                                              Available Accounts";
             // 
             // dataGridView1
             // 
@@ -161,7 +163,6 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.savebtn);
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
