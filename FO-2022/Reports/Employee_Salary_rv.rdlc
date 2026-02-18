@@ -378,7 +378,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.1007in</Left>
             <Height>0.5in</Height>
-            <Width>7.79388in</Width>
+            <Width>7.7939in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -389,7 +389,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.50917in</Height>
-        <Width>7.89458in</Width>
+        <Width>7.8946in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -405,7 +405,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.89458in</Width>
+  <Width>7.8946in</Width>
   <Page>
     <PageHeader>
       <Height>0.51042in</Height>
@@ -531,7 +531,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0in</Top>
           <Left>1.61112in</Left>
           <Height>0.20486in</Height>
           <Width>0.5625in</Width>
@@ -561,7 +560,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
           <Left>0.72223in</Left>
           <Height>0.25in</Height>
           <Width>0.83333in</Width>

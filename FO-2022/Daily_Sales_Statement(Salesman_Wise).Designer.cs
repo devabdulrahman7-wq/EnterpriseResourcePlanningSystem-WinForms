@@ -114,10 +114,10 @@
             // salesmanidsearch
             // 
             this.salesmanidsearch.Image = ((System.Drawing.Image)(resources.GetObject("salesmanidsearch.Image")));
-            this.salesmanidsearch.Location = new System.Drawing.Point(258, 240);
+            this.salesmanidsearch.Location = new System.Drawing.Point(262, 246);
             this.salesmanidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.salesmanidsearch.Name = "salesmanidsearch";
-            this.salesmanidsearch.Size = new System.Drawing.Size(40, 25);
+            this.salesmanidsearch.Size = new System.Drawing.Size(40, 19);
             this.salesmanidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salesmanidsearch.TabIndex = 421;
             this.salesmanidsearch.TabStop = false;

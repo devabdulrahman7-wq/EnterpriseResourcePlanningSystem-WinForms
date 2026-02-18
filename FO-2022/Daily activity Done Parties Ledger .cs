@@ -46,8 +46,7 @@ namespace FO_2022
             todaydatetimepicker.Enabled = true;
 
             // Disable buttons initially
-            previewbtn.Enabled = false;
-            printbtn.Enabled = false;
+          
 
             // Set focus to party ID textbox
             partyidtxtbox.Focus();
@@ -99,17 +98,19 @@ namespace FO_2022
         {
             // Clear party name and disable buttons when ID changes
             partynametxtbox.Text = "";
-            previewbtn.Enabled = false;
-            printbtn.Enabled = false;
         }
 
         // ========== MAIN METHODS ==========
 
         private void SearchParty()
         {
-            if (string.IsNullOrWhiteSpace(partyidtxtbox.Text))
+            string partyID = partyidtxtbox.Text.Trim();
+            string partyName = partynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(partyID) && string.IsNullOrEmpty(partyName))
             {
-                MessageBox.Show("Please enter Party ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Party ID or Party Name",
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 partyidtxtbox.Focus();
                 return;
             }
@@ -119,29 +120,37 @@ namespace FO_2022
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
+
+                    string query = @"SELECT TOP 1 PartyID, PartyName
+                             FROM Parties
+                             WHERE PartyID LIKE @PartyID + '%'
+                                OR PartyName LIKE @PartyName + '%'
+                             ORDER BY PartyName";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@PartyID", partyidtxtbox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@PartyID",
+                            string.IsNullOrEmpty(partyID) ? "" : partyID);
+
+                        cmd.Parameters.AddWithValue("@PartyName",
+                            string.IsNullOrEmpty(partyName) ? "" : partyName);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
+                                partyidtxtbox.Text = reader["PartyID"].ToString();
                                 partynametxtbox.Text = reader["PartyName"].ToString();
-                                previewbtn.Enabled = true;
-                                printbtn.Enabled = true;
                                 previewbtn.Focus();
                             }
                             else
                             {
-                                MessageBox.Show("Party ID not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                partynametxtbox.Text = "";
-                                previewbtn.Enabled = false;
-                                printbtn.Enabled = false;
+                                MessageBox.Show("Party not found!",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                partyidtxtbox.Clear();
+                                partynametxtbox.Clear();
                                 partyidtxtbox.Focus();
-                                partyidtxtbox.SelectAll();
                             }
                         }
                     }
@@ -149,9 +158,11 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void ShowReport(bool printMode)
         {
@@ -534,8 +545,6 @@ namespace FO_2022
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.TopMost = true;
-            //this.TopMost = true;
-
             // From Date Label
             Label lblFrom = new Label
             {

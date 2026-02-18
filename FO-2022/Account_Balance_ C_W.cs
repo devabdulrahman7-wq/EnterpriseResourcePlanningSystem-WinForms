@@ -93,41 +93,7 @@ namespace FO_2022
         private void closebtn_Click(object sender, EventArgs e) => this.Close();
         private void pictureBox4_Click(object sender, EventArgs e) => this.Close();
 
-        private void cmpnyidsearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string companyId = cmpnyidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(companyId))
-                {
-                    MessageBox.Show("Please enter Company ID.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DataTable companyInfo = GetCompanyInfo(companyId);
-                if (companyInfo.Rows.Count > 0)
-                {
-                    cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
-                    LoadSectors(companyId); // Load sectors for this company
-                    //MessageBox.Show("Company found.", "Success",
-                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    cmpnynametxtbox.Clear();
-                    MessageBox.Show("Company not found.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private DataTable GetCompanyInfo(string companyId)
+        private DataTable GetCompanyInfoById(string companyId)
         {
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -139,6 +105,68 @@ namespace FO_2022
                 da.Fill(dt);
             }
             return dt;
+        }
+
+        private DataTable GetCompanyInfoByName(string companyName)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT CompanyID, CompanyName FROM Companies WHERE CompanyName = @CompanyName";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@CompanyName", companyName);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
+        private void cmpnyidsearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string companyIdText = cmpnyidtxtbox.Text.Trim();
+                string companyNameText = cmpnynametxtbox.Text.Trim();
+
+                if (string.IsNullOrEmpty(companyIdText) && string.IsNullOrEmpty(companyNameText))
+                {
+                    MessageBox.Show("Please enter Company ID or Company Name.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DataTable companyInfo;
+
+                if (!string.IsNullOrEmpty(companyIdText))
+                {
+                    companyInfo = GetCompanyInfoById(companyIdText);
+                }
+                else
+                {
+                    companyInfo = GetCompanyInfoByName(companyNameText);
+                }
+
+                if (companyInfo.Rows.Count > 0)
+                {
+                    cmpnyidtxtbox.Text = companyInfo.Rows[0]["CompanyID"].ToString();
+                    cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
+
+                    // Load sectors using confirmed CompanyID
+                    LoadSectors(cmpnyidtxtbox.Text);
+                }
+                else
+                {
+                    cmpnyidtxtbox.Clear();
+                    cmpnynametxtbox.Clear();
+
+                    MessageBox.Show("Company not found.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -73,9 +73,8 @@ namespace FO_2022
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
-        {
-           
-              Sale_Register_1_ srr=new Sale_Register_1_();
+        {    
+              Party_Detailed_Ledger_Combine srr=new Party_Detailed_Ledger_Combine();
             srr.Show();
         }
 
@@ -307,7 +306,7 @@ namespace FO_2022
 
         private void townsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Town_List t = new Town_List();
+            Towns t = new Towns();
             t.Show();
             //this.Hide();
         }
@@ -530,7 +529,7 @@ namespace FO_2022
         }
         private void partyDetailedLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Party_Deatail_Ledger pdl = new Party_Deatail_Ledger();
+            Party_List_Detailed_1 pdl = new Party_List_Detailed_1();
             pdl.Show();
             //this.Hide();
         }
@@ -738,10 +737,7 @@ namespace FO_2022
 
         private void logoutlbl_Click(object sender, EventArgs e)
         {
-            Mainform1 mm = new Mainform1();
-            this.Hide();
-            Login lg = new Login();
-            lg.Show();
+          Application.Exit();
 
         }
 
@@ -923,8 +919,8 @@ namespace FO_2022
 
         private void saleReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          Sale_Reutrn_Register srr = new Sale_Reutrn_Register();
-            srr.Show();
+            Sales_Register_Company_Wise sr = new Sales_Register_Company_Wise();
+            sr.Show();
         }
 
         private void saleReturnSummaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -935,8 +931,8 @@ namespace FO_2022
 
         private void productSaleReturnLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Peoduct_Sale_Return_Ledger srn = new Peoduct_Sale_Return_Ledger();
-            srn.Show();
+                Product_Sale_Ledger  pss=new Product_Sale_Ledger();
+                    pss.Show();
         }
 
         private void salesmanSummaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1103,7 +1099,7 @@ namespace FO_2022
         {
             //Product_Wise_Purchase an = new Product_Wise_Purchase();
             //an.Show();
-        }
+            }
 
         private void purchaseReturnRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1179,8 +1175,8 @@ namespace FO_2022
 
         private void salesmanPartiesListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Party_List_Detailed pi = new Party_List_Detailed();
-            pi.Show();
+            Party_Detailed_Ledger_Combine party_Detailed_Ledger_Combine = new Party_Detailed_Ledger_Combine();
+            party_Detailed_Ledger_Combine.Show();
         }
 
         private void townsListToolStripMenuItem_Click(object sender, EventArgs e)

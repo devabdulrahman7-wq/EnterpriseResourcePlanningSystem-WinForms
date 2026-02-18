@@ -29,33 +29,74 @@ namespace FO_2022
 
         private void townidsearch_Click(object sender, EventArgs e)
         {
+            string townIdText = townidtxtbox.Text.Trim();
+            string townNameText = townnametxtbox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(townIdText) && string.IsNullOrWhiteSpace(townNameText))
+            {
+                MessageBox.Show("Please enter Town ID or Town Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                townidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                string townId = townidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(townId) || !int.TryParse(townId, out int townIdNum))
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    MessageBox.Show("Please enter valid Town ID.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    cmd.Connection = conn;
 
-                DataTable townInfo = GetTownInfo(townIdNum);
-                if (townInfo.Rows.Count > 0)
-                {
-                    townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    LoadSectorsByTown(townIdNum);
-                }
-                else
-                {
-                    townnametxtbox.Clear();
-                    MessageBox.Show("Town not found.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (!string.IsNullOrWhiteSpace(townIdText))
+                    {
+                        if (!int.TryParse(townIdText, out int townId))
+                        {
+                            MessageBox.Show("Town ID must be numeric.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            townidtxtbox.Focus();
+                            return;
+                        }
+
+                        cmd.CommandText = "SELECT TownID, TownName FROM Towns WHERE TownID = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.Int).Value = townId;
+                    }
+                    else
+                    {
+                        cmd.CommandText = "SELECT TownID, TownName FROM Towns WHERE TownName = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.VarChar).Value = townNameText;
+                    }
+
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int foundTownId = Convert.ToInt32(reader["TownID"]);
+
+                            townidtxtbox.Text = foundTownId.ToString();
+                            townnametxtbox.Text = reader["TownName"].ToString();
+
+                            // Always clear sectors before loading
+                            LoadSectorsByTown(foundTownId);
+                        }
+                        else
+                        {
+                            townidtxtbox.Clear();
+                            townnametxtbox.Clear();
+
+                            MessageBox.Show("Town not found.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            townidtxtbox.Focus();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

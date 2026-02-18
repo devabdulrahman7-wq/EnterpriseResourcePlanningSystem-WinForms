@@ -71,7 +71,7 @@
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(279, 188);
+            this.vendoridsearch.Location = new System.Drawing.Point(279, 190);
             this.vendoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.vendoridsearch.Name = "vendoridsearch";
             this.vendoridsearch.Size = new System.Drawing.Size(39, 17);
@@ -196,7 +196,7 @@
             // frominvoicesearch
             // 
             this.frominvoicesearch.Image = ((System.Drawing.Image)(resources.GetObject("frominvoicesearch.Image")));
-            this.frominvoicesearch.Location = new System.Drawing.Point(279, 133);
+            this.frominvoicesearch.Location = new System.Drawing.Point(279, 135);
             this.frominvoicesearch.Margin = new System.Windows.Forms.Padding(6);
             this.frominvoicesearch.Name = "frominvoicesearch";
             this.frominvoicesearch.Size = new System.Drawing.Size(39, 17);

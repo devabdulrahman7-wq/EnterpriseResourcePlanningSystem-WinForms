@@ -161,85 +161,107 @@ namespace FO_2022
         {
 
         }
-    }
 
-    // Simple Date Range Dialog Class
-    public class SimpleDateRangeDialog : Form
-    {
-        public DateTime FromDate { get; private set; }
-        public DateTime ToDate { get; private set; }
-
-        private DateTimePicker dtpFrom;
-        private DateTimePicker dtpTo;
-
-        public SimpleDateRangeDialog()
+        private void daterangebtnradio_CheckedChanged_1(object sender, EventArgs e)
         {
-            InitializeComponent();
+            if (daterangebtnradio.Checked)   // jab radio button select ho
+            {
+                using (SimpleDateRangeDialog dlg = new SimpleDateRangeDialog())
+                {
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        DateTime from = dlg.FromDate;
+                        DateTime to = dlg.ToDate;
+
+                        // Yahan apna kaam karo
+                        MessageBox.Show("From: " + from.ToShortDateString() +
+                                        "\nTo: " + to.ToShortDateString());
+
+                    }
+                }
+            }
         }
 
-        private void InitializeComponent()
+
+        // Simple Date Range Dialog Class
+        public class SimpleDateRangeDialog : Form
         {
-            this.Text = "Select Date Range";
-            this.Size = new System.Drawing.Size(300, 180);
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.StartPosition = FormStartPosition.CenterParent;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.TopMost = true;
-            // From Date
-            Label lblFrom = new Label();
-            lblFrom.Text = "From Date:";
-            lblFrom.Location = new System.Drawing.Point(20, 20);
-            lblFrom.Size = new System.Drawing.Size(70, 20);
+            public DateTime FromDate { get; private set; }
+            public DateTime ToDate { get; private set; }
 
-            dtpFrom = new DateTimePicker();
-            dtpFrom.Format = DateTimePickerFormat.Short;
-            dtpFrom.Location = new System.Drawing.Point(100, 20);
-            dtpFrom.Size = new System.Drawing.Size(150, 20);
-            dtpFrom.Value = DateTime.Now.AddMonths(-1);
+            private DateTimePicker dtpFrom;
+            private DateTimePicker dtpTo;
 
-            // To Date
-            Label lblTo = new Label();
-            lblTo.Text = "To Date:";
-            lblTo.Location = new System.Drawing.Point(20, 60);
-            lblTo.Size = new System.Drawing.Size(70, 20);
-
-            dtpTo = new DateTimePicker();
-            dtpTo.Format = DateTimePickerFormat.Short;
-            dtpTo.Location = new System.Drawing.Point(100, 60);
-            dtpTo.Size = new System.Drawing.Size(150, 20);
-            dtpTo.Value = DateTime.Now;
-
-            // Buttons
-            Button btnOK = new Button();
-            btnOK.Text = "OK";
-            btnOK.Location = new System.Drawing.Point(80, 100);
-            btnOK.Size = new System.Drawing.Size(80, 30);
-            btnOK.Click += (s, e) =>
+            public SimpleDateRangeDialog()
             {
-                FromDate = dtpFrom.Value;
-                ToDate = dtpTo.Value;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            };
+                InitializeComponent();
+            }
 
-            Button btnCancel = new Button();
-            btnCancel.Text = "Cancel";
-            btnCancel.Location = new System.Drawing.Point(170, 100);
-            btnCancel.Size = new System.Drawing.Size(80, 30);
-            btnCancel.Click += (s, e) =>
+            private void InitializeComponent()
             {
-                this.DialogResult = DialogResult.Cancel;
-                this.Close();
-            };
+                this.Text = "Select Date Range";
+                this.Size = new System.Drawing.Size(300, 180);
+                this.FormBorderStyle = FormBorderStyle.FixedDialog;
+                this.StartPosition = FormStartPosition.CenterParent;
+                this.MaximizeBox = false;
+                this.MinimizeBox = false;
+                this.TopMost = true;
 
-            // Add controls
-            this.Controls.Add(lblFrom);
-            this.Controls.Add(dtpFrom);
-            this.Controls.Add(lblTo);
-            this.Controls.Add(dtpTo);
-            this.Controls.Add(btnOK);
-            this.Controls.Add(btnCancel);
+                // From Date
+                Label lblFrom = new Label();
+                lblFrom.Text = "From Date:";
+                lblFrom.Location = new System.Drawing.Point(20, 20);
+                lblFrom.Size = new System.Drawing.Size(70, 20);
+
+                dtpFrom = new DateTimePicker();
+                dtpFrom.Format = DateTimePickerFormat.Short;
+                dtpFrom.Location = new System.Drawing.Point(100, 20);
+                dtpFrom.Size = new System.Drawing.Size(150, 20);
+                dtpFrom.Value = DateTime.Now.AddMonths(-1);
+
+                // To Date
+                Label lblTo = new Label();
+                lblTo.Text = "To Date:";
+                lblTo.Location = new System.Drawing.Point(20, 60);
+                lblTo.Size = new System.Drawing.Size(70, 20);
+
+                dtpTo = new DateTimePicker();
+                dtpTo.Format = DateTimePickerFormat.Short;
+                dtpTo.Location = new System.Drawing.Point(100, 60);
+                dtpTo.Size = new System.Drawing.Size(150, 20);
+                dtpTo.Value = DateTime.Now;
+
+                // Buttons
+                Button btnOK = new Button();
+                btnOK.Text = "OK";
+                btnOK.Location = new System.Drawing.Point(80, 100);
+                btnOK.Size = new System.Drawing.Size(80, 30);
+                btnOK.Click += (s, e) =>
+                {
+                    FromDate = dtpFrom.Value;
+                    ToDate = dtpTo.Value;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                };
+
+                Button btnCancel = new Button();
+                btnCancel.Text = "Cancel";
+                btnCancel.Location = new System.Drawing.Point(170, 100);
+                btnCancel.Size = new System.Drawing.Size(80, 30);
+                btnCancel.Click += (s, e) =>
+                {
+                    this.DialogResult = DialogResult.Cancel;
+                    this.Close();
+                };
+
+                // Add controls
+                this.Controls.Add(lblFrom);
+                this.Controls.Add(dtpFrom);
+                this.Controls.Add(lblTo);
+                this.Controls.Add(dtpTo);
+                this.Controls.Add(btnOK);
+                this.Controls.Add(btnCancel);
+            }
         }
     }
 }

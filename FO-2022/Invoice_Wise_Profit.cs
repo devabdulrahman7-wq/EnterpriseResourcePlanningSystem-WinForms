@@ -36,11 +36,12 @@ namespace FO_2022
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
             string customerId = cstmridtxtbox.Text.Trim();
+            string customerName = cstmrnametxtbox.Text.Trim();
 
-            if (string.IsNullOrEmpty(customerId))
+            if (string.IsNullOrEmpty(customerId) && string.IsNullOrEmpty(customerName))
             {
-                MessageBox.Show("Please enter Customer ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cstmridtxtbox.Focus();
+                MessageBox.Show("Please enter Customer ID or Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -48,27 +49,54 @@ namespace FO_2022
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @CustomerID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@CustomerID", customerId);
-
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
 
-                    if (result != null)
+                    string query;
+
+                    if (!string.IsNullOrEmpty(customerId))
                     {
-                        cstmrnametxtbox.Text = result.ToString();
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyID = @Value 
+                          AND PartyType = 'C'";
                     }
                     else
                     {
-                        MessageBox.Show("Customer not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        cstmrnametxtbox.Clear();
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyName = @Value 
+                          AND PartyType = 'C'";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(customerId) ? customerId : customerName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                cstmridtxtbox.Text = reader["PartyID"].ToString();
+                                cstmrnametxtbox.Text = reader["PartyName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Customer not found!",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                cstmridtxtbox.Clear();
+                                cstmrnametxtbox.Clear();
+                                cstmridtxtbox.Focus();
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error searching customer: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,17 +138,14 @@ namespace FO_2022
                 MessageBox.Show("Error generating report: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void printbtn_Click(object sender, EventArgs e)
         {
             previewbtn_Click(sender, e);
         }
-
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private DataTable GetInvoiceWiseProfitData()
         {
             DataTable dt = new DataTable();

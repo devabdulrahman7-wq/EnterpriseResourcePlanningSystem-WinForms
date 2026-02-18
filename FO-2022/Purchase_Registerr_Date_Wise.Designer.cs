@@ -106,14 +106,14 @@
             this.fromdatepcker.Location = new System.Drawing.Point(113, 116);
             this.fromdatepcker.Margin = new System.Windows.Forms.Padding(6);
             this.fromdatepcker.Name = "fromdatepcker";
-            this.fromdatepcker.Size = new System.Drawing.Size(160, 23);
+            this.fromdatepcker.Size = new System.Drawing.Size(141, 23);
             this.fromdatepcker.TabIndex = 393;
             // 
             // ShowOnlyPendingRatePurchasechkbox
             // 
             this.ShowOnlyPendingRatePurchasechkbox.AutoSize = true;
             this.ShowOnlyPendingRatePurchasechkbox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowOnlyPendingRatePurchasechkbox.Location = new System.Drawing.Point(113, 219);
+            this.ShowOnlyPendingRatePurchasechkbox.Location = new System.Drawing.Point(119, 237);
             this.ShowOnlyPendingRatePurchasechkbox.Margin = new System.Windows.Forms.Padding(4);
             this.ShowOnlyPendingRatePurchasechkbox.Name = "ShowOnlyPendingRatePurchasechkbox";
             this.ShowOnlyPendingRatePurchasechkbox.Size = new System.Drawing.Size(231, 20);
@@ -124,16 +124,16 @@
             // vendornametxtbox
             // 
             this.vendornametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendornametxtbox.Location = new System.Drawing.Point(301, 173);
+            this.vendornametxtbox.Location = new System.Drawing.Point(302, 188);
             this.vendornametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.vendornametxtbox.Name = "vendornametxtbox";
-            this.vendornametxtbox.Size = new System.Drawing.Size(239, 16);
+            this.vendornametxtbox.Size = new System.Drawing.Size(228, 16);
             this.vendornametxtbox.TabIndex = 404;
             // 
             // vendoridtxtbox
             // 
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendoridtxtbox.Location = new System.Drawing.Point(113, 173);
+            this.vendoridtxtbox.Location = new System.Drawing.Point(114, 188);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(138, 16);
@@ -143,10 +143,10 @@
             // vendoridsearch
             // 
             this.vendoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("vendoridsearch.Image")));
-            this.vendoridsearch.Location = new System.Drawing.Point(255, 173);
+            this.vendoridsearch.Location = new System.Drawing.Point(256, 182);
             this.vendoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.vendoridsearch.Name = "vendoridsearch";
-            this.vendoridsearch.Size = new System.Drawing.Size(43, 27);
+            this.vendoridsearch.Size = new System.Drawing.Size(43, 22);
             this.vendoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vendoridsearch.TabIndex = 402;
             this.vendoridsearch.TabStop = false;
@@ -156,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 151);
+            this.label5.Location = new System.Drawing.Point(301, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 16);
@@ -168,7 +168,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(110, 151);
+            this.label6.Location = new System.Drawing.Point(112, 171);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);

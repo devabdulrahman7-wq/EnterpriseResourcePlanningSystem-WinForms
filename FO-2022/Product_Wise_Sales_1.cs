@@ -74,85 +74,134 @@ namespace FO_2022
 
         private void salesmanidsearch_Click(object sender, EventArgs e)
         {
+            string salesmanId = salesmanidtxtbox.Text.Trim();
+            string salesmanName = salesmannametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(salesmanId) && string.IsNullOrEmpty(salesmanName))
+            {
+                MessageBox.Show("Please enter Salesman ID or Name",
+                    "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(salesmanidtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Salesman ID", "Input Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID";
+                    conn.Open();
+
+                    string query;
+
+                    if (!string.IsNullOrEmpty(salesmanId))
+                    {
+                        query = @"SELECT SalesmanID, SalesmanName 
+                          FROM Salesmen 
+                          WHERE SalesmanID = @Value";
+                    }
+                    else
+                    {
+                        query = @"SELECT SalesmanID, SalesmanName 
+                          FROM Salesmen 
+                          WHERE SalesmanName = @Value";
+                    }
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(salesmanId) ? salesmanId : salesmanName);
 
-                        if (result != null)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            salesmannametxtbox.Text = result.ToString();
-                            selectedSalesmanId = salesmanidtxtbox.Text.Trim();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Salesman ID not found", "Not Found",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            salesmannametxtbox.Clear();
-                            selectedSalesmanId = "";
+                            if (reader.Read())
+                            {
+                                salesmanidtxtbox.Text = reader["SalesmanID"].ToString();
+                                salesmannametxtbox.Text = reader["SalesmanName"].ToString();
+                                selectedSalesmanId = reader["SalesmanID"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Salesman not found",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                salesmanidtxtbox.Clear();
+                                salesmannametxtbox.Clear();
+                                selectedSalesmanId = "";
+                                salesmanidtxtbox.Focus();
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void cmpnyidsearch_Click(object sender, EventArgs e)
         {
+            string companyId = cmpnyidtxtbox.Text.Trim();
+            string companyName = cmpnynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(companyId) && string.IsNullOrEmpty(companyName))
+            {
+                MessageBox.Show("Please enter Company ID or Name",
+                    "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(cmpnyidtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Company ID", "Input Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT CompanyName FROM Companies WHERE CompanyID = @CompanyID";
+                    conn.Open();
+
+                    string query;
+
+                    if (!string.IsNullOrEmpty(companyId))
+                    {
+                        query = @"SELECT CompanyID, CompanyName 
+                          FROM Companies 
+                          WHERE CompanyID = @Value";
+                    }
+                    else
+                    {
+                        query = @"SELECT CompanyID, CompanyName 
+                          FROM Companies 
+                          WHERE CompanyName = @Value";
+                    }
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@CompanyID", cmpnyidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(companyId) ? companyId : companyName);
 
-                        if (result != null)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            cmpnynametxtbox.Text = result.ToString();
-                            selectedCompanyId = cmpnyidtxtbox.Text.Trim();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Company ID not found", "Not Found",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            cmpnynametxtbox.Clear();
-                            selectedCompanyId = "";
+                            if (reader.Read())
+                            {
+                                cmpnyidtxtbox.Text = reader["CompanyID"].ToString();
+                                cmpnynametxtbox.Text = reader["CompanyName"].ToString();
+                                selectedCompanyId = reader["CompanyID"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Company not found",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                cmpnyidtxtbox.Clear();
+                                cmpnynametxtbox.Clear();
+                                selectedCompanyId = "";
+                                cmpnyidtxtbox.Focus();
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

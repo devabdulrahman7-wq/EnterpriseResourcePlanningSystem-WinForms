@@ -17,10 +17,16 @@ namespace FO_2022
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
+        private string selectedCustomerId = "";
+        private string selectedSalesmanId = "";
+        private string selectedSectorId = "";
+        private string selectedTownId = "";
+
         public Sales_Summary_Product_Wise()
         {
             InitializeComponent();
         }
+
         private void Sales_Summary_Product_Wise_Load(object sender, EventArgs e)
         {
             fromdatepcker.Value = DateTime.Now.AddMonths(-1);
@@ -37,31 +43,44 @@ namespace FO_2022
             this.Close();
         }
 
+        // ================= SEARCH BUTTONS =================
+
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Parties", "PartyName", cstmridtxtbox.Text.Trim(), cstmrnametxtbox, "PartyID");
+            SearchEntity("Parties", "PartyID", "PartyName",
+                cstmridtxtbox, cstmrnametxtbox, ref selectedCustomerId);
         }
 
         private void salesmanidsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Salesmen", "SalesmanName", salesmanidtxtbox.Text.Trim(), salesmannametxtbox, "SalesmanID");
+            SearchEntity("Salesmen", "SalesmanID", "SalesmanName",
+                salesmanidtxtbox, salesmannametxtbox, ref selectedSalesmanId);
         }
 
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Sectors", "SectorName", sectoridtxtbox.Text.Trim(), sectornametxtbox, "SectorID");
+            SearchEntity("Sectors", "SectorID", "SectorName",
+                sectoridtxtbox, sectornametxtbox, ref selectedSectorId);
         }
 
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Towns", "TownName", townidtxtbox.Text.Trim(), townnametxtbox, "TownID");
+            SearchEntity("Towns", "TownID", "TownName",
+                townidtxtbox, townnametxtbox, ref selectedTownId);
         }
 
-        private void SearchEntity(string tableName, string nameColumn, string id, TextBox nameTextBox, string idColumn)
+        // ================= GENERIC SEARCH METHOD =================
+
+        private void SearchEntity(string tableName, string idColumn, string nameColumn,
+            TextBox idTextBox, TextBox nameTextBox, ref string selectedId)
         {
-            if (string.IsNullOrEmpty(id))
+            string id = idTextBox.Text.Trim();
+            string name = nameTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(id) && string.IsNullOrEmpty(name))
             {
-                MessageBox.Show($"Please enter ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter ID or Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -69,29 +88,53 @@ namespace FO_2022
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = $"SELECT {nameColumn} FROM {tableName} WHERE {idColumn} = @ID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@ID", id);
-
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
 
-                    if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(id))
                     {
-                        nameTextBox.Text = result.ToString();
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {idColumn} = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", id);
                     }
                     else
                     {
-                        MessageBox.Show($"Entity not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        nameTextBox.Clear();
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {nameColumn} = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", name);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            idTextBox.Text = reader[idColumn].ToString();
+                            nameTextBox.Text = reader[nameColumn].ToString();
+                            selectedId = reader[idColumn].ToString();
+                        }
+                        else
+                        {
+                            idTextBox.Clear();
+                            nameTextBox.Clear();
+                            selectedId = "";
+
+                            MessageBox.Show("Record not found",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // ================= PREVIEW =================
 
         private void previewbtn_Click(object sender, EventArgs e)
         {
@@ -99,22 +142,25 @@ namespace FO_2022
             {
                 if (fromdatepcker.Value > todatepcker.Value)
                 {
-                    MessageBox.Show("From date cannot be greater than To date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("From date cannot be greater than To date",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Validate sale ID range
                 if (!string.IsNullOrEmpty(fromsaletxtbox.Text) && !string.IsNullOrEmpty(tosaletxtbox.Text))
                 {
-                    if (!int.TryParse(fromsaletxtbox.Text, out int fromSale) || !int.TryParse(tosaletxtbox.Text, out int toSale))
+                    if (!int.TryParse(fromsaletxtbox.Text, out int fromSale) ||
+                        !int.TryParse(tosaletxtbox.Text, out int toSale))
                     {
-                        MessageBox.Show("Please enter valid numeric Sale IDs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please enter valid numeric Sale IDs",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
                     if (fromSale > toSale)
                     {
-                        MessageBox.Show("From Sale ID cannot be greater than To Sale ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("From Sale ID cannot be greater than To Sale ID",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -123,29 +169,21 @@ namespace FO_2022
 
                 if (salesData.Rows.Count == 0)
                 {
-                    MessageBox.Show("No sales data found for selected criteria", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No sales data found for selected criteria",
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>();
                 dataSources.Add("DataSet1", salesData);
 
-                Dictionary<string, string> parameters = new Dictionary<string, string>();
-                //parameters.Add("ReportTitle", "Sales Summary Product Wise Report");
-                //parameters.Add("GeneratedDate", DateTime.Now.ToString("dd-MMM-yyyy HH:mm"));
-                //parameters.Add("FromDate", fromdatepcker.Value.ToString("dd-MMM-yyyy"));
-                //parameters.Add("ToDate", todatepcker.Value.ToString("dd-MMM-yyyy"));
-                //parameters.Add("CustomerName", cstmrnametxtbox.Text);
-                //parameters.Add("SalesmanName", salesmannametxtbox.Text);
-                //parameters.Add("SectorName", sectornametxtbox.Text);
-                //parameters.Add("TownName", townnametxtbox.Text);
-
                 Report_viewer reportViewer = new Report_viewer();
                 reportViewer.ShowReport("Sales_Summary_Product_Wise", dataSources);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error generating report: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error generating report: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -153,6 +191,8 @@ namespace FO_2022
         {
             previewbtn_Click(sender, e);
         }
+
+        // ================= DATA METHOD =================
 
         private DataTable GetProductWiseSalesData()
         {
@@ -163,6 +203,7 @@ namespace FO_2022
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     StringBuilder query = new StringBuilder();
+
                     query.AppendLine("SELECT ");
                     query.AppendLine("    P.ProductID,");
                     query.AppendLine("    P.ProductName,");
@@ -188,17 +229,16 @@ namespace FO_2022
                     query.AppendLine("LEFT JOIN Towns T ON SEC.TownID = T.TownID");
                     query.AppendLine("WHERE S.SaleDate BETWEEN @FromDate AND @ToDate");
 
-                    // Add filters
-                    if (!string.IsNullOrEmpty(cstmridtxtbox.Text))
+                    if (!string.IsNullOrEmpty(selectedCustomerId))
                         query.AppendLine("AND S.CustomerId = @CustomerID");
 
-                    if (!string.IsNullOrEmpty(salesmanidtxtbox.Text))
+                    if (!string.IsNullOrEmpty(selectedSalesmanId))
                         query.AppendLine("AND S.SalesmanId = @SalesmanID");
 
-                    if (!string.IsNullOrEmpty(sectoridtxtbox.Text))
+                    if (!string.IsNullOrEmpty(selectedSectorId))
                         query.AppendLine("AND SEC.SectorID = @SectorID");
 
-                    if (!string.IsNullOrEmpty(townidtxtbox.Text))
+                    if (!string.IsNullOrEmpty(selectedTownId))
                         query.AppendLine("AND T.TownID = @TownID");
 
                     if (!string.IsNullOrEmpty(fromsaletxtbox.Text) && !string.IsNullOrEmpty(tosaletxtbox.Text))
@@ -208,26 +248,21 @@ namespace FO_2022
                     query.AppendLine("ORDER BY C.CompanyName, PG.GroupName, P.ProductName");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conn);
+
                     cmd.Parameters.AddWithValue("@FromDate", fromdatepcker.Value);
                     cmd.Parameters.AddWithValue("@ToDate", todatepcker.Value);
 
-                    if (!string.IsNullOrEmpty(cstmridtxtbox.Text))
-                        cmd.Parameters.AddWithValue("@CustomerID", cstmridtxtbox.Text);
+                    if (!string.IsNullOrEmpty(selectedCustomerId))
+                        cmd.Parameters.AddWithValue("@CustomerID", selectedCustomerId);
 
-                    if (!string.IsNullOrEmpty(salesmanidtxtbox.Text))
-                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanidtxtbox.Text);
+                    if (!string.IsNullOrEmpty(selectedSalesmanId))
+                        cmd.Parameters.AddWithValue("@SalesmanID", selectedSalesmanId);
 
-                    if (!string.IsNullOrEmpty(sectoridtxtbox.Text))
-                    {
-                        if (int.TryParse(sectoridtxtbox.Text, out int sectorId))
-                            cmd.Parameters.AddWithValue("@SectorID", sectorId);
-                    }
+                    if (!string.IsNullOrEmpty(selectedSectorId))
+                        cmd.Parameters.AddWithValue("@SectorID", selectedSectorId);
 
-                    if (!string.IsNullOrEmpty(townidtxtbox.Text))
-                    {
-                        if (int.TryParse(townidtxtbox.Text, out int townId))
-                            cmd.Parameters.AddWithValue("@TownID", townId);
-                    }
+                    if (!string.IsNullOrEmpty(selectedTownId))
+                        cmd.Parameters.AddWithValue("@TownID", selectedTownId);
 
                     if (!string.IsNullOrEmpty(fromsaletxtbox.Text) && !string.IsNullOrEmpty(tosaletxtbox.Text))
                     {
@@ -245,6 +280,30 @@ namespace FO_2022
             }
 
             return dt;
+        }
+
+        private void cstmridtxtbox_TextChanged_1(object sender, EventArgs e)
+        {
+            cstmrnametxtbox.Clear();
+            selectedCustomerId = "";
+        }
+
+        private void salesmanidtxtbox_TextChanged_1(object sender, EventArgs e)
+        {
+            salesmannametxtbox.Clear();
+            selectedSalesmanId = "";
+        }
+
+        private void townidtxtbox_TextChanged_1(object sender, EventArgs e)
+        {
+            townnametxtbox.Clear();
+            selectedTownId = "";
+        }
+
+        private void sectoridtxtbox_TextChanged_1(object sender, EventArgs e)
+        {
+            sectornametxtbox.Clear();
+            selectedSectorId = "";
         }
     }
 }

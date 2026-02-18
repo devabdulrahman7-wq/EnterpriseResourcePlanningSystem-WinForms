@@ -755,7 +755,6 @@
             this.Controls.Add(this.nametxtbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

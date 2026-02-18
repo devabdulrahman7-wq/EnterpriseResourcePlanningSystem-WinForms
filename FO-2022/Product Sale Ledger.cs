@@ -47,32 +47,62 @@ namespace FO_2022
 
         private void searchproductid_Click(object sender, EventArgs e)
         {
+            string productID = productidtxtbox.Text.Trim();
+            string productName = productnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(productID) && string.IsNullOrEmpty(productName))
+            {
+                MessageBox.Show("Please enter Product ID or Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                productidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                string productId = productidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(productId))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Please enter Product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    conn.Open();
 
-                DataTable productInfo = GetProductInfo(productId);
-                if (productInfo.Rows.Count > 0)
-                {
-                    productnametxtbox.Text = productInfo.Rows[0]["ProductName"].ToString();
-                    MessageBox.Show("Product found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    productnametxtbox.Clear();
-                    MessageBox.Show("Product not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string query;
+
+                    if (!string.IsNullOrEmpty(productID))
+                        query = "SELECT ProductID, ProductName FROM Products WHERE ProductID = @Value";
+                    else
+                        query = "SELECT ProductID, ProductName FROM Products WHERE ProductName = @Value";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(productID) ? productID : productName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                productidtxtbox.Text = reader["ProductID"].ToString();
+                                productnametxtbox.Text = reader["ProductName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Product not found.",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                productidtxtbox.Clear();
+                                productnametxtbox.Clear();
+                                productidtxtbox.Focus();
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private DataTable GetProductInfo(string productId)
         {

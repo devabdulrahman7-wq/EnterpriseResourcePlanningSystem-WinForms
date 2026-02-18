@@ -35,29 +35,42 @@ namespace FO_2022
 
         private void cmpnyidsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Companies", "CompanyName", cmpnyidtxtbox.Text.Trim(), cmpnynametxtbox, "CompanyID");
+            SearchEntity("Companies", "CompanyID", "CompanyName",
+                cmpnyidtxtbox, cmpnynametxtbox);
         }
 
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Parties", "PartyName", cstmridtxtbox.Text.Trim(), cstmrnametxtbox, "PartyID");
+            SearchEntity("Parties", "PartyID", "PartyName",
+                cstmridtxtbox, cstmrnametxtbox);
         }
 
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Sectors", "SectorName", sectoridtxtbox.Text.Trim(), sectornametxtbox, "SectorID");
+            SearchEntity("Sectors", "SectorID", "SectorName",
+                sectoridtxtbox, sectornametxtbox);
         }
 
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Towns", "TownName", townidtxtbox.Text.Trim(), townnametxtbox, "TownID");
+            SearchEntity("Towns", "TownID", "TownName",
+                townidtxtbox, townnametxtbox);
         }
 
-        private void SearchEntity(string tableName, string nameColumn, string id, TextBox nameTextBox, string idColumn)
+        private void SearchEntity(string tableName,
+                                  string idColumn,
+                                  string nameColumn,
+                                  TextBox idTextBox,
+                                  TextBox nameTextBox)
         {
-            if (string.IsNullOrEmpty(id))
+            string idValue = idTextBox.Text.Trim();
+            string nameValue = nameTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(idValue) && string.IsNullOrEmpty(nameValue))
             {
-                MessageBox.Show($"Please enter ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter ID or Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                idTextBox.Focus();
                 return;
             }
 
@@ -65,29 +78,47 @@ namespace FO_2022
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = $"SELECT {nameColumn} FROM {tableName} WHERE {idColumn} = @ID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@ID", id);
-
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
 
-                    if (result != null)
-                    {
-                        nameTextBox.Text = result.ToString();
-                    }
+                    string query;
+
+                    if (!string.IsNullOrEmpty(idValue))
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {idColumn} = @Value";
                     else
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {nameColumn} = @Value";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        MessageBox.Show($"Entity not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        nameTextBox.Clear();
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(idValue) ? idValue : nameValue);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idTextBox.Text = reader[idColumn].ToString();
+                                nameTextBox.Text = reader[nameColumn].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Record not found",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                idTextBox.Clear();
+                                nameTextBox.Clear();
+                                idTextBox.Focus();
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void previewbtn_Click(object sender, EventArgs e)
         {

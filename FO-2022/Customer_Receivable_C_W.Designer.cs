@@ -183,10 +183,10 @@
             // cmpnyidsearch
             // 
             this.cmpnyidsearch.Image = ((System.Drawing.Image)(resources.GetObject("cmpnyidsearch.Image")));
-            this.cmpnyidsearch.Location = new System.Drawing.Point(227, 128);
+            this.cmpnyidsearch.Location = new System.Drawing.Point(230, 135);
             this.cmpnyidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.cmpnyidsearch.Name = "cmpnyidsearch";
-            this.cmpnyidsearch.Size = new System.Drawing.Size(40, 25);
+            this.cmpnyidsearch.Size = new System.Drawing.Size(40, 19);
             this.cmpnyidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmpnyidsearch.TabIndex = 398;
             this.cmpnyidsearch.TabStop = false;
@@ -206,7 +206,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(115, 116);
+            this.label8.Location = new System.Drawing.Point(115, 117);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 16);
@@ -236,10 +236,10 @@
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(227, 193);
+            this.townidsearch.Location = new System.Drawing.Point(231, 200);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.townidsearch.Name = "townidsearch";
-            this.townidsearch.Size = new System.Drawing.Size(40, 25);
+            this.townidsearch.Size = new System.Drawing.Size(40, 19);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 411;
             this.townidsearch.TabStop = false;
@@ -248,7 +248,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(274, 181);
+            this.label3.Location = new System.Drawing.Point(275, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
@@ -259,7 +259,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 181);
+            this.label4.Location = new System.Drawing.Point(115, 183);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);

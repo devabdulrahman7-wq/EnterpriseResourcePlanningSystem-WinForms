@@ -23,11 +23,9 @@ namespace FO_2022
         {
             try
             {
-                // Set default dates
                 fromdatepcker.Value = DateTime.Today.AddMonths(-1);
                 todatepcker.Value = DateTime.Today;
 
-                // Clear initial text
                 cstmrnametxtbox.Clear();
                 salesmannametxtbox.Clear();
                 townnametxtbox.Clear();
@@ -42,35 +40,29 @@ namespace FO_2022
         // CUSTOMER SEARCH
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cstmridtxtbox.Text))
+            string customerId = cstmridtxtbox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(customerId))
             {
                 MessageBox.Show("Please enter Customer ID.", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cstmridtxtbox.Focus();
                 return;
             }
 
             try
             {
-                string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand("SELECT PartyName FROM Parties WHERE PartyID = @CustomerID", conn))
                 {
+                    cmd.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = customerId;
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        cstmrnametxtbox.Text = result.ToString();
+                    else
                     {
-                        cmd.Parameters.AddWithValue("@PartyID", cstmridtxtbox.Text.Trim());
-
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
-                        {
-                            cstmrnametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            cstmrnametxtbox.Clear();
-                            MessageBox.Show("Customer not found.", "Info",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        cstmrnametxtbox.Clear();
+                        MessageBox.Show("Customer not found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -83,45 +75,36 @@ namespace FO_2022
 
         private void cstmridtxtbox_TextChanged(object sender, EventArgs e)
         {
-            // Clear name when ID changes
             if (string.IsNullOrWhiteSpace(cstmridtxtbox.Text))
-            {
                 cstmrnametxtbox.Clear();
-            }
         }
 
         // SALESMAN SEARCH
         private void salesmanidsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(salesmanidtxtbox.Text))
+            string salesmanId = salesmanidtxtbox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(salesmanId))
             {
                 MessageBox.Show("Please enter Salesman ID.", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                salesmanidtxtbox.Focus();
                 return;
             }
 
             try
             {
-                string query = "SELECT SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID";
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand("SELECT SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID", conn))
                 {
+                    cmd.Parameters.Add("@SalesmanID", SqlDbType.VarChar).Value = salesmanId;
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        salesmannametxtbox.Text = result.ToString();
+                    else
                     {
-                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanidtxtbox.Text.Trim());
-
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
-                        {
-                            salesmannametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            salesmannametxtbox.Clear();
-                            MessageBox.Show("Salesman not found.", "Info",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        salesmannametxtbox.Clear();
+                        MessageBox.Show("Salesman not found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -134,42 +117,64 @@ namespace FO_2022
 
         private void salesmanidtxtbox_TextChanged(object sender, EventArgs e)
         {
-            // Clear name when ID changes
             if (string.IsNullOrWhiteSpace(salesmanidtxtbox.Text))
-            {
                 salesmannametxtbox.Clear();
-            }
         }
+
+        // TOWN SEARCH (ID or Name)
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(townidtxtbox.Text))
+            string townIdText = townidtxtbox.Text.Trim();
+            string townNameText = townnametxtbox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(townIdText) && string.IsNullOrWhiteSpace(townNameText))
             {
-                MessageBox.Show("Please enter Town ID.", "Warning",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Town ID or Town Name.", "Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                townidtxtbox.Focus();
                 return;
             }
 
             try
             {
-                string query = "SELECT TownName FROM Towns WHERE TownID = @TownID";
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@TownID", townidtxtbox.Text.Trim());
+                    cmd.Connection = conn;
 
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
+                    if (!string.IsNullOrWhiteSpace(townIdText))
+                    {
+                        if (!int.TryParse(townIdText, out int townId))
                         {
-                            townnametxtbox.Text = result.ToString();
+                            MessageBox.Show("Town ID must be numeric.", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            townidtxtbox.Focus();
+                            return;
+                        }
+
+                        cmd.CommandText = "SELECT TownID, TownName FROM Towns WHERE TownID = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.Int).Value = townId;
+                    }
+                    else
+                    {
+                        cmd.CommandText = "SELECT TownID, TownName FROM Towns WHERE TownName = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.VarChar).Value = townNameText;
+                    }
+
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            townidtxtbox.Text = reader["TownID"].ToString();
+                            townnametxtbox.Text = reader["TownName"].ToString();
                         }
                         else
                         {
+                            townidtxtbox.Clear();
                             townnametxtbox.Clear();
-                            MessageBox.Show("Town not found.", "Info",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Town not found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            townidtxtbox.Focus();
                         }
                     }
                 }
@@ -183,17 +188,13 @@ namespace FO_2022
 
         private void townidtxtbox_TextChanged(object sender, EventArgs e)
         {
-            // Clear name when ID changes
             if (string.IsNullOrWhiteSpace(townidtxtbox.Text))
-            {
                 townnametxtbox.Clear();
-            }
         }
 
         // VALIDATE FILTERS
         private bool ValidateFilters()
         {
-            // Check if ID is entered but name is not fetched
             if (!string.IsNullOrWhiteSpace(cstmridtxtbox.Text) && string.IsNullOrWhiteSpace(cstmrnametxtbox.Text))
             {
                 MessageBox.Show("Please search and validate Customer ID first.", "Warning",
@@ -224,74 +225,32 @@ namespace FO_2022
         // GENERATE REPORT
         private void GenerateReport()
         {
-            try
+            if (!ValidateFilters()) return;
+
+            if (fromdatepcker.Value > todatepcker.Value)
             {
-                // Validate filters
-                if (!ValidateFilters()) return;
-
-                // Validate date range
-                if (fromdatepcker.Value > todatepcker.Value)
-                {
-                    MessageBox.Show("From date cannot be greater than To date.", "Validation",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // Get data for report
-                DataTable dt = GetRecoveryData(
-                    fromdatepcker.Value,
-                    todatepcker.Value,
-                    cstmridtxtbox.Text.Trim(),
-                    salesmanidtxtbox.Text.Trim(),
-                    townidtxtbox.Text.Trim()
-                );
-
-                if (dt.Rows.Count == 0)
-                {
-                    MessageBox.Show("No recovery records found for the selected criteria.", "Info",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                // Prepare report data sources
-                Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>();
-                dataSources.Add("DataSet1", dt);
-
-                // Prepare report parameters
-                Dictionary<string, string> parameters = new Dictionary<string, string>
-                {
-                    //{ "FromDate", fromdatepcker.Value.ToString("dd/MM/yyyy") },
-                    //{ "ToDate", todatepcker.Value.ToString("dd/MM/yyyy") },
-                    //{ "ReportTitle", "Sales Recovery Register" }
-                };
-
-                // Add customer name if filtered
-                if (!string.IsNullOrWhiteSpace(cstmrnametxtbox.Text))
-                {
-                    //parameters.Add("CustomerFilter", cstmrnametxtbox.Text);
-                }
-
-                // Add salesman name if filtered
-                if (!string.IsNullOrWhiteSpace(salesmannametxtbox.Text))
-                {
-                    //parameters.Add("SalesmanFilter", salesmannametxtbox.Text);
-                }
-
-                // Add town name if filtered
-                if (!string.IsNullOrWhiteSpace(townnametxtbox.Text))
-                {
-                    //parameters.Add("TownFilter", townnametxtbox.Text);
-                }
-
-                // Show report viewer
-                Reports.Report_viewer reportViewer = new Reports.Report_viewer();
-                reportViewer.ShowReport("Sales_Recovery_Register", dataSources, parameters);
+                MessageBox.Show("From date cannot be later than To date.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
+
+            DataTable dt = GetRecoveryData(
+                fromdatepcker.Value,
+                todatepcker.Value,
+                cstmridtxtbox.Text.Trim(),
+                salesmanidtxtbox.Text.Trim(),
+                townidtxtbox.Text.Trim()
+            );
+
+            if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("Error generating report: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No recovery records found for the selected criteria.", "Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+
+            Reports.Report_viewer reportViewer = new Reports.Report_viewer();
+            reportViewer.ShowReport("Sales_Recovery_Register", new Dictionary<string, DataTable> { { "DataSet1", dt } }, new Dictionary<string, string>());
         }
 
         private DataTable GetRecoveryData(DateTime fromDate, DateTime toDate,
@@ -299,7 +258,6 @@ namespace FO_2022
         {
             DataTable dt = new DataTable();
 
-            // Define columns matching RDLC dataset
             dt.Columns.Add("RecoveryID", typeof(int));
             dt.Columns.Add("RecoveryDate", typeof(DateTime));
             dt.Columns.Add("CustomerID", typeof(string));
@@ -349,70 +307,51 @@ namespace FO_2022
                         AND rb.IsDeleted = 0
                         AND rb.IsPosted = 1";
 
-                // Add filters if provided
                 if (!string.IsNullOrWhiteSpace(customerId))
-                {
                     query += " AND rb.CustomerID = @CustomerID";
-                }
-
                 if (!string.IsNullOrWhiteSpace(salesmanId))
-                {
                     query += " AND r.SalesmanID = @SalesmanID";
-                }
-
                 if (!string.IsNullOrWhiteSpace(townId))
-                {
                     query += " AND t.TownID = @TownID";
-                }
 
                 query += " ORDER BY r.RecoveryDate, r.RecoveryID";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("@FromDate", fromDate);
+                    cmd.Parameters.AddWithValue("@ToDate", toDate);
+
+                    if (!string.IsNullOrWhiteSpace(customerId))
+                        cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                    if (!string.IsNullOrWhiteSpace(salesmanId))
+                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanId);
+                    if (!string.IsNullOrWhiteSpace(townId))
+                        cmd.Parameters.AddWithValue("@TownID", townId);
+
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@FromDate", fromDate);
-                        cmd.Parameters.AddWithValue("@ToDate", toDate);
-
-                        if (!string.IsNullOrWhiteSpace(customerId))
+                        while (reader.Read())
                         {
-                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(salesmanId))
-                        {
-                            cmd.Parameters.AddWithValue("@SalesmanID", salesmanId);
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(townId))
-                        {
-                            cmd.Parameters.AddWithValue("@TownID", townId);
-                        }
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                DataRow row = dt.NewRow();
-                                row["RecoveryID"] = reader["RecoveryID"];
-                                row["RecoveryDate"] = reader["RecoveryDate"];
-                                row["CustomerID"] = reader["CustomerID"];
-                                row["CustomerName"] = reader["CustomerName"];
-                                row["SalesmanID"] = reader["SalesmanID"];
-                                row["SalesmanName"] = reader["SalesmanName"];
-                                row["TownID"] = reader["TownID"] != DBNull.Value ? reader["TownID"] : 0;
-                                row["TownName"] = reader["TownName"];
-                                row["Amount"] = reader["Amount"];
-                                row["Discount"] = reader["Discount"];
-                                row["Narration"] = reader["Narration"];
-                                row["PaymentMode"] = reader["PaymentMode"];
-                                row["CompanyID"] = reader["CompanyID"];
-                                row["CompanyName"] = reader["CompanyName"];
-                                row["VendorID"] = reader["VendorID"];
-                                row["VendorName"] = reader["VendorName"];
-                                dt.Rows.Add(row);
-                            }
+                            DataRow row = dt.NewRow();
+                            row["RecoveryID"] = reader["RecoveryID"];
+                            row["RecoveryDate"] = reader["RecoveryDate"];
+                            row["CustomerID"] = reader["CustomerID"];
+                            row["CustomerName"] = reader["CustomerName"];
+                            row["SalesmanID"] = reader["SalesmanID"];
+                            row["SalesmanName"] = reader["SalesmanName"];
+                            row["TownID"] = reader["TownID"] != DBNull.Value ? reader["TownID"] : 0;
+                            row["TownName"] = reader["TownName"];
+                            row["Amount"] = reader["Amount"];
+                            row["Discount"] = reader["Discount"];
+                            row["Narration"] = reader["Narration"];
+                            row["PaymentMode"] = reader["PaymentMode"];
+                            row["CompanyID"] = reader["CompanyID"];
+                            row["CompanyName"] = reader["CompanyName"];
+                            row["VendorID"] = reader["VendorID"];
+                            row["VendorName"] = reader["VendorName"];
+                            dt.Rows.Add(row);
                         }
                     }
                 }
@@ -425,18 +364,12 @@ namespace FO_2022
 
             return dt;
         }
-        private void previewbtn_Click(object sender, EventArgs e)
-        {
-            GenerateReport();
-        }
-        private void printbtn_Click(object sender, EventArgs e)
-        {
-            GenerateReport();
-        }
+
+        private void previewbtn_Click(object sender, EventArgs e) => GenerateReport();
+        private void printbtn_Click(object sender, EventArgs e) => GenerateReport();
 
         private void fromdatepcker_ValueChanged(object sender, EventArgs e)
         {
-            // Validation
             if (fromdatepcker.Value > todatepcker.Value)
             {
                 MessageBox.Show("From date cannot be later than To date.", "Validation",
@@ -447,7 +380,6 @@ namespace FO_2022
 
         private void todatepcker_ValueChanged(object sender, EventArgs e)
         {
-            // Validation
             if (todatepcker.Value < fromdatepcker.Value)
             {
                 MessageBox.Show("To date cannot be earlier than From date.", "Validation",
@@ -456,16 +388,7 @@ namespace FO_2022
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void closebtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-       
+        private void pictureBox4_Click(object sender, EventArgs e) => this.Close();
+        private void closebtn_Click(object sender, EventArgs e) => this.Close();
     }
 }

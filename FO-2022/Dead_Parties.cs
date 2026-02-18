@@ -61,45 +61,69 @@ namespace FO_2022
 
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
+            string sectorID = sectoridtxtbox.Text.Trim();
+            string sectorName = sectornametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(sectorID) && string.IsNullOrEmpty(sectorName))
+            {
+                MessageBox.Show("Please enter Sector ID or Sector Name",
+                    "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                sectoridtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(sectoridtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Sector ID", "Input Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT SectorName FROM Sectors WHERE SectorID = @SectorID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@SectorID", sectoridtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                        if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(sectorID))
+                    {
+                        query = "SELECT SectorID, SectorName FROM Sectors WHERE SectorID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", sectorID);
+                    }
+                    else
+                    {
+                        query = "SELECT SectorID, SectorName FROM Sectors WHERE SectorName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", sectorName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            sectornametxtbox.Text = result.ToString();
-                            selectedSectorId = sectoridtxtbox.Text.Trim();
+                            sectoridtxtbox.Text = reader["SectorID"].ToString();
+                            sectornametxtbox.Text = reader["SectorName"].ToString();
+                            selectedSectorId = reader["SectorID"].ToString();   // ✅ SET
                         }
                         else
                         {
-                            MessageBox.Show("Sector ID not found", "Not Found",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            sectoridtxtbox.Clear();
                             sectornametxtbox.Clear();
-                            selectedSectorId = "";
+                            selectedSectorId = "";   // ✅ RESET
+
+                            MessageBox.Show("Sector not found!",
+                                "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            sectoridtxtbox.Focus();
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void selectalltownfromlist_Click(object sender, EventArgs e)
         {
@@ -311,6 +335,11 @@ namespace FO_2022
         {
             sectornametxtbox.Clear();
             selectedSectorId = "";
+        }
+
+        private void sectornametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

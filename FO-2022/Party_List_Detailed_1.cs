@@ -58,13 +58,14 @@ namespace FO_2022
                 MessageBox.Show("Error loading categories: " + ex.Message);
             }
         }
-
-        // Search Town by ID
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(townidtxtbox.Text))
+            string townID = townidtxtbox.Text.Trim();
+            string townName = townnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(townID) && string.IsNullOrEmpty(townName))
             {
-                MessageBox.Show("Please enter Town ID");
+                MessageBox.Show("Please enter Town ID or Town Name");
                 return;
             }
 
@@ -73,14 +74,35 @@ namespace FO_2022
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT TownName FROM Towns WHERE TownID = @TownID", con);
-                    cmd.Parameters.AddWithValue("@TownID", townidtxtbox.Text.Trim());
 
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        townnametxtbox.Text = result.ToString();
-                    else
-                        townnametxtbox.Clear();
+                    string query = @"SELECT TownID, TownName 
+                             FROM Towns 
+                             WHERE TownID = @TownID 
+                                OR TownName = @TownName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@TownID",
+                            string.IsNullOrEmpty(townID) ? (object)DBNull.Value : townID);
+
+                        cmd.Parameters.AddWithValue("@TownName",
+                            string.IsNullOrEmpty(townName) ? (object)DBNull.Value : townName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                townidtxtbox.Text = reader["TownID"].ToString();
+                                townnametxtbox.Text = reader["TownName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Town not found!");
+                                townidtxtbox.Clear();
+                                townnametxtbox.Clear();
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -88,13 +110,14 @@ namespace FO_2022
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        // Search Sector by ID
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(sectoridtxtbox.Text))
+            string sectorID = sectoridtxtbox.Text.Trim();
+            string sectorName = sectornametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(sectorID) && string.IsNullOrEmpty(sectorName))
             {
-                MessageBox.Show("Please enter Sector ID");
+                MessageBox.Show("Please enter Sector ID or Sector Name");
                 return;
             }
 
@@ -103,14 +126,35 @@ namespace FO_2022
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT SectorName FROM Sectors WHERE SectorID = @SectorID", con);
-                    cmd.Parameters.AddWithValue("@SectorID", sectoridtxtbox.Text.Trim());
 
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        sectornametxtbox.Text = result.ToString();
-                    else
-                        sectornametxtbox.Clear();
+                    string query = @"SELECT SectorID, SectorName 
+                             FROM Sectors 
+                             WHERE SectorID = @SectorID 
+                                OR SectorName = @SectorName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@SectorID",
+                            string.IsNullOrEmpty(sectorID) ? (object)DBNull.Value : sectorID);
+
+                        cmd.Parameters.AddWithValue("@SectorName",
+                            string.IsNullOrEmpty(sectorName) ? (object)DBNull.Value : sectorName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                sectoridtxtbox.Text = reader["SectorID"].ToString();
+                                sectornametxtbox.Text = reader["SectorName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sector not found!");
+                                sectoridtxtbox.Clear();
+                                sectornametxtbox.Clear();
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -118,6 +162,7 @@ namespace FO_2022
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         // Get Filtered Data
         private DataTable GetPartyData()

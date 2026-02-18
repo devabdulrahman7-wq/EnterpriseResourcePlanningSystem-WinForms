@@ -853,7 +853,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>8.01389in</Width>
+            <Width>8.0139in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -863,7 +863,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>8.01389in</Width>
+        <Width>8.0139in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -879,7 +879,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>8.01389in</Width>
+  <Width>8.0139in</Width>
   <Page>
     <PageHeader>
       <Height>0.48264in</Height>
@@ -986,7 +986,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.22986in</Height>
+      <Height>0.26111in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

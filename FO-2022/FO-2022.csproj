@@ -8,13 +8,29 @@
     <ProjectGuid>{4AD0A340-0D3A-4960-B272-1B49B72CAB0F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FO_2022</RootNamespace>
-    <AssemblyName>FO-2022</AssemblyName>
+    <AssemblyName>Delloweb.POS</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\capti\Desktop\New folder\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +50,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>647F9E9F16B8DBFDD0083798132E7C86AC4ED323</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FO-2022_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1486504331-burn-fire-flame-danger-burning-hot_81317.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -578,12 +609,6 @@
     </Compile>
     <Compile Include="Party Product Sales Ledger.Designer.cs">
       <DependentUpon>Party Product Sales Ledger.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Party_List_Detailed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Party_List_Detailed.Designer.cs">
-      <DependentUpon>Party_List_Detailed.cs</DependentUpon>
     </Compile>
     <Compile Include="Party_List_Detailed_1.cs">
       <SubType>Form</SubType>
@@ -1311,6 +1336,7 @@
     <EmbeddedResource Include="Charts of Accounts.resx">
       <DependentUpon>Charts of Accounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chart_of_Accounts.rdlc" />
     <EmbeddedResource Include="Cheque_Deposit_in_Bank.resx">
       <DependentUpon>Cheque_Deposit_in_Bank.cs</DependentUpon>
     </EmbeddedResource>
@@ -1482,9 +1508,6 @@
     <EmbeddedResource Include="Party Product Sales Ledger.resx">
       <DependentUpon>Party Product Sales Ledger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Party_List_Detailed.resx">
-      <DependentUpon>Party_List_Detailed.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Party_List_Detailed_1.resx">
       <DependentUpon>Party_List_Detailed_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -1605,9 +1628,7 @@
     <EmbeddedResource Include="Reports\Charts_of_Accounts_rv.resx">
       <DependentUpon>Charts_of_Accounts_rv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Chats_of_Accounts_report.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Chats_of_Accounts_report.rdlc" />
     <EmbeddedResource Include="Reports\Company_Discount_Claim_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Company_Wise_Profits_report.rdlc" />
     <EmbeddedResource Include="Reports\Company_Wise_Sales.rdlc" />
@@ -1623,6 +1644,7 @@
     <EmbeddedResource Include="Reports\Daily_Profits.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Recovery_and_Payment_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Daily_Sales_Statement%28Salesman_Wise%29.rdlc" />
+    <EmbeddedResource Include="Reports\Daily_Transaction_Report.rdlc" />
     <EmbeddedResource Include="Reports\DayBook.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties.rdlc" />
     <EmbeddedResource Include="Reports\Dead_Parties_Due_Balance.rdlc" />
@@ -1630,18 +1652,15 @@
     <EmbeddedResource Include="Reports\Employee_Salary_report.resx">
       <DependentUpon>Employee_Salary_report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Employee_Salary_rv.rdlc" />
     <EmbeddedResource Include="Reports\General_Journal.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\General_Journal_rv.resx">
       <DependentUpon>General_Journal_rv.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Reports\Party_List.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="1486504331-burn-fire-flame-danger-burning-hot_81317.ico" />
+    <EmbeddedResource Include="Reports\Party_List.rdlc" />
     <EmbeddedResource Include="Reports\Invoice_Detailed_Profit.rdlc" />
     <EmbeddedResource Include="Reports\Invoice_Wise_Profit.rdlc" />
     <EmbeddedResource Include="Reports\Monthly_Expense.rdlc" />
@@ -1667,9 +1686,7 @@
     <EmbeddedResource Include="Reports\Purchase_Register_Invoice_Wise.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Return_Register.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Return_Summary.rdlc" />
-    <EmbeddedResource Include="Reports\Purchase_Summary.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase_Summary.rdlc" />
     <EmbeddedResource Include="Reports\Purchase_Summary_rv.resx">
       <DependentUpon>Purchase_Summary_rv.cs</DependentUpon>
     </EmbeddedResource>
@@ -1679,9 +1696,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Saleman_Current_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Monthly_Performance.rdlc" />
-    <EmbeddedResource Include="Reports\Salesman_Sector.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salesman_Sector.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Stock_Statement.rdlc" />
     <EmbeddedResource Include="Reports\Sales_Month_Comparison_Distributors_Wise_Products.rdlc" />
     <EmbeddedResource Include="Reports\Sales_Month_Comparison_Product_Wise.rdlc" />
@@ -1703,9 +1718,7 @@
     <EmbeddedResource Include="Reports\Stock_Going_to_Short.rdlc" />
     <EmbeddedResource Include="Reports\Stock_Issue_Register.rdlc" />
     <EmbeddedResource Include="Reports\Stock_Return_Register.rdlc" />
-    <EmbeddedResource Include="Reports\Town_report.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Town_report.rdlc" />
     <EmbeddedResource Include="Reports\Town_rv.resx">
       <DependentUpon>Town_rv.cs</DependentUpon>
     </EmbeddedResource>
@@ -1862,6 +1875,7 @@
     <EmbeddedResource Include="Weekly Payment Schedule.resx">
       <DependentUpon>Weekly Payment Schedule.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FO-2022_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -2035,6 +2049,18 @@
       <Project>{6e1b70b3-b4b6-4c0a-9661-bac3e8899e7f}</Project>
       <Name>Delloweb.Licensing</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

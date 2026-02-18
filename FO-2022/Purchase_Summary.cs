@@ -1,14 +1,13 @@
-﻿using System;
+﻿using FO_2022.Reports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using System.Data.SqlClient;
 
 namespace FO_2022
 {
@@ -23,181 +22,77 @@ namespace FO_2022
 
         private void Purchase_Summary_Load(object sender, EventArgs e)
         {
-            // Set default dates
-            fromdatepcker.Value = DateTime.Now.AddMonths(-1);
-            todatepcker.Value = DateTime.Now;
-
-            // Clear vendor fields
-            vendoridtxtbox.Clear();
-            vendornametxtbox.Clear();
-
-            // Disable vendor name field (read-only)
-            vendornametxtbox.ReadOnly = true;
-        }
-
-        private void closebtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void previewbtn_Click(object sender, EventArgs e)
-        {
             try
             {
-                // Validate date range
-                if (fromdatepcker.Value > todatepcker.Value)
-                {
-                    MessageBox.Show("From date cannot be greater than To date!", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                // Set default dates (last month to today)
+                fromdatepcker.Value = DateTime.Today.AddMonths(-1);
+                todatepcker.Value = DateTime.Today;
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    // SQL Query to get purchase summary with vendor name from Parties table
-                    string query = @"
-                    SELECT 
-                        p.PurchaseID,
-                        p.PurchaseDate,
-                        ISNULL(pt.PartyName, 'Unknown Vendor') as VendorName,
-                        ISNULL(SUM(pb.TTLValue), 0) as GrossValue,
-                        ISNULL(SUM(
-                            ISNULL(pb.DiscValPack, 0) * ISNULL(pb.QtyPack, 0) + 
-                            ISNULL(pb.DiscValLose, 0) + 
-                            ISNULL(pb.OfferDiscount, 0)
-                        ), 0) as Discount,
-                        ISNULL(SUM(pb.TTLSTax), 0) as SalesTax,
-                        ISNULL(SUM(pb.TTLFTax), 0) as FederalTax,
-                        ISNULL(SUM(
-                            ISNULL(pb.TTLValue, 0) - 
-                            (ISNULL(pb.DiscValPack, 0) * ISNULL(pb.QtyPack, 0) + 
-                             ISNULL(pb.DiscValLose, 0) + 
-                             ISNULL(pb.OfferDiscount, 0)) + 
-                            ISNULL(pb.TTLSTax, 0) + 
-                            ISNULL(pb.TTLFTax, 0)
-                        ), 0) as NetValue
-                    FROM Purchase p
-                    LEFT JOIN PurchasesBody pb ON p.PurchaseID = pb.PurchaseId
-                    LEFT JOIN Parties pt ON p.VendorID = pt.PartyID 
-                        AND pt.PartyType = 'V'  -- Only vendors
-                    WHERE p.PurchaseDate BETWEEN @FromDate AND @ToDate
-                        AND (@VendorID IS NULL OR p.VendorID = @VendorID)
-                    GROUP BY p.PurchaseID, p.PurchaseDate, pt.PartyName
-                    ORDER BY p.PurchaseDate DESC, p.PurchaseID";
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@FromDate", fromdatepcker.Value.Date);
-                    cmd.Parameters.AddWithValue("@ToDate", todatepcker.Value.Date.AddDays(1).AddSeconds(-1));
-
-                    // Add vendor filter if provided
-                    if (!string.IsNullOrWhiteSpace(vendoridtxtbox.Text))
-                    {
-                        cmd.Parameters.AddWithValue("@VendorID", vendoridtxtbox.Text.Trim());
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@VendorID", DBNull.Value);
-                    }
-
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    conn.Close();
-
-                    // Check if data exists
-                    if (dt.Rows.Count == 0)
-                    {
-                        MessageBox.Show("No purchase records found for the selected criteria!", "No Data",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-
-                    // Debug: Show data info
-                    string debugInfo = $"Found {dt.Rows.Count} purchase records\n";
-                    debugInfo += $"First record:\n";
-                    debugInfo += $"PurchaseID: {dt.Rows[0]["PurchaseID"]}\n";
-                    debugInfo += $"Date: {dt.Rows[0]["PurchaseDate"]}\n";
-                    debugInfo += $"Vendor: {dt.Rows[0]["VendorName"]}\n";
-                    debugInfo += $"Gross: {dt.Rows[0]["GrossValue"]:N2}\n";
-                    debugInfo += $"Discount: {dt.Rows[0]["Discount"]:N2}\n";
-                    debugInfo += $"Tax: {dt.Rows[0]["SalesTax"]:N2}\n";
-                    debugInfo += $"Net: {dt.Rows[0]["NetValue"]:N2}";
-
-                    MessageBox.Show(debugInfo, "Data Preview");
-
-                    // Open report
-                    Reports.Purchase_Summary_rv reportForm = new Reports.Purchase_Summary_rv(dt);
-                    reportForm.Text = "Purchase Summary Report";
-                    reportForm.Show();
-                }
+                // Clear vendor fields
+                vendoridtxtbox.Clear();
+                vendornametxtbox.Clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading report: " + ex.Message, "Error",
+                MessageBox.Show($"Error loading form: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // SEARCH VENDOR BY ID (FROM PARTIES TABLE WHERE PartyType = 'V')
+        // Search Vendor
         private void vendoridsearch_Click(object sender, EventArgs e)
         {
+            string vendorId = vendoridtxtbox.Text.Trim();
+            string vendorName = vendornametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(vendorId) && string.IsNullOrEmpty(vendorName))
+            {
+                MessageBox.Show("Please enter Vendor ID or Vendor Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vendoridtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                string vendorID = vendoridtxtbox.Text.Trim();
-
-                if (string.IsNullOrWhiteSpace(vendorID))
-                {
-                    MessageBox.Show("Please enter Vendor ID first!", "Input Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    // Query Parties table for vendor (PartyType = 'V')
-                    string query = @"
-                    SELECT PartyName 
-                    FROM Parties 
-                    WHERE PartyID = @VendorID 
-                      AND PartyType = 'V'";  // V = Vendor
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@VendorID", vendorID);
-
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    conn.Close();
 
-                    if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(vendorId))
                     {
-                        vendornametxtbox.Text = result.ToString();
-                        MessageBox.Show($"Vendor Found!\nID: {vendorID}\nName: {result}", "Success",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyID = @Value AND PartyType = 'V'";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", vendorId);
                     }
                     else
                     {
-                        // Try if it's a valid account in ChartOfAccounts but not in Parties
-                        string query2 = "SELECT AccountName FROM ChartOfAccounts WHERE AccountNo = @VendorID";
-                        SqlCommand cmd2 = new SqlCommand(query2, conn);
-                        cmd2.Parameters.AddWithValue("@VendorID", vendorID);
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyName = @Value AND PartyType = 'V'";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", vendorName);
+                    }
 
-                        conn.Open();
-                        object result2 = cmd2.ExecuteScalar();
-                        conn.Close();
-
-                        if (result2 != null)
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            vendornametxtbox.Text = result2.ToString() + " (Chart Account)";
-                            MessageBox.Show($"Account found in ChartOfAccounts but not in Vendors (Parties table)\n" +
-                                $"Name: {result2}", "Note",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            vendoridtxtbox.Text = reader["PartyID"].ToString();
+                            vendornametxtbox.Text = reader["PartyName"].ToString();
+                            //selectedVendorId = reader["PartyID"].ToString();
                         }
                         else
                         {
+                            vendoridtxtbox.Clear();
                             vendornametxtbox.Clear();
-                            MessageBox.Show("Vendor ID not found!\n" +
-                                "Check:\n1. Vendor exists in Parties table\n2. PartyType = 'V'\n3. Correct Vendor ID",
+                            MessageBox.Show("Vendor not found.",
                                 "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
@@ -205,49 +100,21 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error searching vendor: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
         private void vendoridtxtbox_TextChanged(object sender, EventArgs e)
         {
-            // Clear vendor name when ID changes
+            // Clear name when ID changes
             if (string.IsNullOrWhiteSpace(vendoridtxtbox.Text))
             {
                 vendornametxtbox.Clear();
             }
-            else
-            {
-                //vendornametxtbox.Text = "Enter ID and click Search →";
-            }
         }
 
-        private void printbtn_Click(object sender, EventArgs e)
-        {
-            // Same as preview
-            previewbtn_Click(sender, e);
-        }
-
-        private void fromdatepcker_ValueChanged(object sender, EventArgs e)
-        {
-            // Validate date range
-            if (fromdatepcker.Value > todatepcker.Value)
-            {
-                fromdatepcker.Value = todatepcker.Value;
-            }
-        }
-
-        private void todatepcker_ValueChanged(object sender, EventArgs e)
-        {
-            // Validate date range
-            if (todatepcker.Value < fromdatepcker.Value)
-            {
-                todatepcker.Value = fromdatepcker.Value;
-            }
-        }
-
-        // Auto-search on Enter key press in VendorID textbox
         private void vendoridtxtbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -257,9 +124,235 @@ namespace FO_2022
             }
         }
 
+        // Validate before generating report
+        private bool ValidateInput()
+        {
+            // Check date range
+            if (fromdatepcker.Value > todatepcker.Value)
+            {
+                MessageBox.Show("From date cannot be later than To date.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // Check if vendor ID is entered but name is not fetched
+            if (!string.IsNullOrWhiteSpace(vendoridtxtbox.Text) &&
+                string.IsNullOrWhiteSpace(vendornametxtbox.Text))
+            {
+                MessageBox.Show("Please search and validate Vendor ID first.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        // Generate Report
+        private void GenerateReport()
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                // Validate input
+                if (!ValidateInput()) return;
+
+                // Get data for report
+                DataTable dt = GetPurchaseSummaryData(
+                    fromdatepcker.Value,
+                    todatepcker.Value,
+                    vendoridtxtbox.Text.Trim()
+                );
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No purchase records found for the selected criteria.", "Info",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Prepare report data sources
+                Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>();
+                dataSources.Add("DataSet1", dt);
+
+                // Prepare report parameters
+                Dictionary<string, string> parameters = new Dictionary<string, string>
+                {
+                    //{ "FromDate", fromdatepcker.Value.ToString("dd/MM/yyyy") },
+                    //{ "ToDate", todatepcker.Value.ToString("dd/MM/yyyy") },
+                    //{ "ReportTitle", "Purchase Summary Report" },
+                    //{ "GeneratedDate", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") }
+                };
+
+                // Add vendor filter if applicable
+                if (!string.IsNullOrWhiteSpace(vendornametxtbox.Text))
+                {
+                    //parameters.Add("VendorFilter", $"{vendoridtxtbox.Text} - {vendornametxtbox.Text}");
+                }
+
+                // Show report viewer (universal one)
+                Report_viewer reportViewer = new Report_viewer();
+                reportViewer.ShowReport("Purchase_Summary", dataSources);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error generating report: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private DataTable GetPurchaseSummaryData(DateTime fromDate, DateTime toDate, string vendorId)
+        {
+            DataTable dt = new DataTable();
+
+            // Define columns matching RDLC dataset
+            dt.Columns.Add("PurchaseID", typeof(int));
+            dt.Columns.Add("PurchaseDate", typeof(DateTime));
+            dt.Columns.Add("VendorID", typeof(string));
+            dt.Columns.Add("VendorName", typeof(string));
+            dt.Columns.Add("BillNo", typeof(string));
+            dt.Columns.Add("BillDate", typeof(DateTime));
+            dt.Columns.Add("GrossValue", typeof(decimal));
+            dt.Columns.Add("TotalDiscount", typeof(decimal));
+            dt.Columns.Add("TotalSalesTax", typeof(decimal));
+            dt.Columns.Add("TotalFederalTax", typeof(decimal));
+            dt.Columns.Add("NetValue", typeof(decimal));
+            dt.Columns.Add("Narration", typeof(string));
+            dt.Columns.Add("TransportName", typeof(string));
+            dt.Columns.Add("BiltyNo", typeof(string));
+
+            try
+            {
+                string query = @"
+                    SELECT 
+                        p.PurchaseID,
+                        p.PurchaseDate,
+                        p.VendorID,
+                        ISNULL(par.PartyName, 'N/A') as VendorName,
+                        ISNULL(p.BillNo, '') as BillNo,
+                        p.BillDate,
+                        SUM(pb.TTLValue) as GrossValue,
+                        SUM(ISNULL(pb.DiscValPack, 0) + ISNULL(pb.DiscValLose, 0) + ISNULL(pb.OfferDiscount, 0)) as TotalDiscount,
+                        SUM(pb.TTLSTax) as TotalSalesTax,
+                        SUM(pb.TTLFTax) as TotalFederalTax,
+                        SUM(pb.TTLValue + pb.TTLSTax + pb.TTLFTax - 
+                            (ISNULL(pb.DiscValPack, 0) + ISNULL(pb.DiscValLose, 0) + ISNULL(pb.OfferDiscount, 0))) as NetValue,
+                        ISNULL(p.Narration, '') as Narration,
+                        ISNULL(p.TransportName, '') as TransportName,
+                        ISNULL(p.BiltyNo, '') as BiltyNo
+                    FROM Purchase p
+                    LEFT JOIN PurchasesBody pb ON p.PurchaseID = pb.PurchaseId
+                    LEFT JOIN Parties par ON p.VendorID = par.PartyID
+                    WHERE p.PurchaseDate BETWEEN @FromDate AND @ToDate
+                        AND pb.IsDeleted = 0";
+
+                // Add vendor filter if provided
+                if (!string.IsNullOrWhiteSpace(vendorId))
+                {
+                    query += " AND p.VendorID = @VendorID";
+                }
+
+                query += @"
+                    GROUP BY p.PurchaseID, p.PurchaseDate, p.VendorID, par.PartyName, 
+                             p.BillNo, p.BillDate, p.Narration, p.TransportName, p.BiltyNo
+                    ORDER BY p.PurchaseDate DESC, p.PurchaseID";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FromDate", fromDate);
+                        cmd.Parameters.AddWithValue("@ToDate", toDate);
+
+                        if (!string.IsNullOrWhiteSpace(vendorId))
+                        {
+                            cmd.Parameters.AddWithValue("@VendorID", vendorId);
+                        }
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DataRow row = dt.NewRow();
+                                row["PurchaseID"] = reader["PurchaseID"];
+                                row["PurchaseDate"] = reader["PurchaseDate"];
+                                row["VendorID"] = reader["VendorID"];
+                                row["VendorName"] = reader["VendorName"];
+                                row["BillNo"] = reader["BillNo"];
+                                row["BillDate"] = reader["BillDate"] != DBNull.Value ? reader["BillDate"] : DBNull.Value;
+                                row["GrossValue"] = reader["GrossValue"];
+                                row["TotalDiscount"] = reader["TotalDiscount"];
+                                row["TotalSalesTax"] = reader["TotalSalesTax"];
+                                row["TotalFederalTax"] = reader["TotalFederalTax"];
+                                row["NetValue"] = reader["NetValue"];
+                                row["Narration"] = reader["Narration"];
+                                row["TransportName"] = reader["TransportName"];
+                                row["BiltyNo"] = reader["BiltyNo"];
+                                dt.Rows.Add(row);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching purchase data: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dt;
+        }
+
+        private void previewbtn_Click(object sender, EventArgs e)
+        {
+            GenerateReport();
+        }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            GenerateReport();
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fromdatepcker_ValueChanged(object sender, EventArgs e)
+        {
+            // Validation
+            if (fromdatepcker.Value > todatepcker.Value)
+            {
+                MessageBox.Show("From date cannot be later than To date.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                fromdatepcker.Value = todatepcker.Value.AddDays(-1);
+            }
+        }
+
+        private void todatepcker_ValueChanged(object sender, EventArgs e)
+        {
+            // Validation
+            if (todatepcker.Value < fromdatepcker.Value)
+            {
+                MessageBox.Show("To date cannot be earlier than From date.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                todatepcker.Value = fromdatepcker.Value;
+            }
+        }
+
+        private void vendornametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

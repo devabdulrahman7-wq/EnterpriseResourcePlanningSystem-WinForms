@@ -60,6 +60,7 @@
             this.daterangebtnradio.TabStop = true;
             this.daterangebtnradio.Text = "Date Range";
             this.daterangebtnradio.UseVisualStyleBackColor = true;
+            this.daterangebtnradio.CheckedChanged += new System.EventHandler(this.daterangebtnradio_CheckedChanged_1);
             // 
             // tilldatebtnradio
             // 

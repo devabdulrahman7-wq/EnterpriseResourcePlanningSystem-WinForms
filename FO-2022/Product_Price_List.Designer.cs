@@ -117,7 +117,7 @@
             this.groupBox1.Controls.Add(this.purchasepricewiseradiobtn);
             this.groupBox1.Controls.Add(this.retailpricewiseradiobtn);
             this.groupBox1.Controls.Add(this.salepricewiseradiobtn);
-            this.groupBox1.Location = new System.Drawing.Point(142, 186);
+            this.groupBox1.Location = new System.Drawing.Point(193, 192);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(258, 129);
             this.groupBox1.TabIndex = 490;

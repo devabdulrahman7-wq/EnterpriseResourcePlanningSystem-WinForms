@@ -432,6 +432,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer_Invoice_Wise_Sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Invoice_Wise_Sales";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Customer_Invoice_Wise_Sales_Load);

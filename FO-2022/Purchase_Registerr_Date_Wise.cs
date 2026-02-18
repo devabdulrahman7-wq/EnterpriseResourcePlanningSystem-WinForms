@@ -23,42 +23,73 @@ namespace FO_2022
 
         private void vendoridsearch_Click(object sender, EventArgs e)
         {
+            string vendorId = vendoridtxtbox.Text.Trim();
+            string vendorName = vendornametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(vendorId) && string.IsNullOrEmpty(vendorName))
+            {
+                MessageBox.Show("Please enter Vendor ID or Vendor Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vendoridtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(vendoridtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Vendor ID", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @VendorID AND PartyType = 'V'";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@VendorID", vendoridtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                        if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(vendorId))
+                    {
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyID = @Value AND PartyType = 'V'";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", vendorId);
+                    }
+                    else
+                    {
+                        query = @"SELECT PartyID, PartyName 
+                          FROM Parties 
+                          WHERE PartyName = @Value AND PartyType = 'V'";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", vendorName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            vendornametxtbox.Text = result.ToString();
-                            selectedVendorId = vendoridtxtbox.Text.Trim();
+                            vendoridtxtbox.Text = reader["PartyID"].ToString();
+                            vendornametxtbox.Text = reader["PartyName"].ToString();
+                            selectedVendorId = reader["PartyID"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Vendor ID not found or not a vendor", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            vendoridtxtbox.Clear();
                             vendornametxtbox.Clear();
                             selectedVendorId = "";
+
+                            MessageBox.Show("Vendor not found.",
+                                "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            vendoridtxtbox.Focus();
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void previewbtn_Click(object sender, EventArgs e)
         {

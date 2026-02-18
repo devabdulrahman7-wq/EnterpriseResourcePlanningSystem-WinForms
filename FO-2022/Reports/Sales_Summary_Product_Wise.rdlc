@@ -20,16 +20,16 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.82292in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.83847in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.69792in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.83333in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -283,7 +283,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Profit Percentage</Value>
+                                  <Value>Profit %</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -581,7 +581,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Height>0.5in</Height>
-            <Width>8in</Width>
+            <Width>7.19264in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -592,7 +592,7 @@
         <KeepTogether>true</KeepTogether>
         <Left>0.025in</Left>
         <Height>0.5in</Height>
-        <Width>8in</Width>
+        <Width>7.19264in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -603,7 +603,7 @@
     <Height>0.5in</Height>
     <Style />
   </Body>
-  <Width>8.05625in</Width>
+  <Width>7.24375in</Width>
   <Page>
     <PageHeader>
       <Height>0.46875in</Height>
@@ -630,7 +630,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.21875in</Height>
-          <Width>8.025in</Width>
+          <Width>7.21764in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -710,7 +710,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.23958in</Height>
+      <Height>0.25in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -729,9 +729,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Left>4.73323in</Left>
+          <Left>3.35823in</Left>
           <Height>0.20694in</Height>
-          <Width>0.75125in</Width>
+          <Width>0.50125in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -757,7 +757,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Left>3.42942in</Left>
+          <Left>2.05442in</Left>
           <Height>0.21944in</Height>
           <Width>0.5625in</Width>
           <ZIndex>1</ZIndex>
@@ -779,16 +779,18 @@
               <TextRuns>
                 <TextRun>
                   <Value>Total pages:</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>2.54052in</Left>
+          <Left>1.04052in</Left>
           <Height>0.21944in</Height>
-          <Width>0.83333in</Width>
+          <Width>0.95833in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -815,10 +817,72 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>4.03185in</Left>
+          <Left>2.65685in</Left>
           <Height>0.21944in</Height>
           <Width>0.6875in</Width>
           <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox21">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Total Sale:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.01007in</Top>
+          <Left>4.14271in</Left>
+          <Height>0.21944in</Height>
+          <Width>0.83333in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox26">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Format(Sum(Fields!TotalSale.Value, "DataSet1"), "N2")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox25</rd:DefaultName>
+          <Top>0.02083in</Top>
+          <Left>5.0733in</Left>
+          <Height>0.20833in</Height>
+          <Width>1.17008in</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

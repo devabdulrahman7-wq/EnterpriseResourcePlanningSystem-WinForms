@@ -103,6 +103,7 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(223, 16);
             this.sectornametxtbox.TabIndex = 482;
+            this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // sectoridtxtbox
             // 
@@ -117,10 +118,10 @@
             // sectoridsearch
             // 
             this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(300, 175);
+            this.sectoridsearch.Location = new System.Drawing.Point(301, 172);
             this.sectoridsearch.Margin = new System.Windows.Forms.Padding(5);
             this.sectoridsearch.Name = "sectoridsearch";
-            this.sectoridsearch.Size = new System.Drawing.Size(40, 25);
+            this.sectoridsearch.Size = new System.Drawing.Size(40, 20);
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 480;
             this.sectoridsearch.TabStop = false;

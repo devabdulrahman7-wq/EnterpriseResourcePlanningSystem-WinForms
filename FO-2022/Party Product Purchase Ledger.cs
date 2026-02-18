@@ -24,79 +24,131 @@ namespace FO_2022
 
         private void searchpartyid_Click(object sender, EventArgs e)
         {
+            string partyId = partyidtxtbox.Text.Trim();
+            string partyName = partynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(partyId) && string.IsNullOrEmpty(partyName))
+            {
+                MessageBox.Show("Please enter Party ID or Party Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                partyidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(partyidtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Party ID", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@PartyID", partyidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                        if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(partyId))
+                    {
+                        query = "SELECT PartyID, PartyName FROM Parties WHERE PartyID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", partyId);
+                    }
+                    else
+                    {
+                        query = "SELECT PartyID, PartyName FROM Parties WHERE PartyName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", partyName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            partynametxtbox.Text = result.ToString();
-                            selectedPartyId = partyidtxtbox.Text.Trim();
+                            partyidtxtbox.Text = reader["PartyID"].ToString();
+                            partynametxtbox.Text = reader["PartyName"].ToString();
+                            selectedPartyId = reader["PartyID"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Party ID not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            partyidtxtbox.Clear();
                             partynametxtbox.Clear();
                             selectedPartyId = "";
+
+                            MessageBox.Show("Party not found.",
+                                "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            partyidtxtbox.Focus();
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void searchproductid_Click(object sender, EventArgs e)
         {
+            string productId = productidtxtbox.Text.Trim();
+            string productName = productnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(productId) && string.IsNullOrEmpty(productName))
+            {
+                MessageBox.Show("Please enter Product ID or Product Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                productidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(productidtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Product ID", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT ProductName FROM Products WHERE ProductID = @ProductID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@ProductID", productidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                        if (result != null)
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(productId))
+                    {
+                        query = "SELECT ProductID, ProductName FROM Products WHERE ProductID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", productId);
+                    }
+                    else
+                    {
+                        query = "SELECT ProductID, ProductName FROM Products WHERE ProductName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", productName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            productnametxtbox.Text = result.ToString();
-                            selectedProductId = productidtxtbox.Text.Trim();
+                            productidtxtbox.Text = reader["ProductID"].ToString();
+                            productnametxtbox.Text = reader["ProductName"].ToString();
+                            selectedProductId = reader["ProductID"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Product ID not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            productidtxtbox.Clear();
                             productnametxtbox.Clear();
                             selectedProductId = "";
+
+                            MessageBox.Show("Product not found.",
+                                "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            productidtxtbox.Focus();
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

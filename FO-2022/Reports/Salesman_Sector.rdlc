@@ -434,7 +434,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Left>0.125in</Left>
             <Height>0.5in</Height>
-            <Width>7.94653in</Width>
+            <Width>7.94654in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -444,7 +444,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>0.5in</Height>
-        <Width>8.07153in</Width>
+        <Width>8.07154in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -456,7 +456,7 @@
     <Height>0.5in</Height>
     <Style />
   </Body>
-  <Width>8.07153in</Width>
+  <Width>8.07154in</Width>
   <Page>
     <PageHeader>
       <Height>0.5in</Height>

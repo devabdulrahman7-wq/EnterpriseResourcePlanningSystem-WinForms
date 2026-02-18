@@ -690,10 +690,7 @@ namespace FO_2022
         private void openbtn_Click(object sender, EventArgs e)
         {
             Search_Recovery_Invoice searchForm = new Search_Recovery_Invoice();
-            if (searchForm.ShowDialog() == DialogResult.OK)
-            {
-                LoadRecoveryForEditing(searchForm.SelectedRecoveryID);
-            }
+            searchForm.Show();
         }
 
         private void removebtn_Click(object sender, EventArgs e)

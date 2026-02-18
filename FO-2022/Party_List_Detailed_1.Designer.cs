@@ -78,7 +78,7 @@
             this.previewbtn.FlatAppearance.BorderSize = 0;
             this.previewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewbtn.Location = new System.Drawing.Point(150, 385);
+            this.previewbtn.Location = new System.Drawing.Point(150, 367);
             this.previewbtn.Name = "previewbtn";
             this.previewbtn.Size = new System.Drawing.Size(77, 25);
             this.previewbtn.TabIndex = 477;
@@ -92,7 +92,7 @@
             this.closebtn.FlatAppearance.BorderSize = 0;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(305, 385);
+            this.closebtn.Location = new System.Drawing.Point(305, 367);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 25);
             this.closebtn.TabIndex = 476;
@@ -106,7 +106,7 @@
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(231, 385);
+            this.printbtn.Location = new System.Drawing.Point(231, 367);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(68, 25);
             this.printbtn.TabIndex = 475;
@@ -158,10 +158,10 @@
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(231, 215);
+            this.townidsearch.Location = new System.Drawing.Point(231, 219);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.townidsearch.Name = "townidsearch";
-            this.townidsearch.Size = new System.Drawing.Size(40, 25);
+            this.townidsearch.Size = new System.Drawing.Size(40, 21);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 470;
             this.townidsearch.TabStop = false;
@@ -211,10 +211,10 @@
             // sectoridsearch
             // 
             this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(231, 267);
+            this.sectoridsearch.Location = new System.Drawing.Point(231, 271);
             this.sectoridsearch.Margin = new System.Windows.Forms.Padding(5);
             this.sectoridsearch.Name = "sectoridsearch";
-            this.sectoridsearch.Size = new System.Drawing.Size(40, 25);
+            this.sectoridsearch.Size = new System.Drawing.Size(40, 21);
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 465;
             this.sectoridsearch.TabStop = false;
@@ -265,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(554, 466);
+            this.ClientSize = new System.Drawing.Size(547, 445);
             this.Controls.Add(this.categorycombobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.partycombobox);

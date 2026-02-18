@@ -182,6 +182,7 @@
             this.searchforpartyidskip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchforpartyidskip.TabIndex = 169;
             this.searchforpartyidskip.TabStop = false;
+            this.searchforpartyidskip.Click += new System.EventHandler(this.searchskippartyid_Click);
             // 
             // partynameskiptxtbox
             // 
@@ -200,6 +201,7 @@
             this.partyidforskiptxtbox.Name = "partyidforskiptxtbox";
             this.partyidforskiptxtbox.Size = new System.Drawing.Size(124, 16);
             this.partyidforskiptxtbox.TabIndex = 172;
+            this.partyidforskiptxtbox.TextChanged += new System.EventHandler(this.partyidforskiptxtbox_TextChanged);
             // 
             // label8
             // 

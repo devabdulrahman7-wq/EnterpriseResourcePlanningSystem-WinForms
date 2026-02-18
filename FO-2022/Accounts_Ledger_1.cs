@@ -47,36 +47,52 @@ namespace FO_2022
         // Search Account
         private void searchaccountno_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(accountnotxtbox.Text))
+            string accountNo = accountnotxtbox.Text.Trim();
+            string accountName = accountnametxtbox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(accountNo) && string.IsNullOrWhiteSpace(accountName))
             {
-                MessageBox.Show("Please enter Account No.", "Warning",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Account No or Account Name.", "Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                accountnotxtbox.Focus();
                 return;
             }
 
             try
             {
-                string query = "SELECT AccountName FROM ChartOfAccounts WHERE AccountNo = @AccountNo";
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@AccountNo", accountnotxtbox.Text.Trim());
+                    cmd.Connection = conn;
 
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
+                    if (!string.IsNullOrWhiteSpace(accountNo))
+                    {
+                        cmd.CommandText = "SELECT AccountNo, AccountName FROM ChartOfAccounts WHERE AccountNo = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.VarChar).Value = accountNo;
+                    }
+                    else
+                    {
+                        cmd.CommandText = "SELECT AccountNo, AccountName FROM ChartOfAccounts WHERE AccountName = @Value";
+                        cmd.Parameters.Add("@Value", SqlDbType.VarChar).Value = accountName;
+                    }
+
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            accountnametxtbox.Text = result.ToString();
-                            selectedAccountNo = accountnotxtbox.Text.Trim();
+                            accountnotxtbox.Text = reader["AccountNo"].ToString();
+                            accountnametxtbox.Text = reader["AccountName"].ToString();
+                            selectedAccountNo = reader["AccountNo"].ToString();
                         }
                         else
                         {
+                            accountnotxtbox.Clear();
                             accountnametxtbox.Clear();
                             selectedAccountNo = "";
                             MessageBox.Show("Account not found.", "Info",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            accountnotxtbox.Focus();
                         }
                     }
                 }
@@ -87,6 +103,7 @@ namespace FO_2022
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void accountnotxtbox_TextChanged(object sender, EventArgs e)
         {

@@ -23,46 +23,70 @@ namespace FO_2022
 
         private void salesmanidsearch_Click(object sender, EventArgs e)
         {
+            string salesmanId = salesmanidtxtbox.Text.Trim();
+            string salesmanName = salesmannametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(salesmanId) && string.IsNullOrEmpty(salesmanName))
+            {
+                MessageBox.Show("Please enter Salesman ID or Name",
+                    "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(salesmanidtxtbox.Text))
-                {
-                    MessageBox.Show("Please enter Salesman ID", "Input Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID";
+                    conn.Open();
+
+                    string query;
+
+                    if (!string.IsNullOrEmpty(salesmanId))
+                    {
+                        query = @"SELECT SalesmanID, SalesmanName 
+                          FROM Salesmen 
+                          WHERE SalesmanID = @Value";
+                    }
+                    else
+                    {
+                        query = @"SELECT SalesmanID, SalesmanName 
+                          FROM Salesmen 
+                          WHERE SalesmanName = @Value";
+                    }
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(salesmanId) ? salesmanId : salesmanName);
 
-                        if (result != null)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            salesmannametxtbox.Text = result.ToString();
-                            selectedSalesmanId = salesmanidtxtbox.Text.Trim();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Salesman ID not found", "Not Found",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            salesmannametxtbox.Clear();
-                            selectedSalesmanId = "";
+                            if (reader.Read())
+                            {
+                                salesmanidtxtbox.Text = reader["SalesmanID"].ToString();
+                                salesmannametxtbox.Text = reader["SalesmanName"].ToString();
+                                selectedSalesmanId = reader["SalesmanID"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Salesman not found",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                salesmanidtxtbox.Clear();
+                                salesmannametxtbox.Clear();
+                                selectedSalesmanId = "";
+                                salesmanidtxtbox.Focus();
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void previewbtn_Click(object sender, EventArgs e)
         {
             try

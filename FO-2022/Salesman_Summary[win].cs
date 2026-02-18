@@ -105,7 +105,7 @@ namespace FO_2022
                     }
                     else
                     {
-                        MessageBox.Show("Report file not found! Please ensure the RDLC file exists.");
+                        MessageBox.Show("Record file not found");
                         return;
                     }
                 }
@@ -117,10 +117,10 @@ namespace FO_2022
                 // Add parameters
                 ReportParameter[] parameters =
                 {
-                    new ReportParameter("FromDate", fromDate.ToString("dd/MM/yyyy")),
-                    new ReportParameter("ToDate", toDate.ToString("dd/MM/yyyy")),
-                    new ReportParameter("SalesmanName", salesmanName),
-                    new ReportParameter("ReportDate", DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
+                    //new ReportParameter("FromDate", fromDate.ToString("dd/MM/yyyy")),
+                    //new ReportParameter("ToDate", toDate.ToString("dd/MM/yyyy")),
+                    //new ReportParameter("SalesmanName", salesmanName),
+                    //new ReportParameter("ReportDate", DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
                 };
 
                 reportViewer1.LocalReport.SetParameters(parameters);
@@ -130,7 +130,7 @@ namespace FO_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Report error: " + ex.Message);
+                //MessageBox.Show("Report error: " + ex.Message);
             }
         }
 
@@ -169,7 +169,7 @@ namespace FO_2022
                     allResources += resource + "\n";
                 }
 
-                MessageBox.Show(allResources, "Debug Info");
+                //MessageBox.Show(allResources, "Debug Info");
                 return null;
             }
             catch

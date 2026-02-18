@@ -14,6 +14,7 @@ namespace FO_2022
         private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         private DateTime fromDate;
         private DateTime toDate;
+       private string selectedPartyId = "";
 
         public Party_Detailed_Ledger_Combine()
         {
@@ -63,10 +64,13 @@ namespace FO_2022
         private void searchpartyid_Click(object sender, EventArgs e)
         {
             string partyID = partyidtxtbox.Text.Trim();
-            if (string.IsNullOrEmpty(partyID))
+            string partyName = partynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(partyID) && string.IsNullOrEmpty(partyName))
             {
-                MessageBox.Show("Please enter Party ID", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter Party ID or Party Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                partyidtxtbox.Focus();
                 return;
             }
 
@@ -75,30 +79,53 @@ namespace FO_2022
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(partyID))
                     {
-                        cmd.Parameters.AddWithValue("@PartyID", partyID);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
+                        query = "SELECT PartyID, PartyName FROM Parties WHERE PartyID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", partyID);
+                    }
+                    else
+                    {
+                        query = "SELECT PartyID, PartyName FROM Parties WHERE PartyName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", partyName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            partynametxtbox.Text = result.ToString();
+                            partyidtxtbox.Text = reader["PartyID"].ToString();
+                            partynametxtbox.Text = reader["PartyName"].ToString();
+                            selectedPartyId = reader["PartyID"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Party not found in database!", "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            partyidtxtbox.Clear();
                             partynametxtbox.Clear();
+                            selectedPartyId = "";
+
+                            MessageBox.Show("Party not found!",
+                                "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            partyidtxtbox.Focus();
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error searching party: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void previewbtn_Click(object sender, EventArgs e)
         {
@@ -180,14 +207,40 @@ namespace FO_2022
                         cmd.Parameters.AddWithValue("@FROMDATE", GetFromDate());
                         cmd.Parameters.AddWithValue("@TODATE", GetToDate());
                         cmd.Parameters.AddWithValue("@accountno", partyidtxtbox.Text.Trim());
-                        //cmd.Parameters.AddWithValue("@salesman", salesmancombobox.SelectedValue);
 
-                        cmd.CommandTimeout = 40; // 3 minutes for large data
+                        cmd.CommandTimeout = 55;
 
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         da.Fill(dt);
                     }
                 }
+
+                // Agar data mila to balance calculate karo
+                if (dt.Rows.Count > 0)
+                {
+                    // Step 1: Data ko VoucherDate ke hisaab se sort karo (null dates pehle aayengi)
+                    DataTable dtSorted = dt.Clone(); // schema copy
+                    var sortedRows = dt.AsEnumerable()
+                        .OrderBy(r => r.Field<DateTime?>("VoucherDate") ?? DateTime.MinValue)
+                        .ThenBy(r => r.Field<int?>("VoucherNo") ?? 0); // tie-break
+                    foreach (var row in sortedRows)
+                        dtSorted.ImportRow(row);
+                    dt = dtSorted;
+
+                    // Step 2: Balance column add karo
+                    dt.Columns.Add("Balance", typeof(decimal));
+
+                    decimal runningBalance = 0;
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        decimal debit = Convert.ToDecimal(row["Debit"]);
+                        decimal credit = Convert.ToDecimal(row["Credit"]);
+                        runningBalance += debit - credit;
+                        row["Balance"] = runningBalance;
+                    }
+                }
+
+                return dt;
             }
             catch (Exception ex)
             {
@@ -195,7 +248,6 @@ namespace FO_2022
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            return dt;
         }
 
         private DateTime GetFromDate()
@@ -249,6 +301,7 @@ namespace FO_2022
                     dateForm.Text = "Select Date Range";
                     dateForm.FormBorderStyle = FormBorderStyle.FixedDialog;
                     dateForm.StartPosition = FormStartPosition.CenterParent;
+                    dateForm.TopMost = true;
                     dateForm.Width = 300;
                     dateForm.Height = 200;
 

@@ -24,24 +24,44 @@ namespace FO_2022
         {
             try
             {
-                string townId = townidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(townId) || !int.TryParse(townId, out int townIdNum))
+                string townIdText = townidtxtbox.Text.Trim();
+                string townNameText = townnametxtbox.Text.Trim();
+
+                if (string.IsNullOrEmpty(townIdText) && string.IsNullOrEmpty(townNameText))
                 {
-                    MessageBox.Show("Please enter valid Town ID.", "Error",
+                    MessageBox.Show("Please enter Town ID or Town Name.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                DataTable townInfo = GetTownInfo(townIdNum);
-                if (townInfo.Rows.Count > 0)
+                DataTable townInfo;
+
+                if (!string.IsNullOrEmpty(townIdText))
                 {
-                    townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    //MessageBox.Show("Town found.", "Success",
-                        //MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!int.TryParse(townIdText, out int townIdNum))
+                    {
+                        MessageBox.Show("Please enter valid numeric Town ID.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    townInfo = GetTownInfoById(townIdNum);
                 }
                 else
                 {
+                    townInfo = GetTownInfoByName(townNameText);
+                }
+
+                if (townInfo.Rows.Count > 0)
+                {
+                    townidtxtbox.Text = townInfo.Rows[0]["TownID"].ToString();
+                    townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
+                }
+                else
+                {
+                    townidtxtbox.Clear();
                     townnametxtbox.Clear();
+
                     MessageBox.Show("Town not found.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -53,7 +73,7 @@ namespace FO_2022
             }
         }
 
-        private DataTable GetTownInfo(int townId)
+        private DataTable GetTownInfoById(int townId)
         {
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -67,28 +87,61 @@ namespace FO_2022
             return dt;
         }
 
+        private DataTable GetTownInfoByName(string townName)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT TownID, TownName FROM Towns WHERE TownName = @TownName";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TownName", townName);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
             try
             {
-                string sectorId = sectoridtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(sectorId) || !int.TryParse(sectorId, out int sectorIdNum))
+                string sectorIdText = sectoridtxtbox.Text.Trim();
+                string sectorNameText = sectornametxtbox.Text.Trim();
+
+                if (string.IsNullOrEmpty(sectorIdText) && string.IsNullOrEmpty(sectorNameText))
                 {
-                    MessageBox.Show("Please enter valid Sector ID.", "Error",
+                    MessageBox.Show("Please enter Sector ID or Sector Name.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                DataTable sectorInfo = GetSectorInfo(sectorIdNum);
-                if (sectorInfo.Rows.Count > 0)
+                DataTable sectorInfo;
+
+                if (!string.IsNullOrEmpty(sectorIdText))
                 {
-                    sectornametxtbox.Text = sectorInfo.Rows[0]["SectorName"].ToString();
-                    //MessageBox.Show("Sector found.", "Success",
-                        //MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!int.TryParse(sectorIdText, out int sectorIdNum))
+                    {
+                        MessageBox.Show("Please enter valid numeric Sector ID.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    sectorInfo = GetSectorInfoById(sectorIdNum);
                 }
                 else
                 {
+                    sectorInfo = GetSectorInfoByName(sectorNameText);
+                }
+
+                if (sectorInfo.Rows.Count > 0)
+                {
+                    sectoridtxtbox.Text = sectorInfo.Rows[0]["SectorID"].ToString();
+                    sectornametxtbox.Text = sectorInfo.Rows[0]["SectorName"].ToString();
+                }
+                else
+                {
+                    sectoridtxtbox.Clear();
                     sectornametxtbox.Clear();
+
                     MessageBox.Show("Sector not found.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -99,8 +152,7 @@ namespace FO_2022
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private DataTable GetSectorInfo(int sectorId)
+        private DataTable GetSectorInfoById(int sectorId)
         {
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -113,6 +165,21 @@ namespace FO_2022
             }
             return dt;
         }
+
+        private DataTable GetSectorInfoByName(string sectorName)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT SectorID, SectorName FROM Sectors WHERE SectorName = @SectorName";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@SectorName", sectorName);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
 
         private void previewbtn_Click(object sender, EventArgs e) => GenerateReport();
         private void printbtn_Click(object sender, EventArgs e) => GenerateReport();

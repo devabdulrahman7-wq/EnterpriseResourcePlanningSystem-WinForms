@@ -327,7 +327,6 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

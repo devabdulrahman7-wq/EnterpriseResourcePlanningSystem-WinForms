@@ -67,7 +67,7 @@ namespace FO_2022
                 //parameters.Add("TotalCompanies", profitData.Rows.Count.ToString());
 
                 Report_viewer reportViewer = new Report_viewer();
-                reportViewer.ShowReport("Company_Wise_Profits", dataSources );
+                reportViewer.ShowReport("Company_Wise_Profits_report", dataSources );
             }
             catch (Exception ex)
             {

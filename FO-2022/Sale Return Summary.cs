@@ -43,138 +43,95 @@ namespace FO_2022
         }
 
         // Customer ID Search
+        private void SearchRecord(string tableName,
+                                  string idColumn,
+                                  string nameColumn,
+                                  TextBox idTextBox,
+                                  TextBox nameTextBox,
+                                  string extraCondition = "")
+        {
+            string idValue = idTextBox.Text.Trim();
+            string nameValue = nameTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(idValue) && string.IsNullOrEmpty(nameValue))
+            {
+                MessageBox.Show("Please enter ID or Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                idTextBox.Focus();
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query;
+
+                    if (!string.IsNullOrEmpty(idValue))
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {idColumn} = @Value {extraCondition}";
+                    else
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {nameColumn} = @Value {extraCondition}";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(idValue) ? idValue : nameValue);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idTextBox.Text = reader[idColumn].ToString();
+                                nameTextBox.Text = reader[nameColumn].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Record not found!",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                idTextBox.Clear();
+                                nameTextBox.Clear();
+                                idTextBox.Focus();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            string customerId = cstmridtxtbox.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(customerId))
-            {
-                MessageBox.Show("Please enter Customer ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID AND PartyType = 'C'";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@PartyID", customerId);
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
-                        {
-                            cstmrnametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Customer not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            cstmrnametxtbox.Text = "";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchRecord("Parties",
+                         "PartyID",
+                         "PartyName",
+                         cstmridtxtbox,
+                         cstmrnametxtbox,
+                         "AND PartyType = 'C'");
         }
-
-        // Town ID Search
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            string townText = townidtxtbox.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(townText))
-            {
-                MessageBox.Show("Please enter Town ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT TownName FROM Towns WHERE TownID = @TownID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        // Try parse, agar nahi ho saka to 0 bhejo (0 ID nahi hogi database me)
-                        int townId;
-                        if (!int.TryParse(townText, out townId))
-                        {
-                            townId = 0; // Invalid input = 0 (not found)
-                        }
-
-                        cmd.Parameters.AddWithValue("@TownID", townId);
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
-                        {
-                            townnametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Town not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            townnametxtbox.Text = "";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchRecord("Towns",
+                         "TownID",
+                         "TownName",
+                         townidtxtbox,
+                         townnametxtbox);
         }
-
-        // Sector ID Search
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
-            string sectorText = sectoridtxtbox.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(sectorText))
-            {
-                MessageBox.Show("Please enter Sector ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT SectorName FROM Sectors WHERE SectorID = @SectorID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        // Try parse, agar nahi ho saka to 0 bhejo
-                        int sectorId;
-                        if (!int.TryParse(sectorText, out sectorId))
-                        {
-                            sectorId = 0; // Invalid input = 0 (not found)
-                        }
-
-                        cmd.Parameters.AddWithValue("@SectorID", sectorId);
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
-                        {
-                            sectornametxtbox.Text = result.ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Sector not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            sectornametxtbox.Text = "";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchRecord("Sectors",
+                         "SectorID",
+                         "SectorName",
+                         sectoridtxtbox,
+                         sectornametxtbox);
         }
+
+
 
         // Preview Button
         private void previewbtn_Click(object sender, EventArgs e)

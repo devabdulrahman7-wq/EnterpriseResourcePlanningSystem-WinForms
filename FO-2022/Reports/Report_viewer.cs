@@ -51,15 +51,47 @@ namespace FO_2022.Reports
         }
 
         // 📌 LOAD REPORT METHOD
+        //private void LoadReport()
+        //{
+        //    // Get RDLC path
+        //    string rdlcPath = GetReportPath(_reportName);
+        //    ValidateFileExists(rdlcPath);
+
+        //    // Setup report
+        //    reportViewer1.LocalReport.ReportPath = rdlcPath;
+        //    reportViewer1.LocalReport.DataSources.Clear();
+
+        //    // Add data sources
+        //    foreach (var dataSource in _dataSources)
+        //    {
+        //        reportViewer1.LocalReport.DataSources.Add(
+        //            new ReportDataSource(dataSource.Key, dataSource.Value));
+        //    }
+
+        //    // Handle parameters
+        //    SetReportParameters();
+
+        //    // Configure viewer
+        //    ConfigureViewerSettings();
+
+        //    // Refresh report
+        //    reportViewer1.RefreshReport();
+        //}
         private void LoadReport()
         {
-            // Get RDLC path
-            string rdlcPath = GetReportPath(_reportName);
-            ValidateFileExists(rdlcPath);
-
-            // Setup report
-            reportViewer1.LocalReport.ReportPath = rdlcPath;
+            // Clear old report
             reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.ReportPath = null;
+
+            // 🔥 Load RDLC as Embedded Resource
+            string reportName = _reportName.EndsWith(".rdlc")
+                ? _reportName
+                : _reportName + ".rdlc";
+
+            string embeddedReport =
+                $"FO_2022.Reports.{Path.GetFileNameWithoutExtension(reportName)}.rdlc";
+
+            reportViewer1.LocalReport.ReportEmbeddedResource = embeddedReport;
 
             // Add data sources
             foreach (var dataSource in _dataSources)
@@ -68,13 +100,13 @@ namespace FO_2022.Reports
                     new ReportDataSource(dataSource.Key, dataSource.Value));
             }
 
-            // Handle parameters
+            // Parameters
             SetReportParameters();
 
-            // Configure viewer
+            // Viewer settings
             ConfigureViewerSettings();
 
-            // Refresh report
+            // Refresh
             reportViewer1.RefreshReport();
         }
 

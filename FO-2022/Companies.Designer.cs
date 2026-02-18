@@ -86,7 +86,7 @@
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(468, 524);
-            this.closebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(75, 24);
             this.closebtn.TabIndex = 215;
@@ -102,7 +102,7 @@
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removebtn.Location = new System.Drawing.Point(220, 524);
-            this.removebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removebtn.Margin = new System.Windows.Forms.Padding(4);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(75, 24);
             this.removebtn.TabIndex = 214;
@@ -118,7 +118,7 @@
             this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editbtn.Location = new System.Drawing.Point(137, 524);
-            this.editbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(75, 24);
             this.editbtn.TabIndex = 213;
@@ -133,7 +133,7 @@
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearbtn.Location = new System.Drawing.Point(385, 524);
-            this.clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(75, 24);
             this.clearbtn.TabIndex = 212;
@@ -149,7 +149,7 @@
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savebtn.Location = new System.Drawing.Point(302, 524);
-            this.savebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 24);
             this.savebtn.TabIndex = 211;
@@ -165,7 +165,7 @@
             this.newbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newbtn.Location = new System.Drawing.Point(54, 524);
-            this.newbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newbtn.Margin = new System.Windows.Forms.Padding(4);
             this.newbtn.Name = "newbtn";
             this.newbtn.Size = new System.Drawing.Size(75, 24);
             this.newbtn.TabIndex = 216;
@@ -190,7 +190,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(235, 80);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(367, 19);
             this.textBox1.TabIndex = 219;
@@ -211,7 +211,7 @@
             // 
             this.customeridsearch.Image = ((System.Drawing.Image)(resources.GetObject("customeridsearch.Image")));
             this.customeridsearch.Location = new System.Drawing.Point(125, 127);
-            this.customeridsearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customeridsearch.Margin = new System.Windows.Forms.Padding(4);
             this.customeridsearch.Name = "customeridsearch";
             this.customeridsearch.Size = new System.Drawing.Size(26, 21);
             this.customeridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,7 +223,7 @@
             // 
             this.cmpnynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnynametxtbox.Location = new System.Drawing.Point(4, 186);
-            this.cmpnynametxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmpnynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.cmpnynametxtbox.Name = "cmpnynametxtbox";
             this.cmpnynametxtbox.Size = new System.Drawing.Size(224, 13);
             this.cmpnynametxtbox.TabIndex = 273;
@@ -233,7 +233,7 @@
             // 
             this.cmpnyidtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmpnyidtxtbox.Location = new System.Drawing.Point(4, 135);
-            this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmpnyidtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.cmpnyidtxtbox.Name = "cmpnyidtxtbox";
             this.cmpnyidtxtbox.Size = new System.Drawing.Size(117, 13);
             this.cmpnyidtxtbox.TabIndex = 272;
@@ -282,7 +282,6 @@
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.dataGridView1);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Companies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

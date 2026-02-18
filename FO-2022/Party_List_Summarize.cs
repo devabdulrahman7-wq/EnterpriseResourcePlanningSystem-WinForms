@@ -19,7 +19,7 @@ namespace FO_2022
         private void printbtn_Click(object sender, EventArgs e)
         {
             Reports.Part_List_rv reportViewerForm = new Reports.Part_List_rv();
-            reportViewerForm.PrintReport();
+            reportViewerForm.Show();
         }
 
         private void closebtn_Click(object sender, EventArgs e)

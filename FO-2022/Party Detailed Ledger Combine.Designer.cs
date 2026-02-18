@@ -124,8 +124,8 @@
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(161, 20);
-            this.partynametxtbox.TabIndex = 285;
+            this.partynametxtbox.Size = new System.Drawing.Size(170, 20);
+            this.partynametxtbox.TabIndex = 2;
             this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
             this.partynametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partynametxtbox_KeyDown);
             // 
@@ -137,7 +137,7 @@
             this.partyidtxtbox.Multiline = true;
             this.partyidtxtbox.Name = "partyidtxtbox";
             this.partyidtxtbox.Size = new System.Drawing.Size(93, 20);
-            this.partyidtxtbox.TabIndex = 284;
+            this.partyidtxtbox.TabIndex = 1;
             this.partyidtxtbox.TextChanged += new System.EventHandler(this.partyidtxtbox_TextChanged);
             this.partyidtxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partyidtxtbox_KeyDown);
             // 
@@ -303,11 +303,12 @@
             this.salesmancombobox.Location = new System.Drawing.Point(129, 339);
             this.salesmancombobox.Name = "salesmancombobox";
             this.salesmancombobox.Size = new System.Drawing.Size(306, 24);
-            this.salesmancombobox.TabIndex = 292;
+            this.salesmancombobox.TabIndex = 3;
             this.salesmancombobox.SelectedIndexChanged += new System.EventHandler(this.salesmancombobox_SelectedIndexChanged);
             // 
             // Party_Detailed_Ledger_Combine
             // 
+            this.AcceptButton = this.previewbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));

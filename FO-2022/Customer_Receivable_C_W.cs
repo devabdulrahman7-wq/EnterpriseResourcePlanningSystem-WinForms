@@ -82,37 +82,65 @@ namespace FO_2022
 
         private void cmpnyidsearch_Click(object sender, EventArgs e)
         {
+            string companyId = cmpnyidtxtbox.Text.Trim();
+            string companyName = cmpnynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(companyId) && string.IsNullOrEmpty(companyName))
+            {
+                MessageBox.Show("Please enter Company ID or Name.",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cmpnyidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                string companyId = cmpnyidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(companyId))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Please enter Company ID.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    conn.Open();
 
-                DataTable companyInfo = GetCompanyInfo(companyId);
-                if (companyInfo.Rows.Count > 0)
-                {
-                    cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
-                    //MessageBox.Show("Company found.", "Success",
-                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    cmpnynametxtbox.Clear();
-                    MessageBox.Show("Company not found.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(companyId))
+                    {
+                        query = "SELECT CompanyID, CompanyName FROM Companies WHERE CompanyID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", companyId);
+                    }
+                    else
+                    {
+                        query = "SELECT CompanyID, CompanyName FROM Companies WHERE CompanyName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", companyName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            cmpnyidtxtbox.Text = reader["CompanyID"].ToString();
+                            cmpnynametxtbox.Text = reader["CompanyName"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Company not found.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            cmpnyidtxtbox.Clear();
+                            cmpnynametxtbox.Clear();
+                            cmpnyidtxtbox.Focus();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private DataTable GetCompanyInfo(string companyId)
         {
             DataTable dt = new DataTable();
@@ -126,37 +154,73 @@ namespace FO_2022
             }
             return dt;
         }
-
         private void townidsearch_Click(object sender, EventArgs e)
         {
+            string townIdText = townidtxtbox.Text.Trim();
+            string townName = townnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(townIdText) && string.IsNullOrEmpty(townName))
+            {
+                MessageBox.Show("Please enter Town ID or Town Name.", "Information",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                townidtxtbox.Focus();
+                return;
+            }
+
             try
             {
-                string townId = townidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(townId) || !int.TryParse(townId, out int townIdNum))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Please enter valid Town ID.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    conn.Open();
 
-                DataTable townInfo = GetTownInfo(townIdNum);
-                if (townInfo.Rows.Count > 0)
-                {
-                    townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    LoadSectors(townId); // Load sectors for this town
-                    //MessageBox.Show("Town found.", "Success",
-                    //    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    townnametxtbox.Clear();
-                    MessageBox.Show("Town not found.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string query;
+                    SqlCommand cmd;
+
+                    if (!string.IsNullOrEmpty(townIdText))
+                    {
+                        if (!int.TryParse(townIdText, out int townIdNum))
+                        {
+                            MessageBox.Show("Please enter a valid Town ID.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        query = "SELECT TownID, TownName FROM Towns WHERE TownID = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", townIdNum);
+                    }
+                    else
+                    {
+                        query = "SELECT TownID, TownName FROM Towns WHERE TownName = @Value";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Value", townName);
+                    }
+
+                    using (cmd)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            townidtxtbox.Text = reader["TownID"].ToString();
+                            townnametxtbox.Text = reader["TownName"].ToString();
+
+                            // Load sectors for this town
+                            LoadSectors(reader["TownID"].ToString());
+                        }
+                        else
+                        {
+                            townidtxtbox.Clear();
+                            townnametxtbox.Clear();
+                            MessageBox.Show("Town not found.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            townidtxtbox.Focus();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
+                MessageBox.Show("Error searching town: " + ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -167,10 +231,14 @@ namespace FO_2022
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "SELECT TownID, TownName FROM Towns WHERE TownID = @TownID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@TownID", townId);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TownID", townId);
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
             }
             return dt;
         }

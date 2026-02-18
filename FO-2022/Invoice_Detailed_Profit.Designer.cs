@@ -56,12 +56,11 @@
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
             this.cstmrnametxtbox.Size = new System.Drawing.Size(269, 24);
             this.cstmrnametxtbox.TabIndex = 447;
-            //this.cstmrnametxtbox.TextChanged += new System.EventHandler(this.cstmrnametxtbox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(152, 184);
+            this.label7.Location = new System.Drawing.Point(152, 187);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 16);
@@ -78,12 +77,11 @@
             this.sectornametxtbox.Name = "sectornametxtbox";
             this.sectornametxtbox.Size = new System.Drawing.Size(269, 24);
             this.sectornametxtbox.TabIndex = 445;
-            //this.sectornametxtbox.TextChanged += new System.EventHandler(this.sectornametxtbox_TextChanged);
             // 
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(153, 240);
+            this.a.Location = new System.Drawing.Point(153, 244);
             this.a.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(81, 16);
@@ -110,9 +108,8 @@
             this.saleidtxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.saleidtxtbox.Multiline = true;
             this.saleidtxtbox.Name = "saleidtxtbox";
-            this.saleidtxtbox.Size = new System.Drawing.Size(96, 21);
+            this.saleidtxtbox.Size = new System.Drawing.Size(94, 21);
             this.saleidtxtbox.TabIndex = 452;
-            //this.saleidtxtbox.TextChanged += new System.EventHandler(this.saleidtxtbox_TextChanged);
             // 
             // saleidsearch
             // 
@@ -120,7 +117,7 @@
             this.saleidsearch.Location = new System.Drawing.Point(251, 155);
             this.saleidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.saleidsearch.Name = "saleidsearch";
-            this.saleidsearch.Size = new System.Drawing.Size(48, 23);
+            this.saleidsearch.Size = new System.Drawing.Size(44, 23);
             this.saleidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.saleidsearch.TabIndex = 451;
             this.saleidsearch.TabStop = false;
@@ -210,9 +207,8 @@
             this.saledatetxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.saledatetxtbox.Multiline = true;
             this.saledatetxtbox.Name = "saledatetxtbox";
-            this.saledatetxtbox.Size = new System.Drawing.Size(126, 21);
+            this.saledatetxtbox.Size = new System.Drawing.Size(127, 21);
             this.saledatetxtbox.TabIndex = 462;
-            //this.saledatetxtbox.TextChanged += new System.EventHandler(this.saledatetxtbox_TextChanged);
             // 
             // Invoice_Detailed_Profit
             // 

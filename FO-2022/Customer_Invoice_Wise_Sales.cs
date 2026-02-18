@@ -43,174 +43,100 @@ namespace FO_2022
         // 📌 SEARCH CUSTOMER BY ID
         private void customeridsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cstmridtxtbox.Text))
-            {
-                MessageBox.Show("Please enter Customer ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string customerName = GetCustomerName(cstmridtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(customerName))
-            {
-                cstmrnametxtbox.Text = customerName;
-            }
-            else
-            {
-                MessageBox.Show("Customer not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cstmrnametxtbox.Clear();
-            }
+            SearchEntity("Parties",
+                         "PartyID",
+                         "PartyName",
+                         cstmridtxtbox,
+                         cstmrnametxtbox,
+                         "AND PartyType = 'C'");
         }
-
-        private string GetCustomerName(string customerId)
-        {
-            string customerName = string.Empty;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@PartyID", customerId);
-                    conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        customerName = result.ToString();
-                }
-            }
-
-            return customerName;
-        }
-
-        // 📌 SEARCH COMPANY BY ID
         private void companyidsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cmpnyidtxtbox.Text))
-            {
-                MessageBox.Show("Please enter Company ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string companyName = GetCompanyName(cmpnyidtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(companyName))
-            {
-                cmpnynametxtbox.Text = companyName;
-            }
-            else
-            {
-                MessageBox.Show("Company not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmpnynametxtbox.Clear();
-            }
+            SearchEntity("Companies",
+                         "CompanyID",
+                         "CompanyName",
+                         cmpnyidtxtbox,
+                         cmpnynametxtbox);
         }
-
-        private string GetCompanyName(string companyId)
-        {
-            string companyName = string.Empty;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT CompanyName FROM Companies WHERE CompanyID = @CompanyID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@CompanyID", companyId);
-                    conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        companyName = result.ToString();
-                }
-            }
-
-            return companyName;
-        }
-
-        // 📌 SEARCH SECTOR BY ID
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(sectoridtxtbox.Text))
-            {
-                MessageBox.Show("Please enter Sector ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string sectorName = GetSectorName(sectoridtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(sectorName))
-            {
-                sectornametxtbox.Text = sectorName;
-            }
-            else
-            {
-                MessageBox.Show("Sector not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                sectornametxtbox.Clear();
-            }
+            SearchEntity("Sectors",
+                         "SectorID",
+                         "SectorName",
+                         sectoridtxtbox,
+                         sectornametxtbox);
         }
-
-        private string GetSectorName(string sectorId)
-        {
-            string sectorName = string.Empty;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT SectorName FROM Sectors WHERE SectorID = @SectorID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@SectorID", sectorId);
-                    conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        sectorName = result.ToString();
-                }
-            }
-
-            return sectorName;
-        }
-
-        // 📌 SEARCH TOWN BY ID
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(townidtxtbox.Text))
+            SearchEntity("Towns",
+                         "TownID",
+                         "TownName",
+                         townidtxtbox,
+                         townnametxtbox);
+        }
+        private void SearchEntity(string tableName,
+                                  string idColumn,
+                                  string nameColumn,
+                                  TextBox idTextBox,
+                                  TextBox nameTextBox,
+                                  string extraCondition = "")
+        {
+            string idValue = idTextBox.Text.Trim();
+            string nameValue = nameTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(idValue) && string.IsNullOrEmpty(nameValue))
             {
-                MessageBox.Show("Please enter Town ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter ID or Name",
+                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                idTextBox.Focus();
                 return;
             }
 
-            string townName = GetTownName(townidtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(townName))
+            try
             {
-                townnametxtbox.Text = townName;
-            }
-            else
-            {
-                MessageBox.Show("Town not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                townnametxtbox.Clear();
-            }
-        }
-
-        private string GetTownName(string townId)
-        {
-            string townName = string.Empty;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT TownName FROM Towns WHERE TownID = @TownID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@TownID", townId);
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        townName = result.ToString();
+
+                    string query;
+
+                    if (!string.IsNullOrEmpty(idValue))
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {idColumn} = @Value {extraCondition}";
+                    else
+                        query = $"SELECT {idColumn}, {nameColumn} FROM {tableName} WHERE {nameColumn} = @Value {extraCondition}";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Value",
+                            !string.IsNullOrEmpty(idValue) ? idValue : nameValue);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idTextBox.Text = reader[idColumn].ToString();
+                                nameTextBox.Text = reader[nameColumn].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Record not found",
+                                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                idTextBox.Clear();
+                                nameTextBox.Clear();
+                                idTextBox.Focus();
+                            }
+                        }
+                    }
                 }
             }
-
-            return townName;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         // 📌 PREVIEW BUTTON
         private void previewbtn_Click(object sender, EventArgs e)

@@ -1107,6 +1107,7 @@
             this.salesmanCommissionToolStripMenuItem.Name = "salesmanCommissionToolStripMenuItem";
             this.salesmanCommissionToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
             this.salesmanCommissionToolStripMenuItem.Text = "Salesman Commission";
+            this.salesmanCommissionToolStripMenuItem.Visible = false;
             this.salesmanCommissionToolStripMenuItem.Click += new System.EventHandler(this.salesmanCommissionToolStripMenuItem_Click);
             // 
             // salesmanStockStatementToolStripMenuItem
@@ -1253,6 +1254,7 @@
             this.companyProductActivityReportToolStripMenuItem.Name = "companyProductActivityReportToolStripMenuItem";
             this.companyProductActivityReportToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
             this.companyProductActivityReportToolStripMenuItem.Text = "Company Product Activity Report";
+            this.companyProductActivityReportToolStripMenuItem.Visible = false;
             this.companyProductActivityReportToolStripMenuItem.Click += new System.EventHandler(this.companyProductActivityReportToolStripMenuItem_Click);
             // 
             // salesRecoveryRegisterToolStripMenuItem
@@ -1855,6 +1857,7 @@
             this.toolStripSplitButton8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpTopicsToolStripMenuItem,
             this.aboutToolStripMenuItem});
+            this.toolStripSplitButton8.Enabled = false;
             this.toolStripSplitButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton8.Image")));
             this.toolStripSplitButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton8.Name = "toolStripSplitButton8";
@@ -1916,7 +1919,7 @@
             this.logoutlbl.AutoSize = true;
             this.logoutlbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.logoutlbl.Location = new System.Drawing.Point(49, 98);
+            this.logoutlbl.Location = new System.Drawing.Point(53, 134);
             this.logoutlbl.Name = "logoutlbl";
             this.logoutlbl.Size = new System.Drawing.Size(58, 19);
             this.logoutlbl.TabIndex = 4;
@@ -2221,7 +2224,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(800, 0);
             this.Name = "Mainform1";
-            this.Text = "Mainform1";
+            this.Text = "DashBoard";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);

@@ -29,33 +29,55 @@ namespace FO_2022
             try
             {
                 string partyID = partyidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(partyID))
+                string partyName = partynametxtbox.Text.Trim();
+
+                if (string.IsNullOrEmpty(partyID) && string.IsNullOrEmpty(partyName))
                 {
-                    MessageBox.Show("Please enter Party ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please enter Party ID or Party Name",
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
+
+                    string query = @"SELECT PartyID, PartyName 
+                             FROM Parties 
+                             WHERE PartyID = @PartyID 
+                                OR PartyName = @PartyName";
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@PartyID", partyID);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
-                            partynametxtbox.Text = result.ToString();
-                        else
+                        cmd.Parameters.AddWithValue("@PartyID",
+                            string.IsNullOrEmpty(partyID) ? (object)DBNull.Value : partyID);
+
+                        cmd.Parameters.AddWithValue("@PartyName",
+                            string.IsNullOrEmpty(partyName) ? (object)DBNull.Value : partyName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            MessageBox.Show("Party not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            partynametxtbox.Clear();
+                            if (reader.Read())
+                            {
+                                partyidtxtbox.Text = reader["PartyID"].ToString();
+                                partynametxtbox.Text = reader["PartyName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Party not found!",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                partyidtxtbox.Clear();
+                                partynametxtbox.Clear();
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error searching party: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error searching party: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

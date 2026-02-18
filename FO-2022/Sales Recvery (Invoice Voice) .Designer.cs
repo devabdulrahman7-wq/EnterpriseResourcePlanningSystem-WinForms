@@ -295,7 +295,7 @@
             // vendorpartyrecoverytxtbox
             // 
             this.vendorpartyrecoverytxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendorpartyrecoverytxtbox.Location = new System.Drawing.Point(1030, 147);
+            this.vendorpartyrecoverytxtbox.Location = new System.Drawing.Point(1030, 148);
             this.vendorpartyrecoverytxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.vendorpartyrecoverytxtbox.Name = "vendorpartyrecoverytxtbox";
             this.vendorpartyrecoverytxtbox.Size = new System.Drawing.Size(102, 16);
@@ -333,7 +333,7 @@
             // vendoridtxtbox
             // 
             this.vendoridtxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vendoridtxtbox.Location = new System.Drawing.Point(669, 142);
+            this.vendoridtxtbox.Location = new System.Drawing.Point(669, 147);
             this.vendoridtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.vendoridtxtbox.Name = "vendoridtxtbox";
             this.vendoridtxtbox.Size = new System.Drawing.Size(94, 16);
@@ -412,6 +412,7 @@
             // removebtn
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.removebtn.Enabled = false;
             this.removebtn.FlatAppearance.BorderSize = 0;
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,6 +428,7 @@
             // openbtn
             // 
             this.openbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.openbtn.Enabled = false;
             this.openbtn.FlatAppearance.BorderSize = 0;
             this.openbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -457,6 +459,7 @@
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.savebtn.Enabled = false;
             this.savebtn.FlatAppearance.BorderSize = 0;
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -62,7 +62,7 @@
             // cstmrnametxtbox
             // 
             this.cstmrnametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cstmrnametxtbox.Location = new System.Drawing.Point(313, 215);
+            this.cstmrnametxtbox.Location = new System.Drawing.Point(312, 216);
             this.cstmrnametxtbox.Margin = new System.Windows.Forms.Padding(6);
             this.cstmrnametxtbox.Multiline = true;
             this.cstmrnametxtbox.Name = "cstmrnametxtbox";
@@ -94,7 +94,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(310, 193);
+            this.label7.Location = new System.Drawing.Point(311, 199);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 16);
@@ -105,7 +105,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(124, 193);
+            this.label8.Location = new System.Drawing.Point(122, 198);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 16);

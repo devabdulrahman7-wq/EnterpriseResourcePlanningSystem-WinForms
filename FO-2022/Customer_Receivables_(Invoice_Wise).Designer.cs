@@ -69,10 +69,10 @@
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(247, 152);
+            this.townidsearch.Location = new System.Drawing.Point(247, 147);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(5);
             this.townidsearch.Name = "townidsearch";
-            this.townidsearch.Size = new System.Drawing.Size(40, 25);
+            this.townidsearch.Size = new System.Drawing.Size(40, 22);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 412;
             this.townidsearch.TabStop = false;

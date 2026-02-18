@@ -431,8 +431,8 @@ namespace FO_2022
                             // Show message about loaded rows
                             if (rowCount > 0)
                             {
-                                MessageBox.Show($"Loaded {rowCount} accounts for '{accountType}'",
-                                              "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //MessageBox.Show($"Loaded {rowCount} accounts for '{accountType}'",
+                                //              "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 // Configure grid AFTER data is loaded
                                 ConfigureDataGridView();

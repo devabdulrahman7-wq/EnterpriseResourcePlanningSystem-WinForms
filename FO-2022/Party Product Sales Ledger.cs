@@ -17,6 +17,9 @@ namespace FO_2022
     public partial class Party_Product_Sales_Ledger : Form
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string selectedProductId = "";
+        private string selectedPartyId = "";
+        private string selectedSkipPartyId = "";
 
         public Party_Product_Sales_Ledger()
         {
@@ -76,9 +79,9 @@ namespace FO_2022
             }
 
             // Get parameters
-            string productId = string.IsNullOrWhiteSpace(productidtxtbox.Text) ? null : productidtxtbox.Text;
-            string partyId = string.IsNullOrWhiteSpace(partyidtxtbox.Text) ? null : partyidtxtbox.Text;
-            string skipPartyId = string.IsNullOrWhiteSpace(searchforpartyidskip.Text) ? null : searchforpartyidskip.Text;
+            string productId = string.IsNullOrWhiteSpace(selectedProductId) ? null : selectedProductId;
+            string partyId = string.IsNullOrWhiteSpace(selectedPartyId) ? null : selectedPartyId;
+            string skipPartyId = string.IsNullOrWhiteSpace(selectedSkipPartyId) ? null : selectedSkipPartyId;
 
             // Get data
             DataTable dt = GetSalesLedgerData(fromdatepicker.Value, todatepicker.Value,
@@ -167,7 +170,7 @@ namespace FO_2022
                         string.IsNullOrEmpty(partyId) ? (object)DBNull.Value : partyId);
                     cmd.Parameters.AddWithValue("@SkipPartyId",
                         string.IsNullOrEmpty(skipPartyId) ? (object)DBNull.Value : skipPartyId);
-
+                    cmd.CommandTimeout = 60;
                     conn.Open();
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -182,109 +185,164 @@ namespace FO_2022
         // 📌 SEARCH PRODUCT
         private void searchproductid_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(productidtxtbox.Text))
+            string productId = productidtxtbox.Text.Trim();
+            string productName = productnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(productId) && string.IsNullOrEmpty(productName))
             {
-                MessageBox.Show("Please enter Product ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Product ID or Product Name",
+                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string productName = GetProductName(productidtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(productName))
-            {
-                productnametxtbox.Text = productName;
-            }
-            else
-            {
-                MessageBox.Show("Product not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                productnametxtbox.Clear();
-            }
-        }
-
-        private string GetProductName(string productId)
-        {
-            string productName = string.Empty;
-
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT ProductName FROM Products WHERE ProductID = @ProductID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                conn.Open();
+
+                string query;
+                SqlCommand cmd;
+
+                if (!string.IsNullOrEmpty(productId))
                 {
-                    cmd.Parameters.AddWithValue("@ProductID", productId);
-                    conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        productName = result.ToString();
+                    query = "SELECT ProductID, ProductName FROM Products WHERE ProductID = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", productId);
+                }
+                else
+                {
+                    query = "SELECT ProductID, ProductName FROM Products WHERE ProductName = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", productName);
+                }
+
+                using (cmd)
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        productidtxtbox.Text = reader["ProductID"].ToString();
+                        productnametxtbox.Text = reader["ProductName"].ToString();
+                        selectedProductId = reader["ProductID"].ToString();
+                    }
+                    else
+                    {
+                        productidtxtbox.Clear();
+                        productnametxtbox.Clear();
+                        selectedProductId = "";
+
+                        MessageBox.Show("Product not found",
+                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
-
-            return productName;
         }
-
         // 📌 SEARCH PARTY
         private void searchpartyid_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(partyidtxtbox.Text))
+            string partyId = partyidtxtbox.Text.Trim();
+            string partyName = partynametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(partyId) && string.IsNullOrEmpty(partyName))
             {
-                MessageBox.Show("Please enter Party ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Party ID or Party Name",
+                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string partyName = GetPartyName(partyidtxtbox.Text.Trim());
-            if (!string.IsNullOrEmpty(partyName))
-            {
-                partynametxtbox.Text = partyName;
-            }
-            else
-            {
-                MessageBox.Show("Party not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                partynametxtbox.Clear();
-            }
-        }
-
-        private string GetPartyName(string partyId)
-        {
-            string partyName = string.Empty;
-
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT PartyName FROM Parties WHERE PartyID = @PartyID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                conn.Open();
+
+                string query;
+                SqlCommand cmd;
+
+                if (!string.IsNullOrEmpty(partyId))
                 {
-                    cmd.Parameters.AddWithValue("@PartyID", partyId);
-                    conn.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        partyName = result.ToString();
+                    query = "SELECT PartyID, PartyName FROM Parties WHERE PartyID = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", partyId);
+                }
+                else
+                {
+                    query = "SELECT PartyID, PartyName FROM Parties WHERE PartyName = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", partyName);
+                }
+
+                using (cmd)
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        partyidtxtbox.Text = reader["PartyID"].ToString();
+                        partynametxtbox.Text = reader["PartyName"].ToString();
+                        selectedPartyId = reader["PartyID"].ToString();
+                    }
+                    else
+                    {
+                        partyidtxtbox.Clear();
+                        partynametxtbox.Clear();
+                        selectedPartyId = "";
+
+                        MessageBox.Show("Party not found",
+                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
-
-            return partyName;
         }
 
         // 📌 SEARCH SKIP PARTY
         private void searchskippartyid_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(searchforpartyidskip.Text))
+            string partyId = partyidforskiptxtbox.Text.Trim();
+            string partyName = partynameskiptxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(partyId) && string.IsNullOrEmpty(partyName))
             {
-                MessageBox.Show("Please enter Skip Party ID", "Validation",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter Skip Party ID or Name",
+                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string skipPartyName = GetPartyName(searchforpartyidskip.Text.Trim());
-            if (!string.IsNullOrEmpty(skipPartyName))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                partynameskiptxtbox.Text = skipPartyName;
-            }
-            else
-            {
-                MessageBox.Show("Party not found", "Information",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                partynameskiptxtbox.Clear();
+                conn.Open();
+
+                string query;
+                SqlCommand cmd;
+
+                if (!string.IsNullOrEmpty(partyId))
+                {
+                    query = "SELECT PartyID, PartyName FROM Parties WHERE PartyID = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", partyId);
+                }
+                else
+                {
+                    query = "SELECT PartyID, PartyName FROM Parties WHERE PartyName = @Value";
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Value", partyName);
+                }
+
+                using (cmd)
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        partyidforskiptxtbox.Text = reader["PartyID"].ToString();
+                        partynameskiptxtbox.Text = reader["PartyName"].ToString();
+                        selectedSkipPartyId = reader["PartyID"].ToString();
+                    }
+                    else
+                    {
+                        partyidforskiptxtbox.Clear();
+                        partynameskiptxtbox.Clear();
+                        selectedSkipPartyId = "";
+
+                        MessageBox.Show("Party not found",
+                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
@@ -292,18 +350,14 @@ namespace FO_2022
         private void productidtxtbox_TextChanged(object sender, EventArgs e)
         {
             productnametxtbox.Clear();
+            selectedProductId = "";
         }
 
         private void partyidtxtbox_TextChanged(object sender, EventArgs e)
         {
             partynametxtbox.Clear();
+            selectedPartyId = "";
         }
-
-        private void searchforpartyidskip_TextChanged(object sender, EventArgs e)
-        {
-            partynameskiptxtbox.Clear();
-        }
-
         // 📌 DATE CHANGED EVENTS
         private void fromdatepicker_ValueChanged(object sender, EventArgs e)
         {
@@ -313,6 +367,12 @@ namespace FO_2022
         private void todatepicker_ValueChanged(object sender, EventArgs e)
         {
             // Optional: Add validation if needed
+        }
+
+        private void partyidforskiptxtbox_TextChanged(object sender, EventArgs e)
+        {
+            partynameskiptxtbox.Clear();
+            selectedSkipPartyId = "";
         }
 
         // Add these controls to your form designer (optional manual setup):
