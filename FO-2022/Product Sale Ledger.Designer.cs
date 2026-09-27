@@ -231,6 +231,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Sale_Ledger";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Product_Sale_Ledger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchproductid)).EndInit();
             this.ResumeLayout(false);

@@ -72,10 +72,10 @@
             // townidsearch
             // 
             this.townidsearch.Image = ((System.Drawing.Image)(resources.GetObject("townidsearch.Image")));
-            this.townidsearch.Location = new System.Drawing.Point(255, 190);
+            this.townidsearch.Location = new System.Drawing.Point(255, 198);
             this.townidsearch.Margin = new System.Windows.Forms.Padding(6);
             this.townidsearch.Name = "townidsearch";
-            this.townidsearch.Size = new System.Drawing.Size(47, 24);
+            this.townidsearch.Size = new System.Drawing.Size(47, 18);
             this.townidsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.townidsearch.TabIndex = 385;
             this.townidsearch.TabStop = false;
@@ -127,10 +127,10 @@
             // sectoridsearch
             // 
             this.sectoridsearch.Image = ((System.Drawing.Image)(resources.GetObject("sectoridsearch.Image")));
-            this.sectoridsearch.Location = new System.Drawing.Point(255, 252);
+            this.sectoridsearch.Location = new System.Drawing.Point(255, 257);
             this.sectoridsearch.Margin = new System.Windows.Forms.Padding(6);
             this.sectoridsearch.Name = "sectoridsearch";
-            this.sectoridsearch.Size = new System.Drawing.Size(47, 21);
+            this.sectoridsearch.Size = new System.Drawing.Size(47, 17);
             this.sectoridsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sectoridsearch.TabIndex = 380;
             this.sectoridsearch.TabStop = false;

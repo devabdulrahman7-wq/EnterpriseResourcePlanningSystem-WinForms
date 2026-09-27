@@ -79,7 +79,6 @@
             this.accountnametxtbox.Name = "accountnametxtbox";
             this.accountnametxtbox.Size = new System.Drawing.Size(181, 25);
             this.accountnametxtbox.TabIndex = 296;
-            //this.accountnametxtbox.TextChanged += new System.EventHandler(this.accountnametxtbox_TextChanged);
             // 
             // accountnotxtbox
             // 

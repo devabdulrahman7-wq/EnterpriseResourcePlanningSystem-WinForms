@@ -1,647 +1,728 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Rectangle Name="Rectangle1">
-        <ReportItems>
-          <Tablix Name="Tablix1">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>1.62058in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.62058in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.62058in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.62058in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.62058in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+                <TablixColumn><Width>1.41in</Width></TablixColumn>
+                <TablixColumn><Width>1.99in</Width></TablixColumn>
+                <TablixColumn><Width>1.41in</Width></TablixColumn>
+                <TablixColumn><Width>1.22in</Width></TablixColumn>
+                <TablixColumn><Width>1.41in</Width></TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Month</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>MONTH</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Month Name</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>MONTHNAME</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox7">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Year</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>YEAR</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox11">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Total Expense</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>AMOUNT</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox9">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Transaction Count</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>TRANSACTIONCOUNT</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Month">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Month.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Month</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="MonthName">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!MonthName.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>MonthName</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!Month.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Year">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Year.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Year</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!MonthName.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TotalExpense">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!TotalExpense.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>TotalExpense</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!Year.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TransactionCount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!TransactionCount.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>TransactionCount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!TotalExpense.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Dtl4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!TransactionCount.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+                      </CellContents>
+                    </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
-                  <Group Name="Details" />
-                </TablixMember>
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
-            <Height>0.5in</Height>
-            <Width>8.1029in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Tablix>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0in</Top>
+        <Left>0in</Left>
         <Height>0.5in</Height>
-        <Width>8.10292in</Width>
+        <Width>7.45in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
-      </Rectangle>
+      </Tablix>
     </ReportItems>
     <Height>0.5in</Height>
-    <Style>
-      <Border>
-        <Style>None</Style>
-        <Width>0.5pt</Width>
-      </Border>
-    </Style>
+    <Style />
   </Body>
-  <Width>8.12917in</Width>
+  <Width>7.45in</Width>
   <Page>
     <PageHeader>
-      <Height>0.49792in</Height>
+      <Height>0.95in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox1">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Monthly Expense </Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Height>0.21875in</Height>
-          <Width>8.12917in</Width>
+<Textbox Name="TxtTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>MONTHLY EXPENSE</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <BackgroundColor>SlateBlue</BackgroundColor>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>12pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="ExecutionTime">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!ExecutionTime</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.27431in</Top>
-          <Left>4.87896in</Left>
-          <Height>0.22361in</Height>
-          <Width>1.8832in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
+        <TextAlign>Center</TextAlign>
       </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>0in</Left><Height>0.24in</Height><Width>7.45in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;Filter: All&quot;</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top><Left>0in</Left><Height>0.2in</Height><Width>4.05in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtRight1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;Printed On: &quot; &amp; Format(Globals!ExecutionTime, &quot;dd-MMM-yyyy hh:mm tt&quot;)</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top><Left>4.15in</Left><Height>0.2in</Height><Width>3.3in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;From Date: &quot;</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>0in</Left><Height>0.2in</Height><Width>2in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;To Date: &quot;</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>2.05in</Left><Height>0.2in</Height><Width>2in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtRight2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;User: &quot; &amp; User!UserID</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>4.15in</Left><Height>0.2in</Height><Width>3.3in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+      </ReportItems>
+      <Style />
     </PageHeader>
     <PageFooter>
-      <Height>0.28125in</Height>
+      <Height>0.24in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="PageNumber">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!PageNumber</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Left>4.85824in</Left>
-          <Height>0.2375in</Height>
-          <Width>0.75125in</Width>
+        <Textbox Name="FooterTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>MONTHLY EXPENSE</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="TotalPages">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!TotalPages</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Left>3.55443in</Left>
-          <Height>0.2375in</Height>
-          <Width>0.5625in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox2">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Total pages:</Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>2.51969in</Left>
-          <Height>0.2375in</Height>
-          <Width>0.97916in</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox16">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Page no:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Left>4.15686in</Left>
-          <Height>0.2375in</Height>
-          <Width>0.6875in</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-          <Width>0.5pt</Width>
-        </Border>
+        <TextAlign>Left</TextAlign>
       </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>0in</Left><Height>0.2in</Height><Width>3in</Width>
+  <Style>
+    <Border>
+      <Color>White</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+        <Textbox Name="FooterPage">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=&quot;Page &quot; &amp; Globals!PageNumber &amp; &quot; of &quot; &amp; Globals!TotalPages</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>5.8in</Left><Height>0.2in</Height><Width>1.65in</Width>
+  <Style>
+    <Border>
+      <Color>White</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+      </ReportItems>
+      <Style />
     </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
     <InteractiveHeight>11.69in</InteractiveHeight>
     <InteractiveWidth>8.27in</InteractiveWidth>
-    <LeftMargin>0.1in</LeftMargin>
-    <RightMargin>0.1in</RightMargin>
-    <TopMargin>0.1in</TopMargin>
-    <BottomMargin>0.1in</BottomMargin>
-    <Style>
-      <Border>
-        <Style>None</Style>
-        <Width>0.5pt</Width>
-      </Border>
-    </Style>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
   </Page>
-  <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Company_Wise_Profits_ds">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>4b01b4f9-61bd-49a8-8a73-e0d19c20e24c</rd:DataSourceID>
+      <rd:DataSourceID>ef426f70-b2bc-4bd9-a86b-4b3e1b3d0d4b</rd:DataSourceID>
     </DataSource>
   </DataSources>
+
   <DataSets>
     <DataSet Name="DataSet1">
-      <Query>
-        <DataSourceName>Company_Wise_Profits_ds</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
       <Fields>
         <Field Name="Month">
           <DataField>Month</DataField>
@@ -664,16 +745,15 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>Company_Wise_Profits_ds</rd:DataSetName>
-        <rd:SchemaPath>E:\FO-2022\FO-2022\Reports\Company_Wise_Profits_ds.xsd</rd:SchemaPath>
-        <rd:TableName>Monthly_Expense</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
+      <Query>
+        <DataSourceName>Company_Wise_Profits_ds</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
     </DataSet>
   </DataSets>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>90713849-ec9d-406c-902a-600bb09d1338</rd:ReportID>
+  <rd:ReportID>3b46c348-6526-43de-a36e-22e5fea83633</rd:ReportID>
 </Report>
+

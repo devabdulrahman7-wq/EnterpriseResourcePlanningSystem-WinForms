@@ -4,7 +4,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using System.IO;
+using Microsoft.Reporting.WinForms;
 namespace FO_2022
 {
     public partial class Salesman_Sector_List : Form
@@ -133,14 +134,7 @@ namespace FO_2022
         {
             string salesmanID = salesmanidtxtbox.Text.Trim();
 
-            if (string.IsNullOrEmpty(salesmanID))
-            {
-                MessageBox.Show("Please enter and search for a salesman first", "Input Required",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(salesmannametxtbox.Text))
+            if (string.IsNullOrEmpty(salesmanID) || string.IsNullOrEmpty(salesmannametxtbox.Text))
             {
                 MessageBox.Show("Please search for a salesman first", "Input Required",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -154,7 +148,6 @@ namespace FO_2022
 
                 if (dtReport.Rows.Count == 0)
                 {
-                    // Add at least one row to show salesman info even if no sectors
                     DataRow dr = dtReport.NewRow();
                     dr["SalesmanID"] = salesmanID;
                     dr["SalesmanName"] = salesmannametxtbox.Text;
@@ -165,22 +158,17 @@ namespace FO_2022
                     dtReport.Rows.Add(dr);
                 }
 
-                // Prepare DataSources
-                var dataSources = new Dictionary<string, DataTable>();
-                dataSources.Add("DataSet1", dtReport);
-
-                // Show Report
-                FO_2022.Reports.Report_viewer reportForm = new FO_2022.Reports.Report_viewer();
-                reportForm.ShowReport("Salesman_Sector", dataSources);
+                // ✅ Open report form
+                Reports.Salesman_Sector_rv reportForm = new Reports.Salesman_Sector_rv();
+                reportForm.ReportData = dtReport;
+                reportForm.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading report: {ex.Message}", "Report Error",
+                MessageBox.Show($"Error: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // 📌 PRINT BUTTON
         private void printbtn_Click(object sender, EventArgs e)
         {
             previewbtn_Click(sender, e);

@@ -45,156 +45,75 @@ namespace FO_2022
             }
         }
 
+        // 📌 SEARCH CUSTOMER
+        // 📌 SEARCH CUSTOMER
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string customerId = cstmridtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(customerId))
-                {
-                    MessageBox.Show("Please enter Customer ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DataTable customerInfo = GetCustomerInfo(customerId);
-                if (customerInfo.Rows.Count > 0)
-                {
-                    //cstmrnametxtbox.Text = customerInfo.Rows[0]["PartyName"].ToString();
-                    //MessageBox.Show("Customer found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    cstmrnametxtbox.Clear();
-                    MessageBox.Show("Customer not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchEntity("Parties", "PartyName", cstmridtxtbox, cstmrnametxtbox, "PartyID", out string selectedId);
+            if (!string.IsNullOrEmpty(selectedId)) cstmridtxtbox.Text = selectedId;
         }
 
-        private DataTable GetCustomerInfo(string customerId)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT PartyID, PartyName FROM Parties WHERE PartyID = @PartyID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@PartyID", customerId);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            return dt;
-        }
-
+        // 📌 SEARCH COMPANY
         private void cmpnyidsearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string companyId = cmpnyidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(companyId))
-                {
-                    MessageBox.Show("Please enter Company ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DataTable companyInfo = GetCompanyInfo(companyId);
-                if (companyInfo.Rows.Count > 0)
-                {
-                    //cmpnynametxtbox.Text = companyInfo.Rows[0]["CompanyName"].ToString();
-                    //MessageBox.Show("Company found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    cmpnynametxtbox.Clear();
-                    MessageBox.Show("Company not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchEntity("Companies", "CompanyName", cmpnyidtxtbox, cmpnynametxtbox, "CompanyID", out string selectedId);
+            if (!string.IsNullOrEmpty(selectedId)) cmpnyidtxtbox.Text = selectedId;
         }
 
-        private DataTable GetCompanyInfo(string companyId)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT CompanyID, CompanyName FROM Companies WHERE CompanyID = @CompanyID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@CompanyID", companyId);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            return dt;
-        }
-
+        // 📌 SEARCH TOWN
         private void townidsearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string townId = townidtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(townId) || !int.TryParse(townId, out int townIdNum))
-                {
-                    MessageBox.Show("Please enter valid Town ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DataTable townInfo = GetTownInfo(townIdNum);
-                if (townInfo.Rows.Count > 0)
-                {
-                    //townnametxtbox.Text = townInfo.Rows[0]["TownName"].ToString();
-                    //MessageBox.Show("Town found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    townnametxtbox.Clear();
-                    MessageBox.Show("Town not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchEntity("Towns", "TownName", townidtxtbox, townnametxtbox, "TownID", out string selectedId);
+            if (!string.IsNullOrEmpty(selectedId)) townidtxtbox.Text = selectedId;
         }
 
-        private DataTable GetTownInfo(int townId)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT TownID, TownName FROM Towns WHERE TownID = @TownID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@TownID", townId);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            return dt;
-        }
-
+        // 📌 SEARCH SECTOR
         private void sectoridsearch_Click(object sender, EventArgs e)
         {
+            SearchEntity("Sectors", "SectorName", sectoridtxtbox, sectornametxtbox, "SectorID", out string selectedId);
+            if (!string.IsNullOrEmpty(selectedId)) sectoridtxtbox.Text = selectedId;
+        }
+
+        // 📌 GENERAL SEARCH METHOD (ID ya Name dono se)
+        private void SearchEntity(string tableName, string nameColumn, TextBox idTextBox, TextBox nameTextBox, string idColumn, out string selectedId)
+        {
+            selectedId = "";
+            string inputId = idTextBox.Text.Trim();
+            string inputName = nameTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(inputId) && string.IsNullOrEmpty(inputName))
+            {
+                MessageBox.Show($"Please enter {idColumn} or {nameColumn}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             try
             {
-                string sectorId = sectoridtxtbox.Text.Trim();
-                if (string.IsNullOrEmpty(sectorId) || !int.TryParse(sectorId, out int sectorIdNum))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Please enter valid Sector ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    string query = $@"
+                SELECT {idColumn}, {nameColumn} 
+                FROM {tableName} 
+                WHERE ({idColumn} = @IdInput) OR ({nameColumn} = @NameInput)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@IdInput", string.IsNullOrEmpty(inputId) ? (object)DBNull.Value : inputId);
+                    cmd.Parameters.AddWithValue("@NameInput", string.IsNullOrEmpty(inputName) ? (object)DBNull.Value : inputName);
 
-                DataTable sectorInfo = GetSectorInfo(sectorIdNum);
-                if (sectorInfo.Rows.Count > 0)
-                {
-                    //sectornametxtbox.Text = sectorInfo.Rows[0]["SectorName"].ToString();
-                    //MessageBox.Show("Sector found.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    sectornametxtbox.Clear();
-                    MessageBox.Show("Sector not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        idTextBox.Text = reader[idColumn].ToString();
+                        nameTextBox.Text = reader[nameColumn].ToString();
+                        selectedId = reader[idColumn].ToString();
+                    }
+                    else
+                    {
+                        idTextBox.Clear();
+                        nameTextBox.Clear();
+                        MessageBox.Show($"{tableName.Replace("s", "")} not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -203,19 +122,6 @@ namespace FO_2022
             }
         }
 
-        private DataTable GetSectorInfo(int sectorId)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT SectorID, SectorName FROM Sectors WHERE SectorID = @SectorID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@SectorID", sectorId);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            return dt;
-        }
 
         private void previewbtn_Click(object sender, EventArgs e) => GenerateReport();
         private void printbtn_Click(object sender, EventArgs e) => GenerateReport();

@@ -241,5 +241,10 @@ namespace FO_2022
 
         private void productidtxtbox_TextChanged(object sender, EventArgs e) { }
         private void productnametxtbox_TextChanged(object sender, EventArgs e) { }
+
+        private void Product_Sale_Ledger_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

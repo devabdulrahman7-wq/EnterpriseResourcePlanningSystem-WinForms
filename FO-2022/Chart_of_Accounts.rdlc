@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
@@ -42,7 +42,7 @@
                                   <Value>Account No</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -53,14 +53,14 @@
                           <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -76,7 +76,7 @@
                                   <Value>Account Name</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -87,14 +87,14 @@
                           <rd:DefaultName>Textbox7</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -110,7 +110,7 @@
                                   <Value>Account Type</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -121,14 +121,14 @@
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -144,7 +144,7 @@
                                   <Value>Narration</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -155,14 +155,14 @@
                           <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -178,7 +178,7 @@
                                   <Value>Opening Debit</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -189,14 +189,14 @@
                           <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -212,7 +212,7 @@
                                   <Value>Opening Credit</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -223,14 +223,14 @@
                           <rd:DefaultName>Textbox16</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Middle</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -249,23 +249,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!AccountNo.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Left</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AccountNo</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -279,23 +279,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!AccountName.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Left</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AccountName</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -309,23 +309,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!AccountType.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Left</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AccountType</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -339,23 +339,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Narration.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Left</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Narration</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -369,23 +369,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!OpeningDebit.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Right</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>OpeningDebit</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -399,23 +399,23 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!OpeningCredit.Value</Value>
-                                  <Style />
+                                  <Style><FontFamily>Arial</FontFamily><FontSize>8pt</FontSize></Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style><TextAlign>Right</TextAlign></Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>OpeningCredit</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>Black</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
+                          <VerticalAlign>Top</VerticalAlign></Style>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
@@ -468,186 +468,290 @@
     <Style />
   </Body>
   <Width>6.9675in</Width>
-  <Page>
-    <PageHeader>
-      <Height>0.52083in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="ExecutionTime">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!ExecutionTime</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.27639in</Top>
-          <Left>4.07848in</Left>
-          <Height>0.23611in</Height>
-          <Width>1.8832in</Width>
+  <Page><PageFooter xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Height>0.28958in</Height>
+<PrintOnFirstPage>true</PrintOnFirstPage>
+<PrintOnLastPage>true</PrintOnLastPage>
+<ReportItems>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="FooterTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>CHART OF ACCOUNTS</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="Textbox4">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Printed Date &amp; Time:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.27917in</Top>
-          <Left>2.50917in</Left>
-          <Height>0.20833in</Height>
-          <Width>1.42708in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox1">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Chart of Account </Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Height>0.21875in</Height>
-          <Width>6.92583in</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <BackgroundColor>SlateBlue</BackgroundColor>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
+        <TextAlign>Left</TextAlign>
       </Style>
-    </PageHeader>
-    <PageFooter>
-      <Height>0.28125in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="TotalPages">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!TotalPages</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0in</Top>
-          <Left>4.64174in</Left>
-          <Height>0.20486in</Height>
-          <Width>0.5625in</Width>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top>
+  <Left>0in</Left>
+  <Height>0.22in</Height>
+  <Width>5.5675in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>None</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="FooterPageText">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="Textbox2">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Total pages:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
-          <Left>3.75285in</Left>
-          <Height>0.25in</Height>
-          <Width>0.83333in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
+        <TextAlign>Right</TextAlign>
       </Style>
-    </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top>
+  <Left>5.6675in</Left>
+  <Height>0.22in</Height>
+  <Width>1.3in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>None</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+</ReportItems>
+<Style>
+  <Border>
+    <Style>None</Style>
+  </Border>
+</Style></PageFooter><PageHeader xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Height>0.95in</Height>
+<PrintOnFirstPage>true</PrintOnFirstPage>
+<PrintOnLastPage>true</PrintOnLastPage>
+<ReportItems>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="TxtTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>CHART OF ACCOUNTS</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>12pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top>
+  <Left>0in</Left>
+  <Height>0.24in</Height>
+  <Width>6.9675in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="TxtLeft1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>="Account Name: " &amp; IIF(CountDistinct(Fields!AccountName.Value, "DataSet1") = 1, First(Fields!AccountName.Value, "DataSet1"), "All")</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top>
+  <Left>0in</Left>
+  <Height>0.2in</Height>
+  <Width>3.7624in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="TxtRight1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>="Printed On: " &amp; Format(Globals!ExecutionTime, "dd-MMM-yyyy hh:mm tt")</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top>
+  <Left>3.8624in</Left>
+  <Height>0.2in</Height>
+  <Width>3.1051in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="TxtLeft2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>="Account Type: " &amp; IIF(CountDistinct(Fields!AccountType.Value, "DataSet1") = 1, First(Fields!AccountType.Value, "DataSet1"), "Multiple")</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top>
+  <Left>0in</Left>
+  <Height>0.2in</Height>
+  <Width>3.4588in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="TxtRight2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>="User: " &amp; User!UserID</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top>
+  <Left>3.5088in</Left>
+  <Height>0.2in</Height>
+  <Width>3.4587in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+</ReportItems>
+<Style>
+  <Border>
+    <Style>None</Style>
+  </Border>
+</Style></PageHeader>
+    
+    
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

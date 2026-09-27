@@ -6,10 +6,6 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FO_2022
@@ -94,26 +90,17 @@ namespace FO_2022
                 return;
             }
 
+            DataTable reportTable = PartyProductSalesLedgerProfessionalBuilder.Build(dt);
+
             // Prepare data sources
             Dictionary<string, DataTable> dataSources = new Dictionary<string, DataTable>
             {
-                { "DataSet1", dt }
+                { PartyProductSalesLedgerProfessionalBuilder.DataSetName, reportTable }
             };
 
-            // Prepare parameters
-            Dictionary<string, string> parameters = new Dictionary<string, string>
-            {
-                //{ "FromDate", fromdatepicker.Value.ToString("dd-MMM-yyyy") },
-                //{ "ToDate", todatepicker.Value.ToString("dd-MMM-yyyy") },
-                //{ "ProductID", productId ?? "All" },
-                //{ "PartyID", partyId ?? "All" },
-                //{ "SkipPartyID", skipPartyId ?? "None" },
-                //{ "ReportDate", DateTime.Now.ToString("dd-MMM-yyyy hh:mm tt") }
-            };
-
-            // Show report
+            // Show report using the new professional RDLC only.
             Report_viewer viewer = new Report_viewer();
-            viewer.ShowReport("Party_Product_Sales_Ledger", dataSources);
+            viewer.ShowReport("PartyProductSalesLedger_Professional", dataSources);
         }                       
 
         // 📌 GET SALES LEDGER DATA FROM DATABASE

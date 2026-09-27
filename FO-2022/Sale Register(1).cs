@@ -33,32 +33,69 @@ namespace FO_2022
         {
             this.Close();
         }
+private void cmpnyidsearch_Click(object sender, EventArgs e)
+{
+    string companyID = cmpnyidtxtbox.Text.Trim();
+    string companyName = cmpnynametxtbox.Text.Trim();
 
-        private void cmpnyidsearch_Click(object sender, EventArgs e)
+    if (string.IsNullOrEmpty(companyID) && string.IsNullOrEmpty(companyName))
+    {
+        MessageBox.Show("Please enter Company ID or Company Name",
+            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        return;
+    }
+
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
         {
-            SearchEntity("Companies", "CompanyName", cmpnyidtxtbox.Text.Trim(), cmpnynametxtbox, "CompanyID");
+            conn.Open();
+
+            string query = @"
+                SELECT CompanyID, CompanyName
+                FROM Companies
+                WHERE CompanyID = @CompanyID
+                   OR CompanyName = @CompanyName";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@CompanyID", companyID);
+                cmd.Parameters.AddWithValue("@CompanyName", companyName);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        cmpnyidtxtbox.Text = reader["CompanyID"].ToString();
+                        cmpnynametxtbox.Text = reader["CompanyName"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Company not found!",
+                            "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        cmpnyidtxtbox.Clear();
+                        cmpnynametxtbox.Clear();
+                    }
+                }
+            }
         }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Error searching company: " + ex.Message);
+    }
+}
 
         private void cstmridsearch_Click(object sender, EventArgs e)
         {
-            SearchEntity("Parties", "PartyName", cstmridtxtbox.Text.Trim(), cstmrnametxtbox, "PartyID");
-        }
+            string customerID = cstmridtxtbox.Text.Trim();
+            string customerName = cstmrnametxtbox.Text.Trim();
 
-        private void sectoridsearch_Click(object sender, EventArgs e)
-        {
-            SearchEntity("Sectors", "SectorName", sectoridtxtbox.Text.Trim(), sectornametxtbox, "SectorID");
-        }
-
-        private void townidsearch_Click(object sender, EventArgs e)
-        {
-            SearchEntity("Towns", "TownName", townidtxtbox.Text.Trim(), townnametxtbox, "TownID");
-        }
-
-        private void SearchEntity(string tableName, string nameColumn, string id, TextBox nameTextBox, string idColumn)
-        {
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(customerID) && string.IsNullOrEmpty(customerName))
             {
-                MessageBox.Show($"Please enter ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter Customer ID or Customer Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -66,29 +103,152 @@ namespace FO_2022
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = $"SELECT {nameColumn} FROM {tableName} WHERE {idColumn} = @ID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@ID", id);
-
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
 
-                    if (result != null)
+                    string query = @"
+                SELECT PartyID, PartyName
+                FROM Parties
+                WHERE (PartyID = @PartyID OR PartyName = @PartyName)
+                AND PartyType = 'C'";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        nameTextBox.Text = result.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show($"{tableName.Replace("s", "")} not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        nameTextBox.Clear();
+                        cmd.Parameters.AddWithValue("@PartyID", customerID);
+                        cmd.Parameters.AddWithValue("@PartyName", customerName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                cstmridtxtbox.Text = reader["PartyID"].ToString();
+                                cstmrnametxtbox.Text = reader["PartyName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Customer not found!",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                cstmridtxtbox.Clear();
+                                cstmrnametxtbox.Clear();
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error searching customer: " + ex.Message);
             }
         }
+
+        private void sectoridsearch_Click(object sender, EventArgs e)
+        {
+            string sectorID = sectoridtxtbox.Text.Trim();
+            string sectorName = sectornametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(sectorID) && string.IsNullOrEmpty(sectorName))
+            {
+                MessageBox.Show("Please enter Sector ID or Sector Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT SectorID, SectorName
+                FROM Sectors
+                WHERE SectorID = @SectorID
+                   OR SectorName = @SectorName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SectorID", sectorID);
+                        cmd.Parameters.AddWithValue("@SectorName", sectorName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                sectoridtxtbox.Text = reader["SectorID"].ToString();
+                                sectornametxtbox.Text = reader["SectorName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sector not found!",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                sectoridtxtbox.Clear();
+                                sectornametxtbox.Clear();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching sector: " + ex.Message);
+            }
+        }
+
+        private void townidsearch_Click(object sender, EventArgs e)
+        {
+            string townID = townidtxtbox.Text.Trim();
+            string townName = townnametxtbox.Text.Trim();
+
+            if (string.IsNullOrEmpty(townID) && string.IsNullOrEmpty(townName))
+            {
+                MessageBox.Show("Please enter Town ID or Town Name",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT TownID, TownName
+                FROM Towns
+                WHERE TownID = @TownID
+                   OR TownName = @TownName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TownID", townID);
+                        cmd.Parameters.AddWithValue("@TownName", townName);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                townidtxtbox.Text = reader["TownID"].ToString();
+                                townnametxtbox.Text = reader["TownName"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Town not found!",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                townidtxtbox.Clear();
+                                townnametxtbox.Clear();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching town: " + ex.Message);
+            }
+        }
+
 
         private void previewbtn_Click(object sender, EventArgs e)
         {

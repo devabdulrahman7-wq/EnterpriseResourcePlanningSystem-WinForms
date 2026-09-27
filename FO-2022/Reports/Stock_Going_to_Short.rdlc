@@ -1,564 +1,537 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Rectangle Name="Rectangle1">
-        <ReportItems>
-          <Tablix Name="Tablix1">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>0.98379in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.98379in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.0324in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.0324in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.98379in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.0324in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.0324in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.0324in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+                <TablixColumn><Width>0.93in</Width></TablixColumn>
+                <TablixColumn><Width>1.51in</Width></TablixColumn>
+                <TablixColumn><Width>1.51in</Width></TablixColumn>
+                <TablixColumn><Width>0.88in</Width></TablixColumn>
+                <TablixColumn><Width>0.88in</Width></TablixColumn>
+                <TablixColumn><Width>0.88in</Width></TablixColumn>
+                <TablixColumn><Width>0.88in</Width></TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox7">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Product ID</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>PRODUCT ID</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox9">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Product Name</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>COMPANY NAME</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox13">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Company Name</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox13</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>PRODUCT NAME</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox15">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Min Stock Level</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox15</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>QTY</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox11">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Order Stock Level</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>QTY</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox17">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Current Qty</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox17</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>QTY</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox19">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Stock Status</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox19</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Hdr6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>QTY</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+                      </CellContents>
+                    </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Dtl0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!ProductID.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox21">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Required Qty</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="ProductID">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!ProductID.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>ProductID</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!CompanyName.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ProductName">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!ProductName.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>ProductName</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!ProductName.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="CompanyName">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!CompanyName.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CompanyName</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!MinStockLevel.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="MinStockLevel">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!MinStockLevel.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>MinStockLevel</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!OrderStockLevel.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="OrderStockLevel">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!OrderStockLevel.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>OrderStockLevel</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!CurrentQty.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="CurrentQty">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!CurrentQty.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CurrentQty</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
+                        <Textbox Name="Dtl6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=Fields!StockStatus.Value</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="StockStatus">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!StockStatus.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>StockStatus</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="RequiredQty">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!RequiredQty.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>RequiredQty</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -566,314 +539,338 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
-                  <Group Name="Details" />
-                </TablixMember>
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
-            <Height>0.5in</Height>
-            <Width>8.11334in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Tablix>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0in</Top>
+        <Left>0in</Left>
         <Height>0.5in</Height>
-        <Width>8.11334in</Width>
+        <Width>7.45in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
-      </Rectangle>
+      </Tablix>
     </ReportItems>
     <Height>0.5in</Height>
-    <Style>
-      <Border>
-        <Style>None</Style>
-      </Border>
-    </Style>
+    <Style />
   </Body>
-  <Width>8.11334in</Width>
+  <Width>7.45in</Width>
   <Page>
     <PageHeader>
-      <Height>0.47292in</Height>
+      <Height>0.95in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="ExecutionTime">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!ExecutionTime</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.23681in</Top>
-          <Left>4.70348in</Left>
-          <Height>0.23611in</Height>
-          <Width>1.8832in</Width>
+<Textbox Name="TxtTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>STOCK GOING TO SHORT</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>12pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="Textbox4">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Printed Date &amp; Time:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.23959in</Top>
-          <Left>3.13417in</Left>
-          <Height>0.20833in</Height>
-          <Width>1.42708in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox1">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Stock Going to Short</Value>
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Height>0.21875in</Height>
-          <Width>8.11334in</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <BackgroundColor>SlateBlue</BackgroundColor>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
+        <TextAlign>Center</TextAlign>
       </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>0in</Left><Height>0.24in</Height><Width>7.45in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;C o m p a n y N a m e: &quot; &amp; IIF(CountDistinct(Fields!CompanyName.Value, &quot;DataSet1&quot;) = 1, First(Fields!CompanyName.Value, &quot;DataSet1&quot;), &quot;All&quot;)</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top><Left>0in</Left><Height>0.2in</Height><Width>4.05in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtRight1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;Printed On: &quot; &amp; Format(Globals!ExecutionTime, &quot;dd-MMM-yyyy hh:mm tt&quot;)</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.34in</Top><Left>4.15in</Left><Height>0.2in</Height><Width>3.3in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;From Date: &quot;</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>0in</Left><Height>0.2in</Height><Width>2in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtLeft3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;To Date: &quot;</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>2.05in</Left><Height>0.2in</Height><Width>2in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+<Textbox Name="TxtRight2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>= &quot;User: &quot; &amp; User!UserID</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0.56in</Top><Left>4.15in</Left><Height>0.2in</Height><Width>3.3in</Width>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+      </ReportItems>
+      <Style />
     </PageHeader>
     <PageFooter>
-      <Height>0.25in</Height>
+      <Height>0.24in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="TotalPages">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!TotalPages</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0.0125in</Top>
-          <Left>3.43192in</Left>
-          <Height>0.20486in</Height>
-          <Width>0.5625in</Width>
+        <Textbox Name="FooterTitle">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>STOCK GOING TO SHORT</Value>
           <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
           </Style>
-        </Textbox>
-        <Textbox Name="Textbox3">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Total pages:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
-          <Left>2.54302in</Left>
-          <Height>0.25in</Height>
-          <Width>0.83333in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox6">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Page no:</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0in</Top>
-          <Left>4.03434in</Left>
-          <Height>0.22791in</Height>
-          <Width>0.6875in</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="PageNumber">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Globals!PageNumber</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.0125in</Top>
-          <Left>4.73572in</Left>
-          <Height>0.20486in</Height>
-          <Width>0.75125in</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
+        </TextRun>
+      </TextRuns>
       <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
+        <TextAlign>Left</TextAlign>
       </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>0in</Left><Height>0.2in</Height><Width>3in</Width>
+  <Style>
+    <Border>
+      <Color>White</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+        <Textbox Name="FooterPage">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+        <TextRun>
+          <Value>=&quot;Page &quot; &amp; Globals!PageNumber &amp; &quot; of &quot; &amp; Globals!TotalPages</Value>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>8pt</FontSize>
+            <FontWeight>Bold</FontWeight>
+          </Style>
+        </TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Top>0in</Top><Left>5.8in</Left><Height>0.2in</Height><Width>1.65in</Width>
+  <Style>
+    <Border>
+      <Color>White</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+      </ReportItems>
+      <Style />
     </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
     <InteractiveHeight>11.69in</InteractiveHeight>
     <InteractiveWidth>8.27in</InteractiveWidth>
-    <LeftMargin>0.1in</LeftMargin>
-    <RightMargin>0.1in</RightMargin>
-    <TopMargin>0.1in</TopMargin>
-    <BottomMargin>0.1in</BottomMargin>
-    <Style>
-      <Border>
-        <Style>None</Style>
-        <Width>0.5pt</Width>
-      </Border>
-    </Style>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
   </Page>
-  <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Company_Wise_Profits_ds">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>814758f0-cddd-4a64-a4bb-7afc6750ed77</rd:DataSourceID>
+      <rd:DataSourceID>d42e7bce-11a8-4425-8ca3-461435116146</rd:DataSourceID>
     </DataSource>
   </DataSources>
+
   <DataSets>
     <DataSet Name="DataSet1">
-      <Query>
-        <DataSourceName>Company_Wise_Profits_ds</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
       <Fields>
         <Field Name="ProductID">
           <DataField>ProductID</DataField>
@@ -908,16 +905,14 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>Company_Wise_Profits_ds</rd:DataSetName>
-        <rd:SchemaPath>E:\FO-2022\FO-2022\Reports\Company_Wise_Profits_ds.xsd</rd:SchemaPath>
-        <rd:TableName>Stock_Going_to_Short</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
+      <Query>
+        <DataSourceName>Company_Wise_Profits_ds</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
     </DataSet>
   </DataSets>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>5172dc92-9690-499b-9918-c5bd5602ef29</rd:ReportID>
+  <rd:ReportID>a2490e37-6fb0-4a41-93ea-4ea5857e4a0d</rd:ReportID>
 </Report>

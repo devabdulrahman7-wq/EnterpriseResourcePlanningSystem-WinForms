@@ -134,6 +134,7 @@
             this.partynametxtbox.Name = "partynametxtbox";
             this.partynametxtbox.Size = new System.Drawing.Size(205, 25);
             this.partynametxtbox.TabIndex = 285;
+            this.partynametxtbox.TextChanged += new System.EventHandler(this.partynametxtbox_TextChanged);
             this.partynametxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.partynametxtbox_KeyDown);
             // 
             // partyidtxtbox

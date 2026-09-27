@@ -79,9 +79,10 @@ namespace FO_2022.Reports
         //}
         private void LoadReport()
         {
-            // Clear old report
+            reportViewer1.Reset();
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.ReportPath = null;
+            reportViewer1.LocalReport.ReportEmbeddedResource = null;
 
             // 🔥 Load RDLC as Embedded Resource
             string reportName = _reportName.EndsWith(".rdlc")
@@ -173,21 +174,41 @@ namespace FO_2022.Reports
         // 📌 SET REPORT PARAMETERS
         private void SetReportParameters()
         {
+            bool hasSimpleParameters = _parameters != null && _parameters.Count > 0;
+            bool hasComplexParameters = _reportParameters != null && _reportParameters.Count > 0;
+
+            if (!hasSimpleParameters && !hasComplexParameters)
+            {
+                return;
+            }
+
             List<ReportParameter> parameters = new List<ReportParameter>();
+            HashSet<string> definedParameters = new HashSet<string>(
+                reportViewer1.LocalReport.GetParameters().Select(param => param.Name),
+                StringComparer.Ordinal);
 
             // Add simple string parameters
             if (_parameters != null && _parameters.Count > 0)
             {
                 foreach (var param in _parameters)
                 {
-                    parameters.Add(new ReportParameter(param.Key, param.Value));
+                    if (definedParameters.Contains(param.Key))
+                    {
+                        parameters.Add(new ReportParameter(param.Key, param.Value ?? string.Empty));
+                    }
                 }
             }
 
             // Add complex parameters if provided
             if (_reportParameters != null && _reportParameters.Count > 0)
             {
-                parameters.AddRange(_reportParameters);
+                foreach (ReportParameter parameter in _reportParameters)
+                {
+                    if (definedParameters.Contains(parameter.Name))
+                    {
+                        parameters.Add(parameter);
+                    }
+                }
             }
 
             // Set parameters if any

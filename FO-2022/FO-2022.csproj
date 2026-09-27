@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>22</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -94,6 +94,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.1\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -870,6 +871,14 @@
     <Compile Include="Reports\General_Journal_rv.Designer.cs">
       <DependentUpon>General_Journal_rv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FrmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportViewer.Designer.cs">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LedgerReportDataTableBuilder.cs" />
+    <Compile Include="Reports\LedgerReportService.cs" />
     <Compile Include="Reports\Party_List_ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -881,6 +890,7 @@
     <Compile Include="Reports\Part_List_rv.Designer.cs">
       <DependentUpon>Part_List_rv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PartyProductSalesLedgerProfessionalBuilder.cs" />
     <Compile Include="Reports\Product_Price_List.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -921,6 +931,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Salesman_Sector_Dataset_2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector_rv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Salesman_Sector_rv.Designer.cs">
+      <DependentUpon>Salesman_Sector_rv.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Sector_ds.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1123,6 +1139,7 @@
     <Compile Include="SearchPurchaseInvoice.Designer.cs">
       <DependentUpon>SearchPurchaseInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchService.cs" />
     <Compile Include="Season_Recovery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1660,6 +1677,7 @@
       <DependentUpon>General_Journal_rv.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="1486504331-burn-fire-flame-danger-burning-hot_81317.ico" />
+    <EmbeddedResource Include="Reports\PartyLedgerDetailed.rdlc" />
     <EmbeddedResource Include="Reports\Party_List.rdlc" />
     <EmbeddedResource Include="Reports\Invoice_Detailed_Profit.rdlc" />
     <EmbeddedResource Include="Reports\Invoice_Wise_Profit.rdlc" />
@@ -1667,6 +1685,8 @@
     <EmbeddedResource Include="Reports\Opening_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Party_Detailed_Ledger_Combine.rdlc" />
     <EmbeddedResource Include="Reports\Party_List_rv.rdlc" />
+    <EmbeddedResource Include="Reports\PartyProductSalesLedger_Professional.rdlc" />
+    <EmbeddedResource Include="Reports\PartyProductSalesLedger_Professional_Compat.rdlc" />
     <EmbeddedResource Include="Reports\Party_Product_Purchase_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Party_Product_Sales_Ledger.rdlc" />
     <EmbeddedResource Include="Reports\Party_Sale_Aging.rdlc" />
@@ -1697,6 +1717,9 @@
     <EmbeddedResource Include="Reports\Saleman_Current_Stock.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Monthly_Performance.rdlc" />
     <EmbeddedResource Include="Reports\Salesman_Sector.rdlc" />
+    <EmbeddedResource Include="Reports\Salesman_Sector_rv.resx">
+      <DependentUpon>Salesman_Sector_rv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Salesman_Stock_Statement.rdlc" />
     <EmbeddedResource Include="Reports\Sales_Month_Comparison_Distributors_Wise_Products.rdlc" />
     <EmbeddedResource Include="Reports\Sales_Month_Comparison_Product_Wise.rdlc" />

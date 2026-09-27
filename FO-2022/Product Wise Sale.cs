@@ -115,43 +115,55 @@ namespace FO_2022
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(salesmanidtxtbox.Text))
+                string salesmanId = salesmanidtxtbox.Text.Trim();
+                string salesmanName = salesmannametxtbox.Text.Trim();
+
+                if (string.IsNullOrEmpty(salesmanId) && string.IsNullOrEmpty(salesmanName))
                 {
-                    MessageBox.Show("Please enter Salesman ID", "Input Required",
+                    MessageBox.Show("Please enter Salesman ID or Name", "Input Required",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(
+                    @"SELECT SalesmanID, SalesmanName 
+              FROM Salesmen
+              WHERE (@SalesmanID = '' OR SalesmanID = @SalesmanID)
+              AND (@SalesmanName = '' OR SalesmanName = @SalesmanName)", conn))
                 {
-                    string query = "SELECT SalesmanName FROM Salesmen WHERE SalesmanID = @SalesmanID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@SalesmanID", salesmanidtxtbox.Text.Trim());
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
+                    cmd.Parameters.Add("@SalesmanID", SqlDbType.VarChar).Value = salesmanId;
+                    cmd.Parameters.Add("@SalesmanName", SqlDbType.VarChar).Value = salesmanName;
 
-                        if (result != null)
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            salesmannametxtbox.Text = result.ToString();
-                            selectedSalesmanId = salesmanidtxtbox.Text.Trim();
+                            salesmanidtxtbox.Text = reader["SalesmanID"].ToString();
+                            salesmannametxtbox.Text = reader["SalesmanName"].ToString();
+                            selectedSalesmanId = reader["SalesmanID"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Salesman ID not found", "Not Found",
+                            MessageBox.Show("Salesman not found", "Not Found",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            salesmanidtxtbox.Clear();
                             salesmannametxtbox.Clear();
-                            selectedSalesmanId = "";
+                            selectedSalesmanId = string.Empty;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
+                MessageBox.Show("Error: " + ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void previewbtn_Click(object sender, EventArgs e)
         {

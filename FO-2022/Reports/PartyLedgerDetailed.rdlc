@@ -1,0 +1,1498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Tablix1">
+  <TablixBody>
+    <TablixColumns>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>0.80in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>0.85in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>1.00in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>2.40in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>0.80in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>0.80in</Width></TablixColumn>
+<TablixColumn xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Width>0.80in</Width></TablixColumn>
+    </TablixColumns>
+    <TablixRows>
+<TablixRow xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Height>0.25in</Height>
+  <TablixCells>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>DATE</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>DOC NO</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>REFERENCE</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>DESCRIPTION</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>DEBIT</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>CREDIT</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Hdr6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>BALANCE</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Center</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Middle</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+  </TablixCells>
+</TablixRow>
+<TablixRow xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Height>0.25in</Height>
+  <TablixCells>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=Fields!DisplayDate.Value</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=Fields!VoucherNo.Value</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=Fields!Reference.Value</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=Fields!Description.Value</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=IIF(IsNothing(Fields!DebitAmount.Value), "", Format(Fields!DebitAmount.Value, "N2"))</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=IIF(IsNothing(Fields!CreditAmount.Value), "", Format(Fields!CreditAmount.Value, "N2"))</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Dtl6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=IIF(Len(Trim(CStr(Fields!BalanceText.Value))) &gt; 0, Fields!BalanceText.Value, IIF(IsNothing(Fields!BalanceAmount.Value), "", Format(Fields!BalanceAmount.Value, "N2")))</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+  </TablixCells>
+</TablixRow>
+<TablixRow xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Height>0.25in</Height>
+  <TablixCells>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>="TOTAL"</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=IIF(CountRows("LedgerDataSet") = 0, "", Format(Sum(Fields!DebitAmount.Value, "LedgerDataSet"), "N2"))</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=IIF(CountRows("LedgerDataSet") = 0, "", Format(Sum(Fields!CreditAmount.Value, "LedgerDataSet"), "N2"))</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr0_6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+  </TablixCells>
+</TablixRow>
+<TablixRow xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Height>0.25in</Height>
+  <TablixCells>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_0">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>="CLOSING BALANCE"</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_1">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_2">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_3">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Left</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_4">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_5">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>""</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+<TablixCell xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <CellContents>
+<Textbox xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" Name="Ftr1_6">
+  <CanGrow>true</CanGrow>
+  <KeepTogether>true</KeepTogether>
+  <Paragraphs>
+    <Paragraph>
+      <TextRuns>
+<TextRun>
+  <Value>=Last(Fields!BalanceText.Value, "LedgerDataSet")</Value>
+  <Style>
+    <FontFamily>Arial</FontFamily>
+    <FontSize>8pt</FontSize>
+    <FontWeight>Bold</FontWeight>
+  </Style>
+</TextRun>
+      </TextRuns>
+      <Style>
+        <TextAlign>Right</TextAlign>
+      </Style>
+    </Paragraph>
+  </Paragraphs>
+  <Style>
+    <Border>
+      <Color>Black</Color>
+      <Style>Solid</Style>
+    </Border>
+    <VerticalAlign>Top</VerticalAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+</Textbox>
+  </CellContents>
+</TablixCell>
+  </TablixCells>
+</TablixRow>
+    </TablixRows>
+  </TablixBody>
+  <TablixColumnHierarchy>
+    <TablixMembers>
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+      <TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" />
+    </TablixMembers>
+  </TablixColumnHierarchy>
+  <TablixRowHierarchy>
+    <TablixMembers>
+<TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><KeepWithGroup>After</KeepWithGroup><RepeatOnNewPage>true</RepeatOnNewPage></TablixMember>
+<TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Group Name="Details" /></TablixMember>
+<TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><KeepWithGroup>Before</KeepWithGroup></TablixMember>
+<TablixMember xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><KeepWithGroup>Before</KeepWithGroup></TablixMember>
+    </TablixMembers>
+  </TablixRowHierarchy>
+  <DataSetName>LedgerDataSet</DataSetName>
+  <Top>0in</Top>
+  <Left>0in</Left>
+  <Height>1in</Height>
+  <Width>7.45in</Width>
+  <Style>
+    <Border>
+      <Style>None</Style>
+    </Border>
+  </Style>
+</Tablix>
+    </ReportItems>
+    <Height>1in</Height>
+    <Style />
+  </Body>
+  <Width>7.45in</Width>
+  <Page>
+    <PageHeader>
+      <Height>0.95in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="TxtTitle">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!ReportTitle.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0in</Top>
+          <Left>0in</Left>
+          <Height>0.24in</Height>
+          <Width>7.45in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="TxtLeft1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "Account Name: " &amp; Parameters!AccountName.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.34in</Top>
+          <Left>0in</Left>
+          <Height>0.2in</Height>
+          <Width>4.05in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="TxtRight1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "Printed On: " &amp; Parameters!PrintedOn.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.34in</Top>
+          <Left>4.15in</Left>
+          <Height>0.2in</Height>
+          <Width>3.3in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="TxtLeft2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "From Date: " &amp; Parameters!FromDate.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.56in</Top>
+          <Left>0in</Left>
+          <Height>0.2in</Height>
+          <Width>2in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="TxtLeft3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "To Date: " &amp; Parameters!ToDate.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.56in</Top>
+          <Left>2.05in</Left>
+          <Height>0.2in</Height>
+          <Width>2in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="TxtRight2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "User: " &amp; Parameters!PrintedBy.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.56in</Top>
+          <Left>4.15in</Left>
+          <Height>0.2in</Height>
+          <Width>3.3in</Width>
+          <Style>
+            <Border>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageHeader>
+    <PageFooter>
+      <Height>0.24in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="FooterTitle">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!ReportTitle.Value</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0in</Top>
+          <Left>0in</Left>
+          <Height>0.2in</Height>
+          <Width>3in</Width>
+          <Style>
+            <Border>
+              <Color>White</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="FooterPage">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+                  <Style>
+                    <FontFamily>Arial</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0in</Top>
+          <Left>5.8in</Left>
+          <Height>0.2in</Height>
+          <Width>1.65in</Width>
+          <Style>
+            <Border>
+              <Color>White</Color>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Top</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageFooter>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <InteractiveHeight>11.69in</InteractiveHeight>
+    <InteractiveWidth>8.27in</InteractiveWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
+  </Page>
+  <DataSources>
+    <DataSource Name="LocalDataSource">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d926f447-8994-48fc-affe-96e874bda3c3</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="ReportTitle">
+      <DataType>String</DataType>
+      <Prompt>ReportTitle</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FromDate">
+      <DataType>String</DataType>
+      <Prompt>FromDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>String</DataType>
+      <Prompt>ToDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountName">
+      <DataType>String</DataType>
+      <Prompt>AccountName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PrintedOn">
+      <DataType>String</DataType>
+      <Prompt>PrintedOn</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PrintedBy">
+      <DataType>String</DataType>
+      <Prompt>PrintedBy</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataSets>
+    <DataSet Name="LedgerDataSet">
+      <Fields>
+        <Field Name="RowType">
+          <DataField>RowType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VoucherDate">
+          <DataField>VoucherDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DisplayDate">
+          <DataField>DisplayDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherNo">
+          <DataField>VoucherNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Reference">
+          <DataField>Reference</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DocProof">
+          <DataField>DocProof</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DebitAmount">
+          <DataField>DebitAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CreditAmount">
+          <DataField>CreditAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BalanceAmount">
+          <DataField>BalanceAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BalanceNature">
+          <DataField>BalanceNature</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BalanceText">
+          <DataField>BalanceText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>LocalDataSource</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>7242625d-12f8-4932-843a-563396da26f6</rd:ReportID>
+</Report>

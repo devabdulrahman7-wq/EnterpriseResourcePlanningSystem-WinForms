@@ -355,5 +355,25 @@ namespace FO_2022
         {
             this.Close();
         }
+        private void partynametxtbox_TextChanged(object sender, EventArgs e)
+        {
+            if (partynametxtbox.Text.Length < 3)
+                return;
+
+            var dt = SearchService.Search("Parties", "PartyName", partynametxtbox.Text
+            );
+
+            AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                col.Add(row[0].ToString());
+            }
+            partynametxtbox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            partynametxtbox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            partynametxtbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            partynametxtbox.AutoCompleteCustomSource = col;
+        }
     }
 }
+

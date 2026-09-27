@@ -5,6 +5,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FO_2022
@@ -140,15 +142,7 @@ namespace FO_2022
                 return;
             }
 
-            var parameters = new Dictionary<string, string>
-            {
-                //{"PartyID", partyidtxtbox.Text.Trim() },
-                //{"PartyName", partynametxtbox.Text.Trim() },
-                //{"Salesman", salesmancombobox.Text },
-                //{"ReportTitle", detaillgrasdbtn.Checked ? "Detail Ledger" : "Detail Ledger Asad Umair"},
-                //{"DateRange", GetDateRangeText() },
-                //{"Orientation", portrtbtn.Checked ? "Portrait" : "Landscape"}
-            };
+            var parameters = BuildReportParameters();
 
             var dataSources = new Dictionary<string, DataTable>
             {
@@ -156,7 +150,7 @@ namespace FO_2022
             };
 
             Report_viewer reportViewer = new Report_viewer();
-            reportViewer.ShowReport("Party_Detailed_Ledger_Combine.rdlc", dataSources);
+            reportViewer.ShowReport("Party_Detailed_Ledger_Combine.rdlc", dataSources, parameters);
         }
 
         private bool ValidateInputs()
@@ -218,26 +212,7 @@ namespace FO_2022
                 // Agar data mila to balance calculate karo
                 if (dt.Rows.Count > 0)
                 {
-                    // Step 1: Data ko VoucherDate ke hisaab se sort karo (null dates pehle aayengi)
-                    DataTable dtSorted = dt.Clone(); // schema copy
-                    var sortedRows = dt.AsEnumerable()
-                        .OrderBy(r => r.Field<DateTime?>("VoucherDate") ?? DateTime.MinValue)
-                        .ThenBy(r => r.Field<int?>("VoucherNo") ?? 0); // tie-break
-                    foreach (var row in sortedRows)
-                        dtSorted.ImportRow(row);
-                    dt = dtSorted;
-
-                    // Step 2: Balance column add karo
-                    dt.Columns.Add("Balance", typeof(decimal));
-
-                    decimal runningBalance = 0;
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        decimal debit = Convert.ToDecimal(row["Debit"]);
-                        decimal credit = Convert.ToDecimal(row["Credit"]);
-                        runningBalance += debit - credit;
-                        row["Balance"] = runningBalance;
-                    }
+                    dt = PrepareLedgerReportTable(dt);
                 }
 
                 return dt;
@@ -279,6 +254,151 @@ namespace FO_2022
             else if (daybtn.Checked) return "A Day";
             else if (todaybtn.Checked) return "Today";
             return "";
+        }
+
+        private Dictionary<string, string> BuildReportParameters()
+        {
+            return new Dictionary<string, string>
+            {
+                { "ReportTitle", "PARTY DETAILED LEDGER" },
+                { "FromDate", GetFromDate().ToString("dd-MMM-yyyy") },
+                { "ToDate", GetToDate().ToString("dd-MMM-yyyy") },
+                { "AccountName", partynametxtbox.Text.Trim() },
+                { "PrintedOn", DateTime.Now.ToString("dd-MMM-yyyy hh:mm tt") },
+                { "PrintedBy", string.IsNullOrWhiteSpace(Environment.UserName) ? "SYSTEM" : Environment.UserName }
+            };
+        }
+
+        private DataTable PrepareLedgerReportTable(DataTable sourceTable)
+        {
+            DataTable table = sourceTable.Clone();
+
+            EnsureReportColumns(table);
+
+            var sortedRows = sourceTable.AsEnumerable()
+                .OrderBy(r => r.Field<DateTime?>("VoucherDate") ?? DateTime.MinValue)
+                .ThenBy(r => Convert.ToString(r["VoucherNo"], CultureInfo.InvariantCulture));
+
+            foreach (DataRow row in sortedRows)
+            {
+                table.ImportRow(row);
+            }
+
+            decimal totalDebit = 0m;
+            decimal totalCredit = 0m;
+            decimal runningBalance = 0m;
+
+            AddSpecialRow(table, "OPENING", "Opening Balance", string.Empty, string.Empty, string.Empty, 0m, 0m, runningBalance);
+
+            foreach (DataRow row in table.Select("", "VoucherDate ASC"))
+            {
+                if (Convert.ToString(row["RowType"]) == "OPENING")
+                {
+                    continue;
+                }
+
+                decimal debit = GetDecimal(row, "Debit");
+                decimal credit = GetDecimal(row, "Credit");
+
+                totalDebit += debit;
+                totalCredit += credit;
+                runningBalance += debit - credit;
+
+                row["RowType"] = "DETAIL";
+                row["DisplayDate"] = row["VoucherDate"] == DBNull.Value
+                    ? string.Empty
+                    : Convert.ToDateTime(row["VoucherDate"]).ToString("dd-MMM-yyyy");
+                row["DisplayVoucherNo"] = Convert.ToString(row["VoucherNo"]);
+                row["DisplayReference"] = Convert.ToString(row["Refrence"]);
+                row["DisplayDocProof"] = FirstNonEmpty(Convert.ToString(row["BilltyNo"]), Convert.ToString(row["Shipment"]));
+                row["DisplayDescription"] = NormalizeDescription(Convert.ToString(row["Narration"]));
+                row["DebitText"] = debit == 0m ? string.Empty : debit.ToString("#,##0.00");
+                row["CreditText"] = credit == 0m ? string.Empty : credit.ToString("#,##0.00");
+                row["Balance"] = runningBalance;
+                row["BalanceText"] = FormatBalance(runningBalance);
+            }
+
+            AddSpecialRow(table, "TOTAL", "Transaction Totals", string.Empty, string.Empty, string.Empty, totalDebit, totalCredit, runningBalance);
+            AddSpecialRow(table, "CLOSING", "Closing Balance", string.Empty, string.Empty, string.Empty, 0m, 0m, runningBalance);
+
+            return table;
+        }
+
+        private void EnsureReportColumns(DataTable table)
+        {
+            AddColumnIfMissing(table, "RowType", typeof(string));
+            AddColumnIfMissing(table, "DisplayDate", typeof(string));
+            AddColumnIfMissing(table, "DisplayVoucherNo", typeof(string));
+            AddColumnIfMissing(table, "DisplayReference", typeof(string));
+            AddColumnIfMissing(table, "DisplayDocProof", typeof(string));
+            AddColumnIfMissing(table, "DisplayDescription", typeof(string));
+            AddColumnIfMissing(table, "DebitText", typeof(string));
+            AddColumnIfMissing(table, "CreditText", typeof(string));
+            AddColumnIfMissing(table, "Balance", typeof(decimal));
+            AddColumnIfMissing(table, "BalanceText", typeof(string));
+        }
+
+        private void AddColumnIfMissing(DataTable table, string columnName, Type type)
+        {
+            if (!table.Columns.Contains(columnName))
+            {
+                table.Columns.Add(columnName, type);
+            }
+        }
+
+        private void AddSpecialRow(
+            DataTable table,
+            string rowType,
+            string description,
+            string voucherNo,
+            string reference,
+            string docProof,
+            decimal debit,
+            decimal credit,
+            decimal runningBalance)
+        {
+            DataRow row = table.NewRow();
+            row["RowType"] = rowType;
+            row["DisplayDate"] = string.Empty;
+            row["DisplayVoucherNo"] = voucherNo;
+            row["DisplayReference"] = reference;
+            row["DisplayDocProof"] = docProof;
+            row["DisplayDescription"] = description;
+            row["Debit"] = debit;
+            row["Credit"] = credit;
+            row["DebitText"] = debit == 0m ? string.Empty : debit.ToString("#,##0.00");
+            row["CreditText"] = credit == 0m ? string.Empty : credit.ToString("#,##0.00");
+            row["Balance"] = runningBalance;
+            row["BalanceText"] = FormatBalance(runningBalance);
+            table.Rows.Add(row);
+        }
+
+        private decimal GetDecimal(DataRow row, string columnName)
+        {
+            if (!row.Table.Columns.Contains(columnName) || row[columnName] == DBNull.Value)
+            {
+                return 0m;
+            }
+
+            decimal value;
+            return decimal.TryParse(Convert.ToString(row[columnName]), out value) ? value : 0m;
+        }
+
+        private string NormalizeDescription(string text)
+        {
+            return string.IsNullOrWhiteSpace(text)
+                ? string.Empty
+                : text.Replace("\r\n", "\n").Replace("\r", "\n").Trim();
+        }
+
+        private string FirstNonEmpty(params string[] values)
+        {
+            return values.FirstOrDefault(value => !string.IsNullOrWhiteSpace(value)) ?? string.Empty;
+        }
+
+        private string FormatBalance(decimal amount)
+        {
+            return string.Format(CultureInfo.InvariantCulture, "{0:#,##0.00} {1}", Math.Abs(amount), amount >= 0 ? "Dr" : "Cr");
         }
 
         private void printbtn_Click(object sender, EventArgs e)

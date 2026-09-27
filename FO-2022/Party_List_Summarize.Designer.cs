@@ -118,7 +118,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Party_List_Summarize";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Party_List_Summarize_Load);
+            //this.Load += new System.EventHandler(this.Party_List_Summarize_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

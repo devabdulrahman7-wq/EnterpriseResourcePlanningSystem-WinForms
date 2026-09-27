@@ -159,7 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 247);
+            this.label1.Location = new System.Drawing.Point(117, 250);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -169,7 +169,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 247);
+            this.label2.Location = new System.Drawing.Point(252, 250);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
@@ -200,10 +200,10 @@
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(265, 270);
+            this.partynametxtbox.Location = new System.Drawing.Point(252, 270);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partynametxtbox.Name = "partynametxtbox";
-            this.partynametxtbox.Size = new System.Drawing.Size(115, 16);
+            this.partynametxtbox.Size = new System.Drawing.Size(137, 16);
             this.partynametxtbox.TabIndex = 178;
             // 
             // label3

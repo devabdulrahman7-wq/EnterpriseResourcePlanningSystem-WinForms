@@ -120,7 +120,7 @@
             // partynametxtbox
             // 
             this.partynametxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.partynametxtbox.Location = new System.Drawing.Point(265, 205);
+            this.partynametxtbox.Location = new System.Drawing.Point(267, 205);
             this.partynametxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.partynametxtbox.Multiline = true;
             this.partynametxtbox.Name = "partynametxtbox";
